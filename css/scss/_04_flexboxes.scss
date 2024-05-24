@@ -1,0 +1,460 @@
+
+/* MAIN STRUCTURE */
+
+body {
+  &.mini {
+
+    .flex, .d-flex, .display-flex {
+      display: flex!important;
+    }
+
+    $orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+    .order {
+      @each $order in $orders {
+        &-#{$order} {
+          order: #{$order};
+        }
+      }
+      &-sm {
+        @include sm {
+          @each $order in $orders {
+            &-#{$order} {
+              order: #{$order};
+            }
+          }
+        }
+      }
+      &-md {
+        @include md {
+          @each $order in $orders {
+            &-#{$order} {
+              order: #{$order};
+            }
+          }
+        }
+      }
+      &-lg {
+        @include lg {
+          @each $order in $orders {
+            &-#{$order} {
+              order: #{$order};
+            }
+          }
+        }
+      }
+      &-xl {
+        @include xl {
+          @each $order in $orders {
+            &-#{$order} {
+              order: #{$order};
+            }
+          }
+        }
+      }
+      &-xxl {
+        @include xxl {
+          @each $order in $orders {
+            &-#{$order} {
+              order: #{$order};
+            }
+          }
+        }
+      }
+    }
+
+    .flex-direction {
+      &row, &-row {
+        flex-direction: row!important;
+      }
+      &rowRev, &-row-reverse {
+        flex-direction: row-reverse!important;
+      }
+      &col, &-col, &-column {
+        flex-direction: column!important;
+      }
+      &colRev, &-col-rev, &-column-rev {
+        flex-direction: column-reverse!important;
+      }
+    }
+    
+    .flex-wrap {
+      &-wrap {
+        flex-wrap: wrap!important;
+      }
+      &-no-wrap, &-nowrap {
+        flex-wrap: nowrap!important;
+      }
+    }
+
+    .justify-content {
+      &-start {
+        justify-content: flex-start!important;
+      }
+      &-end {
+        justify-content: flex-end!important;
+      }
+      &-center {
+        justify-content: center!important;
+      }
+      &-between {
+        justify-content: space-between!important;
+      }
+      &-around {
+        justify-content: space-around!important;
+      }
+    }
+    .align-content {
+      &-start {
+        align-content: flex-start!important;
+      }
+      &-end {
+        align-content: flex-end!important;
+      }
+      &-center {
+        align-content: center!important;
+      }
+      &-stretch {
+        align-content: stretch!important;
+      }
+      &-between {
+        align-content: space-between!important;
+      }
+      &-around {
+        align-content: space-around!important;
+      }
+    }
+
+    .align-items {
+      &-start {
+        align-items: flex-start!important;
+      }
+      &-end {
+        align-items: flex-end!important;
+      }
+      &-center {
+        align-items: center!important;
+      }
+      &-stretch {
+        align-items: stretch!important;
+      }
+    }
+
+    /*
+    .box:has( > .boxes) {
+      margin-top: 0!important;
+      margin-bottom: 0!important;
+      padding: 0!important;
+    }
+    */
+
+    /* FLEX BOXES */
+    .boxes {
+      display: flex;
+      margin: 0 calc(var(--margin) * -1);
+      width: calc(100% + (var(--margin) * 2));
+      flex-flow: row wrap;
+      position: relative;
+
+      &-d {
+        &-row {
+          flex-direction: row;
+        }
+        &-row-reverse {
+          flex-direction: row-reverse;
+        }
+        &-col {
+          flex-direction: column;
+        }
+        &-col-reverse {
+          flex-direction: column-reverse;
+        }
+      }
+      &-wrap {
+        flex-wrap: wrap;
+        &-y {
+          flex-wrap: wrap;
+        }
+        &-n {
+          flex-wrap: nowrap;
+        }
+      }
+      &-h {
+        &-start {
+          justify-content: flex-start;
+        }
+        &-end {
+          justify-content: flex-end;
+        }
+        &-center {
+          justify-content: center;
+        }
+        &-between {
+          justify-content: space-between;
+        }
+        &-around {
+          justify-content: space-around;
+        }
+      }
+      &-v {
+        &-start {
+          align-content: flex-start;
+        }
+        &-end {
+          align-content: flex-end;
+        }
+        &-center {
+          align-content: center;
+        }
+        &-stretch {
+          align-content: stretch;
+        }
+        &-between {
+          align-content: space-between;
+        }
+        &-around {
+          align-content: space-around;
+        }
+      }
+      &-vv {
+        &-start {
+          align-items: flex-start;
+        }
+        &-end {
+          align-items: flex-end;
+        }
+        &-center {
+          align-items: center;
+        }
+        &-stretch {
+          align-items: stretch;
+        }
+      }
+
+      
+      .box {
+        position: relative;
+        margin: calc(var(--margin) * 1);
+        padding: calc(var(--padding) * 1);
+        flex-flow: row wrap;
+        align-content: flex-start;
+        @include width(calc(100% - (var(--margin) * 2)));
+        &.box8, &.box-8, &.box10, &.box-10, &.box12, &.box-12, &.box16, &.box-16, &.box20, &.box-20, &.box25, &.box-25, &.box30, &.box-30, &.box33, &.box-33, &.box40, &.box-40, &.box50, &.box-50, &.box60, &.box-60, &.box66, &.box-66, &.box70, &.box-70, &.box75, &.box-75, &.box80, &.box-80, &.box100, &.box-100 {
+          @include width(calc(100% - (var(--margin) * 2)));
+        }
+        @include smDown {
+          &.f33 {
+            @include width(calc(33.333333% - (var(--margin) * 2)));
+          }
+          &.f50 {
+            @include width(calc(50% - (var(--margin) * 2)));
+          }
+        }
+      }
+
+      &.ns, &.no-space {
+        @include width(100%);
+        margin: 0!important;
+        padding: 0!important;
+        > .box {
+          @include width(100%);
+          //margin: 0!important;
+          margin-left: 0!important;
+          margin-right: 0!important;
+        }
+      }
+
+    }
+
+    @include sm {
+      .boxes {
+        margin: 0 calc(var(--margin) * -1);
+        width: calc(100% + (var(--margin) * 2));
+        .box {
+          @include width(auto);
+          margin: calc(var(--margin) * 1);
+          padding: calc(var(--padding) * 1);
+          &.box8, &.box-8 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box10, &.box-10 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box12, &.box-12 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box16, &.box-16 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box20, &.box-20 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box25, &.box-25 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box30, &.box-30 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box33, &.box-33 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box40, &.box-40 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box50, &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box60, &.box-60 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box66, &.box-66 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box70, &.box-70 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box75, &.box-75 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box80, &.box-80 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box100, &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+        &.ns {
+          > .box {
+            @include width(auto);
+            &.box8, &.box-8 {@include width(50%);}
+            &.box10, &.box-10 {@include width(50%);}
+            &.box12, &.box-12 {@include width(50%);}
+            &.box16, &.box-16 {@include width(50%);}
+            &.box20, &.box-20 {@include width(50%);}
+            &.box25, &.box-25 {@include width(50%);}
+            &.box30, &.box-30 {@include width(50%);}
+            &.box33, &.box-33 {@include width(50%);}
+            &.box40, &.box-40 {@include width(50%);}
+            &.box50, &.box-50 {@include width(50%);}
+            &.box60, &.box-60 {@include width(50%);}
+            &.box66, &.box-66 {@include width(50%);}
+            &.box70, &.box-70 {@include width(100%);}
+            &.box75, &.box-75 {@include width(100%);}
+            &.box80, &.box-80 {@include width(100%);}
+            &.box100, &.box-100 {@include width(100%);}
+          }
+        }
+      }
+    }
+
+    // Medium devices
+    @include md {
+      .boxes {
+        margin: 0 calc( var(--margin) * -1 );
+        width: calc(100% + (var(--margin) * 2));
+        .box {
+          margin: var(--margin);
+          padding: var(--padding);
+          &.noTopBot, &.no-top-bot {
+            margin: 0 var(--margin);
+            padding: 0 var(--padding);
+          }
+          &.box8, &.box-8 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box10, &.box-10 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box12, &.box-12 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box16, &.box-16 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box20, &.box-20 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box25, &.box-25 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box30, &.box-30 {@include width(calc(30% - (var(--margin) * 2)));}
+          &.box33, &.box-33 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box40, &.box-40 {@include width(calc(40% - (var(--margin) * 2)));}
+          &.box50, &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box60, &.box-60 {@include width(calc(60% - (var(--margin) * 2)));}
+          &.box66, &.box-66 {@include width(calc(66.666666% - (var(--margin) * 2)));}
+          &.box70, &.box-70 {@include width(calc(70% - (var(--margin) * 2)));}
+          &.box75, &.box-75 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box80, &.box-80 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box100, &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+        &.ns {
+          > .box {
+            &.box8, &.box-8 {@include width(33.333333%);}
+            &.box10, &.box-10 {@include width(20%);}
+            &.box12, &.box-12 {@include width(25%);}
+            &.box16, &.box-16 {@include width(33.333333%);}
+            &.box20, &.box-20 {@include width(50%);}
+            &.box25, &.box-25 {@include width(50%);}
+            &.box30, &.box-30 {@include width(30%);}
+            &.box33, &.box-33 {@include width(33.333333%);}
+            &.box40, &.box-40 {@include width(40%);}
+            &.box50, &.box-50 {@include width(50%);}
+            &.box60, &.box-60 {@include width(60%);}
+            &.box66, &.box-66 {@include width(66.666666%);}
+            &.box70, &.box-70 {@include width(70%);}
+            &.box75, &.box-75 {@include width(50%);}
+            &.box80, &.box-80 {@include width(100%);}
+            &.box100, &.box-100 {@include width(100%);}
+          }
+        }
+      }
+    }
+
+    // Large devices
+
+    @include lg {
+      .boxes {
+        .box {
+          &.box8, &.box-8 {@include width(calc(16.666666% - (var(--margin) * 2)));}
+          &.box10, &.box-10 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box12, &.box-12 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box16, &.box-16 {@include width(calc(16.666666% - (var(--margin) * 2)));}
+          &.box20, &.box-20 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box25, &.box-25 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box30, &.box-30 {@include width(calc(30% - (var(--margin) * 2)));}
+          &.box33, &.box-33 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box40, &.box-40 {@include width(calc(40% - (var(--margin) * 2)));}
+          &.box50, &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box60, &.box-60 {@include width(calc(60% - (var(--margin) * 2)));}
+          &.box66, &.box-66 {@include width(calc(66.666666% - (var(--margin) * 2)));}
+          &.box70, &.box-70 {@include width(calc(70% - (var(--margin) * 2)));}
+          &.box75, &.box-75 {@include width(calc(75% - (var(--margin) * 2)));}
+          &.box80, &.box-80 {@include width(calc(80% - (var(--margin) * 2)));}
+          &.box100, &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+        &.ns {
+          > .box {
+            &.box8, &.box-8 {@include width(16.666666%);}
+            &.box10, &.box-10 {@include width(20%);}
+            &.box12, &.box-12 {@include width(25%);}
+            &.box16, &.box-16 {@include width(16.666666%);}
+            &.box20, &.box-20 {@include width(20%);}
+            &.box25, &.box-25 {@include width(25%);}
+            &.box30, &.box-30 {@include width(30%);}
+            &.box33, &.box-33 {@include width(33.333333%);}
+            &.box40, &.box-40 {@include width(40%);}
+            &.box50, &.box-50 {@include width(50%);}
+            &.box60, &.box-60 {@include width(60%);}
+            &.box66, &.box-66 {@include width(66.666666%);}
+            &.box70, &.box-70 {@include width(70%);}
+            &.box75, &.box-75 {@include width(75%);}
+            &.box80, &.box-80 {@include width(80%);}
+            &.box100, &.box-100 {@include width(100%);}
+          }
+        }
+      }
+    }
+
+    // Extra large devices
+
+    @include xl {
+      .boxes {
+        .box {
+          &.box8, &.box-8 {@include width(calc(8.333333% - (var(--margin) * 2)));}
+          &.box10, &.box-10 {@include width(calc(10% - (var(--margin) * 2)));}
+          &.box12, &.box-12 {@include width(calc(12.5% - (var(--margin) * 2)));}
+          &.box16, &.box-16 {@include width(calc(16.666666% - (var(--margin) * 2)));}
+          &.box20, &.box-20 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box25, &.box-25 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box30, &.box-30 {@include width(calc(30% - (var(--margin) * 2)));}
+          &.box33, &.box-33 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box40, &.box-40 {@include width(calc(40% - (var(--margin) * 2)));}
+          &.box50, &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box60, &.box-60 {@include width(calc(60% - (var(--margin) * 2)));}
+          &.box66, &.box-66 {@include width(calc(66.666666% - (var(--margin) * 2)));}
+          &.box70, &.box-70 {@include width(calc(70% - (var(--margin) * 2)));}
+          &.box75, &.box-75 {@include width(calc(75% - (var(--margin) * 2)));}
+          &.box80, &.box-80 {@include width(calc(80% - (var(--margin) * 2)));}
+          &.box100, &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+        &.ns {
+          > .box {
+            &.box8, &.box-8 {@include width(8.333333%);}
+            &.box10, &.box-10 {@include width(10%);}
+            &.box12, &.box-12 {@include width(12.5%);}
+            &.box16, &.box-16 {@include width(16.666666%);}
+            &.box20, &.box-20 {@include width(20%);}
+            &.box25, &.box-25 {@include width(25%);}
+            &.box30, &.box-30 {@include width(30%);}
+            &.box33, &.box-33 {@include width(33.333333%);}
+            &.box40, &.box-40 {@include width(40%);}
+            &.box50, &.box-50 {@include width(50%);}
+            &.box60, &.box-60 {@include width(60%);}
+            &.box66, &.box-66 {@include width(66.666666%);}
+            &.box70, &.box-70 {@include width(70%);}
+            &.box75, &.box-75 {@include width(75%);}
+            &.box80, &.box-80 {@include width(80%);}
+            &.box100, &.box-100 {@include width(100%);}
+          }
+        }
+      }
+    }
+
+  }
+}
