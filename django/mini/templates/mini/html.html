@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>{% if webapp_title %}{{ webapp_title }} | {% endif %}{% block title %}{% if title %}{{ title|capfirst }}{% else %}title{% endif %}{% endblock %}</title>
+
+    {% if favicon is not False %}<link href="{% static 'favicon.ico' %}" rel="icon" type="image/x-icon"/>{% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if theme_variables.theme_color %}<meta name="theme-color" content="{{ theme_variables.theme_color }}" />{% endif %}
+    {% load pwa %}
+    {% pwa_meta_data %}
+    {% pwa_meta_script %}
+    <link rel="manifest" href="manifest.json" />
+
+    {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+    {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
+    {% if author %}<meta name="author" content="{{ author }}">{% endif %}
+
+    {% if title %}<meta property="og:title" content="{{ title }}">{% endif %}
+    {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+    {% if website_thumbnail %}<meta property="og:image" content="{{ website_thumbnail }}">{% endif %}
+    {% if website_url %}<meta property="og:url" content="{{ website_url }}">{% endif %}
+
+    {% if title %}<meta name="twitter:title" content="{{ title }}">{% endif %}
+    {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+    {% if website_thumbnail %}
+    <meta name="twitter:image" content="{{ website_thumbnail }}">
+    <meta name="twitter:card" content="summary_large_image">
+    {% endif %}
+    {% if favicon is not False %}<link rel="apple-touch-icon" href="{% static 'favicon.ico' %}">{% endif %}
+
+    {% block mini_header_css %}
+    <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">
+    {% endblock %}
+    
+    {% block header_css %}
+    {% comment %}<link rel="stylesheet" type="text/css" href="{% static 'css/this.css' %}">{% endcomment %}
+    {% endblock %}
+
+    {# Include Google Fonts #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    {% block google_fonts %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    {% endblock %}
+    
+    {# Include FontAwesome #}
+    {% block fontawesome %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    {% endblock %}
+    
+    {# Include AOS #}
+    {% if AOS is not False %}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    {% endif %}
+
+    {# Include Google Analytics #}
+    {% block google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_code }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "{{ analytics_code }}");
+    </script>
+    {% endblock %}
+
+    {% if css_root_vars %}
+    <style>
+        :root {
+            {% for var, color in css_root_vars.items %}
+            {{ var }}: {{ color }};
+            {% endfor %}
+        }
+    </style>
+    {% endif %}
+    
+
+</head>
+
+<body class="mini {{ body_classes }}">
+    <div class="loader"></div>
+    <div id="top"></div>
+    <a href="#top"><div class="top-link"><p class="v-cent"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></p></div></a>
+
+    {% if gdpr_app %}
+    {% block privacy_banner %}
+    {% load i18n %}
+    <div id="consent-banner" class="full shown" onmousedown="openConsentBanner()">
+        <p class="cookie-icon">🍪</p>
+        <div class="cookie-banner-content">
+            <div class="close-banner"><p class="center v-cent XL bold"><a onclick="consentDenied()">X</a></p></div>
+            <div class="consent-label">
+                <p class="cookie-desc whTxt L">
+                    {% translate 'we use cookies (privacy banner)' %}
+                </p>
+                <p class="cookie-desc whTxt S">
+                    {% translate 'we use cookies - how to (privacy banner)' %}
+                </p>
+            </div>
+            <div class="consent-buttons">
+                <button onclick="consentGranted()" class="btn whBtnBg L consent consentYes">{% translate 'accept (privacy banner)' %}</button>
+                <button onclick="consentDenied()" class="btn whBtnBg L consent consentNo">{% translate 'decline - technical cookies only (privacy banner)' %}</button>
+            </div>
+            <p class="consent-status"></p>
+        </div>
+    </div>
+    {% endblock %}
+    {% endif %}
+
+    {% block header %}
+    <header id="header" class="header fixed scroll-wh {% if not messages %}{{ header_classes }}{% endif %}">
+        <div class="container">
+            <div class="boxes boxes-h-between boxes-vv-center">
+                {% block branding %}
+                <div class="box brand">
+                    <a href="{% url 'home' %}" class="">
+                        <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem ml1 mr1" alt="emblem"/>
+                    </a>
+                    <a href="{% url 'home' %}" class="NOxlDown">
+                        <img src="https://mini.uwa.agency/img/brand/mini_logotype.svg" class="logo logotype" alt="logotype"/>
+                    </a>
+                    <a href="{% url 'home' %}" class=""><h3 class="site-title mini-title"><span class="vibing">mini</span></h3></a>
+                </div>
+                {% endblock %}
+                {% block menus %}
+                <div class="box menus">
+                    <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+                    <div id="head-menu" class="head-menu bRad10">
+                    
+                        {% block main_nav %}
+                        <nav id="main-menu" class="menu main-menu">
+                            <ul class="menu main-menu">
+                                <ul class="menu page-menu">
+                                </ul>
+                                <li class="menu-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}"><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">home</a></li>
+                                {% block main_menu_list_items %}
+                                {% endblock %}
+                                {% block main_menu_list_items_shop %}{% endblock %}
+                            </ul>
+                        </nav>
+                        {% endblock %}
+
+                        {% block aroma_admin_nav %}{% endblock %}
+
+                        {% block aroma_menu_nav %}{% endblock %}
+
+                        {% block aroma_reserv_nav %}{% endblock %}
+
+                        {% block aroma_cart_nav %}{% endblock %}
+
+                        {% block user_nav %}{% endblock %}
+
+                        {% block languagemenunav %}
+                        <nav id="lang-menu" class="menu lang-menu">
+                            <ul class="menu lang-menu">
+                                {% load i18n %}
+                                {% get_current_language as currentlanguage %}
+                                {% get_available_languages as languages %}
+                                {% for lang_code, lang_name in languages %}
+                                    {% language lang_code %}
+                                    <li class="menu-item"><a href="/{{ lang_code }}/" class="up-case{% if currentlanguage == lang_code %} selected{% endif %}">{{ lang_code }}</a></li>
+                                    {% endlanguage %}
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                        {% endblock %}
+                    </div>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </header>
+    {% endblock %}
+
+    <main class="fh {{ main_classes }}">
+
+        {% block head_content %}
+        {% endblock %}
+
+        {% block page_title %}
+        {% if page_title or page_subtitle %}
+        <div class="container fw">
+            <div class="container">
+                <div class="boxes space-top">
+                    <div class="box box100">
+                        <div class="space space2"></div>
+                        {% if page_title %}<h1 class="m0">{{ page_title|capfirst }}</h1>{% endif %}
+                        {% if page_subtitle %}<h2 class="m0">{{ page_subtitle|capfirst }}</h2>{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endblock %}
+
+        {% if messages %}
+        <section id="messages" class="container fw" \style="position:absolute; z-index:1;">
+            <div class="container">
+                <div class="boxes align-items-start">
+                    {% for message in messages %}
+                    <div class="box box-100 b-rad-5 alert {% if message.tags %}{{ message.tags }}Bg whTxt{% endif %}" role="alert">
+                        <p class="{% if message.tags %}whTxt{% endif %}">
+                            {{ message|capfirst }}
+                        </p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if quick_content %}
+        {% block quick_content %}
+        <section id="quick-content" class="container fw">
+            <div class="container">
+                <div class="boxes align-items-start {% if not page_title and not messages %}space-top{%endif%}">
+                    <div class="box box-100 {{ quick_content_wr_class }}">
+                        <p class="{{ quick_content_class }}">{{ quick_content }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+        {% endif %}
+
+        {% block content %}
+        <section id="content" class="container fw page-menu">
+            <div class="container">
+                <div class="boxes fh boxes-v-center {% if not page_title and not messages and not quick_content %}space-top-bot{%endif%}">
+                    <div class="box box100">
+
+                        <h1 class="m0 light">Default <span class="colTxt"><span class="bold">mini</span>mal</span> home page!</h1>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+
+    </main>
+
+    {% block actions %}
+    {% endblock %}
+
+    {% block footer %}
+    {% load i18n %}
+    <footer id="footer" class="footer">
+        <div class="container space-top-bot">
+            <div class="boxes">
+                <div class="box box33 footer-info">
+                    {% block footer_info %}
+
+                    {% if company_variables.company %}<p class="">{% now "Y" %}&nbsp;©&nbsp;<span class="bold">{{ company_variables.company }}</span></p>{% endif %}
+
+                    {% if company_variables.address_line_1 %}<p class="S mb0">{{ company_variables.address_line_1 }}</p>{% endif %}
+                    {% if company_variables.address_line_2 %}<p class="S mt0">{{ company_variables.address_line_2 }}</p>{% endif %}
+
+                    {% if company_variables.email %}<p class="mb0"><span class="grTxt light">{% translate 'email (label)' %}:</span>&nbsp;{{ company_variables.email }}</p>{% endif %}
+                    {% if company_variables.phone %}<p class="mt0"><span class="grTxt light">{% translate 'phone (label)' %}:</span>&nbsp;{{ company_variables.phone }}</p>{% endif %}
+
+                    {% endblock %}
+                </div>
+                <div class="box box33 footer-logo">
+                    {% block footer_logo %}
+                    <a href="{% url 'home' %}" class=""><img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem v-cent" alt="emblem"/></a>
+                    {% endblock %}
+                </div>
+                <div class="box box33 footer-menu">
+                    {% block footer_menu %}
+                    {% endblock %}
+                    {% block gdpr_menu %}
+                    {% if gdpr_app %}
+                    {% include 'gdpr/partials/gdpr_nav.html' %}
+                    {% endif %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% block footer_custom_area %}
+        {% endblock %}
+        {% block credits %}
+        <div class="container fw fw-bg">
+            <div class="container">
+                <div class="boxes">
+                    <div class="box box-100 mv-0 p-05">
+                        <style>
+                            .hover-col img{
+                                filter: brightness(0) opacity(0.75);
+                            }
+                            .hover-col:hover img {
+                                transition: filter 0.3s ease;
+                                filter: none;
+                            }
+                        </style>
+                        <p class="S m-0 center grey-text"><i class="fa fa-heart mini-text heart" aria-hidden="true"></i> Proudly designed & developed by&nbsp;<a href="https://www.uwa.agency/" target="_blank" class="fb-text hover-col"><img src="https://mini.uwa.agency/img/uwa/brand/uwa_logo.svg" class="img" alt="UWA logo" style="display: inline-block; width: 26px; transform: translate(0, 30%);"/></a>&nbsp;using&nbsp;<a href="https://mini.uwa.agency/" target="_blank" class="fb-text link-hover-text"><img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="img" alt="mini logo" style="display: inline-block; width: 16px;"/>&nbsp;mini</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </footer>
+    {% endblock %}
+    
+    {# Include AOS #}
+    {% if AOS is not False %}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    {% endif %}
+
+    {% block mini_footer_js %}
+    <script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>
+    {% endblock %}
+
+    {% block bottom_js %}
+    {% endblock %}
+
+    {% comment %}<script type="text/javascript" src="{% static 'js/this.js' %}"></script>{% endcomment %}
+
+    {# Include HTMX #}
+    {% block footer_htmx %}
+    {% comment %}<script src="https://unpkg.com/htmx.org@1.8.6" integrity="sha384-Bj8qm/6B+71E6FQSySofJOUjA/gq330vEqjFx9LakWybUySyI1IQHwPtbTU7bNwx" crossorigin="anonymous"></script>{% endcomment %}
+    {% endblock %}
+
+    {% block footer_privacy_scripts %}
+    <script type="text/javascript" src="https://mini.uwa.agency/js/gdpr.js"></script>
+    {% endblock %}
+
+</body>
+</html>

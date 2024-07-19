@@ -6,6 +6,115 @@ body {
 
     .flex, .d-flex, .display-flex {
       display: flex!important;
+      &-sm {
+        @include sm {
+          display: flex!important;
+        }
+      }
+      &-md {
+        @include md {
+          display: flex!important;
+        }
+      }
+      &-lg {
+        @include lg {
+          display: flex!important;
+        }
+      }
+      &-xl {
+        @include xl {
+          display: flex!important;
+        }
+      }
+      &-xxl {
+        @include xxl {
+          display: flex!important;
+        }
+      }
+    }
+    .block, .d-block, .display-block {
+      display: block!important;
+      &-sm {
+        @include sm {
+          display: block!important;
+        }
+      }
+      &-md {
+        @include md {
+          display: block!important;
+        }
+      }
+      &-lg {
+        @include lg {
+          display: block!important;
+        }
+      }
+      &-xl {
+        @include xl {
+          display: block!important;
+        }
+      }
+      &-xxl {
+        @include xxl {
+          display: block!important;
+        }
+      }
+    }
+    .inline-block, .d-inline-block, .display-inline-block {
+      display: inline-block!important;
+      &-sm {
+        @include sm {
+          display: inline-block!important;
+        }
+      }
+      &-md {
+        @include md {
+          display: inline-block!important;
+        }
+      }
+      &-lg {
+        @include lg {
+          display: inline-block!important;
+        }
+      }
+      &-xl {
+        @include xl {
+          display: inline-block!important;
+        }
+      }
+      &-xxl {
+        @include xxl {
+          display: inline-block!important;
+        }
+      }
+    }
+    .none, .d-none, .display-none {
+      display: none!important;
+      &-sm {
+        @include sm {
+          display: none!important;
+        }
+      }
+      &-md {
+        @include md {
+          display: none!important;
+        }
+      }
+      &-lg {
+        @include lg {
+          display: none!important;
+        }
+      }
+      &-xl {
+        @include xl {
+          display: none!important;
+        }
+      }
+      &-xxl {
+        @include xxl {
+          display: none!important;
+        }
+      }
     }
 
     $orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
@@ -139,13 +248,17 @@ body {
       }
     }
 
-    /*
     .box:has( > .boxes) {
-      margin-top: 0!important;
-      margin-bottom: 0!important;
-      padding: 0!important;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+      .boxes {
+        .box {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
     }
-    */
 
     /* FLEX BOXES */
     .boxes {
@@ -233,19 +346,20 @@ body {
       
       .box {
         position: relative;
-        margin: calc(var(--margin) * 1);
+        margin: calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1);
         padding: calc(var(--padding) * 1);
         flex-flow: row wrap;
         align-content: flex-start;
         @include width(calc(100% - (var(--margin) * 2)));
-        &.box8, &.box-8, &.box10, &.box-10, &.box12, &.box-12, &.box16, &.box-16, &.box20, &.box-20, &.box25, &.box-25, &.box30, &.box-30, &.box33, &.box-33, &.box40, &.box-40, &.box50, &.box-50, &.box60, &.box-60, &.box66, &.box-66, &.box70, &.box-70, &.box75, &.box-75, &.box80, &.box-80, &.box100, &.box-100 {
+        &.box8, &.box10, &.box12, &.box16, &.box20, &.box25, &.box30, &.box33, &.box40, &.box50, &.box60, &.box66, &.box70, &.box75, &.box80, &.box100,
+        &.box-8, &.box-10, &.box-12, &.box-16, &.box-20, &.box-25, &.box-30, &.box-33, &.box-40, &.box-50, &.box-60, &.box-66, &.box-70, &.box-75, &.box-80, &.box-100 {
           @include width(calc(100% - (var(--margin) * 2)));
         }
         @include smDown {
-          &.f33 {
+          &.f33, &.f-33 {
             @include width(calc(33.333333% - (var(--margin) * 2)));
           }
-          &.f50 {
+          &.f50, &.f-50 {
             @include width(calc(50% - (var(--margin) * 2)));
           }
         }

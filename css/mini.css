@@ -33,20 +33,43 @@
   --third-color-dark: rgb(34 15 61);
   --fourth-color: rgb(220 230 0);
   --fourth-color-dark: rgb(180 190 0);
-  --link-color: rgb(50 185 165);
-  --link-hover-color: rgb(40 130 120);
-  --info: rgb(142 210 191);
+  --link-color: rgb(60 185 225);
+  --link-hover-color: rgb(40 130 160);
+  --info: rgb(113 202 189);
   --success: rgb(160 220 110);
-  --warning: rgb(255 145 80);
-  --danger: rgb(235 55 80);
+  --warning: rgb(248 187 83);
+  --danger: rgb(255 111 97);
+  --bad: rgb(235 55 80);
   --acid-green: #C2F261;
   --stars-color: rgba( 255 255 255 / 50%);
   --gingerbread: rgb(84 73 75);
   --pulse-color: --main-color;
   --mini-color: rgb(60 90 255);
+  --mini-color-dark: rgb(50 75 180);
+  --mini-second-color: rgb(50 75 180);
+  --mini-second-color-dark: rgb(37 56 133);
+  --mini-third-color: rgb(60 30 99);
+  --mini-third-color-dark: rgb(34 15 61);
+  --mini-fourth-color: rgb(220 230 0);
+  --mini-fourth-color-dark: rgb(180 190 0);
+  --mini-link-color: rgb(60 185 225);
+  --mini-link-hover-color: rgb(40 130 160);
   --uwa-color: rgb(60 90 255);
+  --uwa-color-dark: #324bb4;
+  --uwa-second-color: #3c1e63;
+  --uwa-third-color: #dce600;
+  --uwa-fourth-color: #3c5aff;
+  --uwa-link-color: #3c5aff;
+  --uwa-link-hover-color: #324bb4;
   --aroma-color: rgb(208 33 73);
   --aroma-color-dark: rgb(145 25 55);
+  --pezzidipla-color: rgb( 240 220 100 / 100% );
+  --pezzidipla-second-color: rgb( 60 0 60 / 100% );
+  --pezzidipla-third-color: rgb(100 190 150 / 100%);
+  --pezzidipla-fourth-color: rgb( 250 215 210 / 100% );
+  --lanuovastartup-color: rgb( 250 85 105 / 100% );
+  --lanuovastartup-color-dark: rgb( 190 60 95 / 100% );
+  --doingthings-color: rgb(209 255 82 / 100%);
   /* TYPO */
   /* variables */
   --font-sans: "Roboto", sans-serif;
@@ -299,8 +322,8 @@ body.mini #top {
   top: 0;
 }
 body.mini .top-link {
-  width: calc(var(--baseline) * 2);
-  height: calc(var(--baseline) * 2);
+  width: calc(var(--baseline) * 4);
+  height: calc(var(--baseline) * 4);
   background: var(--main-color);
   position: fixed !important;
   bottom: var(--padding);
@@ -867,6 +890,12 @@ body.mini .hfhf, body.mini .half-full-height-fixed {
   height: calc(var(--vh, 1vh) * 50);
   transition: all 0.3s ease;
 }
+body.mini .h-100 {
+  height: 100%;
+}
+body.mini .w-100 {
+  width: 100%;
+}
 body.mini .px {
   perspective: 1px;
   -webkit-perspective: 1px;
@@ -887,16 +916,16 @@ body.mini .px .pxLayer {
   bottom: 0;
   left: 0;
 }
-body.mini .hLeft, body.mini .h-left, body.mini .h-start {
+body.mini .h-left, body.mini .h-start {
   text-align: left !important;
   margin-right: auto !important;
 }
-body.mini .hCent, body.mini .h-cent {
+body.mini .h-cent {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-body.mini .hRight, body.mini .h-right, body.mini .h-end {
+body.mini .h-right, body.mini .h-end {
   text-align: right !important;
   margin-left: auto !important;
 }
@@ -936,7 +965,7 @@ body.mini .box-shadow, body.mini .box-shadow-10 {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
 }
-body.mini .box-shadow-l, body.mini .box-shadow-10 {
+body.mini .box-shadow-l, body.mini .box-shadow-20 {
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
 }
@@ -1254,20 +1283,261 @@ body.mini form textarea {
   font-family: var(--font-sans);
   font-weight: 400;
 }
-
+body.mini .space-bot-action {
+  padding-bottom: calc(var(--margin) + var(--margin) + var(--padding) * 0.5 + 48px);
+}
+body.mini #actions {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  padding: var(--padding) calc(var(--padding) * 1) 0 calc(var(--padding) * 1);
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 576px) {
+  body.mini #actions {
+    background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+body.mini #actions ul.action-groups {
+  display: flex;
+  flex-flow: row wrap;
+}
+body.mini #actions ul.action-groups li.action-group {
+  margin: 0 var(--margin) var(--margin) 0;
+}
+body.mini #actions ul.action-groups li.action-group > a {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 0;
+  color: var(--white);
+  border-color: var(--link-hover-color);
+  background: var(--link-hover-color);
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
+  font-size: calc(var(--p) * 1.25);
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  border-radius: 3rem;
+}
+body.mini #actions ul.action-groups li.action-group > a:hover, body.mini #actions ul.action-groups li.action-group > a.active {
+  background-color: var(--link-hover-color);
+}
+body.mini #actions ul.action-groups li.action-group > a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--link-color);
+  color: var(--white);
+  font-size: calc(var(--p) * 1.25);
+  line-height: 1;
+  height: 8vw;
+  max-height: 48px;
+  width: 8vw;
+  max-width: 48px;
+  padding: calc(var(--padding) * 1);
+  margin: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+body.mini #actions ul.action-groups li.action-group > a .label {
+  display: none;
+  margin: 0 var(--margin);
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  z-index: 10;
+  top: 30%;
+  left: 70%;
+  transform: translate(0, -100%);
+  margin: 0;
+  background-color: var(--link-hover-color);
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1);
+  -webkit-border-radius: 10px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: 10px;
+  -moz-border-radius-bottomleft: 0;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border: 2px solid;
+  border-color: var(--link-color);
+}
+body.mini #actions ul.action-groups li.action-group ul.actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100%);
+  width: 100%;
+  padding: calc(var(--padding) * 0.5) var(--padding);
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+}
+@media (min-width: 576px) {
+  body.mini #actions ul.action-groups li.action-group ul.actions {
+    width: auto;
+    padding: 0 var(--padding);
+  }
+}
+body.mini #actions ul.action-groups li.action-group ul.actions li.action > a {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  margin: 0;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
+  -webkit-border-radius: calc(40px + var(--padding) * 0.5);
+  -moz-border-radius: calc(40px + var(--padding) * 0.5);
+  border-radius: calc(40px + var(--padding) * 0.5);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+}
+body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--link-color);
+  color: var(--white);
+  font-size: calc(var(--p) * 1.25);
+  line-height: 1;
+  height: 8vw;
+  max-height: 48px;
+  width: 8vw;
+  max-width: 48px;
+  padding: calc(var(--padding) * 1);
+  margin: 0 var(--margin) 0 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon:hover, body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon.active {
+  background-color: var(--link-hover-color);
+}
 /* MAIN STRUCTURE */
 body.mini {
-  /*
-  .box:has( > .boxes) {
-    margin-top: 0!important;
-    margin-bottom: 0!important;
-    padding: 0!important;
-  }
-  */
   /* FLEX BOXES */
 }
 body.mini .flex, body.mini .d-flex, body.mini .display-flex {
   display: flex !important;
+}
+@media (min-width: 576px) {
+  body.mini .flex-sm, body.mini .d-flex-sm, body.mini .display-flex-sm {
+    display: flex !important;
+  }
+}
+@media (min-width: 768px) {
+  body.mini .flex-md, body.mini .d-flex-md, body.mini .display-flex-md {
+    display: flex !important;
+  }
+}
+@media (min-width: 992px) {
+  body.mini .flex-lg, body.mini .d-flex-lg, body.mini .display-flex-lg {
+    display: flex !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.mini .flex-xl, body.mini .d-flex-xl, body.mini .display-flex-xl {
+    display: flex !important;
+  }
+}
+@media (min-width: 1920px) {
+  body.mini .flex-xxl, body.mini .d-flex-xxl, body.mini .display-flex-xxl {
+    display: flex !important;
+  }
+}
+body.mini .block, body.mini .d-block, body.mini .display-block {
+  display: block !important;
+}
+@media (min-width: 576px) {
+  body.mini .block-sm, body.mini .d-block-sm, body.mini .display-block-sm {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) {
+  body.mini .block-md, body.mini .d-block-md, body.mini .display-block-md {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  body.mini .block-lg, body.mini .d-block-lg, body.mini .display-block-lg {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.mini .block-xl, body.mini .d-block-xl, body.mini .display-block-xl {
+    display: block !important;
+  }
+}
+@media (min-width: 1920px) {
+  body.mini .block-xxl, body.mini .d-block-xxl, body.mini .display-block-xxl {
+    display: block !important;
+  }
+}
+body.mini .inline-block, body.mini .d-inline-block, body.mini .display-inline-block {
+  display: inline-block !important;
+}
+@media (min-width: 576px) {
+  body.mini .inline-block-sm, body.mini .d-inline-block-sm, body.mini .display-inline-block-sm {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) {
+  body.mini .inline-block-md, body.mini .d-inline-block-md, body.mini .display-inline-block-md {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) {
+  body.mini .inline-block-lg, body.mini .d-inline-block-lg, body.mini .display-inline-block-lg {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.mini .inline-block-xl, body.mini .d-inline-block-xl, body.mini .display-inline-block-xl {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1920px) {
+  body.mini .inline-block-xxl, body.mini .d-inline-block-xxl, body.mini .display-inline-block-xxl {
+    display: inline-block !important;
+  }
+}
+body.mini .none, body.mini .d-none, body.mini .display-none {
+  display: none !important;
+}
+@media (min-width: 576px) {
+  body.mini .none-sm, body.mini .d-none-sm, body.mini .display-none-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  body.mini .none-md, body.mini .d-none-md, body.mini .display-none-md {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  body.mini .none-lg, body.mini .d-none-lg, body.mini .display-none-lg {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  body.mini .none-xl, body.mini .d-none-xl, body.mini .display-none-xl {
+    display: none !important;
+  }
+}
+@media (min-width: 1920px) {
+  body.mini .none-xxl, body.mini .d-none-xxl, body.mini .display-none-xxl {
+    display: none !important;
+  }
 }
 body.mini .order-1 {
   order: 1;
@@ -1558,6 +1828,15 @@ body.mini .align-items-center {
 body.mini .align-items-stretch {
   align-items: stretch !important;
 }
+body.mini .box:has(> .boxes) {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+body.mini .box:has(> .boxes) .boxes .box {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 body.mini .boxes {
   display: flex;
   margin: 0 calc(var(--margin) * -1);
@@ -1633,7 +1912,7 @@ body.mini .boxes-vv-stretch {
 }
 body.mini .boxes .box {
   position: relative;
-  margin: calc(var(--margin) * 1);
+  margin: calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1);
   padding: calc(var(--padding) * 1);
   flex-flow: row wrap;
   align-content: flex-start;
@@ -1641,18 +1920,18 @@ body.mini .boxes .box {
   width: calc(100% - var(--margin) * 2);
   max-width: calc(100% - var(--margin) * 2);
 }
-body.mini .boxes .box.box8, body.mini .boxes .box.box-8, body.mini .boxes .box.box10, body.mini .boxes .box.box-10, body.mini .boxes .box.box12, body.mini .boxes .box.box-12, body.mini .boxes .box.box16, body.mini .boxes .box.box-16, body.mini .boxes .box.box20, body.mini .boxes .box.box-20, body.mini .boxes .box.box25, body.mini .boxes .box.box-25, body.mini .boxes .box.box30, body.mini .boxes .box.box-30, body.mini .boxes .box.box33, body.mini .boxes .box.box-33, body.mini .boxes .box.box40, body.mini .boxes .box.box-40, body.mini .boxes .box.box50, body.mini .boxes .box.box-50, body.mini .boxes .box.box60, body.mini .boxes .box.box-60, body.mini .boxes .box.box66, body.mini .boxes .box.box-66, body.mini .boxes .box.box70, body.mini .boxes .box.box-70, body.mini .boxes .box.box75, body.mini .boxes .box.box-75, body.mini .boxes .box.box80, body.mini .boxes .box.box-80, body.mini .boxes .box.box100, body.mini .boxes .box.box-100 {
+body.mini .boxes .box.box8, body.mini .boxes .box.box10, body.mini .boxes .box.box12, body.mini .boxes .box.box16, body.mini .boxes .box.box20, body.mini .boxes .box.box25, body.mini .boxes .box.box30, body.mini .boxes .box.box33, body.mini .boxes .box.box40, body.mini .boxes .box.box50, body.mini .boxes .box.box60, body.mini .boxes .box.box66, body.mini .boxes .box.box70, body.mini .boxes .box.box75, body.mini .boxes .box.box80, body.mini .boxes .box.box100, body.mini .boxes .box.box-8, body.mini .boxes .box.box-10, body.mini .boxes .box.box-12, body.mini .boxes .box.box-16, body.mini .boxes .box.box-20, body.mini .boxes .box.box-25, body.mini .boxes .box.box-30, body.mini .boxes .box.box-33, body.mini .boxes .box.box-40, body.mini .boxes .box.box-50, body.mini .boxes .box.box-60, body.mini .boxes .box.box-66, body.mini .boxes .box.box-70, body.mini .boxes .box.box-75, body.mini .boxes .box.box-80, body.mini .boxes .box.box-100 {
   min-width: calc(100% - var(--margin) * 2);
   width: calc(100% - var(--margin) * 2);
   max-width: calc(100% - var(--margin) * 2);
 }
 @media (max-width: 576px) {
-  body.mini .boxes .box.f33 {
+  body.mini .boxes .box.f33, body.mini .boxes .box.f-33 {
     min-width: calc(33.333333% - var(--margin) * 2);
     width: calc(33.333333% - var(--margin) * 2);
     max-width: calc(33.333333% - var(--margin) * 2);
   }
-  body.mini .boxes .box.f50 {
+  body.mini .boxes .box.f50, body.mini .boxes .box.f-50 {
     min-width: calc(50% - var(--margin) * 2);
     width: calc(50% - var(--margin) * 2);
     max-width: calc(50% - var(--margin) * 2);
@@ -2677,20 +2956,11 @@ body.mini .bord-fw, body.mini .border-fw {
 body.mini .bord-false-white, body.mini .border-false-white {
   border-color: var(--false-white) !important;
 }
-body.mini .bord-grL, body.mini .border-grL {
-  border-color: var(--light-grey) !important;
-}
 body.mini .bord-light-grey, body.mini .border-light-grey {
   border-color: var(--light-grey) !important;
 }
-body.mini .bord-gr, body.mini .border-gr {
-  border-color: var(--grey) !important;
-}
 body.mini .bord-grey, body.mini .border-grey {
   border-color: var(--grey) !important;
-}
-body.mini .bord-grD, body.mini .border-grD {
-  border-color: var(--dark-grey) !important;
 }
 body.mini .bord-dark-grey, body.mini .border-dark-grey {
   border-color: var(--dark-grey) !important;
@@ -2716,44 +2986,26 @@ body.mini .bord-color, body.mini .border-color {
 body.mini .bord-main-color, body.mini .border-main-color {
   border-color: var(--main-color) !important;
 }
-body.mini .bord-colD, body.mini .border-colD {
+body.mini .bord-color-dark, body.mini .border-color-dark {
   border-color: var(--main-color-dark) !important;
 }
 body.mini .bord-main-color-dark, body.mini .border-main-color-dark {
   border-color: var(--main-color-dark) !important;
 }
-body.mini .bord-colTwo, body.mini .border-colTwo {
-  border-color: var(--second-color) !important;
-}
 body.mini .bord-second-color, body.mini .border-second-color {
   border-color: var(--second-color) !important;
 }
-body.mini .bord-colTwoD, body.mini .border-colTwoD {
+body.mini .bord-second-color-dark, body.mini .border-second-color-dark {
   border-color: var(--second-color-dark) !important;
-}
-body.mini .bord-aecond-color-dark, body.mini .border-aecond-color-dark {
-  border-color: var(--second-color-dark) !important;
-}
-body.mini .bord-colThree, body.mini .border-colThree {
-  border-color: var(--third-color) !important;
 }
 body.mini .bord-third-color, body.mini .border-third-color {
   border-color: var(--third-color) !important;
 }
-body.mini .bord-colThreeD, body.mini .border-colThreeD {
-  border-color: var(--third-color-dark) !important;
-}
 body.mini .bord-third-color-dark, body.mini .border-third-color-dark {
   border-color: var(--third-color-dark) !important;
 }
-body.mini .bord-colFour, body.mini .border-colFour {
-  border-color: var(--fourth-color) !important;
-}
 body.mini .bord-fourth-color, body.mini .border-fourth-color {
   border-color: var(--fourth-color) !important;
-}
-body.mini .bord-colFourD, body.mini .border-colFourD {
-  border-color: var(--fourth-color-dark) !important;
 }
 body.mini .bord-fourth-color-dark, body.mini .border-fourth-color-dark {
   border-color: var(--fourth-color-dark) !important;
@@ -2763,6 +3015,9 @@ body.mini .bord-link, body.mini .border-link {
 }
 body.mini .bord-link-color, body.mini .border-link-color {
   border-color: var(--link-color) !important;
+}
+body.mini .bord-link-hover, body.mini .border-link-hover {
+  border-color: var(--link-hover-color) !important;
 }
 body.mini .bord-info, body.mini .border-info {
   border-color: var(--info) !important;
@@ -2775,6 +3030,9 @@ body.mini .bord-warning, body.mini .border-warning {
 }
 body.mini .bord-danger, body.mini .border-danger {
   border-color: var(--danger) !important;
+}
+body.mini .bord-bad, body.mini .border-bad {
+  border-color: var(--bad) !important;
 }
 body.mini .bord-acidGreen, body.mini .border-acidGreen {
   border-color: var(--acid-green) !important;
@@ -2791,14 +3049,62 @@ body.mini .bord-ginger-bread, body.mini .border-ginger-bread {
 body.mini .bord-mini, body.mini .border-mini {
   border-color: var(--mini-color) !important;
 }
+body.mini .bord-mini-dark, body.mini .border-mini-dark {
+  border-color: var(--mini-color-dark) !important;
+}
+body.mini .bord-mini-second, body.mini .border-mini-second {
+  border-color: var(--mini-second) !important;
+}
+body.mini .bord-mini-third, body.mini .border-mini-third {
+  border-color: var(--mini-third) !important;
+}
+body.mini .bord-mini-fourth, body.mini .border-mini-fourth {
+  border-color: var(--mini-fourth) !important;
+}
 body.mini .bord-uwa, body.mini .border-uwa {
   border-color: var(--uwa-color) !important;
+}
+body.mini .bord-uwa-dark, body.mini .border-uwa-dark {
+  border-color: var(--uwa-color-dark) !important;
+}
+body.mini .bord-uwa-second, body.mini .border-uwa-second {
+  border-color: var(--uwa-second-color) !important;
+}
+body.mini .bord-uwa-third, body.mini .border-uwa-third {
+  border-color: var(--uwa-third-color) !important;
+}
+body.mini .bord-uwa-fourth, body.mini .border-uwa-fourth {
+  border-color: var(--uwa-fourth-color) !important;
+}
+body.mini .bord-uwa-link, body.mini .border-uwa-link {
+  border-color: var(--uwa-link-color) !important;
 }
 body.mini .bord-aroma, body.mini .border-aroma {
   border-color: var(--aroma-color) !important;
 }
 body.mini .bord-aroma-dark, body.mini .border-aroma-dark {
   border-color: var(--aroma-color-dark) !important;
+}
+body.mini .bord-pdp, body.mini .border-pdp {
+  border-color: var(--pezzidipla-color) !important;
+}
+body.mini .bord-pdp-second, body.mini .border-pdp-second {
+  border-color: var(--pezzidipla-second-color) !important;
+}
+body.mini .bord-pdp-third, body.mini .border-pdp-third {
+  border-color: var(--pezzidipla-third-color) !important;
+}
+body.mini .bord-pdp-fourth, body.mini .border-pdp-fourth {
+  border-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini .bord-lns, body.mini .border-lns {
+  border-color: var(--lanuovastartup-color) !important;
+}
+body.mini .bord-lns-dark, body.mini .border-lns-dark {
+  border-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini .bord-dt, body.mini .border-dt {
+  border-color: var(--doingthings-color) !important;
 }
 body.mini .sep-1 {
   display: block;
@@ -2820,25 +3126,13 @@ body.mini .sep-1-false-white {
   height: 1px;
   background-color: var(--false-white);
 }
-body.mini .sep-1-grL {
-  height: 1px;
-  background-color: var(--light-grey);
-}
 body.mini .sep-1-light-grey {
   height: 1px;
   background-color: var(--light-grey);
 }
-body.mini .sep-1-gr {
-  height: 1px;
-  background-color: var(--grey);
-}
 body.mini .sep-1-grey {
   height: 1px;
   background-color: var(--grey);
-}
-body.mini .sep-1-grD {
-  height: 1px;
-  background-color: var(--dark-grey);
 }
 body.mini .sep-1-dark-grey {
   height: 1px;
@@ -2872,7 +3166,7 @@ body.mini .sep-1-main-color {
   height: 1px;
   background-color: var(--main-color);
 }
-body.mini .sep-1-colD {
+body.mini .sep-1-color-dark {
   height: 1px;
   background-color: var(--main-color-dark);
 }
@@ -2880,49 +3174,25 @@ body.mini .sep-1-main-color-dark {
   height: 1px;
   background-color: var(--main-color-dark);
 }
-body.mini .sep-1-colTwo {
-  height: 1px;
-  background-color: var(--second-color);
-}
 body.mini .sep-1-second-color {
   height: 1px;
   background-color: var(--second-color);
 }
-body.mini .sep-1-colTwoD {
+body.mini .sep-1-second-color-dark {
   height: 1px;
   background-color: var(--second-color-dark);
-}
-body.mini .sep-1-aecond-color-dark {
-  height: 1px;
-  background-color: var(--second-color-dark);
-}
-body.mini .sep-1-colThree {
-  height: 1px;
-  background-color: var(--third-color);
 }
 body.mini .sep-1-third-color {
   height: 1px;
   background-color: var(--third-color);
 }
-body.mini .sep-1-colThreeD {
-  height: 1px;
-  background-color: var(--third-color-dark);
-}
 body.mini .sep-1-third-color-dark {
   height: 1px;
   background-color: var(--third-color-dark);
 }
-body.mini .sep-1-colFour {
-  height: 1px;
-  background-color: var(--fourth-color);
-}
 body.mini .sep-1-fourth-color {
   height: 1px;
   background-color: var(--fourth-color);
-}
-body.mini .sep-1-colFourD {
-  height: 1px;
-  background-color: var(--fourth-color-dark);
 }
 body.mini .sep-1-fourth-color-dark {
   height: 1px;
@@ -2935,6 +3205,10 @@ body.mini .sep-1-link {
 body.mini .sep-1-link-color {
   height: 1px;
   background-color: var(--link-color);
+}
+body.mini .sep-1-link-hover {
+  height: 1px;
+  background-color: var(--link-hover-color);
 }
 body.mini .sep-1-info {
   height: 1px;
@@ -2951,6 +3225,10 @@ body.mini .sep-1-warning {
 body.mini .sep-1-danger {
   height: 1px;
   background-color: var(--danger);
+}
+body.mini .sep-1-bad {
+  height: 1px;
+  background-color: var(--bad);
 }
 body.mini .sep-1-acidGreen {
   height: 1px;
@@ -2972,9 +3250,45 @@ body.mini .sep-1-mini {
   height: 1px;
   background-color: var(--mini-color);
 }
+body.mini .sep-1-mini-dark {
+  height: 1px;
+  background-color: var(--mini-color-dark);
+}
+body.mini .sep-1-mini-second {
+  height: 1px;
+  background-color: var(--mini-second);
+}
+body.mini .sep-1-mini-third {
+  height: 1px;
+  background-color: var(--mini-third);
+}
+body.mini .sep-1-mini-fourth {
+  height: 1px;
+  background-color: var(--mini-fourth);
+}
 body.mini .sep-1-uwa {
   height: 1px;
   background-color: var(--uwa-color);
+}
+body.mini .sep-1-uwa-dark {
+  height: 1px;
+  background-color: var(--uwa-color-dark);
+}
+body.mini .sep-1-uwa-second {
+  height: 1px;
+  background-color: var(--uwa-second-color);
+}
+body.mini .sep-1-uwa-third {
+  height: 1px;
+  background-color: var(--uwa-third-color);
+}
+body.mini .sep-1-uwa-fourth {
+  height: 1px;
+  background-color: var(--uwa-fourth-color);
+}
+body.mini .sep-1-uwa-link {
+  height: 1px;
+  background-color: var(--uwa-link-color);
 }
 body.mini .sep-1-aroma {
   height: 1px;
@@ -2983,6 +3297,34 @@ body.mini .sep-1-aroma {
 body.mini .sep-1-aroma-dark {
   height: 1px;
   background-color: var(--aroma-color-dark);
+}
+body.mini .sep-1-pdp {
+  height: 1px;
+  background-color: var(--pezzidipla-color);
+}
+body.mini .sep-1-pdp-second {
+  height: 1px;
+  background-color: var(--pezzidipla-second-color);
+}
+body.mini .sep-1-pdp-third {
+  height: 1px;
+  background-color: var(--pezzidipla-third-color);
+}
+body.mini .sep-1-pdp-fourth {
+  height: 1px;
+  background-color: var(--pezzidipla-fourth-color);
+}
+body.mini .sep-1-lns {
+  height: 1px;
+  background-color: var(--lanuovastartup-color);
+}
+body.mini .sep-1-lns-dark {
+  height: 1px;
+  background-color: var(--lanuovastartup-color-dark);
+}
+body.mini .sep-1-dt {
+  height: 1px;
+  background-color: var(--doingthings-color);
 }
 body.mini .sep-2 {
   display: block;
@@ -3004,25 +3346,13 @@ body.mini .sep-2-false-white {
   height: 2px;
   background-color: var(--false-white);
 }
-body.mini .sep-2-grL {
-  height: 2px;
-  background-color: var(--light-grey);
-}
 body.mini .sep-2-light-grey {
   height: 2px;
   background-color: var(--light-grey);
 }
-body.mini .sep-2-gr {
-  height: 2px;
-  background-color: var(--grey);
-}
 body.mini .sep-2-grey {
   height: 2px;
   background-color: var(--grey);
-}
-body.mini .sep-2-grD {
-  height: 2px;
-  background-color: var(--dark-grey);
 }
 body.mini .sep-2-dark-grey {
   height: 2px;
@@ -3056,7 +3386,7 @@ body.mini .sep-2-main-color {
   height: 2px;
   background-color: var(--main-color);
 }
-body.mini .sep-2-colD {
+body.mini .sep-2-color-dark {
   height: 2px;
   background-color: var(--main-color-dark);
 }
@@ -3064,49 +3394,25 @@ body.mini .sep-2-main-color-dark {
   height: 2px;
   background-color: var(--main-color-dark);
 }
-body.mini .sep-2-colTwo {
-  height: 2px;
-  background-color: var(--second-color);
-}
 body.mini .sep-2-second-color {
   height: 2px;
   background-color: var(--second-color);
 }
-body.mini .sep-2-colTwoD {
+body.mini .sep-2-second-color-dark {
   height: 2px;
   background-color: var(--second-color-dark);
-}
-body.mini .sep-2-aecond-color-dark {
-  height: 2px;
-  background-color: var(--second-color-dark);
-}
-body.mini .sep-2-colThree {
-  height: 2px;
-  background-color: var(--third-color);
 }
 body.mini .sep-2-third-color {
   height: 2px;
   background-color: var(--third-color);
 }
-body.mini .sep-2-colThreeD {
-  height: 2px;
-  background-color: var(--third-color-dark);
-}
 body.mini .sep-2-third-color-dark {
   height: 2px;
   background-color: var(--third-color-dark);
 }
-body.mini .sep-2-colFour {
-  height: 2px;
-  background-color: var(--fourth-color);
-}
 body.mini .sep-2-fourth-color {
   height: 2px;
   background-color: var(--fourth-color);
-}
-body.mini .sep-2-colFourD {
-  height: 2px;
-  background-color: var(--fourth-color-dark);
 }
 body.mini .sep-2-fourth-color-dark {
   height: 2px;
@@ -3119,6 +3425,10 @@ body.mini .sep-2-link {
 body.mini .sep-2-link-color {
   height: 2px;
   background-color: var(--link-color);
+}
+body.mini .sep-2-link-hover {
+  height: 2px;
+  background-color: var(--link-hover-color);
 }
 body.mini .sep-2-info {
   height: 2px;
@@ -3135,6 +3445,10 @@ body.mini .sep-2-warning {
 body.mini .sep-2-danger {
   height: 2px;
   background-color: var(--danger);
+}
+body.mini .sep-2-bad {
+  height: 2px;
+  background-color: var(--bad);
 }
 body.mini .sep-2-acidGreen {
   height: 2px;
@@ -3156,9 +3470,45 @@ body.mini .sep-2-mini {
   height: 2px;
   background-color: var(--mini-color);
 }
+body.mini .sep-2-mini-dark {
+  height: 2px;
+  background-color: var(--mini-color-dark);
+}
+body.mini .sep-2-mini-second {
+  height: 2px;
+  background-color: var(--mini-second);
+}
+body.mini .sep-2-mini-third {
+  height: 2px;
+  background-color: var(--mini-third);
+}
+body.mini .sep-2-mini-fourth {
+  height: 2px;
+  background-color: var(--mini-fourth);
+}
 body.mini .sep-2-uwa {
   height: 2px;
   background-color: var(--uwa-color);
+}
+body.mini .sep-2-uwa-dark {
+  height: 2px;
+  background-color: var(--uwa-color-dark);
+}
+body.mini .sep-2-uwa-second {
+  height: 2px;
+  background-color: var(--uwa-second-color);
+}
+body.mini .sep-2-uwa-third {
+  height: 2px;
+  background-color: var(--uwa-third-color);
+}
+body.mini .sep-2-uwa-fourth {
+  height: 2px;
+  background-color: var(--uwa-fourth-color);
+}
+body.mini .sep-2-uwa-link {
+  height: 2px;
+  background-color: var(--uwa-link-color);
 }
 body.mini .sep-2-aroma {
   height: 2px;
@@ -3167,6 +3517,34 @@ body.mini .sep-2-aroma {
 body.mini .sep-2-aroma-dark {
   height: 2px;
   background-color: var(--aroma-color-dark);
+}
+body.mini .sep-2-pdp {
+  height: 2px;
+  background-color: var(--pezzidipla-color);
+}
+body.mini .sep-2-pdp-second {
+  height: 2px;
+  background-color: var(--pezzidipla-second-color);
+}
+body.mini .sep-2-pdp-third {
+  height: 2px;
+  background-color: var(--pezzidipla-third-color);
+}
+body.mini .sep-2-pdp-fourth {
+  height: 2px;
+  background-color: var(--pezzidipla-fourth-color);
+}
+body.mini .sep-2-lns {
+  height: 2px;
+  background-color: var(--lanuovastartup-color);
+}
+body.mini .sep-2-lns-dark {
+  height: 2px;
+  background-color: var(--lanuovastartup-color-dark);
+}
+body.mini .sep-2-dt {
+  height: 2px;
+  background-color: var(--doingthings-color);
 }
 body.mini .sep-3 {
   display: block;
@@ -3188,25 +3566,13 @@ body.mini .sep-3-false-white {
   height: 3px;
   background-color: var(--false-white);
 }
-body.mini .sep-3-grL {
-  height: 3px;
-  background-color: var(--light-grey);
-}
 body.mini .sep-3-light-grey {
   height: 3px;
   background-color: var(--light-grey);
 }
-body.mini .sep-3-gr {
-  height: 3px;
-  background-color: var(--grey);
-}
 body.mini .sep-3-grey {
   height: 3px;
   background-color: var(--grey);
-}
-body.mini .sep-3-grD {
-  height: 3px;
-  background-color: var(--dark-grey);
 }
 body.mini .sep-3-dark-grey {
   height: 3px;
@@ -3240,7 +3606,7 @@ body.mini .sep-3-main-color {
   height: 3px;
   background-color: var(--main-color);
 }
-body.mini .sep-3-colD {
+body.mini .sep-3-color-dark {
   height: 3px;
   background-color: var(--main-color-dark);
 }
@@ -3248,49 +3614,25 @@ body.mini .sep-3-main-color-dark {
   height: 3px;
   background-color: var(--main-color-dark);
 }
-body.mini .sep-3-colTwo {
-  height: 3px;
-  background-color: var(--second-color);
-}
 body.mini .sep-3-second-color {
   height: 3px;
   background-color: var(--second-color);
 }
-body.mini .sep-3-colTwoD {
+body.mini .sep-3-second-color-dark {
   height: 3px;
   background-color: var(--second-color-dark);
-}
-body.mini .sep-3-aecond-color-dark {
-  height: 3px;
-  background-color: var(--second-color-dark);
-}
-body.mini .sep-3-colThree {
-  height: 3px;
-  background-color: var(--third-color);
 }
 body.mini .sep-3-third-color {
   height: 3px;
   background-color: var(--third-color);
 }
-body.mini .sep-3-colThreeD {
-  height: 3px;
-  background-color: var(--third-color-dark);
-}
 body.mini .sep-3-third-color-dark {
   height: 3px;
   background-color: var(--third-color-dark);
 }
-body.mini .sep-3-colFour {
-  height: 3px;
-  background-color: var(--fourth-color);
-}
 body.mini .sep-3-fourth-color {
   height: 3px;
   background-color: var(--fourth-color);
-}
-body.mini .sep-3-colFourD {
-  height: 3px;
-  background-color: var(--fourth-color-dark);
 }
 body.mini .sep-3-fourth-color-dark {
   height: 3px;
@@ -3303,6 +3645,10 @@ body.mini .sep-3-link {
 body.mini .sep-3-link-color {
   height: 3px;
   background-color: var(--link-color);
+}
+body.mini .sep-3-link-hover {
+  height: 3px;
+  background-color: var(--link-hover-color);
 }
 body.mini .sep-3-info {
   height: 3px;
@@ -3319,6 +3665,10 @@ body.mini .sep-3-warning {
 body.mini .sep-3-danger {
   height: 3px;
   background-color: var(--danger);
+}
+body.mini .sep-3-bad {
+  height: 3px;
+  background-color: var(--bad);
 }
 body.mini .sep-3-acidGreen {
   height: 3px;
@@ -3340,9 +3690,45 @@ body.mini .sep-3-mini {
   height: 3px;
   background-color: var(--mini-color);
 }
+body.mini .sep-3-mini-dark {
+  height: 3px;
+  background-color: var(--mini-color-dark);
+}
+body.mini .sep-3-mini-second {
+  height: 3px;
+  background-color: var(--mini-second);
+}
+body.mini .sep-3-mini-third {
+  height: 3px;
+  background-color: var(--mini-third);
+}
+body.mini .sep-3-mini-fourth {
+  height: 3px;
+  background-color: var(--mini-fourth);
+}
 body.mini .sep-3-uwa {
   height: 3px;
   background-color: var(--uwa-color);
+}
+body.mini .sep-3-uwa-dark {
+  height: 3px;
+  background-color: var(--uwa-color-dark);
+}
+body.mini .sep-3-uwa-second {
+  height: 3px;
+  background-color: var(--uwa-second-color);
+}
+body.mini .sep-3-uwa-third {
+  height: 3px;
+  background-color: var(--uwa-third-color);
+}
+body.mini .sep-3-uwa-fourth {
+  height: 3px;
+  background-color: var(--uwa-fourth-color);
+}
+body.mini .sep-3-uwa-link {
+  height: 3px;
+  background-color: var(--uwa-link-color);
 }
 body.mini .sep-3-aroma {
   height: 3px;
@@ -3351,6 +3737,34 @@ body.mini .sep-3-aroma {
 body.mini .sep-3-aroma-dark {
   height: 3px;
   background-color: var(--aroma-color-dark);
+}
+body.mini .sep-3-pdp {
+  height: 3px;
+  background-color: var(--pezzidipla-color);
+}
+body.mini .sep-3-pdp-second {
+  height: 3px;
+  background-color: var(--pezzidipla-second-color);
+}
+body.mini .sep-3-pdp-third {
+  height: 3px;
+  background-color: var(--pezzidipla-third-color);
+}
+body.mini .sep-3-pdp-fourth {
+  height: 3px;
+  background-color: var(--pezzidipla-fourth-color);
+}
+body.mini .sep-3-lns {
+  height: 3px;
+  background-color: var(--lanuovastartup-color);
+}
+body.mini .sep-3-lns-dark {
+  height: 3px;
+  background-color: var(--lanuovastartup-color-dark);
+}
+body.mini .sep-3-dt {
+  height: 3px;
+  background-color: var(--doingthings-color);
 }
 body.mini .sep-4 {
   display: block;
@@ -3372,25 +3786,13 @@ body.mini .sep-4-false-white {
   height: 4px;
   background-color: var(--false-white);
 }
-body.mini .sep-4-grL {
-  height: 4px;
-  background-color: var(--light-grey);
-}
 body.mini .sep-4-light-grey {
   height: 4px;
   background-color: var(--light-grey);
 }
-body.mini .sep-4-gr {
-  height: 4px;
-  background-color: var(--grey);
-}
 body.mini .sep-4-grey {
   height: 4px;
   background-color: var(--grey);
-}
-body.mini .sep-4-grD {
-  height: 4px;
-  background-color: var(--dark-grey);
 }
 body.mini .sep-4-dark-grey {
   height: 4px;
@@ -3424,7 +3826,7 @@ body.mini .sep-4-main-color {
   height: 4px;
   background-color: var(--main-color);
 }
-body.mini .sep-4-colD {
+body.mini .sep-4-color-dark {
   height: 4px;
   background-color: var(--main-color-dark);
 }
@@ -3432,49 +3834,25 @@ body.mini .sep-4-main-color-dark {
   height: 4px;
   background-color: var(--main-color-dark);
 }
-body.mini .sep-4-colTwo {
-  height: 4px;
-  background-color: var(--second-color);
-}
 body.mini .sep-4-second-color {
   height: 4px;
   background-color: var(--second-color);
 }
-body.mini .sep-4-colTwoD {
+body.mini .sep-4-second-color-dark {
   height: 4px;
   background-color: var(--second-color-dark);
-}
-body.mini .sep-4-aecond-color-dark {
-  height: 4px;
-  background-color: var(--second-color-dark);
-}
-body.mini .sep-4-colThree {
-  height: 4px;
-  background-color: var(--third-color);
 }
 body.mini .sep-4-third-color {
   height: 4px;
   background-color: var(--third-color);
 }
-body.mini .sep-4-colThreeD {
-  height: 4px;
-  background-color: var(--third-color-dark);
-}
 body.mini .sep-4-third-color-dark {
   height: 4px;
   background-color: var(--third-color-dark);
 }
-body.mini .sep-4-colFour {
-  height: 4px;
-  background-color: var(--fourth-color);
-}
 body.mini .sep-4-fourth-color {
   height: 4px;
   background-color: var(--fourth-color);
-}
-body.mini .sep-4-colFourD {
-  height: 4px;
-  background-color: var(--fourth-color-dark);
 }
 body.mini .sep-4-fourth-color-dark {
   height: 4px;
@@ -3487,6 +3865,10 @@ body.mini .sep-4-link {
 body.mini .sep-4-link-color {
   height: 4px;
   background-color: var(--link-color);
+}
+body.mini .sep-4-link-hover {
+  height: 4px;
+  background-color: var(--link-hover-color);
 }
 body.mini .sep-4-info {
   height: 4px;
@@ -3503,6 +3885,10 @@ body.mini .sep-4-warning {
 body.mini .sep-4-danger {
   height: 4px;
   background-color: var(--danger);
+}
+body.mini .sep-4-bad {
+  height: 4px;
+  background-color: var(--bad);
 }
 body.mini .sep-4-acidGreen {
   height: 4px;
@@ -3524,9 +3910,45 @@ body.mini .sep-4-mini {
   height: 4px;
   background-color: var(--mini-color);
 }
+body.mini .sep-4-mini-dark {
+  height: 4px;
+  background-color: var(--mini-color-dark);
+}
+body.mini .sep-4-mini-second {
+  height: 4px;
+  background-color: var(--mini-second);
+}
+body.mini .sep-4-mini-third {
+  height: 4px;
+  background-color: var(--mini-third);
+}
+body.mini .sep-4-mini-fourth {
+  height: 4px;
+  background-color: var(--mini-fourth);
+}
 body.mini .sep-4-uwa {
   height: 4px;
   background-color: var(--uwa-color);
+}
+body.mini .sep-4-uwa-dark {
+  height: 4px;
+  background-color: var(--uwa-color-dark);
+}
+body.mini .sep-4-uwa-second {
+  height: 4px;
+  background-color: var(--uwa-second-color);
+}
+body.mini .sep-4-uwa-third {
+  height: 4px;
+  background-color: var(--uwa-third-color);
+}
+body.mini .sep-4-uwa-fourth {
+  height: 4px;
+  background-color: var(--uwa-fourth-color);
+}
+body.mini .sep-4-uwa-link {
+  height: 4px;
+  background-color: var(--uwa-link-color);
 }
 body.mini .sep-4-aroma {
   height: 4px;
@@ -3535,6 +3957,34 @@ body.mini .sep-4-aroma {
 body.mini .sep-4-aroma-dark {
   height: 4px;
   background-color: var(--aroma-color-dark);
+}
+body.mini .sep-4-pdp {
+  height: 4px;
+  background-color: var(--pezzidipla-color);
+}
+body.mini .sep-4-pdp-second {
+  height: 4px;
+  background-color: var(--pezzidipla-second-color);
+}
+body.mini .sep-4-pdp-third {
+  height: 4px;
+  background-color: var(--pezzidipla-third-color);
+}
+body.mini .sep-4-pdp-fourth {
+  height: 4px;
+  background-color: var(--pezzidipla-fourth-color);
+}
+body.mini .sep-4-lns {
+  height: 4px;
+  background-color: var(--lanuovastartup-color);
+}
+body.mini .sep-4-lns-dark {
+  height: 4px;
+  background-color: var(--lanuovastartup-color-dark);
+}
+body.mini .sep-4-dt {
+  height: 4px;
+  background-color: var(--doingthings-color);
 }
 body.mini .sep-5 {
   display: block;
@@ -3556,25 +4006,13 @@ body.mini .sep-5-false-white {
   height: 5px;
   background-color: var(--false-white);
 }
-body.mini .sep-5-grL {
-  height: 5px;
-  background-color: var(--light-grey);
-}
 body.mini .sep-5-light-grey {
   height: 5px;
   background-color: var(--light-grey);
 }
-body.mini .sep-5-gr {
-  height: 5px;
-  background-color: var(--grey);
-}
 body.mini .sep-5-grey {
   height: 5px;
   background-color: var(--grey);
-}
-body.mini .sep-5-grD {
-  height: 5px;
-  background-color: var(--dark-grey);
 }
 body.mini .sep-5-dark-grey {
   height: 5px;
@@ -3608,7 +4046,7 @@ body.mini .sep-5-main-color {
   height: 5px;
   background-color: var(--main-color);
 }
-body.mini .sep-5-colD {
+body.mini .sep-5-color-dark {
   height: 5px;
   background-color: var(--main-color-dark);
 }
@@ -3616,49 +4054,25 @@ body.mini .sep-5-main-color-dark {
   height: 5px;
   background-color: var(--main-color-dark);
 }
-body.mini .sep-5-colTwo {
-  height: 5px;
-  background-color: var(--second-color);
-}
 body.mini .sep-5-second-color {
   height: 5px;
   background-color: var(--second-color);
 }
-body.mini .sep-5-colTwoD {
+body.mini .sep-5-second-color-dark {
   height: 5px;
   background-color: var(--second-color-dark);
-}
-body.mini .sep-5-aecond-color-dark {
-  height: 5px;
-  background-color: var(--second-color-dark);
-}
-body.mini .sep-5-colThree {
-  height: 5px;
-  background-color: var(--third-color);
 }
 body.mini .sep-5-third-color {
   height: 5px;
   background-color: var(--third-color);
 }
-body.mini .sep-5-colThreeD {
-  height: 5px;
-  background-color: var(--third-color-dark);
-}
 body.mini .sep-5-third-color-dark {
   height: 5px;
   background-color: var(--third-color-dark);
 }
-body.mini .sep-5-colFour {
-  height: 5px;
-  background-color: var(--fourth-color);
-}
 body.mini .sep-5-fourth-color {
   height: 5px;
   background-color: var(--fourth-color);
-}
-body.mini .sep-5-colFourD {
-  height: 5px;
-  background-color: var(--fourth-color-dark);
 }
 body.mini .sep-5-fourth-color-dark {
   height: 5px;
@@ -3671,6 +4085,10 @@ body.mini .sep-5-link {
 body.mini .sep-5-link-color {
   height: 5px;
   background-color: var(--link-color);
+}
+body.mini .sep-5-link-hover {
+  height: 5px;
+  background-color: var(--link-hover-color);
 }
 body.mini .sep-5-info {
   height: 5px;
@@ -3687,6 +4105,10 @@ body.mini .sep-5-warning {
 body.mini .sep-5-danger {
   height: 5px;
   background-color: var(--danger);
+}
+body.mini .sep-5-bad {
+  height: 5px;
+  background-color: var(--bad);
 }
 body.mini .sep-5-acidGreen {
   height: 5px;
@@ -3708,9 +4130,45 @@ body.mini .sep-5-mini {
   height: 5px;
   background-color: var(--mini-color);
 }
+body.mini .sep-5-mini-dark {
+  height: 5px;
+  background-color: var(--mini-color-dark);
+}
+body.mini .sep-5-mini-second {
+  height: 5px;
+  background-color: var(--mini-second);
+}
+body.mini .sep-5-mini-third {
+  height: 5px;
+  background-color: var(--mini-third);
+}
+body.mini .sep-5-mini-fourth {
+  height: 5px;
+  background-color: var(--mini-fourth);
+}
 body.mini .sep-5-uwa {
   height: 5px;
   background-color: var(--uwa-color);
+}
+body.mini .sep-5-uwa-dark {
+  height: 5px;
+  background-color: var(--uwa-color-dark);
+}
+body.mini .sep-5-uwa-second {
+  height: 5px;
+  background-color: var(--uwa-second-color);
+}
+body.mini .sep-5-uwa-third {
+  height: 5px;
+  background-color: var(--uwa-third-color);
+}
+body.mini .sep-5-uwa-fourth {
+  height: 5px;
+  background-color: var(--uwa-fourth-color);
+}
+body.mini .sep-5-uwa-link {
+  height: 5px;
+  background-color: var(--uwa-link-color);
 }
 body.mini .sep-5-aroma {
   height: 5px;
@@ -3719,6 +4177,34 @@ body.mini .sep-5-aroma {
 body.mini .sep-5-aroma-dark {
   height: 5px;
   background-color: var(--aroma-color-dark);
+}
+body.mini .sep-5-pdp {
+  height: 5px;
+  background-color: var(--pezzidipla-color);
+}
+body.mini .sep-5-pdp-second {
+  height: 5px;
+  background-color: var(--pezzidipla-second-color);
+}
+body.mini .sep-5-pdp-third {
+  height: 5px;
+  background-color: var(--pezzidipla-third-color);
+}
+body.mini .sep-5-pdp-fourth {
+  height: 5px;
+  background-color: var(--pezzidipla-fourth-color);
+}
+body.mini .sep-5-lns {
+  height: 5px;
+  background-color: var(--lanuovastartup-color);
+}
+body.mini .sep-5-lns-dark {
+  height: 5px;
+  background-color: var(--lanuovastartup-color-dark);
+}
+body.mini .sep-5-dt {
+  height: 5px;
+  background-color: var(--doingthings-color);
 }
 body.mini .sep-10 {
   display: block;
@@ -3740,25 +4226,13 @@ body.mini .sep-10-false-white {
   height: 10px;
   background-color: var(--false-white);
 }
-body.mini .sep-10-grL {
-  height: 10px;
-  background-color: var(--light-grey);
-}
 body.mini .sep-10-light-grey {
   height: 10px;
   background-color: var(--light-grey);
 }
-body.mini .sep-10-gr {
-  height: 10px;
-  background-color: var(--grey);
-}
 body.mini .sep-10-grey {
   height: 10px;
   background-color: var(--grey);
-}
-body.mini .sep-10-grD {
-  height: 10px;
-  background-color: var(--dark-grey);
 }
 body.mini .sep-10-dark-grey {
   height: 10px;
@@ -3792,7 +4266,7 @@ body.mini .sep-10-main-color {
   height: 10px;
   background-color: var(--main-color);
 }
-body.mini .sep-10-colD {
+body.mini .sep-10-color-dark {
   height: 10px;
   background-color: var(--main-color-dark);
 }
@@ -3800,49 +4274,25 @@ body.mini .sep-10-main-color-dark {
   height: 10px;
   background-color: var(--main-color-dark);
 }
-body.mini .sep-10-colTwo {
-  height: 10px;
-  background-color: var(--second-color);
-}
 body.mini .sep-10-second-color {
   height: 10px;
   background-color: var(--second-color);
 }
-body.mini .sep-10-colTwoD {
+body.mini .sep-10-second-color-dark {
   height: 10px;
   background-color: var(--second-color-dark);
-}
-body.mini .sep-10-aecond-color-dark {
-  height: 10px;
-  background-color: var(--second-color-dark);
-}
-body.mini .sep-10-colThree {
-  height: 10px;
-  background-color: var(--third-color);
 }
 body.mini .sep-10-third-color {
   height: 10px;
   background-color: var(--third-color);
 }
-body.mini .sep-10-colThreeD {
-  height: 10px;
-  background-color: var(--third-color-dark);
-}
 body.mini .sep-10-third-color-dark {
   height: 10px;
   background-color: var(--third-color-dark);
 }
-body.mini .sep-10-colFour {
-  height: 10px;
-  background-color: var(--fourth-color);
-}
 body.mini .sep-10-fourth-color {
   height: 10px;
   background-color: var(--fourth-color);
-}
-body.mini .sep-10-colFourD {
-  height: 10px;
-  background-color: var(--fourth-color-dark);
 }
 body.mini .sep-10-fourth-color-dark {
   height: 10px;
@@ -3855,6 +4305,10 @@ body.mini .sep-10-link {
 body.mini .sep-10-link-color {
   height: 10px;
   background-color: var(--link-color);
+}
+body.mini .sep-10-link-hover {
+  height: 10px;
+  background-color: var(--link-hover-color);
 }
 body.mini .sep-10-info {
   height: 10px;
@@ -3871,6 +4325,10 @@ body.mini .sep-10-warning {
 body.mini .sep-10-danger {
   height: 10px;
   background-color: var(--danger);
+}
+body.mini .sep-10-bad {
+  height: 10px;
+  background-color: var(--bad);
 }
 body.mini .sep-10-acidGreen {
   height: 10px;
@@ -3892,9 +4350,45 @@ body.mini .sep-10-mini {
   height: 10px;
   background-color: var(--mini-color);
 }
+body.mini .sep-10-mini-dark {
+  height: 10px;
+  background-color: var(--mini-color-dark);
+}
+body.mini .sep-10-mini-second {
+  height: 10px;
+  background-color: var(--mini-second);
+}
+body.mini .sep-10-mini-third {
+  height: 10px;
+  background-color: var(--mini-third);
+}
+body.mini .sep-10-mini-fourth {
+  height: 10px;
+  background-color: var(--mini-fourth);
+}
 body.mini .sep-10-uwa {
   height: 10px;
   background-color: var(--uwa-color);
+}
+body.mini .sep-10-uwa-dark {
+  height: 10px;
+  background-color: var(--uwa-color-dark);
+}
+body.mini .sep-10-uwa-second {
+  height: 10px;
+  background-color: var(--uwa-second-color);
+}
+body.mini .sep-10-uwa-third {
+  height: 10px;
+  background-color: var(--uwa-third-color);
+}
+body.mini .sep-10-uwa-fourth {
+  height: 10px;
+  background-color: var(--uwa-fourth-color);
+}
+body.mini .sep-10-uwa-link {
+  height: 10px;
+  background-color: var(--uwa-link-color);
 }
 body.mini .sep-10-aroma {
   height: 10px;
@@ -3903,6 +4397,34 @@ body.mini .sep-10-aroma {
 body.mini .sep-10-aroma-dark {
   height: 10px;
   background-color: var(--aroma-color-dark);
+}
+body.mini .sep-10-pdp {
+  height: 10px;
+  background-color: var(--pezzidipla-color);
+}
+body.mini .sep-10-pdp-second {
+  height: 10px;
+  background-color: var(--pezzidipla-second-color);
+}
+body.mini .sep-10-pdp-third {
+  height: 10px;
+  background-color: var(--pezzidipla-third-color);
+}
+body.mini .sep-10-pdp-fourth {
+  height: 10px;
+  background-color: var(--pezzidipla-fourth-color);
+}
+body.mini .sep-10-lns {
+  height: 10px;
+  background-color: var(--lanuovastartup-color);
+}
+body.mini .sep-10-lns-dark {
+  height: 10px;
+  background-color: var(--lanuovastartup-color-dark);
+}
+body.mini .sep-10-dt {
+  height: 10px;
+  background-color: var(--doingthings-color);
 }
 body.mini .whTxt, body.mini .wh-txt, body.mini .wh-text {
   color: var(--white) !important;
@@ -4192,78 +4714,6 @@ body.mini input[type=radio]:checked + label.false-whiteBtnBg, body.mini input[ty
   border-color: var(--false-white) !important;
   background: transparent !important;
 }
-body.mini .grLTxt, body.mini .grL-txt, body.mini .grL-text {
-  color: var(--light-grey) !important;
-}
-body.mini .grLBox, body.mini .grL-box {
-  background: var(--light-grey) !important;
-  color: var(--black) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .grLBox.S, body.mini .grL-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .grLBox.XS, body.mini .grL-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .grLBg, body.mini .grL-bg {
-  background-color: var(--light-grey) !important;
-}
-body.mini .grLBord, body.mini .grL-bord {
-  border: 1px solid var(--light-grey) !important;
-}
-body.mini .grLBtn, body.mini .grL-btn {
-  color: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-}
-body.mini .grLBtn:hover, body.mini .grLBtn.clicked, body.mini .grL-btn:hover, body.mini .grL-btn.clicked {
-  color: var(--black) !important;
-  background: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-}
-body.mini .grLBtnBg, body.mini .grLBtn-bg, body.mini .grL-btnBg, body.mini .grL-btn-bg {
-  color: var(--black) !important;
-  border-color: var(--light-grey) !important;
-  background: var(--light-grey) !important;
-}
-body.mini .grLBtnBg:hover, body.mini .grLBtnBg.clicked, body.mini .grLBtn-bg:hover, body.mini .grLBtn-bg.clicked, body.mini .grL-btnBg:hover, body.mini .grL-btnBg.clicked, body.mini .grL-btn-bg:hover, body.mini .grL-btn-bg.clicked {
-  color: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.grLBtn, body.mini input[type=radio] + label.grL-btn {
-  color: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-}
-body.mini input[type=radio] + label.grLBtn:hover, body.mini input[type=radio] + label.grL-btn:hover {
-  color: var(--black) !important;
-  background: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-}
-body.mini input[type=radio] + label.grLBtnBg, body.mini input[type=radio] + label.grLBtn-bg, body.mini input[type=radio] + label.grL-btnBg, body.mini input[type=radio] + label.grL-btn-bg {
-  color: var(--black) !important;
-  border-color: var(--light-grey) !important;
-  background: var(--light-grey) !important;
-}
-body.mini input[type=radio] + label.grLBtnBg:hover, body.mini input[type=radio] + label.grLBtn-bg:hover, body.mini input[type=radio] + label.grL-btnBg:hover, body.mini input[type=radio] + label.grL-btn-bg:hover {
-  color: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.grLBtn, body.mini input[type=radio]:checked + label.grL-btn {
-  color: var(--black) !important;
-  background: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-}
-body.mini input[type=radio]:checked + label.grLBtnBg, body.mini input[type=radio]:checked + label.grLBtn-bg, body.mini input[type=radio]:checked + label.grL-btnBg, body.mini input[type=radio]:checked + label.grL-btn-bg {
-  color: var(--light-grey) !important;
-  border-color: var(--light-grey) !important;
-  background: transparent !important;
-}
 body.mini .light-greyTxt, body.mini .light-grey-txt, body.mini .light-grey-text {
   color: var(--light-grey) !important;
 }
@@ -4336,78 +4786,6 @@ body.mini input[type=radio]:checked + label.light-greyBtnBg, body.mini input[typ
   border-color: var(--light-grey) !important;
   background: transparent !important;
 }
-body.mini .grTxt, body.mini .gr-txt, body.mini .gr-text {
-  color: var(--grey) !important;
-}
-body.mini .grBox, body.mini .gr-box {
-  background: var(--grey) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .grBox.S, body.mini .gr-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .grBox.XS, body.mini .gr-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .grBg, body.mini .gr-bg {
-  background-color: var(--grey) !important;
-}
-body.mini .grBord, body.mini .gr-bord {
-  border: 1px solid var(--grey) !important;
-}
-body.mini .grBtn, body.mini .gr-btn {
-  color: var(--grey) !important;
-  border-color: var(--grey) !important;
-}
-body.mini .grBtn:hover, body.mini .grBtn.clicked, body.mini .gr-btn:hover, body.mini .gr-btn.clicked {
-  color: var(--white) !important;
-  background: var(--grey) !important;
-  border-color: var(--grey) !important;
-}
-body.mini .grBtnBg, body.mini .grBtn-bg, body.mini .gr-btnBg, body.mini .gr-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--grey) !important;
-  background: var(--grey) !important;
-}
-body.mini .grBtnBg:hover, body.mini .grBtnBg.clicked, body.mini .grBtn-bg:hover, body.mini .grBtn-bg.clicked, body.mini .gr-btnBg:hover, body.mini .gr-btnBg.clicked, body.mini .gr-btn-bg:hover, body.mini .gr-btn-bg.clicked {
-  color: var(--grey) !important;
-  border-color: var(--grey) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.grBtn, body.mini input[type=radio] + label.gr-btn {
-  color: var(--grey) !important;
-  border-color: var(--grey) !important;
-}
-body.mini input[type=radio] + label.grBtn:hover, body.mini input[type=radio] + label.gr-btn:hover {
-  color: var(--white) !important;
-  background: var(--grey) !important;
-  border-color: var(--grey) !important;
-}
-body.mini input[type=radio] + label.grBtnBg, body.mini input[type=radio] + label.grBtn-bg, body.mini input[type=radio] + label.gr-btnBg, body.mini input[type=radio] + label.gr-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--grey) !important;
-  background: var(--grey) !important;
-}
-body.mini input[type=radio] + label.grBtnBg:hover, body.mini input[type=radio] + label.grBtn-bg:hover, body.mini input[type=radio] + label.gr-btnBg:hover, body.mini input[type=radio] + label.gr-btn-bg:hover {
-  color: var(--grey) !important;
-  border-color: var(--grey) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.grBtn, body.mini input[type=radio]:checked + label.gr-btn {
-  color: var(--white) !important;
-  background: var(--grey) !important;
-  border-color: var(--grey) !important;
-}
-body.mini input[type=radio]:checked + label.grBtnBg, body.mini input[type=radio]:checked + label.grBtn-bg, body.mini input[type=radio]:checked + label.gr-btnBg, body.mini input[type=radio]:checked + label.gr-btn-bg {
-  color: var(--grey) !important;
-  border-color: var(--grey) !important;
-  background: transparent !important;
-}
 body.mini .greyTxt, body.mini .grey-txt, body.mini .grey-text {
   color: var(--grey) !important;
 }
@@ -4478,78 +4856,6 @@ body.mini input[type=radio]:checked + label.greyBtn, body.mini input[type=radio]
 body.mini input[type=radio]:checked + label.greyBtnBg, body.mini input[type=radio]:checked + label.greyBtn-bg, body.mini input[type=radio]:checked + label.grey-btnBg, body.mini input[type=radio]:checked + label.grey-btn-bg {
   color: var(--grey) !important;
   border-color: var(--grey) !important;
-  background: transparent !important;
-}
-body.mini .grDTxt, body.mini .grD-txt, body.mini .grD-text {
-  color: var(--dark-grey) !important;
-}
-body.mini .grDBox, body.mini .grD-box {
-  background: var(--dark-grey) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .grDBox.S, body.mini .grD-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .grDBox.XS, body.mini .grD-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .grDBg, body.mini .grD-bg {
-  background-color: var(--dark-grey) !important;
-}
-body.mini .grDBord, body.mini .grD-bord {
-  border: 1px solid var(--dark-grey) !important;
-}
-body.mini .grDBtn, body.mini .grD-btn {
-  color: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-}
-body.mini .grDBtn:hover, body.mini .grDBtn.clicked, body.mini .grD-btn:hover, body.mini .grD-btn.clicked {
-  color: var(--white) !important;
-  background: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-}
-body.mini .grDBtnBg, body.mini .grDBtn-bg, body.mini .grD-btnBg, body.mini .grD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--dark-grey) !important;
-  background: var(--dark-grey) !important;
-}
-body.mini .grDBtnBg:hover, body.mini .grDBtnBg.clicked, body.mini .grDBtn-bg:hover, body.mini .grDBtn-bg.clicked, body.mini .grD-btnBg:hover, body.mini .grD-btnBg.clicked, body.mini .grD-btn-bg:hover, body.mini .grD-btn-bg.clicked {
-  color: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.grDBtn, body.mini input[type=radio] + label.grD-btn {
-  color: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-}
-body.mini input[type=radio] + label.grDBtn:hover, body.mini input[type=radio] + label.grD-btn:hover {
-  color: var(--white) !important;
-  background: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-}
-body.mini input[type=radio] + label.grDBtnBg, body.mini input[type=radio] + label.grDBtn-bg, body.mini input[type=radio] + label.grD-btnBg, body.mini input[type=radio] + label.grD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--dark-grey) !important;
-  background: var(--dark-grey) !important;
-}
-body.mini input[type=radio] + label.grDBtnBg:hover, body.mini input[type=radio] + label.grDBtn-bg:hover, body.mini input[type=radio] + label.grD-btnBg:hover, body.mini input[type=radio] + label.grD-btn-bg:hover {
-  color: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.grDBtn, body.mini input[type=radio]:checked + label.grD-btn {
-  color: var(--white) !important;
-  background: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-}
-body.mini input[type=radio]:checked + label.grDBtnBg, body.mini input[type=radio]:checked + label.grDBtn-bg, body.mini input[type=radio]:checked + label.grD-btnBg, body.mini input[type=radio]:checked + label.grD-btn-bg {
-  color: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
   background: transparent !important;
 }
 body.mini .dark-greyTxt, body.mini .dark-grey-txt, body.mini .dark-grey-text {
@@ -5128,74 +5434,74 @@ body.mini input[type=radio]:checked + label.main-colorBtnBg, body.mini input[typ
   border-color: var(--main-color) !important;
   background: transparent !important;
 }
-body.mini .colDTxt, body.mini .colD-txt, body.mini .colD-text {
+body.mini .color-darkTxt, body.mini .color-dark-txt, body.mini .color-dark-text {
   color: var(--main-color-dark) !important;
 }
-body.mini .colDBox, body.mini .colD-box {
+body.mini .color-darkBox, body.mini .color-dark-box {
   background: var(--main-color-dark) !important;
   color: var(--white) !important;
   padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
   display: inline-block;
   margin: 0 6px 8px 0;
 }
-body.mini .colDBox.S, body.mini .colD-box.S {
+body.mini .color-darkBox.S, body.mini .color-dark-box.S {
   padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
   margin: 0 4px 4px 0;
 }
-body.mini .colDBox.XS, body.mini .colD-box.XS {
+body.mini .color-darkBox.XS, body.mini .color-dark-box.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
-body.mini .colDBg, body.mini .colD-bg {
+body.mini .color-darkBg, body.mini .color-dark-bg {
   background-color: var(--main-color-dark) !important;
 }
-body.mini .colDBord, body.mini .colD-bord {
+body.mini .color-darkBord, body.mini .color-dark-bord {
   border: 1px solid var(--main-color-dark) !important;
 }
-body.mini .colDBtn, body.mini .colD-btn {
+body.mini .color-darkBtn, body.mini .color-dark-btn {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini .colDBtn:hover, body.mini .colDBtn.clicked, body.mini .colD-btn:hover, body.mini .colD-btn.clicked {
+body.mini .color-darkBtn:hover, body.mini .color-darkBtn.clicked, body.mini .color-dark-btn:hover, body.mini .color-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini .colDBtnBg, body.mini .colDBtn-bg, body.mini .colD-btnBg, body.mini .colD-btn-bg {
+body.mini .color-darkBtnBg, body.mini .color-darkBtn-bg, body.mini .color-dark-btnBg, body.mini .color-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--main-color-dark) !important;
   background: var(--main-color-dark) !important;
 }
-body.mini .colDBtnBg:hover, body.mini .colDBtnBg.clicked, body.mini .colDBtn-bg:hover, body.mini .colDBtn-bg.clicked, body.mini .colD-btnBg:hover, body.mini .colD-btnBg.clicked, body.mini .colD-btn-bg:hover, body.mini .colD-btn-bg.clicked {
-  color: var(--main-color-dark) !important;
-  border-color: var(--main-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.colDBtn, body.mini input[type=radio] + label.colD-btn {
-  color: var(--main-color-dark) !important;
-  border-color: var(--main-color-dark) !important;
-}
-body.mini input[type=radio] + label.colDBtn:hover, body.mini input[type=radio] + label.colD-btn:hover {
-  color: var(--white) !important;
-  background: var(--main-color-dark) !important;
-  border-color: var(--main-color-dark) !important;
-}
-body.mini input[type=radio] + label.colDBtnBg, body.mini input[type=radio] + label.colDBtn-bg, body.mini input[type=radio] + label.colD-btnBg, body.mini input[type=radio] + label.colD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--main-color-dark) !important;
-  background: var(--main-color-dark) !important;
-}
-body.mini input[type=radio] + label.colDBtnBg:hover, body.mini input[type=radio] + label.colDBtn-bg:hover, body.mini input[type=radio] + label.colD-btnBg:hover, body.mini input[type=radio] + label.colD-btn-bg:hover {
+body.mini .color-darkBtnBg:hover, body.mini .color-darkBtnBg.clicked, body.mini .color-darkBtn-bg:hover, body.mini .color-darkBtn-bg.clicked, body.mini .color-dark-btnBg:hover, body.mini .color-dark-btnBg.clicked, body.mini .color-dark-btn-bg:hover, body.mini .color-dark-btn-bg.clicked {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
   background: transparent !important;
 }
-body.mini input[type=radio]:checked + label.colDBtn, body.mini input[type=radio]:checked + label.colD-btn {
+body.mini input[type=radio] + label.color-darkBtn, body.mini input[type=radio] + label.color-dark-btn {
+  color: var(--main-color-dark) !important;
+  border-color: var(--main-color-dark) !important;
+}
+body.mini input[type=radio] + label.color-darkBtn:hover, body.mini input[type=radio] + label.color-dark-btn:hover {
   color: var(--white) !important;
   background: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini input[type=radio]:checked + label.colDBtnBg, body.mini input[type=radio]:checked + label.colDBtn-bg, body.mini input[type=radio]:checked + label.colD-btnBg, body.mini input[type=radio]:checked + label.colD-btn-bg {
+body.mini input[type=radio] + label.color-darkBtnBg, body.mini input[type=radio] + label.color-darkBtn-bg, body.mini input[type=radio] + label.color-dark-btnBg, body.mini input[type=radio] + label.color-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--main-color-dark) !important;
+  background: var(--main-color-dark) !important;
+}
+body.mini input[type=radio] + label.color-darkBtnBg:hover, body.mini input[type=radio] + label.color-darkBtn-bg:hover, body.mini input[type=radio] + label.color-dark-btnBg:hover, body.mini input[type=radio] + label.color-dark-btn-bg:hover {
+  color: var(--main-color-dark) !important;
+  border-color: var(--main-color-dark) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.color-darkBtn, body.mini input[type=radio]:checked + label.color-dark-btn {
+  color: var(--white) !important;
+  background: var(--main-color-dark) !important;
+  border-color: var(--main-color-dark) !important;
+}
+body.mini input[type=radio]:checked + label.color-darkBtnBg, body.mini input[type=radio]:checked + label.color-darkBtn-bg, body.mini input[type=radio]:checked + label.color-dark-btnBg, body.mini input[type=radio]:checked + label.color-dark-btn-bg {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
   background: transparent !important;
@@ -5272,78 +5578,6 @@ body.mini input[type=radio]:checked + label.main-color-darkBtnBg, body.mini inpu
   border-color: var(--main-color-dark) !important;
   background: transparent !important;
 }
-body.mini .colTwoTxt, body.mini .colTwo-txt, body.mini .colTwo-text {
-  color: var(--second-color) !important;
-}
-body.mini .colTwoBox, body.mini .colTwo-box {
-  background: var(--second-color) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .colTwoBox.S, body.mini .colTwo-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .colTwoBox.XS, body.mini .colTwo-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .colTwoBg, body.mini .colTwo-bg {
-  background-color: var(--second-color) !important;
-}
-body.mini .colTwoBord, body.mini .colTwo-bord {
-  border: 1px solid var(--second-color) !important;
-}
-body.mini .colTwoBtn, body.mini .colTwo-btn {
-  color: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-}
-body.mini .colTwoBtn:hover, body.mini .colTwoBtn.clicked, body.mini .colTwo-btn:hover, body.mini .colTwo-btn.clicked {
-  color: var(--white) !important;
-  background: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-}
-body.mini .colTwoBtnBg, body.mini .colTwoBtn-bg, body.mini .colTwo-btnBg, body.mini .colTwo-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--second-color) !important;
-  background: var(--second-color) !important;
-}
-body.mini .colTwoBtnBg:hover, body.mini .colTwoBtnBg.clicked, body.mini .colTwoBtn-bg:hover, body.mini .colTwoBtn-bg.clicked, body.mini .colTwo-btnBg:hover, body.mini .colTwo-btnBg.clicked, body.mini .colTwo-btn-bg:hover, body.mini .colTwo-btn-bg.clicked {
-  color: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.colTwoBtn, body.mini input[type=radio] + label.colTwo-btn {
-  color: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-}
-body.mini input[type=radio] + label.colTwoBtn:hover, body.mini input[type=radio] + label.colTwo-btn:hover {
-  color: var(--white) !important;
-  background: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-}
-body.mini input[type=radio] + label.colTwoBtnBg, body.mini input[type=radio] + label.colTwoBtn-bg, body.mini input[type=radio] + label.colTwo-btnBg, body.mini input[type=radio] + label.colTwo-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--second-color) !important;
-  background: var(--second-color) !important;
-}
-body.mini input[type=radio] + label.colTwoBtnBg:hover, body.mini input[type=radio] + label.colTwoBtn-bg:hover, body.mini input[type=radio] + label.colTwo-btnBg:hover, body.mini input[type=radio] + label.colTwo-btn-bg:hover {
-  color: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.colTwoBtn, body.mini input[type=radio]:checked + label.colTwo-btn {
-  color: var(--white) !important;
-  background: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-}
-body.mini input[type=radio]:checked + label.colTwoBtnBg, body.mini input[type=radio]:checked + label.colTwoBtn-bg, body.mini input[type=radio]:checked + label.colTwo-btnBg, body.mini input[type=radio]:checked + label.colTwo-btn-bg {
-  color: var(--second-color) !important;
-  border-color: var(--second-color) !important;
-  background: transparent !important;
-}
 body.mini .second-colorTxt, body.mini .second-color-txt, body.mini .second-color-text {
   color: var(--second-color) !important;
 }
@@ -5416,220 +5650,76 @@ body.mini input[type=radio]:checked + label.second-colorBtnBg, body.mini input[t
   border-color: var(--second-color) !important;
   background: transparent !important;
 }
-body.mini .colTwoDTxt, body.mini .colTwoD-txt, body.mini .colTwoD-text {
+body.mini .second-color-darkTxt, body.mini .second-color-dark-txt, body.mini .second-color-dark-text {
   color: var(--second-color-dark) !important;
 }
-body.mini .colTwoDBox, body.mini .colTwoD-box {
+body.mini .second-color-darkBox, body.mini .second-color-dark-box {
   background: var(--second-color-dark) !important;
   color: var(--white) !important;
   padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
   display: inline-block;
   margin: 0 6px 8px 0;
 }
-body.mini .colTwoDBox.S, body.mini .colTwoD-box.S {
+body.mini .second-color-darkBox.S, body.mini .second-color-dark-box.S {
   padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
   margin: 0 4px 4px 0;
 }
-body.mini .colTwoDBox.XS, body.mini .colTwoD-box.XS {
+body.mini .second-color-darkBox.XS, body.mini .second-color-dark-box.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
-body.mini .colTwoDBg, body.mini .colTwoD-bg {
+body.mini .second-color-darkBg, body.mini .second-color-dark-bg {
   background-color: var(--second-color-dark) !important;
 }
-body.mini .colTwoDBord, body.mini .colTwoD-bord {
+body.mini .second-color-darkBord, body.mini .second-color-dark-bord {
   border: 1px solid var(--second-color-dark) !important;
 }
-body.mini .colTwoDBtn, body.mini .colTwoD-btn {
+body.mini .second-color-darkBtn, body.mini .second-color-dark-btn {
   color: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
 }
-body.mini .colTwoDBtn:hover, body.mini .colTwoDBtn.clicked, body.mini .colTwoD-btn:hover, body.mini .colTwoD-btn.clicked {
+body.mini .second-color-darkBtn:hover, body.mini .second-color-darkBtn.clicked, body.mini .second-color-dark-btn:hover, body.mini .second-color-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
 }
-body.mini .colTwoDBtnBg, body.mini .colTwoDBtn-bg, body.mini .colTwoD-btnBg, body.mini .colTwoD-btn-bg {
+body.mini .second-color-darkBtnBg, body.mini .second-color-darkBtn-bg, body.mini .second-color-dark-btnBg, body.mini .second-color-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--second-color-dark) !important;
   background: var(--second-color-dark) !important;
 }
-body.mini .colTwoDBtnBg:hover, body.mini .colTwoDBtnBg.clicked, body.mini .colTwoDBtn-bg:hover, body.mini .colTwoDBtn-bg.clicked, body.mini .colTwoD-btnBg:hover, body.mini .colTwoD-btnBg.clicked, body.mini .colTwoD-btn-bg:hover, body.mini .colTwoD-btn-bg.clicked {
-  color: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.colTwoDBtn, body.mini input[type=radio] + label.colTwoD-btn {
-  color: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-}
-body.mini input[type=radio] + label.colTwoDBtn:hover, body.mini input[type=radio] + label.colTwoD-btn:hover {
-  color: var(--white) !important;
-  background: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-}
-body.mini input[type=radio] + label.colTwoDBtnBg, body.mini input[type=radio] + label.colTwoDBtn-bg, body.mini input[type=radio] + label.colTwoD-btnBg, body.mini input[type=radio] + label.colTwoD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--second-color-dark) !important;
-  background: var(--second-color-dark) !important;
-}
-body.mini input[type=radio] + label.colTwoDBtnBg:hover, body.mini input[type=radio] + label.colTwoDBtn-bg:hover, body.mini input[type=radio] + label.colTwoD-btnBg:hover, body.mini input[type=radio] + label.colTwoD-btn-bg:hover {
+body.mini .second-color-darkBtnBg:hover, body.mini .second-color-darkBtnBg.clicked, body.mini .second-color-darkBtn-bg:hover, body.mini .second-color-darkBtn-bg.clicked, body.mini .second-color-dark-btnBg:hover, body.mini .second-color-dark-btnBg.clicked, body.mini .second-color-dark-btn-bg:hover, body.mini .second-color-dark-btn-bg.clicked {
   color: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
   background: transparent !important;
 }
-body.mini input[type=radio]:checked + label.colTwoDBtn, body.mini input[type=radio]:checked + label.colTwoD-btn {
+body.mini input[type=radio] + label.second-color-darkBtn, body.mini input[type=radio] + label.second-color-dark-btn {
+  color: var(--second-color-dark) !important;
+  border-color: var(--second-color-dark) !important;
+}
+body.mini input[type=radio] + label.second-color-darkBtn:hover, body.mini input[type=radio] + label.second-color-dark-btn:hover {
   color: var(--white) !important;
   background: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
 }
-body.mini input[type=radio]:checked + label.colTwoDBtnBg, body.mini input[type=radio]:checked + label.colTwoDBtn-bg, body.mini input[type=radio]:checked + label.colTwoD-btnBg, body.mini input[type=radio]:checked + label.colTwoD-btn-bg {
+body.mini input[type=radio] + label.second-color-darkBtnBg, body.mini input[type=radio] + label.second-color-darkBtn-bg, body.mini input[type=radio] + label.second-color-dark-btnBg, body.mini input[type=radio] + label.second-color-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--second-color-dark) !important;
+  background: var(--second-color-dark) !important;
+}
+body.mini input[type=radio] + label.second-color-darkBtnBg:hover, body.mini input[type=radio] + label.second-color-darkBtn-bg:hover, body.mini input[type=radio] + label.second-color-dark-btnBg:hover, body.mini input[type=radio] + label.second-color-dark-btn-bg:hover {
   color: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
   background: transparent !important;
 }
-body.mini .aecond-color-darkTxt, body.mini .aecond-color-dark-txt, body.mini .aecond-color-dark-text {
-  color: var(--second-color-dark) !important;
-}
-body.mini .aecond-color-darkBox, body.mini .aecond-color-dark-box {
-  background: var(--second-color-dark) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .aecond-color-darkBox.S, body.mini .aecond-color-dark-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .aecond-color-darkBox.XS, body.mini .aecond-color-dark-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .aecond-color-darkBg, body.mini .aecond-color-dark-bg {
-  background-color: var(--second-color-dark) !important;
-}
-body.mini .aecond-color-darkBord, body.mini .aecond-color-dark-bord {
-  border: 1px solid var(--second-color-dark) !important;
-}
-body.mini .aecond-color-darkBtn, body.mini .aecond-color-dark-btn {
-  color: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-}
-body.mini .aecond-color-darkBtn:hover, body.mini .aecond-color-darkBtn.clicked, body.mini .aecond-color-dark-btn:hover, body.mini .aecond-color-dark-btn.clicked {
+body.mini input[type=radio]:checked + label.second-color-darkBtn, body.mini input[type=radio]:checked + label.second-color-dark-btn {
   color: var(--white) !important;
   background: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
 }
-body.mini .aecond-color-darkBtnBg, body.mini .aecond-color-darkBtn-bg, body.mini .aecond-color-dark-btnBg, body.mini .aecond-color-dark-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--second-color-dark) !important;
-  background: var(--second-color-dark) !important;
-}
-body.mini .aecond-color-darkBtnBg:hover, body.mini .aecond-color-darkBtnBg.clicked, body.mini .aecond-color-darkBtn-bg:hover, body.mini .aecond-color-darkBtn-bg.clicked, body.mini .aecond-color-dark-btnBg:hover, body.mini .aecond-color-dark-btnBg.clicked, body.mini .aecond-color-dark-btn-bg:hover, body.mini .aecond-color-dark-btn-bg.clicked {
+body.mini input[type=radio]:checked + label.second-color-darkBtnBg, body.mini input[type=radio]:checked + label.second-color-darkBtn-bg, body.mini input[type=radio]:checked + label.second-color-dark-btnBg, body.mini input[type=radio]:checked + label.second-color-dark-btn-bg {
   color: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.aecond-color-darkBtn, body.mini input[type=radio] + label.aecond-color-dark-btn {
-  color: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-}
-body.mini input[type=radio] + label.aecond-color-darkBtn:hover, body.mini input[type=radio] + label.aecond-color-dark-btn:hover {
-  color: var(--white) !important;
-  background: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-}
-body.mini input[type=radio] + label.aecond-color-darkBtnBg, body.mini input[type=radio] + label.aecond-color-darkBtn-bg, body.mini input[type=radio] + label.aecond-color-dark-btnBg, body.mini input[type=radio] + label.aecond-color-dark-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--second-color-dark) !important;
-  background: var(--second-color-dark) !important;
-}
-body.mini input[type=radio] + label.aecond-color-darkBtnBg:hover, body.mini input[type=radio] + label.aecond-color-darkBtn-bg:hover, body.mini input[type=radio] + label.aecond-color-dark-btnBg:hover, body.mini input[type=radio] + label.aecond-color-dark-btn-bg:hover {
-  color: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.aecond-color-darkBtn, body.mini input[type=radio]:checked + label.aecond-color-dark-btn {
-  color: var(--white) !important;
-  background: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-}
-body.mini input[type=radio]:checked + label.aecond-color-darkBtnBg, body.mini input[type=radio]:checked + label.aecond-color-darkBtn-bg, body.mini input[type=radio]:checked + label.aecond-color-dark-btnBg, body.mini input[type=radio]:checked + label.aecond-color-dark-btn-bg {
-  color: var(--second-color-dark) !important;
-  border-color: var(--second-color-dark) !important;
-  background: transparent !important;
-}
-body.mini .colThreeTxt, body.mini .colThree-txt, body.mini .colThree-text {
-  color: var(--third-color) !important;
-}
-body.mini .colThreeBox, body.mini .colThree-box {
-  background: var(--third-color) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .colThreeBox.S, body.mini .colThree-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .colThreeBox.XS, body.mini .colThree-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .colThreeBg, body.mini .colThree-bg {
-  background-color: var(--third-color) !important;
-}
-body.mini .colThreeBord, body.mini .colThree-bord {
-  border: 1px solid var(--third-color) !important;
-}
-body.mini .colThreeBtn, body.mini .colThree-btn {
-  color: var(--third-color) !important;
-  border-color: var(--third-color) !important;
-}
-body.mini .colThreeBtn:hover, body.mini .colThreeBtn.clicked, body.mini .colThree-btn:hover, body.mini .colThree-btn.clicked {
-  color: var(--white) !important;
-  background: var(--third-color) !important;
-  border-color: var(--third-color) !important;
-}
-body.mini .colThreeBtnBg, body.mini .colThreeBtn-bg, body.mini .colThree-btnBg, body.mini .colThree-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--third-color) !important;
-  background: var(--third-color) !important;
-}
-body.mini .colThreeBtnBg:hover, body.mini .colThreeBtnBg.clicked, body.mini .colThreeBtn-bg:hover, body.mini .colThreeBtn-bg.clicked, body.mini .colThree-btnBg:hover, body.mini .colThree-btnBg.clicked, body.mini .colThree-btn-bg:hover, body.mini .colThree-btn-bg.clicked {
-  color: var(--third-color) !important;
-  border-color: var(--third-color) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.colThreeBtn, body.mini input[type=radio] + label.colThree-btn {
-  color: var(--third-color) !important;
-  border-color: var(--third-color) !important;
-}
-body.mini input[type=radio] + label.colThreeBtn:hover, body.mini input[type=radio] + label.colThree-btn:hover {
-  color: var(--white) !important;
-  background: var(--third-color) !important;
-  border-color: var(--third-color) !important;
-}
-body.mini input[type=radio] + label.colThreeBtnBg, body.mini input[type=radio] + label.colThreeBtn-bg, body.mini input[type=radio] + label.colThree-btnBg, body.mini input[type=radio] + label.colThree-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--third-color) !important;
-  background: var(--third-color) !important;
-}
-body.mini input[type=radio] + label.colThreeBtnBg:hover, body.mini input[type=radio] + label.colThreeBtn-bg:hover, body.mini input[type=radio] + label.colThree-btnBg:hover, body.mini input[type=radio] + label.colThree-btn-bg:hover {
-  color: var(--third-color) !important;
-  border-color: var(--third-color) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.colThreeBtn, body.mini input[type=radio]:checked + label.colThree-btn {
-  color: var(--white) !important;
-  background: var(--third-color) !important;
-  border-color: var(--third-color) !important;
-}
-body.mini input[type=radio]:checked + label.colThreeBtnBg, body.mini input[type=radio]:checked + label.colThreeBtn-bg, body.mini input[type=radio]:checked + label.colThree-btnBg, body.mini input[type=radio]:checked + label.colThree-btn-bg {
-  color: var(--third-color) !important;
-  border-color: var(--third-color) !important;
   background: transparent !important;
 }
 body.mini .third-colorTxt, body.mini .third-color-txt, body.mini .third-color-text {
@@ -5704,78 +5794,6 @@ body.mini input[type=radio]:checked + label.third-colorBtnBg, body.mini input[ty
   border-color: var(--third-color) !important;
   background: transparent !important;
 }
-body.mini .colThreeDTxt, body.mini .colThreeD-txt, body.mini .colThreeD-text {
-  color: var(--third-color-dark) !important;
-}
-body.mini .colThreeDBox, body.mini .colThreeD-box {
-  background: var(--third-color-dark) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .colThreeDBox.S, body.mini .colThreeD-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .colThreeDBox.XS, body.mini .colThreeD-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .colThreeDBg, body.mini .colThreeD-bg {
-  background-color: var(--third-color-dark) !important;
-}
-body.mini .colThreeDBord, body.mini .colThreeD-bord {
-  border: 1px solid var(--third-color-dark) !important;
-}
-body.mini .colThreeDBtn, body.mini .colThreeD-btn {
-  color: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-}
-body.mini .colThreeDBtn:hover, body.mini .colThreeDBtn.clicked, body.mini .colThreeD-btn:hover, body.mini .colThreeD-btn.clicked {
-  color: var(--white) !important;
-  background: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-}
-body.mini .colThreeDBtnBg, body.mini .colThreeDBtn-bg, body.mini .colThreeD-btnBg, body.mini .colThreeD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--third-color-dark) !important;
-  background: var(--third-color-dark) !important;
-}
-body.mini .colThreeDBtnBg:hover, body.mini .colThreeDBtnBg.clicked, body.mini .colThreeDBtn-bg:hover, body.mini .colThreeDBtn-bg.clicked, body.mini .colThreeD-btnBg:hover, body.mini .colThreeD-btnBg.clicked, body.mini .colThreeD-btn-bg:hover, body.mini .colThreeD-btn-bg.clicked {
-  color: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.colThreeDBtn, body.mini input[type=radio] + label.colThreeD-btn {
-  color: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-}
-body.mini input[type=radio] + label.colThreeDBtn:hover, body.mini input[type=radio] + label.colThreeD-btn:hover {
-  color: var(--white) !important;
-  background: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-}
-body.mini input[type=radio] + label.colThreeDBtnBg, body.mini input[type=radio] + label.colThreeDBtn-bg, body.mini input[type=radio] + label.colThreeD-btnBg, body.mini input[type=radio] + label.colThreeD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--third-color-dark) !important;
-  background: var(--third-color-dark) !important;
-}
-body.mini input[type=radio] + label.colThreeDBtnBg:hover, body.mini input[type=radio] + label.colThreeDBtn-bg:hover, body.mini input[type=radio] + label.colThreeD-btnBg:hover, body.mini input[type=radio] + label.colThreeD-btn-bg:hover {
-  color: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.colThreeDBtn, body.mini input[type=radio]:checked + label.colThreeD-btn {
-  color: var(--white) !important;
-  background: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-}
-body.mini input[type=radio]:checked + label.colThreeDBtnBg, body.mini input[type=radio]:checked + label.colThreeDBtn-bg, body.mini input[type=radio]:checked + label.colThreeD-btnBg, body.mini input[type=radio]:checked + label.colThreeD-btn-bg {
-  color: var(--third-color-dark) !important;
-  border-color: var(--third-color-dark) !important;
-  background: transparent !important;
-}
 body.mini .third-color-darkTxt, body.mini .third-color-dark-txt, body.mini .third-color-dark-text {
   color: var(--third-color-dark) !important;
 }
@@ -5848,78 +5866,6 @@ body.mini input[type=radio]:checked + label.third-color-darkBtnBg, body.mini inp
   border-color: var(--third-color-dark) !important;
   background: transparent !important;
 }
-body.mini .colFourTxt, body.mini .colFour-txt, body.mini .colFour-text {
-  color: var(--fourth-color) !important;
-}
-body.mini .colFourBox, body.mini .colFour-box {
-  background: var(--fourth-color) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .colFourBox.S, body.mini .colFour-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .colFourBox.XS, body.mini .colFour-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .colFourBg, body.mini .colFour-bg {
-  background-color: var(--fourth-color) !important;
-}
-body.mini .colFourBord, body.mini .colFour-bord {
-  border: 1px solid var(--fourth-color) !important;
-}
-body.mini .colFourBtn, body.mini .colFour-btn {
-  color: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-}
-body.mini .colFourBtn:hover, body.mini .colFourBtn.clicked, body.mini .colFour-btn:hover, body.mini .colFour-btn.clicked {
-  color: var(--white) !important;
-  background: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-}
-body.mini .colFourBtnBg, body.mini .colFourBtn-bg, body.mini .colFour-btnBg, body.mini .colFour-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--fourth-color) !important;
-  background: var(--fourth-color) !important;
-}
-body.mini .colFourBtnBg:hover, body.mini .colFourBtnBg.clicked, body.mini .colFourBtn-bg:hover, body.mini .colFourBtn-bg.clicked, body.mini .colFour-btnBg:hover, body.mini .colFour-btnBg.clicked, body.mini .colFour-btn-bg:hover, body.mini .colFour-btn-bg.clicked {
-  color: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.colFourBtn, body.mini input[type=radio] + label.colFour-btn {
-  color: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-}
-body.mini input[type=radio] + label.colFourBtn:hover, body.mini input[type=radio] + label.colFour-btn:hover {
-  color: var(--white) !important;
-  background: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-}
-body.mini input[type=radio] + label.colFourBtnBg, body.mini input[type=radio] + label.colFourBtn-bg, body.mini input[type=radio] + label.colFour-btnBg, body.mini input[type=radio] + label.colFour-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--fourth-color) !important;
-  background: var(--fourth-color) !important;
-}
-body.mini input[type=radio] + label.colFourBtnBg:hover, body.mini input[type=radio] + label.colFourBtn-bg:hover, body.mini input[type=radio] + label.colFour-btnBg:hover, body.mini input[type=radio] + label.colFour-btn-bg:hover {
-  color: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.colFourBtn, body.mini input[type=radio]:checked + label.colFour-btn {
-  color: var(--white) !important;
-  background: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-}
-body.mini input[type=radio]:checked + label.colFourBtnBg, body.mini input[type=radio]:checked + label.colFourBtn-bg, body.mini input[type=radio]:checked + label.colFour-btnBg, body.mini input[type=radio]:checked + label.colFour-btn-bg {
-  color: var(--fourth-color) !important;
-  border-color: var(--fourth-color) !important;
-  background: transparent !important;
-}
 body.mini .fourth-colorTxt, body.mini .fourth-color-txt, body.mini .fourth-color-text {
   color: var(--fourth-color) !important;
 }
@@ -5990,78 +5936,6 @@ body.mini input[type=radio]:checked + label.fourth-colorBtn, body.mini input[typ
 body.mini input[type=radio]:checked + label.fourth-colorBtnBg, body.mini input[type=radio]:checked + label.fourth-colorBtn-bg, body.mini input[type=radio]:checked + label.fourth-color-btnBg, body.mini input[type=radio]:checked + label.fourth-color-btn-bg {
   color: var(--fourth-color) !important;
   border-color: var(--fourth-color) !important;
-  background: transparent !important;
-}
-body.mini .colFourDTxt, body.mini .colFourD-txt, body.mini .colFourD-text {
-  color: var(--fourth-color-dark) !important;
-}
-body.mini .colFourDBox, body.mini .colFourD-box {
-  background: var(--fourth-color-dark) !important;
-  color: var(--white) !important;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  display: inline-block;
-  margin: 0 6px 8px 0;
-}
-body.mini .colFourDBox.S, body.mini .colFourD-box.S {
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-  margin: 0 4px 4px 0;
-}
-body.mini .colFourDBox.XS, body.mini .colFourD-box.XS {
-  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-  margin: 0 4px 2px 0;
-}
-body.mini .colFourDBg, body.mini .colFourD-bg {
-  background-color: var(--fourth-color-dark) !important;
-}
-body.mini .colFourDBord, body.mini .colFourD-bord {
-  border: 1px solid var(--fourth-color-dark) !important;
-}
-body.mini .colFourDBtn, body.mini .colFourD-btn {
-  color: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
-}
-body.mini .colFourDBtn:hover, body.mini .colFourDBtn.clicked, body.mini .colFourD-btn:hover, body.mini .colFourD-btn.clicked {
-  color: var(--white) !important;
-  background: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
-}
-body.mini .colFourDBtnBg, body.mini .colFourDBtn-bg, body.mini .colFourD-btnBg, body.mini .colFourD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--fourth-color-dark) !important;
-  background: var(--fourth-color-dark) !important;
-}
-body.mini .colFourDBtnBg:hover, body.mini .colFourDBtnBg.clicked, body.mini .colFourDBtn-bg:hover, body.mini .colFourDBtn-bg.clicked, body.mini .colFourD-btnBg:hover, body.mini .colFourD-btnBg.clicked, body.mini .colFourD-btn-bg:hover, body.mini .colFourD-btn-bg.clicked {
-  color: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio] + label.colFourDBtn, body.mini input[type=radio] + label.colFourD-btn {
-  color: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
-}
-body.mini input[type=radio] + label.colFourDBtn:hover, body.mini input[type=radio] + label.colFourD-btn:hover {
-  color: var(--white) !important;
-  background: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
-}
-body.mini input[type=radio] + label.colFourDBtnBg, body.mini input[type=radio] + label.colFourDBtn-bg, body.mini input[type=radio] + label.colFourD-btnBg, body.mini input[type=radio] + label.colFourD-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--fourth-color-dark) !important;
-  background: var(--fourth-color-dark) !important;
-}
-body.mini input[type=radio] + label.colFourDBtnBg:hover, body.mini input[type=radio] + label.colFourDBtn-bg:hover, body.mini input[type=radio] + label.colFourD-btnBg:hover, body.mini input[type=radio] + label.colFourD-btn-bg:hover {
-  color: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
-  background: transparent !important;
-}
-body.mini input[type=radio]:checked + label.colFourDBtn, body.mini input[type=radio]:checked + label.colFourD-btn {
-  color: var(--white) !important;
-  background: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
-}
-body.mini input[type=radio]:checked + label.colFourDBtnBg, body.mini input[type=radio]:checked + label.colFourDBtn-bg, body.mini input[type=radio]:checked + label.colFourD-btnBg, body.mini input[type=radio]:checked + label.colFourD-btn-bg {
-  color: var(--fourth-color-dark) !important;
-  border-color: var(--fourth-color-dark) !important;
   background: transparent !important;
 }
 body.mini .fourth-color-darkTxt, body.mini .fourth-color-dark-txt, body.mini .fourth-color-dark-text {
@@ -6278,6 +6152,78 @@ body.mini input[type=radio]:checked + label.link-colorBtn, body.mini input[type=
 body.mini input[type=radio]:checked + label.link-colorBtnBg, body.mini input[type=radio]:checked + label.link-colorBtn-bg, body.mini input[type=radio]:checked + label.link-color-btnBg, body.mini input[type=radio]:checked + label.link-color-btn-bg {
   color: var(--link-color) !important;
   border-color: var(--link-color) !important;
+  background: transparent !important;
+}
+body.mini .link-hoverTxt, body.mini .link-hover-txt, body.mini .link-hover-text {
+  color: var(--link-hover-color) !important;
+}
+body.mini .link-hoverBox, body.mini .link-hover-box {
+  background: var(--link-hover-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .link-hoverBox.S, body.mini .link-hover-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .link-hoverBox.XS, body.mini .link-hover-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .link-hoverBg, body.mini .link-hover-bg {
+  background-color: var(--link-hover-color) !important;
+}
+body.mini .link-hoverBord, body.mini .link-hover-bord {
+  border: 1px solid var(--link-hover-color) !important;
+}
+body.mini .link-hoverBtn, body.mini .link-hover-btn {
+  color: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+}
+body.mini .link-hoverBtn:hover, body.mini .link-hoverBtn.clicked, body.mini .link-hover-btn:hover, body.mini .link-hover-btn.clicked {
+  color: var(--white) !important;
+  background: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+}
+body.mini .link-hoverBtnBg, body.mini .link-hoverBtn-bg, body.mini .link-hover-btnBg, body.mini .link-hover-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--link-hover-color) !important;
+  background: var(--link-hover-color) !important;
+}
+body.mini .link-hoverBtnBg:hover, body.mini .link-hoverBtnBg.clicked, body.mini .link-hoverBtn-bg:hover, body.mini .link-hoverBtn-bg.clicked, body.mini .link-hover-btnBg:hover, body.mini .link-hover-btnBg.clicked, body.mini .link-hover-btn-bg:hover, body.mini .link-hover-btn-bg.clicked {
+  color: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.link-hoverBtn, body.mini input[type=radio] + label.link-hover-btn {
+  color: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+}
+body.mini input[type=radio] + label.link-hoverBtn:hover, body.mini input[type=radio] + label.link-hover-btn:hover {
+  color: var(--white) !important;
+  background: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+}
+body.mini input[type=radio] + label.link-hoverBtnBg, body.mini input[type=radio] + label.link-hoverBtn-bg, body.mini input[type=radio] + label.link-hover-btnBg, body.mini input[type=radio] + label.link-hover-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--link-hover-color) !important;
+  background: var(--link-hover-color) !important;
+}
+body.mini input[type=radio] + label.link-hoverBtnBg:hover, body.mini input[type=radio] + label.link-hoverBtn-bg:hover, body.mini input[type=radio] + label.link-hover-btnBg:hover, body.mini input[type=radio] + label.link-hover-btn-bg:hover {
+  color: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.link-hoverBtn, body.mini input[type=radio]:checked + label.link-hover-btn {
+  color: var(--white) !important;
+  background: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
+}
+body.mini input[type=radio]:checked + label.link-hoverBtnBg, body.mini input[type=radio]:checked + label.link-hoverBtn-bg, body.mini input[type=radio]:checked + label.link-hover-btnBg, body.mini input[type=radio]:checked + label.link-hover-btn-bg {
+  color: var(--link-hover-color) !important;
+  border-color: var(--link-hover-color) !important;
   background: transparent !important;
 }
 body.mini .infoTxt, body.mini .info-txt, body.mini .info-text {
@@ -6566,6 +6512,78 @@ body.mini input[type=radio]:checked + label.dangerBtn, body.mini input[type=radi
 body.mini input[type=radio]:checked + label.dangerBtnBg, body.mini input[type=radio]:checked + label.dangerBtn-bg, body.mini input[type=radio]:checked + label.danger-btnBg, body.mini input[type=radio]:checked + label.danger-btn-bg {
   color: var(--danger) !important;
   border-color: var(--danger) !important;
+  background: transparent !important;
+}
+body.mini .badTxt, body.mini .bad-txt, body.mini .bad-text {
+  color: var(--bad) !important;
+}
+body.mini .badBox, body.mini .bad-box {
+  background: var(--bad) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .badBox.S, body.mini .bad-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .badBox.XS, body.mini .bad-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .badBg, body.mini .bad-bg {
+  background-color: var(--bad) !important;
+}
+body.mini .badBord, body.mini .bad-bord {
+  border: 1px solid var(--bad) !important;
+}
+body.mini .badBtn, body.mini .bad-btn {
+  color: var(--bad) !important;
+  border-color: var(--bad) !important;
+}
+body.mini .badBtn:hover, body.mini .badBtn.clicked, body.mini .bad-btn:hover, body.mini .bad-btn.clicked {
+  color: var(--white) !important;
+  background: var(--bad) !important;
+  border-color: var(--bad) !important;
+}
+body.mini .badBtnBg, body.mini .badBtn-bg, body.mini .bad-btnBg, body.mini .bad-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--bad) !important;
+  background: var(--bad) !important;
+}
+body.mini .badBtnBg:hover, body.mini .badBtnBg.clicked, body.mini .badBtn-bg:hover, body.mini .badBtn-bg.clicked, body.mini .bad-btnBg:hover, body.mini .bad-btnBg.clicked, body.mini .bad-btn-bg:hover, body.mini .bad-btn-bg.clicked {
+  color: var(--bad) !important;
+  border-color: var(--bad) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.badBtn, body.mini input[type=radio] + label.bad-btn {
+  color: var(--bad) !important;
+  border-color: var(--bad) !important;
+}
+body.mini input[type=radio] + label.badBtn:hover, body.mini input[type=radio] + label.bad-btn:hover {
+  color: var(--white) !important;
+  background: var(--bad) !important;
+  border-color: var(--bad) !important;
+}
+body.mini input[type=radio] + label.badBtnBg, body.mini input[type=radio] + label.badBtn-bg, body.mini input[type=radio] + label.bad-btnBg, body.mini input[type=radio] + label.bad-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--bad) !important;
+  background: var(--bad) !important;
+}
+body.mini input[type=radio] + label.badBtnBg:hover, body.mini input[type=radio] + label.badBtn-bg:hover, body.mini input[type=radio] + label.bad-btnBg:hover, body.mini input[type=radio] + label.bad-btn-bg:hover {
+  color: var(--bad) !important;
+  border-color: var(--bad) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.badBtn, body.mini input[type=radio]:checked + label.bad-btn {
+  color: var(--white) !important;
+  background: var(--bad) !important;
+  border-color: var(--bad) !important;
+}
+body.mini input[type=radio]:checked + label.badBtnBg, body.mini input[type=radio]:checked + label.badBtn-bg, body.mini input[type=radio]:checked + label.bad-btnBg, body.mini input[type=radio]:checked + label.bad-btn-bg {
+  color: var(--bad) !important;
+  border-color: var(--bad) !important;
   background: transparent !important;
 }
 body.mini .acidGreenTxt, body.mini .acidGreen-txt, body.mini .acidGreen-text {
@@ -6928,6 +6946,294 @@ body.mini input[type=radio]:checked + label.miniBtnBg, body.mini input[type=radi
   border-color: var(--mini-color) !important;
   background: transparent !important;
 }
+body.mini .mini-darkTxt, body.mini .mini-dark-txt, body.mini .mini-dark-text {
+  color: var(--mini-color-dark) !important;
+}
+body.mini .mini-darkBox, body.mini .mini-dark-box {
+  background: var(--mini-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .mini-darkBox.S, body.mini .mini-dark-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .mini-darkBox.XS, body.mini .mini-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .mini-darkBg, body.mini .mini-dark-bg {
+  background-color: var(--mini-color-dark) !important;
+}
+body.mini .mini-darkBord, body.mini .mini-dark-bord {
+  border: 1px solid var(--mini-color-dark) !important;
+}
+body.mini .mini-darkBtn, body.mini .mini-dark-btn {
+  color: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+}
+body.mini .mini-darkBtn:hover, body.mini .mini-darkBtn.clicked, body.mini .mini-dark-btn:hover, body.mini .mini-dark-btn.clicked {
+  color: var(--white) !important;
+  background: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+}
+body.mini .mini-darkBtnBg, body.mini .mini-darkBtn-bg, body.mini .mini-dark-btnBg, body.mini .mini-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-color-dark) !important;
+  background: var(--mini-color-dark) !important;
+}
+body.mini .mini-darkBtnBg:hover, body.mini .mini-darkBtnBg.clicked, body.mini .mini-darkBtn-bg:hover, body.mini .mini-darkBtn-bg.clicked, body.mini .mini-dark-btnBg:hover, body.mini .mini-dark-btnBg.clicked, body.mini .mini-dark-btn-bg:hover, body.mini .mini-dark-btn-bg.clicked {
+  color: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.mini-darkBtn, body.mini input[type=radio] + label.mini-dark-btn {
+  color: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+}
+body.mini input[type=radio] + label.mini-darkBtn:hover, body.mini input[type=radio] + label.mini-dark-btn:hover {
+  color: var(--white) !important;
+  background: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+}
+body.mini input[type=radio] + label.mini-darkBtnBg, body.mini input[type=radio] + label.mini-darkBtn-bg, body.mini input[type=radio] + label.mini-dark-btnBg, body.mini input[type=radio] + label.mini-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-color-dark) !important;
+  background: var(--mini-color-dark) !important;
+}
+body.mini input[type=radio] + label.mini-darkBtnBg:hover, body.mini input[type=radio] + label.mini-darkBtn-bg:hover, body.mini input[type=radio] + label.mini-dark-btnBg:hover, body.mini input[type=radio] + label.mini-dark-btn-bg:hover {
+  color: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.mini-darkBtn, body.mini input[type=radio]:checked + label.mini-dark-btn {
+  color: var(--white) !important;
+  background: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+}
+body.mini input[type=radio]:checked + label.mini-darkBtnBg, body.mini input[type=radio]:checked + label.mini-darkBtn-bg, body.mini input[type=radio]:checked + label.mini-dark-btnBg, body.mini input[type=radio]:checked + label.mini-dark-btn-bg {
+  color: var(--mini-color-dark) !important;
+  border-color: var(--mini-color-dark) !important;
+  background: transparent !important;
+}
+body.mini .mini-secondTxt, body.mini .mini-second-txt, body.mini .mini-second-text {
+  color: var(--mini-second) !important;
+}
+body.mini .mini-secondBox, body.mini .mini-second-box {
+  background: var(--mini-second) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .mini-secondBox.S, body.mini .mini-second-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .mini-secondBox.XS, body.mini .mini-second-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .mini-secondBg, body.mini .mini-second-bg {
+  background-color: var(--mini-second) !important;
+}
+body.mini .mini-secondBord, body.mini .mini-second-bord {
+  border: 1px solid var(--mini-second) !important;
+}
+body.mini .mini-secondBtn, body.mini .mini-second-btn {
+  color: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+}
+body.mini .mini-secondBtn:hover, body.mini .mini-secondBtn.clicked, body.mini .mini-second-btn:hover, body.mini .mini-second-btn.clicked {
+  color: var(--white) !important;
+  background: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+}
+body.mini .mini-secondBtnBg, body.mini .mini-secondBtn-bg, body.mini .mini-second-btnBg, body.mini .mini-second-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-second) !important;
+  background: var(--mini-second) !important;
+}
+body.mini .mini-secondBtnBg:hover, body.mini .mini-secondBtnBg.clicked, body.mini .mini-secondBtn-bg:hover, body.mini .mini-secondBtn-bg.clicked, body.mini .mini-second-btnBg:hover, body.mini .mini-second-btnBg.clicked, body.mini .mini-second-btn-bg:hover, body.mini .mini-second-btn-bg.clicked {
+  color: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.mini-secondBtn, body.mini input[type=radio] + label.mini-second-btn {
+  color: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+}
+body.mini input[type=radio] + label.mini-secondBtn:hover, body.mini input[type=radio] + label.mini-second-btn:hover {
+  color: var(--white) !important;
+  background: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+}
+body.mini input[type=radio] + label.mini-secondBtnBg, body.mini input[type=radio] + label.mini-secondBtn-bg, body.mini input[type=radio] + label.mini-second-btnBg, body.mini input[type=radio] + label.mini-second-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-second) !important;
+  background: var(--mini-second) !important;
+}
+body.mini input[type=radio] + label.mini-secondBtnBg:hover, body.mini input[type=radio] + label.mini-secondBtn-bg:hover, body.mini input[type=radio] + label.mini-second-btnBg:hover, body.mini input[type=radio] + label.mini-second-btn-bg:hover {
+  color: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.mini-secondBtn, body.mini input[type=radio]:checked + label.mini-second-btn {
+  color: var(--white) !important;
+  background: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+}
+body.mini input[type=radio]:checked + label.mini-secondBtnBg, body.mini input[type=radio]:checked + label.mini-secondBtn-bg, body.mini input[type=radio]:checked + label.mini-second-btnBg, body.mini input[type=radio]:checked + label.mini-second-btn-bg {
+  color: var(--mini-second) !important;
+  border-color: var(--mini-second) !important;
+  background: transparent !important;
+}
+body.mini .mini-thirdTxt, body.mini .mini-third-txt, body.mini .mini-third-text {
+  color: var(--mini-third) !important;
+}
+body.mini .mini-thirdBox, body.mini .mini-third-box {
+  background: var(--mini-third) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .mini-thirdBox.S, body.mini .mini-third-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .mini-thirdBox.XS, body.mini .mini-third-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .mini-thirdBg, body.mini .mini-third-bg {
+  background-color: var(--mini-third) !important;
+}
+body.mini .mini-thirdBord, body.mini .mini-third-bord {
+  border: 1px solid var(--mini-third) !important;
+}
+body.mini .mini-thirdBtn, body.mini .mini-third-btn {
+  color: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+}
+body.mini .mini-thirdBtn:hover, body.mini .mini-thirdBtn.clicked, body.mini .mini-third-btn:hover, body.mini .mini-third-btn.clicked {
+  color: var(--white) !important;
+  background: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+}
+body.mini .mini-thirdBtnBg, body.mini .mini-thirdBtn-bg, body.mini .mini-third-btnBg, body.mini .mini-third-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-third) !important;
+  background: var(--mini-third) !important;
+}
+body.mini .mini-thirdBtnBg:hover, body.mini .mini-thirdBtnBg.clicked, body.mini .mini-thirdBtn-bg:hover, body.mini .mini-thirdBtn-bg.clicked, body.mini .mini-third-btnBg:hover, body.mini .mini-third-btnBg.clicked, body.mini .mini-third-btn-bg:hover, body.mini .mini-third-btn-bg.clicked {
+  color: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.mini-thirdBtn, body.mini input[type=radio] + label.mini-third-btn {
+  color: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+}
+body.mini input[type=radio] + label.mini-thirdBtn:hover, body.mini input[type=radio] + label.mini-third-btn:hover {
+  color: var(--white) !important;
+  background: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+}
+body.mini input[type=radio] + label.mini-thirdBtnBg, body.mini input[type=radio] + label.mini-thirdBtn-bg, body.mini input[type=radio] + label.mini-third-btnBg, body.mini input[type=radio] + label.mini-third-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-third) !important;
+  background: var(--mini-third) !important;
+}
+body.mini input[type=radio] + label.mini-thirdBtnBg:hover, body.mini input[type=radio] + label.mini-thirdBtn-bg:hover, body.mini input[type=radio] + label.mini-third-btnBg:hover, body.mini input[type=radio] + label.mini-third-btn-bg:hover {
+  color: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.mini-thirdBtn, body.mini input[type=radio]:checked + label.mini-third-btn {
+  color: var(--white) !important;
+  background: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+}
+body.mini input[type=radio]:checked + label.mini-thirdBtnBg, body.mini input[type=radio]:checked + label.mini-thirdBtn-bg, body.mini input[type=radio]:checked + label.mini-third-btnBg, body.mini input[type=radio]:checked + label.mini-third-btn-bg {
+  color: var(--mini-third) !important;
+  border-color: var(--mini-third) !important;
+  background: transparent !important;
+}
+body.mini .mini-fourthTxt, body.mini .mini-fourth-txt, body.mini .mini-fourth-text {
+  color: var(--mini-fourth) !important;
+}
+body.mini .mini-fourthBox, body.mini .mini-fourth-box {
+  background: var(--mini-fourth) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .mini-fourthBox.S, body.mini .mini-fourth-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .mini-fourthBox.XS, body.mini .mini-fourth-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .mini-fourthBg, body.mini .mini-fourth-bg {
+  background-color: var(--mini-fourth) !important;
+}
+body.mini .mini-fourthBord, body.mini .mini-fourth-bord {
+  border: 1px solid var(--mini-fourth) !important;
+}
+body.mini .mini-fourthBtn, body.mini .mini-fourth-btn {
+  color: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+}
+body.mini .mini-fourthBtn:hover, body.mini .mini-fourthBtn.clicked, body.mini .mini-fourth-btn:hover, body.mini .mini-fourth-btn.clicked {
+  color: var(--white) !important;
+  background: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+}
+body.mini .mini-fourthBtnBg, body.mini .mini-fourthBtn-bg, body.mini .mini-fourth-btnBg, body.mini .mini-fourth-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-fourth) !important;
+  background: var(--mini-fourth) !important;
+}
+body.mini .mini-fourthBtnBg:hover, body.mini .mini-fourthBtnBg.clicked, body.mini .mini-fourthBtn-bg:hover, body.mini .mini-fourthBtn-bg.clicked, body.mini .mini-fourth-btnBg:hover, body.mini .mini-fourth-btnBg.clicked, body.mini .mini-fourth-btn-bg:hover, body.mini .mini-fourth-btn-bg.clicked {
+  color: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.mini-fourthBtn, body.mini input[type=radio] + label.mini-fourth-btn {
+  color: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+}
+body.mini input[type=radio] + label.mini-fourthBtn:hover, body.mini input[type=radio] + label.mini-fourth-btn:hover {
+  color: var(--white) !important;
+  background: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+}
+body.mini input[type=radio] + label.mini-fourthBtnBg, body.mini input[type=radio] + label.mini-fourthBtn-bg, body.mini input[type=radio] + label.mini-fourth-btnBg, body.mini input[type=radio] + label.mini-fourth-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--mini-fourth) !important;
+  background: var(--mini-fourth) !important;
+}
+body.mini input[type=radio] + label.mini-fourthBtnBg:hover, body.mini input[type=radio] + label.mini-fourthBtn-bg:hover, body.mini input[type=radio] + label.mini-fourth-btnBg:hover, body.mini input[type=radio] + label.mini-fourth-btn-bg:hover {
+  color: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.mini-fourthBtn, body.mini input[type=radio]:checked + label.mini-fourth-btn {
+  color: var(--white) !important;
+  background: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+}
+body.mini input[type=radio]:checked + label.mini-fourthBtnBg, body.mini input[type=radio]:checked + label.mini-fourthBtn-bg, body.mini input[type=radio]:checked + label.mini-fourth-btnBg, body.mini input[type=radio]:checked + label.mini-fourth-btn-bg {
+  color: var(--mini-fourth) !important;
+  border-color: var(--mini-fourth) !important;
+  background: transparent !important;
+}
 body.mini .uwaTxt, body.mini .uwa-txt, body.mini .uwa-text {
   color: var(--uwa-color) !important;
 }
@@ -6998,6 +7304,366 @@ body.mini input[type=radio]:checked + label.uwaBtn, body.mini input[type=radio]:
 body.mini input[type=radio]:checked + label.uwaBtnBg, body.mini input[type=radio]:checked + label.uwaBtn-bg, body.mini input[type=radio]:checked + label.uwa-btnBg, body.mini input[type=radio]:checked + label.uwa-btn-bg {
   color: var(--uwa-color) !important;
   border-color: var(--uwa-color) !important;
+  background: transparent !important;
+}
+body.mini .uwa-darkTxt, body.mini .uwa-dark-txt, body.mini .uwa-dark-text {
+  color: var(--uwa-color-dark) !important;
+}
+body.mini .uwa-darkBox, body.mini .uwa-dark-box {
+  background: var(--uwa-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .uwa-darkBox.S, body.mini .uwa-dark-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .uwa-darkBox.XS, body.mini .uwa-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .uwa-darkBg, body.mini .uwa-dark-bg {
+  background-color: var(--uwa-color-dark) !important;
+}
+body.mini .uwa-darkBord, body.mini .uwa-dark-bord {
+  border: 1px solid var(--uwa-color-dark) !important;
+}
+body.mini .uwa-darkBtn, body.mini .uwa-dark-btn {
+  color: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+}
+body.mini .uwa-darkBtn:hover, body.mini .uwa-darkBtn.clicked, body.mini .uwa-dark-btn:hover, body.mini .uwa-dark-btn.clicked {
+  color: var(--white) !important;
+  background: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+}
+body.mini .uwa-darkBtnBg, body.mini .uwa-darkBtn-bg, body.mini .uwa-dark-btnBg, body.mini .uwa-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-color-dark) !important;
+  background: var(--uwa-color-dark) !important;
+}
+body.mini .uwa-darkBtnBg:hover, body.mini .uwa-darkBtnBg.clicked, body.mini .uwa-darkBtn-bg:hover, body.mini .uwa-darkBtn-bg.clicked, body.mini .uwa-dark-btnBg:hover, body.mini .uwa-dark-btnBg.clicked, body.mini .uwa-dark-btn-bg:hover, body.mini .uwa-dark-btn-bg.clicked {
+  color: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.uwa-darkBtn, body.mini input[type=radio] + label.uwa-dark-btn {
+  color: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+}
+body.mini input[type=radio] + label.uwa-darkBtn:hover, body.mini input[type=radio] + label.uwa-dark-btn:hover {
+  color: var(--white) !important;
+  background: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+}
+body.mini input[type=radio] + label.uwa-darkBtnBg, body.mini input[type=radio] + label.uwa-darkBtn-bg, body.mini input[type=radio] + label.uwa-dark-btnBg, body.mini input[type=radio] + label.uwa-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-color-dark) !important;
+  background: var(--uwa-color-dark) !important;
+}
+body.mini input[type=radio] + label.uwa-darkBtnBg:hover, body.mini input[type=radio] + label.uwa-darkBtn-bg:hover, body.mini input[type=radio] + label.uwa-dark-btnBg:hover, body.mini input[type=radio] + label.uwa-dark-btn-bg:hover {
+  color: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.uwa-darkBtn, body.mini input[type=radio]:checked + label.uwa-dark-btn {
+  color: var(--white) !important;
+  background: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+}
+body.mini input[type=radio]:checked + label.uwa-darkBtnBg, body.mini input[type=radio]:checked + label.uwa-darkBtn-bg, body.mini input[type=radio]:checked + label.uwa-dark-btnBg, body.mini input[type=radio]:checked + label.uwa-dark-btn-bg {
+  color: var(--uwa-color-dark) !important;
+  border-color: var(--uwa-color-dark) !important;
+  background: transparent !important;
+}
+body.mini .uwa-secondTxt, body.mini .uwa-second-txt, body.mini .uwa-second-text {
+  color: var(--uwa-second-color) !important;
+}
+body.mini .uwa-secondBox, body.mini .uwa-second-box {
+  background: var(--uwa-second-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .uwa-secondBox.S, body.mini .uwa-second-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .uwa-secondBox.XS, body.mini .uwa-second-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .uwa-secondBg, body.mini .uwa-second-bg {
+  background-color: var(--uwa-second-color) !important;
+}
+body.mini .uwa-secondBord, body.mini .uwa-second-bord {
+  border: 1px solid var(--uwa-second-color) !important;
+}
+body.mini .uwa-secondBtn, body.mini .uwa-second-btn {
+  color: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+}
+body.mini .uwa-secondBtn:hover, body.mini .uwa-secondBtn.clicked, body.mini .uwa-second-btn:hover, body.mini .uwa-second-btn.clicked {
+  color: var(--white) !important;
+  background: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+}
+body.mini .uwa-secondBtnBg, body.mini .uwa-secondBtn-bg, body.mini .uwa-second-btnBg, body.mini .uwa-second-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-second-color) !important;
+  background: var(--uwa-second-color) !important;
+}
+body.mini .uwa-secondBtnBg:hover, body.mini .uwa-secondBtnBg.clicked, body.mini .uwa-secondBtn-bg:hover, body.mini .uwa-secondBtn-bg.clicked, body.mini .uwa-second-btnBg:hover, body.mini .uwa-second-btnBg.clicked, body.mini .uwa-second-btn-bg:hover, body.mini .uwa-second-btn-bg.clicked {
+  color: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.uwa-secondBtn, body.mini input[type=radio] + label.uwa-second-btn {
+  color: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+}
+body.mini input[type=radio] + label.uwa-secondBtn:hover, body.mini input[type=radio] + label.uwa-second-btn:hover {
+  color: var(--white) !important;
+  background: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+}
+body.mini input[type=radio] + label.uwa-secondBtnBg, body.mini input[type=radio] + label.uwa-secondBtn-bg, body.mini input[type=radio] + label.uwa-second-btnBg, body.mini input[type=radio] + label.uwa-second-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-second-color) !important;
+  background: var(--uwa-second-color) !important;
+}
+body.mini input[type=radio] + label.uwa-secondBtnBg:hover, body.mini input[type=radio] + label.uwa-secondBtn-bg:hover, body.mini input[type=radio] + label.uwa-second-btnBg:hover, body.mini input[type=radio] + label.uwa-second-btn-bg:hover {
+  color: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.uwa-secondBtn, body.mini input[type=radio]:checked + label.uwa-second-btn {
+  color: var(--white) !important;
+  background: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+}
+body.mini input[type=radio]:checked + label.uwa-secondBtnBg, body.mini input[type=radio]:checked + label.uwa-secondBtn-bg, body.mini input[type=radio]:checked + label.uwa-second-btnBg, body.mini input[type=radio]:checked + label.uwa-second-btn-bg {
+  color: var(--uwa-second-color) !important;
+  border-color: var(--uwa-second-color) !important;
+  background: transparent !important;
+}
+body.mini .uwa-thirdTxt, body.mini .uwa-third-txt, body.mini .uwa-third-text {
+  color: var(--uwa-third-color) !important;
+}
+body.mini .uwa-thirdBox, body.mini .uwa-third-box {
+  background: var(--uwa-third-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .uwa-thirdBox.S, body.mini .uwa-third-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .uwa-thirdBox.XS, body.mini .uwa-third-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .uwa-thirdBg, body.mini .uwa-third-bg {
+  background-color: var(--uwa-third-color) !important;
+}
+body.mini .uwa-thirdBord, body.mini .uwa-third-bord {
+  border: 1px solid var(--uwa-third-color) !important;
+}
+body.mini .uwa-thirdBtn, body.mini .uwa-third-btn {
+  color: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+}
+body.mini .uwa-thirdBtn:hover, body.mini .uwa-thirdBtn.clicked, body.mini .uwa-third-btn:hover, body.mini .uwa-third-btn.clicked {
+  color: var(--white) !important;
+  background: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+}
+body.mini .uwa-thirdBtnBg, body.mini .uwa-thirdBtn-bg, body.mini .uwa-third-btnBg, body.mini .uwa-third-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-third-color) !important;
+  background: var(--uwa-third-color) !important;
+}
+body.mini .uwa-thirdBtnBg:hover, body.mini .uwa-thirdBtnBg.clicked, body.mini .uwa-thirdBtn-bg:hover, body.mini .uwa-thirdBtn-bg.clicked, body.mini .uwa-third-btnBg:hover, body.mini .uwa-third-btnBg.clicked, body.mini .uwa-third-btn-bg:hover, body.mini .uwa-third-btn-bg.clicked {
+  color: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.uwa-thirdBtn, body.mini input[type=radio] + label.uwa-third-btn {
+  color: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+}
+body.mini input[type=radio] + label.uwa-thirdBtn:hover, body.mini input[type=radio] + label.uwa-third-btn:hover {
+  color: var(--white) !important;
+  background: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+}
+body.mini input[type=radio] + label.uwa-thirdBtnBg, body.mini input[type=radio] + label.uwa-thirdBtn-bg, body.mini input[type=radio] + label.uwa-third-btnBg, body.mini input[type=radio] + label.uwa-third-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-third-color) !important;
+  background: var(--uwa-third-color) !important;
+}
+body.mini input[type=radio] + label.uwa-thirdBtnBg:hover, body.mini input[type=radio] + label.uwa-thirdBtn-bg:hover, body.mini input[type=radio] + label.uwa-third-btnBg:hover, body.mini input[type=radio] + label.uwa-third-btn-bg:hover {
+  color: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.uwa-thirdBtn, body.mini input[type=radio]:checked + label.uwa-third-btn {
+  color: var(--white) !important;
+  background: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+}
+body.mini input[type=radio]:checked + label.uwa-thirdBtnBg, body.mini input[type=radio]:checked + label.uwa-thirdBtn-bg, body.mini input[type=radio]:checked + label.uwa-third-btnBg, body.mini input[type=radio]:checked + label.uwa-third-btn-bg {
+  color: var(--uwa-third-color) !important;
+  border-color: var(--uwa-third-color) !important;
+  background: transparent !important;
+}
+body.mini .uwa-fourthTxt, body.mini .uwa-fourth-txt, body.mini .uwa-fourth-text {
+  color: var(--uwa-fourth-color) !important;
+}
+body.mini .uwa-fourthBox, body.mini .uwa-fourth-box {
+  background: var(--uwa-fourth-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .uwa-fourthBox.S, body.mini .uwa-fourth-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .uwa-fourthBox.XS, body.mini .uwa-fourth-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .uwa-fourthBg, body.mini .uwa-fourth-bg {
+  background-color: var(--uwa-fourth-color) !important;
+}
+body.mini .uwa-fourthBord, body.mini .uwa-fourth-bord {
+  border: 1px solid var(--uwa-fourth-color) !important;
+}
+body.mini .uwa-fourthBtn, body.mini .uwa-fourth-btn {
+  color: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+}
+body.mini .uwa-fourthBtn:hover, body.mini .uwa-fourthBtn.clicked, body.mini .uwa-fourth-btn:hover, body.mini .uwa-fourth-btn.clicked {
+  color: var(--white) !important;
+  background: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+}
+body.mini .uwa-fourthBtnBg, body.mini .uwa-fourthBtn-bg, body.mini .uwa-fourth-btnBg, body.mini .uwa-fourth-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-fourth-color) !important;
+  background: var(--uwa-fourth-color) !important;
+}
+body.mini .uwa-fourthBtnBg:hover, body.mini .uwa-fourthBtnBg.clicked, body.mini .uwa-fourthBtn-bg:hover, body.mini .uwa-fourthBtn-bg.clicked, body.mini .uwa-fourth-btnBg:hover, body.mini .uwa-fourth-btnBg.clicked, body.mini .uwa-fourth-btn-bg:hover, body.mini .uwa-fourth-btn-bg.clicked {
+  color: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.uwa-fourthBtn, body.mini input[type=radio] + label.uwa-fourth-btn {
+  color: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+}
+body.mini input[type=radio] + label.uwa-fourthBtn:hover, body.mini input[type=radio] + label.uwa-fourth-btn:hover {
+  color: var(--white) !important;
+  background: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+}
+body.mini input[type=radio] + label.uwa-fourthBtnBg, body.mini input[type=radio] + label.uwa-fourthBtn-bg, body.mini input[type=radio] + label.uwa-fourth-btnBg, body.mini input[type=radio] + label.uwa-fourth-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-fourth-color) !important;
+  background: var(--uwa-fourth-color) !important;
+}
+body.mini input[type=radio] + label.uwa-fourthBtnBg:hover, body.mini input[type=radio] + label.uwa-fourthBtn-bg:hover, body.mini input[type=radio] + label.uwa-fourth-btnBg:hover, body.mini input[type=radio] + label.uwa-fourth-btn-bg:hover {
+  color: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.uwa-fourthBtn, body.mini input[type=radio]:checked + label.uwa-fourth-btn {
+  color: var(--white) !important;
+  background: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+}
+body.mini input[type=radio]:checked + label.uwa-fourthBtnBg, body.mini input[type=radio]:checked + label.uwa-fourthBtn-bg, body.mini input[type=radio]:checked + label.uwa-fourth-btnBg, body.mini input[type=radio]:checked + label.uwa-fourth-btn-bg {
+  color: var(--uwa-fourth-color) !important;
+  border-color: var(--uwa-fourth-color) !important;
+  background: transparent !important;
+}
+body.mini .uwa-linkTxt, body.mini .uwa-link-txt, body.mini .uwa-link-text {
+  color: var(--uwa-link-color) !important;
+}
+body.mini .uwa-linkBox, body.mini .uwa-link-box {
+  background: var(--uwa-link-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .uwa-linkBox.S, body.mini .uwa-link-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .uwa-linkBox.XS, body.mini .uwa-link-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .uwa-linkBg, body.mini .uwa-link-bg {
+  background-color: var(--uwa-link-color) !important;
+}
+body.mini .uwa-linkBord, body.mini .uwa-link-bord {
+  border: 1px solid var(--uwa-link-color) !important;
+}
+body.mini .uwa-linkBtn, body.mini .uwa-link-btn {
+  color: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
+}
+body.mini .uwa-linkBtn:hover, body.mini .uwa-linkBtn.clicked, body.mini .uwa-link-btn:hover, body.mini .uwa-link-btn.clicked {
+  color: var(--white) !important;
+  background: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
+}
+body.mini .uwa-linkBtnBg, body.mini .uwa-linkBtn-bg, body.mini .uwa-link-btnBg, body.mini .uwa-link-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-link-color) !important;
+  background: var(--uwa-link-color) !important;
+}
+body.mini .uwa-linkBtnBg:hover, body.mini .uwa-linkBtnBg.clicked, body.mini .uwa-linkBtn-bg:hover, body.mini .uwa-linkBtn-bg.clicked, body.mini .uwa-link-btnBg:hover, body.mini .uwa-link-btnBg.clicked, body.mini .uwa-link-btn-bg:hover, body.mini .uwa-link-btn-bg.clicked {
+  color: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.uwa-linkBtn, body.mini input[type=radio] + label.uwa-link-btn {
+  color: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
+}
+body.mini input[type=radio] + label.uwa-linkBtn:hover, body.mini input[type=radio] + label.uwa-link-btn:hover {
+  color: var(--white) !important;
+  background: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
+}
+body.mini input[type=radio] + label.uwa-linkBtnBg, body.mini input[type=radio] + label.uwa-linkBtn-bg, body.mini input[type=radio] + label.uwa-link-btnBg, body.mini input[type=radio] + label.uwa-link-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--uwa-link-color) !important;
+  background: var(--uwa-link-color) !important;
+}
+body.mini input[type=radio] + label.uwa-linkBtnBg:hover, body.mini input[type=radio] + label.uwa-linkBtn-bg:hover, body.mini input[type=radio] + label.uwa-link-btnBg:hover, body.mini input[type=radio] + label.uwa-link-btn-bg:hover {
+  color: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.uwa-linkBtn, body.mini input[type=radio]:checked + label.uwa-link-btn {
+  color: var(--white) !important;
+  background: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
+}
+body.mini input[type=radio]:checked + label.uwa-linkBtnBg, body.mini input[type=radio]:checked + label.uwa-linkBtn-bg, body.mini input[type=radio]:checked + label.uwa-link-btnBg, body.mini input[type=radio]:checked + label.uwa-link-btn-bg {
+  color: var(--uwa-link-color) !important;
+  border-color: var(--uwa-link-color) !important;
   background: transparent !important;
 }
 body.mini .aromaTxt, body.mini .aroma-txt, body.mini .aroma-text {
@@ -7144,6 +7810,510 @@ body.mini input[type=radio]:checked + label.aroma-darkBtnBg, body.mini input[typ
   border-color: var(--aroma-color-dark) !important;
   background: transparent !important;
 }
+body.mini .pdpTxt, body.mini .pdp-txt, body.mini .pdp-text {
+  color: var(--pezzidipla-color) !important;
+}
+body.mini .pdpBox, body.mini .pdp-box {
+  background: var(--pezzidipla-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .pdpBox.S, body.mini .pdp-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .pdpBox.XS, body.mini .pdp-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .pdpBg, body.mini .pdp-bg {
+  background-color: var(--pezzidipla-color) !important;
+}
+body.mini .pdpBord, body.mini .pdp-bord {
+  border: 1px solid var(--pezzidipla-color) !important;
+}
+body.mini .pdpBtn, body.mini .pdp-btn {
+  color: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+}
+body.mini .pdpBtn:hover, body.mini .pdpBtn.clicked, body.mini .pdp-btn:hover, body.mini .pdp-btn.clicked {
+  color: var(--white) !important;
+  background: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+}
+body.mini .pdpBtnBg, body.mini .pdpBtn-bg, body.mini .pdp-btnBg, body.mini .pdp-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-color) !important;
+  background: var(--pezzidipla-color) !important;
+}
+body.mini .pdpBtnBg:hover, body.mini .pdpBtnBg.clicked, body.mini .pdpBtn-bg:hover, body.mini .pdpBtn-bg.clicked, body.mini .pdp-btnBg:hover, body.mini .pdp-btnBg.clicked, body.mini .pdp-btn-bg:hover, body.mini .pdp-btn-bg.clicked {
+  color: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.pdpBtn, body.mini input[type=radio] + label.pdp-btn {
+  color: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+}
+body.mini input[type=radio] + label.pdpBtn:hover, body.mini input[type=radio] + label.pdp-btn:hover {
+  color: var(--white) !important;
+  background: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+}
+body.mini input[type=radio] + label.pdpBtnBg, body.mini input[type=radio] + label.pdpBtn-bg, body.mini input[type=radio] + label.pdp-btnBg, body.mini input[type=radio] + label.pdp-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-color) !important;
+  background: var(--pezzidipla-color) !important;
+}
+body.mini input[type=radio] + label.pdpBtnBg:hover, body.mini input[type=radio] + label.pdpBtn-bg:hover, body.mini input[type=radio] + label.pdp-btnBg:hover, body.mini input[type=radio] + label.pdp-btn-bg:hover {
+  color: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.pdpBtn, body.mini input[type=radio]:checked + label.pdp-btn {
+  color: var(--white) !important;
+  background: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+}
+body.mini input[type=radio]:checked + label.pdpBtnBg, body.mini input[type=radio]:checked + label.pdpBtn-bg, body.mini input[type=radio]:checked + label.pdp-btnBg, body.mini input[type=radio]:checked + label.pdp-btn-bg {
+  color: var(--pezzidipla-color) !important;
+  border-color: var(--pezzidipla-color) !important;
+  background: transparent !important;
+}
+body.mini .pdp-secondTxt, body.mini .pdp-second-txt, body.mini .pdp-second-text {
+  color: var(--pezzidipla-second-color) !important;
+}
+body.mini .pdp-secondBox, body.mini .pdp-second-box {
+  background: var(--pezzidipla-second-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .pdp-secondBox.S, body.mini .pdp-second-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .pdp-secondBox.XS, body.mini .pdp-second-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .pdp-secondBg, body.mini .pdp-second-bg {
+  background-color: var(--pezzidipla-second-color) !important;
+}
+body.mini .pdp-secondBord, body.mini .pdp-second-bord {
+  border: 1px solid var(--pezzidipla-second-color) !important;
+}
+body.mini .pdp-secondBtn, body.mini .pdp-second-btn {
+  color: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+}
+body.mini .pdp-secondBtn:hover, body.mini .pdp-secondBtn.clicked, body.mini .pdp-second-btn:hover, body.mini .pdp-second-btn.clicked {
+  color: var(--white) !important;
+  background: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+}
+body.mini .pdp-secondBtnBg, body.mini .pdp-secondBtn-bg, body.mini .pdp-second-btnBg, body.mini .pdp-second-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+  background: var(--pezzidipla-second-color) !important;
+}
+body.mini .pdp-secondBtnBg:hover, body.mini .pdp-secondBtnBg.clicked, body.mini .pdp-secondBtn-bg:hover, body.mini .pdp-secondBtn-bg.clicked, body.mini .pdp-second-btnBg:hover, body.mini .pdp-second-btnBg.clicked, body.mini .pdp-second-btn-bg:hover, body.mini .pdp-second-btn-bg.clicked {
+  color: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.pdp-secondBtn, body.mini input[type=radio] + label.pdp-second-btn {
+  color: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+}
+body.mini input[type=radio] + label.pdp-secondBtn:hover, body.mini input[type=radio] + label.pdp-second-btn:hover {
+  color: var(--white) !important;
+  background: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+}
+body.mini input[type=radio] + label.pdp-secondBtnBg, body.mini input[type=radio] + label.pdp-secondBtn-bg, body.mini input[type=radio] + label.pdp-second-btnBg, body.mini input[type=radio] + label.pdp-second-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+  background: var(--pezzidipla-second-color) !important;
+}
+body.mini input[type=radio] + label.pdp-secondBtnBg:hover, body.mini input[type=radio] + label.pdp-secondBtn-bg:hover, body.mini input[type=radio] + label.pdp-second-btnBg:hover, body.mini input[type=radio] + label.pdp-second-btn-bg:hover {
+  color: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.pdp-secondBtn, body.mini input[type=radio]:checked + label.pdp-second-btn {
+  color: var(--white) !important;
+  background: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+}
+body.mini input[type=radio]:checked + label.pdp-secondBtnBg, body.mini input[type=radio]:checked + label.pdp-secondBtn-bg, body.mini input[type=radio]:checked + label.pdp-second-btnBg, body.mini input[type=radio]:checked + label.pdp-second-btn-bg {
+  color: var(--pezzidipla-second-color) !important;
+  border-color: var(--pezzidipla-second-color) !important;
+  background: transparent !important;
+}
+body.mini .pdp-thirdTxt, body.mini .pdp-third-txt, body.mini .pdp-third-text {
+  color: var(--pezzidipla-third-color) !important;
+}
+body.mini .pdp-thirdBox, body.mini .pdp-third-box {
+  background: var(--pezzidipla-third-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .pdp-thirdBox.S, body.mini .pdp-third-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .pdp-thirdBox.XS, body.mini .pdp-third-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .pdp-thirdBg, body.mini .pdp-third-bg {
+  background-color: var(--pezzidipla-third-color) !important;
+}
+body.mini .pdp-thirdBord, body.mini .pdp-third-bord {
+  border: 1px solid var(--pezzidipla-third-color) !important;
+}
+body.mini .pdp-thirdBtn, body.mini .pdp-third-btn {
+  color: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+}
+body.mini .pdp-thirdBtn:hover, body.mini .pdp-thirdBtn.clicked, body.mini .pdp-third-btn:hover, body.mini .pdp-third-btn.clicked {
+  color: var(--white) !important;
+  background: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+}
+body.mini .pdp-thirdBtnBg, body.mini .pdp-thirdBtn-bg, body.mini .pdp-third-btnBg, body.mini .pdp-third-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+  background: var(--pezzidipla-third-color) !important;
+}
+body.mini .pdp-thirdBtnBg:hover, body.mini .pdp-thirdBtnBg.clicked, body.mini .pdp-thirdBtn-bg:hover, body.mini .pdp-thirdBtn-bg.clicked, body.mini .pdp-third-btnBg:hover, body.mini .pdp-third-btnBg.clicked, body.mini .pdp-third-btn-bg:hover, body.mini .pdp-third-btn-bg.clicked {
+  color: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.pdp-thirdBtn, body.mini input[type=radio] + label.pdp-third-btn {
+  color: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+}
+body.mini input[type=radio] + label.pdp-thirdBtn:hover, body.mini input[type=radio] + label.pdp-third-btn:hover {
+  color: var(--white) !important;
+  background: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+}
+body.mini input[type=radio] + label.pdp-thirdBtnBg, body.mini input[type=radio] + label.pdp-thirdBtn-bg, body.mini input[type=radio] + label.pdp-third-btnBg, body.mini input[type=radio] + label.pdp-third-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+  background: var(--pezzidipla-third-color) !important;
+}
+body.mini input[type=radio] + label.pdp-thirdBtnBg:hover, body.mini input[type=radio] + label.pdp-thirdBtn-bg:hover, body.mini input[type=radio] + label.pdp-third-btnBg:hover, body.mini input[type=radio] + label.pdp-third-btn-bg:hover {
+  color: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.pdp-thirdBtn, body.mini input[type=radio]:checked + label.pdp-third-btn {
+  color: var(--white) !important;
+  background: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+}
+body.mini input[type=radio]:checked + label.pdp-thirdBtnBg, body.mini input[type=radio]:checked + label.pdp-thirdBtn-bg, body.mini input[type=radio]:checked + label.pdp-third-btnBg, body.mini input[type=radio]:checked + label.pdp-third-btn-bg {
+  color: var(--pezzidipla-third-color) !important;
+  border-color: var(--pezzidipla-third-color) !important;
+  background: transparent !important;
+}
+body.mini .pdp-fourthTxt, body.mini .pdp-fourth-txt, body.mini .pdp-fourth-text {
+  color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini .pdp-fourthBox, body.mini .pdp-fourth-box {
+  background: var(--pezzidipla-fourth-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .pdp-fourthBox.S, body.mini .pdp-fourth-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .pdp-fourthBox.XS, body.mini .pdp-fourth-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .pdp-fourthBg, body.mini .pdp-fourth-bg {
+  background-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini .pdp-fourthBord, body.mini .pdp-fourth-bord {
+  border: 1px solid var(--pezzidipla-fourth-color) !important;
+}
+body.mini .pdp-fourthBtn, body.mini .pdp-fourth-btn {
+  color: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini .pdp-fourthBtn:hover, body.mini .pdp-fourthBtn.clicked, body.mini .pdp-fourth-btn:hover, body.mini .pdp-fourth-btn.clicked {
+  color: var(--white) !important;
+  background: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini .pdp-fourthBtnBg, body.mini .pdp-fourthBtn-bg, body.mini .pdp-fourth-btnBg, body.mini .pdp-fourth-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+  background: var(--pezzidipla-fourth-color) !important;
+}
+body.mini .pdp-fourthBtnBg:hover, body.mini .pdp-fourthBtnBg.clicked, body.mini .pdp-fourthBtn-bg:hover, body.mini .pdp-fourthBtn-bg.clicked, body.mini .pdp-fourth-btnBg:hover, body.mini .pdp-fourth-btnBg.clicked, body.mini .pdp-fourth-btn-bg:hover, body.mini .pdp-fourth-btn-bg.clicked {
+  color: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.pdp-fourthBtn, body.mini input[type=radio] + label.pdp-fourth-btn {
+  color: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini input[type=radio] + label.pdp-fourthBtn:hover, body.mini input[type=radio] + label.pdp-fourth-btn:hover {
+  color: var(--white) !important;
+  background: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini input[type=radio] + label.pdp-fourthBtnBg, body.mini input[type=radio] + label.pdp-fourthBtn-bg, body.mini input[type=radio] + label.pdp-fourth-btnBg, body.mini input[type=radio] + label.pdp-fourth-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+  background: var(--pezzidipla-fourth-color) !important;
+}
+body.mini input[type=radio] + label.pdp-fourthBtnBg:hover, body.mini input[type=radio] + label.pdp-fourthBtn-bg:hover, body.mini input[type=radio] + label.pdp-fourth-btnBg:hover, body.mini input[type=radio] + label.pdp-fourth-btn-bg:hover {
+  color: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.pdp-fourthBtn, body.mini input[type=radio]:checked + label.pdp-fourth-btn {
+  color: var(--white) !important;
+  background: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini input[type=radio]:checked + label.pdp-fourthBtnBg, body.mini input[type=radio]:checked + label.pdp-fourthBtn-bg, body.mini input[type=radio]:checked + label.pdp-fourth-btnBg, body.mini input[type=radio]:checked + label.pdp-fourth-btn-bg {
+  color: var(--pezzidipla-fourth-color) !important;
+  border-color: var(--pezzidipla-fourth-color) !important;
+  background: transparent !important;
+}
+body.mini .lnsTxt, body.mini .lns-txt, body.mini .lns-text {
+  color: var(--lanuovastartup-color) !important;
+}
+body.mini .lnsBox, body.mini .lns-box {
+  background: var(--lanuovastartup-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .lnsBox.S, body.mini .lns-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .lnsBox.XS, body.mini .lns-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .lnsBg, body.mini .lns-bg {
+  background-color: var(--lanuovastartup-color) !important;
+}
+body.mini .lnsBord, body.mini .lns-bord {
+  border: 1px solid var(--lanuovastartup-color) !important;
+}
+body.mini .lnsBtn, body.mini .lns-btn {
+  color: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+}
+body.mini .lnsBtn:hover, body.mini .lnsBtn.clicked, body.mini .lns-btn:hover, body.mini .lns-btn.clicked {
+  color: var(--white) !important;
+  background: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+}
+body.mini .lnsBtnBg, body.mini .lnsBtn-bg, body.mini .lns-btnBg, body.mini .lns-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--lanuovastartup-color) !important;
+  background: var(--lanuovastartup-color) !important;
+}
+body.mini .lnsBtnBg:hover, body.mini .lnsBtnBg.clicked, body.mini .lnsBtn-bg:hover, body.mini .lnsBtn-bg.clicked, body.mini .lns-btnBg:hover, body.mini .lns-btnBg.clicked, body.mini .lns-btn-bg:hover, body.mini .lns-btn-bg.clicked {
+  color: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.lnsBtn, body.mini input[type=radio] + label.lns-btn {
+  color: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+}
+body.mini input[type=radio] + label.lnsBtn:hover, body.mini input[type=radio] + label.lns-btn:hover {
+  color: var(--white) !important;
+  background: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+}
+body.mini input[type=radio] + label.lnsBtnBg, body.mini input[type=radio] + label.lnsBtn-bg, body.mini input[type=radio] + label.lns-btnBg, body.mini input[type=radio] + label.lns-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--lanuovastartup-color) !important;
+  background: var(--lanuovastartup-color) !important;
+}
+body.mini input[type=radio] + label.lnsBtnBg:hover, body.mini input[type=radio] + label.lnsBtn-bg:hover, body.mini input[type=radio] + label.lns-btnBg:hover, body.mini input[type=radio] + label.lns-btn-bg:hover {
+  color: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.lnsBtn, body.mini input[type=radio]:checked + label.lns-btn {
+  color: var(--white) !important;
+  background: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+}
+body.mini input[type=radio]:checked + label.lnsBtnBg, body.mini input[type=radio]:checked + label.lnsBtn-bg, body.mini input[type=radio]:checked + label.lns-btnBg, body.mini input[type=radio]:checked + label.lns-btn-bg {
+  color: var(--lanuovastartup-color) !important;
+  border-color: var(--lanuovastartup-color) !important;
+  background: transparent !important;
+}
+body.mini .lns-darkTxt, body.mini .lns-dark-txt, body.mini .lns-dark-text {
+  color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini .lns-darkBox, body.mini .lns-dark-box {
+  background: var(--lanuovastartup-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .lns-darkBox.S, body.mini .lns-dark-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .lns-darkBox.XS, body.mini .lns-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .lns-darkBg, body.mini .lns-dark-bg {
+  background-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini .lns-darkBord, body.mini .lns-dark-bord {
+  border: 1px solid var(--lanuovastartup-color-dark) !important;
+}
+body.mini .lns-darkBtn, body.mini .lns-dark-btn {
+  color: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini .lns-darkBtn:hover, body.mini .lns-darkBtn.clicked, body.mini .lns-dark-btn:hover, body.mini .lns-dark-btn.clicked {
+  color: var(--white) !important;
+  background: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini .lns-darkBtnBg, body.mini .lns-darkBtn-bg, body.mini .lns-dark-btnBg, body.mini .lns-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+  background: var(--lanuovastartup-color-dark) !important;
+}
+body.mini .lns-darkBtnBg:hover, body.mini .lns-darkBtnBg.clicked, body.mini .lns-darkBtn-bg:hover, body.mini .lns-darkBtn-bg.clicked, body.mini .lns-dark-btnBg:hover, body.mini .lns-dark-btnBg.clicked, body.mini .lns-dark-btn-bg:hover, body.mini .lns-dark-btn-bg.clicked {
+  color: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.lns-darkBtn, body.mini input[type=radio] + label.lns-dark-btn {
+  color: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini input[type=radio] + label.lns-darkBtn:hover, body.mini input[type=radio] + label.lns-dark-btn:hover {
+  color: var(--white) !important;
+  background: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini input[type=radio] + label.lns-darkBtnBg, body.mini input[type=radio] + label.lns-darkBtn-bg, body.mini input[type=radio] + label.lns-dark-btnBg, body.mini input[type=radio] + label.lns-dark-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+  background: var(--lanuovastartup-color-dark) !important;
+}
+body.mini input[type=radio] + label.lns-darkBtnBg:hover, body.mini input[type=radio] + label.lns-darkBtn-bg:hover, body.mini input[type=radio] + label.lns-dark-btnBg:hover, body.mini input[type=radio] + label.lns-dark-btn-bg:hover {
+  color: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.lns-darkBtn, body.mini input[type=radio]:checked + label.lns-dark-btn {
+  color: var(--white) !important;
+  background: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini input[type=radio]:checked + label.lns-darkBtnBg, body.mini input[type=radio]:checked + label.lns-darkBtn-bg, body.mini input[type=radio]:checked + label.lns-dark-btnBg, body.mini input[type=radio]:checked + label.lns-dark-btn-bg {
+  color: var(--lanuovastartup-color-dark) !important;
+  border-color: var(--lanuovastartup-color-dark) !important;
+  background: transparent !important;
+}
+body.mini .dtTxt, body.mini .dt-txt, body.mini .dt-text {
+  color: var(--doingthings-color) !important;
+}
+body.mini .dtBox, body.mini .dt-box {
+  background: var(--doingthings-color) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .dtBox.S, body.mini .dt-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .dtBox.XS, body.mini .dt-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .dtBg, body.mini .dt-bg {
+  background-color: var(--doingthings-color) !important;
+}
+body.mini .dtBord, body.mini .dt-bord {
+  border: 1px solid var(--doingthings-color) !important;
+}
+body.mini .dtBtn, body.mini .dt-btn {
+  color: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+}
+body.mini .dtBtn:hover, body.mini .dtBtn.clicked, body.mini .dt-btn:hover, body.mini .dt-btn.clicked {
+  color: var(--black) !important;
+  background: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+}
+body.mini .dtBtnBg, body.mini .dtBtn-bg, body.mini .dt-btnBg, body.mini .dt-btn-bg {
+  color: var(--black) !important;
+  border-color: var(--doingthings-color) !important;
+  background: var(--doingthings-color) !important;
+}
+body.mini .dtBtnBg:hover, body.mini .dtBtnBg.clicked, body.mini .dtBtn-bg:hover, body.mini .dtBtn-bg.clicked, body.mini .dt-btnBg:hover, body.mini .dt-btnBg.clicked, body.mini .dt-btn-bg:hover, body.mini .dt-btn-bg.clicked {
+  color: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.dtBtn, body.mini input[type=radio] + label.dt-btn {
+  color: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+}
+body.mini input[type=radio] + label.dtBtn:hover, body.mini input[type=radio] + label.dt-btn:hover {
+  color: var(--black) !important;
+  background: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+}
+body.mini input[type=radio] + label.dtBtnBg, body.mini input[type=radio] + label.dtBtn-bg, body.mini input[type=radio] + label.dt-btnBg, body.mini input[type=radio] + label.dt-btn-bg {
+  color: var(--black) !important;
+  border-color: var(--doingthings-color) !important;
+  background: var(--doingthings-color) !important;
+}
+body.mini input[type=radio] + label.dtBtnBg:hover, body.mini input[type=radio] + label.dtBtn-bg:hover, body.mini input[type=radio] + label.dt-btnBg:hover, body.mini input[type=radio] + label.dt-btn-bg:hover {
+  color: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.dtBtn, body.mini input[type=radio]:checked + label.dt-btn {
+  color: var(--black) !important;
+  background: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+}
+body.mini input[type=radio]:checked + label.dtBtnBg, body.mini input[type=radio]:checked + label.dtBtn-bg, body.mini input[type=radio]:checked + label.dt-btnBg, body.mini input[type=radio]:checked + label.dt-btn-bg {
+  color: var(--doingthings-color) !important;
+  border-color: var(--doingthings-color) !important;
+  background: transparent !important;
+}
 body.mini .grad-f2s {
   background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
@@ -7235,10 +8405,6 @@ body.mini p {
   margin-bottom: var(--baseline);
   font-family: var(--font);
   color: var(--false-black);
-}
-body.mini p.label {
-  color: var(--false-black);
-  font-style: italic;
 }
 body.mini p:first-child {
   margin-top: 0 !important;
@@ -7471,6 +8637,10 @@ body.mini .big, body.mini .big {
     font-size: calc(var(--h1) * 1.2) !important;
     line-height: calc(var(--h1) * 1.5) !important;
   }
+}
+body.mini .label {
+  color: var(--grey);
+  font-style: italic;
 }
 body.mini .giant, body.mini .giant {
   font-size: calc(var(--h1) * 1.2) !important;
@@ -8482,7 +9652,7 @@ body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-
 }
 @media (min-width: 768px) {
   body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-menu li.item a.active, body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-menu li.menu-item a.active, body.mini header#header .boxes .box.menus .headMenu nav.menu.user-menu ul.user-menu li.item a.active, body.mini header#header .boxes .box.menus .headMenu nav.menu.user-menu ul.user-menu li.menu-item a.active {
-    color: var(--second-color);
+    color: var(---third-color);
     background: transparent;
   }
 }
@@ -8497,6 +9667,9 @@ body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-
   }
 }
 body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-menu li.item.login a, body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-menu li.menu-item.login a, body.mini header#header .boxes .box.menus .headMenu nav.menu.user-menu ul.user-menu li.item.login a, body.mini header#header .boxes .box.menus .headMenu nav.menu.user-menu ul.user-menu li.menu-item.login a {
+  font-style: italic;
+}
+body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-menu li.item.logout a, body.mini header#header .boxes .box.menus .head-menu nav.menu.user-menu ul.user-menu li.menu-item.logout a, body.mini header#header .boxes .box.menus .headMenu nav.menu.user-menu ul.user-menu li.item.logout a, body.mini header#header .boxes .box.menus .headMenu nav.menu.user-menu ul.user-menu li.menu-item.logout a {
   font-style: italic;
 }
 @media (min-width: 768px) {

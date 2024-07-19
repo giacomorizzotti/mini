@@ -1,0 +1,25 @@
+{% extends "mini/html.html" %}
+{% block content %}
+{% load i18n %}
+<section id="content" class="container fw">
+    <div class="container">
+        <div class="boxes fh boxes-v-start">
+            {% if form %}
+            <div class="box box50 ph2 box-shadow b-rad-5">
+                <form action="" method="post" class="m0">
+                    {% csrf_token %}
+                    {{ form }}
+                    <div class="boxes">
+                        <div class="box box100 p0">
+                            
+                            <input type="submit" value="{% if submit_button %}{{ submit_button }}{% else %}{% translate 'save (btn)' %}{% endif %}" class="btn colThreeBtnBg">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

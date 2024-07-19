@@ -43,13 +43,14 @@
   --fourth-color: rgb(220 230 0);
   --fourth-color-dark: rgb(180 190 0);
 
-  --link-color: rgb(50 185 165);
-  --link-hover-color: rgb(40 130 120);
+  --link-color: rgb(60 185 225);
+  --link-hover-color: rgb(40 130 160);
 
-  --info: rgb(142 210 191);
+  --info: rgb(113 202 189);
   --success: rgb(160 220 110);
-  --warning: rgb(255 145 80);
-  --danger: rgb(235 55 80);
+  --warning: rgb(248 187 83);
+  --danger: rgb(255 111 97);
+  --bad: rgb(235 55 80);
 
   --acid-green: #C2F261;
 
@@ -59,10 +60,43 @@
 
   --pulse-color: --main-color;
 
+  // mini
   --mini-color: rgb(60 90 255);
+  --mini-color-dark: rgb(50 75 180);
+  --mini-second-color: rgb(50 75 180);
+  --mini-second-color-dark: rgb(37 56 133);
+  --mini-third-color: rgb(60 30 99);
+  --mini-third-color-dark: rgb(34 15 61);
+  --mini-fourth-color: rgb(220 230 0);
+  --mini-fourth-color-dark: rgb(180 190 0);
+  --mini-link-color: rgb(60 185 225);
+  --mini-link-hover-color: rgb(40 130 160);
+
+  // UWA
   --uwa-color: rgb(60 90 255);
+  --uwa-color-dark: #324bb4;
+  --uwa-second-color: #3c1e63;
+  --uwa-third-color: #dce600;
+  --uwa-fourth-color: #3c5aff;
+  --uwa-link-color: #3c5aff;
+  --uwa-link-hover-color: #324bb4;
+
+  // AROMA
   --aroma-color: rgb(208 33 73);
   --aroma-color-dark: rgb(145 25 55);
+  
+  // PEZZIDIPLA
+  --pezzidipla-color: rgb( 240 220 100 / 100% );
+  --pezzidipla-second-color: rgb( 60 0 60 / 100% );
+  --pezzidipla-third-color: rgb(100 190 150 / 100%);
+  --pezzidipla-fourth-color: rgb( 250 215 210 / 100% );
+
+  // La nuova startup
+  --lanuovastartup-color: rgb( 250 85 105 / 100% );
+  --lanuovastartup-color-dark: rgb( 190 60 95 / 100% );
+
+  // DoingThings
+  --doingthings-color: rgb(209 255 82 / 100%);
 
   /* TYPO */
   /* variables */
@@ -140,9 +174,9 @@ $gradFourth: var(--fourth-color) 0%, var(--fourth-color-dark) 100%;
 
 /* box shadow */
 @mixin boxShadow($distance, $range, $color) {
-  -webkit-box-shadow: $distance $distance 10px 0 $color;
-  -moz-box-shadow: $distance $distance 10px 0 $color;
-  box-shadow: $distance $distance 10px 0 $color;
+  -webkit-box-shadow: $distance $range 10px 0 $color;
+  -moz-box-shadow: $distance $range 10px 0 $color;
+  box-shadow: $distance $range 10px 0 $color;
 }
 
 /* width - min & max */

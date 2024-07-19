@@ -42,29 +42,215 @@ window.addEventListener('resize', function() {
     }
 });
 
-// Parse JSON config
-/*
-function readConfigJSON(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
+// Pagination
+function pagination(pageElements=30) {
+
+    if ( document.getElementById('pagination') != null ) {
+
+        var pagination = document.getElementById('pagination');
+
+        if (pagination.children.length > pageElements) {
+            
+        var thisPage;
+        pagination.setAttribute("pages", pageElements);
+        var elements = pagination.children;
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].classList.add('pagination-element', 'element-'+(i+1));
         }
+
+        function showFirstPage() {
+            for (var i = 0; i < elements.length; i++) {
+                if ( i < pageElements ) {
+                    if ( elements[i].classList.contains('d-none') ) {
+                        elements[i].classList.remove('d-none')
+                    }
+                    elements[i].classList.add('d-block');
+                } else {
+                    elements[i].classList.add('d-none');
+                }
+            }
+            thisPage = 1;
+        }
+
+        showFirstPage();
+
+
+        // Calculate number of pages    
+        let pages;
+        if ( elements.length % pageElements == 0 ) {
+            pages = elements.length / pageElements
+        } else {
+            pages = ( elements.length - elements.length % pageElements ) / pageElements + 1
+        }
+        
+        // function: go to page
+        function showPage(num) {
+
+            var startingElement;
+            var endingElement;
+
+            //console.log(elements.length);
+
+            if ( elements.length % pageElements == 0 ) {
+                startingElement = num*pageElements-pageElements
+                endingElement = num*pageElements
+            } else {
+                startingElement = num*pageElements-pageElements
+                endingElement = num*pageElements
+            }
+
+            //console.log(startingElement);
+            //console.log(endingElement);
+
+            for (var m = 0; m < elements.length; m++) {
+                if ( elements[m].classList.contains('d-block') ) {
+                    elements[m].classList.remove('d-block');
+                    elements[m].classList.add('d-none');
+                }
+            }
+
+            for (var n = startingElement; n < endingElement; n++) {
+                if ( elements[n] != null ) {
+                    if ( elements[n].classList.contains('d-none') ) {
+                        elements[n].classList.remove('d-none');
+                        elements[n].classList.add('d-block');
+                    }
+                }
+            }
+
+            thisPage = num;
+            createControls();
+            
+        }
+
+        // Create page buttons
+
+        function createControls() {
+
+            if ( document.getElementsByClassName('pagination-controls-wrapper') != null ) {
+                controlWrappers = document.getElementsByClassName('pagination-controls-wrapper');
+                for ( i=0; i<controlWrappers.length; i++ ) {
+                    controlWrappers[i].remove();
+                }
+            }
+    
+            let paginationControlsWrapper = document.createElement("div");
+            paginationControlsWrapper.setAttribute("id", "pagination-controls-wrapper");
+            paginationControlsWrapper.classList.add('pagination-controls-wrapper');
+            paginationControlsWrapper.classList.add('boxes');
+    
+            let paginationControls = document.createElement("div");
+            paginationControls.setAttribute("id", "pagination-controls");
+            paginationControls.classList.add('box', 'box-100', 'py-0', 'pagination-controls');
+        
+            // go to first page button
+            let firstPage = document.createElement("a");
+            firstPage.href = "#top";
+            firstPage.setAttribute("id", "page-start-btn");
+            firstPage.classList.add('page-start-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+            firstPageLabel = document.createTextNode("<<");
+            firstPage.appendChild(firstPageLabel);
+            paginationControls.appendChild(firstPage);
+    
+            firstPage.addEventListener("click", function() {
+                showPage(1);
+            });
+    
+            // go to prev page button
+            if ( thisPage > 1 ) {
+    
+                let prevPage = document.createElement("a");
+                prevPage.href = "#top";
+                prevPage.setAttribute("id", "page-start-btn");
+                prevPage.classList.add('page-start-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+                prevPageLabel = document.createTextNode("<");
+                prevPage.appendChild(prevPageLabel);
+                paginationControls.appendChild(prevPage);
+        
+                prevPage.addEventListener("click", function() {
+                    showPage(thisPage-1);
+                });
+        
+            }
+    
+            // go to page button
+            k=1;
+            while (k <= pages) {
+                
+                let pageBtn = document.createElement("a");
+                pageBtn.href = "#top";
+                if (k == 1) {
+                    pageBtn.setAttribute("id", "page-"+k+"-btn");
+                } else if ( k == pages ) {
+                    pageBtn.setAttribute("id", "page-"+k+"-btn");
+                } else {
+                    pageBtn.setAttribute("id", "page-"+k+"-btn");
+                }
+                pageBtn.classList.add("page-btn", "page-"+k+"-btn", 'btn', 'me-05', 'mb-05', 'display-inline-block');
+                pageBtn.setAttribute('page', k)
+                pageBtnLabel = document.createTextNode(k);
+                pageBtn.appendChild(pageBtnLabel);
+                paginationControls.appendChild(pageBtn);
+    
+                k++;
+    
+                pageBtn.addEventListener( 'click', function() { showPage(this.getAttribute('page')) })
+    
+            }
+    
+            // go to next page button
+            if ( thisPage < pages ) {
+    
+                let nextPage = document.createElement("a");
+                nextPage.href = "#top";
+                nextPage.setAttribute("id", "page-start-btn");
+                nextPage.classList.add('page-start-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+                nextPageLabel = document.createTextNode(">");
+                nextPage.appendChild(nextPageLabel);
+                paginationControls.appendChild(nextPage);
+        
+                nextPage.addEventListener("click", function() {
+                    showPage(thisPage+1);
+                });
+        
+            }
+    
+            // go to last page button
+            let lastPage = document.createElement("a");
+            lastPage.href = "#top";
+            lastPage.setAttribute("id", "page-end-btn");
+            lastPage.classList.add('page-end-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+            lastPageLabel = document.createTextNode(">>");
+            lastPage.appendChild(lastPageLabel);
+            paginationControls.appendChild(lastPage);
+    
+            lastPage.addEventListener("click", function() {
+                showPage(pages);
+            });
+    
+            paginationControlsWrapper.appendChild(paginationControls);
+
+            parentDiv = pagination.parentNode
+            parentDiv.insertBefore(paginationControlsWrapper, pagination)
+
+            function insertAfter(referenceNode, newNode) {
+                referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+            }
+            //insertAfter(pagination, paginationControlsWrapper.cloneNode(true));
+
+            activeBtn = document.querySelectorAll('[page="'+thisPage+'"]');
+            activeBtn[0].classList.add('clicked');
+
+        }
+
+        createControls();
+            
+        }
+
     }
-    rawFile.send(null);
 }
+window.addEventListener("load", pagination(30))
 
-var config;
-window.mobile;
-
-readConfigJSON("/core/config.json", function(text){
-    config = JSON.parse(text);
-    //console.log(config);
-    //console.log(config.appTitle);
-});
-*/
 
 function confirmAction(e, message = null)
 {
@@ -78,6 +264,36 @@ function confirmAction(e, message = null)
 }
 
 // Onclick - toggle class
+function addClass(elementToLookFor, classToAdd, classToRemove = null) {
+    var element = document.querySelectorAll(elementToLookFor);
+    for (let i=0; i < element.length; i++) {
+        if ( !element[i].classList.contains(classToAdd) ) {
+            element[i].classList.add(classToAdd);
+        } 
+        if ( classToRemove != null && element[i].classList.contains(classToRemove) ) {
+            element[i].classList.remove(classToRemove);
+        }
+    }
+}
+function toggleClass(elementToLookFor, classToToggle, invertClassToToggle = null) {
+    var element = document.querySelectorAll(elementToLookFor);
+    for (let i=0; i < element.length; i++) {
+        if ( element[i].classList.contains(classToToggle) ) {
+            element[i].classList.remove(classToToggle);
+            if ( invertClassToToggle != null && !element[i].classList.contains(invertClassToToggle)) {
+                element[i].classList.add(invertClassToToggle);
+            }
+        } else if ( !element[i].classList.contains(classToToggle) ) {
+            element[i].classList.add(classToToggle);
+            if ( invertClassToToggle != null && element[i].classList.contains(invertClassToToggle)) {
+                element[i].classList.remove(invertClassToToggle);
+            }
+        }
+    }
+}
+
+// Onclick - toggle class
+/*
 function toggleClass(elementToLookFor, classToToggleON, classToToggleOFF) {
     var element = document.querySelectorAll(elementToLookFor);
     for (let i=0; i < element.length; i++) {
@@ -92,6 +308,7 @@ function toggleClass(elementToLookFor, classToToggleON, classToToggleOFF) {
         }
     }
 }
+*/
 
 // Cookies
 function setCookie(cname, cvalue, exdays, path, domain=0) {
@@ -262,21 +479,41 @@ function imageCover() {
 
 // Add CLICKED class to btn clicked
 window.addEventListener('load', function() {
+
     let btn = document.getElementsByClassName('click');
+
     for (let i=0; i<btn.length; i++) {
+        
         if ( !btn[i].classList.contains("to-click") && !btn[i].classList.contains("clicked") ) {
             btn[i].classList.add("to-click");
         }
-        btn[i].addEventListener('mousedown', function() {
-            if (btn[i].classList.contains("to-click")) {
-                btn[i].classList.add("clicked");
-                btn[i].classList.remove("to-click");
-            } else if (btn[i].classList.contains("clicked")) {
-                btn[i].classList.add("to-click");
-                btn[i].classList.remove("clicked");
+
+        btn[i].addEventListener( 'mousedown', function() {
+            
+            if ( btn[i].classList.contains("clicklist") ) {
+                
+                let clicklist = document.getElementsByClassName('clicklist');
+                for (let k=0; k<clicklist.length; k++) {
+                    if ( clicklist[k].classList.contains("clicked") ) {
+                        clicklist[k].classList.remove("clicked");
+                        clicklist[k].classList.add("to-click");
+                    }
+                }
+                
             }
-        })
+
+            if ( btn[i].classList.contains("to-click") ) {
+                btn[i].classList.remove("to-click");
+                btn[i].classList.add("clicked");
+            } else if ( btn[i].classList.contains("clicked") ) {
+                btn[i].classList.remove("clicked");
+                btn[i].classList.add("to-click");
+            }
+
+        });
+
     }
+
 });
 
 // page menu - add menu items
@@ -373,33 +610,37 @@ window.addEventListener('load', function() {
 // menu toggle
 window.addEventListener('load', function() {
 
-    var menuToggle = document.getElementById('menu-toggle');
-    var headMenu = document.getElementById('head-menu');
-    var mainMenuItem = document.querySelectorAll('#headMenu > nav.menu > ul.menu > li.menu-item > a');
+    if (document.getElementById('head-menu') != null && document.getElementById('head-menu') != null ) {
 
-    headMenu.classList.add('closed');
-
-    menuToggle.onclick = function() {
-        if (headMenu.classList.contains("closed")) {
-            headMenu.classList.add("open");
-            headMenu.classList.remove("closed");
-        } else if (headMenu.classList.contains("open")) {
-            headMenu.classList.add("closed");
-            headMenu.classList.remove("open");
+        var menuToggle = document.getElementById('menu-toggle');
+        var headMenu = document.getElementById('head-menu');
+        var mainMenuItem = document.querySelectorAll('#headMenu > nav.menu > ul.menu > li.menu-item > a');
+    
+        headMenu.classList.add('closed');
+    
+        menuToggle.onclick = function() {
+            if (headMenu.classList.contains("closed")) {
+                headMenu.classList.add("open");
+                headMenu.classList.remove("closed");
+            } else if (headMenu.classList.contains("open")) {
+                headMenu.classList.add("closed");
+                headMenu.classList.remove("open");
+            }
         }
-    }
-
-    for (i=0;i<mainMenuItem.length;i++) {
-        if(!mainMenuItem[i].parentElement.classList.contains('dropDown')) {
-            mainMenuItem[i].addEventListener('click', function() {
-                for (j=0;j<headMenu.length;j++) {
-                    if (headMenu[j].classList.contains("open")) {
-                        headMenu[j].classList.add("closed");
-                        headMenu[j].classList.remove("open");
+    
+        for (i=0;i<mainMenuItem.length;i++) {
+            if(!mainMenuItem[i].parentElement.classList.contains('dropDown')) {
+                mainMenuItem[i].addEventListener('click', function() {
+                    for (j=0;j<headMenu.length;j++) {
+                        if (headMenu[j].classList.contains("open")) {
+                            headMenu[j].classList.add("closed");
+                            headMenu[j].classList.remove("open");
+                        }
                     }
-                }
-            })
+                })
+            }
         }
+
     }
 
 });
@@ -517,7 +758,7 @@ window.addEventListener('load', function (){
 
 // BUTTONS
 window.onload = function() {
-    var z = 100;
+    var z = 1000;
     for (i=1;i<=z;i++) {
         let btns = document.querySelectorAll(".btn"+i);
         let tgts = document.querySelectorAll(".tgt"+i);
@@ -573,8 +814,8 @@ window.onload = function() {
 
 };
 
-function collapse(targetClass) {
-    let target = document.getElementsByClassName(targetClass);
+function collapse(targetObject) {
+    let target = document.getElementsByClassName(targetObject);
     for (i=0; i<target.length; i++) {
         if (!target[i].classList.contains("hidden") && !target[i].classList.contains("shown")) {
             target[i].classList.add("shown")
@@ -585,6 +826,22 @@ function collapse(targetClass) {
         } else if (target[i].classList.contains("shown")) {
             target[i].classList.remove("shown");
             target[i].classList.add("hidden");
+        };
+    }
+}
+
+function toggle(targetObject, targetClass, targetInvertClass) {
+    let target = document.getElementsByClassName(targetObject);
+    for (i=0; i<target.length; i++) {
+        if (!target[i].classList.contains(targetClass) && !target[i].classList.contains(targetInvertClass)) {
+            target[i].classList.add(targetClass)
+        }
+        if (target[i].classList.contains(targetInvertClass)) {
+            target[i].classList.remove(targetInvertClass);
+            target[i].classList.add(targetClass);
+        } else if (target[i].classList.contains(targetClass)) {
+            target[i].classList.remove(targetClass);
+            target[i].classList.add(targetInvertClass);
         };
     }
 }

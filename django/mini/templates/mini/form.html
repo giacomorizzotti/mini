@@ -1,0 +1,19 @@
+<div class="boxes">
+    {% for field in form %}
+    {% if field.errors %}
+    <div class="box box100 dangerBg pv0 whTxt b-rad-5">
+        {{ field.errors }}
+    </div>
+    {% endif %}
+    <div class="box box100 p0">
+        {{ field.label_tag }}
+        {{ field }}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+    </div>
+    {% if field.is_hidden %}
+    {# Do something special #}
+    {% endif %}
+    {% endfor %}
+</div>

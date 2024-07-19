@@ -51,11 +51,6 @@ body {
       margin-bottom: var(--baseline);
       font-family: var(--font);
       color: var(--false-black);
-
-      &.label {
-        color: var(--false-black);
-        font-style: italic;
-      }
     }
 
     p {
@@ -205,6 +200,7 @@ body {
         }
       }
     }
+
     ol {
       li {
         &::marker {
@@ -329,6 +325,11 @@ body {
         line-height: calc(var(--h1) * 1.5)!important;
       }
       //margin-top: calc((var(--baseline) - var(--h1)) + var(--baseline))
+    }
+    
+    .label {
+      color: var(--grey);
+      font-style: italic;
     }
 
     /* GIANT TEXT */
