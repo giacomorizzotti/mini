@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
     color: var(--black);
 
-    &.spaceForMenu, &.spaceForHeader, &.space-for-menu, &.space-for-header, &.space-top, .spaceForMenu, .spaceForHeader, .space-for-menu, .space-for-header, .space-top {
+    &.space-top, .space-top {
       padding-top: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
     }
     &.space-top-bot, .space-top-bot {
@@ -40,7 +40,7 @@ body {
       padding-bottom: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
     }
 
-    .turnTop, .turn-top {
+    .turn-top {
       margin-top: calc( ( (var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2) ) * -1 )!Important;
     }
 
@@ -67,19 +67,23 @@ body {
         }
 
       }
+
       &.thin {
         max-width: calc( var(--maxScreen) * 0.5 );
         @include xxl {
           max-width: calc( var(--maxScreen) * 0.75 );
         }
       }
+
       &.wide {
         max-width: calc( var(--maxScreen) * 1 );
         @include xxl {
           max-width: calc( var(--maxScreen) * 1.25 );
         }
       }
+
     }
+
     main {
       min-width: 100%;
       width: 100%;
@@ -88,9 +92,11 @@ body {
       flex-direction: column;
       position: relative;
     }
+
     section {
       position: relative;
     }
+
   }
 }
 
@@ -124,7 +130,6 @@ body::-webkit-scrollbar-thumb {
 body {
   &.mini {
 
-
     /* top position */
     #top {
         position:absolute;
@@ -132,7 +137,6 @@ body {
         width:0;
         top: 0;
     }
-
 
     /* link to top */
     .top-link {
@@ -143,16 +147,13 @@ body {
       bottom: var(--padding);
       right: var(--padding);
       transition: all 0.3s ease;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
+      @include borderRadius(50%);
       z-index: 99;
       border: 2px solid var(--white);
       &:hover {
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
+        @include borderRadius(5px);
       }
+
       p {
         font-weight:700;
         text-align: center;
@@ -163,16 +164,18 @@ body {
         line-height: 1;
         width: 100%;
       }
+
     }
+    
     &.top .top-link {
       opacity: 0;
       visibility: hidden;
     }
+    
     &.scroll .top-link {
       opacity: 1;
       visibility: visible;
     }
-
 
     /* loader */
     .loader {

@@ -138,7 +138,8 @@ $screen-xxl-min: 1920px;
 
 /* min-max screen size */
 $minScreen: 576px; // 576px
-$maxScreen: 1281px; // 1200px
+//$maxScreen: 1281px; // 1200px
+$maxScreen: 1400px; // 1200px
 $minFont: 0.875rem; // 14px
 $maxFont: 1.125rem; // 18px
 $mobFont: 1.125rem;
@@ -174,9 +175,9 @@ $gradFourth: var(--fourth-color) 0%, var(--fourth-color-dark) 100%;
 
 /* box shadow */
 @mixin boxShadow($distance, $range, $color) {
-  -webkit-box-shadow: $distance $range 10px 0 $color;
-  -moz-box-shadow: $distance $range 10px 0 $color;
-  box-shadow: $distance $range 10px 0 $color;
+  -webkit-box-shadow: $distance $distance $range 0 $color;
+  -moz-box-shadow: $distance $distance $range 0 $color;
+  box-shadow: $distance $distance $range 0 $color;
 }
 
 /* width - min & max */

@@ -15,6 +15,7 @@ body {
         z-index: 99;
       }
     }
+
     header#header {
       &.fixed {
         position: fixed;
@@ -119,7 +120,7 @@ body {
               margin: 0;
               padding: 0;
             }
-            #menu-toggle, .menuToggle {
+            #menu-toggle {
               display:block;
               position: fixed;
               top: var(--margin);
@@ -148,7 +149,7 @@ body {
               }
             }
 
-            .head-menu, .headMenu {
+            .head-menu {
               list-style: none;
               margin:0;
               transition: all 0.1s ease;
@@ -209,14 +210,14 @@ body {
                   li {
                     display: inline-block;
                     ul {
-                      &.drop-down, &.sub-menu, &.dropDown {
+                      &.drop-down, &.sub-menu {
                         display: none;
                       }
                     }
-                    &.drop-down, &.menu-item-has-children, &.dropDown {
+                    &.drop-down, &.menu-item-has-children {
                       position: relative;
                       ul {
-                        &.drop-down, &.sub-menu, &.dropDown {
+                        &.drop-down, &.sub-menu {
                           display: flex;
                           align-items: flex-start;
                           flex-flow: column;
@@ -263,7 +264,7 @@ body {
                           top: 0;
                         }
                         ul {
-                          &.drop-down, &.sub-menu, &.dropDown {
+                          &.drop-down {
 
                             // shown
                             opacity: 1;
@@ -620,14 +621,14 @@ body {
                   }
                 }
 
-                &.lang-menu, &.langMenu {
+                &.lang-menu {
                   margin-top: var(--margin);
                   @include md {
                     margin-top: 0;
                   }
 
                   ul {
-                    &.lang-menu, &.langMenu {
+                    &.lang-menu {
                       display: flex;
                       justify-content: space-evenly;
                       @include borderRadius(50px);
@@ -770,13 +771,13 @@ body {
                 }
               }
               &.menus {
-                #menu-toggle, .menuToggle {
+                #menu-toggle {
                   background: var(--main-color);
                   .line {
                     background: var(--white);
                   }
                 }
-                #head-menu, .headMenu {
+                #head-menu {
                   &.closed {}
                   &.open {}
                   nav.menu {
@@ -837,9 +838,9 @@ body {
                             }
                           }
                         }
-                        &.drop-down, &.menu-item-has-children, &.dropDown {
+                        &.drop-down, &.menu-item-has-children {
                           ul {
-                            &.drop-down, &.sub-menu, &.dropDown {
+                            &.drop-down {
                               background: var(--black);
                             }
                           }
@@ -922,9 +923,9 @@ body {
                       }
                     }
 
-                    &.lang-menu, &.langMenu {
+                    &.lang-menu {
                       ul {
-                        &.lang-menu, &.langMenu {
+                        &.lang-menu {
                           li.item, li.menu-item {
                             a {
                               @include md {
@@ -1013,7 +1014,7 @@ body {
           }
         }
 
-        &.neg, &.inv, &.scrollNeg, &.scrollBk, &.scrollCol, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
+        &.neg, &.inv, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
           .boxes {
             .box {
               &.brand {
@@ -1035,13 +1036,13 @@ body {
                 }
               }
               &.menus {
-                #menu-toggle, .menuToggle {
+                #menu-toggle {
                   background: var(--main-color);
                   .line {
                     background: var(--white);
                   }
                 }
-                #head-menu, .headMenu {
+                #head-menu {
                   &.closed {}
                   &.open {}
                   nav.menu {
@@ -1102,9 +1103,9 @@ body {
                             }
                           }
                         }
-                        &.drop-down, &.menu-item-has-children, &.dropDown {
+                        &.drop-down, &.menu-item-has-children {
                           ul {
-                            &.drop-down, &.sub-menu, &.dropDown {
+                            &.drop-down, &.sub-menu {
                               background: var(--black);
                             }
                           }
@@ -1187,9 +1188,9 @@ body {
                       }
                     }
 
-                    &.lang-menu, &.langMenu {
+                    &.lang-menu {
                       ul {
-                        &.lang-menu, &.langMenu {
+                        &.lang-menu {
                           li.item, li.menu-item {
                             a {
                               @include md {
@@ -1238,19 +1239,9 @@ body {
       }
     }
 
-
-
-
-
-
-
-
-
-
-
     footer#footer {
 
-      .footerLogo {
+      .footer-logo {
         img.logo {
           &.emblem {
             width: 66.666666%;
@@ -1280,10 +1271,10 @@ body {
           }
 		}
       }
-      .footerInfo {
+      .footer-info {
 
       }
-      .footer-menu, .footerMenu {
+      .footer-menu {
         nav {
           &.menu {
             ul {

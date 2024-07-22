@@ -9,11 +9,8 @@ body {
       "white" var(--white) var(--black),
       "fw" var(--false-white) var(--black),
       "false-white" var(--false-white) var(--black),
-      // "grL" var(--light-grey) var(--black),
       "light-grey" var(--light-grey) var(--black),
-      // "gr" var(--grey) var(--white),
       "grey" var(--grey) var(--white),
-      // "grD" var(--dark-grey) var(--white),
       "dark-grey" var(--dark-grey) var(--white),
       "fb" var(--false-black) var(--white),
       "false-black" var(--false-black) var(--white),
@@ -22,20 +19,13 @@ body {
       "col" var(--main-color) var(--white),
       "color" var(--main-color) var(--white),
       "main-color" var(--main-color) var(--white),
-      // "colD" var(--main-color-dark) var(--white),
       "color-dark" var(--main-color-dark) var(--white),
       "main-color-dark" var(--main-color-dark) var(--white),
-      // "colTwo" var(--second-color) var(--white),
       "second-color" var(--second-color) var(--white),
-      // "colTwoD" var(--second-color-dark) var(--white),
       "second-color-dark" var(--second-color-dark) var(--white),
-      // "colThree" var(--third-color) var(--white),
       "third-color" var(--third-color) var(--white),
-      // "colThreeD" var(--third-color-dark) var(--white),
       "third-color-dark" var(--third-color-dark) var(--white),
-      // "colFour" var(--fourth-color) var(--white),
       "fourth-color" var(--fourth-color) var(--white),
-      // "colFourD" var(--fourth-color-dark) var(--white),
       "fourth-color-dark" var(--fourth-color-dark) var(--white),
       "link" var(--link-color) var(--white),
       "link-color" var(--link-color) var(--white),
@@ -149,21 +139,6 @@ body {
       }
     }
 
-    .sep {
-      @each $sepHeightLabel, $sepHeight in $thickness {
-        &-#{$sepHeightLabel} {
-          display: block;
-          width: 100%;
-          @each $sepColorName, $sepColor in $colors {
-            &-#{$sepColorName}{
-              height: #{$sepHeight};
-              background-color: #{$sepColor};
-            }
-          }
-        }
-      }
-    }
-
     @each $colorname, $colorcode, $colortext in $colors {
 
       .#{$colorname} {
@@ -187,9 +162,6 @@ body {
         }
         &Bg, &-bg {
           background-color: $colorcode!important;
-        }
-        &Bord, &-bord {
-          border: 1px solid $colorcode!important;
         }
         &Btn, &-btn {
           color: $colorcode!important;
