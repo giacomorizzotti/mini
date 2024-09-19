@@ -58,7 +58,7 @@
 
   --gingerbread: rgb(84 73 75);
 
-  --pulse-color: --main-color;
+  --pulse-color: rgb(60 90 255);
 
   // mini
   --mini-color: rgb(60 90 255);
@@ -100,12 +100,13 @@
 
   /* TYPO */
   /* variables */
-  --font-sans: 'Roboto', sans-serif;
-  --font-mono: 'Roboto Mono', monospace;
-  --font-serif: 'Roboto Slab', serif;
+  --font-sans: "Roboto", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-handwriting: "Edu VIC WA NT Beginner", serif;
+  --font-mono: "Roboto Mono", monospace;
 
-  --font: 'Roboto', sans-serif;
-  --font-two: 'Oswald', sans-serif;
+  --font: "Roboto", sans-serif;
+  --font-two: "Playfair Display", serif;
 
   --baseline: 0.625rem; // 10px
 

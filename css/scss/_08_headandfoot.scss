@@ -359,18 +359,18 @@ body {
                       }
                       &.active {
                         background: var(--white);
-                        color: var(--main-color);
+                        color: var(--link-color);
                         display: block;
                         @include md {
-                          color: var(--main-color);
+                          color: var(--link-color);
                           background: transparent;
                         }
                         &::after {
                           width: 0;
-                          background: var(--main-color);
+                          background: var(--link-color);
                           @include md {
                             width: 100%;
-                            background: var(--main-color);
+                            background: var(--link-color);
                           }
                         }
                       }
@@ -398,14 +398,13 @@ body {
                 }
 
                 ul {
-                  &.page-menu, &.pageMenu {
+                  &#page-menu, &.page-menu, &.pageMenu {
                     background: var(--main-color-dark);
                     @include md {
-                      //background: var(--false-white-transp);
                       background: transparent;
                     }
                     @include md {
-                      border-right: 1px solid var(--false-black);
+                      border-right: 1px solid var(--light-grey);
                       padding: 0 calc(var(--padding)*.5);
                     }
                     li {

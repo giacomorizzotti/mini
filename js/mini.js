@@ -1,13 +1,15 @@
 // FUNCTIONS
 
-// Detect mobile
+// MOBILE DEVICE DETECTION
 window.mobileCheck = function() {
     let check = false;
     (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
     return check;
 };
 
-// Mobile detection
+// DESKTOP/MOBILE class to body element
+// On Window load, adding a "moibile" or "desktop" class to body element, after a mobile check.
+// If GET param "mobile" has been set, a mobile versione will be forced
 window.addEventListener('load', function() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -19,30 +21,10 @@ window.addEventListener('load', function() {
         document.body.classList.add('desktop');
     }
 });
-window.addEventListener('resize', function() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const GETmobile = urlParams.has('mobile');
-    mobileCheck()
-    if ( window.mobileCheck() == true || (GETmobile == true)) {
-        if (document.body.classList.contains('desktop')) {
-            document.body.classList.remove('desktop');
-            document.body.classList.add('mobile');
-        } else {
-            document.body.classList.add('mobile');
-        }
 
-    } else if ( window.mobileCheck() == false ) {
-        if (document.body.classList.contains('mobile')) {
-            document.body.classList.remove('mobile');
-            document.body.classList.add('desktop');
-        } else {
-            document.body.classList.add('desktop');
-        }
-    }
-});
-
-// Pagination
+// PAGINATION
+// If is there a "#pagination" element, inside of that element, its child elements will be paginated.
+// Default page elements: 30;
 function pagination(pageElements=30) {
 
     if ( document.getElementById('pagination') != null ) {
@@ -251,7 +233,9 @@ function pagination(pageElements=30) {
 }
 window.addEventListener("load", pagination(30))
 
-
+// EVENT -> ACTION CONFIRMATION
+// Ask for a basic onfrimation after a certain action.
+// Add this function in page elements
 function confirmAction(e, message = null)
 {
     var text_message = 'Are you sure?';
@@ -263,9 +247,12 @@ function confirmAction(e, message = null)
     }
 }
 
-// Onclick - toggle class
-function addClass(elementToLookFor, classToAdd, classToRemove = null) {
-    var element = document.querySelectorAll(elementToLookFor);
+// EVENT -> ADD CLASS
+// Add a class to a target element after a certain event.
+// You can also remove a class from the target element.
+// Add this function in page elements
+function addClass(targetElement, classToAdd, classToRemove = null) {
+    var element = document.querySelectorAll(targetElement);
     for (let i=0; i < element.length; i++) {
         if ( !element[i].classList.contains(classToAdd) ) {
             element[i].classList.add(classToAdd);
@@ -275,6 +262,27 @@ function addClass(elementToLookFor, classToAdd, classToRemove = null) {
         }
     }
 }
+
+// EVENT -> REMOVE CLASS
+// Remove a class to a target element after a certain event.
+// You can also add a class from the target element.
+// Add this function in page elements
+function removeClass(targetElement, classToRemove, classToAdd = null) {
+    var element = document.querySelectorAll(targetElement);
+    for (let i=0; i < element.length; i++) {
+        if ( element[i].classList.contains(classToRemove) ) {
+            element[i].classList.remove(classToRemove);
+        }
+        if ( classToAdd != null && !element[i].classList.contains(classToAdd) ) {
+            element[i].classList.add(classToAdd);
+        }
+    }
+}
+
+// EVENT -> TOGGLE CLASS
+// Toggle a class to a target element after a certain event.
+// You can also toggle another (invert) class from the target element.
+// Add this function in page elements
 function toggleClass(elementToLookFor, classToToggle, invertClassToToggle = null) {
     var element = document.querySelectorAll(elementToLookFor);
     for (let i=0; i < element.length; i++) {
@@ -292,25 +300,29 @@ function toggleClass(elementToLookFor, classToToggle, invertClassToToggle = null
     }
 }
 
-// Onclick - toggle class
-/*
-function toggleClass(elementToLookFor, classToToggleON, classToToggleOFF) {
-    var element = document.querySelectorAll(elementToLookFor);
-    for (let i=0; i < element.length; i++) {
-        if ( element[i].classList.contains(classToToggleON) ) {
-            element[i].classList.remove(classToToggleON);
-            element[i].classList.add(classToToggleOFF);
-        } else if ( element[i].classList.contains(classToToggleOFF) ) {
-            element[i].classList.remove(classToToggleOFF);
-            element[i].classList.add(classToToggleON);
-        } else {
-            element[i].classList.add(classToToggleOFF);
+// EVENT -> COLLAPSE CLASS
+// Toggle "show" and "hidden" classes in a target element after a click event.
+// Add this function in page elements
+function collapse(targetObject) {
+    var element = document.querySelectorAll(targetObject);
+    for (i=0; i<element.length; i++) {
+        if (!element[i].classList.contains("hidden") && !element[i].classList.contains("shown")) {
+            element[i].classList.add("shown")
         }
     }
+    toggleClass(targetObject, 'shown', 'hidden');
 }
-*/
+function showElement(targetObject) {
+    removeClass(targetObject, 'hidden');
+    addClass(targetObject, 'shown');
+}
+function hideElement(targetObject) {
+    removeClass(targetObject, 'shown');
+    addClass(targetObject, 'hidden');
+}
 
-// Cookies
+// COOKIES
+// SET COOKIE
 function setCookie(cname, cvalue, exdays, path, domain=0) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -327,6 +339,7 @@ function setCookie(cname, cvalue, exdays, path, domain=0) {
     document.cookie = cname + "=" + cvalue + "; " + expires + ";path=" + path + ";" + domainToCookie;
 }
 
+// READ COOKIE
 function readCookie(name) {
     var nameEQ = name + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -342,25 +355,25 @@ function readCookie(name) {
     }
     return null;
 }
-
-function eraseCookie(name) {
+// DELETE COOKIE
+function deleteCookie(name) {
     setCookie(name,"",-1, "/");
 }
 
-// loader
+// LOADER
 window.addEventListener("load", function() {
-    var loader = document.querySelectorAll(".loader");
-    if (loader.length > 0) {
+    if ( document.querySelectorAll(".loader") ) {
+        var loader = document.querySelectorAll(".loader");
         loader[0].classList.add("done");
         setTimeout(function () {
-            //loader[0].remove();
             loader[0].classList.remove("done");
             loader[0].classList.add("gone");
         }, 1000);
     }
 });
 
-// body -> scroll
+// TOP/SCROLL class to body element
+// On Window load and scroll, adding a "top" or "scroll" class to body element
 window.addEventListener('load', function() {
     var body = document.body;
     if ( window.pageYOffset < 100 ) {
@@ -386,7 +399,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// square prop div
+// SQUARE DIV MIN
+// Checked on load and on resize
 window.addEventListener('load', squareDiv, false);
 window.addEventListener('resize', squareDiv, false);
 function squareDiv() {
@@ -395,7 +409,8 @@ function squareDiv() {
     });
 }
 
-// square prop div
+// SQUARE DIV FIXED
+// Checked on load and on resize
 window.addEventListener('load', squareFixDiv, false);
 window.addEventListener('resize', squareFixDiv, false);
 function squareFixDiv() {
@@ -404,7 +419,8 @@ function squareFixDiv() {
     });
 }
 
-// fullHD prop div
+// FULLHD DIV MIN
+// Checked on load and on resize
 window.addEventListener('load', fullHdDiv, false);
 window.addEventListener('resize', fullHdDiv, false);
 function fullHdDiv() {
@@ -413,7 +429,8 @@ function fullHdDiv() {
     });
 }
 
-// Image as COVER
+// USE MEDIA ELEMENT AS BACKGROUND
+// If an element has a '.media-cover' class, that element would cover all the size of the parent (position-relative) element
 window.addEventListener('load', imageCoverOnLoad);
 window.addEventListener('resize', imageCoverOnResize);
 function imageCoverOnLoad() {
@@ -422,23 +439,23 @@ function imageCoverOnLoad() {
 function imageCoverOnResize() {
     imageCover();
 }
-function imageCover() {
+function imageCover(target = '.media-cover') {
 
-    var imageCover = document.getElementsByClassName('imageCover');
+    var element = document.querySelectorAll(target);
 
-    for (j=0;j<imageCover.length;j++) {
+    for (j=0;j<element.length;j++) {
 
-        imageCover[j].style.position = 'absolute';
-        imageCover[j].style.top = '50%';
-        imageCover[j].style.left = '50%';
-        imageCover[j].style.transform= 'translate(-50%, -50%)';
+        element[j].style.position = 'absolute';
+        element[j].style.top = '50%';
+        element[j].style.left = '50%';
+        element[j].style.transform= 'translate(-50%, -50%)';
 
-        let imageCoverWrapper = imageCover[j].parentNode;
+        let elementWrapper = element[j].parentNode;
 
-        let imageWidth = imageCover[j].offsetWidth;
-        let imageHeight = imageCover[j].offsetHeight;
-        let parentWidth = imageCoverWrapper.offsetWidth;
-        let parentHeight = imageCoverWrapper.offsetHeight;
+        let imageWidth = element[j].offsetWidth;
+        let imageHeight = element[j].offsetHeight;
+        let parentWidth = elementWrapper.offsetWidth;
+        let parentHeight = elementWrapper.offsetHeight;
         let screenWidth = window.innerWidth;
         let screenHeight = window.innerHeight;
 
@@ -446,30 +463,33 @@ function imageCover() {
         let wrapperRatio = parentWidth / parentHeight;
         let imgRatio = imageWidth / imageHeight;
 
+        elementWrapper.style.overflow = "hidden";
+        elementWrapper.style.position = "relative";
+
         if (wrapperRatio >= 1) {                        // SCHERMO ORIZZONTALE o QUADRATO
             if (imgRatio < 1) {                         // IMMAGINE VERTICALE
-                imageCover[j].style.width = '100%';
-                imageCover[j].style.height = 'auto';
+                element[j].style.width = '100%';
+                element[j].style.height = 'auto';
             } else {                                    // IMMAGINE ORIZZONTALE o QUADRATA
                 if (imgRatio >= wrapperRatio) {
-                    imageCover[j].style.width = 'auto';
-                    imageCover[j].style.height = '100%';
+                    element[j].style.width = 'auto';
+                    element[j].style.height = '100%';
                 } else {
-                    imageCover[j].style.width = '100%';
-                    imageCover[j].style.height = 'auto';
+                    element[j].style.width = '100%';
+                    element[j].style.height = 'auto';
                 }
             }
         } else {                                        // SCHERMO VERTICALE
             if (imgRatio >= 1) {                        // IMMAGINE ORIZZONTALE o QUADRATA
-                imageCover[j].style.width = 'auto';
-                imageCover[j].style.height = '100%';
+                element[j].style.width = 'auto';
+                element[j].style.height = '100%';
             } else {                                    // IMMAGINE VERTICALE
                 if (imgRatio < wrapperRatio) {
-                    imageCover[j].style.width = '100%';
-                    imageCover[j].style.height = 'auto';
+                    element[j].style.width = '100%';
+                    element[j].style.height = 'auto';
                 } else {
-                    imageCover[j].style.width = 'auto';
-                    imageCover[j].style.height = '100%';
+                    element[j].style.width = 'auto';
+                    element[j].style.height = '100%';
                 }
             }
         }
@@ -477,10 +497,11 @@ function imageCover() {
     }
 }
 
-// Add CLICKED class to btn clicked
+// CLICKED/TO-CLICK FUNCTION TO ELEMENTS
+// Toggle "cliced" and "to-click" classes from a target element
 window.addEventListener('load', function() {
 
-    let btn = document.getElementsByClassName('click');
+    let btn = document.querySelectorAll(".click");
 
     for (let i=0; i<btn.length; i++) {
         
@@ -516,18 +537,25 @@ window.addEventListener('load', function() {
 
 });
 
-// page menu - add menu items
+// PAGE MENU
+// Add elements to page menu
 window.addEventListener('load', function() {
 
-    var autoMenuSection = document.querySelectorAll("section.pageMenuItem");
-    var autoMenu = document.querySelectorAll("ul.page-menu")[0];
+    var autoMenuSection = document.querySelectorAll("section.page-menu");
+    var autoMenu = document.querySelectorAll("ul#page-menu");
 
-    if (autoMenuSection.length>0) {
+    if ( autoMenuSection.length > 0 ) {
         let icon = document.createElement("li");
         icon.classList.add("item");
         icon.classList.add("menu-icon");
         icon.innerHTML = '<i class="fa fa-file-text-o" aria-hidden="true"></i>';
-        autoMenu.appendChild(icon);
+        for (let i=0; i<autoMenu.length; i++) {
+            autoMenu[0].appendChild(icon);
+        }
+    } else {
+        for (let i=0; i<autoMenu.length; i++) {
+            autoMenu[0].style.display = "none";
+        }
     }
 
     autoMenuSection.forEach(function(thisSection) {
@@ -535,7 +563,9 @@ window.addEventListener('load', function() {
         let thisSectionMenuItemName = thisSection.getAttribute('menuItemName');
         let li = document.createElement("li");
         let liA = document.createElement("a");
-        autoMenu.appendChild(li).appendChild(liA);
+        for (let i=0; i<autoMenu.length; i++) {
+            autoMenu[0].appendChild(li).appendChild(liA);
+        }
         li.classList.add("item");
         li.classList.add("page-menu-item");
         liA.href = "#"+thisSectionName;
@@ -548,8 +578,7 @@ window.addEventListener('load', function() {
 
 });
 
-
-// page menu - item active on scroll
+// Items active on scroll
 window.addEventListener('load', makeItemActive);
 window.addEventListener('scroll', makeItemActive);
 
@@ -593,7 +622,7 @@ function makeItemActive() {
 
 }
 
-// page menu - close mobile menu after item click
+// Close mobile menu after item click
 window.addEventListener('load', function() {
     let autoMenuItems = document.getElementsByClassName('page-menu-item');
     for (let i = 0; i < autoMenuItems.length; i++) {
@@ -647,15 +676,15 @@ window.addEventListener('load', function() {
 
 // dropdown menu
 window.addEventListener('load', function() {
-    var dropDownMenu = document.querySelectorAll('li.item.dropDown');
+    var dropDownMenu = document.querySelectorAll('li.item.drop-down');
 
     for (i=0; i<dropDownMenu.length; i++) {
         let thisDropDownItem = dropDownMenu[i];
-        let thisDropDownMenu = thisDropDownItem.querySelectorAll('ul.menu.dropDown');
+        let thisDropDownMenu = thisDropDownItem.querySelectorAll('ul.menu.drop-down');
         if (thisDropDownMenu.length>0 && thisDropDownMenu.length<2) {
             thisDropDownMenu[0].classList.add('hidden');
 
-            if (window.mobileCheck() == false) {
+            if (mobileCheck() == false) {
                 if (thisDropDownItem.classList.contains('ho')) {
                     thisDropDownItem.addEventListener('mouseover', function() {
                         if (thisDropDownMenu[0].classList.contains('hidden')) {
@@ -700,22 +729,26 @@ window.addEventListener('load', function() {
 
 })
 
+// START | DEPRECATED
 // consider browser's bar on smartphones in full height calculation
-
+/*
 window.addEventListener('load', function () {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+*/
 
 // We listen to the resize event
-
+/*
 window.addEventListener('resize', () => {
     // We execute the same script as before
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+*/
+// END | DEPRECATED
 
 // LANGs
 function setLang(languageCode) {
@@ -770,26 +803,6 @@ window.onload = function() {
         btns.forEach( function(btn) {
             btn.onclick = function() {
 
-                //console.log(bOrs.length);
-                /*
-                bOrs.forEach( function(bOr) {
-                    if (bOr.classList.contains("clicked")) {
-                        bOr.classList.add("toClick");
-                        bOr.classList.remove("clicked");
-                    };
-                });
-                */
-
-                /*
-                if (this.classList.contains("toClick")) {
-                    this.classList.add("clicked");
-                    this.classList.remove("toClick");
-                } else if (this.classList.contains("clicked")) {
-                    this.classList.add("toClick");
-                    this.classList.remove("clicked");
-                };
-                */
-
                 tgts.forEach( function(tgt) {
                     if (tgt.classList.contains("hidden")) {
                         tgt.classList.remove("hidden");
@@ -813,38 +826,6 @@ window.onload = function() {
     }
 
 };
-
-function collapse(targetObject) {
-    let target = document.getElementsByClassName(targetObject);
-    for (i=0; i<target.length; i++) {
-        if (!target[i].classList.contains("hidden") && !target[i].classList.contains("shown")) {
-            target[i].classList.add("shown")
-        }
-        if (target[i].classList.contains("hidden")) {
-            target[i].classList.remove("hidden");
-            target[i].classList.add("shown");
-        } else if (target[i].classList.contains("shown")) {
-            target[i].classList.remove("shown");
-            target[i].classList.add("hidden");
-        };
-    }
-}
-
-function toggle(targetObject, targetClass, targetInvertClass) {
-    let target = document.getElementsByClassName(targetObject);
-    for (i=0; i<target.length; i++) {
-        if (!target[i].classList.contains(targetClass) && !target[i].classList.contains(targetInvertClass)) {
-            target[i].classList.add(targetClass)
-        }
-        if (target[i].classList.contains(targetInvertClass)) {
-            target[i].classList.remove(targetInvertClass);
-            target[i].classList.add(targetClass);
-        } else if (target[i].classList.contains(targetClass)) {
-            target[i].classList.remove(targetClass);
-            target[i].classList.add(targetInvertClass);
-        };
-    }
-}
 
 // ERRORS
 window.addEventListener('load', function() {
@@ -906,7 +887,8 @@ function basicTranslations() {
     }
 }
 
+/*
 window.addEventListener('load',function() {
     console.log('mini loaded. ♥ Have a good navigation!');
 })
-
+*/

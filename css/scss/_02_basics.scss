@@ -150,6 +150,9 @@ body {
       @include borderRadius(50%);
       z-index: 99;
       border: 2px solid var(--white);
+      display: flex;
+      align-items: center;
+      align-content: center;  
       &:hover {
         @include borderRadius(5px);
       }
@@ -190,7 +193,7 @@ body {
       background: var(--false-white);
       z-index: 109;
 
-      transition: transform 0.3s ease-in;
+      transition: transform 0.1s ease-in;
 
       img.loader-logo {
         display: block;

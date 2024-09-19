@@ -43,7 +43,7 @@
   --acid-green: #C2F261;
   --stars-color: rgba( 255 255 255 / 50%);
   --gingerbread: rgb(84 73 75);
-  --pulse-color: --main-color;
+  --pulse-color: rgb(60 90 255);
   --mini-color: rgb(60 90 255);
   --mini-color-dark: rgb(50 75 180);
   --mini-second-color: rgb(50 75 180);
@@ -73,10 +73,11 @@
   /* TYPO */
   /* variables */
   --font-sans: "Roboto", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-handwriting: "Edu VIC WA NT Beginner", serif;
   --font-mono: "Roboto Mono", monospace;
-  --font-serif: "Roboto Slab", serif;
   --font: "Roboto", sans-serif;
-  --font-two: "Oswald", sans-serif;
+  --font-two: "Playfair Display", serif;
   --baseline: 0.625rem;
   --h1: 2rem;
   --h2: 1.5rem;
@@ -334,6 +335,9 @@ body.mini .top-link {
   border-radius: 50%;
   z-index: 99;
   border: 2px solid var(--white);
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 body.mini .top-link:hover {
   -webkit-border-radius: 5px;
@@ -369,7 +373,7 @@ body.mini .loader {
   left: 0;
   background: var(--false-white);
   z-index: 109;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.1s ease-in;
 }
 body.mini .loader img.loader-logo {
   display: block;
@@ -811,10 +815,14 @@ body.mini .box:has(> .boxes) {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-}
-body.mini .box:has(> .boxes) .boxes .box {
-  margin-top: 0;
-  margin-bottom: 0;
+  /*
+  .boxes {
+    .box {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  */
 }
 body.mini .boxes {
   display: flex;
@@ -822,6 +830,8 @@ body.mini .boxes {
   width: calc(100% + var(--margin) * 2);
   flex-flow: row wrap;
   position: relative;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 body.mini .boxes-d-row {
   flex-direction: row;
@@ -1645,6 +1655,7 @@ body.mini {
   /* POINTER */
   /* USE IMG and VID as BACKGROUND */
   /* DOTTED BACKGROUND */
+  /* HR */
   /* BUTTONS */
   /* hidden & shown */
   /* checkboxes */
@@ -2165,51 +2176,51 @@ body.mini .oh, body.mini .overflow-hidden {
 }
 body.mini .fh, body.mini .full-height {
   min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100dvh; /* Experimental -> Testing dvh */
 }
 body.mini .fhf, body.mini .full-height-fixed {
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh; /* Experimental -> Testing dvh */
 }
 body.mini .hfh, body.mini .half-full-height {
   min-height: 50vh; /* Fallback for browsers that do not support Custom Properties */
-  min-height: calc(var(--vh, 1vh) * 50);
+  min-height: 50dvh; /* Experimental -> Testing dvh */
 }
 body.mini .hfhf, body.mini .half-full-height-fixed {
   height: 50vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 50);
+  height: 50dvh; /* Experimental -> Testing dvh */
 }
 body.mini .one-quarter-full-height {
   min-height: 25vh; /* Fallback for browsers that do not support Custom Properties */
-  min-height: calc(var(--vh, 1vh) * 25);
+  min-height: 25dvh; /* Experimental -> Testing dvh */
 }
 body.mini .one-quarter-height-fixed {
   height: 25vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 25);
+  height: 25dvh; /* Experimental -> Testing dvh */
 }
 body.mini .three-quarter-full-height {
   min-height: 75vh; /* Fallback for browsers that do not support Custom Properties */
-  min-height: calc(var(--vh, 1vh) * 75);
+  min-height: 75dvh; /* Experimental -> Testing dvh */
 }
 body.mini .three-quarter-height-fixed {
   height: 75vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 75);
+  height: 75dvh; /* Experimental -> Testing dvh */
 }
 body.mini .one-third-full-height {
   min-height: 33.3333333vh; /* Fallback for browsers that do not support Custom Properties */
-  min-height: calc(var(--vh, 1vh) * 33.3333333);
+  min-height: 33.3333333dvh; /* Experimental -> Testing dvh */
 }
 body.mini .one-third-height-fixed {
   height: 33.3333333vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 33.3333333);
+  height: 33.3333333dvh; /* Experimental -> Testing dvh */
 }
 body.mini .two-third-full-height {
   min-height: 66.666666vh; /* Fallback for browsers that do not support Custom Properties */
-  min-height: calc(var(--vh, 1vh) * 66.666666);
+  min-height: 66.666666dvh; /* Experimental -> Testing dvh */
 }
 body.mini .two-third-height-fixed {
   height: 66.666666vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 66.666666);
+  height: 66.666666dvh; /* Experimental -> Testing dvh */
 }
 body.mini .mh-100 {
   min-height: 100%;
@@ -2368,6 +2379,12 @@ body.mini .dot-bg, body.mini .dot-mask {
 body.mini .dot-bg.inv, body.mini .dot-bg.invert, body.mini .dot-mask.inv, body.mini .dot-mask.invert {
   filter: invert(1);
 }
+body.mini hr {
+  border-style: solid;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
 body.mini .btn {
   color: var(--link-color);
   font-size: var(--p);
@@ -2453,6 +2470,44 @@ body.mini .shown {
   visibility: visible !important;
   transition: all 0.15s ease;
 }
+body.mini.top .top-hidden, body.mini.top .scroll-shown {
+  display: block !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  transition: all 0.15s ease;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden;
+  border: 0 !important;
+}
+body.mini.top .top-shown, body.mini.top .scroll-hidden {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: all 0.15s ease;
+}
+body.mini.scroll .top-shown, body.mini.scroll .scroll-hidden {
+  display: block !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  transition: all 0.15s ease;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden;
+  border: 0 !important;
+}
+body.mini.scroll .top-hidden, body.mini.scroll .scroll-shown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: all 0.15s ease;
+}
 body.mini input[type=checkbox] {
   width: 1px !important;
   height: 1px !important;
@@ -2522,7 +2577,6 @@ body.mini input[type=radio] {
   display: none;
 }
 body.mini input[type=radio] + label {
-  background-color: var(--false-white);
   background-color: var(--white);
 }
 body.mini input[type=radio]:checked + label {
@@ -2533,9 +2587,11 @@ body.mini form {
   margin: 0 0 calc(var(--margin) * 2) 0;
 }
 body.mini form label {
-  font-size: calc(var(--p) * 0.75);
+  font-size: calc(var(--p) * 1);
+  color: var(--grey);
+  line-height: 1;
   display: block;
-  margin: 0 0 calc(var(--margin) * 0.5) 0;
+  margin: 0 0 calc(var(--margin) * 0.75) 0;
 }
 body.mini form input, body.mini form textarea, body.mini form select {
   display: block;
@@ -2630,17 +2686,22 @@ body.mini #actions ul.action-groups li.action-group > a .icon {
   text-align: center;
   background-color: var(--link-color);
   color: var(--white);
-  font-size: calc(var(--p) * 1.25);
+  font-size: calc(var(--p) * 1.75);
   line-height: 1;
   height: 8vw;
   max-height: 48px;
   width: 8vw;
   max-width: 48px;
-  padding: calc(var(--padding) * 1);
+  padding: 0;
   margin: 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+@media (min-width: 576px) {
+  body.mini #actions ul.action-groups li.action-group > a .icon {
+    padding: calc(var(--padding) * 1);
+  }
 }
 body.mini #actions ul.action-groups li.action-group > a .label {
   display: none;
@@ -2691,9 +2752,9 @@ body.mini #actions ul.action-groups li.action-group ul.actions li.action > a {
   -webkit-border-radius: calc(40px + var(--padding) * 0.5);
   -moz-border-radius: calc(40px + var(--padding) * 0.5);
   border-radius: calc(40px + var(--padding) * 0.5);
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.35);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
   display: flex;
@@ -2708,7 +2769,7 @@ body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .ic
   max-height: 48px;
   width: 8vw;
   max-width: 48px;
-  padding: calc(var(--padding) * 1);
+  padding: calc(var(--padding) * 0);
   margin: 0 var(--margin) 0 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -2716,6 +2777,12 @@ body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .ic
 }
 body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon:hover, body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon.active {
   background-color: var(--link-hover-color);
+}
+@media (min-width: 576px) {
+  body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
+    font-size: calc(var(--p) * 1.5);
+    padding: calc(var(--padding) * 1);
+  }
 }
 /* COLORS */
 body.mini {
@@ -7004,7 +7071,9 @@ body.mini {
   /* DESC TEXT */
   /* UPPERCASE */
   /* UNDERLINE BACKGROUND */
+  /* iconoir */
   /* VIBING TEXT */
+  /* iconoir */
 }
 body.mini p {
   font-size: var(--p);
@@ -7022,55 +7091,58 @@ body.mini p:last-child {
 body.mini h1:first-child, body.mini h2:first-child, body.mini h3:first-child, body.mini h4:first-child, body.mini h5:first-child, body.mini h6:first-child {
   margin-top: 0 !important;
 }
-body.mini h1.thin, body.mini h1.text-thin, body.mini h2.thin, body.mini h2.text-thin, body.mini h3.thin, body.mini h3.text-thin, body.mini h4.thin, body.mini h4.text-thin, body.mini h5.thin, body.mini h5.text-thin, body.mini h6.thin, body.mini h6.text-thin, body.mini p.thin, body.mini p.text-thin, body.mini li.thin, body.mini li.text-thin, body.mini code.thin, body.mini code.text-thin, body.mini span.thin, body.mini span.text-thin, body.mini i.thin, body.mini i.text-thin, body.mini b.thin, body.mini b.text-thin, body.mini u.thin, body.mini u.text-thin, body.mini a.thin, body.mini a.text-thin {
+body.mini h1.thin, body.mini h1.text-thin, body.mini h2.thin, body.mini h2.text-thin, body.mini h3.thin, body.mini h3.text-thin, body.mini h4.thin, body.mini h4.text-thin, body.mini h5.thin, body.mini h5.text-thin, body.mini h6.thin, body.mini h6.text-thin, body.mini p.thin, body.mini p.text-thin, body.mini li.thin, body.mini li.text-thin, body.mini code.thin, body.mini code.text-thin, body.mini span.thin, body.mini span.text-thin, body.mini i.thin, body.mini i.text-thin, body.mini b.thin, body.mini b.text-thin, body.mini u.thin, body.mini u.text-thin, body.mini a.thin, body.mini a.text-thin, body.mini label.thin, body.mini label.text-thin {
   font-weight: 100;
 }
-body.mini h1.light, body.mini h1.text-light, body.mini h2.light, body.mini h2.text-light, body.mini h3.light, body.mini h3.text-light, body.mini h4.light, body.mini h4.text-light, body.mini h5.light, body.mini h5.text-light, body.mini h6.light, body.mini h6.text-light, body.mini p.light, body.mini p.text-light, body.mini li.light, body.mini li.text-light, body.mini code.light, body.mini code.text-light, body.mini span.light, body.mini span.text-light, body.mini i.light, body.mini i.text-light, body.mini b.light, body.mini b.text-light, body.mini u.light, body.mini u.text-light, body.mini a.light, body.mini a.text-light {
+body.mini h1.light, body.mini h1.text-light, body.mini h2.light, body.mini h2.text-light, body.mini h3.light, body.mini h3.text-light, body.mini h4.light, body.mini h4.text-light, body.mini h5.light, body.mini h5.text-light, body.mini h6.light, body.mini h6.text-light, body.mini p.light, body.mini p.text-light, body.mini li.light, body.mini li.text-light, body.mini code.light, body.mini code.text-light, body.mini span.light, body.mini span.text-light, body.mini i.light, body.mini i.text-light, body.mini b.light, body.mini b.text-light, body.mini u.light, body.mini u.text-light, body.mini a.light, body.mini a.text-light, body.mini label.light, body.mini label.text-light {
   font-weight: 300;
 }
-body.mini h1.regular, body.mini h1.text-regular, body.mini h2.regular, body.mini h2.text-regular, body.mini h3.regular, body.mini h3.text-regular, body.mini h4.regular, body.mini h4.text-regular, body.mini h5.regular, body.mini h5.text-regular, body.mini h6.regular, body.mini h6.text-regular, body.mini p.regular, body.mini p.text-regular, body.mini li.regular, body.mini li.text-regular, body.mini code.regular, body.mini code.text-regular, body.mini span.regular, body.mini span.text-regular, body.mini i.regular, body.mini i.text-regular, body.mini b.regular, body.mini b.text-regular, body.mini u.regular, body.mini u.text-regular, body.mini a.regular, body.mini a.text-regular {
+body.mini h1.regular, body.mini h1.text-regular, body.mini h2.regular, body.mini h2.text-regular, body.mini h3.regular, body.mini h3.text-regular, body.mini h4.regular, body.mini h4.text-regular, body.mini h5.regular, body.mini h5.text-regular, body.mini h6.regular, body.mini h6.text-regular, body.mini p.regular, body.mini p.text-regular, body.mini li.regular, body.mini li.text-regular, body.mini code.regular, body.mini code.text-regular, body.mini span.regular, body.mini span.text-regular, body.mini i.regular, body.mini i.text-regular, body.mini b.regular, body.mini b.text-regular, body.mini u.regular, body.mini u.text-regular, body.mini a.regular, body.mini a.text-regular, body.mini label.regular, body.mini label.text-regular {
   font-weight: 400;
 }
-body.mini h1.semibold, body.mini h1.text-semibold, body.mini h2.semibold, body.mini h2.text-semibold, body.mini h3.semibold, body.mini h3.text-semibold, body.mini h4.semibold, body.mini h4.text-semibold, body.mini h5.semibold, body.mini h5.text-semibold, body.mini h6.semibold, body.mini h6.text-semibold, body.mini p.semibold, body.mini p.text-semibold, body.mini li.semibold, body.mini li.text-semibold, body.mini code.semibold, body.mini code.text-semibold, body.mini span.semibold, body.mini span.text-semibold, body.mini i.semibold, body.mini i.text-semibold, body.mini b.semibold, body.mini b.text-semibold, body.mini u.semibold, body.mini u.text-semibold, body.mini a.semibold, body.mini a.text-semibold {
+body.mini h1.semibold, body.mini h1.text-semibold, body.mini h2.semibold, body.mini h2.text-semibold, body.mini h3.semibold, body.mini h3.text-semibold, body.mini h4.semibold, body.mini h4.text-semibold, body.mini h5.semibold, body.mini h5.text-semibold, body.mini h6.semibold, body.mini h6.text-semibold, body.mini p.semibold, body.mini p.text-semibold, body.mini li.semibold, body.mini li.text-semibold, body.mini code.semibold, body.mini code.text-semibold, body.mini span.semibold, body.mini span.text-semibold, body.mini i.semibold, body.mini i.text-semibold, body.mini b.semibold, body.mini b.text-semibold, body.mini u.semibold, body.mini u.text-semibold, body.mini a.semibold, body.mini a.text-semibold, body.mini label.semibold, body.mini label.text-semibold {
   font-weight: 600;
 }
-body.mini h1.bold, body.mini h1.text-bold, body.mini h2.bold, body.mini h2.text-bold, body.mini h3.bold, body.mini h3.text-bold, body.mini h4.bold, body.mini h4.text-bold, body.mini h5.bold, body.mini h5.text-bold, body.mini h6.bold, body.mini h6.text-bold, body.mini p.bold, body.mini p.text-bold, body.mini li.bold, body.mini li.text-bold, body.mini code.bold, body.mini code.text-bold, body.mini span.bold, body.mini span.text-bold, body.mini i.bold, body.mini i.text-bold, body.mini b.bold, body.mini b.text-bold, body.mini u.bold, body.mini u.text-bold, body.mini a.bold, body.mini a.text-bold {
+body.mini h1.bold, body.mini h1.text-bold, body.mini h2.bold, body.mini h2.text-bold, body.mini h3.bold, body.mini h3.text-bold, body.mini h4.bold, body.mini h4.text-bold, body.mini h5.bold, body.mini h5.text-bold, body.mini h6.bold, body.mini h6.text-bold, body.mini p.bold, body.mini p.text-bold, body.mini li.bold, body.mini li.text-bold, body.mini code.bold, body.mini code.text-bold, body.mini span.bold, body.mini span.text-bold, body.mini i.bold, body.mini i.text-bold, body.mini b.bold, body.mini b.text-bold, body.mini u.bold, body.mini u.text-bold, body.mini a.bold, body.mini a.text-bold, body.mini label.bold, body.mini label.text-bold {
   font-weight: 700;
 }
-body.mini h1.black, body.mini h1.text-black, body.mini h2.black, body.mini h2.text-black, body.mini h3.black, body.mini h3.text-black, body.mini h4.black, body.mini h4.text-black, body.mini h5.black, body.mini h5.text-black, body.mini h6.black, body.mini h6.text-black, body.mini p.black, body.mini p.text-black, body.mini li.black, body.mini li.text-black, body.mini code.black, body.mini code.text-black, body.mini span.black, body.mini span.text-black, body.mini i.black, body.mini i.text-black, body.mini b.black, body.mini b.text-black, body.mini u.black, body.mini u.text-black, body.mini a.black, body.mini a.text-black {
+body.mini h1.black, body.mini h1.text-black, body.mini h2.black, body.mini h2.text-black, body.mini h3.black, body.mini h3.text-black, body.mini h4.black, body.mini h4.text-black, body.mini h5.black, body.mini h5.text-black, body.mini h6.black, body.mini h6.text-black, body.mini p.black, body.mini p.text-black, body.mini li.black, body.mini li.text-black, body.mini code.black, body.mini code.text-black, body.mini span.black, body.mini span.text-black, body.mini i.black, body.mini i.text-black, body.mini b.black, body.mini b.text-black, body.mini u.black, body.mini u.text-black, body.mini a.black, body.mini a.text-black, body.mini label.black, body.mini label.text-black {
   font-weight: 900;
 }
-body.mini h1.italic, body.mini h2.italic, body.mini h3.italic, body.mini h4.italic, body.mini h5.italic, body.mini h6.italic, body.mini p.italic, body.mini li.italic, body.mini code.italic, body.mini span.italic, body.mini i.italic, body.mini b.italic, body.mini u.italic, body.mini a.italic {
+body.mini h1.italic, body.mini h2.italic, body.mini h3.italic, body.mini h4.italic, body.mini h5.italic, body.mini h6.italic, body.mini p.italic, body.mini li.italic, body.mini code.italic, body.mini span.italic, body.mini i.italic, body.mini b.italic, body.mini u.italic, body.mini a.italic, body.mini label.italic {
   font-style: italic;
 }
-body.mini h1.left, body.mini h1.text-start, body.mini h2.left, body.mini h2.text-start, body.mini h3.left, body.mini h3.text-start, body.mini h4.left, body.mini h4.text-start, body.mini h5.left, body.mini h5.text-start, body.mini h6.left, body.mini h6.text-start, body.mini p.left, body.mini p.text-start, body.mini li.left, body.mini li.text-start, body.mini code.left, body.mini code.text-start, body.mini span.left, body.mini span.text-start, body.mini i.left, body.mini i.text-start, body.mini b.left, body.mini b.text-start, body.mini u.left, body.mini u.text-start, body.mini a.left, body.mini a.text-start {
+body.mini h1.left, body.mini h1.text-start, body.mini h2.left, body.mini h2.text-start, body.mini h3.left, body.mini h3.text-start, body.mini h4.left, body.mini h4.text-start, body.mini h5.left, body.mini h5.text-start, body.mini h6.left, body.mini h6.text-start, body.mini p.left, body.mini p.text-start, body.mini li.left, body.mini li.text-start, body.mini code.left, body.mini code.text-start, body.mini span.left, body.mini span.text-start, body.mini i.left, body.mini i.text-start, body.mini b.left, body.mini b.text-start, body.mini u.left, body.mini u.text-start, body.mini a.left, body.mini a.text-start, body.mini label.left, body.mini label.text-start {
   text-align: left;
 }
-body.mini h1.center, body.mini h1.text-center, body.mini h2.center, body.mini h2.text-center, body.mini h3.center, body.mini h3.text-center, body.mini h4.center, body.mini h4.text-center, body.mini h5.center, body.mini h5.text-center, body.mini h6.center, body.mini h6.text-center, body.mini p.center, body.mini p.text-center, body.mini li.center, body.mini li.text-center, body.mini code.center, body.mini code.text-center, body.mini span.center, body.mini span.text-center, body.mini i.center, body.mini i.text-center, body.mini b.center, body.mini b.text-center, body.mini u.center, body.mini u.text-center, body.mini a.center, body.mini a.text-center {
+body.mini h1.center, body.mini h1.text-center, body.mini h2.center, body.mini h2.text-center, body.mini h3.center, body.mini h3.text-center, body.mini h4.center, body.mini h4.text-center, body.mini h5.center, body.mini h5.text-center, body.mini h6.center, body.mini h6.text-center, body.mini p.center, body.mini p.text-center, body.mini li.center, body.mini li.text-center, body.mini code.center, body.mini code.text-center, body.mini span.center, body.mini span.text-center, body.mini i.center, body.mini i.text-center, body.mini b.center, body.mini b.text-center, body.mini u.center, body.mini u.text-center, body.mini a.center, body.mini a.text-center, body.mini label.center, body.mini label.text-center {
   text-align: center;
 }
-body.mini h1.right, body.mini h1.text-end, body.mini h2.right, body.mini h2.text-end, body.mini h3.right, body.mini h3.text-end, body.mini h4.right, body.mini h4.text-end, body.mini h5.right, body.mini h5.text-end, body.mini h6.right, body.mini h6.text-end, body.mini p.right, body.mini p.text-end, body.mini li.right, body.mini li.text-end, body.mini code.right, body.mini code.text-end, body.mini span.right, body.mini span.text-end, body.mini i.right, body.mini i.text-end, body.mini b.right, body.mini b.text-end, body.mini u.right, body.mini u.text-end, body.mini a.right, body.mini a.text-end {
+body.mini h1.right, body.mini h1.text-end, body.mini h2.right, body.mini h2.text-end, body.mini h3.right, body.mini h3.text-end, body.mini h4.right, body.mini h4.text-end, body.mini h5.right, body.mini h5.text-end, body.mini h6.right, body.mini h6.text-end, body.mini p.right, body.mini p.text-end, body.mini li.right, body.mini li.text-end, body.mini code.right, body.mini code.text-end, body.mini span.right, body.mini span.text-end, body.mini i.right, body.mini i.text-end, body.mini b.right, body.mini b.text-end, body.mini u.right, body.mini u.text-end, body.mini a.right, body.mini a.text-end, body.mini label.right, body.mini label.text-end {
   text-align: right;
 }
-body.mini h1.vertical-align-top, body.mini h2.vertical-align-top, body.mini h3.vertical-align-top, body.mini h4.vertical-align-top, body.mini h5.vertical-align-top, body.mini h6.vertical-align-top, body.mini p.vertical-align-top, body.mini li.vertical-align-top, body.mini code.vertical-align-top, body.mini span.vertical-align-top, body.mini i.vertical-align-top, body.mini b.vertical-align-top, body.mini u.vertical-align-top, body.mini a.vertical-align-top {
+body.mini h1.vertical-align-top, body.mini h2.vertical-align-top, body.mini h3.vertical-align-top, body.mini h4.vertical-align-top, body.mini h5.vertical-align-top, body.mini h6.vertical-align-top, body.mini p.vertical-align-top, body.mini li.vertical-align-top, body.mini code.vertical-align-top, body.mini span.vertical-align-top, body.mini i.vertical-align-top, body.mini b.vertical-align-top, body.mini u.vertical-align-top, body.mini a.vertical-align-top, body.mini label.vertical-align-top {
   vertical-align: top;
 }
-body.mini h1.vertical-align-middle, body.mini h2.vertical-align-middle, body.mini h3.vertical-align-middle, body.mini h4.vertical-align-middle, body.mini h5.vertical-align-middle, body.mini h6.vertical-align-middle, body.mini p.vertical-align-middle, body.mini li.vertical-align-middle, body.mini code.vertical-align-middle, body.mini span.vertical-align-middle, body.mini i.vertical-align-middle, body.mini b.vertical-align-middle, body.mini u.vertical-align-middle, body.mini a.vertical-align-middle {
+body.mini h1.vertical-align-middle, body.mini h2.vertical-align-middle, body.mini h3.vertical-align-middle, body.mini h4.vertical-align-middle, body.mini h5.vertical-align-middle, body.mini h6.vertical-align-middle, body.mini p.vertical-align-middle, body.mini li.vertical-align-middle, body.mini code.vertical-align-middle, body.mini span.vertical-align-middle, body.mini i.vertical-align-middle, body.mini b.vertical-align-middle, body.mini u.vertical-align-middle, body.mini a.vertical-align-middle, body.mini label.vertical-align-middle {
   vertical-align: middle;
 }
-body.mini h1.vertical-align-bottom, body.mini h2.vertical-align-bottom, body.mini h3.vertical-align-bottom, body.mini h4.vertical-align-bottom, body.mini h5.vertical-align-bottom, body.mini h6.vertical-align-bottom, body.mini p.vertical-align-bottom, body.mini li.vertical-align-bottom, body.mini code.vertical-align-bottom, body.mini span.vertical-align-bottom, body.mini i.vertical-align-bottom, body.mini b.vertical-align-bottom, body.mini u.vertical-align-bottom, body.mini a.vertical-align-bottom {
+body.mini h1.vertical-align-bottom, body.mini h2.vertical-align-bottom, body.mini h3.vertical-align-bottom, body.mini h4.vertical-align-bottom, body.mini h5.vertical-align-bottom, body.mini h6.vertical-align-bottom, body.mini p.vertical-align-bottom, body.mini li.vertical-align-bottom, body.mini code.vertical-align-bottom, body.mini span.vertical-align-bottom, body.mini i.vertical-align-bottom, body.mini b.vertical-align-bottom, body.mini u.vertical-align-bottom, body.mini a.vertical-align-bottom, body.mini label.vertical-align-bottom {
   vertical-align: bottom;
 }
-body.mini h1.sans, body.mini h1.text-sans, body.mini h2.sans, body.mini h2.text-sans, body.mini h3.sans, body.mini h3.text-sans, body.mini h4.sans, body.mini h4.text-sans, body.mini h5.sans, body.mini h5.text-sans, body.mini h6.sans, body.mini h6.text-sans, body.mini p.sans, body.mini p.text-sans, body.mini li.sans, body.mini li.text-sans, body.mini code.sans, body.mini code.text-sans, body.mini span.sans, body.mini span.text-sans, body.mini i.sans, body.mini i.text-sans, body.mini b.sans, body.mini b.text-sans, body.mini u.sans, body.mini u.text-sans, body.mini a.sans, body.mini a.text-sans {
+body.mini h1.sans, body.mini h1.text-sans, body.mini h2.sans, body.mini h2.text-sans, body.mini h3.sans, body.mini h3.text-sans, body.mini h4.sans, body.mini h4.text-sans, body.mini h5.sans, body.mini h5.text-sans, body.mini h6.sans, body.mini h6.text-sans, body.mini p.sans, body.mini p.text-sans, body.mini li.sans, body.mini li.text-sans, body.mini code.sans, body.mini code.text-sans, body.mini span.sans, body.mini span.text-sans, body.mini i.sans, body.mini i.text-sans, body.mini b.sans, body.mini b.text-sans, body.mini u.sans, body.mini u.text-sans, body.mini a.sans, body.mini a.text-sans, body.mini label.sans, body.mini label.text-sans {
   font-family: var(--font-sans);
 }
-body.mini h1.serif, body.mini h1.text-serif, body.mini h2.serif, body.mini h2.text-serif, body.mini h3.serif, body.mini h3.text-serif, body.mini h4.serif, body.mini h4.text-serif, body.mini h5.serif, body.mini h5.text-serif, body.mini h6.serif, body.mini h6.text-serif, body.mini p.serif, body.mini p.text-serif, body.mini li.serif, body.mini li.text-serif, body.mini code.serif, body.mini code.text-serif, body.mini span.serif, body.mini span.text-serif, body.mini i.serif, body.mini i.text-serif, body.mini b.serif, body.mini b.text-serif, body.mini u.serif, body.mini u.text-serif, body.mini a.serif, body.mini a.text-serif {
+body.mini h1.serif, body.mini h1.text-serif, body.mini h2.serif, body.mini h2.text-serif, body.mini h3.serif, body.mini h3.text-serif, body.mini h4.serif, body.mini h4.text-serif, body.mini h5.serif, body.mini h5.text-serif, body.mini h6.serif, body.mini h6.text-serif, body.mini p.serif, body.mini p.text-serif, body.mini li.serif, body.mini li.text-serif, body.mini code.serif, body.mini code.text-serif, body.mini span.serif, body.mini span.text-serif, body.mini i.serif, body.mini i.text-serif, body.mini b.serif, body.mini b.text-serif, body.mini u.serif, body.mini u.text-serif, body.mini a.serif, body.mini a.text-serif, body.mini label.serif, body.mini label.text-serif {
   font-family: var(--font-serif);
 }
-body.mini h1.mono, body.mini h1.text-mono, body.mini h2.mono, body.mini h2.text-mono, body.mini h3.mono, body.mini h3.text-mono, body.mini h4.mono, body.mini h4.text-mono, body.mini h5.mono, body.mini h5.text-mono, body.mini h6.mono, body.mini h6.text-mono, body.mini p.mono, body.mini p.text-mono, body.mini li.mono, body.mini li.text-mono, body.mini code.mono, body.mini code.text-mono, body.mini span.mono, body.mini span.text-mono, body.mini i.mono, body.mini i.text-mono, body.mini b.mono, body.mini b.text-mono, body.mini u.mono, body.mini u.text-mono, body.mini a.mono, body.mini a.text-mono {
+body.mini h1.handwriting, body.mini h1.text-serif, body.mini h2.handwriting, body.mini h2.text-serif, body.mini h3.handwriting, body.mini h3.text-serif, body.mini h4.handwriting, body.mini h4.text-serif, body.mini h5.handwriting, body.mini h5.text-serif, body.mini h6.handwriting, body.mini h6.text-serif, body.mini p.handwriting, body.mini p.text-serif, body.mini li.handwriting, body.mini li.text-serif, body.mini code.handwriting, body.mini code.text-serif, body.mini span.handwriting, body.mini span.text-serif, body.mini i.handwriting, body.mini i.text-serif, body.mini b.handwriting, body.mini b.text-serif, body.mini u.handwriting, body.mini u.text-serif, body.mini a.handwriting, body.mini a.text-serif, body.mini label.handwriting, body.mini label.text-serif {
+  font-family: var(--font-handwriting);
+}
+body.mini h1.mono, body.mini h1.text-mono, body.mini h2.mono, body.mini h2.text-mono, body.mini h3.mono, body.mini h3.text-mono, body.mini h4.mono, body.mini h4.text-mono, body.mini h5.mono, body.mini h5.text-mono, body.mini h6.mono, body.mini h6.text-mono, body.mini p.mono, body.mini p.text-mono, body.mini li.mono, body.mini li.text-mono, body.mini code.mono, body.mini code.text-mono, body.mini span.mono, body.mini span.text-mono, body.mini i.mono, body.mini i.text-mono, body.mini b.mono, body.mini b.text-mono, body.mini u.mono, body.mini u.text-mono, body.mini a.mono, body.mini a.text-mono, body.mini label.mono, body.mini label.text-mono {
   font-family: var(--font-mono);
 }
-body.mini h1.font-two, body.mini h1.text-second-font, body.mini h2.font-two, body.mini h2.text-second-font, body.mini h3.font-two, body.mini h3.text-second-font, body.mini h4.font-two, body.mini h4.text-second-font, body.mini h5.font-two, body.mini h5.text-second-font, body.mini h6.font-two, body.mini h6.text-second-font, body.mini p.font-two, body.mini p.text-second-font, body.mini li.font-two, body.mini li.text-second-font, body.mini code.font-two, body.mini code.text-second-font, body.mini span.font-two, body.mini span.text-second-font, body.mini i.font-two, body.mini i.text-second-font, body.mini b.font-two, body.mini b.text-second-font, body.mini u.font-two, body.mini u.text-second-font, body.mini a.font-two, body.mini a.text-second-font {
+body.mini h1.font-two, body.mini h1.text-second-font, body.mini h2.font-two, body.mini h2.text-second-font, body.mini h3.font-two, body.mini h3.text-second-font, body.mini h4.font-two, body.mini h4.text-second-font, body.mini h5.font-two, body.mini h5.text-second-font, body.mini h6.font-two, body.mini h6.text-second-font, body.mini p.font-two, body.mini p.text-second-font, body.mini li.font-two, body.mini li.text-second-font, body.mini code.font-two, body.mini code.text-second-font, body.mini span.font-two, body.mini span.text-second-font, body.mini i.font-two, body.mini i.text-second-font, body.mini b.font-two, body.mini b.text-second-font, body.mini u.font-two, body.mini u.text-second-font, body.mini a.font-two, body.mini a.text-second-font, body.mini label.font-two, body.mini label.text-second-font {
   font-family: var(--font-two);
 }
 body.mini h1, body.mini h2, body.mini h3, body.mini h4, body.mini h5 {
@@ -7162,14 +7234,15 @@ body.mini pre, body.mini .pre {
   white-space: pre-line;
 }
 body.mini code, body.mini .code {
-  padding: calc(var(--padding) * 0.25);
+  padding: calc(var(--padding) * 1);
   background: var(--false-black);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  display: inline;
+  display: inline-block;
   font-family: var(--font-mono);
   font-size: calc(var(--p) * 0.85);
+  line-height: calc(var(--p) * 1);
   margin: 0 calc(var(--margin) * 0.6);
   overflow-x: auto;
   color: var(--white);
@@ -7215,6 +7288,10 @@ body.mini blockquote::after {
   -moz-box-shadow: 0 0 20px rgb(255, 255, 255);
   box-shadow: 0 0 20px rgb(255, 255, 255);
 }
+body.mini .label {
+  color: var(--grey);
+  font-style: italic;
+}
 body.mini .XS, body.mini .xs {
   font-size: calc(var(--p) * 0.7) !important;
   line-height: calc(var(--p) * 1) !important;
@@ -7244,10 +7321,6 @@ body.mini .big {
     font-size: calc(var(--h1) * 1.2) !important;
     line-height: calc(var(--h1) * 1.5) !important;
   }
-}
-body.mini .label {
-  color: var(--grey);
-  font-style: italic;
 }
 body.mini .giant {
   font-size: calc(var(--h1) * 1.2) !important;
@@ -7317,6 +7390,9 @@ body.mini .text-shadowBW-3, body.mini .text-shadow-bw-3 {
 }
 body.mini .text-shadowBW-5, body.mini .text-shadow-bw-5 {
   text-shadow: 3px 5px 0 var(--white), 8px 8px 0 var(--black);
+}
+body.mini [class^=iconoir-] {
+  vertical-align: text-top !important;
 }
 body.mini .vibing {
   display: inline-block;
@@ -7701,6 +7777,9 @@ body.mini .vibing span:nth-child(20) {
   animation-iteration-count: infinite;
   animation-delay: 4s;
   animation-timing-function: ease-in-out;
+}
+body.mini *[class^=iconoir-], body.mini *[class*=" iconoir-"] {
+  vertical-align: middle;
 }
 
 /* ANIMATIONS */
@@ -8162,23 +8241,23 @@ body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item a:hover
 }
 body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item a.active, body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.menu-item a.active {
   background: var(--white);
-  color: var(--main-color);
+  color: var(--link-color);
   display: block;
 }
 @media (min-width: 768px) {
   body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item a.active, body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.menu-item a.active {
-    color: var(--main-color);
+    color: var(--link-color);
     background: transparent;
   }
 }
 body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item a.active::after, body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.menu-item a.active::after {
   width: 0;
-  background: var(--main-color);
+  background: var(--link-color);
 }
 @media (min-width: 768px) {
   body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item a.active::after, body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.menu-item a.active::after {
     width: 100%;
-    background: var(--main-color);
+    background: var(--link-color);
   }
 }
 body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item.active > a, body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item.current-menu-item > a, body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.menu-item.active > a, body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.menu-item.current-menu-item > a {
@@ -8202,32 +8281,32 @@ body.mini header#header .boxes .box.menus .head-menu nav.menu ul li.item.active 
     background: var(--main-color);
   }
 }
-body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu {
+body.mini header#header .boxes .box.menus .head-menu nav.menu ul#page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu {
   background: var(--main-color-dark);
 }
 @media (min-width: 768px) {
-  body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu {
+  body.mini header#header .boxes .box.menus .head-menu nav.menu ul#page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu {
     background: transparent;
   }
 }
 @media (min-width: 768px) {
-  body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu {
-    border-right: 1px solid var(--false-black);
+  body.mini header#header .boxes .box.menus .head-menu nav.menu ul#page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu {
+    border-right: 1px solid var(--light-grey);
     padding: 0 calc(var(--padding) * 0.5);
   }
 }
-body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.menu-item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.menu-item {
+body.mini header#header .boxes .box.menus .head-menu nav.menu ul#page-menu li.item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul#page-menu li.menu-item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.menu-item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.item, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.menu-item {
   font-style: italic;
   font-weight: 300;
 }
-body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.menu-icon, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.menu-icon {
+body.mini header#header .boxes .box.menus .head-menu nav.menu ul#page-menu li.menu-icon, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.menu-icon, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.menu-icon {
   background-color: var(--main-color);
   color: var(--main-color-dark);
   padding: var(--padding);
   border: 5px solid var(--main-color-dark);
 }
 @media (min-width: 768px) {
-  body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.menu-icon, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.menu-icon {
+  body.mini header#header .boxes .box.menus .head-menu nav.menu ul#page-menu li.menu-icon, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.page-menu li.menu-icon, body.mini header#header .boxes .box.menus .head-menu nav.menu ul.pageMenu li.menu-icon {
     background-color: transparent;
     color: var(--grey);
     padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);

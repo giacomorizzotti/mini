@@ -68,7 +68,7 @@ body {
       }
     }
 
-    h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, {
+    h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, label {
       &.thin, &.text-thin {
         font-weight: 100;
       }
@@ -116,6 +116,9 @@ body {
       }
       &.serif, &.text-serif {
         font-family: var(--font-serif);
+      }
+      &.handwriting, &.text-serif {
+        font-family: var(--font-handwriting);
       }
       &.mono, &.text-mono {
         font-family: var(--font-mono);
@@ -226,14 +229,15 @@ body {
     }
 
     code, .code {
-      padding: calc(var(--padding)*0.25);
+      padding: calc( var(--padding) * 1 );
       background: var(--false-black);
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
-      display: inline;
+      display: inline-block;
       font-family: var(--font-mono);
       font-size: calc(var(--p)*.85);
+      line-height: calc(var(--p) * 1);
       margin: 0 calc(var(--margin)*0.6);
       overflow-x: auto;
       color: var(--white);
@@ -280,6 +284,11 @@ body {
         box-shadow: 0 0 20px rgba(255,255,255,1);
       }
     }
+    
+    .label {
+      color: var(--grey);
+      font-style: italic;
+    }
 
     /* SUPER SMALL TEXT */
     .XS, .xs {
@@ -319,11 +328,6 @@ body {
         font-size: calc(var(--h1) * 1.2)!important;
         line-height: calc(var(--h1) * 1.5)!important;
       }
-    }
-    
-    .label {
-      color: var(--grey);
-      font-style: italic;
     }
 
     /* GIANT TEXT */
@@ -407,6 +411,11 @@ body {
           }
         }
       }
+      
+    /* iconoir */
+    [class^=iconoir-] {
+      vertical-align: text-top!important;
+    }
 
     /* VIBING TEXT */
     @mixin transition {
@@ -440,6 +449,11 @@ body {
           animation-timing-function: ease-in-out;
         }
       }
+    }
+
+    /* iconoir */
+    *[class^='iconoir-'], *[class*=' iconoir-'] {
+      vertical-align: middle;;
     }
 
   }

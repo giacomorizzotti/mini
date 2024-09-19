@@ -252,12 +252,14 @@ body {
       margin-top: 0;
       margin-bottom: 0;
       padding: 0;
+      /*
       .boxes {
         .box {
           margin-top: 0;
           margin-bottom: 0;
         }
       }
+      */
     }
 
     /* FLEX BOXES */
@@ -267,6 +269,8 @@ body {
       width: calc(100% + (var(--margin) * 2));
       flex-flow: row wrap;
       position: relative;
+      align-items: flex-start;
+      align-content: flex-start;
 
       &-d {
         &-row {

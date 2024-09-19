@@ -17,24 +17,6 @@ def randomCode(n):
 
 def basicContext(request, context):
 
-    # viewmoney
-    viewmoney = str(request.GET.get('viewmoney'))
-    if viewmoney is not None:
-        if viewmoney == 'True' or viewmoney == 'False':
-            request.session['viewmoney'] = viewmoney
-
-    # view personal finances
-    viewpersonal = str(request.GET.get('viewpersonal'))
-    if viewpersonal is not None:
-        if viewpersonal == 'True' or viewpersonal == 'False':
-            request.session['viewpersonal'] = viewpersonal
-
-    # view business finances
-    viewbusiness = str(request.GET.get('viewbusiness'))
-    if viewbusiness is not None:
-        if viewbusiness == 'True' or viewbusiness == 'False':
-            request.session['viewbusiness'] = viewbusiness
-
     mgmt_app = 'aroma_management_backoffice.apps.AromaManagementBackofficeConfig' in settings.INSTALLED_APPS
     context['mgmt_app'] = mgmt_app
 

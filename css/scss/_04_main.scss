@@ -189,51 +189,63 @@ body {
     /* fixed height */
     .fh, .full-height {
       min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-      min-height: calc(var(--vh, 1vh) * 100);
+      min-height: 100dvh; /* Experimental -> Testing dvh */
+      //min-height: calc(var(--vh, 1vh) * 100);
     }
     .fhf, .full-height-fixed {
       height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 100);
+      height: 100dvh; /* Experimental -> Testing dvh */
+      //height: calc(var(--vh, 1vh) * 100);
     }
     .hfh, .half-full-height {
       min-height: 50vh; /* Fallback for browsers that do not support Custom Properties */
-      min-height: calc(var(--vh, 1vh) * 50);
+      min-height: 50dvh; /* Experimental -> Testing dvh */
+      //min-height: calc(var(--vh, 1vh) * 50);
     }
     .hfhf, .half-full-height-fixed {
       height: 50vh; /* Fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 50);
+      height: 50dvh; /* Experimental -> Testing dvh */
+      //height: calc(var(--vh, 1vh) * 50);
     }
     .one-quarter-full-height {
       min-height: 25vh; /* Fallback for browsers that do not support Custom Properties */
-      min-height: calc(var(--vh, 1vh) * 25);
+      min-height: 25dvh; /* Experimental -> Testing dvh */
+      //min-height: calc(var(--vh, 1vh) * 25);
     }
     .one-quarter-height-fixed {
       height: 25vh; /* Fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 25);
+      height: 25dvh; /* Experimental -> Testing dvh */
+      //height: calc(var(--vh, 1vh) * 25);
     }
     .three-quarter-full-height {
       min-height: 75vh; /* Fallback for browsers that do not support Custom Properties */
-      min-height: calc(var(--vh, 1vh) * 75);
+      min-height: 75dvh; /* Experimental -> Testing dvh */
+      //min-height: calc(var(--vh, 1vh) * 75);
     }
     .three-quarter-height-fixed {
       height: 75vh; /* Fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 75);
+      height: 75dvh; /* Experimental -> Testing dvh */
+      //height: calc(var(--vh, 1vh) * 75);
     }
     .one-third-full-height {
       min-height: 33.3333333vh; /* Fallback for browsers that do not support Custom Properties */
-      min-height: calc(var(--vh, 1vh) * 33.3333333);
+      min-height: 33.3333333dvh; /* Experimental -> Testing dvh */
+      //min-height: calc(var(--vh, 1vh) * 33.3333333);
     }
     .one-third-height-fixed {
       height: 33.3333333vh; /* Fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 33.3333333);
+      height: 33.3333333dvh; /* Experimental -> Testing dvh */
+      //height: calc(var(--vh, 1vh) * 33.3333333);
     }
     .two-third-full-height {
       min-height: 66.666666vh; /* Fallback for browsers that do not support Custom Properties */
-      min-height: calc(var(--vh, 1vh) * 66.666666);
+      min-height: 66.666666dvh; /* Experimental -> Testing dvh */
+      //min-height: calc(var(--vh, 1vh) * 66.666666);
     }
     .two-third-height-fixed {
       height: 66.666666vh; /* Fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 66.666666);
+      height: 66.666666dvh; /* Experimental -> Testing dvh */
+      //height: calc(var(--vh, 1vh) * 66.666666);
     }
 
     .mh-100 {
@@ -390,6 +402,14 @@ body {
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIiGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MDkrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkZjAzYzJlNS01NGY0LTRmNDItYmU2Ni03NWJlN2JiMzdhODciIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDNlOGFhNC05ZTcyLTA1NDQtYWRkNi1mN2IwOWUxMzFjNDgiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQxMmExNGRiLTc2NzQtZWY0Yi1hYTI5LTVkZjk2NjA2NjQ5MyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xNFQxNzozNzowOSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMGNhNjNiMi1jOTFkLWQ1NDEtOGQzZS0xOWFiMDJkOTQwYjciIHN0RXZ0OndoZW49IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGYwM2MyZTUtNTRmNC00ZjQyLWJlNjYtNzViZTdiYjM3YTg3IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwY2E2M2IyLWM5MWQtZDU0MS04ZDNlLTE5YWIwMmQ5NDBiNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KoMGWAAAAEUlEQVQIHWNgYGD4DwRgEowBT8IJ98nucTsAAAAASUVORK5CYII=');
     }
 
+    /* HR */
+    hr {
+      border-style: solid;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
+
     /* BUTTONS */
     .btn {
       color: var(--link-color);
@@ -476,6 +496,48 @@ body {
       visibility: visible!important;
       transition: all 0.15s ease;
     }
+    &.top {
+      .top-hidden, .scroll-shown {
+        display: block!important;
+        opacity: 0!important;
+        visibility: hidden!important;
+        width: 0!important;
+        height: 0!important;
+        transition: all 0.15s ease;
+        margin:0!important;
+        padding:0!important;
+        min-width: 0!important;
+        min-height: 0!important;
+        overflow: hidden;
+        border:0!important;
+      }
+      .top-shown, .scroll-hidden {
+        opacity: 1!important;
+        visibility: visible!important;
+        transition: all 0.15s ease;
+      }
+    }
+    &.scroll {
+      .top-shown, .scroll-hidden {
+        display: block!important;
+        opacity: 0!important;
+        visibility: hidden!important;
+        width: 0!important;
+        height: 0!important;
+        transition: all 0.15s ease;
+        margin:0!important;
+        padding:0!important;
+        min-width: 0!important;
+        min-height: 0!important;
+        overflow: hidden;
+        border:0!important;
+      }
+      .top-hidden, .scroll-shown {
+        opacity: 1!important;
+        visibility: visible!important;
+        transition: all 0.15s ease;
+      }
+    }
 
     /* checkboxes */
     input[type="checkbox"] {
@@ -550,7 +612,6 @@ body {
     input[type="radio"] {
       display: none;
       &+label {
-        background-color: var(--false-white);
         background-color: var(--white);
       }
       &:checked+label {
@@ -564,9 +625,11 @@ body {
     form {
       margin: 0 0 calc( var(--margin) * 2 ) 0;
       label {
-        font-size: calc( var(--p) * 0.75 );
+        font-size: calc( var(--p) * 1 );
+        color: var(--grey);
+        line-height: 1;
         display: block;
-        margin: 0 0 calc( var(--margin) * 0.5) 0;
+        margin: 0 0 calc( var(--margin) * 0.75) 0;
       }
       input, textarea, select {
         display: block;
@@ -653,15 +716,18 @@ body {
               text-align: center;
               background-color: var(--link-color);
               color: var(--white);
-              font-size: calc( var(--p) * 1.25 );
+              font-size: calc( var(--p) * 1.75 );
               line-height: 1;
               height: 8vw;
               max-height: 48px;
               width: 8vw;
               max-width: 48px;
-              padding: calc( var(--padding) * 1 );
+              padding: 0;
               margin: 0;
               @include borderRadius(50%);
+              @include sm {
+                padding: calc( var(--padding) * 1 );
+              }
             }
             .label {
               display: none;
@@ -709,7 +775,7 @@ body {
                 margin: 0;
                 padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 1.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 );
                 @include borderRadius(calc( 40px + var(--padding) * 0.5 ));
-                @include boxShadow(0, 0, rgb(0 0 0 /35%));
+                @include boxShadow(0, 10px, rgb(0 0 0 /15%));
                 .icon {
                   display: flex;
                   justify-content: center;
@@ -723,11 +789,15 @@ body {
                   max-height: 48px;
                   width: 8vw;
                   max-width: 48px;
-                  padding: calc( var(--padding) * 1 );
+                  padding: calc( var(--padding) * 0 );
                   margin: 0 var(--margin) 0 0;
                   @include borderRadius(50%);
                   &:hover, &.active {
                     background-color: var(--link-hover-color);
+                  }
+                  @include sm {
+                    font-size: calc( var(--p) * 1.5 );
+                    padding: calc( var(--padding) * 1 );
                   }
                 }
                 &:hover, &.active {
