@@ -105,48 +105,48 @@
 }
 
 @include smDown {
-  .smUp, .sm-up {
+  .sm-up {
     display: none!important;
   }
 }
 @include mdDown {
-  .mdUp, .md-up {
+  .md-up {
     display: none!important;
   }
 }
 @include lgDown {
-  .lgUp, .lg-up {
+  .lg-up {
     display: none!important;
   }
 }
 @include xlDown {
-  .xlUp, .xl-up {
+  .xl-up {
     display: none!important;
   }
 }
 @include xxlDown {
-  .xxlUp, .xxl-up {
+  .xxl-up {
     display: none!important;
   }
 }
 
 @include smOnly {
-  .NOsm, .no-sm {
+  .no-sm {
     display: none!important;
   }
 }
 @include mdOnly {
-  .NOmd, .no-md {
+  .no-md {
     display: none!important;
   }
 }
 @include xlOnly {
-  .NOxl, .no-xl {
+  .no-xl {
     display: none!important;
   }
 }
 @include xxlOnly {
-  .NOxxl, .no-xxl {
+  .no-xxl {
     display: none!important;
   }
 }
@@ -154,31 +154,31 @@
 
 /* breakpoint NO visibility */
 @include sm {
-  .smDown, .sm-down {
+  .sm-down {
     display: none!important;
   }
 }
 
 @include md {
-  .mdDown, .md-down {
+  .md-down {
     display: none!important;
   }
 }
 
 @include lg {
-  .lgDown, .lg-down {
+  .lg-down {
     display: none!important;
   }
 }
 
 @include xl {
-  .xlDown, .xl-down {
+  .xl-down {
     display: none!important;
   }
 }
 
 @include xxl {
-  .xxlDown, .xxl-down {
+  .xxl-down {
     display: none!important;
   }
 }

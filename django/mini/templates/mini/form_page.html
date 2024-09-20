@@ -3,16 +3,16 @@
 {% load i18n %}
 <section id="content" class="container fw">
     <div class="container">
-        <div class="boxes fh boxes-v-start">
+        <div class="boxes fh">
             {% if form %}
-            <div class="box box50 ph2 box-shadow b-rad-5">
-                <form action="" method="post" class="m0">
+            <div class="box box-50 p-2 box-shadow b-rad-5">
+                <form action="" method="post" class="m-0">
                     {% csrf_token %}
                     {{ form }}
                     <div class="boxes">
-                        <div class="box box100 p0">
+                        <div class="box box-100 p-0">
                             
-                            <input type="submit" value="{% if submit_button %}{{ submit_button }}{% else %}{% translate 'save (btn)' %}{% endif %}" class="btn colThreeBtnBg">
+                            <input type="submit" value="{% if submit_button %}{{ submit_button }}{% else %}{% translate 'save (btn)' %}{% endif %}" class="btn third-color-dark-btn-bg">
 
                         </div>
                     </div>

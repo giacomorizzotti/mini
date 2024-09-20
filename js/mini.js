@@ -765,7 +765,7 @@ if (readCookie('lang') == 'en') {
 
 // STARs background
 window.addEventListener('load', function (){
-    let starsBg = document.querySelectorAll('.starsBg');
+    let starsBg = document.querySelectorAll('.stars-bg');
     starsBg.forEach(function(stars){
         let divStarOne = document.createElement("div");
         let divStarTwo = document.createElement("div");

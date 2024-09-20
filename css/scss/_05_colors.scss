@@ -8,17 +8,17 @@ body {
       "wh" var(--white) var(--black),
       "white" var(--white) var(--black),
       "fw" var(--false-white) var(--black),
-      "false-white" var(--false-white) var(--black),
+      //"false-white" var(--false-white) var(--black),
       "light-grey" var(--light-grey) var(--black),
       "grey" var(--grey) var(--white),
       "dark-grey" var(--dark-grey) var(--white),
       "fb" var(--false-black) var(--white),
-      "false-black" var(--false-black) var(--white),
+      //"false-black" var(--false-black) var(--white),
       "bk" var(--black) var(--white),
       "black" var(--black) var(--white),
       "col" var(--main-color) var(--white),
       "color" var(--main-color) var(--white),
-      "main-color" var(--main-color) var(--white),
+      //"main-color" var(--main-color) var(--white),
       "color-dark" var(--main-color-dark) var(--white),
       "main-color-dark" var(--main-color-dark) var(--white),
       "second-color" var(--second-color) var(--white),
@@ -29,15 +29,13 @@ body {
       "fourth-color-dark" var(--fourth-color-dark) var(--white),
       "link" var(--link-color) var(--white),
       "link-color" var(--link-color) var(--white),
-      "link-hover" var(--link-hover-color) var(--white),
+      "link-hover-color" var(--link-hover-color) var(--white),
       "info" var(--info) var(--white),
       "success" var(--success) var(--white),
       "warning" var(--warning) var(--white),
       "danger" var(--danger) var(--white),
       "bad" var(--bad) var(--white),
-      "acidGreen" var(--acid-green) var(--white),
       "acid-green" var(--acid-green) var(--white),
-      "gingerBread" var(--gingerbread) var(--white),
       "ginger-bread" var(--gingerbread) var(--white),
 
       "mini" var(--mini-color) var(--white),
@@ -145,7 +143,7 @@ body {
         &Txt, &-txt, &-text {
           color: $colorcode!important;
         }
-        &Box, &-box {
+        &-box {
           background: $colorcode!important;
           color: $colortext!important;
           padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
@@ -160,10 +158,10 @@ body {
             margin: 0 4px 2px 0;
           }
         }
-        &Bg, &-bg {
+        &-bg {
           background-color: $colorcode!important;
         }
-        &Btn, &-btn {
+        &-btn {
           color: $colorcode!important;
           border-color: $colorcode!important;
           &:hover, &.clicked {
@@ -171,7 +169,7 @@ body {
             background: $colorcode!important;
             border-color: $colorcode!important;
           }
-          &Bg, &-bg {
+          &-bg {
             color: $colortext!important;
             border-color: $colorcode!important;
             background: $colorcode!important;
@@ -184,7 +182,7 @@ body {
         }
       }
       input[type="radio"]+label.#{$colorname} {
-        &Btn, &-btn {
+        &-btn {
           color: $colorcode!important;
           border-color: $colorcode!important;
           &:hover {
@@ -192,7 +190,7 @@ body {
             background: $colorcode!important;
             border-color: $colorcode!important;
           }
-          &Bg, &-bg {
+          &-bg {
             color: $colortext!important;
             border-color: $colorcode!important;
             background: $colorcode!important;
@@ -205,11 +203,11 @@ body {
         }
       }
       input[type="radio"]:checked+label.#{$colorname} {
-        &Btn, &-btn {
+        &-btn {
           color: $colortext!important;
           background: $colorcode!important;
           border-color: $colorcode!important;
-          &Bg, &-bg {
+          &-bg {
             color: $colorcode!important;
             border-color: $colorcode!important;
             background: transparent!important;

@@ -255,6 +255,143 @@ body {
     }
 
     /* FLEX BOXES */
+    .boxes {
+      display: flex;
+      margin: 0 calc(var(--margin) * -1);
+      width: calc(100% + (var(--margin) * 2));
+      flex-flow: row wrap;
+      position: relative;
+      align-items: flex-start;
+      align-content: flex-start;
+
+      .box {
+        position: relative;
+        margin: calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1);
+        padding: calc(var(--padding) * 1);
+        flex-flow: row wrap;
+        align-content: flex-start;
+        @include width(calc(100% - (var(--margin) * 2)));
+        &.box-8, &.box-10, &.box-12, &.box-16, &.box-20, &.box-25, &.box-30, &.box-33, &.box-40, &.box-50, &.box-60, &.box-66, &.box-70, &.box-75, &.box-80, &.box-100 {
+          @include width(calc(100% - (var(--margin) * 2)));
+        }
+        @include smDown {
+          &.f33, &.f-33 {
+            @include width(calc(33.333333% - (var(--margin) * 2)));
+          }
+          &.f50, &.f-50 {
+            @include width(calc(50% - (var(--margin) * 2)));
+          }
+        }
+      }
+
+    }
+
+    @include sm {
+      .boxes {
+        margin: 0 calc(var(--margin) * -1);
+        width: calc(100% + (var(--margin) * 2));
+        .box {
+          @include width(auto);
+          margin: calc(var(--margin) * 1);
+          padding: calc(var(--padding) * 1);
+          &.box-8 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-10 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-12 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-16 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-20 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-25 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-30 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-33 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-40 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-60 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-66 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-70 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box-75 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box-80 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+      }
+    }
+
+    // Medium devices
+    @include md {
+      .boxes {
+        margin: 0 calc( var(--margin) * -1 );
+        width: calc(100% + (var(--margin) * 2));
+        .box {
+          margin: var(--margin);
+          padding: var(--padding);
+          &.box-8 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box-10 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box-12 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box-16 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box-20 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-25 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-30 {@include width(calc(30% - (var(--margin) * 2)));}
+          &.box-33 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box-40 {@include width(calc(40% - (var(--margin) * 2)));}
+          &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-60 {@include width(calc(60% - (var(--margin) * 2)));}
+          &.box-66 {@include width(calc(66.666666% - (var(--margin) * 2)));}
+          &.box-70 {@include width(calc(70% - (var(--margin) * 2)));}
+          &.box-75 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-80 {@include width(calc(100% - (var(--margin) * 2)));}
+          &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+      }
+    }
+
+    // Large devices
+
+    @include lg {
+      .boxes {
+        .box {
+          &.box-8 {@include width(calc(16.666666% - (var(--margin) * 2)));}
+          &.box-10 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box-12 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box-16 {@include width(calc(16.666666% - (var(--margin) * 2)));}
+          &.box-20 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box-25 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box-30 {@include width(calc(30% - (var(--margin) * 2)));}
+          &.box-33 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box-40 {@include width(calc(40% - (var(--margin) * 2)));}
+          &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-60 {@include width(calc(60% - (var(--margin) * 2)));}
+          &.box-66 {@include width(calc(66.666666% - (var(--margin) * 2)));}
+          &.box-70 {@include width(calc(70% - (var(--margin) * 2)));}
+          &.box-75 {@include width(calc(75% - (var(--margin) * 2)));}
+          &.box-80 {@include width(calc(80% - (var(--margin) * 2)));}
+          &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+      }
+    }
+
+    // Extra large devices
+
+    @include xl {
+      .boxes {
+        .box {
+          &.box-8 {@include width(calc(8.333333% - (var(--margin) * 2)));}
+          &.box-10 {@include width(calc(10% - (var(--margin) * 2)));}
+          &.box-12 {@include width(calc(12.5% - (var(--margin) * 2)));}
+          &.box-16 {@include width(calc(16.666666% - (var(--margin) * 2)));}
+          &.box-20 {@include width(calc(20% - (var(--margin) * 2)));}
+          &.box-25 {@include width(calc(25% - (var(--margin) * 2)));}
+          &.box-30 {@include width(calc(30% - (var(--margin) * 2)));}
+          &.box-33 {@include width(calc(33.333333% - (var(--margin) * 2)));}
+          &.box-40 {@include width(calc(40% - (var(--margin) * 2)));}
+          &.box-50 {@include width(calc(50% - (var(--margin) * 2)));}
+          &.box-60 {@include width(calc(60% - (var(--margin) * 2)));}
+          &.box-66 {@include width(calc(66.666666% - (var(--margin) * 2)));}
+          &.box-70 {@include width(calc(70% - (var(--margin) * 2)));}
+          &.box-75 {@include width(calc(75% - (var(--margin) * 2)));}
+          &.box-80 {@include width(calc(80% - (var(--margin) * 2)));}
+          &.box-100 {@include width(calc(100% - (var(--margin) * 2)));}
+        }
+      }
+    }
+
     
     $width: 
       "8" 100% 50% 33.333333% 16.666666% 8.333333%,
@@ -307,16 +444,16 @@ body {
         @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL in $width {
           &-#{$widthLabel} {
             @include width( calc( $widthPercentageSM - (var(--margin) * 2) ) );
-            @include sm {
+            @media (min-width: $screen-sm-min) {
               @include width( calc( $widthPercentageMD - (var(--margin) * 2) ) );
             }
-            @include md {
+            @media (min-width: $screen-md-min) {
               @include width( calc( $widthPercentageLG - (var(--margin) * 2) ) );
             }
-            @include lg {
+            @media (min-width: $screen-lg-min) {
               @include width( calc( $widthPercentageXL - (var(--margin) * 2) ) );
             }
-            @include xl {
+            @media (min-width: $screen-xl-min) {
               @include width( calc( $widthPercentageXXL - (var(--margin) * 2) ) );
             }
           }

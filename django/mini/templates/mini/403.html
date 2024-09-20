@@ -3,13 +3,13 @@
 {% block content %}
 {% load i18n %}
 <section>
-    <div class="container fw warningBg">
+    <div class="container fw warning-bg">
         <div class="container">
-            <div class="boxes fh space-top-bot boxes-vv-center">
-                <div class="box box100">
-                    <h1 class="center whTxt" style="font-size: 15vw; line-height: 0.8;">403</h1>
-                    <p class="whTxt center big up-case italic">{% translate "forbidden access" %}</p>
-                    <p class="center"><a href="{% url 'home' %}" class="btn whBtnBg">home</a></p>
+            <div class="boxes fh space-top-bot align-items-center">
+                <div class="box box-100">
+                    <h1 class="center wh-text" style="font-size: 15vw; line-height: 0.8;">403</h1>
+                    <p class="wh-text center big up-case italic">{% translate "forbidden access" %}</p>
+                    <p class="center"><a href="{% url 'home' %}" class="btn wh-btn-bg">home</a></p>
                 </div>
             </div>
         </div>
