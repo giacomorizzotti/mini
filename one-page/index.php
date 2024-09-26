@@ -128,9 +128,9 @@
     <footer id="footer" class="footer">
         <div class="container space-top-bot">
             <div class="boxes">
-                <div class="box box-33 footer-info b-rad-10">
+                <div class="box box-33 footer-info">
                     <p class=""><?php echo date("Y"); ?>&nbsp;©&nbsp;<span class="bold">uwa.agency</span></p>
-                    <p class="s">A <a href="https://mini.uwa.agency/" target="_blank" class="mini-text"><i>mini</i></a> based website by <a href="https://www.uwa.agency/" target="_blank" class="miniTxt"><strong>UWA</strong></a></p>
+                    <p class="s">A <a href="https://mini.uwa.agency/" target="_blank" class="mini-text"><i>mini</i></a> based website by <a href="https://www.uwa.agency/" target="_blank" class="mini-text"><strong>UWA</strong></a></p>
                 </div>
                 <div class="box box-33 footer-logo">
                     <a href="#top" class=""><img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem" alt="emblem"/></a>

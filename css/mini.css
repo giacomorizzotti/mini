@@ -1894,30 +1894,6 @@ body.mini {
   /* sep */
   /* overflow HIDDEN */
   /* fixed height */
-  /* parallax */
-  /*
-  .px {
-    perspective: 1px;
-    -webkit-perspective: 1px;
-    perspective-origin: 50%;
-    height: 100vh;
-    overflow-x: hidden;
-    //overflow-y: auto;
-    .pxGroup {
-      position: relative;
-      height: 100vh;
-      transform-style: preserve-3d;
-    }
-    .pxLayer {
-      padding-top: 100vh;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-  }
-  */
   /* ELEMENTS POSITIONING */
   /* horizontal */
   /* vertical */
@@ -2055,31 +2031,31 @@ body.mini .m-4 {
 body.mini .m-5 {
   margin: calc(var(--margin) * 5) !important;
 }
-body.mini .mt-0, body.mini .mt-0 {
+body.mini .mt-0 {
   margin-top: 0 !important;
 }
-body.mini .mt-05, body.mini .mt-05 {
+body.mini .mt-05 {
   margin-top: calc(var(--margin) * 0.5) !important;
 }
-body.mini .mt-1, body.mini .mt-1 {
+body.mini .mt-1 {
   margin-top: calc(var(--margin) * 1) !important;
 }
-body.mini .mt-15, body.mini .mt-15 {
+body.mini .mt-15 {
   margin-top: calc(var(--margin) * 1.5) !important;
 }
-body.mini .mt-2, body.mini .mt-2 {
+body.mini .mt-2 {
   margin-top: calc(var(--margin) * 2) !important;
 }
-body.mini .mt-25, body.mini .mt-25 {
+body.mini .mt-25 {
   margin-top: calc(var(--margin) * 2.5) !important;
 }
-body.mini .mt-3, body.mini .mt-3 {
+body.mini .mt-3 {
   margin-top: calc(var(--margin) * 3) !important;
 }
-body.mini .mt-4, body.mini .mt-4 {
+body.mini .mt-4 {
   margin-top: calc(var(--margin) * 4) !important;
 }
-body.mini .mt-5, body.mini .mt-5 {
+body.mini .mt-5 {
   margin-top: calc(var(--margin) * 5) !important;
 }
 body.mini .me-0, body.mini .mr-0 {
@@ -2109,31 +2085,31 @@ body.mini .me-4, body.mini .mr-4 {
 body.mini .me-5, body.mini .mr-5 {
   margin-right: calc(var(--margin) * 5) !important;
 }
-body.mini .mb-0, body.mini .mb-0 {
+body.mini .mb-0 {
   margin-bottom: 0 !important;
 }
-body.mini .mb-05, body.mini .mb-05 {
+body.mini .mb-05 {
   margin-bottom: calc(var(--margin) * 0.5) !important;
 }
-body.mini .mb-1, body.mini .mb-1 {
+body.mini .mb-1 {
   margin-bottom: calc(var(--margin) * 1) !important;
 }
-body.mini .mb-15, body.mini .mb-15 {
+body.mini .mb-15 {
   margin-bottom: calc(var(--margin) * 1.5) !important;
 }
-body.mini .mb-2, body.mini .mb-2 {
+body.mini .mb-2 {
   margin-bottom: calc(var(--margin) * 2) !important;
 }
-body.mini .mb-25, body.mini .mb-25 {
+body.mini .mb-25 {
   margin-bottom: calc(var(--margin) * 2.5) !important;
 }
-body.mini .mb-3, body.mini .mb-3 {
+body.mini .mb-3 {
   margin-bottom: calc(var(--margin) * 3) !important;
 }
-body.mini .mb-4, body.mini .mb-4 {
+body.mini .mb-4 {
   margin-bottom: calc(var(--margin) * 4) !important;
 }
-body.mini .mb-5, body.mini .mb-5 {
+body.mini .mb-5 {
   margin-bottom: calc(var(--margin) * 5) !important;
 }
 body.mini .ms-0, body.mini .ml-0 {
@@ -2163,75 +2139,75 @@ body.mini .ms-4, body.mini .ml-4 {
 body.mini .ms-5, body.mini .ml-5 {
   margin-left: calc(var(--margin) * 5) !important;
 }
-body.mini .m-y-0, body.mini .m-v-0, body.mini .my-0, body.mini .mv-0 {
+body.mini .my-0, body.mini .mv-0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-body.mini .m-y-05, body.mini .m-v-05, body.mini .my-05, body.mini .mv-05 {
+body.mini .my-05, body.mini .mv-05 {
   margin-top: calc(var(--margin) * 0.5) !important;
   margin-bottom: calc(var(--margin) * 0.5) !important;
 }
-body.mini .m-y-1, body.mini .m-v-1, body.mini .my-1, body.mini .mv-1 {
+body.mini .my-1, body.mini .mv-1 {
   margin-top: calc(var(--margin) * 1) !important;
   margin-bottom: calc(var(--margin) * 1) !important;
 }
-body.mini .m-y-15, body.mini .m-v-15, body.mini .my-15, body.mini .mv-15 {
+body.mini .my-15, body.mini .mv-15 {
   margin-top: calc(var(--margin) * 1.5) !important;
   margin-bottom: calc(var(--margin) * 1.5) !important;
 }
-body.mini .m-y-2, body.mini .m-v-2, body.mini .my-2, body.mini .mv-2 {
+body.mini .my-2, body.mini .mv-2 {
   margin-top: calc(var(--margin) * 2) !important;
   margin-bottom: calc(var(--margin) * 2) !important;
 }
-body.mini .m-y-25, body.mini .m-v-25, body.mini .my-25, body.mini .mv-25 {
+body.mini .my-25, body.mini .mv-25 {
   margin-top: calc(var(--margin) * 2.5) !important;
   margin-bottom: calc(var(--margin) * 2.5) !important;
 }
-body.mini .m-y-3, body.mini .m-v-3, body.mini .my-3, body.mini .mv-3 {
+body.mini .my-3, body.mini .mv-3 {
   margin-top: calc(var(--margin) * 3) !important;
   margin-bottom: calc(var(--margin) * 3) !important;
 }
-body.mini .m-y-4, body.mini .m-v-4, body.mini .my-4, body.mini .mv-4 {
+body.mini .my-4, body.mini .mv-4 {
   margin-top: calc(var(--margin) * 4) !important;
   margin-bottom: calc(var(--margin) * 4) !important;
 }
-body.mini .m-y-5, body.mini .m-v-5, body.mini .my-5, body.mini .mv-5 {
+body.mini .my-5, body.mini .mv-5 {
   margin-top: calc(var(--margin) * 5) !important;
   margin-bottom: calc(var(--margin) * 5) !important;
 }
-body.mini .m-x-0, body.mini .m-h-0, body.mini .mx-0, body.mini .mh-0 {
+body.mini .mx-0, body.mini .mh-0 {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-body.mini .m-x-05, body.mini .m-h-05, body.mini .mx-05, body.mini .mh-05 {
+body.mini .mx-05, body.mini .mh-05 {
   margin-left: calc(var(--margin) * 0.5) !important;
   margin-right: calc(var(--margin) * 0.5) !important;
 }
-body.mini .m-x-1, body.mini .m-h-1, body.mini .mx-1, body.mini .mh-1 {
+body.mini .mx-1, body.mini .mh-1 {
   margin-left: calc(var(--margin) * 1) !important;
   margin-right: calc(var(--margin) * 1) !important;
 }
-body.mini .m-x-15, body.mini .m-h-15, body.mini .mx-15, body.mini .mh-15 {
+body.mini .mx-15, body.mini .mh-15 {
   margin-left: calc(var(--margin) * 1.5) !important;
   margin-right: calc(var(--margin) * 1.5) !important;
 }
-body.mini .m-x-2, body.mini .m-h-2, body.mini .mx-2, body.mini .mh-2 {
+body.mini .mx-2, body.mini .mh-2 {
   margin-left: calc(var(--margin) * 2) !important;
   margin-right: calc(var(--margin) * 2) !important;
 }
-body.mini .m-x-25, body.mini .m-h-25, body.mini .mx-25, body.mini .mh-25 {
+body.mini .mx-25, body.mini .mh-25 {
   margin-left: calc(var(--margin) * 2.5) !important;
   margin-right: calc(var(--margin) * 2.5) !important;
 }
-body.mini .m-x-3, body.mini .m-h-3, body.mini .mx-3, body.mini .mh-3 {
+body.mini .mx-3, body.mini .mh-3 {
   margin-left: calc(var(--margin) * 3) !important;
   margin-right: calc(var(--margin) * 3) !important;
 }
-body.mini .m-x-4, body.mini .m-h-4, body.mini .mx-4, body.mini .mh-4 {
+body.mini .mx-4, body.mini .mh-4 {
   margin-left: calc(var(--margin) * 4) !important;
   margin-right: calc(var(--margin) * 4) !important;
 }
-body.mini .m-x-5, body.mini .m-h-5, body.mini .mx-5, body.mini .mh-5 {
+body.mini .mx-5, body.mini .mh-5 {
   margin-left: calc(var(--margin) * 5) !important;
   margin-right: calc(var(--margin) * 5) !important;
 }
@@ -2262,183 +2238,183 @@ body.mini .p-4 {
 body.mini .p-5 {
   padding: calc(var(--padding) * 5) !important;
 }
-body.mini .pt--0, body.mini .pt-0 {
+body.mini .pt-0 {
   padding-top: 0 !important;
 }
-body.mini .pt--05, body.mini .pt-05 {
+body.mini .pt-05 {
   padding-top: calc(var(--padding) * 0.5) !important;
 }
-body.mini .pt--1, body.mini .pt-1 {
+body.mini .pt-1 {
   padding-top: calc(var(--padding) * 1) !important;
 }
-body.mini .pt--15, body.mini .pt-15 {
+body.mini .pt-15 {
   padding-top: calc(var(--padding) * 1.5) !important;
 }
-body.mini .pt--2, body.mini .pt-2 {
+body.mini .pt-2 {
   padding-top: calc(var(--padding) * 2) !important;
 }
-body.mini .pt--25, body.mini .pt-25 {
+body.mini .pt-25 {
   padding-top: calc(var(--padding) * 2.5) !important;
 }
-body.mini .pt--3, body.mini .pt-3 {
+body.mini .pt-3 {
   padding-top: calc(var(--padding) * 3) !important;
 }
-body.mini .pt--4, body.mini .pt-4 {
+body.mini .pt-4 {
   padding-top: calc(var(--padding) * 4) !important;
 }
-body.mini .pt--5, body.mini .pt-5 {
+body.mini .pt-5 {
   padding-top: calc(var(--padding) * 5) !important;
 }
-body.mini .p-e-0, body.mini .p-r-0, body.mini .pr-0 {
+body.mini .pe-0, body.mini .pr-0 {
   padding-right: 0 !important;
 }
-body.mini .p-e-05, body.mini .p-r-05, body.mini .pr-05 {
+body.mini .pe-05, body.mini .pr-05 {
   padding-right: calc(var(--padding) * 0.5) !important;
 }
-body.mini .p-e-1, body.mini .p-r-1, body.mini .pr-1 {
+body.mini .pe-1, body.mini .pr-1 {
   padding-right: calc(var(--padding) * 1) !important;
 }
-body.mini .p-e-15, body.mini .p-r-15, body.mini .pr-15 {
+body.mini .pe-15, body.mini .pr-15 {
   padding-right: calc(var(--padding) * 1.5) !important;
 }
-body.mini .p-e-2, body.mini .p-r-2, body.mini .pr-2 {
+body.mini .pe-2, body.mini .pr-2 {
   padding-right: calc(var(--padding) * 2) !important;
 }
-body.mini .p-e-25, body.mini .p-r-25, body.mini .pr-25 {
+body.mini .pe-25, body.mini .pr-25 {
   padding-right: calc(var(--padding) * 2.5) !important;
 }
-body.mini .p-e-3, body.mini .p-r-3, body.mini .pr-3 {
+body.mini .pe-3, body.mini .pr-3 {
   padding-right: calc(var(--padding) * 3) !important;
 }
-body.mini .p-e-4, body.mini .p-r-4, body.mini .pr-4 {
+body.mini .pe-4, body.mini .pr-4 {
   padding-right: calc(var(--padding) * 4) !important;
 }
-body.mini .p-e-5, body.mini .p-r-5, body.mini .pr-5 {
+body.mini .pe-5, body.mini .pr-5 {
   padding-right: calc(var(--padding) * 5) !important;
 }
-body.mini .pb--0, body.mini .pb-0 {
+body.mini .pb-0 {
   padding-bottom: 0 !important;
 }
-body.mini .pb--05, body.mini .pb-05 {
+body.mini .pb-05 {
   padding-bottom: calc(var(--padding) * 0.5) !important;
 }
-body.mini .pb--1, body.mini .pb-1 {
+body.mini .pb-1 {
   padding-bottom: calc(var(--padding) * 1) !important;
 }
-body.mini .pb--15, body.mini .pb-15 {
+body.mini .pb-15 {
   padding-bottom: calc(var(--padding) * 1.5) !important;
 }
-body.mini .pb--2, body.mini .pb-2 {
+body.mini .pb-2 {
   padding-bottom: calc(var(--padding) * 2) !important;
 }
-body.mini .pb--25, body.mini .pb-25 {
+body.mini .pb-25 {
   padding-bottom: calc(var(--padding) * 2.5) !important;
 }
-body.mini .pb--3, body.mini .pb-3 {
+body.mini .pb-3 {
   padding-bottom: calc(var(--padding) * 3) !important;
 }
-body.mini .pb--4, body.mini .pb-4 {
+body.mini .pb-4 {
   padding-bottom: calc(var(--padding) * 4) !important;
 }
-body.mini .pb--5, body.mini .pb-5 {
+body.mini .pb-5 {
   padding-bottom: calc(var(--padding) * 5) !important;
 }
-body.mini .p-s-0, body.mini .p-l-0, body.mini .pl-0 {
+body.mini .ps-0, body.mini .pl-0 {
   padding-left: 0 !important;
 }
-body.mini .p-s-05, body.mini .p-l-05, body.mini .pl-05 {
+body.mini .ps-05, body.mini .pl-05 {
   padding-left: calc(var(--padding) * 0.5) !important;
 }
-body.mini .p-s-1, body.mini .p-l-1, body.mini .pl-1 {
+body.mini .ps-1, body.mini .pl-1 {
   padding-left: calc(var(--padding) * 1) !important;
 }
-body.mini .p-s-15, body.mini .p-l-15, body.mini .pl-15 {
+body.mini .ps-15, body.mini .pl-15 {
   padding-left: calc(var(--padding) * 1.5) !important;
 }
-body.mini .p-s-2, body.mini .p-l-2, body.mini .pl-2 {
+body.mini .ps-2, body.mini .pl-2 {
   padding-left: calc(var(--padding) * 2) !important;
 }
-body.mini .p-s-25, body.mini .p-l-25, body.mini .pl-25 {
+body.mini .ps-25, body.mini .pl-25 {
   padding-left: calc(var(--padding) * 2.5) !important;
 }
-body.mini .p-s-3, body.mini .p-l-3, body.mini .pl-3 {
+body.mini .ps-3, body.mini .pl-3 {
   padding-left: calc(var(--padding) * 3) !important;
 }
-body.mini .p-s-4, body.mini .p-l-4, body.mini .pl-4 {
+body.mini .ps-4, body.mini .pl-4 {
   padding-left: calc(var(--padding) * 4) !important;
 }
-body.mini .p-s-5, body.mini .p-l-5, body.mini .pl-5 {
+body.mini .ps-5, body.mini .pl-5 {
   padding-left: calc(var(--padding) * 5) !important;
 }
-body.mini .p-y-0, body.mini .p-v-0, body.mini .py-0, body.mini .pv-0 {
+body.mini .py-0, body.mini .pv-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-body.mini .p-y-05, body.mini .p-v-05, body.mini .py-05, body.mini .pv-05 {
+body.mini .py-05, body.mini .pv-05 {
   padding-top: calc(var(--padding) * 0.5) !important;
   padding-bottom: calc(var(--padding) * 0.5) !important;
 }
-body.mini .p-y-1, body.mini .p-v-1, body.mini .py-1, body.mini .pv-1 {
+body.mini .py-1, body.mini .pv-1 {
   padding-top: calc(var(--padding) * 1) !important;
   padding-bottom: calc(var(--padding) * 1) !important;
 }
-body.mini .p-y-15, body.mini .p-v-15, body.mini .py-15, body.mini .pv-15 {
+body.mini .py-15, body.mini .pv-15 {
   padding-top: calc(var(--padding) * 1.5) !important;
   padding-bottom: calc(var(--padding) * 1.5) !important;
 }
-body.mini .p-y-2, body.mini .p-v-2, body.mini .py-2, body.mini .pv-2 {
+body.mini .py-2, body.mini .pv-2 {
   padding-top: calc(var(--padding) * 2) !important;
   padding-bottom: calc(var(--padding) * 2) !important;
 }
-body.mini .p-y-25, body.mini .p-v-25, body.mini .py-25, body.mini .pv-25 {
+body.mini .py-25, body.mini .pv-25 {
   padding-top: calc(var(--padding) * 2.5) !important;
   padding-bottom: calc(var(--padding) * 2.5) !important;
 }
-body.mini .p-y-3, body.mini .p-v-3, body.mini .py-3, body.mini .pv-3 {
+body.mini .py-3, body.mini .pv-3 {
   padding-top: calc(var(--padding) * 3) !important;
   padding-bottom: calc(var(--padding) * 3) !important;
 }
-body.mini .p-y-4, body.mini .p-v-4, body.mini .py-4, body.mini .pv-4 {
+body.mini .py-4, body.mini .pv-4 {
   padding-top: calc(var(--padding) * 4) !important;
   padding-bottom: calc(var(--padding) * 4) !important;
 }
-body.mini .p-y-5, body.mini .p-v-5, body.mini .py-5, body.mini .pv-5 {
+body.mini .py-5, body.mini .pv-5 {
   padding-top: calc(var(--padding) * 5) !important;
   padding-bottom: calc(var(--padding) * 5) !important;
 }
-body.mini .p-x-0, body.mini .p-h-0, body.mini .px-0, body.mini .ph-0 {
+body.mini .px-0, body.mini .ph-0 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-body.mini .p-x-05, body.mini .p-h-05, body.mini .px-05, body.mini .ph-05 {
+body.mini .px-05, body.mini .ph-05 {
   padding-left: calc(var(--padding) * 0.5) !important;
   padding-right: calc(var(--padding) * 0.5) !important;
 }
-body.mini .p-x-1, body.mini .p-h-1, body.mini .px-1, body.mini .ph-1 {
+body.mini .px-1, body.mini .ph-1 {
   padding-left: calc(var(--padding) * 1) !important;
   padding-right: calc(var(--padding) * 1) !important;
 }
-body.mini .p-x-15, body.mini .p-h-15, body.mini .px-15, body.mini .ph-15 {
+body.mini .px-15, body.mini .ph-15 {
   padding-left: calc(var(--padding) * 1.5) !important;
   padding-right: calc(var(--padding) * 1.5) !important;
 }
-body.mini .p-x-2, body.mini .p-h-2, body.mini .px-2, body.mini .ph-2 {
+body.mini .px-2, body.mini .ph-2 {
   padding-left: calc(var(--padding) * 2) !important;
   padding-right: calc(var(--padding) * 2) !important;
 }
-body.mini .p-x-25, body.mini .p-h-25, body.mini .px-25, body.mini .ph-25 {
+body.mini .px-25, body.mini .ph-25 {
   padding-left: calc(var(--padding) * 2.5) !important;
   padding-right: calc(var(--padding) * 2.5) !important;
 }
-body.mini .p-x-3, body.mini .p-h-3, body.mini .px-3, body.mini .ph-3 {
+body.mini .px-3, body.mini .ph-3 {
   padding-left: calc(var(--padding) * 3) !important;
   padding-right: calc(var(--padding) * 3) !important;
 }
-body.mini .p-x-4, body.mini .p-h-4, body.mini .px-4, body.mini .ph-4 {
+body.mini .px-4, body.mini .ph-4 {
   padding-left: calc(var(--padding) * 4) !important;
   padding-right: calc(var(--padding) * 4) !important;
 }
-body.mini .p-x-5, body.mini .p-h-5, body.mini .px-5, body.mini .ph-5 {
+body.mini .px-5, body.mini .ph-5 {
   padding-left: calc(var(--padding) * 5) !important;
   padding-right: calc(var(--padding) * 5) !important;
 }
@@ -2518,21 +2494,21 @@ body.mini .h-right, body.mini .h-end {
   text-align: right !important;
   margin-left: auto !important;
 }
-body.mini .vTop, body.mini .v-top {
+body.mini .v-top {
   position: relative;
   top: 0;
   margin-top: 0;
   margin-bottom: auto;
   transform: translate(0, 0%);
 }
-body.mini .vCent, body.mini .v-cent {
+body.mini .v-cent {
   position: relative;
   top: 50%;
   margin-top: 0;
   margin-bottom: 0;
   transform: translate(0, -50%);
 }
-body.mini .vBot, body.mini .v-bot {
+body.mini .v-bot {
   position: relative;
   top: 100%;
   margin-top: auto;
@@ -2562,52 +2538,52 @@ body.mini .box-shadow-l, body.mini .box-shadow-20 {
   -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
 }
-body.mini .b-rad-1, body.mini .border-radius-1, body.mini .bRad1 {
+body.mini .b-rad-1, body.mini .border-radius-1 {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
 }
-body.mini .b-rad-2, body.mini .border-radius-2, body.mini .bRad2 {
+body.mini .b-rad-2, body.mini .border-radius-2 {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-body.mini .b-rad-3, body.mini .border-radius-3, body.mini .bRad3 {
+body.mini .b-rad-3, body.mini .border-radius-3 {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-body.mini .b-rad-4, body.mini .border-radius-4, body.mini .bRad4 {
+body.mini .b-rad-4, body.mini .border-radius-4 {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-body.mini .b-rad-5, body.mini .border-radius-5, body.mini .bRad5 {
+body.mini .b-rad-5, body.mini .border-radius-5 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-body.mini .b-rad-10, body.mini .border-radius-10, body.mini .bRad10 {
+body.mini .b-rad-10, body.mini .border-radius-10 {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-body.mini .b-rad-20, body.mini .border-radius-20, body.mini .bRad20 {
+body.mini .b-rad-20, body.mini .border-radius-20 {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
-body.mini .b-rad-30, body.mini .border-radius-30, body.mini .bRad30 {
+body.mini .b-rad-30, body.mini .border-radius-30 {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
 }
-body.mini .b-rad-50, body.mini .border-radius-50, body.mini .bRad50 {
+body.mini .b-rad-50, body.mini .border-radius-50 {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
 }
-body.mini .b-rad-round, body.mini .border-radius-round, body.mini .bRadround {
+body.mini .b-rad-round, body.mini .border-radius-round {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -2615,10 +2591,10 @@ body.mini .b-rad-round, body.mini .border-radius-round, body.mini .bRadround {
 body.mini .pointer {
   cursor: pointer;
 }
-body.mini .use-as-bg, body.mini .useAsBg {
+body.mini .use-as-bg {
   overflow: hidden;
 }
-body.mini .use-as-bg > img, body.mini .use-as-bg > video, body.mini .useAsBg > img, body.mini .useAsBg > video {
+body.mini .use-as-bg > img, body.mini .use-as-bg > video {
   min-height: 100%;
   min-width: 100%;
   width: auto;
@@ -2629,7 +2605,7 @@ body.mini .use-as-bg > img, body.mini .use-as-bg > video, body.mini .useAsBg > i
   transform: translate(-50%, -50%);
   z-index: 0;
 }
-body.mini .use-as-bg .dot-bg, body.mini .use-as-bg .dot-mask, body.mini .use-as-bg .dotMask, body.mini .useAsBg .dot-bg, body.mini .useAsBg .dot-mask, body.mini .useAsBg .dotMask {
+body.mini .use-as-bg .dot-bg, body.mini .use-as-bg .dot-mask {
   position: absolute;
   display: block;
   top: 0;
@@ -2641,7 +2617,7 @@ body.mini .use-as-bg .dot-bg, body.mini .use-as-bg .dot-mask, body.mini .use-as-
   z-index: 0;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIiGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MDkrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkZjAzYzJlNS01NGY0LTRmNDItYmU2Ni03NWJlN2JiMzdhODciIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDNlOGFhNC05ZTcyLTA1NDQtYWRkNi1mN2IwOWUxMzFjNDgiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQxMmExNGRiLTc2NzQtZWY0Yi1hYTI5LTVkZjk2NjA2NjQ5MyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xNFQxNzozNzowOSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMGNhNjNiMi1jOTFkLWQ1NDEtOGQzZS0xOWFiMDJkOTQwYjciIHN0RXZ0OndoZW49IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGYwM2MyZTUtNTRmNC00ZjQyLWJlNjYtNzViZTdiYjM3YTg3IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwY2E2M2IyLWM5MWQtZDU0MS04ZDNlLTE5YWIwMmQ5NDBiNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KoMGWAAAAEUlEQVQIHWNgYGD4DwRgEowBT8IJ98nucTsAAAAASUVORK5CYII=");
 }
-body.mini .use-as-bg .dot-bg.inv, body.mini .use-as-bg .dot-bg.invert, body.mini .use-as-bg .dot-mask.inv, body.mini .use-as-bg .dot-mask.invert, body.mini .use-as-bg .dotMask.inv, body.mini .use-as-bg .dotMask.invert, body.mini .useAsBg .dot-bg.inv, body.mini .useAsBg .dot-bg.invert, body.mini .useAsBg .dot-mask.inv, body.mini .useAsBg .dot-mask.invert, body.mini .useAsBg .dotMask.inv, body.mini .useAsBg .dotMask.invert {
+body.mini .use-as-bg .dot-bg.inv, body.mini .use-as-bg .dot-bg.invert, body.mini .use-as-bg .dot-mask.inv, body.mini .use-as-bg .dot-mask.invert {
   filter: invert(1);
 }
 body.mini .dot-bg, body.mini .dot-mask {
@@ -2673,14 +2649,6 @@ body.mini .btn {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  /*
-  &:first-child {
-    margin-left: 0;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-  */
 }
 @media (max-width: 768px) {
   body.mini .btn {
@@ -2694,12 +2662,12 @@ body.mini .btn:hover, body.mini .btn.clicked {
   background: var(--link-color);
   border-color: var(--link-color);
 }
-body.mini .btnBg, body.mini .btn-bg {
+body.mini .btn-bg {
   color: var(--white);
   border-color: var(--link-color);
   background: var(--link-color);
 }
-body.mini .btnBg:hover, body.mini .btnBg.clicked, body.mini .btn-bg:hover, body.mini .btn-bg.clicked {
+body.mini .btn-bg:hover, body.mini .btn-bg.clicked {
   color: var(--link-color);
   border-color: var(--link-color);
   background: transparent;
@@ -3009,7 +2977,6 @@ body.mini #actions ul.action-groups li.action-group ul.actions {
 }
 @media (min-width: 576px) {
   body.mini #actions ul.action-groups li.action-group ul.actions {
-    width: auto;
     padding: 0 var(--padding);
   }
 }
@@ -3380,6 +3347,9 @@ body.mini .bord-white, body.mini .border-white {
 body.mini .bord-fw, body.mini .border-fw {
   border-color: var(--false-white) !important;
 }
+body.mini .bord-false-white, body.mini .border-false-white {
+  border-color: var(--false-white) !important;
+}
 body.mini .bord-light-grey, body.mini .border-light-grey {
   border-color: var(--light-grey) !important;
 }
@@ -3392,6 +3362,9 @@ body.mini .bord-dark-grey, body.mini .border-dark-grey {
 body.mini .bord-fb, body.mini .border-fb {
   border-color: var(--false-black) !important;
 }
+body.mini .bord-false-black, body.mini .border-false-black {
+  border-color: var(--false-black) !important;
+}
 body.mini .bord-bk, body.mini .border-bk {
   border-color: var(--black) !important;
 }
@@ -3402,6 +3375,9 @@ body.mini .bord-col, body.mini .border-col {
   border-color: var(--main-color) !important;
 }
 body.mini .bord-color, body.mini .border-color {
+  border-color: var(--main-color) !important;
+}
+body.mini .bord-main-color, body.mini .border-main-color {
   border-color: var(--main-color) !important;
 }
 body.mini .bord-color-dark, body.mini .border-color-dark {
@@ -3518,7 +3494,7 @@ body.mini .bord-lns-dark, body.mini .border-lns-dark {
 body.mini .bord-dt, body.mini .border-dt {
   border-color: var(--doingthings-color) !important;
 }
-body.mini .whTxt, body.mini .wh-txt, body.mini .wh-text {
+body.mini .wh-txt, body.mini .wh-text {
   color: var(--white) !important;
 }
 body.mini .wh-box {
@@ -3587,7 +3563,7 @@ body.mini input[type=radio]:checked + label.wh-btn-bg {
   border-color: var(--white) !important;
   background: transparent !important;
 }
-body.mini .whiteTxt, body.mini .white-txt, body.mini .white-text {
+body.mini .white-txt, body.mini .white-text {
   color: var(--white) !important;
 }
 body.mini .white-box {
@@ -3656,7 +3632,7 @@ body.mini input[type=radio]:checked + label.white-btn-bg {
   border-color: var(--white) !important;
   background: transparent !important;
 }
-body.mini .fwTxt, body.mini .fw-txt, body.mini .fw-text {
+body.mini .fw-txt, body.mini .fw-text {
   color: var(--false-white) !important;
 }
 body.mini .fw-box {
@@ -3725,7 +3701,76 @@ body.mini input[type=radio]:checked + label.fw-btn-bg {
   border-color: var(--false-white) !important;
   background: transparent !important;
 }
-body.mini .light-greyTxt, body.mini .light-grey-txt, body.mini .light-grey-text {
+body.mini .false-white-txt, body.mini .false-white-text {
+  color: var(--false-white) !important;
+}
+body.mini .false-white-box {
+  background: var(--false-white) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .false-white-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .false-white-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .false-white-bg {
+  background-color: var(--false-white) !important;
+}
+body.mini .false-white-btn {
+  color: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+}
+body.mini .false-white-btn:hover, body.mini .false-white-btn.clicked {
+  color: var(--black) !important;
+  background: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+}
+body.mini .false-white-btn-bg {
+  color: var(--black) !important;
+  border-color: var(--false-white) !important;
+  background: var(--false-white) !important;
+}
+body.mini .false-white-btn-bg:hover, body.mini .false-white-btn-bg.clicked {
+  color: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.false-white-btn {
+  color: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+}
+body.mini input[type=radio] + label.false-white-btn:hover {
+  color: var(--black) !important;
+  background: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+}
+body.mini input[type=radio] + label.false-white-btn-bg {
+  color: var(--black) !important;
+  border-color: var(--false-white) !important;
+  background: var(--false-white) !important;
+}
+body.mini input[type=radio] + label.false-white-btn-bg:hover {
+  color: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.false-white-btn {
+  color: var(--black) !important;
+  background: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+}
+body.mini input[type=radio]:checked + label.false-white-btn-bg {
+  color: var(--false-white) !important;
+  border-color: var(--false-white) !important;
+  background: transparent !important;
+}
+body.mini .light-grey-txt, body.mini .light-grey-text {
   color: var(--light-grey) !important;
 }
 body.mini .light-grey-box {
@@ -3794,7 +3839,7 @@ body.mini input[type=radio]:checked + label.light-grey-btn-bg {
   border-color: var(--light-grey) !important;
   background: transparent !important;
 }
-body.mini .greyTxt, body.mini .grey-txt, body.mini .grey-text {
+body.mini .grey-txt, body.mini .grey-text {
   color: var(--grey) !important;
 }
 body.mini .grey-box {
@@ -3863,7 +3908,7 @@ body.mini input[type=radio]:checked + label.grey-btn-bg {
   border-color: var(--grey) !important;
   background: transparent !important;
 }
-body.mini .dark-greyTxt, body.mini .dark-grey-txt, body.mini .dark-grey-text {
+body.mini .dark-grey-txt, body.mini .dark-grey-text {
   color: var(--dark-grey) !important;
 }
 body.mini .dark-grey-box {
@@ -3932,7 +3977,7 @@ body.mini input[type=radio]:checked + label.dark-grey-btn-bg {
   border-color: var(--dark-grey) !important;
   background: transparent !important;
 }
-body.mini .fbTxt, body.mini .fb-txt, body.mini .fb-text {
+body.mini .fb-txt, body.mini .fb-text {
   color: var(--false-black) !important;
 }
 body.mini .fb-box {
@@ -4001,7 +4046,76 @@ body.mini input[type=radio]:checked + label.fb-btn-bg {
   border-color: var(--false-black) !important;
   background: transparent !important;
 }
-body.mini .bkTxt, body.mini .bk-txt, body.mini .bk-text {
+body.mini .false-black-txt, body.mini .false-black-text {
+  color: var(--false-black) !important;
+}
+body.mini .false-black-box {
+  background: var(--false-black) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .false-black-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .false-black-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .false-black-bg {
+  background-color: var(--false-black) !important;
+}
+body.mini .false-black-btn {
+  color: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+}
+body.mini .false-black-btn:hover, body.mini .false-black-btn.clicked {
+  color: var(--white) !important;
+  background: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+}
+body.mini .false-black-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--false-black) !important;
+  background: var(--false-black) !important;
+}
+body.mini .false-black-btn-bg:hover, body.mini .false-black-btn-bg.clicked {
+  color: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.false-black-btn {
+  color: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+}
+body.mini input[type=radio] + label.false-black-btn:hover {
+  color: var(--white) !important;
+  background: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+}
+body.mini input[type=radio] + label.false-black-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--false-black) !important;
+  background: var(--false-black) !important;
+}
+body.mini input[type=radio] + label.false-black-btn-bg:hover {
+  color: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.false-black-btn {
+  color: var(--white) !important;
+  background: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+}
+body.mini input[type=radio]:checked + label.false-black-btn-bg {
+  color: var(--false-black) !important;
+  border-color: var(--false-black) !important;
+  background: transparent !important;
+}
+body.mini .bk-txt, body.mini .bk-text {
   color: var(--black) !important;
 }
 body.mini .bk-box {
@@ -4070,7 +4184,7 @@ body.mini input[type=radio]:checked + label.bk-btn-bg {
   border-color: var(--black) !important;
   background: transparent !important;
 }
-body.mini .blackTxt, body.mini .black-txt, body.mini .black-text {
+body.mini .black-txt, body.mini .black-text {
   color: var(--black) !important;
 }
 body.mini .black-box {
@@ -4139,7 +4253,7 @@ body.mini input[type=radio]:checked + label.black-btn-bg {
   border-color: var(--black) !important;
   background: transparent !important;
 }
-body.mini .colTxt, body.mini .col-txt, body.mini .col-text {
+body.mini .col-txt, body.mini .col-text {
   color: var(--main-color) !important;
 }
 body.mini .col-box {
@@ -4208,7 +4322,7 @@ body.mini input[type=radio]:checked + label.col-btn-bg {
   border-color: var(--main-color) !important;
   background: transparent !important;
 }
-body.mini .colorTxt, body.mini .color-txt, body.mini .color-text {
+body.mini .color-txt, body.mini .color-text {
   color: var(--main-color) !important;
 }
 body.mini .color-box {
@@ -4277,7 +4391,76 @@ body.mini input[type=radio]:checked + label.color-btn-bg {
   border-color: var(--main-color) !important;
   background: transparent !important;
 }
-body.mini .color-darkTxt, body.mini .color-dark-txt, body.mini .color-dark-text {
+body.mini .main-color-txt, body.mini .main-color-text {
+  color: var(--main-color) !important;
+}
+body.mini .main-color-box {
+  background: var(--main-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+body.mini .main-color-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+body.mini .main-color-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+body.mini .main-color-bg {
+  background-color: var(--main-color) !important;
+}
+body.mini .main-color-btn {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini .main-color-btn:hover, body.mini .main-color-btn.clicked {
+  color: var(--white) !important;
+  background: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini .main-color-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--main-color) !important;
+  background: var(--main-color) !important;
+}
+body.mini .main-color-btn-bg:hover, body.mini .main-color-btn-bg.clicked {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio] + label.main-color-btn {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini input[type=radio] + label.main-color-btn:hover {
+  color: var(--white) !important;
+  background: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini input[type=radio] + label.main-color-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--main-color) !important;
+  background: var(--main-color) !important;
+}
+body.mini input[type=radio] + label.main-color-btn-bg:hover {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  background: transparent !important;
+}
+body.mini input[type=radio]:checked + label.main-color-btn {
+  color: var(--white) !important;
+  background: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini input[type=radio]:checked + label.main-color-btn-bg {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  background: transparent !important;
+}
+body.mini .color-dark-txt, body.mini .color-dark-text {
   color: var(--main-color-dark) !important;
 }
 body.mini .color-dark-box {
@@ -4346,7 +4529,7 @@ body.mini input[type=radio]:checked + label.color-dark-btn-bg {
   border-color: var(--main-color-dark) !important;
   background: transparent !important;
 }
-body.mini .main-color-darkTxt, body.mini .main-color-dark-txt, body.mini .main-color-dark-text {
+body.mini .main-color-dark-txt, body.mini .main-color-dark-text {
   color: var(--main-color-dark) !important;
 }
 body.mini .main-color-dark-box {
@@ -4415,7 +4598,7 @@ body.mini input[type=radio]:checked + label.main-color-dark-btn-bg {
   border-color: var(--main-color-dark) !important;
   background: transparent !important;
 }
-body.mini .second-colorTxt, body.mini .second-color-txt, body.mini .second-color-text {
+body.mini .second-color-txt, body.mini .second-color-text {
   color: var(--second-color) !important;
 }
 body.mini .second-color-box {
@@ -4484,7 +4667,7 @@ body.mini input[type=radio]:checked + label.second-color-btn-bg {
   border-color: var(--second-color) !important;
   background: transparent !important;
 }
-body.mini .second-color-darkTxt, body.mini .second-color-dark-txt, body.mini .second-color-dark-text {
+body.mini .second-color-dark-txt, body.mini .second-color-dark-text {
   color: var(--second-color-dark) !important;
 }
 body.mini .second-color-dark-box {
@@ -4553,7 +4736,7 @@ body.mini input[type=radio]:checked + label.second-color-dark-btn-bg {
   border-color: var(--second-color-dark) !important;
   background: transparent !important;
 }
-body.mini .third-colorTxt, body.mini .third-color-txt, body.mini .third-color-text {
+body.mini .third-color-txt, body.mini .third-color-text {
   color: var(--third-color) !important;
 }
 body.mini .third-color-box {
@@ -4622,7 +4805,7 @@ body.mini input[type=radio]:checked + label.third-color-btn-bg {
   border-color: var(--third-color) !important;
   background: transparent !important;
 }
-body.mini .third-color-darkTxt, body.mini .third-color-dark-txt, body.mini .third-color-dark-text {
+body.mini .third-color-dark-txt, body.mini .third-color-dark-text {
   color: var(--third-color-dark) !important;
 }
 body.mini .third-color-dark-box {
@@ -4691,7 +4874,7 @@ body.mini input[type=radio]:checked + label.third-color-dark-btn-bg {
   border-color: var(--third-color-dark) !important;
   background: transparent !important;
 }
-body.mini .fourth-colorTxt, body.mini .fourth-color-txt, body.mini .fourth-color-text {
+body.mini .fourth-color-txt, body.mini .fourth-color-text {
   color: var(--fourth-color) !important;
 }
 body.mini .fourth-color-box {
@@ -4760,7 +4943,7 @@ body.mini input[type=radio]:checked + label.fourth-color-btn-bg {
   border-color: var(--fourth-color) !important;
   background: transparent !important;
 }
-body.mini .fourth-color-darkTxt, body.mini .fourth-color-dark-txt, body.mini .fourth-color-dark-text {
+body.mini .fourth-color-dark-txt, body.mini .fourth-color-dark-text {
   color: var(--fourth-color-dark) !important;
 }
 body.mini .fourth-color-dark-box {
@@ -4829,7 +5012,7 @@ body.mini input[type=radio]:checked + label.fourth-color-dark-btn-bg {
   border-color: var(--fourth-color-dark) !important;
   background: transparent !important;
 }
-body.mini .linkTxt, body.mini .link-txt, body.mini .link-text {
+body.mini .link-txt, body.mini .link-text {
   color: var(--link-color) !important;
 }
 body.mini .link-box {
@@ -4898,7 +5081,7 @@ body.mini input[type=radio]:checked + label.link-btn-bg {
   border-color: var(--link-color) !important;
   background: transparent !important;
 }
-body.mini .link-colorTxt, body.mini .link-color-txt, body.mini .link-color-text {
+body.mini .link-color-txt, body.mini .link-color-text {
   color: var(--link-color) !important;
 }
 body.mini .link-color-box {
@@ -4967,7 +5150,7 @@ body.mini input[type=radio]:checked + label.link-color-btn-bg {
   border-color: var(--link-color) !important;
   background: transparent !important;
 }
-body.mini .link-hover-colorTxt, body.mini .link-hover-color-txt, body.mini .link-hover-color-text {
+body.mini .link-hover-color-txt, body.mini .link-hover-color-text {
   color: var(--link-hover-color) !important;
 }
 body.mini .link-hover-color-box {
@@ -5036,7 +5219,7 @@ body.mini input[type=radio]:checked + label.link-hover-color-btn-bg {
   border-color: var(--link-hover-color) !important;
   background: transparent !important;
 }
-body.mini .infoTxt, body.mini .info-txt, body.mini .info-text {
+body.mini .info-txt, body.mini .info-text {
   color: var(--info) !important;
 }
 body.mini .info-box {
@@ -5105,7 +5288,7 @@ body.mini input[type=radio]:checked + label.info-btn-bg {
   border-color: var(--info) !important;
   background: transparent !important;
 }
-body.mini .successTxt, body.mini .success-txt, body.mini .success-text {
+body.mini .success-txt, body.mini .success-text {
   color: var(--success) !important;
 }
 body.mini .success-box {
@@ -5174,7 +5357,7 @@ body.mini input[type=radio]:checked + label.success-btn-bg {
   border-color: var(--success) !important;
   background: transparent !important;
 }
-body.mini .warningTxt, body.mini .warning-txt, body.mini .warning-text {
+body.mini .warning-txt, body.mini .warning-text {
   color: var(--warning) !important;
 }
 body.mini .warning-box {
@@ -5243,7 +5426,7 @@ body.mini input[type=radio]:checked + label.warning-btn-bg {
   border-color: var(--warning) !important;
   background: transparent !important;
 }
-body.mini .dangerTxt, body.mini .danger-txt, body.mini .danger-text {
+body.mini .danger-txt, body.mini .danger-text {
   color: var(--danger) !important;
 }
 body.mini .danger-box {
@@ -5312,7 +5495,7 @@ body.mini input[type=radio]:checked + label.danger-btn-bg {
   border-color: var(--danger) !important;
   background: transparent !important;
 }
-body.mini .badTxt, body.mini .bad-txt, body.mini .bad-text {
+body.mini .bad-txt, body.mini .bad-text {
   color: var(--bad) !important;
 }
 body.mini .bad-box {
@@ -5381,7 +5564,7 @@ body.mini input[type=radio]:checked + label.bad-btn-bg {
   border-color: var(--bad) !important;
   background: transparent !important;
 }
-body.mini .acid-greenTxt, body.mini .acid-green-txt, body.mini .acid-green-text {
+body.mini .acid-green-txt, body.mini .acid-green-text {
   color: var(--acid-green) !important;
 }
 body.mini .acid-green-box {
@@ -5450,7 +5633,7 @@ body.mini input[type=radio]:checked + label.acid-green-btn-bg {
   border-color: var(--acid-green) !important;
   background: transparent !important;
 }
-body.mini .ginger-breadTxt, body.mini .ginger-bread-txt, body.mini .ginger-bread-text {
+body.mini .ginger-bread-txt, body.mini .ginger-bread-text {
   color: var(--gingerbread) !important;
 }
 body.mini .ginger-bread-box {
@@ -5519,7 +5702,7 @@ body.mini input[type=radio]:checked + label.ginger-bread-btn-bg {
   border-color: var(--gingerbread) !important;
   background: transparent !important;
 }
-body.mini .miniTxt, body.mini .mini-txt, body.mini .mini-text {
+body.mini .mini-txt, body.mini .mini-text {
   color: var(--mini-color) !important;
 }
 body.mini .mini-box {
@@ -5588,7 +5771,7 @@ body.mini input[type=radio]:checked + label.mini-btn-bg {
   border-color: var(--mini-color) !important;
   background: transparent !important;
 }
-body.mini .mini-darkTxt, body.mini .mini-dark-txt, body.mini .mini-dark-text {
+body.mini .mini-dark-txt, body.mini .mini-dark-text {
   color: var(--mini-color-dark) !important;
 }
 body.mini .mini-dark-box {
@@ -5657,7 +5840,7 @@ body.mini input[type=radio]:checked + label.mini-dark-btn-bg {
   border-color: var(--mini-color-dark) !important;
   background: transparent !important;
 }
-body.mini .mini-secondTxt, body.mini .mini-second-txt, body.mini .mini-second-text {
+body.mini .mini-second-txt, body.mini .mini-second-text {
   color: var(--mini-second) !important;
 }
 body.mini .mini-second-box {
@@ -5726,7 +5909,7 @@ body.mini input[type=radio]:checked + label.mini-second-btn-bg {
   border-color: var(--mini-second) !important;
   background: transparent !important;
 }
-body.mini .mini-thirdTxt, body.mini .mini-third-txt, body.mini .mini-third-text {
+body.mini .mini-third-txt, body.mini .mini-third-text {
   color: var(--mini-third) !important;
 }
 body.mini .mini-third-box {
@@ -5795,7 +5978,7 @@ body.mini input[type=radio]:checked + label.mini-third-btn-bg {
   border-color: var(--mini-third) !important;
   background: transparent !important;
 }
-body.mini .mini-fourthTxt, body.mini .mini-fourth-txt, body.mini .mini-fourth-text {
+body.mini .mini-fourth-txt, body.mini .mini-fourth-text {
   color: var(--mini-fourth) !important;
 }
 body.mini .mini-fourth-box {
@@ -5864,7 +6047,7 @@ body.mini input[type=radio]:checked + label.mini-fourth-btn-bg {
   border-color: var(--mini-fourth) !important;
   background: transparent !important;
 }
-body.mini .uwaTxt, body.mini .uwa-txt, body.mini .uwa-text {
+body.mini .uwa-txt, body.mini .uwa-text {
   color: var(--uwa-color) !important;
 }
 body.mini .uwa-box {
@@ -5933,7 +6116,7 @@ body.mini input[type=radio]:checked + label.uwa-btn-bg {
   border-color: var(--uwa-color) !important;
   background: transparent !important;
 }
-body.mini .uwa-darkTxt, body.mini .uwa-dark-txt, body.mini .uwa-dark-text {
+body.mini .uwa-dark-txt, body.mini .uwa-dark-text {
   color: var(--uwa-color-dark) !important;
 }
 body.mini .uwa-dark-box {
@@ -6002,7 +6185,7 @@ body.mini input[type=radio]:checked + label.uwa-dark-btn-bg {
   border-color: var(--uwa-color-dark) !important;
   background: transparent !important;
 }
-body.mini .uwa-secondTxt, body.mini .uwa-second-txt, body.mini .uwa-second-text {
+body.mini .uwa-second-txt, body.mini .uwa-second-text {
   color: var(--uwa-second-color) !important;
 }
 body.mini .uwa-second-box {
@@ -6071,7 +6254,7 @@ body.mini input[type=radio]:checked + label.uwa-second-btn-bg {
   border-color: var(--uwa-second-color) !important;
   background: transparent !important;
 }
-body.mini .uwa-thirdTxt, body.mini .uwa-third-txt, body.mini .uwa-third-text {
+body.mini .uwa-third-txt, body.mini .uwa-third-text {
   color: var(--uwa-third-color) !important;
 }
 body.mini .uwa-third-box {
@@ -6140,7 +6323,7 @@ body.mini input[type=radio]:checked + label.uwa-third-btn-bg {
   border-color: var(--uwa-third-color) !important;
   background: transparent !important;
 }
-body.mini .uwa-fourthTxt, body.mini .uwa-fourth-txt, body.mini .uwa-fourth-text {
+body.mini .uwa-fourth-txt, body.mini .uwa-fourth-text {
   color: var(--uwa-fourth-color) !important;
 }
 body.mini .uwa-fourth-box {
@@ -6209,7 +6392,7 @@ body.mini input[type=radio]:checked + label.uwa-fourth-btn-bg {
   border-color: var(--uwa-fourth-color) !important;
   background: transparent !important;
 }
-body.mini .uwa-linkTxt, body.mini .uwa-link-txt, body.mini .uwa-link-text {
+body.mini .uwa-link-txt, body.mini .uwa-link-text {
   color: var(--uwa-link-color) !important;
 }
 body.mini .uwa-link-box {
@@ -6278,7 +6461,7 @@ body.mini input[type=radio]:checked + label.uwa-link-btn-bg {
   border-color: var(--uwa-link-color) !important;
   background: transparent !important;
 }
-body.mini .aromaTxt, body.mini .aroma-txt, body.mini .aroma-text {
+body.mini .aroma-txt, body.mini .aroma-text {
   color: var(--aroma-color) !important;
 }
 body.mini .aroma-box {
@@ -6347,7 +6530,7 @@ body.mini input[type=radio]:checked + label.aroma-btn-bg {
   border-color: var(--aroma-color) !important;
   background: transparent !important;
 }
-body.mini .aroma-darkTxt, body.mini .aroma-dark-txt, body.mini .aroma-dark-text {
+body.mini .aroma-dark-txt, body.mini .aroma-dark-text {
   color: var(--aroma-color-dark) !important;
 }
 body.mini .aroma-dark-box {
@@ -6416,7 +6599,7 @@ body.mini input[type=radio]:checked + label.aroma-dark-btn-bg {
   border-color: var(--aroma-color-dark) !important;
   background: transparent !important;
 }
-body.mini .pdpTxt, body.mini .pdp-txt, body.mini .pdp-text {
+body.mini .pdp-txt, body.mini .pdp-text {
   color: var(--pezzidipla-color) !important;
 }
 body.mini .pdp-box {
@@ -6485,7 +6668,7 @@ body.mini input[type=radio]:checked + label.pdp-btn-bg {
   border-color: var(--pezzidipla-color) !important;
   background: transparent !important;
 }
-body.mini .pdp-secondTxt, body.mini .pdp-second-txt, body.mini .pdp-second-text {
+body.mini .pdp-second-txt, body.mini .pdp-second-text {
   color: var(--pezzidipla-second-color) !important;
 }
 body.mini .pdp-second-box {
@@ -6554,7 +6737,7 @@ body.mini input[type=radio]:checked + label.pdp-second-btn-bg {
   border-color: var(--pezzidipla-second-color) !important;
   background: transparent !important;
 }
-body.mini .pdp-thirdTxt, body.mini .pdp-third-txt, body.mini .pdp-third-text {
+body.mini .pdp-third-txt, body.mini .pdp-third-text {
   color: var(--pezzidipla-third-color) !important;
 }
 body.mini .pdp-third-box {
@@ -6623,7 +6806,7 @@ body.mini input[type=radio]:checked + label.pdp-third-btn-bg {
   border-color: var(--pezzidipla-third-color) !important;
   background: transparent !important;
 }
-body.mini .pdp-fourthTxt, body.mini .pdp-fourth-txt, body.mini .pdp-fourth-text {
+body.mini .pdp-fourth-txt, body.mini .pdp-fourth-text {
   color: var(--pezzidipla-fourth-color) !important;
 }
 body.mini .pdp-fourth-box {
@@ -6692,7 +6875,7 @@ body.mini input[type=radio]:checked + label.pdp-fourth-btn-bg {
   border-color: var(--pezzidipla-fourth-color) !important;
   background: transparent !important;
 }
-body.mini .lnsTxt, body.mini .lns-txt, body.mini .lns-text {
+body.mini .lns-txt, body.mini .lns-text {
   color: var(--lanuovastartup-color) !important;
 }
 body.mini .lns-box {
@@ -6761,7 +6944,7 @@ body.mini input[type=radio]:checked + label.lns-btn-bg {
   border-color: var(--lanuovastartup-color) !important;
   background: transparent !important;
 }
-body.mini .lns-darkTxt, body.mini .lns-dark-txt, body.mini .lns-dark-text {
+body.mini .lns-dark-txt, body.mini .lns-dark-text {
   color: var(--lanuovastartup-color-dark) !important;
 }
 body.mini .lns-dark-box {
@@ -6830,7 +7013,7 @@ body.mini input[type=radio]:checked + label.lns-dark-btn-bg {
   border-color: var(--lanuovastartup-color-dark) !important;
   background: transparent !important;
 }
-body.mini .dtTxt, body.mini .dt-txt, body.mini .dt-text {
+body.mini .dt-txt, body.mini .dt-text {
   color: var(--doingthings-color) !important;
 }
 body.mini .dt-box {

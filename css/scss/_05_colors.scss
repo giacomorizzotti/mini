@@ -8,17 +8,17 @@ body {
       "wh" var(--white) var(--black),
       "white" var(--white) var(--black),
       "fw" var(--false-white) var(--black),
-      //"false-white" var(--false-white) var(--black),
+      "false-white" var(--false-white) var(--black),
       "light-grey" var(--light-grey) var(--black),
       "grey" var(--grey) var(--white),
       "dark-grey" var(--dark-grey) var(--white),
       "fb" var(--false-black) var(--white),
-      //"false-black" var(--false-black) var(--white),
+      "false-black" var(--false-black) var(--white),
       "bk" var(--black) var(--white),
       "black" var(--black) var(--white),
       "col" var(--main-color) var(--white),
       "color" var(--main-color) var(--white),
-      //"main-color" var(--main-color) var(--white),
+      "main-color" var(--main-color) var(--white),
       "color-dark" var(--main-color-dark) var(--white),
       "main-color-dark" var(--main-color-dark) var(--white),
       "second-color" var(--second-color) var(--white),
@@ -140,7 +140,7 @@ body {
     @each $colorname, $colorcode, $colortext in $colors {
 
       .#{$colorname} {
-        &Txt, &-txt, &-text {
+        &-txt, &-text {
           color: $colorcode!important;
         }
         &-box {

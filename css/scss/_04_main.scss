@@ -67,7 +67,7 @@ body {
           margin: #{$margin}!important;
         }
       }
-      &t, &t {
+      &t {
         @each $marginLabel, $margin in $marginThickness {
           &-#{$marginLabel} {
             margin-top: #{$margin}!important;
@@ -81,7 +81,7 @@ body {
           }
         }
       }
-      &b, &b {
+      &b {
         @each $marginLabel, $margin in $marginThickness {
           &-#{$marginLabel} {
             margin-bottom: #{$margin}!important;
@@ -95,7 +95,7 @@ body {
           }
         }
       }
-      &-y, &-v, &y, &v {
+      &y, &v {
         @each $marginLabel, $margin in $marginThickness {
           &-#{$marginLabel} {
             margin-top: #{$margin}!important;
@@ -103,7 +103,7 @@ body {
           }
         }
       }
-      &-x, &-h, &x, &h {
+      &x, &h {
         @each $marginLabel, $margin in $marginThickness {
           &-#{$marginLabel} {
             margin-left: #{$margin}!important;
@@ -133,35 +133,35 @@ body {
           padding: #{$padding}!important;
         }
       }
-      &t-, &t {
+      &t {
         @each $paddingLabel, $padding in $paddingThickness {
           &-#{$paddingLabel} {
             padding-top: #{$padding}!important;
           }
         }
       }
-      &-e, &-r, &r {
+      &e, &r {
         @each $paddingLabel, $padding in $paddingThickness {
           &-#{$paddingLabel} {
             padding-right: #{$padding}!important;
           }
         }
       }
-      &b-, &b {
+      &b {
         @each $paddingLabel, $padding in $paddingThickness {
           &-#{$paddingLabel} {
             padding-bottom: #{$padding}!important;
           }
         }
       }
-      &-s, &-l, &l {
+      &s, &l {
         @each $paddingLabel, $padding in $paddingThickness {
           &-#{$paddingLabel} {
             padding-left: #{$padding}!important;
           }
         }
       }
-      &-y, &-v, &y, &v {
+      &y, &v {
         @each $paddingLabel, $padding in $paddingThickness {
           &-#{$paddingLabel} {
             padding-top: #{$padding}!important;
@@ -169,7 +169,7 @@ body {
           }
         }
       }
-      &-x, &-h, &x, &h {
+      &x, &h {
         @each $paddingLabel, $padding in $paddingThickness {
           &-#{$paddingLabel} {
             padding-left: #{$padding}!important;
@@ -265,31 +265,6 @@ body {
     }
 
 
-    /* parallax */
-    /*
-    .px {
-      perspective: 1px;
-      -webkit-perspective: 1px;
-      perspective-origin: 50%;
-      height: 100vh;
-      overflow-x: hidden;
-      //overflow-y: auto;
-      .pxGroup {
-        position: relative;
-        height: 100vh;
-        transform-style: preserve-3d;
-      }
-      .pxLayer {
-        padding-top: 100vh;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-    }
-    */
-
     /* ELEMENTS POSITIONING */
 
     /* horizontal */
@@ -308,21 +283,21 @@ body {
     }
 
     /* vertical */
-    .vTop, .v-top {
+    .v-top {
     	position: relative;
     	top: 0;
     	margin-top:0;
     	margin-bottom:auto;
     	transform: translate(0, 0%);
     }
-    .vCent, .v-cent {
+    .v-cent {
     	position: relative;
     	top: 50%;
     	margin-top:0;
     	margin-bottom:0;
     	transform: translate(0, -50%);
     }
-    .vBot, .v-bot {
+    .v-bot {
     	position: relative;
     	top: 100%;
     	margin-top:auto;
@@ -351,7 +326,7 @@ body {
 
     /* border radius */
     @each $borderRadiusLabel, $borderRadiusPx in $borderRadius {
-      .b-rad-, .border-radius-, .bRad {
+      .b-rad-, .border-radius- {
         &#{$borderRadiusLabel} {
           @include borderRadius(#{$borderRadiusPx});
         }
@@ -364,7 +339,7 @@ body {
     }
 
     /* USE IMG and VID as BACKGROUND */
-    .use-as-bg, .useAsBg {
+    .use-as-bg {
       overflow: hidden;
       & > img, & > video {
         min-height: 100%;
@@ -377,7 +352,7 @@ body {
         transform: translate(-50%, -50%);
         z-index: 0;
       }
-      .dot-bg, .dot-mask, .dotMask {
+      .dot-bg, .dot-mask {
         &.inv, &.invert {
           filter: invert(1);
         }
@@ -438,7 +413,7 @@ body {
         background: var(--link-color);
         border-color: var(--link-color);
       }
-      &Bg, &-bg {
+      &-bg {
         color: var(--white);
         border-color: var(--link-color);
         background: var(--link-color);
@@ -466,14 +441,6 @@ body {
       &.XXL, &.xxl {
         padding: calc(var(--padding)*1.25) calc(var(--padding)*1.75);
       }
-      /*
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      */
     }
 
     /* hidden & shown */
@@ -760,7 +727,6 @@ body {
             width: 100%;
             padding: calc(var(--padding)* 0.5) var(--padding);
             @include sm {
-              width: auto;
               padding: 0 var(--padding);
             }
             display: flex;
