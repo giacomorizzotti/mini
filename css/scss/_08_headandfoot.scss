@@ -5,7 +5,7 @@ body {
   &.mini {
 
     // fixed header
-    &.fixed-header, &.fixedHeader {
+    &.fixed-header {
       header#header {
         position: fixed;
         width: 100%;
@@ -25,8 +25,42 @@ body {
         left: 0;
         z-index: 99;
       }
+      &.detached {
+        position: fixed;
+        width: calc( 100% - ( var(--margin) * 2 ) );
+        top: var(--margin);
+        right: var(--margin);
+        left: var(--margin);
+        z-index: 99;
+        .boxes {
+          .box.menus {
+            #menu-toggle {
+              top: calc(var(--margin)* 3);
+              right: calc(var(--margin)* 3);
+            }
+          }
+        }
+      }
     }
-
+    &.scroll {
+      header#header {
+        &.detached {
+          width: 100%;
+          top: 0;
+          right: 0;
+          left: 0;
+          @include borderRadius(0);
+          .boxes {
+            .box.menus {
+              #menu-toggle {
+                top: calc(var(--margin)* 2);
+                right: calc(var(--margin)* 2);
+              }
+            }
+          }
+        }
+      }
+    }
 
     ul.menu {
       margin: 0;
@@ -102,9 +136,7 @@ body {
                 }
                 &:hover {
                   &::after {
-                    -webkit-border-radius: 50%;
-                    -moz-border-radius: 50%;
-                    border-radius: 50%;
+                    @include borderRadius(50%);
                   }
                 }
 

@@ -7995,7 +7995,7 @@ body.mini *[class^=iconoir-], body.mini *[class*=" iconoir-"] {
   }
 }
 /* MENUs STYLING */
-body.mini.fixed-header header#header, body.mini.fixedHeader header#header {
+body.mini.fixed-header header#header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -8010,6 +8010,31 @@ body.mini header#header.fixed {
   right: 0;
   left: 0;
   z-index: 99;
+}
+body.mini header#header.detached {
+  position: fixed;
+  width: calc(100% - var(--margin) * 2);
+  top: var(--margin);
+  right: var(--margin);
+  left: var(--margin);
+  z-index: 99;
+}
+body.mini header#header.detached .boxes .box.menus #menu-toggle {
+  top: calc(var(--margin) * 3);
+  right: calc(var(--margin) * 3);
+}
+body.mini.scroll header#header.detached {
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body.mini.scroll header#header.detached .boxes .box.menus #menu-toggle {
+  top: calc(var(--margin) * 2);
+  right: calc(var(--margin) * 2);
 }
 body.mini ul.menu {
   margin: 0;
