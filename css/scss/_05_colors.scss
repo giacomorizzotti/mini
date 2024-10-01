@@ -243,6 +243,10 @@ body {
       @include gradient(135deg, $gradFourth);
     }
 
+    .grad-fww {
+      @include gradient(0deg, $gradFalseWhiteToWhite);
+    }
+
 
   }
 }

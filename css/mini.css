@@ -7130,6 +7130,12 @@ body.mini .grad-fourth {
   background: -o-linear-gradient(135deg, var(--fourth-color) 0%, var(--fourth-color-dark) 100%) !important;
   background: linear-gradient(135deg, var(--fourth-color) 0%, var(--fourth-color-dark) 100%) !important;
 }
+body.mini .grad-fww {
+  background: -webkit-linear-gradient(0deg, 0deg, var(--white) 0%, var(--false-white) 100%) !important;
+  background: -moz-linear-gradient(0deg, 0deg, var(--white) 0%, var(--false-white) 100%) !important;
+  background: -o-linear-gradient(0deg, 0deg, var(--white) 0%, var(--false-white) 100%) !important;
+  background: linear-gradient(0deg, 0deg, var(--white) 0%, var(--false-white) 100%) !important;
+}
 
 /* TYPOS */
 /* fluid typography */
