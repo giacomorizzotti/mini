@@ -153,7 +153,7 @@ $gradMain: var(--main-color) 0%, var(--main-color-dark) 100%;
 $gradSecond: var(--second-color) 0%, var(--second-color-dark) 100%;
 $gradThird: var(--third-color) 0%, var(--third-color-dark) 100%;
 $gradFourth: var(--fourth-color) 0%, var(--fourth-color-dark) 100%;
-$gradFalseWhiteToWhite: 0deg, var(--white) 0%, var(--false-white) 100%;
+$gradFalseWhiteToWhite: var(--white) 0%, var(--false-white) 100%;
 
 @mixin gradient($direction, $list) {
   background: -webkit-linear-gradient($direction, $list)!important;
