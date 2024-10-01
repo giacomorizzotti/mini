@@ -1,11 +1,10 @@
 
+<img src="img/brand/mini_logo.svg" style="display: block; width: 120px; height: auto;"/>
+<br/>
 
+A "mini" frontend framework made to build wonderful and technically perfect websites, in minutes.
 
-# mini
-
-A "mini" frontend framework made to build wonderful and technically perfect websites. In minutes.
-
----
+<br/>
 
 ### Installation
 
@@ -13,19 +12,20 @@ A "mini" frontend framework made to build wonderful and technically perfect webs
 git clone https://github.com/giacomorizzotti/mini
 ```
 
+<br/>
+
 <!-- LICENSE -->
-## License
+### License
 
 Distributed under the MIT License. See `license.txt` for more information.
 
+<br/>
+
 <!-- DOCUMENTATION -->
-## 🧻 Docs
+### 🧻 Docs
 
 [mini.uwa.agency](https://mini.uwa.agency)
 
 
 <br/><br/>
-
----
-
 

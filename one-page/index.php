@@ -79,18 +79,13 @@
     <div id="top"></div>
     <a href="#top"><div class="top-link"><p class=""><i class="iconoir-dot-arrow-up"></i></p></div></a>
 
-    <header id="header" class="header fixed">
+    <header id="header" class="header fixed px-1">
         <div class="container">
             <div class="boxes justify-content-between">
                 <div class="box brand">
                     <a href="#top" class="">
                         <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem me-1" alt="emblem"/>
                     </a>
-                    <!--
-                    <a href="#top" class="NOxlDown">
-                        <img src="https://mini.uwa.agency/img/brand/mini_logotype.svg" class="logo logotype" alt="logotype"/>
-                    </a>
-                    -->
                     <a href="#top" class=""><h3 class="site-title mini-title">mini</h3></a>
                 </div>
                 <div class="box menus">
