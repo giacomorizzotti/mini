@@ -24,11 +24,36 @@ body {
         z-index: 99;
       }
     }
-    &.top {
 
+    &.top {
+      header#header {
+        &.top {
+          &-wh {
+            background: var(--white);
+          }
+          &-bk {
+            background: var(--black);
+          }
+          &-col {
+            background: var(--main-color);
+          }
+        }
+      }
     }
+
     &.scroll {
       header#header {
+        &.scroll {
+          &-wh {
+            background: var(--white);
+          }
+          &-bk {
+            background: var(--black);
+          }
+          &-col {
+            background: var(--main-color);
+          }
+        }
         &.detached {
           width: 100%;
           top: 0;
@@ -311,7 +336,7 @@ body {
       @include md {
         margin-bottom: 0;
       }
-      
+
       ul {
         list-style: none;
         margin: 0;
@@ -861,9 +886,9 @@ body {
                 }
               }
             }
-            &.drop-down, &.menu-item-has-children {
+            &.drop-down, &.dropdown, &.menu-item-has-children {
               ul {
-                &.drop-down {
+                &.drop-down, &.dropdown {
                   background: var(--black);
                 }
               }
@@ -1049,9 +1074,9 @@ body {
                 }
               }
             }
-            &.drop-down, &.menu-item-has-children {
+            &.drop-down, &.dropdown, &.menu-item-has-children {
               ul {
-                &.drop-down, &.sub-menu {
+                &.drop-down, &.dropdown, &.sub-menu {
                   background: var(--black);
                 }
               }
@@ -1260,38 +1285,6 @@ body {
                 overflow-y: scroll;
               }
             }
-          }
-        }
-      }
-    }
-
-    &.top {
-      header#header {
-        &.top {
-          &-wh {
-            background: var(--white);
-          }
-          &-bk {
-            background: var(--black);
-          }
-          &-col {
-            background: var(--main-color);
-          }
-        }
-      }
-    }
-
-    &.scroll {
-      header#header {
-        &.scroll {
-          &-wh {
-            background: var(--white);
-          }
-          &-bk {
-            background: var(--black);
-          }
-          &-col {
-            background: var(--main-color);
           }
         }
       }

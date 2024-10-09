@@ -8043,6 +8043,24 @@ body.mini header#header.detached {
   left: var(--margin);
   z-index: 99;
 }
+body.mini.top header#header.top-wh {
+  background: var(--white);
+}
+body.mini.top header#header.top-bk {
+  background: var(--black);
+}
+body.mini.top header#header.top-col {
+  background: var(--main-color);
+}
+body.mini.scroll header#header.scroll-wh {
+  background: var(--white);
+}
+body.mini.scroll header#header.scroll-bk {
+  background: var(--black);
+}
+body.mini.scroll header#header.scroll-col {
+  background: var(--main-color);
+}
 body.mini.scroll header#header.detached {
   width: 100%;
   top: 0;
@@ -8816,7 +8834,7 @@ body.mini.top nav.menu ul li.item.active > a::after, body.mini.top nav.menu ul l
     background: var(--main-color);
   }
 }
-body.mini.top nav.menu ul li.item.drop-down ul.drop-down, body.mini.top nav.menu ul li.item.menu-item-has-children ul.drop-down, body.mini.top nav.menu ul li.menu-item.drop-down ul.drop-down, body.mini.top nav.menu ul li.menu-item.menu-item-has-children ul.drop-down {
+body.mini.top nav.menu ul li.item.drop-down ul.drop-down, body.mini.top nav.menu ul li.item.drop-down ul.dropdown, body.mini.top nav.menu ul li.item.dropdown ul.drop-down, body.mini.top nav.menu ul li.item.dropdown ul.dropdown, body.mini.top nav.menu ul li.item.menu-item-has-children ul.drop-down, body.mini.top nav.menu ul li.item.menu-item-has-children ul.dropdown, body.mini.top nav.menu ul li.menu-item.drop-down ul.drop-down, body.mini.top nav.menu ul li.menu-item.drop-down ul.dropdown, body.mini.top nav.menu ul li.menu-item.dropdown ul.drop-down, body.mini.top nav.menu ul li.menu-item.dropdown ul.dropdown, body.mini.top nav.menu ul li.menu-item.menu-item-has-children ul.drop-down, body.mini.top nav.menu ul li.menu-item.menu-item-has-children ul.dropdown {
   background: var(--black);
 }
 @media (min-width: 768px) {
@@ -8972,7 +8990,7 @@ body.mini.scroll nav.menu ul li.item.active > a::after, body.mini.scroll nav.men
     background: var(--main-color);
   }
 }
-body.mini.scroll nav.menu ul li.item.drop-down ul.drop-down, body.mini.scroll nav.menu ul li.item.drop-down ul.sub-menu, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.drop-down, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.sub-menu {
+body.mini.scroll nav.menu ul li.item.drop-down ul.drop-down, body.mini.scroll nav.menu ul li.item.drop-down ul.dropdown, body.mini.scroll nav.menu ul li.item.drop-down ul.sub-menu, body.mini.scroll nav.menu ul li.item.dropdown ul.drop-down, body.mini.scroll nav.menu ul li.item.dropdown ul.dropdown, body.mini.scroll nav.menu ul li.item.dropdown ul.sub-menu, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.drop-down, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.dropdown, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.dropdown, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.dropdown ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.dropdown ul.dropdown, body.mini.scroll nav.menu ul li.menu-item.dropdown ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.dropdown, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.sub-menu {
   background: var(--black);
 }
 @media (min-width: 768px) {
@@ -9128,24 +9146,6 @@ body.mini header#header .boxes .box.menus .head-menu.open {
   visibility: visible;
   max-height: 90%;
   overflow-y: scroll;
-}
-body.mini.top header#header.top-wh {
-  background: var(--white);
-}
-body.mini.top header#header.top-bk {
-  background: var(--black);
-}
-body.mini.top header#header.top-col {
-  background: var(--main-color);
-}
-body.mini.scroll header#header.scroll-wh {
-  background: var(--white);
-}
-body.mini.scroll header#header.scroll-bk {
-  background: var(--black);
-}
-body.mini.scroll header#header.scroll-col {
-  background: var(--main-color);
 }
 body.mini footer#footer .footer-logo img.logo.emblem {
   width: 66.666666%;
