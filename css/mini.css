@@ -2674,15 +2674,30 @@ body.mini .btn-bg:hover, body.mini .btn-bg.clicked {
 }
 body.mini .btn.XS, body.mini .btn.xs {
   padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.25);
-  margin: 0 0 calc(var(--margin) * 0.25) 0;
+  margin: calc(var(--margin) * 0.25) 0;
+}
+@media (min-width: 768px) {
+  body.mini .btn.XS, body.mini .btn.xs {
+    margin: calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) 0;
+  }
 }
 body.mini .btn.S, body.mini .btn.s {
   padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
-  margin: 0 0 calc(var(--margin) * 0.5) 0;
+  margin: calc(var(--margin) * 0.35) 0;
+}
+@media (min-width: 768px) {
+  body.mini .btn.S, body.mini .btn.s {
+    margin: calc(var(--margin) * 0.35) calc(var(--margin) * 0.5) calc(var(--margin) * 0.35) 0;
+  }
 }
 body.mini .btn.L, body.mini .btn.l {
   padding: calc(var(--padding) * 0.625) calc(var(--padding) * 1.125);
-  margin: 0 0 calc(var(--margin) * 1.125) 0;
+  margin: calc(var(--margin) * 0.75) 0;
+}
+@media (min-width: 768px) {
+  body.mini .btn.L, body.mini .btn.l {
+    margin: calc(var(--margin) * 0.75) calc(var(--margin) * 1.125) calc(var(--margin) * 0.75) 0;
+  }
 }
 body.mini .btn.XL, body.mini .btn.xl {
   padding: calc(var(--padding) * 0.85) calc(var(--padding) * 1.35);

@@ -81,7 +81,7 @@
 
     <header id="header" class="header fixed px-1">
         <div class="container">
-            <div class="boxes justify-content-between">
+            <div class="boxes align-items-center justify-content-between">
                 <div class="box brand">
                     <a href="#top" class="">
                         <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem me-1" alt="emblem"/>
