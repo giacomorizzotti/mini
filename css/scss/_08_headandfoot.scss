@@ -4,19 +4,9 @@
 body {
   &.mini {
 
-    // fixed header
-    &.fixed-header {
-      header#header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 99;
-      }
-    }
-
+    // header
     header#header {
+      transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
       &.fixed {
         position: fixed;
         width: 100%;
@@ -32,15 +22,10 @@ body {
         right: var(--margin);
         left: var(--margin);
         z-index: 99;
-        .boxes {
-          .box.menus {
-            #menu-toggle {
-              top: calc(var(--margin)* 3);
-              right: calc(var(--margin)* 3);
-            }
-          }
-        }
       }
+    }
+    &.top {
+
     }
     &.scroll {
       header#header {
@@ -50,18 +35,11 @@ body {
           right: 0;
           left: 0;
           @include borderRadius(0);
-          .boxes {
-            .box.menus {
-              #menu-toggle {
-                top: calc(var(--margin)* 2);
-                right: calc(var(--margin)* 2);
-              }
-            }
-          }
         }
       }
     }
 
+    // generic menu
     ul.menu {
       margin: 0;
       padding: 0;
@@ -84,12 +62,10 @@ body {
       }
     }
 
+    // branding
     header#header {
-      transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-
       .boxes {
         .box {
-
           &.brand {
             display: flex;
             flex-flow: row wrap;
@@ -113,16 +89,13 @@ body {
                 }
               }
             }
-
-            .site-title, .siteTitle {
+            .site-title {
               display: inline-block;
               padding: 0 var(--padding);
               margin: 0 var(--margin) 0 0;
-              //vertical-align: middle;
               position: relative;
               line-height: 1!important;
-
-              &.mini-title, &.miniTitle {
+              &.mini-title {
                 &::after {
                   content: "";
                   display: block;
@@ -139,48 +112,1102 @@ body {
                     @include borderRadius(50%);
                   }
                 }
-
               }
+            }
+          }
+        }
+      }
+    }
+    &.top {
+      header#header {
+        &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
+          .boxes {
+            .box {
+              &.brand {
+                color: var(--white);
+                a {
+                  .logo {
+                    filter: brightness(0) invert(1);
+                    &.emblem {}
+                    &.logotype {}
+                  }
+                  .site-title {
+                    color: var(--white);
+                    &.mini-title, &.miniTitle {
+                      &::after {
+                        border: 3px solid var(--white);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.scroll {
+      header#header {
+        .boxes {
+          .box {
+            &.brand {
+              min-height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) );
+              height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) ); // EXPERIMENTAL
+              a {
+                .logo {
+                  min-height: var(--scroll-logo-height);
+                  height: var(--scroll-logo-height); // EXPERIMENTAL
+                }
+              }
+            }
+          }
+        }
+        &.neg, &.inv, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
+          .boxes {
+            .box {
+              &.brand {
+                color: var(--white);
+                a {
+                  .logo {
+                    filter: brightness(0) invert(1);
+                    &.emblem {}
+                    &.logotype {}
+                  }
+                  .site-title, .siteTitle {
+                    color: var(--white);
+                    &.mini-title, &.miniTitle {
+                      &::after {
+                        border: 3px solid var(--white);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
+    // menu toggle
+    header#header {
+      #menu-toggle {
+        display:block;
+        position: fixed;
+        top: var(--margin);
+        top: calc(var(--margin) * 2); // EXPERIMENTAL
+        right: var(--margin);
+        right: calc(var(--margin) * 2); // EXPERIMENTAL
+        width: var(--menu-toggle-height);
+        height: var(--menu-toggle-height);
+        background: var(--main-color);
+        padding: calc( var(--menu-toggle-height) / 7 );
+        margin: 0 0 0 0;
+        z-index: 9;
+        @include borderRadius(5px);
+        cursor: pointer;
+        .line {
+          display: block;
+          height: calc( var(--menu-toggle-height) / 7);
+          min-width: 100%;
+          width: 100%;
+          max-width: 100%;
+          margin: 0 0 calc( var(--menu-toggle-height) / 7) 0;
+          background: var(--white);
+        }
+      }
+      &.detached {
+        #menu-toggle {
+          top: calc(var(--margin)* 3);
+          right: calc(var(--margin)* 3);
+        }
+      }
+      &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
+        #menu-toggle {
+          background: var(--main-color);
+          .line {
+            background: var(--white);
+          }
+        }
+
+      }
+      &.neg, &.inv, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
+        #menu-toggle {
+          background: var(--main-color);
+          .line {
+            background: var(--white);
+          }
+        }
+      }
+    }
+    &.top {
+      
+    }
+    &.scroll {
+      header#header {
+        #menu-toggle {
+          width: var(--scroll-menu-toggle-height);
+          height: var(--scroll-menu-toggle-height);
+          padding: calc( var(--scroll-menu-toggle-height) / 7 );
+          .line {
+            height: calc( var(--scroll-menu-toggle-height) / 7);
+            margin: 0 0 calc( var(--scroll-menu-toggle-height) / 7) 0;
+          }
+        }
+        &.detached {
+          #menu-toggle {
+            top: calc(var(--margin)* 2);
+            right: calc(var(--margin)* 2);
+          }
+        }
+      }
+    }
+
+    // page menu
+    ul {
+      &#page-menu {
+        display: none;
+        @include sm {display: flex;}
+        padding-right: calc( var(--menu-toggle-height) + ( var(--margin) * 2 ) );
+        li {
+          &.item, &.menu-item {
+            font-style: italic;
+            font-weight: 300;
+          }
+          &.menu-icon {
+            color: var(--main-color-dark);
+            padding: var(--padding);
+            border: 5px solid var(--main-color-dark);
+            @include md {
+              background-color: transparent;
+              color: var(--grey);
+              padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+    &.scroll {
+      ul {
+        &#page-menu {
+          padding-right: calc( var(--scroll-menu-toggle-height) + ( var(--margin) * 2 ) );
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+    nav.menu {
+      margin-bottom: calc( var(--margin) * 2 );
+      height: 100%;
+      @include md {
+        margin-bottom: 0;
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding:0;
+        li {
+          display: inline-block;
+          ul {
+            &.drop-down, &.dropdown, &.sub-menu {
+              display: none;
+            }
+          }
+          &.drop-down, &.dropdown, &.menu-item-has-children {
+            position: relative;
+            ul {
+              &.drop-down, &.dropdown, &.sub-menu {
+                display: flex;
+                align-items: flex-start;
+                flex-flow: column;
+                @include md {
+                  position: absolute;
+                  top: calc( 100% + ( var(--margin) * 0.5 ) );
+                  left: 50%;
+                  transform: translate(-50%, 0);
+                }
+                background: var(--white);
+                -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+                -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+                box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+
+                // hidden
+                opacity: 0;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+                transition: all 0.3s ease;
+                overflow: hidden;
+                border:0;
+                padding: 0;
+
+                li, li.item, li.menu-item, li.menu-sub-item, li.sub-menu-item {
+                  font-size: var(--p);
+                  line-height: 1.5;
+                  a {
+                    color: var(--black);
+                    transform: translate(0,0);
+                  }
+                }
+              }
+            }
+            &:hover {
+              &::before {
+                content: "";
+                width: 100%;
+                height: 200%;
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: 0;
+              }
+              ul {
+                &.drop-down, &.dropdown {
+
+                  // shown
+                  opacity: 1;
+                  visibility: visible;
+                  transition: all 0.3s ease;
+                  width: auto;
+                  height: auto;
+                  padding: var(--padding) calc(var(--padding)*1.5);
+                  min-width: 220px;
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+        display: block;
+        margin: calc( var(--margin) * -0.5 ) 0;
+        height: 100%;
+        @include sm {
+          margin: calc( var(--margin) * -0.75 ) 0;
+        }
+        @include md {
+          display: flex;
+          justify-content: flex-end;
+          margin: 0 calc( var(--margin) * 0.5);
+        }
+
+        li.item, li.menu-item {
+          display: block;
+          font-weight: 700;
+          font-size: var(--h3);
+          line-height: 1.5;
+          margin:0;
+          background: transparent;
+          padding:0;
+          @include sm {
+            font-size: var(--h4);
+          }
+          @include md {
+            font-size: var(--h6);
+            padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
+          }
+          a {
+            display: block;
+            position: relative;
+            color: var(--white);
+            padding: var(--padding);
+            margin: calc(var(--margin) * 0.5 ) 0;
+            @include sm {
+              top: 50%;
+              padding: calc(var(--padding) * 0.75 );
+              margin: calc(var(--margin) * 0.75 ) 0;
+            }
+            @include md {
+              color: var(--black);
+              display: inline-block;
+              margin: 0;
+              padding: 0;
+              transform: translate(0, -50%);
+            }
+            &::after {
+              content:"";
+              display: block;
+              position: absolute;
+              height: 2px;
+              width: 0;
+              background: var(--white);
+              bottom: 0;
+              left:0;
+              transition: all 0.3s ease;
+              @include md {
+                background: var(--main-color);
+              }
+            }
+            &:hover {
+              color:var(--white);
+              @include md {
+                color: var(--main-color);
+              }
+              &::after {
+                width: 100%;
+              }
+            }
+            &.active {
+              background: var(--white);
+              color: var(--link-color);
+              display: block;
+              @include md {
+                color: var(--link-color);
+                background: transparent;
+              }
+              &::after {
+                width: 0;
+                background: var(--link-color);
+                @include md {
+                  width: 100%;
+                  background: var(--link-color);
+                }
+              }
+            }
+          }
+          &.active, &.current-menu-item {
+            > a {
+              background: var(--white);
+              color: var(--main-color);
+              display: block;
+              @include md {
+                color: var(--main-color);
+                background: transparent;
+              }
+              &::after {
+                width: 0;
+                background: var(--main-color);
+                @include md {
+                  width: 100%;
+                  background: var(--main-color);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      
+      &.user-menu {
+        ul {
+          &.user-menu {
+            li.item, li.menu-item {
+              a {
+                background: var(--white);
+                color: var(--second-color);
+                font-weight: 500;
+                //font-style: italic;
+                @include md {
+                  background: transparent;
+                }
+                &::after {
+                  @include md {
+                    background: var(--white);
+                  }
+                }
+                &:hover {
+                  color: var(--second-color-dark);
+                  &::after {
+                    @include md {
+                      background: var(--second-color-dark);
+                    }
+                  }
+                }
+                &.active {
+                  @include md {
+                    color: var(---third-color);
+                    background: transparent;
+                  }
+                  &::after {
+                    width: 0;
+                    background: var(--second-color-dark);
+                    @include md {
+                      width: 100%;
+                      background: var(--second-color-dark);
+                    }
+                  }
+                }
+              }
+              &.login {
+                a {
+                  font-style: italic;
+                }
+              }
+              &.logout {
+                a {
+                  font-style: italic;
+                }
+              }
+              &.signin {
+                @include md {
+                  background-color: var(--second-color-dark);
+                  @include borderRadius(5px);
+                }
+                a {
+                  font-weight: 700;
+                  font-style: italic;
+                  color: var(--second-color-dark);
+                  @include md {
+                    color: var(--white);
+                  }
+                  &::after {
+                    @include md {
+                      background: var(--second-color-dark);
+                    }
+                  }
+                  &:hover {
+                    color: var(--white);
+                    &::after {
+                      @include md {
+                        background: var(--white);
+                      }
+                    }
+                  }
+                  &.active {
+                    &::after {
+                      width: 0;
+                      background: var(--second-color-dark);
+                      @include md {
+                        background: transparent;
+                        width: 100%;
+                        background: var(--white);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.admin-menu {
+        background: var(--third-color-dark);
+        @include md { //experimental
+          background: transparent;
+          position: fixed;
+          top: 0;
+          left: 0;
+          padding: var(--padding) calc( var(--padding) * 0.5 );
+          height: auto;
+        }
+        ul {
+          @include md { //experimental
+            flex-flow: column wrap;
+            justify-content: flex-start;
+          }
+          &.admin-menu {
+            li.item, li.menu-item {
+              @include md { //experimental
+                background-color: var(--third-color-dark);
+                margin-bottom: calc( var(--margin) * 0.5 );
+              }
+              a {
+                @include md { //experimental
+                  display: inline-block;
+                  transform: none;
+                }
+                background: var(--third-color-dark);
+                color: var(--white);
+                font-weight: 500;
+                //font-style: italic;
+                @include md {
+                  background: transparent;
+                }
+                &::after {
+                  @include md {
+                    background: var(--white);
+                  }
+                }
+                &:hover {
+                  color: var(--third-color);
+                  &::after {
+                    @include md {
+                      background: var(--third-color);
+                    }
+                  }
+                }
+                &.active {
+                  @include md {
+                    color: var(--third-color);
+                    background: transparent;
+                  }
+                  &::after {
+                    width: 0;
+                    background: var(--third-color);
+                    @include md {
+                      width: 100%;
+                      background: var(--third-color);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.social-menu {
+        ul {
+          &.social-menu {
+            text-align: center;
+            li.item, li.menu-item {
+              padding: 0 calc(var(--padding) * 0.25);
+              display: inline-block;
+              @include md {
+                display: block;
+              }
+              a {
+                color: var(--white);
+                @include md {
+                  color: var(--link-color);
+                }
+                &::after {
+                }
+                &:hover {
+                  color: var(--link-hover-color);
+                  &::after {
+                    width: 0;
+                    background-color: transparent;
+                  }
+                }
+                &.active {
+                  &::after {
+                    width: 0;
+                    background-color: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.lang-menu {
+        margin-top: var(--margin);
+        @include md {
+          margin-top: 0;
+        }
+
+        ul {
+          &.lang-menu {
+            display: flex;
+            justify-content: space-evenly;
+            @include borderRadius(50px);
+            height: 100%;
+
+            @include md {
+              display: flex;
+              justify-content: flex-end;
+              margin:0 calc( var(--margin) * 0.5);
             }
 
+            li.item, li.menu-item {
+              display: block;
+              font-weight: 300;
+              font-size: var(--h4);
+              line-height: 1.5;
+              //font-style: italic;
+              margin:0;
+              background: transparent;
+              padding:0;
+              @include sm {
+                font-size: var(--h5);
+              }
+              @include md {
+                font-size: var(--p);
+                padding: 0 calc(var(--padding) * 0.5);
+              }
+              a {
+                display: block;
+                position: relative;
+                color: var(--white);
+                padding: var(--padding) calc(var(--padding) * 0.5 );
+                margin: calc(var(--margin) * 0.5 ) 0;
+                text-align: center;
+                @include borderRadius(100px);
+                min-width: 60px;
+                @include sm {
+                  padding: calc(var(--margin) * 0.75 );
+                  margin: calc(var(--margin) * 0.75 ) 0;
+                }
+                @include md {
+                  top: 50%;
+                  color: var(--black);
+                  display: inline-block;
+                  margin:0;
+                  padding:0;
+                  transform: translate(0, -50%);
+                  min-width: 0;
+                }
+                &::after {
+                  content:"";
+                  display: block;
+                  position: absolute;
+                  height: 1px;
+                  width: 0;
+                  background: var(--white);
+                  bottom: 0;
+                  left:0;
+                  transition: all 0.3s ease;
+                  @include md {
+                    background: var(--black);
+                  }
+                }
+                &:hover {
+                  background: var(--white);
+                  color: var(--black);
+                  font-weight: 500;
+                  @include md {
+                    background: transparent;
+                  }
+                  &::after {
+                    width: 0;
+                    @include md {
+                      width: 100%;
+                    }
+                  }
+                }
+                &.selected {
+                  background: var(--white);
+                  color: var(--black);
+                  display: block;
+                  font-weight: 500;
+                  @include md {
+                    background: transparent;
+                  }
+                  &::after {
+                    width: 0;
+                    background: var(--black);
+                    @include md {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            }
           }
+        }
+      }
+    }
 
+    &.top {
+      nav.menu {
+        ul {
 
+          li.item, li.menu-item {
+            background: transparent;
+            a {
+              color: var(--white);
+
+              &::after {
+                background: var(--white);
+                @include md {
+                  background: var(--main-color);
+                }
+              }
+
+              &:hover {
+                color: var(--white);
+                &::after {
+                  background: var(--main-color);
+                  @include md {
+                    background: var(--main-color);
+                  }
+                }
+              }
+
+              &.active {
+                background: var(--white);
+                color: var(--main-color);
+                @include md {
+                  color: var(--main-color);
+                  background: transparent;
+                }
+
+                &::after {
+                  background: var(--main-color);
+                  @include md {
+                    background: var(--main-color);
+                  }
+                }
+              }
+            }
+            &.active, &.current-menu-item {
+              background-color: var(--white);
+              > a {
+                background: var(--white);
+                color: var(--main-color);
+                @include md {
+                  color: var(--main-color);
+                  background: transparent;
+                }
+                &::after {
+                  background: var(--main-color);
+                  @include md {
+                    background: var(--main-color);
+                  }
+                }
+              }
+            }
+            &.drop-down, &.menu-item-has-children {
+              ul {
+                &.drop-down {
+                  background: var(--black);
+                }
+              }
+            }
+          }
+        }
+
+        &.admin-menu {
+          li.item, li.menu-item {
+            @include md { //experimental
+              background-color: var(--third-color-dark);
+            }
+          }
+        }
+
+        &.user-menu {
+          ul {
+            &.user-menu {
+              li {
+                &.login {
+                  &.active {
+                    > a {
+                      background-color: var(--white);
+                      color: var(--fourth-color);
+                      @include md {
+                        background-color: transparent;
+                        color: var(--black);
+                      }
+                      &:after {
+                        background-color: var(--fourth-color);
+                      }
+                    }
+                  }
+                  &:hover {
+                    a {
+                      &:after {
+                        @include md {
+                          background: var(--fourth-color);
+                        }
+                      }
+                    }
+                  }
+                }
+                a {
+                  background-color: transparent;
+                }
+                &.signin {
+                  @include md {
+                    background-color: var(--fourth-color-dark);
+                  }
+                  a {
+                    background-color: transparent;
+                  }
+                  &.active {
+                    background-color: var(--white);
+                    color: var(--fourth-color-dark);
+                    @include md {
+                      background-color: var(--white);
+                      color: var(--black);
+                    }
+                    > a {
+                      color: var(--fourth-color-dark);
+                      &:after {
+                        background-color: var(--fourth-color);
+                      }
+                    }
+                  }
+                  &:hover {
+                    a {
+                      &:after {
+                        @include md {
+                          background: var(--fourth-color);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.lang-menu {
+          ul {
+            &.lang-menu {
+              li.item, li.menu-item {
+                a {
+                  @include md {
+                    color: var(--white);
+                  }
+                  &::after {
+                    @include md {
+                      background: var(--white);
+                    }
+                  }
+                  &:hover {
+                    @include md {
+                      color: var(--white);
+                    }
+                    &::after {
+                      @include md {
+                        background: var(--white);
+                      }
+                    }
+                  }
+
+                  &.selected {
+                    color: var(--black);
+                    @include md {
+                      color: var(--white);
+                    }
+                    &::after {
+                      @include md {
+                        background: var(--white);
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.scroll {
+      nav.menu {
+        ul {
+          li.item, li.menu-item {
+            background: transparent;
+            a {
+              color: var(--white);
+
+              &::after {
+                height: 1px;
+                background: var(--white);
+                @include md {
+                  background: var(--main-color);
+                }
+              }
+
+              &:hover {
+                color: var(--white);
+                &::after {
+                  background: var(--main-color);
+                  @include md {
+                    background: var(--main-color);
+                  }
+                }
+              }
+
+              &.active {
+                background: var(--white);
+                color: var(--main-color);
+                @include md {
+                  color: var(--main-color);
+                  background: transparent;
+                }
+
+                &::after {
+                  background: var(--main-color);
+                  @include md {
+                    background: var(--main-color);
+                  }
+                }
+              }
+            }
+            &.active, &.current-menu-item {
+              background-color: var(--white);
+              > a {
+                background: var(--white);
+                color: var(--main-color);
+                @include md {
+                  color: var(--main-color);
+                  background: transparent;
+                }
+                &::after {
+                  background: var(--main-color);
+                  @include md {
+                    background: var(--main-color);
+                  }
+                }
+              }
+            }
+            &.drop-down, &.menu-item-has-children {
+              ul {
+                &.drop-down, &.sub-menu {
+                  background: var(--black);
+                }
+              }
+            }
+          }
+        }
+
+        &.admin-menu {
+          li.item, li.menu-item {
+            @include md { //experimental
+              background-color: var(--third-color-dark);
+            }
+          }
+        }
+
+        &.user-menu {
+          ul {
+            &.user-menu {
+              li {
+                &.login {
+                  &.active {
+                    > a {
+                      background-color: var(--white);
+                      color: var(--fourth-color);
+                      @include md {
+                        background-color: transparent;
+                        color: var(--black);
+                      }
+                      &:after {
+                        background-color: var(--fourth-color);
+                      }
+                    }
+                  }
+                  &:hover {
+                    a {
+                      &:after {
+                        @include md {
+                          background: var(--fourth-color);
+                        }
+                      }
+                    }
+                  }
+                }
+                a {
+                  background-color: transparent;
+                }
+                &.signin {
+                  @include md {
+                    background-color: var(--third-color-dark);
+                  }
+                  a {
+                    background-color: transparent;
+                  }
+                  &.active {
+                    background-color: var(--white);
+                    color: var(--third-color-dark);
+                    @include md {
+                      background-color: var(--white);
+                      color: var(--black);
+                    }
+                    > a {
+                      color: var(--third-color-dark);
+                      &:after {
+                        background-color: var(--fourth-color);
+                      }
+                    }
+                  }
+                  &:hover {
+                    a {
+                      &:after {
+                        @include md {
+                          background: var(--fourth-color);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.lang-menu {
+          ul {
+            &.lang-menu {
+              li.item, li.menu-item {
+                a {
+                  @include md {
+                    color: var(--white);
+                  }
+                  &::after {
+                    @include md {
+                      background: var(--white);
+                    }
+                  }
+                  &:hover {
+                    @include md {
+                      color: var(--white);
+                    }
+                    &::after {
+                      @include md {
+                        background: var(--white);
+                      }
+                    }
+                  }
+
+                  &.selected {
+                    color: var(--black);
+                    @include md {
+                      color: var(--white);
+                    }
+                    &::after {
+                      @include md {
+                        background: var(--white);
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+
+    header#header {
+      .boxes {
+        .box {
           &.menus {
             @include mdDown {
               margin: 0;
               padding: 0;
             }
-            #menu-toggle {
-              display:block;
-              position: fixed;
-              top: var(--margin);
-              top: calc(var(--margin) * 2); // EXPERIMENTAL
-              right: var(--margin);
-              right: calc(var(--margin) * 2); // EXPERIMENTAL
-              width: var(--logo-height);
-              height: var(--logo-height);
-              background: var(--main-color);
-              padding: calc( var(--logo-height) / 7 );
-              margin: 0 0 0 0;
-              z-index: 9;
-              @include borderRadius(5px);
-              cursor: pointer;
-              @include md {
-                display: none!important;
-              }
-              .line {
-                display: block;
-                height: calc( var(--logo-height) / 7);
-                min-width: 100%;
-                width: 100%;
-                max-width: 100%;
-                margin: 0 0 calc( var(--logo-height) / 7) 0;
-                background: var(--white);
-              }
+          }
+        }
+      }
+    }
+    &.scroll {
+      .boxes {
+        .box {
+          &.menus {
+            @include mdDown {
+              margin: 0;
+              padding: 0;
             }
-
+          }
+        }
+      }
+    }
+          
+    header#header {  
+      .boxes {
+        .box {
+          &.menus {
             .head-menu {
               list-style: none;
               margin:0;
@@ -232,533 +1259,6 @@ body {
                 max-height: 90%;
                 overflow-y: scroll;
               }
-
-              nav.menu {
-
-                ul {
-                  list-style: none;
-                  margin: 0;
-                  padding:0;
-                  li {
-                    display: inline-block;
-                    ul {
-                      &.drop-down, &.sub-menu {
-                        display: none;
-                      }
-                    }
-                    &.drop-down, &.menu-item-has-children {
-                      position: relative;
-                      ul {
-                        &.drop-down, &.sub-menu {
-                          display: flex;
-                          align-items: flex-start;
-                          flex-flow: column;
-                          @include md {
-                            position: absolute;
-                            top: calc( 100% + ( var(--margin) * 0.5 ) );
-                            left: 50%;
-                            transform: translate(-50%, 0);
-                          }
-                          background: var(--white);
-                          -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
-                          -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
-                          box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
-
-                          // hidden
-                          opacity: 0;
-                          visibility: hidden;
-                          width: 0;
-                          height: 0;
-                          transition: all 0.3s ease;
-                          overflow: hidden;
-                          border:0;
-                          padding: 0;
-
-                          li, li.item, li.menu-item, li.menu-sub-item, li.sub-menu-item {
-                            font-size: var(--p);
-                            line-height: 1.5;
-                            a {
-                              color: var(--black);
-                              transform: translate(0,0);
-                            }
-                          }
-                        }
-                      }
-                      &:hover {
-                        &::before {
-                          content: "";
-                          width: 100%;
-                          height: 200%;
-                          display: block;
-                          position: absolute;
-                          left: 50%;
-                          transform: translate(-50%, 0);
-                          top: 0;
-                        }
-                        ul {
-                          &.drop-down {
-
-                            // shown
-                            opacity: 1;
-                            visibility: visible;
-                            transition: all 0.3s ease;
-                            width: auto;
-                            height: auto;
-                            padding: var(--padding) calc(var(--padding)*1.5);
-                            min-width: 220px;
-
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-
-                margin-bottom: calc( var(--margin) * 2 );
-                height: 100%;
-                @include md {
-                  margin-bottom: 0;
-                }
-
-                ul {
-                  display: block;
-                  margin: calc( var(--margin) * -0.5 ) 0;
-                  height: 100%;
-                  @include sm {
-                    margin: calc( var(--margin) * -0.75 ) 0;
-                  }
-                  @include md {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin: 0 calc( var(--margin) * 0.5);
-                  }
-
-                  li.item, li.menu-item {
-                    display: block;
-                    font-weight: 700;
-                    font-size: var(--h3);
-                    line-height: 1.5;
-                    margin:0;
-                    background: transparent;
-                    padding:0;
-                    @include sm {
-                      font-size: var(--h4);
-                    }
-                    @include md {
-                      font-size: var(--h6);
-                      padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
-                    }
-                    a {
-                      display: block;
-                      position: relative;
-                      color: var(--white);
-                      padding: var(--padding);
-                      margin: calc(var(--margin) * 0.5 ) 0;
-                      @include sm {
-                        top: 50%;
-                        padding: calc(var(--padding) * 0.75 );
-                        margin: calc(var(--margin) * 0.75 ) 0;
-                      }
-                      @include md {
-                        color: var(--black);
-                        display: inline-block;
-                        margin: 0;
-                        padding: 0;
-                        transform: translate(0, -50%);
-                      }
-                      &::after {
-                        content:"";
-                        display: block;
-                        position: absolute;
-                        height: 2px;
-                        width: 0;
-                        background: var(--white);
-                        bottom: 0;
-                        left:0;
-                        transition: all 0.3s ease;
-                        @include md {
-                          background: var(--main-color);
-                        }
-                      }
-                      &:hover {
-                        color:var(--white);
-                        @include md {
-                          color: var(--main-color);
-                        }
-                        &::after {
-                          width: 100%;
-                        }
-                      }
-                      &.active {
-                        background: var(--white);
-                        color: var(--link-color);
-                        display: block;
-                        @include md {
-                          color: var(--link-color);
-                          background: transparent;
-                        }
-                        &::after {
-                          width: 0;
-                          background: var(--link-color);
-                          @include md {
-                            width: 100%;
-                            background: var(--link-color);
-                          }
-                        }
-                      }
-                    }
-                    &.active, &.current-menu-item {
-                      > a {
-                        background: var(--white);
-                        color: var(--main-color);
-                        display: block;
-                        @include md {
-                          color: var(--main-color);
-                          background: transparent;
-                        }
-                        &::after {
-                          width: 0;
-                          background: var(--main-color);
-                          @include md {
-                            width: 100%;
-                            background: var(--main-color);
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-
-                ul {
-                  &#page-menu, &.page-menu, &.pageMenu {
-                    background: var(--main-color-dark);
-                    @include md {
-                      background: transparent;
-                    }
-                    @include md {
-                      border-right: 1px solid var(--light-grey);
-                      padding: 0 calc(var(--padding)*.5);
-                    }
-                    li {
-                      &.item, &.menu-item {
-                        font-style: italic;
-                        font-weight: 300;
-                      }
-                      &.menu-icon {
-                        background-color: var(--main-color);
-                        color: var(--main-color-dark);
-                        padding: var(--padding);
-                        border: 5px solid var(--main-color-dark);
-                        @include md {
-                          background-color: transparent;
-                          color: var(--grey);
-                          padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
-                          border: 0;
-                        }
-                      }
-                    }
-                  }
-                }
-                &.user-menu {
-                  ul {
-                    &.user-menu {
-                      li.item, li.menu-item {
-                        a {
-                          background: var(--white);
-                          color: var(--second-color);
-                          font-weight: 500;
-                          //font-style: italic;
-                          @include md {
-                            background: transparent;
-                          }
-                          &::after {
-                            @include md {
-                              background: var(--white);
-                            }
-                          }
-                          &:hover {
-                            color: var(--second-color-dark);
-                            &::after {
-                              @include md {
-                                background: var(--second-color-dark);
-                              }
-                            }
-                          }
-                          &.active {
-                            @include md {
-                              color: var(---third-color);
-                              background: transparent;
-                            }
-                            &::after {
-                              width: 0;
-                              background: var(--second-color-dark);
-                              @include md {
-                                width: 100%;
-                                background: var(--second-color-dark);
-                              }
-                            }
-                          }
-                        }
-                        &.login {
-                          a {
-                            font-style: italic;
-                          }
-                        }
-                        &.logout {
-                          a {
-                            font-style: italic;
-                          }
-                        }
-                        &.signin {
-                          @include md {
-                            background-color: var(--second-color-dark);
-                            @include borderRadius(5px);
-                          }
-                          a {
-                            font-weight: 700;
-                            font-style: italic;
-                            color: var(--second-color-dark);
-                            @include md {
-                              color: var(--white);
-                            }
-                            &::after {
-                              @include md {
-                                background: var(--second-color-dark);
-                              }
-                            }
-                            &:hover {
-                              color: var(--white);
-                              &::after {
-                                @include md {
-                                  background: var(--white);
-                                }
-                              }
-                            }
-                            &.active {
-                              &::after {
-                                width: 0;
-                                background: var(--second-color-dark);
-                                @include md {
-                                  background: transparent;
-                                  width: 100%;
-                                  background: var(--white);
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                &.admin-menu {
-                  background: var(--third-color-dark);
-                  @include md { //experimental
-                    background: transparent;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    padding: var(--padding) calc( var(--padding) * 0.5 );
-                    height: auto;
-                  }
-                  ul {
-                    @include md { //experimental
-                      flex-flow: column wrap;
-                      justify-content: flex-start;
-                    }
-                    &.admin-menu {
-                      li.item, li.menu-item {
-                        @include md { //experimental
-                          background-color: var(--third-color-dark);
-                          margin-bottom: calc( var(--margin) * 0.5 );
-                        }
-                        a {
-                          @include md { //experimental
-                            display: inline-block;
-                            transform: none;
-                          }
-                          background: var(--third-color-dark);
-                          color: var(--white);
-                          font-weight: 500;
-                          //font-style: italic;
-                          @include md {
-                            background: transparent;
-                          }
-                          &::after {
-                            @include md {
-                              background: var(--white);
-                            }
-                          }
-                          &:hover {
-                            color: var(--third-color);
-                            &::after {
-                              @include md {
-                                background: var(--third-color);
-                              }
-                            }
-                          }
-                          &.active {
-                            @include md {
-                              color: var(--third-color);
-                              background: transparent;
-                            }
-                            &::after {
-                              width: 0;
-                              background: var(--third-color);
-                              @include md {
-                                width: 100%;
-                                background: var(--third-color);
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                &.social-menu {
-                  ul {
-                    &.social-menu {
-                      text-align: center;
-                      li.item, li.menu-item {
-                        padding: 0 calc(var(--padding) * 0.25);
-                        display: inline-block;
-                        @include md {
-                          display: block;
-                        }
-                        a {
-                          color: var(--white);
-                          @include md {
-                            color: var(--link-color);
-                          }
-                          &::after {
-                          }
-                          &:hover {
-                            color: var(--link-hover-color);
-                            &::after {
-                              width: 0;
-                              background-color: transparent;
-                            }
-                          }
-                          &.active {
-                            &::after {
-                              width: 0;
-                              background-color: transparent;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-
-                &.lang-menu {
-                  margin-top: var(--margin);
-                  @include md {
-                    margin-top: 0;
-                  }
-
-                  ul {
-                    &.lang-menu {
-                      display: flex;
-                      justify-content: space-evenly;
-                      @include borderRadius(50px);
-                      height: 100%;
-
-                      @include md {
-                        display: flex;
-                        justify-content: flex-end;
-                        margin:0 calc( var(--margin) * 0.5);
-                      }
-
-                      li.item, li.menu-item {
-                        display: block;
-                        font-weight: 300;
-                        font-size: var(--h4);
-                        line-height: 1.5;
-                        //font-style: italic;
-                        margin:0;
-                        background: transparent;
-                        padding:0;
-                        @include sm {
-                          font-size: var(--h5);
-                        }
-                        @include md {
-                          font-size: var(--p);
-                          padding: 0 calc(var(--padding) * 0.5);
-                        }
-                        a {
-                          display: block;
-                          position: relative;
-                          color: var(--white);
-                          padding: var(--padding) calc(var(--padding) * 0.5 );
-                          margin: calc(var(--margin) * 0.5 ) 0;
-                          text-align: center;
-                          @include borderRadius(100px);
-                          min-width: 60px;
-                          @include sm {
-                            padding: calc(var(--margin) * 0.75 );
-                            margin: calc(var(--margin) * 0.75 ) 0;
-                          }
-                          @include md {
-                            top: 50%;
-                            color: var(--black);
-                            display: inline-block;
-                            margin:0;
-                            padding:0;
-                            transform: translate(0, -50%);
-                            min-width: 0;
-                          }
-                          &::after {
-                            content:"";
-                            display: block;
-                            position: absolute;
-                            height: 1px;
-                            width: 0;
-                            background: var(--white);
-                            bottom: 0;
-                            left:0;
-                            transition: all 0.3s ease;
-                            @include md {
-                              background: var(--black);
-                            }
-                          }
-                          &:hover {
-                            background: var(--white);
-                            color: var(--black);
-                            font-weight: 500;
-                            @include md {
-                              background: transparent;
-                            }
-                            &::after {
-                              width: 0;
-                              @include md {
-                                width: 100%;
-                              }
-                            }
-                          }
-                          &.selected {
-                            background: var(--white);
-                            color: var(--black);
-                            display: block;
-                            font-weight: 500;
-                            @include md {
-                              background: transparent;
-                            }
-                            &::after {
-                              width: 0;
-                              background: var(--black);
-                              @include md {
-                                width: 100%;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
         }
@@ -767,511 +1267,39 @@ body {
 
     &.top {
       header#header {
-
         &.top {
-          &Wh, &-wh {
+          &-wh {
             background: var(--white);
           }
-          &Bk, &-bk {
+          &-bk {
             background: var(--black);
           }
-          &Col, &-col {
+          &-col {
             background: var(--main-color);
           }
         }
-
-        &.neg, &.inv, &.topNeg, &.topBk, &.topCol, &.top-neg, &.top-inv, &.top-bk, &.top-col {
-          .boxes {
-            .box {
-              &.brand {
-                color: var(--white);
-                a {
-                  .logo {
-                    filter: brightness(0) invert(1);
-                    &.emblem {}
-                    &.logotype {}
-                  }
-                  .site-title, .siteTitle {
-                    color: var(--white);
-                    &.mini-title, &.miniTitle {
-                      &::after {
-                        border: 3px solid var(--white);
-                      }
-                    }
-                  }
-                }
-              }
-              &.menus {
-                #menu-toggle {
-                  background: var(--main-color);
-                  .line {
-                    background: var(--white);
-                  }
-                }
-                #head-menu {
-                  &.closed {}
-                  &.open {}
-                  nav.menu {
-                    ul {
-
-                      li.item, li.menu-item {
-                        background: transparent;
-                        a {
-                          color: var(--white);
-
-                          &::after {
-                            background: var(--white);
-                            @include md {
-                              background: var(--main-color);
-                            }
-                          }
-
-                          &:hover {
-                            color: var(--white);
-                            &::after {
-                              background: var(--main-color);
-                              @include md {
-                                background: var(--main-color);
-                              }
-                            }
-                          }
-
-                          &.active {
-                            background: var(--white);
-                            color: var(--main-color);
-                            @include md {
-                              color: var(--main-color);
-                              background: transparent;
-                            }
-
-                            &::after {
-                              background: var(--main-color);
-                              @include md {
-                                background: var(--main-color);
-                              }
-                            }
-                          }
-                        }
-                        &.active, &.current-menu-item {
-                          background-color: var(--white);
-                          > a {
-                            background: var(--white);
-                            color: var(--main-color);
-                            @include md {
-                              color: var(--main-color);
-                              background: transparent;
-                            }
-                            &::after {
-                              background: var(--main-color);
-                              @include md {
-                                background: var(--main-color);
-                              }
-                            }
-                          }
-                        }
-                        &.drop-down, &.menu-item-has-children {
-                          ul {
-                            &.drop-down {
-                              background: var(--black);
-                            }
-                          }
-                        }
-                      }
-                    }
-
-                    &.admin-menu {
-                      li.item, li.menu-item {
-                        @include md { //experimental
-                          background-color: var(--third-color-dark);
-                        }
-                      }
-                    }
-
-                    &.user-menu {
-                      ul {
-                        &.user-menu {
-                          li {
-                            &.login {
-                              &.active {
-                                > a {
-                                  background-color: var(--white);
-                                  color: var(--fourth-color);
-                                  @include md {
-                                    background-color: transparent;
-                                    color: var(--black);
-                                  }
-                                  &:after {
-                                    background-color: var(--fourth-color);
-                                  }
-                                }
-                              }
-                              &:hover {
-                                a {
-                                  &:after {
-                                    @include md {
-                                      background: var(--fourth-color);
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            a {
-                              background-color: transparent;
-                            }
-                            &.signin {
-                              @include md {
-                                background-color: var(--fourth-color-dark);
-                              }
-                              a {
-                                background-color: transparent;
-                              }
-                              &.active {
-                                background-color: var(--white);
-                                color: var(--fourth-color-dark);
-                                @include md {
-                                  background-color: var(--white);
-                                  color: var(--black);
-                                }
-                                > a {
-                                  color: var(--fourth-color-dark);
-                                  &:after {
-                                    background-color: var(--fourth-color);
-                                  }
-                                }
-                              }
-                              &:hover {
-                                a {
-                                  &:after {
-                                    @include md {
-                                      background: var(--fourth-color);
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-
-                    &.lang-menu {
-                      ul {
-                        &.lang-menu {
-                          li.item, li.menu-item {
-                            a {
-                              @include md {
-                                color: var(--white);
-                              }
-                              &::after {
-                                @include md {
-                                  background: var(--white);
-                                }
-                              }
-                              &:hover {
-                                @include md {
-                                  color: var(--white);
-                                }
-                                &::after {
-                                  @include md {
-                                    background: var(--white);
-                                  }
-                                }
-                              }
-
-                              &.selected {
-                                color: var(--black);
-                                @include md {
-                                  color: var(--white);
-                                }
-                                &::after {
-                                  @include md {
-                                    background: var(--white);
-                                  }
-                                }
-                              }
-
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-        }
-
       }
     }
 
     &.scroll {
-
       header#header {
-        .boxes {
-          .box {
-            &.menus {
-              @include mdDown {
-                margin: 0;
-                padding: 0;
-              }
-            }
-            &.brand {
-              min-height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) );
-              height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) ); // EXPERIMENTAL
-              a {
-                .logo {
-                  min-height: var(--scroll-logo-height);
-                  height: var(--scroll-logo-height); // EXPERIMENTAL
-                }
-              }
-            }
-          }
-        }
-      }
-
-      header#header {
-
         &.scroll {
-          &Wh, &-wh {
+          &-wh {
             background: var(--white);
           }
-          &Bk, &-bk {
+          &-bk {
             background: var(--black);
           }
-          &Col, &-col {
+          &-col {
             background: var(--main-color);
           }
-        }
-
-        &.neg, &.inv, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
-          .boxes {
-            .box {
-              &.brand {
-                color: var(--white);
-                a {
-                  .logo {
-                    filter: brightness(0) invert(1);
-                    &.emblem {}
-                    &.logotype {}
-                  }
-                  .site-title, .siteTitle {
-                    color: var(--white);
-                    &.mini-title, &.miniTitle {
-                      &::after {
-                        border: 3px solid var(--white);
-                      }
-                    }
-                  }
-                }
-              }
-              &.menus {
-                #menu-toggle {
-                  background: var(--main-color);
-                  .line {
-                    background: var(--white);
-                  }
-                }
-                #head-menu {
-                  &.closed {}
-                  &.open {}
-                  nav.menu {
-                    ul {
-                      li.item, li.menu-item {
-                        background: transparent;
-                        a {
-                          color: var(--white);
-
-                          &::after {
-                            height: 1px;
-                            background: var(--white);
-                            @include md {
-                              background: var(--main-color);
-                            }
-                          }
-
-                          &:hover {
-                            color: var(--white);
-                            &::after {
-                              background: var(--main-color);
-                              @include md {
-                                background: var(--main-color);
-                              }
-                            }
-                          }
-
-                          &.active {
-                            background: var(--white);
-                            color: var(--main-color);
-                            @include md {
-                              color: var(--main-color);
-                              background: transparent;
-                            }
-
-                            &::after {
-                              background: var(--main-color);
-                              @include md {
-                                background: var(--main-color);
-                              }
-                            }
-                          }
-                        }
-                        &.active, &.current-menu-item {
-                          background-color: var(--white);
-                          > a {
-                            background: var(--white);
-                            color: var(--main-color);
-                            @include md {
-                              color: var(--main-color);
-                              background: transparent;
-                            }
-                            &::after {
-                              background: var(--main-color);
-                              @include md {
-                                background: var(--main-color);
-                              }
-                            }
-                          }
-                        }
-                        &.drop-down, &.menu-item-has-children {
-                          ul {
-                            &.drop-down, &.sub-menu {
-                              background: var(--black);
-                            }
-                          }
-                        }
-                      }
-                    }
-
-                    &.admin-menu {
-                      li.item, li.menu-item {
-                        @include md { //experimental
-                          background-color: var(--third-color-dark);
-                        }
-                      }
-                    }
-
-                    &.user-menu {
-                      ul {
-                        &.user-menu {
-                          li {
-                            &.login {
-                              &.active {
-                                > a {
-                                  background-color: var(--white);
-                                  color: var(--fourth-color);
-                                  @include md {
-                                    background-color: transparent;
-                                    color: var(--black);
-                                  }
-                                  &:after {
-                                    background-color: var(--fourth-color);
-                                  }
-                                }
-                              }
-                              &:hover {
-                                a {
-                                  &:after {
-                                    @include md {
-                                      background: var(--fourth-color);
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            a {
-                              background-color: transparent;
-                            }
-                            &.signin {
-                              @include md {
-                                background-color: var(--third-color-dark);
-                              }
-                              a {
-                                background-color: transparent;
-                              }
-                              &.active {
-                                background-color: var(--white);
-                                color: var(--third-color-dark);
-                                @include md {
-                                  background-color: var(--white);
-                                  color: var(--black);
-                                }
-                                > a {
-                                  color: var(--third-color-dark);
-                                  &:after {
-                                    background-color: var(--fourth-color);
-                                  }
-                                }
-                              }
-                              &:hover {
-                                a {
-                                  &:after {
-                                    @include md {
-                                      background: var(--fourth-color);
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-
-                    &.lang-menu {
-                      ul {
-                        &.lang-menu {
-                          li.item, li.menu-item {
-                            a {
-                              @include md {
-                                color: var(--white);
-                              }
-                              &::after {
-                                @include md {
-                                  background: var(--white);
-                                }
-                              }
-                              &:hover {
-                                @include md {
-                                  color: var(--white);
-                                }
-                                &::after {
-                                  @include md {
-                                    background: var(--white);
-                                  }
-                                }
-                              }
-
-                              &.selected {
-                                color: var(--black);
-                                @include md {
-                                  color: var(--white);
-                                }
-                                &::after {
-                                  @include md {
-                                    background: var(--white);
-                                  }
-                                }
-                              }
-
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-
         }
       }
     }
 
-    footer#footer {
 
+    // footer
+    footer#footer {
       .footer-logo {
         img.logo {
           &.emblem {
@@ -1300,7 +1328,7 @@ body {
               opacity:1;
             }
           }
-		}
+		    }
       }
       .footer-info {
 
@@ -1327,9 +1355,8 @@ body {
             }
           }
         }
-	  }
+	    }
     }
-
 
   }
 }

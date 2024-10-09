@@ -639,11 +639,11 @@ window.addEventListener('load', function() {
 // menu toggle
 window.addEventListener('load', function() {
 
-    if (document.getElementById('head-menu') != null && document.getElementById('head-menu') != null ) {
+    if (document.getElementById('side-menu') != null && document.getElementById('side-menu') != null ) {
 
         var menuToggle = document.getElementById('menu-toggle');
-        var headMenu = document.getElementById('head-menu');
-        var mainMenuItem = document.querySelectorAll('#headMenu > nav.menu > ul.menu > li.menu-item > a');
+        var headMenu = document.getElementById('side-menu');
+        var mainMenuItem = document.querySelectorAll('#side-menu > nav.menu > ul.menu > li.menu-item > a');
     
         headMenu.classList.add('closed');
     
@@ -658,7 +658,7 @@ window.addEventListener('load', function() {
         }
     
         for (i=0;i<mainMenuItem.length;i++) {
-            if(!mainMenuItem[i].parentElement.classList.contains('dropDown')) {
+            if(!mainMenuItem[i].parentElement.classList.contains('drop-down')) {
                 mainMenuItem[i].addEventListener('click', function() {
                     for (j=0;j<headMenu.length;j++) {
                         if (headMenu[j].classList.contains("open")) {
