@@ -8163,6 +8163,7 @@ body.mini .sheet main {
   background: var(--white);
   transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
   flex: 100%;
+  overflow: hidden;
 }
 body.mini .sheet sidebar#side-menu {
   transition: flex 0.2s ease-out;

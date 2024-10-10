@@ -80,7 +80,7 @@
     <a href="#top"><div class="top-link"><p class=""><i class="iconoir-dot-arrow-up"></i></p></div></a>
 
     <header id="header" class="header">
-        <div class="container fw">
+        <div class="container">
             <div class="boxes align-items-center justify-content-between">
                 <div class="box brand">
                     <a href="#top" class="">
@@ -90,7 +90,7 @@
                 </div>
                 <div class="box menus">
                     <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
-                    <div id="head-menu" class="head-menu b-rad-10">
+                    <div id="head-menu" class="head-menu">
                         <nav class="menu page-menu">
                             <ul id="page-menu" class="menu page-menu">
                             </ul>
