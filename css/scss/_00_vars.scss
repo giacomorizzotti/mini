@@ -18,8 +18,8 @@
   --scroll-logo-height: 1rem;
   
   // Menu height
-  --menu-toggle-height: 3rem;
-  --scroll-menu-toggle-height: 2rem;
+  --menu-toggle-height: 2.2rem;
+  --scroll-menu-toggle-height: 1.8rem;
 
   /* COLORS */
   /* variables */
@@ -63,6 +63,9 @@
   --gingerbread: rgb(84 73 75);
 
   --pulse-color: rgb(60 90 255);
+
+  --sheet-color: var(--false-black);
+  --menu-toggle-color: var(--sheet-color);
 
   // mini
   --mini-color: rgb(60 90 255);

@@ -13,8 +13,8 @@
   --maxFont: 1rem;
   --logo-height: 1.25rem;
   --scroll-logo-height: 1rem;
-  --menu-toggle-height: 3rem;
-  --scroll-menu-toggle-height: 2rem;
+  --menu-toggle-height: 2.2rem;
+  --scroll-menu-toggle-height: 1.8rem;
   /* COLORS */
   /* variables */
   --black: rgb( 10 10 20 / 100% );
@@ -46,6 +46,8 @@
   --stars-color: rgba( 255 255 255 / 50%);
   --gingerbread: rgb(84 73 75);
   --pulse-color: rgb(60 90 255);
+  --sheet-color: var(--false-black);
+  --menu-toggle-color: var(--sheet-color);
   --mini-color: rgb(60 90 255);
   --mini-color-dark: rgb(50 75 180);
   --mini-second-color: rgb(50 75 180);
@@ -259,9 +261,7 @@ body.mini .container.wide {
   }
 }
 body.mini main {
-  min-width: 100%;
   width: 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -8035,14 +8035,6 @@ body.mini header#header.fixed {
   left: 0;
   z-index: 99;
 }
-body.mini header#header.detached {
-  position: fixed;
-  width: calc(100% - var(--margin) * 2);
-  top: var(--margin);
-  right: var(--margin);
-  left: var(--margin);
-  z-index: 99;
-}
 body.mini.top header#header.top-wh {
   background: var(--white);
 }
@@ -8060,40 +8052,6 @@ body.mini.scroll header#header.scroll-bk {
 }
 body.mini.scroll header#header.scroll-col {
   background: var(--main-color);
-}
-body.mini.scroll header#header.detached {
-  width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-body.mini ul.menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-body.mini ul.menu li.item, body.mini ul.menu li.menu-item {
-  margin: 0;
-  padding: 0;
-  display: block;
-  transition: all 0.3s ease;
-}
-@media (min-width: 768px) {
-  body.mini ul.menu li.item, body.mini ul.menu li.menu-item {
-    display: inline-block;
-  }
-}
-body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
-  display: block;
-  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
-}
-@media (min-width: 576px) {
-  body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
-    padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-  }
 }
 body.mini header#header .boxes .box.brand {
   display: flex;
@@ -8119,64 +8077,42 @@ body.mini header#header .boxes .box.brand .site-title {
   position: relative;
   line-height: 1 !important;
 }
-body.mini header#header .boxes .box.brand .site-title.mini-title::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: -9px;
-  width: 9px;
-  height: 9px;
-  border: 3px solid var(--mini-color);
-  transition: all 0.3s ease;
-}
-body.mini header#header .boxes .box.brand .site-title.mini-title:hover::after {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-body.mini.top header#header.neg .boxes .box.brand, body.mini.top header#header.inv .boxes .box.brand, body.mini.top header#header.top-neg .boxes .box.brand, body.mini.top header#header.top-inv .boxes .box.brand, body.mini.top header#header.top-bk .boxes .box.brand, body.mini.top header#header.top-col .boxes .box.brand {
+body.mini.top header#header.neg.brand, body.mini.top header#header.inv.brand, body.mini.top header#header.top-neg.brand, body.mini.top header#header.top-inv.brand, body.mini.top header#header.top-bk.brand, body.mini.top header#header.top-col.brand {
   color: var(--white);
 }
-body.mini.top header#header.neg .boxes .box.brand a .logo, body.mini.top header#header.inv .boxes .box.brand a .logo, body.mini.top header#header.top-neg .boxes .box.brand a .logo, body.mini.top header#header.top-inv .boxes .box.brand a .logo, body.mini.top header#header.top-bk .boxes .box.brand a .logo, body.mini.top header#header.top-col .boxes .box.brand a .logo {
+body.mini.top header#header.neg.brand a .logo, body.mini.top header#header.inv.brand a .logo, body.mini.top header#header.top-neg.brand a .logo, body.mini.top header#header.top-inv.brand a .logo, body.mini.top header#header.top-bk.brand a .logo, body.mini.top header#header.top-col.brand a .logo {
   filter: brightness(0) invert(1);
 }
-body.mini.top header#header.neg .boxes .box.brand a .site-title, body.mini.top header#header.inv .boxes .box.brand a .site-title, body.mini.top header#header.top-neg .boxes .box.brand a .site-title, body.mini.top header#header.top-inv .boxes .box.brand a .site-title, body.mini.top header#header.top-bk .boxes .box.brand a .site-title, body.mini.top header#header.top-col .boxes .box.brand a .site-title {
+body.mini.top header#header.neg.brand a .site-title, body.mini.top header#header.inv.brand a .site-title, body.mini.top header#header.top-neg.brand a .site-title, body.mini.top header#header.top-inv.brand a .site-title, body.mini.top header#header.top-bk.brand a .site-title, body.mini.top header#header.top-col.brand a .site-title {
   color: var(--white);
 }
-body.mini.top header#header.neg .boxes .box.brand a .site-title.mini-title::after, body.mini.top header#header.neg .boxes .box.brand a .site-title.miniTitle::after, body.mini.top header#header.inv .boxes .box.brand a .site-title.mini-title::after, body.mini.top header#header.inv .boxes .box.brand a .site-title.miniTitle::after, body.mini.top header#header.top-neg .boxes .box.brand a .site-title.mini-title::after, body.mini.top header#header.top-neg .boxes .box.brand a .site-title.miniTitle::after, body.mini.top header#header.top-inv .boxes .box.brand a .site-title.mini-title::after, body.mini.top header#header.top-inv .boxes .box.brand a .site-title.miniTitle::after, body.mini.top header#header.top-bk .boxes .box.brand a .site-title.mini-title::after, body.mini.top header#header.top-bk .boxes .box.brand a .site-title.miniTitle::after, body.mini.top header#header.top-col .boxes .box.brand a .site-title.mini-title::after, body.mini.top header#header.top-col .boxes .box.brand a .site-title.miniTitle::after {
-  border: 3px solid var(--white);
-}
-body.mini.scroll header#header .boxes .box.brand {
-  min-height: calc(var(--padding) * 2 + var(--scroll-logo-height));
+body.mini.scroll header#header .brand {
   height: calc(var(--padding) * 2 + var(--scroll-logo-height));
 }
-body.mini.scroll header#header .boxes .box.brand a .logo {
-  min-height: var(--scroll-logo-height);
+body.mini.scroll header#header .brand a .logo {
   height: var(--scroll-logo-height);
 }
-body.mini.scroll header#header.neg .boxes .box.brand, body.mini.scroll header#header.inv .boxes .box.brand, body.mini.scroll header#header.scroll-neg .boxes .box.brand, body.mini.scroll header#header.scroll-inv .boxes .box.brand, body.mini.scroll header#header.scroll-bk .boxes .box.brand, body.mini.scroll header#header.scroll-col .boxes .box.brand {
+body.mini.scroll header#header.neg.brand, body.mini.scroll header#header.inv.brand, body.mini.scroll header#header.scroll-neg.brand, body.mini.scroll header#header.scroll-inv.brand, body.mini.scroll header#header.scroll-bk.brand, body.mini.scroll header#header.scroll-col.brand {
   color: var(--white);
 }
-body.mini.scroll header#header.neg .boxes .box.brand a .logo, body.mini.scroll header#header.inv .boxes .box.brand a .logo, body.mini.scroll header#header.scroll-neg .boxes .box.brand a .logo, body.mini.scroll header#header.scroll-inv .boxes .box.brand a .logo, body.mini.scroll header#header.scroll-bk .boxes .box.brand a .logo, body.mini.scroll header#header.scroll-col .boxes .box.brand a .logo {
+body.mini.scroll header#header.neg.brand a .logo, body.mini.scroll header#header.inv.brand a .logo, body.mini.scroll header#header.scroll-neg.brand a .logo, body.mini.scroll header#header.scroll-inv.brand a .logo, body.mini.scroll header#header.scroll-bk.brand a .logo, body.mini.scroll header#header.scroll-col.brand a .logo {
   filter: brightness(0) invert(1);
 }
-body.mini.scroll header#header.neg .boxes .box.brand a .site-title, body.mini.scroll header#header.neg .boxes .box.brand a .siteTitle, body.mini.scroll header#header.inv .boxes .box.brand a .site-title, body.mini.scroll header#header.inv .boxes .box.brand a .siteTitle, body.mini.scroll header#header.scroll-neg .boxes .box.brand a .site-title, body.mini.scroll header#header.scroll-neg .boxes .box.brand a .siteTitle, body.mini.scroll header#header.scroll-inv .boxes .box.brand a .site-title, body.mini.scroll header#header.scroll-inv .boxes .box.brand a .siteTitle, body.mini.scroll header#header.scroll-bk .boxes .box.brand a .site-title, body.mini.scroll header#header.scroll-bk .boxes .box.brand a .siteTitle, body.mini.scroll header#header.scroll-col .boxes .box.brand a .site-title, body.mini.scroll header#header.scroll-col .boxes .box.brand a .siteTitle {
+body.mini.scroll header#header.neg.brand a .site-title, body.mini.scroll header#header.inv.brand a .site-title, body.mini.scroll header#header.scroll-neg.brand a .site-title, body.mini.scroll header#header.scroll-inv.brand a .site-title, body.mini.scroll header#header.scroll-bk.brand a .site-title, body.mini.scroll header#header.scroll-col.brand a .site-title {
   color: var(--white);
 }
-body.mini.scroll header#header.neg .boxes .box.brand a .site-title.mini-title::after, body.mini.scroll header#header.neg .boxes .box.brand a .site-title.miniTitle::after, body.mini.scroll header#header.neg .boxes .box.brand a .siteTitle.mini-title::after, body.mini.scroll header#header.neg .boxes .box.brand a .siteTitle.miniTitle::after, body.mini.scroll header#header.inv .boxes .box.brand a .site-title.mini-title::after, body.mini.scroll header#header.inv .boxes .box.brand a .site-title.miniTitle::after, body.mini.scroll header#header.inv .boxes .box.brand a .siteTitle.mini-title::after, body.mini.scroll header#header.inv .boxes .box.brand a .siteTitle.miniTitle::after, body.mini.scroll header#header.scroll-neg .boxes .box.brand a .site-title.mini-title::after, body.mini.scroll header#header.scroll-neg .boxes .box.brand a .site-title.miniTitle::after, body.mini.scroll header#header.scroll-neg .boxes .box.brand a .siteTitle.mini-title::after, body.mini.scroll header#header.scroll-neg .boxes .box.brand a .siteTitle.miniTitle::after, body.mini.scroll header#header.scroll-inv .boxes .box.brand a .site-title.mini-title::after, body.mini.scroll header#header.scroll-inv .boxes .box.brand a .site-title.miniTitle::after, body.mini.scroll header#header.scroll-inv .boxes .box.brand a .siteTitle.mini-title::after, body.mini.scroll header#header.scroll-inv .boxes .box.brand a .siteTitle.miniTitle::after, body.mini.scroll header#header.scroll-bk .boxes .box.brand a .site-title.mini-title::after, body.mini.scroll header#header.scroll-bk .boxes .box.brand a .site-title.miniTitle::after, body.mini.scroll header#header.scroll-bk .boxes .box.brand a .siteTitle.mini-title::after, body.mini.scroll header#header.scroll-bk .boxes .box.brand a .siteTitle.miniTitle::after, body.mini.scroll header#header.scroll-col .boxes .box.brand a .site-title.mini-title::after, body.mini.scroll header#header.scroll-col .boxes .box.brand a .site-title.miniTitle::after, body.mini.scroll header#header.scroll-col .boxes .box.brand a .siteTitle.mini-title::after, body.mini.scroll header#header.scroll-col .boxes .box.brand a .siteTitle.miniTitle::after {
-  border: 3px solid var(--white);
+body.mini header#header .menus {
+  padding: 0;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
 }
 body.mini header#header #menu-toggle {
   display: block;
-  position: fixed;
   top: var(--margin);
-  top: calc(var(--margin) * 2);
   right: var(--margin);
-  right: calc(var(--margin) * 2);
   width: var(--menu-toggle-height);
   height: var(--menu-toggle-height);
-  background: var(--main-color);
   padding: calc(var(--menu-toggle-height) / 7);
   margin: 0 0 0 0;
   z-index: 9;
@@ -8192,20 +8128,19 @@ body.mini header#header #menu-toggle .line {
   width: 100%;
   max-width: 100%;
   margin: 0 0 calc(var(--menu-toggle-height) / 7) 0;
+  background: var(--menu-toggle-color);
+}
+body.mini header#header #menu-toggle.clicked .line {
   background: var(--white);
 }
-body.mini header#header.detached #menu-toggle {
-  top: calc(var(--margin) * 3);
-  right: calc(var(--margin) * 3);
-}
 body.mini header#header.neg #menu-toggle, body.mini header#header.inv #menu-toggle, body.mini header#header.top-neg #menu-toggle, body.mini header#header.top-inv #menu-toggle, body.mini header#header.top-bk #menu-toggle, body.mini header#header.top-col #menu-toggle {
-  background: var(--main-color);
+  background: var(--menu-toggle-color);
 }
 body.mini header#header.neg #menu-toggle .line, body.mini header#header.inv #menu-toggle .line, body.mini header#header.top-neg #menu-toggle .line, body.mini header#header.top-inv #menu-toggle .line, body.mini header#header.top-bk #menu-toggle .line, body.mini header#header.top-col #menu-toggle .line {
   background: var(--white);
 }
 body.mini header#header.neg #menu-toggle, body.mini header#header.inv #menu-toggle, body.mini header#header.scroll-neg #menu-toggle, body.mini header#header.scroll-inv #menu-toggle, body.mini header#header.scroll-bk #menu-toggle, body.mini header#header.scroll-col #menu-toggle {
-  background: var(--main-color);
+  background: var(--menu-toggle-color);
 }
 body.mini header#header.neg #menu-toggle .line, body.mini header#header.inv #menu-toggle .line, body.mini header#header.scroll-neg #menu-toggle .line, body.mini header#header.scroll-inv #menu-toggle .line, body.mini header#header.scroll-bk #menu-toggle .line, body.mini header#header.scroll-col #menu-toggle .line {
   background: var(--white);
@@ -8219,15 +8154,98 @@ body.mini.scroll header#header #menu-toggle .line {
   height: calc(var(--scroll-menu-toggle-height) / 7);
   margin: 0 0 calc(var(--scroll-menu-toggle-height) / 7) 0;
 }
-body.mini.scroll header#header.detached #menu-toggle {
-  top: calc(var(--margin) * 2);
-  right: calc(var(--margin) * 2);
+body.mini .sheet {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: var(--sheet-color);
+  transition: padding 0.2s ease-out;
+}
+body.mini .sheet main {
+  background: var(--white);
+  transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
+  flex: 100%;
+}
+body.mini .sheet sidebar#side-menu {
+  transition: flex 0.2s ease-out;
+  flex: 0;
+  overflow: hidden;
+}
+body.mini.menu-open header#header .brand img.logo {
+  filter: brightness(0) invert(1);
+}
+body.mini.menu-open header#header .brand .site-title {
+  color: var(--white);
+}
+body.mini.menu-open .sheet {
+  padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0;
+}
+body.mini.menu-open .sheet main {
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  flex: 100%;
+}
+@media (min-width: 576px) {
+  body.mini.menu-open .sheet main {
+    flex: 66.666666%;
+  }
+}
+@media (min-width: 768px) {
+  body.mini.menu-open .sheet main {
+    flex: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  body.mini.menu-open .sheet main {
+    flex: 80%;
+  }
+}
+@media (min-width: 1920px) {
+  body.mini.menu-open .sheet main {
+    flex: 85%;
+  }
+}
+body.mini.menu-open .sheet sidebar#side-menu {
+  flex: 100%;
+}
+@media (min-width: 576px) {
+  body.mini.menu-open .sheet sidebar#side-menu {
+    flex: 33.333333%;
+  }
+}
+@media (min-width: 768px) {
+  body.mini.menu-open .sheet sidebar#side-menu {
+    flex: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  body.mini.menu-open .sheet sidebar#side-menu {
+    flex: 20%;
+  }
+}
+@media (min-width: 1920px) {
+  body.mini.menu-open .sheet sidebar#side-menu {
+    flex: 15%;
+  }
+}
+body.mini.scroll.menu-open header#header {
+  background: var(--sheet-color);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 body.mini ul#page-menu {
   display: none;
-  padding-right: calc(var(--menu-toggle-height) + var(--margin) * 2);
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   body.mini ul#page-menu {
     display: flex;
   }
@@ -8249,33 +8267,19 @@ body.mini ul#page-menu li.menu-icon {
     border: 0;
   }
 }
-body.mini.scroll ul#page-menu {
-  padding-right: calc(var(--scroll-menu-toggle-height) + var(--margin) * 2);
+body.mini.top.menu-open ul#page-menu li.item a, body.mini.top.menu-open ul#page-menu li.menu-item a {
+  color: var(--white);
 }
-body.mini nav.menu {
-  margin-bottom: calc(var(--margin) * 2);
-  height: 100%;
+body.mini.scroll.menu-open ul#page-menu li.item a, body.mini.scroll.menu-open ul#page-menu li.menu-item a {
+  color: var(--white);
 }
-@media (min-width: 768px) {
-  body.mini nav.menu {
-    margin-bottom: 0;
-  }
-}
-body.mini nav.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-body.mini nav.menu ul li {
-  display: inline-block;
-}
-body.mini nav.menu ul li ul.drop-down, body.mini nav.menu ul li ul.dropdown, body.mini nav.menu ul li ul.sub-menu {
+body.mini ul li ul.drop-down, body.mini ul li ul.dropdown, body.mini ul li ul.sub-menu {
   display: none;
 }
-body.mini nav.menu ul li.drop-down, body.mini nav.menu ul li.dropdown, body.mini nav.menu ul li.menu-item-has-children {
+body.mini ul li.drop-down, body.mini ul li.dropdown, body.mini ul li.menu-item-has-children {
   position: relative;
 }
-body.mini nav.menu ul li.drop-down ul.drop-down, body.mini nav.menu ul li.drop-down ul.dropdown, body.mini nav.menu ul li.drop-down ul.sub-menu, body.mini nav.menu ul li.dropdown ul.drop-down, body.mini nav.menu ul li.dropdown ul.dropdown, body.mini nav.menu ul li.dropdown ul.sub-menu, body.mini nav.menu ul li.menu-item-has-children ul.drop-down, body.mini nav.menu ul li.menu-item-has-children ul.dropdown, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu {
+body.mini ul li.drop-down ul.drop-down, body.mini ul li.drop-down ul.dropdown, body.mini ul li.drop-down ul.sub-menu, body.mini ul li.dropdown ul.drop-down, body.mini ul li.dropdown ul.dropdown, body.mini ul li.dropdown ul.sub-menu, body.mini ul li.menu-item-has-children ul.drop-down, body.mini ul li.menu-item-has-children ul.dropdown, body.mini ul li.menu-item-has-children ul.sub-menu {
   display: flex;
   align-items: flex-start;
   flex-flow: column;
@@ -8293,22 +8297,22 @@ body.mini nav.menu ul li.drop-down ul.drop-down, body.mini nav.menu ul li.drop-d
   padding: 0;
 }
 @media (min-width: 768px) {
-  body.mini nav.menu ul li.drop-down ul.drop-down, body.mini nav.menu ul li.drop-down ul.dropdown, body.mini nav.menu ul li.drop-down ul.sub-menu, body.mini nav.menu ul li.dropdown ul.drop-down, body.mini nav.menu ul li.dropdown ul.dropdown, body.mini nav.menu ul li.dropdown ul.sub-menu, body.mini nav.menu ul li.menu-item-has-children ul.drop-down, body.mini nav.menu ul li.menu-item-has-children ul.dropdown, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu {
+  body.mini ul li.drop-down ul.drop-down, body.mini ul li.drop-down ul.dropdown, body.mini ul li.drop-down ul.sub-menu, body.mini ul li.dropdown ul.drop-down, body.mini ul li.dropdown ul.dropdown, body.mini ul li.dropdown ul.sub-menu, body.mini ul li.menu-item-has-children ul.drop-down, body.mini ul li.menu-item-has-children ul.dropdown, body.mini ul li.menu-item-has-children ul.sub-menu {
     position: absolute;
     top: calc(100% + var(--margin) * 0.5);
     left: 50%;
     transform: translate(-50%, 0);
   }
 }
-body.mini nav.menu ul li.drop-down ul.drop-down li, body.mini nav.menu ul li.drop-down ul.drop-down li.item, body.mini nav.menu ul li.drop-down ul.drop-down li.menu-item, body.mini nav.menu ul li.drop-down ul.drop-down li.menu-sub-item, body.mini nav.menu ul li.drop-down ul.drop-down li.sub-menu-item, body.mini nav.menu ul li.drop-down ul.dropdown li, body.mini nav.menu ul li.drop-down ul.dropdown li.item, body.mini nav.menu ul li.drop-down ul.dropdown li.menu-item, body.mini nav.menu ul li.drop-down ul.dropdown li.menu-sub-item, body.mini nav.menu ul li.drop-down ul.dropdown li.sub-menu-item, body.mini nav.menu ul li.drop-down ul.sub-menu li, body.mini nav.menu ul li.drop-down ul.sub-menu li.item, body.mini nav.menu ul li.drop-down ul.sub-menu li.menu-item, body.mini nav.menu ul li.drop-down ul.sub-menu li.menu-sub-item, body.mini nav.menu ul li.drop-down ul.sub-menu li.sub-menu-item, body.mini nav.menu ul li.dropdown ul.drop-down li, body.mini nav.menu ul li.dropdown ul.drop-down li.item, body.mini nav.menu ul li.dropdown ul.drop-down li.menu-item, body.mini nav.menu ul li.dropdown ul.drop-down li.menu-sub-item, body.mini nav.menu ul li.dropdown ul.drop-down li.sub-menu-item, body.mini nav.menu ul li.dropdown ul.dropdown li, body.mini nav.menu ul li.dropdown ul.dropdown li.item, body.mini nav.menu ul li.dropdown ul.dropdown li.menu-item, body.mini nav.menu ul li.dropdown ul.dropdown li.menu-sub-item, body.mini nav.menu ul li.dropdown ul.dropdown li.sub-menu-item, body.mini nav.menu ul li.dropdown ul.sub-menu li, body.mini nav.menu ul li.dropdown ul.sub-menu li.item, body.mini nav.menu ul li.dropdown ul.sub-menu li.menu-item, body.mini nav.menu ul li.dropdown ul.sub-menu li.menu-sub-item, body.mini nav.menu ul li.dropdown ul.sub-menu li.sub-menu-item, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.item, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.menu-item, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.menu-sub-item, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.sub-menu-item, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.item, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.menu-item, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.menu-sub-item, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.sub-menu-item, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.item, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.menu-item, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.menu-sub-item, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.sub-menu-item {
+body.mini ul li.drop-down ul.drop-down li, body.mini ul li.drop-down ul.drop-down li.item, body.mini ul li.drop-down ul.drop-down li.menu-item, body.mini ul li.drop-down ul.drop-down li.menu-sub-item, body.mini ul li.drop-down ul.drop-down li.sub-menu-item, body.mini ul li.drop-down ul.dropdown li, body.mini ul li.drop-down ul.dropdown li.item, body.mini ul li.drop-down ul.dropdown li.menu-item, body.mini ul li.drop-down ul.dropdown li.menu-sub-item, body.mini ul li.drop-down ul.dropdown li.sub-menu-item, body.mini ul li.drop-down ul.sub-menu li, body.mini ul li.drop-down ul.sub-menu li.item, body.mini ul li.drop-down ul.sub-menu li.menu-item, body.mini ul li.drop-down ul.sub-menu li.menu-sub-item, body.mini ul li.drop-down ul.sub-menu li.sub-menu-item, body.mini ul li.dropdown ul.drop-down li, body.mini ul li.dropdown ul.drop-down li.item, body.mini ul li.dropdown ul.drop-down li.menu-item, body.mini ul li.dropdown ul.drop-down li.menu-sub-item, body.mini ul li.dropdown ul.drop-down li.sub-menu-item, body.mini ul li.dropdown ul.dropdown li, body.mini ul li.dropdown ul.dropdown li.item, body.mini ul li.dropdown ul.dropdown li.menu-item, body.mini ul li.dropdown ul.dropdown li.menu-sub-item, body.mini ul li.dropdown ul.dropdown li.sub-menu-item, body.mini ul li.dropdown ul.sub-menu li, body.mini ul li.dropdown ul.sub-menu li.item, body.mini ul li.dropdown ul.sub-menu li.menu-item, body.mini ul li.dropdown ul.sub-menu li.menu-sub-item, body.mini ul li.dropdown ul.sub-menu li.sub-menu-item, body.mini ul li.menu-item-has-children ul.drop-down li, body.mini ul li.menu-item-has-children ul.drop-down li.item, body.mini ul li.menu-item-has-children ul.drop-down li.menu-item, body.mini ul li.menu-item-has-children ul.drop-down li.menu-sub-item, body.mini ul li.menu-item-has-children ul.drop-down li.sub-menu-item, body.mini ul li.menu-item-has-children ul.dropdown li, body.mini ul li.menu-item-has-children ul.dropdown li.item, body.mini ul li.menu-item-has-children ul.dropdown li.menu-item, body.mini ul li.menu-item-has-children ul.dropdown li.menu-sub-item, body.mini ul li.menu-item-has-children ul.dropdown li.sub-menu-item, body.mini ul li.menu-item-has-children ul.sub-menu li, body.mini ul li.menu-item-has-children ul.sub-menu li.item, body.mini ul li.menu-item-has-children ul.sub-menu li.menu-item, body.mini ul li.menu-item-has-children ul.sub-menu li.menu-sub-item, body.mini ul li.menu-item-has-children ul.sub-menu li.sub-menu-item {
   font-size: var(--p);
   line-height: 1.5;
 }
-body.mini nav.menu ul li.drop-down ul.drop-down li a, body.mini nav.menu ul li.drop-down ul.drop-down li.item a, body.mini nav.menu ul li.drop-down ul.drop-down li.menu-item a, body.mini nav.menu ul li.drop-down ul.drop-down li.menu-sub-item a, body.mini nav.menu ul li.drop-down ul.drop-down li.sub-menu-item a, body.mini nav.menu ul li.drop-down ul.dropdown li a, body.mini nav.menu ul li.drop-down ul.dropdown li.item a, body.mini nav.menu ul li.drop-down ul.dropdown li.menu-item a, body.mini nav.menu ul li.drop-down ul.dropdown li.menu-sub-item a, body.mini nav.menu ul li.drop-down ul.dropdown li.sub-menu-item a, body.mini nav.menu ul li.drop-down ul.sub-menu li a, body.mini nav.menu ul li.drop-down ul.sub-menu li.item a, body.mini nav.menu ul li.drop-down ul.sub-menu li.menu-item a, body.mini nav.menu ul li.drop-down ul.sub-menu li.menu-sub-item a, body.mini nav.menu ul li.drop-down ul.sub-menu li.sub-menu-item a, body.mini nav.menu ul li.dropdown ul.drop-down li a, body.mini nav.menu ul li.dropdown ul.drop-down li.item a, body.mini nav.menu ul li.dropdown ul.drop-down li.menu-item a, body.mini nav.menu ul li.dropdown ul.drop-down li.menu-sub-item a, body.mini nav.menu ul li.dropdown ul.drop-down li.sub-menu-item a, body.mini nav.menu ul li.dropdown ul.dropdown li a, body.mini nav.menu ul li.dropdown ul.dropdown li.item a, body.mini nav.menu ul li.dropdown ul.dropdown li.menu-item a, body.mini nav.menu ul li.dropdown ul.dropdown li.menu-sub-item a, body.mini nav.menu ul li.dropdown ul.dropdown li.sub-menu-item a, body.mini nav.menu ul li.dropdown ul.sub-menu li a, body.mini nav.menu ul li.dropdown ul.sub-menu li.item a, body.mini nav.menu ul li.dropdown ul.sub-menu li.menu-item a, body.mini nav.menu ul li.dropdown ul.sub-menu li.menu-sub-item a, body.mini nav.menu ul li.dropdown ul.sub-menu li.sub-menu-item a, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li a, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.item a, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.menu-item a, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.menu-sub-item a, body.mini nav.menu ul li.menu-item-has-children ul.drop-down li.sub-menu-item a, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li a, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.item a, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.menu-item a, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.menu-sub-item a, body.mini nav.menu ul li.menu-item-has-children ul.dropdown li.sub-menu-item a, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li a, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.item a, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.menu-item a, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.menu-sub-item a, body.mini nav.menu ul li.menu-item-has-children ul.sub-menu li.sub-menu-item a {
+body.mini ul li.drop-down ul.drop-down li a, body.mini ul li.drop-down ul.drop-down li.item a, body.mini ul li.drop-down ul.drop-down li.menu-item a, body.mini ul li.drop-down ul.drop-down li.menu-sub-item a, body.mini ul li.drop-down ul.drop-down li.sub-menu-item a, body.mini ul li.drop-down ul.dropdown li a, body.mini ul li.drop-down ul.dropdown li.item a, body.mini ul li.drop-down ul.dropdown li.menu-item a, body.mini ul li.drop-down ul.dropdown li.menu-sub-item a, body.mini ul li.drop-down ul.dropdown li.sub-menu-item a, body.mini ul li.drop-down ul.sub-menu li a, body.mini ul li.drop-down ul.sub-menu li.item a, body.mini ul li.drop-down ul.sub-menu li.menu-item a, body.mini ul li.drop-down ul.sub-menu li.menu-sub-item a, body.mini ul li.drop-down ul.sub-menu li.sub-menu-item a, body.mini ul li.dropdown ul.drop-down li a, body.mini ul li.dropdown ul.drop-down li.item a, body.mini ul li.dropdown ul.drop-down li.menu-item a, body.mini ul li.dropdown ul.drop-down li.menu-sub-item a, body.mini ul li.dropdown ul.drop-down li.sub-menu-item a, body.mini ul li.dropdown ul.dropdown li a, body.mini ul li.dropdown ul.dropdown li.item a, body.mini ul li.dropdown ul.dropdown li.menu-item a, body.mini ul li.dropdown ul.dropdown li.menu-sub-item a, body.mini ul li.dropdown ul.dropdown li.sub-menu-item a, body.mini ul li.dropdown ul.sub-menu li a, body.mini ul li.dropdown ul.sub-menu li.item a, body.mini ul li.dropdown ul.sub-menu li.menu-item a, body.mini ul li.dropdown ul.sub-menu li.menu-sub-item a, body.mini ul li.dropdown ul.sub-menu li.sub-menu-item a, body.mini ul li.menu-item-has-children ul.drop-down li a, body.mini ul li.menu-item-has-children ul.drop-down li.item a, body.mini ul li.menu-item-has-children ul.drop-down li.menu-item a, body.mini ul li.menu-item-has-children ul.drop-down li.menu-sub-item a, body.mini ul li.menu-item-has-children ul.drop-down li.sub-menu-item a, body.mini ul li.menu-item-has-children ul.dropdown li a, body.mini ul li.menu-item-has-children ul.dropdown li.item a, body.mini ul li.menu-item-has-children ul.dropdown li.menu-item a, body.mini ul li.menu-item-has-children ul.dropdown li.menu-sub-item a, body.mini ul li.menu-item-has-children ul.dropdown li.sub-menu-item a, body.mini ul li.menu-item-has-children ul.sub-menu li a, body.mini ul li.menu-item-has-children ul.sub-menu li.item a, body.mini ul li.menu-item-has-children ul.sub-menu li.menu-item a, body.mini ul li.menu-item-has-children ul.sub-menu li.menu-sub-item a, body.mini ul li.menu-item-has-children ul.sub-menu li.sub-menu-item a {
   color: var(--black);
   transform: translate(0, 0);
 }
-body.mini nav.menu ul li.drop-down:hover::before, body.mini nav.menu ul li.dropdown:hover::before, body.mini nav.menu ul li.menu-item-has-children:hover::before {
+body.mini ul li.drop-down:hover::before, body.mini ul li.dropdown:hover::before, body.mini ul li.menu-item-has-children:hover::before {
   content: "";
   width: 100%;
   height: 200%;
@@ -8318,7 +8322,7 @@ body.mini nav.menu ul li.drop-down:hover::before, body.mini nav.menu ul li.dropd
   transform: translate(-50%, 0);
   top: 0;
 }
-body.mini nav.menu ul li.drop-down:hover ul.drop-down, body.mini nav.menu ul li.drop-down:hover ul.dropdown, body.mini nav.menu ul li.dropdown:hover ul.drop-down, body.mini nav.menu ul li.dropdown:hover ul.dropdown, body.mini nav.menu ul li.menu-item-has-children:hover ul.drop-down, body.mini nav.menu ul li.menu-item-has-children:hover ul.dropdown {
+body.mini ul li.drop-down:hover ul.drop-down, body.mini ul li.drop-down:hover ul.dropdown, body.mini ul li.dropdown:hover ul.drop-down, body.mini ul li.dropdown:hover ul.dropdown, body.mini ul li.menu-item-has-children:hover ul.drop-down, body.mini ul li.menu-item-has-children:hover ul.dropdown {
   opacity: 1;
   visibility: visible;
   transition: all 0.3s ease;
@@ -8327,24 +8331,19 @@ body.mini nav.menu ul li.drop-down:hover ul.drop-down, body.mini nav.menu ul li.
   padding: var(--padding) calc(var(--padding) * 1.5);
   min-width: 220px;
 }
-body.mini nav.menu ul {
+body.mini ul.menu {
   display: block;
-  margin: calc(var(--margin) * -0.5) 0;
+  margin: 0;
   height: 100%;
-}
-@media (min-width: 576px) {
-  body.mini nav.menu ul {
-    margin: calc(var(--margin) * -0.75) 0;
-  }
+  padding: 0 var(--padding);
 }
 @media (min-width: 768px) {
-  body.mini nav.menu ul {
+  body.mini ul.menu {
     display: flex;
-    justify-content: flex-end;
     margin: 0 calc(var(--margin) * 0.5);
   }
 }
-body.mini nav.menu ul li.item, body.mini nav.menu ul li.menu-item {
+body.mini ul.menu li.item, body.mini ul.menu li.menu-item {
   display: block;
   font-weight: 700;
   font-size: var(--h3);
@@ -8354,17 +8353,17 @@ body.mini nav.menu ul li.item, body.mini nav.menu ul li.menu-item {
   padding: 0;
 }
 @media (min-width: 576px) {
-  body.mini nav.menu ul li.item, body.mini nav.menu ul li.menu-item {
+  body.mini ul.menu li.item, body.mini ul.menu li.menu-item {
     font-size: var(--h4);
   }
 }
 @media (min-width: 768px) {
-  body.mini nav.menu ul li.item, body.mini nav.menu ul li.menu-item {
+  body.mini ul.menu li.item, body.mini ul.menu li.menu-item {
     font-size: var(--h6);
     padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
   }
 }
-body.mini nav.menu ul li.item a, body.mini nav.menu ul li.menu-item a {
+body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
   display: block;
   position: relative;
   color: var(--white);
@@ -8372,14 +8371,14 @@ body.mini nav.menu ul li.item a, body.mini nav.menu ul li.menu-item a {
   margin: calc(var(--margin) * 0.5) 0;
 }
 @media (min-width: 576px) {
-  body.mini nav.menu ul li.item a, body.mini nav.menu ul li.menu-item a {
+  body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
     top: 50%;
     padding: calc(var(--padding) * 0.75);
     margin: calc(var(--margin) * 0.75) 0;
   }
 }
 @media (min-width: 768px) {
-  body.mini nav.menu ul li.item a, body.mini nav.menu ul li.menu-item a {
+  body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
     color: var(--black);
     display: inline-block;
     margin: 0;
@@ -8387,7 +8386,7 @@ body.mini nav.menu ul li.item a, body.mini nav.menu ul li.menu-item a {
     transform: translate(0, -50%);
   }
 }
-body.mini nav.menu ul li.item a::after, body.mini nav.menu ul li.menu-item a::after {
+body.mini ul.menu li.item a::after, body.mini ul.menu li.menu-item a::after {
   content: "";
   display: block;
   position: absolute;
@@ -8399,753 +8398,49 @@ body.mini nav.menu ul li.item a::after, body.mini nav.menu ul li.menu-item a::af
   transition: all 0.3s ease;
 }
 @media (min-width: 768px) {
-  body.mini nav.menu ul li.item a::after, body.mini nav.menu ul li.menu-item a::after {
+  body.mini ul.menu li.item a::after, body.mini ul.menu li.menu-item a::after {
     background: var(--main-color);
   }
 }
-body.mini nav.menu ul li.item a:hover, body.mini nav.menu ul li.menu-item a:hover {
+body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item a.active, body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item a.active, body.mini ul.menu li.menu-item:hover a {
+  background: var(--link-color);
   color: var(--white);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu ul li.item a:hover, body.mini nav.menu ul li.menu-item a:hover {
-    color: var(--main-color);
-  }
-}
-body.mini nav.menu ul li.item a:hover::after, body.mini nav.menu ul li.menu-item a:hover::after {
-  width: 100%;
-}
-body.mini nav.menu ul li.item a.active, body.mini nav.menu ul li.menu-item a.active {
-  background: var(--white);
-  color: var(--link-color);
   display: block;
 }
 @media (min-width: 768px) {
-  body.mini nav.menu ul li.item a.active, body.mini nav.menu ul li.menu-item a.active {
+  body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item a.active, body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item a.active, body.mini ul.menu li.menu-item:hover a {
     color: var(--link-color);
     background: transparent;
   }
 }
-body.mini nav.menu ul li.item a.active::after, body.mini nav.menu ul li.menu-item a.active::after {
+body.mini ul.menu li.item.active a::after, body.mini ul.menu li.item.current-menu-item a::after, body.mini ul.menu li.item a.active::after, body.mini ul.menu li.item:hover a::after, body.mini ul.menu li.menu-item.active a::after, body.mini ul.menu li.menu-item.current-menu-item a::after, body.mini ul.menu li.menu-item a.active::after, body.mini ul.menu li.menu-item:hover a::after {
   width: 0;
   background: var(--link-color);
 }
 @media (min-width: 768px) {
-  body.mini nav.menu ul li.item a.active::after, body.mini nav.menu ul li.menu-item a.active::after {
+  body.mini ul.menu li.item.active a::after, body.mini ul.menu li.item.current-menu-item a::after, body.mini ul.menu li.item a.active::after, body.mini ul.menu li.item:hover a::after, body.mini ul.menu li.menu-item.active a::after, body.mini ul.menu li.menu-item.current-menu-item a::after, body.mini ul.menu li.menu-item a.active::after, body.mini ul.menu li.menu-item:hover a::after {
     width: 100%;
     background: var(--link-color);
   }
 }
-body.mini nav.menu ul li.item.active > a, body.mini nav.menu ul li.item.current-menu-item > a, body.mini nav.menu ul li.menu-item.active > a, body.mini nav.menu ul li.menu-item.current-menu-item > a {
-  background: var(--white);
-  color: var(--main-color);
-  display: block;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu ul li.item.active > a, body.mini nav.menu ul li.item.current-menu-item > a, body.mini nav.menu ul li.menu-item.active > a, body.mini nav.menu ul li.menu-item.current-menu-item > a {
-    color: var(--main-color);
-    background: transparent;
-  }
-}
-body.mini nav.menu ul li.item.active > a::after, body.mini nav.menu ul li.item.current-menu-item > a::after, body.mini nav.menu ul li.menu-item.active > a::after, body.mini nav.menu ul li.menu-item.current-menu-item > a::after {
-  width: 0;
-  background: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu ul li.item.active > a::after, body.mini nav.menu ul li.item.current-menu-item > a::after, body.mini nav.menu ul li.menu-item.active > a::after, body.mini nav.menu ul li.menu-item.current-menu-item > a::after {
-    width: 100%;
-    background: var(--main-color);
-  }
-}
-body.mini nav.menu.user-menu ul.user-menu li.item a, body.mini nav.menu.user-menu ul.user-menu li.menu-item a {
-  background: var(--white);
-  color: var(--second-color);
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item a, body.mini nav.menu.user-menu ul.user-menu li.menu-item a {
-    background: transparent;
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item a::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item a::after {
-    background: var(--white);
-  }
-}
-body.mini nav.menu.user-menu ul.user-menu li.item a:hover, body.mini nav.menu.user-menu ul.user-menu li.menu-item a:hover {
-  color: var(--second-color-dark);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item a:hover::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item a:hover::after {
-    background: var(--second-color-dark);
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item a.active, body.mini nav.menu.user-menu ul.user-menu li.menu-item a.active {
-    color: var(---third-color);
-    background: transparent;
-  }
-}
-body.mini nav.menu.user-menu ul.user-menu li.item a.active::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item a.active::after {
-  width: 0;
-  background: var(--second-color-dark);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item a.active::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item a.active::after {
-    width: 100%;
-    background: var(--second-color-dark);
-  }
-}
-body.mini nav.menu.user-menu ul.user-menu li.item.login a, body.mini nav.menu.user-menu ul.user-menu li.menu-item.login a {
-  font-style: italic;
-}
-body.mini nav.menu.user-menu ul.user-menu li.item.logout a, body.mini nav.menu.user-menu ul.user-menu li.menu-item.logout a {
-  font-style: italic;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item.signin, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin {
-    background-color: var(--second-color-dark);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-  }
-}
-body.mini nav.menu.user-menu ul.user-menu li.item.signin a, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin a {
-  font-weight: 700;
-  font-style: italic;
-  color: var(--second-color-dark);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item.signin a, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin a {
-    color: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item.signin a::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin a::after {
-    background: var(--second-color-dark);
-  }
-}
-body.mini nav.menu.user-menu ul.user-menu li.item.signin a:hover, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin a:hover {
-  color: var(--white);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item.signin a:hover::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin a:hover::after {
-    background: var(--white);
-  }
-}
-body.mini nav.menu.user-menu ul.user-menu li.item.signin a.active::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin a.active::after {
-  width: 0;
-  background: var(--second-color-dark);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.user-menu ul.user-menu li.item.signin a.active::after, body.mini nav.menu.user-menu ul.user-menu li.menu-item.signin a.active::after {
-    background: transparent;
-    width: 100%;
-    background: var(--white);
-  }
-}
-body.mini nav.menu.admin-menu {
-  background: var(--third-color-dark);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu {
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: var(--padding) calc(var(--padding) * 0.5);
-    height: auto;
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul {
-    flex-flow: column wrap;
-    justify-content: flex-start;
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul.admin-menu li.item, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item {
-    background-color: var(--third-color-dark);
-    margin-bottom: calc(var(--margin) * 0.5);
-  }
-}
-body.mini nav.menu.admin-menu ul.admin-menu li.item a, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a {
-  background: var(--third-color-dark);
-  color: var(--white);
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul.admin-menu li.item a, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a {
-    display: inline-block;
-    transform: none;
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul.admin-menu li.item a, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a {
-    background: transparent;
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul.admin-menu li.item a::after, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a::after {
-    background: var(--white);
-  }
-}
-body.mini nav.menu.admin-menu ul.admin-menu li.item a:hover, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a:hover {
-  color: var(--third-color);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul.admin-menu li.item a:hover::after, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a:hover::after {
-    background: var(--third-color);
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul.admin-menu li.item a.active, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a.active {
-    color: var(--third-color);
-    background: transparent;
-  }
-}
-body.mini nav.menu.admin-menu ul.admin-menu li.item a.active::after, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a.active::after {
-  width: 0;
-  background: var(--third-color);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.admin-menu ul.admin-menu li.item a.active::after, body.mini nav.menu.admin-menu ul.admin-menu li.menu-item a.active::after {
-    width: 100%;
-    background: var(--third-color);
-  }
-}
-body.mini nav.menu.social-menu ul.social-menu {
-  text-align: center;
-}
-body.mini nav.menu.social-menu ul.social-menu li.item, body.mini nav.menu.social-menu ul.social-menu li.menu-item {
-  padding: 0 calc(var(--padding) * 0.25);
-  display: inline-block;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.social-menu ul.social-menu li.item, body.mini nav.menu.social-menu ul.social-menu li.menu-item {
-    display: block;
-  }
-}
-body.mini nav.menu.social-menu ul.social-menu li.item a, body.mini nav.menu.social-menu ul.social-menu li.menu-item a {
-  color: var(--white);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.social-menu ul.social-menu li.item a, body.mini nav.menu.social-menu ul.social-menu li.menu-item a {
-    color: var(--link-color);
-  }
-}
-body.mini nav.menu.social-menu ul.social-menu li.item a:hover, body.mini nav.menu.social-menu ul.social-menu li.menu-item a:hover {
-  color: var(--link-hover-color);
-}
-body.mini nav.menu.social-menu ul.social-menu li.item a:hover::after, body.mini nav.menu.social-menu ul.social-menu li.menu-item a:hover::after {
-  width: 0;
-  background-color: transparent;
-}
-body.mini nav.menu.social-menu ul.social-menu li.item a.active::after, body.mini nav.menu.social-menu ul.social-menu li.menu-item a.active::after {
-  width: 0;
-  background-color: transparent;
-}
-body.mini nav.menu.lang-menu {
-  margin-top: var(--margin);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu {
-    margin-top: 0;
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu {
-  display: flex;
-  justify-content: space-evenly;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  height: 100%;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 calc(var(--margin) * 0.5);
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu li.item, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item {
-  display: block;
-  font-weight: 300;
-  font-size: var(--h4);
-  line-height: 1.5;
-  margin: 0;
-  background: transparent;
-  padding: 0;
-}
-@media (min-width: 576px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item {
-    font-size: var(--h5);
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item {
-    font-size: var(--p);
-    padding: 0 calc(var(--padding) * 0.5);
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu li.item a, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a {
-  display: block;
-  position: relative;
-  color: var(--white);
-  padding: var(--padding) calc(var(--padding) * 0.5);
-  margin: calc(var(--margin) * 0.5) 0;
-  text-align: center;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  min-width: 60px;
-}
-@media (min-width: 576px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item a, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a {
-    padding: calc(var(--margin) * 0.75);
-    margin: calc(var(--margin) * 0.75) 0;
-  }
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item a, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a {
-    top: 50%;
-    color: var(--black);
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    transform: translate(0, -50%);
-    min-width: 0;
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu li.item a::after, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 0;
-  background: var(--white);
-  bottom: 0;
-  left: 0;
-  transition: all 0.3s ease;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item a::after, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a::after {
-    background: var(--black);
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu li.item a:hover, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a:hover {
-  background: var(--white);
-  color: var(--black);
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item a:hover, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a:hover {
-    background: transparent;
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu li.item a:hover::after, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a:hover::after {
-  width: 0;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item a:hover::after, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a:hover::after {
-    width: 100%;
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu li.item a.selected, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a.selected {
-  background: var(--white);
-  color: var(--black);
-  display: block;
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item a.selected, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a.selected {
-    background: transparent;
-  }
-}
-body.mini nav.menu.lang-menu ul.lang-menu li.item a.selected::after, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a.selected::after {
-  width: 0;
-  background: var(--black);
-}
-@media (min-width: 768px) {
-  body.mini nav.menu.lang-menu ul.lang-menu li.item a.selected::after, body.mini nav.menu.lang-menu ul.lang-menu li.menu-item a.selected::after {
-    width: 100%;
-  }
-}
-body.mini.top nav.menu ul li.item, body.mini.top nav.menu ul li.menu-item {
-  background: transparent;
-}
-body.mini.top nav.menu ul li.item a, body.mini.top nav.menu ul li.menu-item a {
-  color: var(--white);
-}
-body.mini.top nav.menu ul li.item a::after, body.mini.top nav.menu ul li.menu-item a::after {
-  background: var(--white);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu ul li.item a::after, body.mini.top nav.menu ul li.menu-item a::after {
-    background: var(--main-color);
-  }
-}
-body.mini.top nav.menu ul li.item a:hover, body.mini.top nav.menu ul li.menu-item a:hover {
-  color: var(--white);
-}
-body.mini.top nav.menu ul li.item a:hover::after, body.mini.top nav.menu ul li.menu-item a:hover::after {
-  background: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu ul li.item a:hover::after, body.mini.top nav.menu ul li.menu-item a:hover::after {
-    background: var(--main-color);
-  }
-}
-body.mini.top nav.menu ul li.item a.active, body.mini.top nav.menu ul li.menu-item a.active {
-  background: var(--white);
-  color: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu ul li.item a.active, body.mini.top nav.menu ul li.menu-item a.active {
-    color: var(--main-color);
-    background: transparent;
-  }
-}
-body.mini.top nav.menu ul li.item a.active::after, body.mini.top nav.menu ul li.menu-item a.active::after {
-  background: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu ul li.item a.active::after, body.mini.top nav.menu ul li.menu-item a.active::after {
-    background: var(--main-color);
-  }
-}
-body.mini.top nav.menu ul li.item.active, body.mini.top nav.menu ul li.item.current-menu-item, body.mini.top nav.menu ul li.menu-item.active, body.mini.top nav.menu ul li.menu-item.current-menu-item {
-  background-color: var(--white);
-}
-body.mini.top nav.menu ul li.item.active > a, body.mini.top nav.menu ul li.item.current-menu-item > a, body.mini.top nav.menu ul li.menu-item.active > a, body.mini.top nav.menu ul li.menu-item.current-menu-item > a {
-  background: var(--white);
-  color: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu ul li.item.active > a, body.mini.top nav.menu ul li.item.current-menu-item > a, body.mini.top nav.menu ul li.menu-item.active > a, body.mini.top nav.menu ul li.menu-item.current-menu-item > a {
-    color: var(--main-color);
-    background: transparent;
-  }
-}
-body.mini.top nav.menu ul li.item.active > a::after, body.mini.top nav.menu ul li.item.current-menu-item > a::after, body.mini.top nav.menu ul li.menu-item.active > a::after, body.mini.top nav.menu ul li.menu-item.current-menu-item > a::after {
-  background: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu ul li.item.active > a::after, body.mini.top nav.menu ul li.item.current-menu-item > a::after, body.mini.top nav.menu ul li.menu-item.active > a::after, body.mini.top nav.menu ul li.menu-item.current-menu-item > a::after {
-    background: var(--main-color);
-  }
-}
-body.mini.top nav.menu ul li.item.drop-down ul.drop-down, body.mini.top nav.menu ul li.item.drop-down ul.dropdown, body.mini.top nav.menu ul li.item.dropdown ul.drop-down, body.mini.top nav.menu ul li.item.dropdown ul.dropdown, body.mini.top nav.menu ul li.item.menu-item-has-children ul.drop-down, body.mini.top nav.menu ul li.item.menu-item-has-children ul.dropdown, body.mini.top nav.menu ul li.menu-item.drop-down ul.drop-down, body.mini.top nav.menu ul li.menu-item.drop-down ul.dropdown, body.mini.top nav.menu ul li.menu-item.dropdown ul.drop-down, body.mini.top nav.menu ul li.menu-item.dropdown ul.dropdown, body.mini.top nav.menu ul li.menu-item.menu-item-has-children ul.drop-down, body.mini.top nav.menu ul li.menu-item.menu-item-has-children ul.dropdown {
-  background: var(--black);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.admin-menu li.item, body.mini.top nav.menu.admin-menu li.menu-item {
-    background-color: var(--third-color-dark);
-  }
-}
-body.mini.top nav.menu.user-menu ul.user-menu li.login.active > a {
-  background-color: var(--white);
-  color: var(--fourth-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.user-menu ul.user-menu li.login.active > a {
-    background-color: transparent;
-    color: var(--black);
-  }
-}
-body.mini.top nav.menu.user-menu ul.user-menu li.login.active > a:after {
-  background-color: var(--fourth-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.user-menu ul.user-menu li.login:hover a:after {
-    background: var(--fourth-color);
-  }
-}
-body.mini.top nav.menu.user-menu ul.user-menu li a {
-  background-color: transparent;
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.user-menu ul.user-menu li.signin {
-    background-color: var(--fourth-color-dark);
-  }
-}
-body.mini.top nav.menu.user-menu ul.user-menu li.signin a {
-  background-color: transparent;
-}
-body.mini.top nav.menu.user-menu ul.user-menu li.signin.active {
-  background-color: var(--white);
-  color: var(--fourth-color-dark);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.user-menu ul.user-menu li.signin.active {
-    background-color: var(--white);
-    color: var(--black);
-  }
-}
-body.mini.top nav.menu.user-menu ul.user-menu li.signin.active > a {
-  color: var(--fourth-color-dark);
-}
-body.mini.top nav.menu.user-menu ul.user-menu li.signin.active > a:after {
-  background-color: var(--fourth-color);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.user-menu ul.user-menu li.signin:hover a:after {
-    background: var(--fourth-color);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.lang-menu ul.lang-menu li.item a, body.mini.top nav.menu.lang-menu ul.lang-menu li.menu-item a {
-    color: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.lang-menu ul.lang-menu li.item a::after, body.mini.top nav.menu.lang-menu ul.lang-menu li.menu-item a::after {
-    background: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.lang-menu ul.lang-menu li.item a:hover, body.mini.top nav.menu.lang-menu ul.lang-menu li.menu-item a:hover {
-    color: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.lang-menu ul.lang-menu li.item a:hover::after, body.mini.top nav.menu.lang-menu ul.lang-menu li.menu-item a:hover::after {
-    background: var(--white);
-  }
-}
-body.mini.top nav.menu.lang-menu ul.lang-menu li.item a.selected, body.mini.top nav.menu.lang-menu ul.lang-menu li.menu-item a.selected {
-  color: var(--black);
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.lang-menu ul.lang-menu li.item a.selected, body.mini.top nav.menu.lang-menu ul.lang-menu li.menu-item a.selected {
-    color: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.top nav.menu.lang-menu ul.lang-menu li.item a.selected::after, body.mini.top nav.menu.lang-menu ul.lang-menu li.menu-item a.selected::after {
-    background: var(--white);
-  }
-}
-body.mini.scroll nav.menu ul li.item, body.mini.scroll nav.menu ul li.menu-item {
-  background: transparent;
-}
-body.mini.scroll nav.menu ul li.item a, body.mini.scroll nav.menu ul li.menu-item a {
-  color: var(--white);
-}
-body.mini.scroll nav.menu ul li.item a::after, body.mini.scroll nav.menu ul li.menu-item a::after {
-  height: 1px;
-  background: var(--white);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu ul li.item a::after, body.mini.scroll nav.menu ul li.menu-item a::after {
-    background: var(--main-color);
-  }
-}
-body.mini.scroll nav.menu ul li.item a:hover, body.mini.scroll nav.menu ul li.menu-item a:hover {
-  color: var(--white);
-}
-body.mini.scroll nav.menu ul li.item a:hover::after, body.mini.scroll nav.menu ul li.menu-item a:hover::after {
-  background: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu ul li.item a:hover::after, body.mini.scroll nav.menu ul li.menu-item a:hover::after {
-    background: var(--main-color);
-  }
-}
-body.mini.scroll nav.menu ul li.item a.active, body.mini.scroll nav.menu ul li.menu-item a.active {
-  background: var(--white);
-  color: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu ul li.item a.active, body.mini.scroll nav.menu ul li.menu-item a.active {
-    color: var(--main-color);
-    background: transparent;
-  }
-}
-body.mini.scroll nav.menu ul li.item a.active::after, body.mini.scroll nav.menu ul li.menu-item a.active::after {
-  background: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu ul li.item a.active::after, body.mini.scroll nav.menu ul li.menu-item a.active::after {
-    background: var(--main-color);
-  }
-}
-body.mini.scroll nav.menu ul li.item.active, body.mini.scroll nav.menu ul li.item.current-menu-item, body.mini.scroll nav.menu ul li.menu-item.active, body.mini.scroll nav.menu ul li.menu-item.current-menu-item {
-  background-color: var(--white);
-}
-body.mini.scroll nav.menu ul li.item.active > a, body.mini.scroll nav.menu ul li.item.current-menu-item > a, body.mini.scroll nav.menu ul li.menu-item.active > a, body.mini.scroll nav.menu ul li.menu-item.current-menu-item > a {
-  background: var(--white);
-  color: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu ul li.item.active > a, body.mini.scroll nav.menu ul li.item.current-menu-item > a, body.mini.scroll nav.menu ul li.menu-item.active > a, body.mini.scroll nav.menu ul li.menu-item.current-menu-item > a {
-    color: var(--main-color);
-    background: transparent;
-  }
-}
-body.mini.scroll nav.menu ul li.item.active > a::after, body.mini.scroll nav.menu ul li.item.current-menu-item > a::after, body.mini.scroll nav.menu ul li.menu-item.active > a::after, body.mini.scroll nav.menu ul li.menu-item.current-menu-item > a::after {
-  background: var(--main-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu ul li.item.active > a::after, body.mini.scroll nav.menu ul li.item.current-menu-item > a::after, body.mini.scroll nav.menu ul li.menu-item.active > a::after, body.mini.scroll nav.menu ul li.menu-item.current-menu-item > a::after {
-    background: var(--main-color);
-  }
-}
-body.mini.scroll nav.menu ul li.item.drop-down ul.drop-down, body.mini.scroll nav.menu ul li.item.drop-down ul.dropdown, body.mini.scroll nav.menu ul li.item.drop-down ul.sub-menu, body.mini.scroll nav.menu ul li.item.dropdown ul.drop-down, body.mini.scroll nav.menu ul li.item.dropdown ul.dropdown, body.mini.scroll nav.menu ul li.item.dropdown ul.sub-menu, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.drop-down, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.dropdown, body.mini.scroll nav.menu ul li.item.menu-item-has-children ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.dropdown, body.mini.scroll nav.menu ul li.menu-item.drop-down ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.dropdown ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.dropdown ul.dropdown, body.mini.scroll nav.menu ul li.menu-item.dropdown ul.sub-menu, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.drop-down, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.dropdown, body.mini.scroll nav.menu ul li.menu-item.menu-item-has-children ul.sub-menu {
-  background: var(--black);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.admin-menu li.item, body.mini.scroll nav.menu.admin-menu li.menu-item {
-    background-color: var(--third-color-dark);
-  }
-}
-body.mini.scroll nav.menu.user-menu ul.user-menu li.login.active > a {
-  background-color: var(--white);
-  color: var(--fourth-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.user-menu ul.user-menu li.login.active > a {
-    background-color: transparent;
-    color: var(--black);
-  }
-}
-body.mini.scroll nav.menu.user-menu ul.user-menu li.login.active > a:after {
-  background-color: var(--fourth-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.user-menu ul.user-menu li.login:hover a:after {
-    background: var(--fourth-color);
-  }
-}
-body.mini.scroll nav.menu.user-menu ul.user-menu li a {
-  background-color: transparent;
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.user-menu ul.user-menu li.signin {
-    background-color: var(--third-color-dark);
-  }
-}
-body.mini.scroll nav.menu.user-menu ul.user-menu li.signin a {
-  background-color: transparent;
-}
-body.mini.scroll nav.menu.user-menu ul.user-menu li.signin.active {
-  background-color: var(--white);
-  color: var(--third-color-dark);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.user-menu ul.user-menu li.signin.active {
-    background-color: var(--white);
-    color: var(--black);
-  }
-}
-body.mini.scroll nav.menu.user-menu ul.user-menu li.signin.active > a {
-  color: var(--third-color-dark);
-}
-body.mini.scroll nav.menu.user-menu ul.user-menu li.signin.active > a:after {
-  background-color: var(--fourth-color);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.user-menu ul.user-menu li.signin:hover a:after {
-    background: var(--fourth-color);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.lang-menu ul.lang-menu li.item a, body.mini.scroll nav.menu.lang-menu ul.lang-menu li.menu-item a {
-    color: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.lang-menu ul.lang-menu li.item a::after, body.mini.scroll nav.menu.lang-menu ul.lang-menu li.menu-item a::after {
-    background: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.lang-menu ul.lang-menu li.item a:hover, body.mini.scroll nav.menu.lang-menu ul.lang-menu li.menu-item a:hover {
-    color: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.lang-menu ul.lang-menu li.item a:hover::after, body.mini.scroll nav.menu.lang-menu ul.lang-menu li.menu-item a:hover::after {
-    background: var(--white);
-  }
-}
-body.mini.scroll nav.menu.lang-menu ul.lang-menu li.item a.selected, body.mini.scroll nav.menu.lang-menu ul.lang-menu li.menu-item a.selected {
-  color: var(--black);
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.lang-menu ul.lang-menu li.item a.selected, body.mini.scroll nav.menu.lang-menu ul.lang-menu li.menu-item a.selected {
-    color: var(--white);
-  }
-}
-@media (min-width: 768px) {
-  body.mini.scroll nav.menu.lang-menu ul.lang-menu li.item a.selected::after, body.mini.scroll nav.menu.lang-menu ul.lang-menu li.menu-item a.selected::after {
-    background: var(--white);
-  }
-}
-@media (max-width: 768px) {
-  body.mini header#header .boxes .box.menus {
-    margin: 0;
-    padding: 0;
-  }
-}
-@media (max-width: 768px) {
-  body.mini.scroll .boxes .box.menus {
-    margin: 0;
-    padding: 0;
-  }
-}
-body.mini header#header .boxes .box.menus .head-menu {
-  list-style: none;
-  margin: 0;
-  transition: all 0.1s ease;
+body.mini ul#page-menu {
+  justify-content: flex-end;
+}
+body.mini ul#main-menu {
+  flex-flow: column wrap;
+  align-items: flex-start;
   padding: var(--padding);
-  position: fixed;
-  top: calc(var(--logo-height) * 1 + var(--margin) * 2);
-  top: calc(var(--logo-height) * 1 + var(--margin) * 4);
-  width: calc(100% - var(--margin) * 2);
-  left: var(--margin);
-  right: var(--margin);
-  background: var(--main-color);
-  display: block;
-  align-items: center;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 768px) {
-  body.mini header#header .boxes .box.menus .head-menu {
-    position: relative;
-    width: auto;
-    height: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    background: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+  body.mini ul#main-menu {
+    padding: calc(var(--padding) * 2) var(--padding);
   }
 }
-body.mini header#header .boxes .box.menus .head-menu.closed {
-  opacity: 0;
-  visibility: hidden;
+body.mini ul#main-menu li.item, body.mini ul#main-menu li.menu-item {
+  font-size: var(--h3);
 }
-@media (min-width: 768px) {
-  body.mini header#header .boxes .box.menus .head-menu.closed {
-    opacity: 1;
-    visibility: visible;
-    width: 100%;
-  }
-}
-body.mini header#header .boxes .box.menus .head-menu.open {
-  opacity: 1;
-  visibility: visible;
-  max-height: 90%;
-  overflow-y: scroll;
+body.mini ul#main-menu li.item a, body.mini ul#main-menu li.menu-item a {
+  color: var(--white);
 }
 body.mini footer#footer .footer-logo img.logo.emblem {
   width: 66.666666%;

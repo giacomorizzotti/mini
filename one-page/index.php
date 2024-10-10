@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" href="favicon.ico">
 
     <?php ### CDN ### ?>
-    <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.css">
     <?php ### LOCAL ### ?>
     <?php /* <link rel="stylesheet" type="text/css" href="css/mini.min.css"> */ ?>
 
@@ -80,22 +80,19 @@
     <a href="#top"><div class="top-link"><p class=""><i class="iconoir-dot-arrow-up"></i></p></div></a>
 
     <header id="header" class="header fixed px-1">
-        <div class="container">
+        <div class="container fw">
             <div class="boxes align-items-center justify-content-between">
                 <div class="box brand">
                     <a href="#top" class="">
                         <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem me-1" alt="emblem"/>
                     </a>
-                    <a href="#top" class=""><h3 class="site-title mini-title">mini</h3></a>
+                    <a href="#top" class=""><h3 class="site-title">mini</h3></a>
                 </div>
                 <div class="box menus">
                     <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
                     <div id="head-menu" class="head-menu b-rad-10">
-                        <nav id="main-menu" class="main-menu menu">
-                            <ul class="main-menu menu">
-                                <ul id="page-menu" class="menu">
-                                </ul>
-                                <li class="menu-item active"><a href="#"><i class="iconoir-home link-text"></i>&nbsp;&nbsp;home</a></li>
+                        <nav class="menu page-menu">
+                            <ul id="page-menu" class="menu page-menu">
                             </ul>
                         </nav>
                     </div>
@@ -104,21 +101,44 @@
         </div>
     </header>
 
-    <main>
+    <div class="sheet">
 
-        <section id="content" class="container fw page-menu" menuItemName="content">
-            <div class="container">
-                <div class="boxes fh align-content-center space-top-bot">
-                    <div class="box box-100">
+        <sidebar id="side-menu" class="">
+            <nav class="menu main-menu">
+                <ul id="main-menu" class="menu main-menu">
+                    <li class="menu-item active"><a href="/" class="active">home</a></li>
+                    <li class="menu-item"><a href="/structure">test</a></li>
+                    <li class="menu-item"><a href="/palette">test</a></li>
+                    <li class="menu-item"><a href="/typography">test</a></li>
+                </ul>
+            </nav>
+        </sidebar>
 
-                        <h1 class="m-0"><i class="iconoir-linux fourth-color-box m-0"></i><span class="fw-box dark-grey-text" style="line-height: 1; vertical-align: text-top;">&nbsp;mini.</span></h1>
+        <main>
 
+            <section id="content" class="container fw page-menu" menuItemName="content">
+                <div class="container">
+                    <div class="boxes fh align-content-center space-top-bot">
+                        <div class="box box-100">
+
+                            <h1 class="m-0"><i class="iconoir-linux fourth-color-box m-0"></i><span class="fw-box dark-grey-text" style="line-height: 1; vertical-align: text-top;">&nbsp;mini.</span></h1>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
+            <section id="test" class="container fw page-menu fh fw-bg" menuItemName="test">
+
+            </section>
+
+            <section id="test-two" class="container fw page-menu fh" menuItemName="test two">
+
+            </section>
+
+        </main>
+
+    </div>
 
     <footer id="footer" class="footer">
         <div class="container space-top-bot">
