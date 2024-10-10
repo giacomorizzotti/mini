@@ -8170,6 +8170,12 @@ body.mini .sheet sidebar#side-menu {
   flex: 0;
   overflow: hidden;
 }
+body.mini .sheet sidebar#side-menu ul.menu {
+  margin-bottom: calc(var(--margin) * 1);
+}
+body.mini .sheet sidebar#side-menu ul.menu li.item a, body.mini .sheet sidebar#side-menu ul.menu li.menu-item a {
+  color: var(--white);
+}
 body.mini.menu-open header#header .brand img.logo {
   filter: brightness(0) invert(1);
 }
@@ -8338,6 +8344,7 @@ body.mini ul.menu {
 @media (min-width: 768px) {
   body.mini ul.menu {
     display: flex;
+    flex-flow: column;
     margin: 0 calc(var(--margin) * 0.5);
   }
 }
@@ -8370,7 +8377,6 @@ body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
 }
 @media (min-width: 576px) {
   body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
-    top: 50%;
     padding: calc(var(--padding) * 0.75);
     margin: calc(var(--margin) * 0.75) 0;
   }
@@ -8381,7 +8387,6 @@ body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
     display: inline-block;
     margin: 0;
     padding: 0;
-    transform: translate(0, -50%);
   }
 }
 body.mini ul.menu li.item a::after, body.mini ul.menu li.menu-item a::after {
@@ -8422,11 +8427,10 @@ body.mini ul.menu li.item.active a::after, body.mini ul.menu li.item.current-men
   }
 }
 body.mini ul#page-menu {
+  flex-flow: row wrap;
   justify-content: flex-end;
 }
 body.mini ul#main-menu {
-  flex-flow: column wrap;
-  align-items: flex-start;
   padding: var(--padding);
 }
 @media (min-width: 768px) {
@@ -8439,6 +8443,12 @@ body.mini ul#main-menu li.item, body.mini ul#main-menu li.menu-item {
 }
 body.mini ul#main-menu li.item a, body.mini ul#main-menu li.menu-item a {
   color: var(--white);
+}
+body.mini ul#social-menu {
+  flex-flow: row wrap;
+}
+body.mini ul#lang-menu {
+  flex-flow: row wrap;
 }
 body.mini footer#footer .footer-logo img.logo.emblem {
   width: 66.666666%;

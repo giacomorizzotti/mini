@@ -36,6 +36,7 @@
     {% if favicon is not False %}<link rel="apple-touch-icon" href="{% static 'favicon.ico' %}">{% endif %}
 
     {% block mini_header_css %}
+    {% comment %}<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css">{% endcomment %}
     <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">
     {% endblock %}
     
@@ -142,119 +143,128 @@
                 {% block menus %}
                 <div class="box menus">
                     <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
-                    <div id="head-menu" class="head-menu b-rad-10">
-                    
-                        {% block main_nav %}
-                        <nav id="main-menu" class="menu main-menu">
-                            <ul class="menu main-menu">
-                                <ul class="menu page-menu">
-                                </ul>
-                                <li class="menu-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}"><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">home</a></li>
-                                {% block main_menu_list_items %}
-                                {% endblock %}
-                                {% block main_menu_list_items_shop %}{% endblock %}
+                    <div id="head-menu" class="head-menu">
+                        <nav class="menu page-menu">
+                            <ul id="page-menu" class="menu page-menu">
                             </ul>
                         </nav>
-                        {% endblock %}
-
-                        {% block aroma_admin_nav %}{% endblock %}
-
-                        {% block aroma_menu_nav %}{% endblock %}
-
-                        {% block aroma_reserv_nav %}{% endblock %}
-
-                        {% block aroma_cart_nav %}{% endblock %}
-
-                        {% block user_nav %}{% endblock %}
-
-                        {% block languagemenunav %}
-                        <nav id="lang-menu" class="menu lang-menu">
-                            <ul class="menu lang-menu">
-                                {% load i18n %}
-                                {% get_current_language as currentlanguage %}
-                                {% get_available_languages as languages %}
-                                {% for lang_code, lang_name in languages %}
-                                    {% language lang_code %}
-                                    <li class="menu-item"><a href="/{{ lang_code }}/" class="up-case{% if currentlanguage == lang_code %} selected{% endif %}">{{ lang_code }}</a></li>
-                                    {% endlanguage %}
-                                {% endfor %}
-                            </ul>
-                        </nav>
-                        {% endblock %}
                     </div>
-                    {% endblock %}
                 </div>
+                {% endblock %}
             </div>
         </div>
     </header>
     {% endblock %}
 
-    <main class="fh {{ main_classes }}">
+    <div class="sheet">
 
-        {% block head_content %}
-        {% endblock %}
+        <sidebar id="side-menu" class="">
+            {% block main_nav %}
+            <nav class="menu main-menu">
+                <ul id="main-menu" class="menu main-menu">
+                    <li class="menu-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}"><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">home</a></li>
+                    {% block main_menu_list_items %}
+                    {% endblock %}
+                    {% block main_menu_list_items_shop %}{% endblock %}
+                </ul>
+            </nav>
+            {% endblock %}
 
-        {% block page_title %}
-        {% if page_title or page_subtitle %}
-        <div class="container fw">
-            <div class="container">
-                <div class="boxes space-top">
-                    <div class="box box-100">
-                        <div class="space space-2"></div>
-                        {% if page_title %}<h1 class="m-0">{{ page_title|capfirst }}</h1>{% endif %}
-                        {% if page_subtitle %}<h2 class="m-0">{{ page_subtitle|capfirst }}</h2>{% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endblock %}
+            {% block user_nav %}{% endblock %}
 
-        {% if messages %}
-        <section id="messages" class="container fw" \style="position:absolute; z-index:1;">
-            <div class="container">
-                <div class="boxes align-items-start">
-                    {% for message in messages %}
-                    <div class="box box-100 b-rad-5 alert {% if message.tags %}{{ message.tags }}-bg wh-text{% endif %}" role="alert">
-                        <p class="{% if message.tags %}wh-text{% endif %}">
-                            {{ message|capfirst }}
-                        </p>
-                    </div>
+            {% block languagemenunav %}
+            <nav class="menu lang-menu">
+                <ul id="lang-menu" class="menu lang-menu">
+                    {% load i18n %}
+                    {% get_current_language as currentlanguage %}
+                    {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+                        {% language lang_code %}
+                        <li class="menu-item"><a href="/{{ lang_code }}/" class="up-case{% if currentlanguage == lang_code %} selected{% endif %}">{{ lang_code }}</a></li>
+                        {% endlanguage %}
                     {% endfor %}
-                </div>
-            </div>
-        </section>
-        {% endif %}
+                </ul>
+            </nav>
+            {% endblock %}
 
-        {% if quick_content %}
-        {% block quick_content %}
-        <section id="quick-content" class="container fw">
-            <div class="container">
-                <div class="boxes align-items-start {% if not page_title and not messages %}space-top{%endif%}">
-                    <div class="box box-100 {{ quick_content_wr_class }}">
-                        <p class="{{ quick_content_class }}">{{ quick_content }}</p>
+            {% block aroma_admin_nav %}{% endblock %}
+
+            {% block aroma_menu_nav %}{% endblock %}
+
+            {% block aroma_reserv_nav %}{% endblock %}
+
+            {% block aroma_cart_nav %}{% endblock %}
+
+        </sidebar>
+
+        <main class="fh {{ main_classes }}">
+
+            {% block head_content %}
+            {% endblock %}
+
+            {% block page_title %}
+            {% if page_title or page_subtitle %}
+            <div class="container fw">
+                <div class="container">
+                    <div class="boxes space-top">
+                        <div class="box box-100">
+                            <div class="space space-2"></div>
+                            {% if page_title %}<h1 class="m-0">{{ page_title|capfirst }}</h1>{% endif %}
+                            {% if page_subtitle %}<h2 class="m-0">{{ page_subtitle|capfirst }}</h2>{% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        {% endblock %}
-        {% endif %}
+            {% endif %}
+            {% endblock %}
 
-        {% block content %}
-        <section id="content" class="container fw page-menu">
-            <div class="container">
-                <div class="boxes fh {% if not page_title and not messages and not quick_content %}space-top-bot{%endif%}">
-                    <div class="box box-100">
-
-                        <h1 class="m-0 light">Default <span class="color-text"><span class="bold">mini</span>mal</span> home page!</h1>
-
+            {% if messages %}
+            <section id="messages" class="container fw" \style="position:absolute; z-index:1;">
+                <div class="container">
+                    <div class="boxes align-items-start">
+                        {% for message in messages %}
+                        <div class="box box-100 b-rad-5 alert {% if message.tags %}{{ message.tags }}-bg wh-text{% endif %}" role="alert">
+                            <p class="{% if message.tags %}wh-text{% endif %}">
+                                {{ message|capfirst }}
+                            </p>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
-            </div>
-        </section>
-        {% endblock %}
+            </section>
+            {% endif %}
 
-    </main>
+            {% if quick_content %}
+            {% block quick_content %}
+            <section id="quick-content" class="container fw">
+                <div class="container">
+                    <div class="boxes align-items-start {% if not page_title and not messages %}space-top{%endif%}">
+                        <div class="box box-100 {{ quick_content_wr_class }}">
+                            <p class="{{ quick_content_class }}">{{ quick_content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% endblock %}
+            {% endif %}
+
+            {% block content %}
+            <section id="content" class="container fw page-menu">
+                <div class="container">
+                    <div class="boxes fh {% if not page_title and not messages and not quick_content %}space-top-bot{%endif%}">
+                        <div class="box box-100">
+
+                            <h1 class="m-0 light">Default <span class="color-text"><span class="bold">mini</span>mal</span> home page!</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% endblock %}
+
+        </main>
+
+    </div>
 
     {% block actions %}
     {% endblock %}
@@ -325,7 +335,7 @@
     {% endif %}
 
     {% block mini_footer_js %}
-    <script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>
     {% endblock %}
 
     {% block bottom_js %}

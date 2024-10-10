@@ -219,6 +219,16 @@ body {
         transition: flex 0.2s ease-out;
         flex: 0;
         overflow: hidden;
+        ul.menu {
+          margin-bottom: calc( var(--margin) * 1 );
+          li {
+            &.item, &.menu-item {
+              a {
+                color: var(--white);
+              }
+            }
+          }
+        }
       }
     }
     &.menu-open {
@@ -422,6 +432,7 @@ body {
       padding: 0 var(--padding);
       @include md {
         display: flex;
+        flex-flow: column;
         margin: 0 calc( var(--margin) * 0.5);
       }
 
@@ -447,7 +458,6 @@ body {
           padding: var(--padding);
           margin: calc(var(--margin) * 0.5 ) 0;
           @include sm {
-            top: 50%;
             padding: calc(var(--padding) * 0.75 );
             margin: calc(var(--margin) * 0.75 ) 0;
           }
@@ -456,7 +466,6 @@ body {
             display: inline-block;
             margin: 0;
             padding: 0;
-            transform: translate(0, -50%);
           }
           &::after {
             content:"";
@@ -495,6 +504,7 @@ body {
 
     // page menu
     ul#page-menu {
+      flex-flow: row wrap;
       justify-content: flex-end;
       li.item, li.menu-item {
         a {
@@ -510,8 +520,6 @@ body {
 
     // main menu
     ul#main-menu {
-      flex-flow: column wrap;
-      align-items: flex-start;
       padding: var(--padding);
       @include md {
         padding: calc( var(--padding) * 2 ) var(--padding);
@@ -546,6 +554,7 @@ body {
 
     // social menu
     ul#social-menu {
+      flex-flow: row wrap;
       li.item, li.menu-item {
         a {
           &::after {
@@ -560,6 +569,7 @@ body {
 
     // language menu
     ul#lang-menu {
+      flex-flow: row wrap;
       li.item, li.menu-item {
         a {
           &::after {
