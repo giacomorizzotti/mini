@@ -79,7 +79,7 @@
     <div id="top"></div>
     <a href="#top"><div class="top-link"><p class=""><i class="iconoir-dot-arrow-up"></i></p></div></a>
 
-    <header id="header" class="header fixed px-1">
+    <header id="header" class="header">
         <div class="container fw">
             <div class="boxes align-items-center justify-content-between">
                 <div class="box brand">

@@ -8025,9 +8025,6 @@ body.mini *[class^=iconoir-], body.mini *[class*=" iconoir-"] {
 }
 /* MENUs STYLING */
 body.mini header#header {
-  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-}
-body.mini header#header.fixed {
   position: fixed;
   width: 100%;
   top: 0;
