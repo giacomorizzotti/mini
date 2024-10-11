@@ -2892,6 +2892,32 @@ body.mini form textarea {
 body.mini .space-bot-action {
   padding-bottom: calc(var(--margin) + var(--margin) + var(--padding) * 0.5 + 48px);
 }
+body.mini footer#footer .footer-logo img.logo.emblem {
+  width: 66.666666%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.1;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+body.mini footer#footer .footer-logo img.logo.emblem:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+body.mini footer#footer .footer-logo img.logo.logotype {
+  height: auto;
+  width: 100%;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.1;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+body.mini footer#footer .footer-logo img.logo.logotype:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
 
 /* COLORS */
 body.mini {
@@ -8454,46 +8480,6 @@ body.mini ul#social-menu {
 body.mini ul#lang-menu {
   flex-flow: row wrap;
 }
-body.mini footer#footer .footer-logo img.logo.emblem {
-  width: 66.666666%;
-  height: auto;
-  display: block;
-  filter: grayscale(100%);
-  opacity: 0.1;
-  transition: all 0.3s ease;
-  margin: 0 auto;
-}
-body.mini footer#footer .footer-logo img.logo.emblem:hover {
-  filter: grayscale(0);
-  opacity: 1;
-}
-body.mini footer#footer .footer-logo img.logo.logotype {
-  height: auto;
-  width: 100%;
-  display: block;
-  filter: grayscale(100%);
-  opacity: 0.1;
-  transition: all 0.3s ease;
-  margin: 0 auto;
-}
-body.mini footer#footer .footer-logo img.logo.logotype:hover {
-  filter: grayscale(0);
-  opacity: 1;
-}
-body.mini footer#footer .footer-menu nav.menu ul.menu li.item, body.mini footer#footer .footer-menu nav.menu ul.menu li.menu-item {
-  display: block;
-  padding: 0;
-}
-body.mini footer#footer .footer-menu nav.menu ul.menu li.item a, body.mini footer#footer .footer-menu nav.menu ul.menu li.menu-item a {
-  display: block;
-  margin: 0;
-  color: var(--false-black);
-  line-height: 1;
-}
-body.mini footer#footer .footer-menu nav.menu ul.menu li.item a:hover, body.mini footer#footer .footer-menu nav.menu ul.menu li.menu-item a:hover {
-  color: var(--link-color);
-}
-
 /* SLIDER */
 body.mini {
   /*

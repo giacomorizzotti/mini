@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" href="favicon.ico">
 
     <?php ### CDN ### ?>
-    <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css">
     <?php ### LOCAL ### ?>
     <?php /* <link rel="stylesheet" type="text/css" href="css/mini.min.css"> */ ?>
 
@@ -128,14 +128,6 @@
                 </div>
             </section>
 
-            <section id="test" class="container fw page-menu fh fw-bg" menuItemName="test">
-
-            </section>
-
-            <section id="test-two" class="container fw page-menu fh" menuItemName="test two">
-
-            </section>
-
         </main>
 
     </div>
@@ -151,6 +143,22 @@
                     <a href="#top" class=""><img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem" alt="emblem"/></a>
                 </div>
                 <div class="box box-33 footer-menu">
+                    <nav class="menu footer-menu">
+                        <ul id="footer-menu" class="menu footer-menu">
+                            <li class="item active">
+                                <a href="#" class="active">Footer link 1</a>
+                            </li>
+                            <li class="item">
+                                <a href="#">Footer link 2</a>
+                            </li>
+                            <li class="item">
+                                <a href="#">Footer link 3</a>
+                            </li>
+                            <li class="item">
+                                <a href="#">Footer link 4</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -172,7 +180,7 @@
     </div>
 
     <?php ### CDN ### ?>
-    <script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>
     <?php ### LOCAL ### ?>
     <?php /* <script type="text/javascript" src="js/mini.js"></script> */ ?>
 

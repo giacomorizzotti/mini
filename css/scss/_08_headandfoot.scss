@@ -735,68 +735,6 @@ body {
         }
       }
     }
-          
-
-
-    // footer
-    footer#footer {
-      .footer-logo {
-        img.logo {
-          &.emblem {
-            width: 66.666666%;
-            height: auto;
-            display: block;
-            filter: grayscale(100%);
-            opacity: 0.1;
-            transition: all 0.3s ease;
-            margin: 0 auto;
-            &:hover {
-              filter: grayscale(0);
-              opacity:1;
-            }
-          }
-          &.logotype {
-            height: auto;
-            width: 100%;
-            display: block;
-            filter: grayscale(100%);
-            opacity: 0.1;
-            transition: all 0.3s ease;
-            margin: 0 auto;
-            &:hover {
-              filter: grayscale(0);
-              opacity:1;
-            }
-          }
-		    }
-      }
-      .footer-info {
-
-      }
-      .footer-menu {
-        nav {
-          &.menu {
-            ul {
-              &.menu {
-                li.item, li.menu-item {
-                  display: block;
-                  padding: 0;
-                  a {
-                    display: block;
-                    margin: 0;
-                    color: var(--false-black);
-                    line-height: 1;
-                    &:hover {
-                      color: var(--link-color);
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-	    }
-    }
 
   }
 }

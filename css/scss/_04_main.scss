@@ -647,5 +647,40 @@ body {
       padding-bottom: calc( var(--margin) + var(--margin) + ( var(--padding) * 0.5 ) + 48px );
     }
 
+    // footer
+    footer#footer {
+      .footer-logo {
+        img.logo {
+          &.emblem {
+            width: 66.666666%;
+            height: auto;
+            display: block;
+            filter: grayscale(100%);
+            opacity: 0.1;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            &:hover {
+              filter: grayscale(0);
+              opacity:1;
+            }
+          }
+          &.logotype {
+            height: auto;
+            width: 100%;
+            display: block;
+            filter: grayscale(100%);
+            opacity: 0.1;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            &:hover {
+              filter: grayscale(0);
+              opacity:1;
+            }
+          }
+        }
+      }
+    }
+    
+
   }
 }
