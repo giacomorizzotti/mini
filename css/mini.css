@@ -2892,153 +2892,7 @@ body.mini form textarea {
 body.mini .space-bot-action {
   padding-bottom: calc(var(--margin) + var(--margin) + var(--padding) * 0.5 + 48px);
 }
-body.mini #actions {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9;
-  padding: var(--padding) calc(var(--padding) * 1) 0 calc(var(--padding) * 1);
-  background-color: var(--white);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-}
-@media (min-width: 576px) {
-  body.mini #actions {
-    background: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-}
-body.mini #actions ul.action-groups {
-  display: flex;
-  flex-flow: row wrap;
-}
-body.mini #actions ul.action-groups li.action-group {
-  margin: 0 var(--margin) var(--margin) 0;
-}
-body.mini #actions ul.action-groups li.action-group > a {
-  position: relative;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  margin: 0;
-  color: var(--white);
-  border-color: var(--link-hover-color);
-  background: var(--link-hover-color);
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
-  font-size: calc(var(--p) * 1.25);
-  -webkit-border-radius: 3rem;
-  -moz-border-radius: 3rem;
-  border-radius: 3rem;
-}
-body.mini #actions ul.action-groups li.action-group > a:hover, body.mini #actions ul.action-groups li.action-group > a.active {
-  background-color: var(--link-hover-color);
-}
-body.mini #actions ul.action-groups li.action-group > a .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: var(--link-color);
-  color: var(--white);
-  font-size: calc(var(--p) * 1.75);
-  line-height: 1;
-  height: 8vw;
-  max-height: 48px;
-  width: 8vw;
-  max-width: 48px;
-  padding: 0;
-  margin: 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-@media (min-width: 576px) {
-  body.mini #actions ul.action-groups li.action-group > a .icon {
-    padding: calc(var(--padding) * 1);
-  }
-}
-body.mini #actions ul.action-groups li.action-group > a .label {
-  display: none;
-  margin: 0 var(--margin);
-  position: absolute;
-  width: auto;
-  white-space: nowrap;
-  z-index: 10;
-  top: 30%;
-  left: 70%;
-  transform: translate(0, -100%);
-  margin: 0;
-  background-color: var(--link-hover-color);
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1);
-  -webkit-border-radius: 10px;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-radius: 10px;
-  -moz-border-radius-bottomleft: 0;
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border: 2px solid;
-  border-color: var(--link-color);
-}
-body.mini #actions ul.action-groups li.action-group ul.actions {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(0, -100%);
-  width: 100%;
-  padding: calc(var(--padding) * 0.5) var(--padding);
-  display: flex;
-  flex-flow: column;
-  align-items: start;
-}
-@media (min-width: 576px) {
-  body.mini #actions ul.action-groups li.action-group ul.actions {
-    padding: 0 var(--padding);
-  }
-}
-body.mini #actions ul.action-groups li.action-group ul.actions li.action > a {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  background: rgb(255, 255, 255);
-  margin: 0;
-  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
-  -webkit-border-radius: calc(40px + var(--padding) * 0.5);
-  -moz-border-radius: calc(40px + var(--padding) * 0.5);
-  border-radius: calc(40px + var(--padding) * 0.5);
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-}
-body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: var(--link-color);
-  color: var(--white);
-  font-size: calc(var(--p) * 1.25);
-  line-height: 1;
-  height: 8vw;
-  max-height: 48px;
-  width: 8vw;
-  max-width: 48px;
-  padding: calc(var(--padding) * 0);
-  margin: 0 var(--margin) 0 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon:hover, body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon.active {
-  background-color: var(--link-hover-color);
-}
-@media (min-width: 576px) {
-  body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
-    font-size: calc(var(--p) * 1.5);
-    padding: calc(var(--padding) * 1);
-  }
-}
+
 /* COLORS */
 body.mini {
   /* borders */
@@ -8335,7 +8189,157 @@ body.mini ul li.drop-down:hover ul.drop-down, body.mini ul li.drop-down:hover ul
   padding: var(--padding) calc(var(--padding) * 1.5);
   min-width: 220px;
 }
+body.mini #actions {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  padding: var(--padding) calc(var(--padding) * 1) 0 calc(var(--padding) * 1);
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 576px) {
+  body.mini #actions {
+    background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+body.mini #actions ul.action-groups {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+}
+body.mini #actions ul.action-groups li.action-group {
+  margin: 0 var(--margin) var(--margin) 0;
+}
+body.mini #actions ul.action-groups li.action-group > a {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 0;
+  color: var(--white);
+  border-color: var(--link-hover-color);
+  background: var(--link-hover-color);
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
+  font-size: calc(var(--p) * 1.25);
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  border-radius: 3rem;
+}
+body.mini #actions ul.action-groups li.action-group > a:hover, body.mini #actions ul.action-groups li.action-group > a.active {
+  background-color: var(--link-hover-color);
+}
+body.mini #actions ul.action-groups li.action-group > a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--link-color);
+  color: var(--white);
+  font-size: calc(var(--p) * 1.75);
+  line-height: 1;
+  height: 8vw;
+  max-height: 48px;
+  width: 8vw;
+  max-width: 48px;
+  padding: 0;
+  margin: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+@media (min-width: 576px) {
+  body.mini #actions ul.action-groups li.action-group > a .icon {
+    padding: calc(var(--padding) * 1);
+  }
+}
+body.mini #actions ul.action-groups li.action-group > a .label {
+  display: none;
+  margin: 0 var(--margin);
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  z-index: 10;
+  top: 30%;
+  left: 70%;
+  transform: translate(0, -100%);
+  margin: 0;
+  background-color: var(--link-hover-color);
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1);
+  -webkit-border-radius: 10px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: 10px;
+  -moz-border-radius-bottomleft: 0;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border: 2px solid;
+  border-color: var(--link-color);
+}
+body.mini #actions ul.action-groups li.action-group ul.actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100%);
+  width: 100%;
+  height: auto;
+  padding: calc(var(--padding) * 0.5) var(--padding);
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+}
+@media (min-width: 576px) {
+  body.mini #actions ul.action-groups li.action-group ul.actions {
+    padding: 0 var(--padding);
+  }
+}
+body.mini #actions ul.action-groups li.action-group ul.actions li.action > a {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  margin: 0;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
+  -webkit-border-radius: calc(40px + var(--padding) * 0.5);
+  -moz-border-radius: calc(40px + var(--padding) * 0.5);
+  border-radius: calc(40px + var(--padding) * 0.5);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--link-color);
+  color: var(--white);
+  font-size: calc(var(--p) * 1.25);
+  line-height: 1;
+  height: 8vw;
+  max-height: 48px;
+  width: 8vw;
+  max-width: 48px;
+  padding: calc(var(--padding) * 0);
+  margin: 0 var(--margin) 0 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon:hover, body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon.active {
+  background-color: var(--link-hover-color);
+}
+@media (min-width: 576px) {
+  body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
+    font-size: calc(var(--p) * 1.5);
+    padding: calc(var(--padding) * 1);
+  }
+}
 body.mini ul.menu {
+  list-style-type: none;
   display: block;
   margin: 0;
   height: 100%;
