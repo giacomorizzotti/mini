@@ -8438,7 +8438,6 @@ body.mini ul.menu li.item a::after, body.mini ul.menu li.menu-item a::after {
 body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item.selected a, body.mini ul.menu li.item a.active, a.selected body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item.selected a, body.mini ul.menu li.menu-item a.active, a.selected body.mini ul.menu li.menu-item:hover a {
   background: var(--link-color);
   color: var(--white);
-  display: block;
 }
 @media (min-width: 768px) {
   body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item.selected a, body.mini ul.menu li.item a.active, a.selected body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item.selected a, body.mini ul.menu li.menu-item a.active, a.selected body.mini ul.menu li.menu-item:hover a {
@@ -8481,92 +8480,6 @@ body.mini ul#lang-menu {
   flex-flow: row wrap;
 }
 /* SLIDER */
-body.mini {
-  /*
-
-  @mixin clearfix {
-    &:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-  }
-
-  &.spaceForMenu, &.spaceForHeader, &.space-for-menu, &.space-for-header, .spaceForMenu, .spaceForHeader, .space-for-menu, .space-for-header {
-    .slides {
-      margin-top: calc( ( (var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2) ) * -1 )!Important;
-    }
-  }
-
-  .slides {
-    overflow: hidden;
-    .controlBtns {
-      position: absolute;
-      right: calc( var(--margin) * 2 );
-      top: 50%;
-      transform: translate(0, -50%);
-      z-index: 9;
-      a {
-        &.controlBtn {
-          display: block;
-          width: calc( var(--baseline) * 3 );
-          height: calc( var(--baseline) * 3 );
-          line-height: calc( var(--baseline) * 3 );
-          text-align: center;
-          font-size: calc( var(--p) * 1.5 );
-          @include borderRadius(50%);
-          color: var(--white);
-          margin: calc( var(--margin) * 1 ) 0;
-          &.goToNext {
-
-          }
-        }
-      }
-    }
-    .slide {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index:0;
-      transition: transform 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-      overflow: hidden;
-
-      &.active {
-        //position: relative;
-        transform: translate(0%, 0);
-        z-index:2;
-      }
-
-      &.prev {
-        transform: translate(-100%, 0);
-        z-index: 1;
-      }
-
-      &.next {
-        transform: translate(100%, 0);
-        z-index: 1;
-      }
-
-      &.ready {
-        z-index:2;
-      }
-
-      &.active, &.ready {
-        opacity: 1;
-        visibility: visible;
-      }
-
-    }
-
-  }
-
-  */
-}
-
 /* GDPR */
 body.mini.lock {
   height: 100% !important;
