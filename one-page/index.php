@@ -82,13 +82,13 @@
     <header id="header" class="header">
         <div class="container">
             <div class="boxes align-items-center justify-content-between">
-                <div class="box brand">
+                <div class="box brand px-2">
                     <a href="#top" class="">
                         <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem me-1" alt="emblem"/>
                     </a>
                     <a href="#top" class=""><h3 class="site-title">mini</h3></a>
                 </div>
-                <div class="box menus">
+                <div class="box menus px-2">
                     <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
                     <div id="head-menu" class="head-menu">
                         <nav class="menu page-menu">
@@ -105,7 +105,7 @@
 
         <sidebar id="side-menu" class="">
             <nav class="menu main-menu">
-                <ul id="main-menu" class="menu main-menu">
+                <ul id="main-menu" class="menu main-menu px-2">
                     <li class="menu-item active"><a href="/" class="active">home</a></li>
                     <li class="menu-item"><a href="#">Item_1</a></li>
                     <li class="menu-item"><a href="#">Item_2</a></li>
@@ -113,7 +113,7 @@
                 </ul>
             </nav>
             <nav class="menu user-menu">
-                <ul id="user-menu" class="menu user-menu">
+                <ul id="user-menu" class="menu user-menu px-2">
                     <li class="menu-item active"><a href="#">Item_1</a></li>
                     <li class="menu-item"><a href="#">Item_2</a></li>
                     <li class="menu-item"><a href="#">Item_3</a></li>
@@ -145,16 +145,16 @@
     <footer id="footer" class="footer">
         <div class="container space-top-bot">
             <div class="boxes">
-                <div class="box box-33 footer-info">
+                <div class="box box-33 footer-info px-2">
                     <p class=""><?php echo date("Y"); ?>&nbsp;©&nbsp;<span class="bold">uwa.agency</span></p>
                     <p class="s">A <a href="https://mini.uwa.agency/" target="_blank" class="mini-text"><i>mini</i></a> based website by <a href="https://www.uwa.agency/" target="_blank" class="mini-text"><strong>UWA</strong></a></p>
                 </div>
-                <div class="box box-33 footer-logo">
+                <div class="box box-33 footer-logo px-2">
                     <a href="#top" class=""><img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem" alt="emblem"/></a>
                 </div>
-                <div class="box box-33 footer-menu">
+                <div class="box box-33 footer-menu px-2">
                     <nav class="menu footer-menu">
-                        <ul id="footer-menu" class="menu footer-menu">
+                        <ul id="footer-menu" class="menu footer-menu p-0">
                             <li class="item active">
                                 <a href="#" class="active">Item_1</a>
                             </li>
