@@ -30,9 +30,9 @@
     <link rel="apple-touch-icon" href="favicon.ico">
 
     <?php ### CDN ### ?>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css">
+    <?php /* <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css"> */ ?>
     <?php ### LOCAL ### ?>
-    <?php /* <link rel="stylesheet" type="text/css" href="css/mini.min.css"> */ ?>
+    <link rel="stylesheet" type="text/css" href="../css/mini.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,9 +107,16 @@
             <nav class="menu main-menu">
                 <ul id="main-menu" class="menu main-menu">
                     <li class="menu-item active"><a href="/" class="active">home</a></li>
-                    <li class="menu-item"><a href="/structure">test</a></li>
-                    <li class="menu-item"><a href="/palette">test</a></li>
-                    <li class="menu-item"><a href="/typography">test</a></li>
+                    <li class="menu-item"><a href="#">Item_1</a></li>
+                    <li class="menu-item"><a href="#">Item_2</a></li>
+                    <li class="menu-item"><a href="#">Item_3</a></li>
+                </ul>
+            </nav>
+            <nav class="menu user-menu">
+                <ul id="user-menu" class="menu user-menu">
+                    <li class="menu-item active"><a href="#">Item_1</a></li>
+                    <li class="menu-item"><a href="#">Item_2</a></li>
+                    <li class="menu-item"><a href="#">Item_3</a></li>
                 </ul>
             </nav>
         </sidebar>
@@ -127,6 +134,9 @@
                     </div>
                 </div>
             </section>
+            
+            <section id="test_1" class="container fw page-menu" menuItemName="Test_section_1"></section>
+            <section id="test_2" class="container fw page-menu" menuItemName="Test_section_2"></section>
 
         </main>
 
@@ -146,16 +156,16 @@
                     <nav class="menu footer-menu">
                         <ul id="footer-menu" class="menu footer-menu">
                             <li class="item active">
-                                <a href="#" class="active">Footer link 1</a>
+                                <a href="#" class="active">Item_1</a>
                             </li>
                             <li class="item">
-                                <a href="#">Footer link 2</a>
+                                <a href="#">Item_1</a>
                             </li>
                             <li class="item">
-                                <a href="#">Footer link 3</a>
+                                <a href="#">Item_3</a>
                             </li>
                             <li class="item">
-                                <a href="#">Footer link 4</a>
+                                <a href="#">Item_4</a>
                             </li>
                         </ul>
                     </nav>
@@ -180,9 +190,9 @@
     </div>
 
     <?php ### CDN ### ?>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>
+    <?php /* <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script> */ ?>
     <?php ### LOCAL ### ?>
-    <?php /* <script type="text/javascript" src="js/mini.js"></script> */ ?>
+    <script type="text/javascript" src="../js/mini.js"></script>
 
     <?php ### AOS ### ?>
     <?php /* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */ ?>
