@@ -243,7 +243,8 @@ body {
         }
       }
       .sheet {
-        padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0 ;
+        //padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0 ;
+        padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) 0 ;
           
         main {
           -webkit-border-top-right-radius: 15px;

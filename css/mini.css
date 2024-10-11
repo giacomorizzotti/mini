@@ -8063,7 +8063,7 @@ body.mini.menu-open header#header .brand .site-title {
   color: var(--white);
 }
 body.mini.menu-open .sheet {
-  padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0;
+  padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) 0;
 }
 body.mini.menu-open .sheet main {
   -webkit-border-top-right-radius: 15px;
