@@ -498,7 +498,7 @@ function imageCover(target = '.media-cover') {
 }
 
 // CLICKED/TO-CLICK FUNCTION TO ELEMENTS
-// Toggle "cliced" and "to-click" classes from a target element
+// Toggle "clicked" and "to-click" classes from a target element
 window.addEventListener('load', function() {
 
     let btn = document.querySelectorAll(".click");
@@ -548,6 +548,7 @@ window.addEventListener('load', function() {
         let icon = document.createElement("li");
         icon.classList.add("item");
         icon.classList.add("menu-icon");
+        icon.setAttribute('title', "In this page")
         icon.innerHTML = '<i class="fa fa-file-text-o" aria-hidden="true"></i>';
         for (let i=0; i<autoMenu.length; i++) {
             autoMenu[0].appendChild(icon);
@@ -621,20 +622,6 @@ function makeItemActive() {
     }
 
 }
-
-// Close mobile menu after item click
-window.addEventListener('load', function() {
-    let autoMenuItems = document.getElementsByClassName('page-menu-item');
-    for (let i = 0; i < autoMenuItems.length; i++) {
-        let headMenu = document.getElementById('head-menu');
-        autoMenuItems[i].addEventListener('click', function () {
-            if (headMenu.classList.contains('open')) {
-                headMenu.classList.remove('open');
-                headMenu.classList.add('closed');
-            }
-        })
-    }
-})
 
 // menu toggle
 window.addEventListener('load', function() {

@@ -622,7 +622,7 @@ body {
             }
           }
         }
-        &.active a, &.current-menu-item a, a.active, &:hover a {
+        &.active a, &.current-menu-item a, &.selected a, a.active, a.selected &:hover a {
           background: var(--link-color);
           color: var(--white);
           display: block;

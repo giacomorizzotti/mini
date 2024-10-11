@@ -8435,23 +8435,23 @@ body.mini ul.menu li.item a::after, body.mini ul.menu li.menu-item a::after {
     background: var(--main-color);
   }
 }
-body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item a.active, body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item a.active, body.mini ul.menu li.menu-item:hover a {
+body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item.selected a, body.mini ul.menu li.item a.active, a.selected body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item.selected a, body.mini ul.menu li.menu-item a.active, a.selected body.mini ul.menu li.menu-item:hover a {
   background: var(--link-color);
   color: var(--white);
   display: block;
 }
 @media (min-width: 768px) {
-  body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item a.active, body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item a.active, body.mini ul.menu li.menu-item:hover a {
+  body.mini ul.menu li.item.active a, body.mini ul.menu li.item.current-menu-item a, body.mini ul.menu li.item.selected a, body.mini ul.menu li.item a.active, a.selected body.mini ul.menu li.item:hover a, body.mini ul.menu li.menu-item.active a, body.mini ul.menu li.menu-item.current-menu-item a, body.mini ul.menu li.menu-item.selected a, body.mini ul.menu li.menu-item a.active, a.selected body.mini ul.menu li.menu-item:hover a {
     color: var(--link-color);
     background: transparent;
   }
 }
-body.mini ul.menu li.item.active a::after, body.mini ul.menu li.item.current-menu-item a::after, body.mini ul.menu li.item a.active::after, body.mini ul.menu li.item:hover a::after, body.mini ul.menu li.menu-item.active a::after, body.mini ul.menu li.menu-item.current-menu-item a::after, body.mini ul.menu li.menu-item a.active::after, body.mini ul.menu li.menu-item:hover a::after {
+body.mini ul.menu li.item.active a::after, body.mini ul.menu li.item.current-menu-item a::after, body.mini ul.menu li.item.selected a::after, body.mini ul.menu li.item a.active::after, a.selected body.mini ul.menu li.item:hover a::after, body.mini ul.menu li.menu-item.active a::after, body.mini ul.menu li.menu-item.current-menu-item a::after, body.mini ul.menu li.menu-item.selected a::after, body.mini ul.menu li.menu-item a.active::after, a.selected body.mini ul.menu li.menu-item:hover a::after {
   width: 0;
   background: var(--link-color);
 }
 @media (min-width: 768px) {
-  body.mini ul.menu li.item.active a::after, body.mini ul.menu li.item.current-menu-item a::after, body.mini ul.menu li.item a.active::after, body.mini ul.menu li.item:hover a::after, body.mini ul.menu li.menu-item.active a::after, body.mini ul.menu li.menu-item.current-menu-item a::after, body.mini ul.menu li.menu-item a.active::after, body.mini ul.menu li.menu-item:hover a::after {
+  body.mini ul.menu li.item.active a::after, body.mini ul.menu li.item.current-menu-item a::after, body.mini ul.menu li.item.selected a::after, body.mini ul.menu li.item a.active::after, a.selected body.mini ul.menu li.item:hover a::after, body.mini ul.menu li.menu-item.active a::after, body.mini ul.menu li.menu-item.current-menu-item a::after, body.mini ul.menu li.menu-item.selected a::after, body.mini ul.menu li.menu-item a.active::after, a.selected body.mini ul.menu li.menu-item:hover a::after {
     width: 100%;
     background: var(--link-color);
   }
