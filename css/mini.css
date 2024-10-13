@@ -81,8 +81,8 @@
   --font-serif: "Playfair Display", serif;
   --font-handwriting: "Edu VIC WA NT Beginner", serif;
   --font-mono: "Roboto Mono", monospace;
-  --font: --font-sans;
-  --title-font: --font-second;
+  --font: var(--font-sans);
+  --title-font: var(--font-second);
   --baseline: 0.625rem;
   --h1: 2rem;
   --h2: 1.5rem;
