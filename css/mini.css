@@ -77,11 +77,12 @@
   /* TYPO */
   /* variables */
   --font-sans: "Roboto", sans-serif;
+  --font-second: "Oswald", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-handwriting: "Edu VIC WA NT Beginner", serif;
   --font-mono: "Roboto Mono", monospace;
-  --font: "Roboto", sans-serif;
-  --font-two: "Playfair Display", serif;
+  --font: --font-sans;
+  --title-font: --font-second;
   --baseline: 0.625rem;
   --h1: 2rem;
   --h2: 1.5rem;
@@ -7145,13 +7146,13 @@ body.mini h1.handwriting, body.mini h1.text-serif, body.mini h2.handwriting, bod
 body.mini h1.mono, body.mini h1.text-mono, body.mini h2.mono, body.mini h2.text-mono, body.mini h3.mono, body.mini h3.text-mono, body.mini h4.mono, body.mini h4.text-mono, body.mini h5.mono, body.mini h5.text-mono, body.mini h6.mono, body.mini h6.text-mono, body.mini p.mono, body.mini p.text-mono, body.mini li.mono, body.mini li.text-mono, body.mini code.mono, body.mini code.text-mono, body.mini span.mono, body.mini span.text-mono, body.mini i.mono, body.mini i.text-mono, body.mini b.mono, body.mini b.text-mono, body.mini u.mono, body.mini u.text-mono, body.mini a.mono, body.mini a.text-mono, body.mini label.mono, body.mini label.text-mono {
   font-family: var(--font-mono);
 }
-body.mini h1.font-two, body.mini h1.text-second-font, body.mini h2.font-two, body.mini h2.text-second-font, body.mini h3.font-two, body.mini h3.text-second-font, body.mini h4.font-two, body.mini h4.text-second-font, body.mini h5.font-two, body.mini h5.text-second-font, body.mini h6.font-two, body.mini h6.text-second-font, body.mini p.font-two, body.mini p.text-second-font, body.mini li.font-two, body.mini li.text-second-font, body.mini code.font-two, body.mini code.text-second-font, body.mini span.font-two, body.mini span.text-second-font, body.mini i.font-two, body.mini i.text-second-font, body.mini b.font-two, body.mini b.text-second-font, body.mini u.font-two, body.mini u.text-second-font, body.mini a.font-two, body.mini a.text-second-font, body.mini label.font-two, body.mini label.text-second-font {
+body.mini h1.font-two, body.mini h1.font-titles, body.mini h1.font-title, body.mini h1.title, body.mini h1.text-second-font, body.mini h2.font-two, body.mini h2.font-titles, body.mini h2.font-title, body.mini h2.title, body.mini h2.text-second-font, body.mini h3.font-two, body.mini h3.font-titles, body.mini h3.font-title, body.mini h3.title, body.mini h3.text-second-font, body.mini h4.font-two, body.mini h4.font-titles, body.mini h4.font-title, body.mini h4.title, body.mini h4.text-second-font, body.mini h5.font-two, body.mini h5.font-titles, body.mini h5.font-title, body.mini h5.title, body.mini h5.text-second-font, body.mini h6.font-two, body.mini h6.font-titles, body.mini h6.font-title, body.mini h6.title, body.mini h6.text-second-font, body.mini p.font-two, body.mini p.font-titles, body.mini p.font-title, body.mini p.title, body.mini p.text-second-font, body.mini li.font-two, body.mini li.font-titles, body.mini li.font-title, body.mini li.title, body.mini li.text-second-font, body.mini code.font-two, body.mini code.font-titles, body.mini code.font-title, body.mini code.title, body.mini code.text-second-font, body.mini span.font-two, body.mini span.font-titles, body.mini span.font-title, body.mini span.title, body.mini span.text-second-font, body.mini i.font-two, body.mini i.font-titles, body.mini i.font-title, body.mini i.title, body.mini i.text-second-font, body.mini b.font-two, body.mini b.font-titles, body.mini b.font-title, body.mini b.title, body.mini b.text-second-font, body.mini u.font-two, body.mini u.font-titles, body.mini u.font-title, body.mini u.title, body.mini u.text-second-font, body.mini a.font-two, body.mini a.font-titles, body.mini a.font-title, body.mini a.title, body.mini a.text-second-font, body.mini label.font-two, body.mini label.font-titles, body.mini label.font-title, body.mini label.title, body.mini label.text-second-font {
   font-family: var(--font-two);
 }
 body.mini h1, body.mini h2, body.mini h3, body.mini h4, body.mini h5 {
   font-weight: 700;
   color: var(--false-black);
-  font-family: var(--font);
+  font-family: var(--title-font);
 }
 body.mini h1 {
   font-size: var(--h1);
@@ -8045,15 +8046,15 @@ body.mini .sheet main {
   flex: 100%;
   overflow: hidden;
 }
-body.mini .sheet sidebar#side-menu {
+body.mini .sheet aside#side-menu {
   transition: flex 0.2s ease-out;
   flex: 0;
   overflow: hidden;
 }
-body.mini .sheet sidebar#side-menu ul.menu {
+body.mini .sheet aside#side-menu ul.menu {
   margin-bottom: calc(var(--margin) * 1);
 }
-body.mini .sheet sidebar#side-menu ul.menu li.item a, body.mini .sheet sidebar#side-menu ul.menu li.menu-item a {
+body.mini .sheet aside#side-menu ul.menu li.item a, body.mini .sheet aside#side-menu ul.menu li.menu-item a {
   color: var(--white);
 }
 body.mini.menu-open header#header .brand img.logo {
@@ -8097,26 +8098,26 @@ body.mini.menu-open .sheet main {
     flex: 85%;
   }
 }
-body.mini.menu-open .sheet sidebar#side-menu {
+body.mini.menu-open .sheet aside#side-menu {
   flex: 100%;
 }
 @media (min-width: 576px) {
-  body.mini.menu-open .sheet sidebar#side-menu {
+  body.mini.menu-open .sheet aside#side-menu {
     flex: 33.333333%;
   }
 }
 @media (min-width: 768px) {
-  body.mini.menu-open .sheet sidebar#side-menu {
+  body.mini.menu-open .sheet aside#side-menu {
     flex: 25%;
   }
 }
 @media (min-width: 1200px) {
-  body.mini.menu-open .sheet sidebar#side-menu {
+  body.mini.menu-open .sheet aside#side-menu {
     flex: 20%;
   }
 }
 @media (min-width: 1920px) {
-  body.mini.menu-open .sheet sidebar#side-menu {
+  body.mini.menu-open .sheet aside#side-menu {
     flex: 15%;
   }
 }
@@ -8796,6 +8797,10 @@ body.mini #msg #errors.minified:hover, body.mini #msg #warnings.minified:hover {
     top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2);
     right: var(--margin);
   }
+}
+
+body.mini.admin-bar ù header#header {
+  top: 32px;
 }
 
 /* THE END */

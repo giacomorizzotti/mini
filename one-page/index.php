@@ -103,7 +103,7 @@
 
     <div class="sheet">
 
-        <sidebar id="side-menu" class="">
+        <aside id="side-menu" class="">
             <nav class="menu main-menu">
                 <ul id="main-menu" class="menu main-menu px-2">
                     <li class="menu-item active"><a href="/" class="active">home</a></li>
@@ -119,7 +119,7 @@
                     <li class="menu-item"><a href="#">Item_3</a></li>
                 </ul>
             </nav>
-        </sidebar>
+        </aside>
 
         <main>
 

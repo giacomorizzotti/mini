@@ -215,7 +215,7 @@ body {
         flex: 100%;
         overflow: hidden;
       }
-      sidebar#side-menu {
+      aside#side-menu {
         transition: flex 0.2s ease-out;
         flex: 0;
         overflow: hidden;
@@ -270,7 +270,7 @@ body {
             flex: 85%;
           }
         }
-        sidebar#side-menu {
+        aside#side-menu {
           flex: 100%;
           @include sm {
             flex: 33.333333%;

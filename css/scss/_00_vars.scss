@@ -108,12 +108,13 @@
   /* TYPO */
   /* variables */
   --font-sans: "Roboto", sans-serif;
+  --font-second: "Oswald", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-handwriting: "Edu VIC WA NT Beginner", serif;
   --font-mono: "Roboto Mono", monospace;
 
-  --font: "Roboto", sans-serif;
-  --font-two: "Playfair Display", serif;
+  --font: --font-sans;
+  --title-font: --font-second;
 
   --baseline: 0.625rem; // 10px
 

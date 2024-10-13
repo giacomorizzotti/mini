@@ -693,7 +693,6 @@ window.addEventListener('load', function() {
             var st = window.pageYOffset || document.documentElement.scrollTop;
             if (st > lastScrollTop) {
                 // downscroll code
-                console.log('down...');
                 if ( window.pageYOffset > 150 ) {
                     hideMenuVisibility();
                 }
