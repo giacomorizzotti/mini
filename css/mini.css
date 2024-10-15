@@ -7940,7 +7940,6 @@ body.mini header#header .boxes .box.brand {
 }
 body.mini header#header .boxes .box.brand a {
   display: inline-block;
-  height: 100%;
 }
 body.mini header#header .boxes .box.brand a .logo {
   transition: all 0.3s ease;
@@ -8402,7 +8401,6 @@ body.mini ul.menu li.item, body.mini ul.menu li.menu-item {
 body.mini ul.menu li.item a, body.mini ul.menu li.menu-item a {
   display: block;
   position: relative;
-  color: var(--white);
   padding: var(--padding);
   margin: calc(var(--margin) * 0.5) 0;
 }
@@ -8799,7 +8797,7 @@ body.mini #msg #errors.minified:hover, body.mini #msg #warnings.minified:hover {
   }
 }
 
-body.mini.admin-bar ù header#header {
+body.mini.admin-bar header#header {
   top: 32px;
 }
 /* THE END */

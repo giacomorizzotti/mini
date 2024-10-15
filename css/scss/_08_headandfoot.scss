@@ -56,8 +56,6 @@ body {
             height: calc( (var(--padding) * 2 ) + var(--logo-height) ); // EXPERIMENTAL
             a {
               display: inline-block;
-              height: 100%;
-              //vertical-align: middle;
               .logo {
                 transition: all 0.3s ease;
                 min-height: var(--logo-height);
@@ -593,7 +591,6 @@ body {
         a {
           display: block;
           position: relative;
-          color: var(--white);
           padding: var(--padding);
           margin: calc(var(--margin) * 0.5 ) 0;
           @include sm {
