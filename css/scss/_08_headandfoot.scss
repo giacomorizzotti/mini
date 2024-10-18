@@ -12,6 +12,7 @@ body {
       right: 0;
       left: 0;
       z-index: 99;
+      transition: background-color 0.2s ease-out;
     }
     &.top {
       header#header {
@@ -46,38 +47,34 @@ body {
 
     // branding
     header#header {
-      .boxes {
-        .box {
-          &.brand {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            min-height: calc( (var(--padding) * 2 ) + var(--logo-height) );
-            height: calc( (var(--padding) * 2 ) + var(--logo-height) ); // EXPERIMENTAL
-            a {
-              display: inline-block;
-              .logo {
-                transition: all 0.3s ease;
-                min-height: var(--logo-height);
-                height: var(--logo-height); // EXPERIMENTAL
-                width: auto;
-              }
-            }
-            .site-title {
-              display: inline-block;
-              padding: 0 var(--padding);
-              margin: 0 var(--margin) 0 0;
-              position: relative;
-              line-height: 1!important;
-            }
+      .brand {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        min-height: calc( (var(--padding) * 2 ) + var(--logo-height) );
+        height: calc( (var(--padding) * 2 ) + var(--logo-height) ); // EXPERIMENTAL
+        a {
+          display: inline-block;
+          .logo {
+            transition: all 0.3s ease;
+            min-height: var(--logo-height);
+            height: var(--logo-height); // EXPERIMENTAL
+            width: auto;
           }
+        }
+        .site-title {
+          display: inline-block;
+          padding: 0 var(--padding);
+          margin: 0 var(--margin) 0 0;
+          position: relative;
+          line-height: 1!important;
         }
       }
     }
     &.top {
       header#header {
         &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
-          &.brand {
+          .brand {
             color: var(--white);
             a {
               .logo {
@@ -85,7 +82,6 @@ body {
               }
               .site-title {
                 color: var(--white);
-                
               }
             }
           }
@@ -103,7 +99,7 @@ body {
           }
         }
         &.neg, &.inv, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
-          &.brand {
+          .brand {
             color: var(--white);
             a {
               .logo {
@@ -137,7 +133,9 @@ body {
     // menu toggle
     header#header {
       #menu-toggle {
-        display:block;
+        display:flex;
+        flex-flow: column;
+        justify-content: space-between;
         top: var(--margin);
         right: var(--margin);
         width: var(--menu-toggle-height);
@@ -147,21 +145,28 @@ body {
         margin: 0 0 0 0;
         z-index: 9;
         @include borderRadius(5px);
+        transition: width 0.2s ease-out, height 0.2s ease-out;
         cursor: pointer;
         .line {
           display: block;
-          height: calc( var(--menu-toggle-height) / 7);
+          height: calc( var(--menu-toggle-height) / 8);
           min-width: 100%;
           width: 100%;
           max-width: 100%;
-          margin: 0 0 calc( var(--menu-toggle-height) / 7) 0;
+          //margin: 0 0 calc( var(--menu-toggle-height) / 7) 0;
           //background: var(--white);
+          margin: 0;
           background: var(--menu-toggle-color);
+          @include borderRadius(5px);
+          transition: width 0.2s ease-out, height 0.2s ease-out;
         }
         &.clicked {
           .line {
             background: var(--white);
           }
+        }
+        &:hover {
+          
         }
       }
       &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
@@ -190,10 +195,12 @@ body {
         #menu-toggle {
           width: var(--scroll-menu-toggle-height);
           height: var(--scroll-menu-toggle-height);
+          //padding: calc( var(--scroll-menu-toggle-height) / 7 );
           padding: calc( var(--scroll-menu-toggle-height) / 7 );
           .line {
-            height: calc( var(--scroll-menu-toggle-height) / 7);
-            margin: 0 0 calc( var(--scroll-menu-toggle-height) / 7) 0;
+            //height: calc( var(--scroll-menu-toggle-height) / 7);
+            //margin: 0 0 calc( var(--scroll-menu-toggle-height) / 7) 0;
+            height: calc( var(--scroll-menu-toggle-height) / 8);
           }
         }
       }
@@ -227,6 +234,17 @@ body {
             }
           }
         }
+        &.inv, &.neg {
+          ul.menu {
+            li {
+              &.item, &.menu-item {
+                a {
+                  color: var(--false-black);
+                }
+              }
+            }
+          }
+        }
       }
     }
     &.menu-open {
@@ -242,7 +260,7 @@ body {
       }
       .sheet {
         //padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0 ;
-        padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) 0 ;
+        padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 1 ) 0 ;
           
         main {
           -webkit-border-top-right-radius: 15px;
@@ -320,27 +338,13 @@ body {
         }
       }
     }
-    &.top {
-      &.menu-open {
-        ul#page-menu {
-          li {
-            &.item, &.menu-item {
-              a {
-                color: var(--white);
-              }
-            }
-          }
-        }
-      }
-    }
-    &.scroll {
-      &.menu-open {
-        ul#page-menu {
-          li {
-            &.item, &.menu-item {
-              a {
-                color: var(--white);
-              }
+    &.top.menu-open, &.top header.neg, &.top header.inv, &.top header.top-neg, &.top header.top-inv, &.top header.top-bk, &.top header.top-col,
+    &.scroll.menu-open, &.scroll header.neg, &.scroll header.inv, &.scroll header.scroll-neg, &.scroll header.scroll-inv, &.scroll header.scroll-bk, &.scroll header.scroll-col {
+      ul#page-menu {
+        li {
+          &.item, &.menu-item {
+            a {
+              color: var(--white);
             }
           }
         }
@@ -576,7 +580,7 @@ body {
       li.item, li.menu-item {
         display: block;
         font-weight: 700;
-        font-size: var(--h3);
+        font-size: var(--h5);
         line-height: 1.5;
         margin:0;
         background: transparent;

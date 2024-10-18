@@ -18,8 +18,8 @@
   --scroll-logo-height: 1rem;
   
   // Menu height
-  --menu-toggle-height: 2.2rem;
-  --scroll-menu-toggle-height: 1.8rem;
+  --menu-toggle-height: 3rem;
+  --scroll-menu-toggle-height: 2.2rem;
 
   /* COLORS */
   /* variables */
@@ -33,60 +33,60 @@
   --white: rgb( 255 255 255 / 100% );
   --transp: rgb( 0 0 0 / 0% );
 
-  --main-color: rgb(60 90 255);
-  --main-color-dark: rgb(50 75 180);
+  --main-color: rgb( 60 90 255 / 100% );
+  --main-color-dark: rgb( 50 75 180 / 100% );
   
   --main-color-transp: rgb( 60 90 255 / 20% );
 
-  --second-color: rgb(50 75 180);
-  --second-color-dark: rgb(37 56 133);
+  --second-color: rgb( 50 75 180 / 100% );
+  --second-color-dark: rgb( 37 56 133 / 100% );
 
-  --third-color: rgb(60 30 99);
-  --third-color-dark: rgb(34 15 61);
+  --third-color: rgb( 60 30 99 / 100% );
+  --third-color-dark: rgb( 34 15 61 / 100% );
 
-  --fourth-color: rgb(220 230 0);
-  --fourth-color-dark: rgb(180 190 0);
+  --fourth-color: rgb( 220 230 0 / 100% );
+  --fourth-color-dark: rgb( 180 190 0 / 100% );
 
-  --link-color: rgb(60 185 225);
-  --link-hover-color: rgb(40 130 160);
+  --link-color: rgb(121 48 238 / 100% );
+  --link-hover-color: rgb(72 34 176 / 100% );
 
-  --info: rgb(113 202 189);
-  --success: rgb(160 220 110);
-  --warning: rgb(248 187 83);
-  --danger: rgb(255 111 97);
-  --bad: rgb(235 55 80);
+  --info: rgb( 113 202 189 / 100% );
+  --success: rgb( 160 220 110 / 100% );
+  --warning: rgb( 248 187 83 / 100% );
+  --danger: rgb( 255 111 97 / 100% );
+  --bad: rgb( 235 55 80 / 100% );
 
   --acid-green: #C2F261;
 
   --stars-color: rgba( 255 255 255 / 50%);
 
-  --gingerbread: rgb(84 73 75);
+  --gingerbread: rgb( 84 73 75 / 100%);
 
-  --pulse-color: rgb(60 90 255);
+  --pulse-color: rgb( 60 90 255 / 100%);
 
   --sheet-color: var(--false-black);
   --menu-toggle-color: var(--sheet-color);
 
   // mini
-  --mini-color: rgb(60 90 255);
-  --mini-color-dark: rgb(50 75 180);
-  --mini-second-color: rgb(50 75 180);
-  --mini-second-color-dark: rgb(37 56 133);
-  --mini-third-color: rgb(60 30 99);
-  --mini-third-color-dark: rgb(34 15 61);
-  --mini-fourth-color: rgb(220 230 0);
-  --mini-fourth-color-dark: rgb(180 190 0);
-  --mini-link-color: rgb(60 185 225);
-  --mini-link-hover-color: rgb(40 130 160);
+  --mini-color: rgb( 60 90 255 / 100% );
+  --mini-color-dark: rgb( 50 75 180 / 100% );
+  --mini-second-color: rgb( 50 75 180 / 100% );
+  --mini-second-color-dark: rgb( 37 56 133 / 100% );
+  --mini-third-color: rgb( 60 30 99 / 100% );
+  --mini-third-color-dark: rgb( 34 15 61 / 100% );
+  --mini-fourth-color: rgb( 220 230 0 / 100% );
+  --mini-fourth-color-dark: rgb( 180 190 0 / 100% );
+  --mini-link-color: rgb( 60 185 225 / 100% );
+  --mini-link-hover-color: rgb( 40 130 160 / 100% );
 
   // UWA
-  --uwa-color: rgb(60 90 255);
-  --uwa-color-dark: #324bb4;
-  --uwa-second-color: #3c1e63;
-  --uwa-third-color: #dce600;
-  --uwa-fourth-color: #3c5aff;
-  --uwa-link-color: #3c5aff;
-  --uwa-link-hover-color: #324bb4;
+  --uwa-color: rgb( 60 90 255 / 100% );
+  --uwa-color-dark: rgb( 50 75 180 / 100% );
+  --uwa-second-color: rgb( 60 30 99 / 100% );
+  --uwa-third-color: rgb( 218 230 0 / 100% );
+  --uwa-fourth-color: rgb( 60 90 255 / 100% );
+  --uwa-link-color: rgb( 121 48 238 / 100% );
+  --uwa-link-hover-color: rgb( 72 34 176 / 100% );
 
   // AROMA
   --aroma-color: rgb(208 33 73);
@@ -95,7 +95,7 @@
   // PEZZIDIPLA
   --pezzidipla-color: rgb( 240 220 100 / 100% );
   --pezzidipla-second-color: rgb( 60 0 60 / 100% );
-  --pezzidipla-third-color: rgb(100 190 150 / 100%);
+  --pezzidipla-third-color: rgb( 100 190 150 / 100%);
   --pezzidipla-fourth-color: rgb( 250 215 210 / 100% );
 
   // La nuova startup
@@ -103,7 +103,7 @@
   --lanuovastartup-color-dark: rgb( 190 60 95 / 100% );
 
   // DoingThings
-  --doingthings-color: rgb(209 255 82 / 100%);
+  --doingthings-color: rgb( 209 255 82 / 100% );
 
   /* TYPO */
   /* variables */
