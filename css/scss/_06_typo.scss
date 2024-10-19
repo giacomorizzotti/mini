@@ -305,19 +305,19 @@ body {
     /* LARGE TEXT */
     .L, .l {
       font-size: calc(var(--p) * 1.25)!important;
-      line-height: calc(var(--p) * 1.75)!important;
+      line-height: calc(var(--p) * 2.15)!important;
     }
 
     /* EXTRA LARGE TEXT */
     .XL, .xl {
       font-size: calc(var(--p) * 1.5)!important;
-      line-height: calc(var(--p) * 2)!important;
+      line-height: calc(var(--p) * 2.5)!important;
     }
 
     /* EXTRA EXTRA LARGE TEXT */
     .XXL, .xxl {
       font-size: calc(var(--p) * 2)!important;
-      line-height: calc(var(--p) * 2.5)!important;
+      line-height: calc(var(--p) * 2.75)!important;
     }
 
     /* GIANT TEXT */

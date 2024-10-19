@@ -7303,15 +7303,15 @@ body.mini .S, body.mini .s {
 }
 body.mini .L, body.mini .l {
   font-size: calc(var(--p) * 1.25) !important;
-  line-height: calc(var(--p) * 1.75) !important;
+  line-height: calc(var(--p) * 2.15) !important;
 }
 body.mini .XL, body.mini .xl {
   font-size: calc(var(--p) * 1.5) !important;
-  line-height: calc(var(--p) * 2) !important;
+  line-height: calc(var(--p) * 2.5) !important;
 }
 body.mini .XXL, body.mini .xxl {
   font-size: calc(var(--p) * 2) !important;
-  line-height: calc(var(--p) * 2.5) !important;
+  line-height: calc(var(--p) * 2.75) !important;
 }
 body.mini .big {
   font-size: calc(var(--h1) * 1) !important;
