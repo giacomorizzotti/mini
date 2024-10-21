@@ -381,6 +381,7 @@ body {
     }
 
       .text-shadow {
+        @include textShadow(3px, 0, rgb(0 0 0 / 15%));
         &-1 {
             @include textShadow(1px, 0, rgb(0 0 0 / 15%));
         }

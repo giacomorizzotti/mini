@@ -7365,6 +7365,9 @@ body.mini .under-bg, body.mini .underBg {
   background: linear-gradient(180deg, transparent 60%, var(--main-color-transp) 0);
   padding: 1px 6px;
 }
+body.mini .text-shadow {
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+}
 body.mini .text-shadow-1 {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
 }
@@ -7934,7 +7937,6 @@ body.mini header#header .brand {
   flex-flow: row wrap;
   align-items: center;
   min-height: calc(var(--padding) * 2 + var(--logo-height));
-  height: calc(var(--padding) * 2 + var(--logo-height));
 }
 body.mini header#header .brand a {
   display: inline-block;
@@ -7965,6 +7967,7 @@ body.mini.scroll header#header .brand {
   height: calc(var(--padding) * 2 + var(--scroll-logo-height));
 }
 body.mini.scroll header#header .brand a .logo {
+  min-height: var(--scroll-logo-height);
   height: var(--scroll-logo-height);
 }
 body.mini.scroll header#header.neg .brand, body.mini.scroll header#header.inv .brand, body.mini.scroll header#header.scroll-neg .brand, body.mini.scroll header#header.scroll-inv .brand, body.mini.scroll header#header.scroll-bk .brand, body.mini.scroll header#header.scroll-col .brand {

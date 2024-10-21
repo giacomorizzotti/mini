@@ -52,13 +52,13 @@ body {
         flex-flow: row wrap;
         align-items: center;
         min-height: calc( (var(--padding) * 2 ) + var(--logo-height) );
-        height: calc( (var(--padding) * 2 ) + var(--logo-height) ); // EXPERIMENTAL
+        //height: calc( (var(--padding) * 2 ) + var(--logo-height) ); // EXPERIMENTAL
         a {
           display: inline-block;
           .logo {
             transition: all 0.3s ease;
             min-height: var(--logo-height);
-            height: var(--logo-height); // EXPERIMENTAL
+            height: var(--logo-height);
             width: auto;
           }
         }
@@ -94,6 +94,7 @@ body {
           height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) );
           a {
             .logo {
+              min-height: var(--scroll-logo-height);
               height: var(--scroll-logo-height);
             }
           }
