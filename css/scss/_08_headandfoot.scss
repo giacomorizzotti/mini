@@ -84,6 +84,9 @@ body {
                 color: var(--white);
               }
             }
+            .site-description {
+              color: var(--white);
+            }
           }
         }
       }
@@ -91,7 +94,8 @@ body {
     &.scroll {
       header#header {
         .brand {
-          height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) );
+          //height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) );
+          min-height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) );
           a {
             .logo {
               min-height: var(--scroll-logo-height);
@@ -109,6 +113,9 @@ body {
               .site-title {
                 color: var(--white);
               }
+            }
+            .site-description {
+              color: var(--white);
             }
           }
         }
@@ -257,11 +264,14 @@ body {
           .site-title {
             color:var(--white);
           }
+          .site-description {
+            color: var(--white);
+          }
         }
       }
       .sheet {
         //padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0 ;
-        padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 1 ) 0 ;
+        padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2 ) 0 ;
           
         main {
           -webkit-border-top-right-radius: 15px;

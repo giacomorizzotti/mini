@@ -7963,8 +7963,11 @@ body.mini.top header#header.neg .brand a .logo, body.mini.top header#header.inv 
 body.mini.top header#header.neg .brand a .site-title, body.mini.top header#header.inv .brand a .site-title, body.mini.top header#header.top-neg .brand a .site-title, body.mini.top header#header.top-inv .brand a .site-title, body.mini.top header#header.top-bk .brand a .site-title, body.mini.top header#header.top-col .brand a .site-title {
   color: var(--white);
 }
+body.mini.top header#header.neg .brand .site-description, body.mini.top header#header.inv .brand .site-description, body.mini.top header#header.top-neg .brand .site-description, body.mini.top header#header.top-inv .brand .site-description, body.mini.top header#header.top-bk .brand .site-description, body.mini.top header#header.top-col .brand .site-description {
+  color: var(--white);
+}
 body.mini.scroll header#header .brand {
-  height: calc(var(--padding) * 2 + var(--scroll-logo-height));
+  min-height: calc(var(--padding) * 2 + var(--scroll-logo-height));
 }
 body.mini.scroll header#header .brand a .logo {
   min-height: var(--scroll-logo-height);
@@ -7977,6 +7980,9 @@ body.mini.scroll header#header.neg .brand a .logo, body.mini.scroll header#heade
   filter: brightness(0) invert(1);
 }
 body.mini.scroll header#header.neg .brand a .site-title, body.mini.scroll header#header.inv .brand a .site-title, body.mini.scroll header#header.scroll-neg .brand a .site-title, body.mini.scroll header#header.scroll-inv .brand a .site-title, body.mini.scroll header#header.scroll-bk .brand a .site-title, body.mini.scroll header#header.scroll-col .brand a .site-title {
+  color: var(--white);
+}
+body.mini.scroll header#header.neg .brand .site-description, body.mini.scroll header#header.inv .brand .site-description, body.mini.scroll header#header.scroll-neg .brand .site-description, body.mini.scroll header#header.scroll-inv .brand .site-description, body.mini.scroll header#header.scroll-bk .brand .site-description, body.mini.scroll header#header.scroll-col .brand .site-description {
   color: var(--white);
 }
 body.mini header#header .menus {
@@ -8072,8 +8078,11 @@ body.mini.menu-open header#header .brand img.logo {
 body.mini.menu-open header#header .brand .site-title {
   color: var(--white);
 }
+body.mini.menu-open header#header .brand .site-description {
+  color: var(--white);
+}
 body.mini.menu-open .sheet {
-  padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 1) 0;
+  padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0;
 }
 body.mini.menu-open .sheet main {
   -webkit-border-top-right-radius: 15px;
