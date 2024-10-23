@@ -36,8 +36,8 @@
     {% if favicon is not False %}<link rel="apple-touch-icon" href="{% static 'favicon.ico' %}">{% endif %}
 
     {% block mini_header_css %}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css">
-    {% comment %}<link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">{% endcomment %}
+    {% comment %}<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css">{% endcomment %}  
+    <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">
     {% endblock %}
     
     {% block header_css %}
@@ -159,7 +159,7 @@
 
     <div class="sheet">
 
-        <aside id="side-menu" class="">
+        <aside id="side-right" class="">
             {% block main_nav %}
             <nav class="menu main-menu">
                 <ul id="main-menu" class="menu main-menu">
@@ -197,6 +197,8 @@
             {% block aroma_cart_nav %}{% endblock %}
 
         </aside>
+
+        <aside id="side-left" class="">{% block admin_nav %}{% endblock %}</aside>
 
         <main class="fh {{ main_classes }}">
             
@@ -336,8 +338,8 @@
     {% endif %}
 
     {% block mini_footer_js %}
-    {% comment %}<script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>{% endcomment %}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>
+    <script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>
+    {% comment %}<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>{% endcomment %}
     {% endblock %}
 
     {% block bottom_js %}

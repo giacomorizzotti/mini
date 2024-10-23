@@ -626,24 +626,39 @@ function makeItemActive() {
 // menu toggle
 window.addEventListener('load', function() {
 
-    if (document.getElementById('side-menu') != null && document.getElementById('side-menu') != null ) {
+    if (document.getElementById('side-right') != null && document.getElementById('side-right') != null ) {
 
         var body = document.body
         var menuToggle = document.getElementById('menu-toggle');
-        var sideMenu = document.getElementById('side-menu');
-        var mainMenuItem = document.querySelectorAll('#side-menu > nav.menu > ul.menu > li.menu-item > a');
+        var sideRight = document.getElementById('side-right');
+        var sideLeft = document.getElementById('side-left');
+        var mainMenuItem = document.querySelectorAll('#side-right > nav.menu > ul.menu > li.menu-item > a');
     
-        sideMenu.classList.add('closed');
+        if(sideRight)
+            sideRight.classList.add('closed');
+        if(sideLeft)
+            sideLeft.classList.add('closed');
         menuToggle.classList.add('to-click');
     
         function toggleMenuVisibility() {
             window.scrollTo(0, 0);
-            if (sideMenu.classList.contains("closed")) {
-                sideMenu.classList.add("open");
-                sideMenu.classList.remove("closed");
-            } else if (sideMenu.classList.contains("open")) {
-                sideMenu.classList.add("closed");
-                sideMenu.classList.remove("open");
+            if (sideRight) {
+                if (sideRight.classList.contains("closed")) {
+                    sideRight.classList.add("open");
+                    sideRight.classList.remove("closed");
+                } else if (sideRight.classList.contains("open")) {
+                    sideRight.classList.add("closed");
+                    sideRight.classList.remove("open");
+                }
+            }
+            if (sideLeft && sideLeft.children.length > 0) {
+                if (sideLeft.classList.contains("closed")) {
+                    sideLeft.classList.add("open");
+                    sideLeft.classList.remove("closed");
+                } else if (sideLeft.classList.contains("open")) {
+                    sideLeft.classList.add("closed");
+                    sideLeft.classList.remove("open");
+                }
             }
             if (!body.classList.contains("menu-open")) {
                 body.classList.add("menu-open");
@@ -660,9 +675,17 @@ window.addEventListener('load', function() {
         }
     
         function hideMenuVisibility() {
-            if (sideMenu.classList.contains("open")) {
-                sideMenu.classList.add("closed");
-                sideMenu.classList.remove("open");
+            if (sideRight) {
+                if (sideRight.classList.contains("open")) {
+                    sideRight.classList.add("closed");
+                    sideRight.classList.remove("open");
+                }
+            }
+            if (sideLeft && sideLeft.children.length > 0) {
+                if (sideLeft.classList.contains("open")) {
+                    sideLeft.classList.add("closed");
+                    sideLeft.classList.remove("open");
+                }
             }
             if (body.classList.contains("menu-open")) {
                 body.classList.remove("menu-open");
@@ -691,7 +714,7 @@ window.addEventListener('load', function() {
         var lastScrollTop = 0;
         window.addEventListener('scroll', function() {
             var st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop) {
+            if (st > lastScrollTop && window.mobileCheck() == false ) {
                 // downscroll code
                 if ( window.pageYOffset > 150 ) {
                     hideMenuVisibility();

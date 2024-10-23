@@ -103,7 +103,9 @@
 
     <div class="sheet">
 
-        <aside id="side-menu" class="">
+        <aside id="side-left" class=""></aside>
+
+        <aside id="side-right" class="">
             <nav class="menu main-menu">
                 <ul id="main-menu" class="menu main-menu px-2">
                     <li class="menu-item active"><a href="/" class="active">home</a></li>

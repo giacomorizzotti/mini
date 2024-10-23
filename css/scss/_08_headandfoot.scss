@@ -217,20 +217,24 @@ body {
     // menu-open
     .sheet {
       display: flex;
-      flex-flow: row-reverse wrap;
-      justify-content: flex-end;
-      align-items: flex-start;
+      flex-flow: column wrap;
+      align-items: stretch;
+      @include lg {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
       background: var(--sheet-color);
       transition: padding 0.2s ease-out;
       main {
         background: var(--white);
         transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
-        flex: 100%;
+        flex: 10;
         overflow: hidden;
       }
-      aside#side-menu {
+      aside#side-right, aside#side-left {
         transition: flex 0.2s ease-out;
-        flex: 0;
+        flex: 0 0 0;
         overflow: hidden;
         ul.menu {
           margin-bottom: calc( var(--margin) * 1 );
@@ -252,6 +256,18 @@ body {
               }
             }
           }
+        }
+      }
+      aside#side-right {
+        order: 2;
+        @include lg {
+          order: 3;
+        }
+      }
+      aside#side-left {
+        order: 1;
+        @include lg {
+          order: 1;
         }
       }
     }
@@ -294,36 +310,34 @@ body {
           -moz-border-radius-bottomright: 15px;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
+          -webkit-border-top-left-radius: 15px;
+          -webkit-border-bottom-left-radius: 15px;
+          -moz-border-radius-topleft: 15px;
+          -moz-border-radius-bottomleft: 15px;
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
           -webkit-box-shadow: 0 0 10px 10px rgba(0 0 0 / 10%);
           -moz-box-shadow: 0 0 10px 10px rgba(0 0 0 / 10%);
           box-shadow: 0 0 10px 10px rgba(0 0 0 / 10%);
-          flex: 100%;
-          @include sm {
-            flex: 66.666666%;
-          }
-          @include md {
-            flex: 75%;
-          }
-          @include xl {
-            flex: 80%;
-          }
-          @include xxl {
-            flex: 85%;
+          flex: 10;
+          order: 3;
+          @include lg {
+            order: 2;
           }
         }
-        aside#side-menu {
-          flex: 100%;
+        aside#side-right.open, aside#side-left.open {
+          flex: 10;
           @include sm {
-            flex: 33.333333%;
+            flex: 3;
           }
           @include md {
-            flex: 25%;
+            flex: 2.5;
           }
           @include xl {
-            flex: 20%;
+            flex: 2;
           }
           @include xxl {
-            flex: 15%;
+            flex: 1.5;
           }
         }
       }
@@ -720,6 +734,24 @@ body {
       }
     }
 
+    // admin menu
+    ul#admin-menu {
+      padding: var(--padding);
+      background: var(--mini-color);
+      li.item, li.menu-item {
+        a {
+          &::after {
+          }
+        }
+        &.active a, &.current-menu-item a, a.active, &:hover a {
+          background: var(--mini-color-dark);
+          &::after {
+            background: var(--white);
+          }
+        }
+      }
+    }
+
     // user menu
     ul#user-menu {
       li.item, li.menu-item {
@@ -753,6 +785,7 @@ body {
     ul#lang-menu {
       flex-flow: row wrap;
       li.item, li.menu-item {
+        display: inline-block;
         a {
           &::after {
           }

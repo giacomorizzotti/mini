@@ -8095,31 +8095,53 @@ body.mini.scroll header#header #menu-toggle .line {
 }
 body.mini .sheet {
   display: flex;
-  flex-flow: row-reverse wrap;
-  justify-content: flex-end;
-  align-items: flex-start;
+  flex-flow: column wrap;
+  align-items: stretch;
   background: var(--sheet-color);
   transition: padding 0.2s ease-out;
+}
+@media (min-width: 992px) {
+  body.mini .sheet {
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
 }
 body.mini .sheet main {
   background: var(--white);
   transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
-  flex: 100%;
+  flex: 10;
   overflow: hidden;
 }
-body.mini .sheet aside#side-menu {
+body.mini .sheet aside#side-right, body.mini .sheet aside#side-left {
   transition: flex 0.2s ease-out;
-  flex: 0;
+  flex: 0 0 0;
   overflow: hidden;
 }
-body.mini .sheet aside#side-menu ul.menu {
+body.mini .sheet aside#side-right ul.menu, body.mini .sheet aside#side-left ul.menu {
   margin-bottom: calc(var(--margin) * 1);
 }
-body.mini .sheet aside#side-menu ul.menu li.item a, body.mini .sheet aside#side-menu ul.menu li.menu-item a {
+body.mini .sheet aside#side-right ul.menu li.item a, body.mini .sheet aside#side-right ul.menu li.menu-item a, body.mini .sheet aside#side-left ul.menu li.item a, body.mini .sheet aside#side-left ul.menu li.menu-item a {
   color: var(--white);
 }
-body.mini .sheet aside#side-menu.inv ul.menu li.item a, body.mini .sheet aside#side-menu.inv ul.menu li.menu-item a, body.mini .sheet aside#side-menu.neg ul.menu li.item a, body.mini .sheet aside#side-menu.neg ul.menu li.menu-item a {
+body.mini .sheet aside#side-right.inv ul.menu li.item a, body.mini .sheet aside#side-right.inv ul.menu li.menu-item a, body.mini .sheet aside#side-right.neg ul.menu li.item a, body.mini .sheet aside#side-right.neg ul.menu li.menu-item a, body.mini .sheet aside#side-left.inv ul.menu li.item a, body.mini .sheet aside#side-left.inv ul.menu li.menu-item a, body.mini .sheet aside#side-left.neg ul.menu li.item a, body.mini .sheet aside#side-left.neg ul.menu li.menu-item a {
   color: var(--false-black);
+}
+body.mini .sheet aside#side-right {
+  order: 2;
+}
+@media (min-width: 992px) {
+  body.mini .sheet aside#side-right {
+    order: 3;
+  }
+}
+body.mini .sheet aside#side-left {
+  order: 1;
+}
+@media (min-width: 992px) {
+  body.mini .sheet aside#side-left {
+    order: 1;
+  }
 }
 body.mini.menu-open header#header.neg, body.mini.menu-open header#header.inv, body.mini.menu-open header#header.top-neg, body.mini.menu-open header#header.top-inv, body.mini.menu-open header#header.top-bk, body.mini.menu-open header#header.top-col, body.mini.menu-open header#header.scroll-neg, body.mini.menu-open header#header.scroll-inv, body.mini.menu-open header#header.scroll-bk, body.mini.menu-open header#header.scroll-col {
   background: var(--transp);
@@ -8152,52 +8174,44 @@ body.mini.menu-open .sheet main {
   -moz-border-radius-bottomright: 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
-  flex: 100%;
+  flex: 10;
+  order: 3;
+}
+@media (min-width: 992px) {
+  body.mini.menu-open .sheet main {
+    order: 2;
+  }
+}
+body.mini.menu-open .sheet aside#side-right.open, body.mini.menu-open .sheet aside#side-left.open {
+  flex: 10;
 }
 @media (min-width: 576px) {
-  body.mini.menu-open .sheet main {
-    flex: 66.666666%;
+  body.mini.menu-open .sheet aside#side-right.open, body.mini.menu-open .sheet aside#side-left.open {
+    flex: 3;
   }
 }
 @media (min-width: 768px) {
-  body.mini.menu-open .sheet main {
-    flex: 75%;
+  body.mini.menu-open .sheet aside#side-right.open, body.mini.menu-open .sheet aside#side-left.open {
+    flex: 2.5;
   }
 }
 @media (min-width: 1200px) {
-  body.mini.menu-open .sheet main {
-    flex: 80%;
+  body.mini.menu-open .sheet aside#side-right.open, body.mini.menu-open .sheet aside#side-left.open {
+    flex: 2;
   }
 }
 @media (min-width: 1920px) {
-  body.mini.menu-open .sheet main {
-    flex: 85%;
-  }
-}
-body.mini.menu-open .sheet aside#side-menu {
-  flex: 100%;
-}
-@media (min-width: 576px) {
-  body.mini.menu-open .sheet aside#side-menu {
-    flex: 33.333333%;
-  }
-}
-@media (min-width: 768px) {
-  body.mini.menu-open .sheet aside#side-menu {
-    flex: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  body.mini.menu-open .sheet aside#side-menu {
-    flex: 20%;
-  }
-}
-@media (min-width: 1920px) {
-  body.mini.menu-open .sheet aside#side-menu {
-    flex: 15%;
+  body.mini.menu-open .sheet aside#side-right.open, body.mini.menu-open .sheet aside#side-left.open {
+    flex: 1.5;
   }
 }
 body.mini.scroll.menu-open header#header {
@@ -8575,11 +8589,24 @@ body.mini ul#main-menu li.item a, body.mini ul#main-menu li.menu-item a {
 body.mini ul#main-menu li.item a::after, body.mini ul#main-menu li.menu-item a::after {
   height: 4px;
 }
+body.mini ul#admin-menu {
+  padding: var(--padding);
+  background: var(--mini-color);
+}
+body.mini ul#admin-menu li.item.active a, body.mini ul#admin-menu li.item.current-menu-item a, body.mini ul#admin-menu li.item a.active, body.mini ul#admin-menu li.item:hover a, body.mini ul#admin-menu li.menu-item.active a, body.mini ul#admin-menu li.menu-item.current-menu-item a, body.mini ul#admin-menu li.menu-item a.active, body.mini ul#admin-menu li.menu-item:hover a {
+  background: var(--mini-color-dark);
+}
+body.mini ul#admin-menu li.item.active a::after, body.mini ul#admin-menu li.item.current-menu-item a::after, body.mini ul#admin-menu li.item a.active::after, body.mini ul#admin-menu li.item:hover a::after, body.mini ul#admin-menu li.menu-item.active a::after, body.mini ul#admin-menu li.menu-item.current-menu-item a::after, body.mini ul#admin-menu li.menu-item a.active::after, body.mini ul#admin-menu li.menu-item:hover a::after {
+  background: var(--white);
+}
 body.mini ul#social-menu {
   flex-flow: row wrap;
 }
 body.mini ul#lang-menu {
   flex-flow: row wrap;
+}
+body.mini ul#lang-menu li.item, body.mini ul#lang-menu li.menu-item {
+  display: inline-block;
 }
 /* SLIDER */
 /* GDPR */
