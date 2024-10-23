@@ -48,6 +48,7 @@
   --pulse-color: rgb( 60 90 255 / 100%);
   --sheet-color: var(--false-black);
   --menu-toggle-color: var(--sheet-color);
+  --theme-color: var(--main-color);
   --mini-color: rgb( 60 90 255 / 100% );
   --mini-color-dark: rgb( 50 75 180 / 100% );
   --mini-second-color: rgb( 50 75 180 / 100% );
@@ -8119,6 +8120,18 @@ body.mini .sheet aside#side-menu ul.menu li.item a, body.mini .sheet aside#side-
 }
 body.mini .sheet aside#side-menu.inv ul.menu li.item a, body.mini .sheet aside#side-menu.inv ul.menu li.menu-item a, body.mini .sheet aside#side-menu.neg ul.menu li.item a, body.mini .sheet aside#side-menu.neg ul.menu li.menu-item a {
   color: var(--false-black);
+}
+body.mini.menu-open header#header.neg, body.mini.menu-open header#header.inv, body.mini.menu-open header#header.top-neg, body.mini.menu-open header#header.top-inv, body.mini.menu-open header#header.top-bk, body.mini.menu-open header#header.top-col, body.mini.menu-open header#header.scroll-neg, body.mini.menu-open header#header.scroll-inv, body.mini.menu-open header#header.scroll-bk, body.mini.menu-open header#header.scroll-col {
+  background: var(--transp);
+}
+body.mini.menu-open header#header.top-wh, body.mini.menu-open header#header.scroll-wh {
+  background: var(--transp);
+}
+body.mini.menu-open header#header.top-bk, body.mini.menu-open header#header.scroll-bk {
+  background: var(--transp);
+}
+body.mini.menu-open header#header.top-col, body.mini.menu-open header#header.scroll-col {
+  background: var(--transp);
 }
 body.mini.menu-open header#header .brand img.logo {
   filter: brightness(0) invert(1);

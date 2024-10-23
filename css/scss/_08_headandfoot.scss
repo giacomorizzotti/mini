@@ -257,6 +257,20 @@ body {
     }
     &.menu-open {
       header#header {
+        &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
+          background: var(--transp);
+        }
+        &.top, &.scroll {
+          &-wh {
+            background: var(--transp);
+          }
+          &-bk {
+            background: var(--transp);
+          }
+          &-col {
+            background: var(--transp);
+          }
+        }
         .brand {
           img.logo {
             filter: brightness(0) invert(1);
