@@ -8467,6 +8467,7 @@ body.mini ul.menu {
     display: flex;
     flex-flow: column;
     margin: 0 calc(var(--margin) * 0.5);
+    margin: 0 calc(var(--margin) * 1);
   }
 }
 body.mini ul.menu li.item, body.mini ul.menu li.menu-item {

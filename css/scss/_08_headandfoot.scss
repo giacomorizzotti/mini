@@ -614,6 +614,7 @@ body {
         display: flex;
         flex-flow: column;
         margin: 0 calc( var(--margin) * 0.5);
+        margin: 0 calc( var(--margin) * 1);
       }
 
       li.item, li.menu-item {

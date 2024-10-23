@@ -731,7 +731,7 @@ window.addEventListener('load', function() {
 
 // dropdown menu
 window.addEventListener('load', function() {
-    var dropDownMenu = document.querySelectorAll('li.item.drop-down');
+    var dropDownMenu = document.querySelectorAll('li.menu-item.drop-down');
 
     for (i=0; i<dropDownMenu.length; i++) {
         let thisDropDownItem = dropDownMenu[i];
