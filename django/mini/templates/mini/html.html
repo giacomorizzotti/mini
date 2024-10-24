@@ -36,8 +36,8 @@
     {% if favicon is not False %}<link rel="apple-touch-icon" href="{% static 'favicon.ico' %}">{% endif %}
 
     {% block mini_header_css %}
-    {% comment %}<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css">{% endcomment %}  
-    <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css"> 
+    {% comment %}<link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">{% endcomment %} 
     {% endblock %}
     
     {% block header_css %}
@@ -338,8 +338,8 @@
     {% endif %}
 
     {% block mini_footer_js %}
-    <script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>
-    {% comment %}<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>{% endcomment %}
+    {% comment %}<script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>{% endcomment %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>
     {% endblock %}
 
     {% block bottom_js %}
