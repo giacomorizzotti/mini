@@ -2,6 +2,7 @@
 /* TYPOS */
 
 /* fluid typography */
+@use 'sass:math';
 
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value, $mob-value) {
   & {
@@ -24,7 +25,7 @@
 }
 
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+  @return math.div( $value, ($value * 0 + 1) );
 }
 
 html {
