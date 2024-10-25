@@ -164,6 +164,17 @@ body {
       width: 100%;
     }
 
+    /* positioning */
+    .relative, .position-relative {
+      position: relative;
+    }
+    .absolute, .position-absolute {
+      position: absolute;
+    }
+    .fixed, .position-fixed {
+      position: fixed;
+    }
+
     /* horizontal positioning*/
     .h-left, .h-start, {
       margin-left: 0!important;

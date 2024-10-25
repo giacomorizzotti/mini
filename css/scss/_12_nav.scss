@@ -326,6 +326,7 @@ body {
           }
         }
         aside#side-right.open, aside#side-left.open {
+          padding: var(--padding);
           flex: 10;
           @include sm {
             flex: 3;
@@ -613,7 +614,6 @@ body {
       @include md {
         display: flex;
         flex-flow: column;
-        margin: 0 calc( var(--margin) * 0.5);
         margin: 0 calc( var(--margin) * 1);
       }
 
@@ -752,7 +752,6 @@ body {
         }
       }
     }
-    
     aside#side-left.closed {
       ul#admin-menu {
         @include lg {

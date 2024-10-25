@@ -191,6 +191,40 @@
         </p>
     </div>
 
+    <div id="actions" onmouseleave="hideElement('.actions');">
+        <ul class="menu action-groups">
+            <li class="action-group">
+
+                <a href="#add-family-finances" class="" onmousedown="hideElement('.actions');showElement('#target-group');">
+                    <i class="iconoir-jellyfish icon"></i>
+                    <span class="label">Link</span>
+                </a>
+
+                <ul id="target-group" class="menu actions hidden">
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-wolf icon"></i>
+                            Link
+                        </a>
+                    </li>
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-wolf icon"></i>
+                            Link
+                        </a>
+                    </li>
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-wolf icon"></i>
+                            Link
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+
     <?php ### CDN ### ?>
     <?php /* <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script> */ ?>
     <?php ### LOCAL ### ?>
