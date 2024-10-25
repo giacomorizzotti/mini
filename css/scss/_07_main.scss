@@ -206,16 +206,40 @@ body {
 
     /* box shadow */
     .box-shadow-3 {
-      @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ))
+      @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ));
+      &-dark {
+        @include boxShadow(0, 3px, rgb( 0 0 0 / 15% ));
+      }
+      &-darker {
+        @include boxShadow(0, 3px, rgb( 0 0 0 / 65% ));
+      }
     }
     .box-shadow-s, .box-shadow-5 {
-      @include boxShadow(0, 5px, rgb( 0 0 0 / 5% ))
+      @include boxShadow(0, 5px, rgb( 0 0 0 / 5% ));
+      &-dark {
+        @include boxShadow(0, 5px, rgb( 0 0 0 / 15% ));
+      }
+      &-darker {
+        @include boxShadow(0, 5px, rgb( 0 0 0 / 65% ));
+      }
     }
     .box-shadow, .box-shadow-10 {
-      @include boxShadow(0, 10px, rgb( 0 0 0 / 5% ))
+      @include boxShadow(0, 10px, rgb( 0 0 0 / 5% ));
+      &-dark {
+        @include boxShadow(0, 10px, rgb( 0 0 0 / 15% ));
+      }
+      &-darker {
+        @include boxShadow(0, 10px, rgb( 0 0 0 / 65% ));
+      }
     }
     .box-shadow-l, .box-shadow-20 {
-      @include boxShadow(0, 20px, rgb( 0 0 0 / 8% ))
+      @include boxShadow(0, 20px, rgb( 0 0 0 / 8% ));
+      &-dark {
+        @include boxShadow(0, 20px, rgb( 0 0 0 / 20% ));
+      }
+      &-darker {
+        @include boxShadow(0, 20px, rgb( 0 0 0 / 75% ));
+      }
     }
 
     /* borders */

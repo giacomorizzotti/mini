@@ -752,6 +752,18 @@ body {
         }
       }
     }
+    
+    aside#side-left.closed {
+      ul#admin-menu {
+        @include lg {
+          position: fixed;
+          left: 0;
+          top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--padding));
+          height: auto;
+          min-width: 220px;
+        }
+      }
+    }
 
     // user menu
     ul#user-menu {
