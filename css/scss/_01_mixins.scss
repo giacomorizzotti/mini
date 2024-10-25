@@ -1,0 +1,45 @@
+/* MIXINs */
+
+/* gradients */
+$f2s: var(--main-color) 0%, var(--second-color) 100%;
+$f2t: var(--main-color) 0%, var(--third-color) 100%;
+$s2t: var(--second-color) 0%, var(--third-color) 100%;
+$t2f: var(--third-color) 0%, var(--fourth-color) 100%;
+$gradMain: var(--main-color) 0%, var(--main-color-dark) 100%;
+$gradSecond: var(--second-color) 0%, var(--second-color-dark) 100%;
+$gradThird: var(--third-color) 0%, var(--third-color-dark) 100%;
+$gradFourth: var(--fourth-color) 0%, var(--fourth-color-dark) 100%;
+$gradFalseWhiteToWhite: var(--white) 0%, var(--false-white) 100%;
+
+@mixin gradient($direction, $list) {
+  background: -webkit-linear-gradient($direction, $list)!important;
+  background: -moz-linear-gradient($direction, $list)!important;
+  background: -o-linear-gradient($direction, $list)!important;
+  background: linear-gradient($direction, $list)!important;
+}
+
+/* border radius */
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* text shadow */
+@mixin textShadow($distance, $range, $color) {
+  text-shadow: $distance $distance $range $color;
+}
+
+/* box shadow */
+@mixin boxShadow($distance, $range, $color) {
+  -webkit-box-shadow: $distance $distance $range 0 $color;
+  -moz-box-shadow: $distance $distance $range 0 $color;
+  box-shadow: $distance $distance $range 0 $color;
+}
+
+/* width - min & max */
+@mixin width($width) {
+  min-width: $width;
+  width: $width;
+  max-width: $width;
+}

@@ -1,48 +1,6 @@
 
 /* TYPOS */
 
-/* fluid typography */
-@use 'sass:math';
-
-@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value, $mob-value) {
-  & {
-    @each $property in $properties {
-      #{$property}: $mob-value;
-    }
-
-    @media screen and (min-width: $min-vw) {
-      @each $property in $properties {
-        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-    }
-
-    @media screen and (min-width: $max-vw) {
-      @each $property in $properties {
-        #{$property}: $max-value;
-      }
-    }
-  }
-}
-
-@function strip-unit($value) {
-  @return math.div( $value, ($value * 0 + 1) );
-}
-
-html {
-  @include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont, $mobFont);
-  //font-size: var(--minFont);
-  //@media screen and ( min-width: $screen-sm-min ) {
-  //  font-size: calc( var(--minFont) + ( var(--maxFont) - var(--minFont) ) * ( (100vw - var(--minScreen) ) / ( var(--maxScreen) - var(--minScreen) ) ) );
-  //}
-  //@media screen and ( min-width: $screen-xl-min ) {
-  //  font-size: var(--maxFont);
-  //}
-}
-body {
-  line-height: var(--baseline);
-  font-family: var(--font);
-}
-
 body {
   &.mini {
 
@@ -126,6 +84,9 @@ body {
       }
       &.font-two, &.font-titles, &.font-title, &.title, &.text-second-font {
         font-family: var(--font-two);
+      }
+      .title {
+        font-family: var(--title-font);
       }
 
     }
@@ -291,37 +252,37 @@ body {
       font-style: italic;
     }
 
-    /* SUPER SMALL TEXT */
+    /* super small text */
     .XS, .xs {
       font-size: calc(var(--p) * 0.7)!important;
       line-height: calc(var(--p) * 1)!important;
     }
 
-    /* SMALL TEXT */
+    /* small text */
     .S, .s {
       font-size: calc(var(--p) * 0.85)!important;
       line-height: calc(var(--p) * 1.2)!important;
     }
 
-    /* LARGE TEXT */
+    /* large text */
     .L, .l {
       font-size: calc(var(--p) * 1.25)!important;
       line-height: calc(var(--p) * 2.15)!important;
     }
 
-    /* EXTRA LARGE TEXT */
+    /* extra large text */
     .XL, .xl {
       font-size: calc(var(--p) * 1.5)!important;
       line-height: calc(var(--p) * 2.5)!important;
     }
 
-    /* EXTRA EXTRA LARGE TEXT */
+    /* extra extra large text */
     .XXL, .xxl {
       font-size: calc(var(--p) * 2)!important;
       line-height: calc(var(--p) * 2.75)!important;
     }
 
-    /* GIANT TEXT */
+    /* big text */
     .big {
       font-size: calc(var(--h1) * 1)!important;
       line-height: calc(var(--h1) * 1.3)!important;
@@ -331,7 +292,7 @@ body {
       }
     }
 
-    /* GIANT TEXT */
+    /* giant text */
     .giant {
       font-size: calc(var(--h1) * 1.2)!important;
       line-height: calc(var(--h1) * 1.5)!important;
@@ -341,7 +302,7 @@ body {
       }
     }
 
-    /* HUGE TEXT */
+    /* huge text */
     .huge {
       font-size: calc(var(--h1) * 1.5)!important;
       line-height: calc(var(--h1) * 1.9)!important;
@@ -351,7 +312,17 @@ body {
       }
     }
 
-    /* FLAGS */
+    /* max text */
+    .max {
+      font-size: calc(var(--h1) * 3)!important;
+      line-height: calc(var(--h1) * 4.5)!important;
+      @include sm {
+        font-size: calc(var(--h1) * 5)!important;
+        line-height: calc(var(--h1) * 5.5)!important;
+      }
+    }
+
+    /* flags */
     .flag {
       display: inline-block;
       font-size: calc(var(--p) * 0.65);
@@ -361,7 +332,7 @@ body {
       transform: translate(0, calc(var(--baseline) * -0.25));
     }
 
-    /* DESC TEXT */
+    /* desc text */
     .desc {
       font-size: calc(var(--p) * 0.85)!important;
       line-height: calc(var(--p) * 1.2)!important;
@@ -370,13 +341,13 @@ body {
       color: var(--grey);
     }
 
-    /* UPPERCASE */
-    .up-case, .upCase {
+    /* uppercase */
+    .up-case {
       text-transform: uppercase;
     }
 
     /* UNDERLINE BACKGROUND */
-    .under-bg, .underBg {
+    .under-bg {
       background: linear-gradient(180deg,transparent 60%,var(--main-color-transp) 0);
       padding: 1px 6px;
     }
@@ -398,7 +369,7 @@ body {
         &-10 {
             @include textShadow(10px, 0, rgb(0 0 0 / 15%));
         }
-        &BW, &-bw {
+        &-bw {
           &-1 {
               text-shadow: 1px 1px 0 var(--white), 2px 2px 0 var(--black);
           }
@@ -415,47 +386,9 @@ body {
       }
       
     /* iconoir */
-    [class^=iconoir-] {
-      vertical-align: text-top!important;
-    }
-
-    /* VIBING TEXT */
-    @mixin transition {
-      @for $i from 1 through 20 {
-        div:nth-child(#{$i}) {
-          @keyframes vibing-#{$i} {
-            0% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(6px);
-            }
-            100% {
-              transform: translateY(0);
-            }
-          }
-        }
-      }
-    }
-    .vibing  {
-      display: inline-block;
-      transform: translateY(-3px);
-      @include transition;
-      @for $i from 1 through 20 {
-        span:nth-child(#{$i}) {
-          display: inline-block;
-          animation-name: vibing-#{$i};
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
-          animation-delay:(#{$i*0.2s});
-          animation-timing-function: ease-in-out;
-        }
-      }
-    }
-
-    /* iconoir */
     *[class^='iconoir-'], *[class*=' iconoir-'] {
-      vertical-align: middle;;
+      vertical-align: middle;
+      vertical-align: text-top!important;
     }
 
   }

@@ -1,0 +1,66 @@
+/* RESET */
+
+*, *::after,*::before{
+  box-sizing:border-box;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-smooth: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  margin:0;
+  padding:0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color-bg) rgba(0,0,0,0.05);
+}
+body::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color-thumb) ;
+  border-radius: 6px;
+  border: 3px solid rgba(0,0,0,0.05);
+}
+
+/* text selection */
+::-moz-selection { background: transparent; color: var(--text-selection-bg); }
+::selection { background: transparent ; color: var(--text-selection-bg); }
+.colTxt::-moz-selection, .colBox::-moz-selection, .colBg::-moz-selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }
+.colTxt::selection, .colBox::selection, .colBg::selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }
+
+body {
+  &.mini {
+  	padding: 0;
+  	margin: 0;
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
+    line-height: var(--baseline);
+    font-family: var(--font);
+    color: var(--black);
+
+    main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    section {
+      position: relative;
+    }
+
+  }
+}

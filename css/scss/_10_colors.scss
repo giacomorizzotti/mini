@@ -66,80 +66,63 @@ body {
 
     $thickness: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
 
-    /* borders */
-    .bord, .border {
-      border-width: 1px;
-      border-style: solid;
-      border-color: var(--light-grey);
-    }
-
-    .bord, .border {
-      @each $bordWidthLabel, $bordWidth in $thickness {
-        &-#{$bordWidthLabel} {
-          border-style: solid;
-          border-width: #{$bordWidth}!important;
-          border-color: var(--light-grey);
-        }
-        &-t, &-top {
-          border-style: solid;
-          border-top-width: 1px;
-          border-color: var(--light-grey);
-        }
-        &-t-#{$bordWidthLabel}, &-top-#{$bordWidthLabel} {
-          border-style: solid;
-          border-top-width: #{$bordWidth};
-          border-color: var(--light-grey);
-        }
-        &-e, &-end, &-r, &-right {
-          border-style: solid;
-          border-width: 0;
-          border-right-width: 1px!important;
-          border-color: var(--light-grey);
-        }
-        &-e-#{$bordWidthLabel}, &-end-#{$bordWidthLabel}, &-r-#{$bordWidthLabel}, &-right-#{$bordWidthLabel} {
-          border-style: solid;
-          border-width: 0;
-          border-right-width: #{$bordWidth}!important;
-          border-color: var(--light-grey);
-        }
-        &-b, &-bottom {
-          border-style: solid;
-          border-width: 0;
-          border-bottom-width: 1px!important;
-          border-color: var(--light-grey);
-        }
-        &-b-#{$bordWidthLabel}, &-bottom-#{$bordWidthLabel} {
-          border-style: solid;
-          border-width: 0;
-          border-bottom-width: #{$bordWidth}!important;
-          border-color: var(--light-grey);
-        }
-        &-s, &-start, &-l, &-left {
-          border-style: solid;
-          border-width: 0;
-          border-left-width: 1px!important;
-          border-color: var(--light-grey);
-        }
-        &-s-#{$bordWidthLabel}, &-start-#{$bordWidthLabel}, &-l-#{$bordWidthLabel}, &-left-#{$bordWidthLabel} {
-          border-style: solid;
-          border-width: 0;
-          border-left-width: #{$bordWidth}!important;
-          border-color: var(--light-grey);
-        }
-      }
-    }
-
-    .bord, .border {
-      @each $bordColorName, $bordColor in $colors {
-        &-#{$bordColorName}{
-          border-color: #{$bordColor}!important;
-        }
-      }
-    }
-
     @each $colorname, $colorcode, $colortext in $colors {
-
       .#{$colorname} {
+        &-bord, &-border {
+          @each $bordWidthLabel, $bordWidth in $thickness {
+            &-t {
+              border-style: solid;
+              border-top-width: 1px;
+              border-color: $colorcode;
+            }
+            &-e {
+              border-style: solid;
+              border-width: 0;
+              border-right-width: 1px!important;
+              border-color: $colorcode;
+            }
+            &-b {
+              border-style: solid;
+              border-width: 0;
+              border-bottom-width: 1px!important;
+              border-color: $colorcode;
+            }
+            &-s {
+              border-style: solid;
+              border-width: 0;
+              border-left-width: 1px!important;
+              border-color: $colorcode;
+            }
+            &-#{$bordWidthLabel} {
+              border-style: solid;
+              border-width: #{$bordWidth}!important;
+              border-color: $colorcode;
+            }/*
+            &-t-#{$bordWidthLabel} {
+              border-style: solid;
+              border-top-width: #{$bordWidth};
+              border-color: $colorcode;
+            }
+            &-e-#{$bordWidthLabel} {
+              border-style: solid;
+              border-width: 0;
+              border-right-width: #{$bordWidth}!important;
+              border-color: $colorcode;
+            }
+            &-b-#{$bordWidthLabel} {
+              border-style: solid;
+              border-width: 0;
+              border-bottom-width: #{$bordWidth}!important;
+              border-color: $colorcode;
+            }
+            &-s-#{$bordWidthLabel} {
+              border-style: solid;
+              border-width: 0;
+              border-left-width: #{$bordWidth}!important;
+              border-color: $colorcode;
+            }*/
+          }
+        }
         &-txt, &-text {
           color: $colorcode!important;
         }

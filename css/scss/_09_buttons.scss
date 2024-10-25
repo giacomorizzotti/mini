@@ -1,0 +1,73 @@
+/* BUTTONS */
+body {
+    &.mini {
+        .btn {
+            color: var(--link-color);
+            font-size: var(--p);
+            line-height: calc( var(--p) * 1.5 );
+            width: auto;
+            padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+            display: inline-block;
+            margin: calc( var(--margin) * 0.5 ) calc( var(--margin) * 1 ) calc( var(--margin) * 0.5 ) 0;
+            border: 1px solid var(--link-color);
+            font-weight: 700;
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+            vertical-align: middle;
+            @include borderRadius(3px);
+
+            @include mdDown {
+                display: block;
+                margin: 0 0 var(--margin) 0;
+                text-align: center;
+            }
+
+            &:hover, &.clicked {
+                color: var(--white);
+                background: var(--link-color);
+                border-color: var(--link-color);
+            }
+
+            &-bg {
+                color: var(--white);
+                border-color: var(--link-color);
+                background: var(--link-color);
+                &:hover, &.clicked {
+                color: var(--link-color);
+                border-color: var(--link-color);
+                background: transparent;
+                }
+            }
+
+            &.XS, &.xs {
+                padding: calc(var(--padding)*.125) calc(var(--padding)*.25);
+                margin: calc(var(--margin) * .25) 0;
+                @include md {
+                margin: calc(var(--margin) * .25) calc(var(--margin) * 0.25) calc(var(--margin) * .25) 0;
+                }
+            }
+            &.S, &.s {
+                padding: calc(var(--padding)*.25) calc(var(--padding)*.5);
+                margin: calc(var(--margin) * .35) 0;
+                @include md {
+                margin: calc(var(--margin) * .35) calc(var(--margin) * 0.5) calc(var(--margin) * .35) 0;
+                }
+            }
+            &.L, &.l {
+                padding: calc(var(--padding)*0.625) calc(var(--padding)*1.125);
+                margin: calc(var(--margin) * .75) 0;
+                @include md {
+                margin: calc(var(--margin) * .75) calc(var(--margin) * 1.125) calc(var(--margin) * .75) 0;
+                }
+            }
+            &.XL, &.xl {
+                padding: calc(var(--padding)*0.85) calc(var(--padding)*1.35);
+            }
+            &.XXL, &.xxl {
+                padding: calc(var(--padding)*1.25) calc(var(--padding)*1.75);
+            }
+            
+        }
+    }
+}
