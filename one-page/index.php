@@ -103,11 +103,20 @@
 
     <div class="sheet">
 
-        <aside id="side-left" class=""></aside>
+        <aside id="side-left" class="">
+            <nav class="menu admin-menu">
+                <ul id="admin-menu" class="menu admin-menu">
+                    <li class="menu-item active"><a href="#" class="active">home</a></li>
+                    <li class="menu-item"><a href="#">Item_1</a></li>
+                    <li class="menu-item"><a href="#">Item_2</a></li>
+                    <li class="menu-item"><a href="#">Item_3</a></li>
+                </ul>
+            </nav>
+        </aside>
 
         <aside id="side-right" class="">
             <nav class="menu main-menu">
-                <ul id="main-menu" class="menu main-menu px-2">
+                <ul id="main-menu" class="menu main-menu">
                     <li class="menu-item active"><a href="/" class="active">home</a></li>
                     <li class="menu-item"><a href="#">Item_1</a></li>
                     <li class="menu-item"><a href="#">Item_2</a></li>
@@ -115,7 +124,7 @@
                 </ul>
             </nav>
             <nav class="menu user-menu">
-                <ul id="user-menu" class="menu user-menu px-2">
+                <ul id="user-menu" class="menu user-menu">
                     <li class="menu-item active"><a href="#">Item_1</a></li>
                     <li class="menu-item"><a href="#">Item_2</a></li>
                     <li class="menu-item"><a href="#">Item_3</a></li>

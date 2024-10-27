@@ -227,6 +227,10 @@ body {
       background: var(--sheet-color);
       transition: padding 0.2s ease-out;
       main {
+        order: 3;
+        @include lg {
+          order: 2;
+        }
         background: var(--white);
         transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
         flex: 10;
@@ -265,9 +269,24 @@ body {
         }
       }
       aside#side-left {
+        padding-top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--padding) * 2);
+        transition: padding 0.2s ease;
         order: 1;
         @include lg {
           order: 1;
+        }
+        flex: 10;
+        @include sm {
+          flex: 3;
+        }
+        @include md {
+          flex: 2.5;
+        }
+        @include xl {
+          flex: 2;
+        }
+        @include xxl {
+          flex: 2;
         }
       }
     }
@@ -326,7 +345,6 @@ body {
           }
         }
         aside#side-right.open, aside#side-left.open {
-          padding: var(--padding);
           flex: 10;
           @include sm {
             flex: 3;
@@ -338,8 +356,11 @@ body {
             flex: 2;
           }
           @include xxl {
-            flex: 1.5;
+            flex: 2;
           }
+        }
+        aside#side-left.open {
+          padding-top: calc( var(--padding) * 2 );
         }
       }
     }
@@ -737,6 +758,7 @@ body {
 
     // admin menu
     ul#admin-menu {
+      margin: 0 calc(var(--margin)* 2) calc(var(--margin)* 2) calc(var(--margin)* 2);
       padding: var(--padding);
       background: var(--mini-color);
       li.item, li.menu-item {
@@ -744,22 +766,13 @@ body {
           &::after {
           }
         }
-        &.active a, &.current-menu-item a, a.active, &:hover a {
+        &.active, &.current-item, &:hover {
           background: var(--mini-color-dark);
+        }
+        &.active a, &.current-menu-item a, a.active, &:hover a {
           &::after {
             background: var(--white);
           }
-        }
-      }
-    }
-    aside#side-left.closed {
-      ul#admin-menu {
-        @include lg {
-          position: fixed;
-          left: 0;
-          top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--padding));
-          height: auto;
-          min-width: 220px;
         }
       }
     }

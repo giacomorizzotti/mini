@@ -29,8 +29,17 @@
   @return math.div( $value, ($value * 0 + 1) );
 }
 
+/*
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+*/
+
+:root {
+  @include fluid-type(--font-size, $min_screen, $max_screen, $min_font, $max_font, $mob_font);
+}
 html {
-  @include fluid-type(font-size, $min_screen, $max_screen, $min_font, $max_font, $mob_font);
+  font-size: var(--font-size);
 }
 
 body {

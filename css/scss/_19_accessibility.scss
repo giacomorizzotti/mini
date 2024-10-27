@@ -1,0 +1,53 @@
+
+/* DEBUG TOOLS STYLING */
+
+:root:has(body.mini.high-contrast) {
+
+      --main-color: black;
+      --main-color-dark: black;
+      --second-color: black;
+      --second-color-dark: black;
+      --third-color: black;
+      --third-color-dark: black;
+      --fourth-color: black;
+      --fourth-color-dark: black;
+      --link-color: black;
+      --link-hover-color: black;
+      --info: black;
+      --bad: black;
+
+      --success: rgb( 0 255 0 / 100% );
+      --warning: rgb( 255 200 0 / 100% );
+      --danger: rgb( 255 0 0 / 100% );
+
+      --black: black;
+      --false-black: black;
+      --dark-grey: black;
+      --grey: black;
+
+      --light-grey: white;
+      --false-white: white;
+      --white: white;
+
+}
+
+html:has(body.mini.font-l) {
+  --font-size: 1.6rem;
+}
+html:has(body.mini.font-xl) {
+  --font-size: 1.8rem;
+}
+html:has(body.mini.font-xxl) {
+  --font-size: 2rem;
+}
+body.mini.font-l, body.mini.font-xl, body.mini.font-xxl {
+  .container {
+    width: 100%;
+    max-width: none!important;
+    &.fw, &.full-width, &.wide, &.thin {
+      width: 100%;
+      max-width: none!important;
+    }
+  }
+}
+
