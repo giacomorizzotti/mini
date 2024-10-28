@@ -217,39 +217,123 @@ body {
 
     /* box shadow */
     .box-shadow-3 {
+      transition: box-shadow 0.2s ease;
       @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ));
+      &-hover {
+        &:hover {
+          transition: box-shadow 0.2s ease;
+          @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ));
+        }
+      }
       &-dark {
-        @include boxShadow(0, 3px, rgb( 0 0 0 / 15% ));
+        transition: box-shadow 0.2s ease;
+        @include boxShadow(0, 3px, rgb( 0 0 0 / 10% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 3px, rgb( 0 0 0 / 10% ));
+          }
+        }
       }
       &-darker {
+        transition: box-shadow 0.2s ease;
         @include boxShadow(0, 3px, rgb( 0 0 0 / 65% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 3px, rgb( 0 0 0 / 65% ));
+          }
+        }
       }
     }
     .box-shadow-s, .box-shadow-5 {
+      transition: box-shadow 0.2s ease;
       @include boxShadow(0, 5px, rgb( 0 0 0 / 5% ));
+      &-hover {
+        &:hover {
+          transition: box-shadow 0.2s ease;
+          @include boxShadow(0, 5px, rgb( 0 0 0 / 5% ));
+        }
+      }
       &-dark {
-        @include boxShadow(0, 5px, rgb( 0 0 0 / 15% ));
+        transition: box-shadow 0.2s ease;
+        @include boxShadow(0, 5px, rgb( 0 0 0 / 12.5% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 5px, rgb( 0 0 0 / 12.5% ));
+          }
+        }
       }
       &-darker {
+        transition: box-shadow 0.2s ease;
         @include boxShadow(0, 5px, rgb( 0 0 0 / 65% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 5px, rgb( 0 0 0 / 65% ));
+          }
+        }
       }
     }
     .box-shadow, .box-shadow-10 {
-      @include boxShadow(0, 10px, rgb( 0 0 0 / 5% ));
+      transition: box-shadow 0.2s ease;
+      @include boxShadow(0, 10px, rgb( 0 0 0 / 7.5% ));
+      &-hover {
+        &:hover {
+          transition: box-shadow 0.2s ease;
+          @include boxShadow(0, 10px, rgb( 0 0 0 / 7.5% ));
+        }
+      }
       &-dark {
+        transition: box-shadow 0.2s ease;
         @include boxShadow(0, 10px, rgb( 0 0 0 / 15% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 10px, rgb( 0 0 0 / 15% ));
+          }
+        }
       }
       &-darker {
-        @include boxShadow(0, 10px, rgb( 0 0 0 / 65% ));
+        transition: box-shadow 0.2s ease;
+        @include boxShadow(0, 10px, rgb( 0 0 0 / 70% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 10px, rgb( 0 0 0 / 70% ));
+          }
+        }
       }
     }
     .box-shadow-l, .box-shadow-20 {
-      @include boxShadow(0, 20px, rgb( 0 0 0 / 8% ));
+      transition: box-shadow 0.2s ease;
+      @include boxShadow(0, 20px, rgb( 0 0 0 / 10% ));
+      &-hover {
+        &:hover {
+          transition: box-shadow 0.2s ease;
+          @include boxShadow(0, 20px, rgb( 0 0 0 / 10% ));
+        }
+      }
       &-dark {
+        transition: box-shadow 0.2s ease;
         @include boxShadow(0, 20px, rgb( 0 0 0 / 20% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 20px, rgb( 0 0 0 / 20% ));
+          }
+        }
       }
       &-darker {
+        transition: box-shadow 0.2s ease;
         @include boxShadow(0, 20px, rgb( 0 0 0 / 75% ));
+        &-hover {
+          &:hover {
+            transition: box-shadow 0.2s ease;
+            @include boxShadow(0, 20px, rgb( 0 0 0 / 75% ));
+          }
+        }
       }
     }
 

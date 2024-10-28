@@ -53,17 +53,17 @@ body {
       "uwa-link" var(--uwa-link-color) var(--white),
 
       "aroma" var(--aroma-color) var(--white),
-      "aroma-dark" var(--aroma-color-dark) var(--white);
+      "aroma-dark" var(--aroma-color-dark) var(--white),
 
-      //"pdp" var(--pezzidipla-color) var(--white),
-      //"pdp-second" var(--pezzidipla-second-color) var(--white),
-      //"pdp-third" var(--pezzidipla-third-color) var(--white),
-      //"pdp-fourth" var(--pezzidipla-fourth-color) var(--white),
+      "pdp" var(--pezzidipla-color) var(--white),
+      "pdp-second" var(--pezzidipla-second-color) var(--white),
+      "pdp-third" var(--pezzidipla-third-color) var(--white),
+      "pdp-fourth" var(--pezzidipla-fourth-color) var(--white),
 
-      //"lns" var(--lanuovastartup-color) var(--white),
-      //"lns-dark" var(--lanuovastartup-color-dark) var(--white),
+      "lns" var(--lanuovastartup-color) var(--white),
+      "lns-dark" var(--lanuovastartup-color-dark) var(--white),
 
-      //"dt" var(--doingthings-color) var(--black);
+      "dt" var(--doingthings-color) var(--black);
 
     $thickness: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
 
