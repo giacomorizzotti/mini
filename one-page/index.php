@@ -103,7 +103,7 @@
 
     <div class="sheet">
 
-        <aside id="side-left" class="">
+        <aside id="side-left" class="open">
             <nav class="menu admin-menu">
                 <ul id="admin-menu" class="menu admin-menu">
                     <li class="menu-item active"><a href="#" class="active">home</a></li>
@@ -202,6 +202,7 @@
 
     <div id="actions" onmouseleave="hideElement('.actions');">
         <ul class="menu action-groups">
+
             <li class="action-group">
 
                 <a href="#add-family-finances" class="" onmousedown="hideElement('.actions');showElement('#target-group');">
@@ -212,7 +213,7 @@
                 <ul id="target-group" class="menu actions hidden">
                     <li class="action">
                         <a href="#" class="">
-                            <i class="iconoir-wolf icon"></i>
+                            <i class="iconoir-settings icon"></i>
                             Link
                         </a>
                     </li>
@@ -231,6 +232,16 @@
                 </ul>
 
             </li>
+
+            <li class="action-group">
+
+                <a id="admin-menu-toggle" href="#add-family-finances" class="" >
+                    <i class="iconoir-settings icon"></i>
+                    <span class="label">Settings</span>
+                </a>
+
+            </li>
+
         </ul>
     </div>
 

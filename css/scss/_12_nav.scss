@@ -168,11 +168,6 @@ body {
           @include borderRadius(5px);
           transition: width 0.2s ease-out, height 0.2s ease-out;
         }
-        &.clicked {
-          .line {
-            background: var(--white);
-          }
-        }
         &:hover {
           
         }
@@ -269,12 +264,16 @@ body {
         }
       }
       aside#side-left {
-        padding-top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--padding) * 2);
-        transition: padding 0.2s ease;
+        transition: padding 0.2s ease, flex 0.2s ease-out;
         order: 1;
         @include lg {
           order: 1;
         }
+        &.open {
+          padding-top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--padding) * 2);
+        }
+      }
+      aside#side-right.open, aside#side-left.open {
         flex: 10;
         @include sm {
           flex: 3;
@@ -315,6 +314,11 @@ body {
           }
           .site-description {
             color: var(--white);
+          }
+        }
+        #menu-toggle {
+          .line {
+            background: var(--white);
           }
         }
       }

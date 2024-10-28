@@ -626,18 +626,19 @@ function makeItemActive() {
 // menu toggle
 window.addEventListener('load', function() {
 
-    if (document.getElementById('side-right') != null && document.getElementById('side-right') != null ) {
+    if (document.getElementById('side-right') != null ) {
 
         var body = document.body
         var menuToggle = document.getElementById('menu-toggle');
         var sideRight = document.getElementById('side-right');
-        var sideLeft = document.getElementById('side-left');
         var mainMenuItem = document.querySelectorAll('#side-right > nav.menu > ul.menu > li.menu-item > a');
     
-        if(sideRight)
-            sideRight.classList.add('closed');
-        if(sideLeft)
-            sideLeft.classList.add('closed');
+        sideRight.classList.add('closed');
+
+        if ( document.getElementById('side-left') ) {
+            var sideLeft = document.getElementById('side-left');
+        }
+
         menuToggle.classList.add('to-click');
     
         function toggleMenuVisibility() {
@@ -646,24 +647,18 @@ window.addEventListener('load', function() {
                 if (sideRight.classList.contains("closed")) {
                     sideRight.classList.add("open");
                     sideRight.classList.remove("closed");
+                    if (!body.classList.contains("menu-open")) {
+                        body.classList.add("menu-open");
+                    }
                 } else if (sideRight.classList.contains("open")) {
                     sideRight.classList.add("closed");
                     sideRight.classList.remove("open");
+                    if (body.classList.contains("menu-open") ) {
+                        if ( !sideLeft || ( sideLeft && sideLeft.classList.contains('closed') ) ) {
+                            body.classList.remove("menu-open");
+                        }
+                    }
                 }
-            }
-            if (sideLeft && sideLeft.children.length > 0) {
-                if (sideLeft.classList.contains("closed")) {
-                    sideLeft.classList.add("open");
-                    sideLeft.classList.remove("closed");
-                } else if (sideLeft.classList.contains("open")) {
-                    sideLeft.classList.add("closed");
-                    sideLeft.classList.remove("open");
-                }
-            }
-            if (!body.classList.contains("menu-open")) {
-                body.classList.add("menu-open");
-            } else if (body.classList.contains("menu-open")) {
-                body.classList.remove("menu-open");
             }
             if (menuToggle.classList.contains('clicked')) {
                 menuToggle.classList.add("to-click");
@@ -679,12 +674,6 @@ window.addEventListener('load', function() {
                 if (sideRight.classList.contains("open")) {
                     sideRight.classList.add("closed");
                     sideRight.classList.remove("open");
-                }
-            }
-            if (sideLeft && sideLeft.children.length > 0) {
-                if (sideLeft.classList.contains("open")) {
-                    sideLeft.classList.add("closed");
-                    sideLeft.classList.remove("open");
                 }
             }
             if (body.classList.contains("menu-open")) {
@@ -714,7 +703,7 @@ window.addEventListener('load', function() {
         var lastScrollTop = 0;
         window.addEventListener('scroll', function() {
             var st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop && window.mobileCheck() == false ) {
+            if (st > lastScrollTop && window.mobileCheck() == false && ( !sideLeft || sideLeft.classList.contains('closed') )) {
                 // downscroll code
                 if ( window.pageYOffset > 150 ) {
                     hideMenuVisibility();
@@ -724,6 +713,66 @@ window.addEventListener('load', function() {
             }
             lastScrollTop = st <= 0 ? 0 : st;
         }, false);
+
+    }
+
+});
+
+
+// admin menu
+window.addEventListener('load', function() {
+
+    if (document.getElementById('side-left') != null && document.getElementById('admin-menu-toggle') != null ) {
+
+        // Elements
+        var body = document.body
+        var adminMenuToggle = document.getElementById('admin-menu-toggle');
+        var sideLeft = document.getElementById('side-left');
+
+        // Check if sidebar right exists
+        if ( document.getElementById('side-right') ) {
+            var sideRight = document.getElementById('side-right');
+        }
+    
+        // start with left sidebar open
+        if (!sideLeft.classList.contains('open') && !sideLeft.classList.contains('closed')) {
+            sideLeft.classList.add('closed');
+            adminMenuToggle.classList.add('to-click');
+        } else {
+            adminMenuToggle.classList.add('clicked');
+            if (!body.classList.contains("menu-open")) {
+                body.classList.add("menu-open");
+            }
+        }
+    
+        function toggleMenuVisibility() {
+            if (sideLeft && sideLeft.children.length > 0) {
+                if (sideLeft.classList.contains("closed")) {
+                    sideLeft.classList.add("open");
+                    sideLeft.classList.remove("closed");
+                    if (!body.classList.contains("menu-open")) {
+                        body.classList.add("menu-open");
+                    }
+                } else if (sideLeft.classList.contains("open")) {
+                    sideLeft.classList.add("closed");
+                    sideLeft.classList.remove("open");
+                    if (body.classList.contains("menu-open") ) {
+                        if ( !sideRight || ( sideRight && sideRight.classList.contains('closed') ) ) {
+                            body.classList.remove("menu-open");
+                        }
+                    }
+                }
+            }
+            if (adminMenuToggle.classList.contains('clicked')) {
+                adminMenuToggle.classList.add("to-click");
+                adminMenuToggle.classList.remove("clicked");
+            } else if (adminMenuToggle.classList.contains('to-click')) {
+                adminMenuToggle.classList.add("clicked");
+                adminMenuToggle.classList.remove("to-click");
+            }
+        }
+
+        adminMenuToggle.onclick = toggleMenuVisibility;
 
     }
 

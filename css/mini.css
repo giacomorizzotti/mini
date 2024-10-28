@@ -22274,9 +22274,6 @@ body.mini header#header #menu-toggle .line {
   border-radius: 5px;
   transition: width 0.2s ease-out, height 0.2s ease-out;
 }
-body.mini header#header #menu-toggle.clicked .line {
-  background: var(--white);
-}
 body.mini header#header.neg #menu-toggle, body.mini header#header.inv #menu-toggle, body.mini header#header.top-neg #menu-toggle, body.mini header#header.top-inv #menu-toggle, body.mini header#header.top-bk #menu-toggle, body.mini header#header.top-col #menu-toggle {
   background: var(--menu-toggle-color);
 }
@@ -22346,33 +22343,37 @@ body.mini .sheet aside#side-right {
   }
 }
 body.mini .sheet aside#side-left {
-  padding-top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--padding) * 2);
-  transition: padding 0.2s ease;
+  transition: padding 0.2s ease, flex 0.2s ease-out;
   order: 1;
-  flex: 10;
 }
 @media (min-width: 992px) {
   body.mini .sheet aside#side-left {
     order: 1;
   }
 }
+body.mini .sheet aside#side-left.open {
+  padding-top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--padding) * 2);
+}
+body.mini .sheet aside#side-right.open, body.mini .sheet aside#side-left.open {
+  flex: 10;
+}
 @media (min-width: 576px) {
-  body.mini .sheet aside#side-left {
+  body.mini .sheet aside#side-right.open, body.mini .sheet aside#side-left.open {
     flex: 3;
   }
 }
 @media (min-width: 768px) {
-  body.mini .sheet aside#side-left {
+  body.mini .sheet aside#side-right.open, body.mini .sheet aside#side-left.open {
     flex: 2.5;
   }
 }
 @media (min-width: 1200px) {
-  body.mini .sheet aside#side-left {
+  body.mini .sheet aside#side-right.open, body.mini .sheet aside#side-left.open {
     flex: 2;
   }
 }
 @media (min-width: 1920px) {
-  body.mini .sheet aside#side-left {
+  body.mini .sheet aside#side-right.open, body.mini .sheet aside#side-left.open {
     flex: 2;
   }
 }
@@ -22396,6 +22397,9 @@ body.mini.menu-open header#header .brand .site-title {
 }
 body.mini.menu-open header#header .brand .site-description {
   color: var(--white);
+}
+body.mini.menu-open header#header #menu-toggle .line {
+  background: var(--white);
 }
 body.mini.menu-open .sheet {
   padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0;
