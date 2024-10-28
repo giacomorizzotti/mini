@@ -134,6 +134,12 @@ body {
             background: $colorcode!important;
             border-color: $colorcode!important;
           }
+          &-hover {
+            &:hover, &.clicked {
+              color: $colorcode!important;
+              border-color: $colorcode!important;
+            }
+          }
           &-bg {
             color: $colortext!important;
             border-color: $colorcode!important;
@@ -142,6 +148,13 @@ body {
               color: $colorcode!important;
               border-color: $colorcode!important;
               background: transparent!important;
+            }
+            &-hover {
+              &:hover, &.clicked {
+                color: $colortext!important;
+                border-color: $colorcode!important;
+                background: $colorcode!important;
+              }
             }
           }
         }
