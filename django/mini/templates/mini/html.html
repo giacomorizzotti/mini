@@ -36,8 +36,8 @@
     {% if favicon is not False %}<link rel="apple-touch-icon" href="{% static 'favicon.ico' %}">{% endif %}
 
     {% block mini_header_css %}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css"> 
-    {% comment %}<link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">{% endcomment %} 
+    {% comment %}<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/css/mini.min.css">{% endcomment %} 
+    <link rel="stylesheet" type="text/css" href="https://mini.uwa.agency/css/mini.min.css">
     {% endblock %}
     
     {% block header_css %}
@@ -269,6 +269,53 @@
     </div>
 
     {% block actions %}
+    <div id="actions" onmouseleave="hideElement('.actions');">
+        <ul class="menu action-groups">
+
+            {% comment %}
+
+            <li class="action-group">
+
+                <a href="#add-family-finances" class="" onmousedown="hideElement('.actions');showElement('#target-group');">
+                    <i class="iconoir-jellyfish icon"></i>
+                    <span class="label">Link</span>
+                </a>
+
+                <ul id="target-group" class="menu actions hidden">
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-settings icon"></i>
+                            Link
+                        </a>
+                    </li>
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-wolf icon"></i>
+                            Link
+                        </a>
+                    </li>
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-wolf icon"></i>
+                            Link
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            {% endcomment %}
+
+            {% if user.is_authenticated %}
+            <li class="action-group">
+                <a id="admin-menu-toggle" href="#add-family-finances" class="" >
+                    <i class="iconoir-settings icon"></i>
+                    <span class="label">Settings</span>
+                </a>
+            </li>
+            {% endif %}
+
+        </ul>
+    </div>
     {% endblock %}
 
     {% block footer %}
@@ -337,8 +384,8 @@
     {% endif %}
 
     {% block mini_footer_js %}
-    {% comment %}<script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>{% endcomment %}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>
+    <script type="text/javascript" src="https://mini.uwa.agency/js/mini.js"></script>
+    {% comment %}<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script>{% endcomment %}
     {% endblock %}
 
     {% block bottom_js %}

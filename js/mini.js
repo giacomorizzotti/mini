@@ -630,15 +630,11 @@ window.addEventListener('load', function() {
 
         var body = document.body
         var menuToggle = document.getElementById('menu-toggle');
+        var sideLeft = document.getElementById('side-left');
         var sideRight = document.getElementById('side-right');
         var mainMenuItem = document.querySelectorAll('#side-right > nav.menu > ul.menu > li.menu-item > a');
     
         sideRight.classList.add('closed');
-
-        if ( document.getElementById('side-left') ) {
-            var sideLeft = document.getElementById('side-left');
-        }
-
         menuToggle.classList.add('to-click');
     
         function toggleMenuVisibility() {
@@ -654,7 +650,7 @@ window.addEventListener('load', function() {
                     sideRight.classList.add("closed");
                     sideRight.classList.remove("open");
                     if (body.classList.contains("menu-open") ) {
-                        if ( !sideLeft || ( sideLeft && sideLeft.classList.contains('closed') ) ) {
+                        if ( !sideLeft || !sideLeft.children.length > 0 || ( sideLeft && sideLeft.classList.contains('closed') ) ) {
                             body.classList.remove("menu-open");
                         }
                     }
@@ -728,20 +724,35 @@ window.addEventListener('load', function() {
         var body = document.body
         var adminMenuToggle = document.getElementById('admin-menu-toggle');
         var sideLeft = document.getElementById('side-left');
-
-        // Check if sidebar right exists
-        if ( document.getElementById('side-right') ) {
-            var sideRight = document.getElementById('side-right');
-        }
+        var sideRight = document.getElementById('side-right');
     
+        if (readCookie('admin-menu') == 'open') {
+            if (sideLeft)
+                sideLeft.classList.add('open')
+        }
+
         // start with left sidebar open
-        if (!sideLeft.classList.contains('open') && !sideLeft.classList.contains('closed')) {
-            sideLeft.classList.add('closed');
-            adminMenuToggle.classList.add('to-click');
-        } else {
-            adminMenuToggle.classList.add('clicked');
-            if (!body.classList.contains("menu-open")) {
-                body.classList.add("menu-open");
+        if (
+            !sideLeft.classList.contains('open') && 
+            !sideLeft.classList.contains('closed')
+        ) {
+            sideLeft.classList.add('closed')
+            if (!adminMenuToggle.classList.contains('to-click'))
+                adminMenuToggle.classList.add('to-click')
+        } else if (
+            sideLeft.classList.contains('open')
+        ) {
+            if (!adminMenuToggle.classList.contains('clicked'))
+                adminMenuToggle.classList.add('clicked')
+            if (!body.classList.contains("menu-open"))
+                body.classList.add("menu-open")
+        } else if (
+            sideLeft.classList.contains('closed')
+        ) {
+            if (!adminMenuToggle.classList.contains('to-click'))
+                adminMenuToggle.classList.add('to-click')
+            if (body.classList.contains("menu-open")) {
+                body.classList.remove("menu-open");
             }
         }
     
@@ -753,6 +764,7 @@ window.addEventListener('load', function() {
                     if (!body.classList.contains("menu-open")) {
                         body.classList.add("menu-open");
                     }
+                    setCookie('admin-menu', 'open', 30, '/');
                 } else if (sideLeft.classList.contains("open")) {
                     sideLeft.classList.add("closed");
                     sideLeft.classList.remove("open");
@@ -761,6 +773,7 @@ window.addEventListener('load', function() {
                             body.classList.remove("menu-open");
                         }
                     }
+                    setCookie('admin-menu', 'closed', 30, '/');
                 }
             }
             if (adminMenuToggle.classList.contains('clicked')) {

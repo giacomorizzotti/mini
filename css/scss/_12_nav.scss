@@ -521,12 +521,12 @@ body {
             align-items: center;
             margin: 0;
             color: var(--white);
-            border-color: var(--link-hover-color);
-            background: var(--link-hover-color);
+            border-color: var(--link-color);
+            background: var(--link-color);
             padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 );
             font-size: calc( var(--p) * 1.25 );
             @include borderRadius(3rem);
-            &:hover, &.active {
+            &:hover, &.active, &.clicked {
               background-color: var(--link-hover-color);
               .label {
               }
