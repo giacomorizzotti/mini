@@ -1,0 +1,58 @@
+// BORDERS
+body {
+  &.mini {
+
+    .border {
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--light-grey);
+
+      @each $bordWidthLabel, $bordWidth in $thickness {   
+        &-#{$bordWidthLabel} {
+          @extend .border;
+          border-width: $bordWidth!important;
+        }
+      }
+      @each $colorname, $colorcode, $colortext in $colors {
+        &-#{$colorname} {
+          @extend .border;
+          border-color: $colorcode;
+        }
+      }
+      
+      @each $sideLabel, $side in $sides {
+        &-#{$sideLabel} {
+          @extend .border;
+          border-width: 0;
+          border-#{$side}-width: 1px!important;
+          @each $bordWidthLabel, $bordWidth in $thickness {   
+            &-#{$bordWidthLabel} {
+              @extend .border;
+              border-width: 0;
+              border-#{$side}-width: $bordWidth!important;
+            }
+          }
+          @each $colorname, $colorcode, $colortext in $colors {
+            &-#{$colorname} {
+              @extend .border;
+              border-width: 0;
+              border-#{$side}-width: 1px!important;
+              border-#{$side}-color: $colorcode!important;
+            }
+          }
+        }
+      }
+
+    }
+
+    // border radius
+    @each $borderRadiusLabel, $borderRadiusAngle in $borderRadius {
+      .b-rad-, .border-radius- {
+        &#{$borderRadiusLabel} {
+          @include borderRadius(#{$borderRadiusAngle});
+        }
+      }
+    }
+
+  }
+}

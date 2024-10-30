@@ -1,6 +1,7 @@
 /* BUTTONS */
 body {
     &.mini {
+
         .btn {
             color: var(--link-color);
             font-size: var(--p);
@@ -68,6 +69,105 @@ body {
                 padding: calc(var(--padding)*1.25) calc(var(--padding)*1.75);
             }
             
+        }
+
+        $colors:
+            "wh" var(--white) var(--black),
+            "white" var(--white) var(--black),
+            "fw" var(--false-white) var(--black),
+            //"false-white" var(--false-white) var(--black),
+            "light-grey" var(--light-grey) var(--black),
+            "grey" var(--grey) var(--white),
+            "dark-grey" var(--dark-grey) var(--white),
+            "fb" var(--false-black) var(--white),
+            //"false-black" var(--false-black) var(--white),
+            "bk" var(--black) var(--white),
+            "black" var(--black) var(--white),
+            "col" var(--main-color) var(--white),
+            "color" var(--main-color) var(--white),
+            "main-color" var(--main-color) var(--white),
+            "color-dark" var(--main-color-dark) var(--white),
+            "main-color-dark" var(--main-color-dark) var(--white),
+            "second-color" var(--second-color) var(--white),
+            "second-color-dark" var(--second-color-dark) var(--white),
+            "third-color" var(--third-color) var(--white),
+            "third-color-dark" var(--third-color-dark) var(--white),
+            "fourth-color" var(--fourth-color) var(--white),
+            "fourth-color-dark" var(--fourth-color-dark) var(--white),
+            "link" var(--link-color) var(--white),
+            "link-hover" var(--link-hover-color) var(--white),
+            //"link-color" var(--link-color) var(--white),
+            //"link-hover-color" var(--link-hover-color) var(--white),
+            "info" var(--info) var(--white),
+            "success" var(--success) var(--white),
+            "warning" var(--warning) var(--white),
+            "danger" var(--danger) var(--white),
+            "bad" var(--bad) var(--white),
+            "acid-green" var(--acid-green) var(--white),
+            "ginger-bread" var(--gingerbread) var(--white),
+
+            "mini" var(--mini-color) var(--white),
+            "mini-dark" var(--mini-color-dark) var(--white),
+            "mini-second" var(--mini-second) var(--white),
+            "mini-third" var(--mini-third) var(--white),
+            "mini-fourth" var(--mini-fourth) var(--white),
+
+            "uwa" var(--uwa-color) var(--white),
+            "uwa-dark" var(--uwa-color-dark) var(--white),
+            "uwa-second" var(--uwa-second-color) var(--white),
+            "uwa-third" var(--uwa-third-color) var(--white),
+            "uwa-fourth" var(--uwa-fourth-color) var(--white),
+            "uwa-link" var(--uwa-link-color) var(--white),
+
+            "aroma" var(--aroma-color) var(--white),
+            "aroma-dark" var(--aroma-color-dark) var(--white),
+
+            "pdp" var(--pezzidipla-color) var(--white),
+            "pdp-second" var(--pezzidipla-second-color) var(--white),
+            "pdp-third" var(--pezzidipla-third-color) var(--white),
+            "pdp-fourth" var(--pezzidipla-fourth-color) var(--white),
+
+            "lns" var(--lanuovastartup-color) var(--white),
+            "lns-dark" var(--lanuovastartup-color-dark) var(--white),
+
+            "dt" var(--doingthings-color) var(--black);
+
+        $thickness: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
+
+        @each $colorname, $colorcode, $colortext in $colors {
+            // buttons
+            &-btn {
+                color: $colorcode!important;
+                border-color: $colorcode!important;
+                &:hover, &.clicked {
+                    color: $colortext!important;
+                    background: $colorcode!important;
+                    border-color: $colorcode!important;
+                }
+                &-hover {
+                    &:hover, &.clicked {
+                        color: $colorcode!important;
+                        border-color: $colorcode!important;
+                    }
+                }
+                &-bg {
+                    color: $colortext!important;
+                    border-color: $colorcode!important;
+                    background: $colorcode!important;
+                    &:hover, &.clicked {
+                        color: $colorcode!important;
+                        border-color: $colorcode!important;
+                        background: transparent!important;
+                    }
+                    &-hover {
+                    &:hover, &.clicked {
+                        color: $colortext!important;
+                        border-color: $colorcode!important;
+                        background: $colorcode!important;
+                    }
+                    }
+                }
+            }
         }
     }
 }
