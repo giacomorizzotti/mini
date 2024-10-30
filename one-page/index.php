@@ -103,13 +103,13 @@
 
     <div class="sheet">
 
-        <aside id="side-left" class="open">
+        <aside id="side-left" class="">
             <nav class="menu admin-menu">
                 <ul id="admin-menu" class="menu admin-menu">
                     <li class="menu-item active"><a href="#" class="active">home</a></li>
-                    <li class="menu-item"><a href="#">Item_1</a></li>
-                    <li class="menu-item"><a href="#">Item_2</a></li>
-                    <li class="menu-item"><a href="#">Item_3</a></li>
+                    <li class="menu-item"><a href="#top">Item_1</a></li>
+                    <li class="menu-item"><a href="#test_1">Item_2</a></li>
+                    <li class="menu-item"><a href="#test_2">Item_3</a></li>
                 </ul>
             </nav>
         </aside>
@@ -117,24 +117,24 @@
         <aside id="side-right" class="">
             <nav class="menu main-menu">
                 <ul id="main-menu" class="menu main-menu">
-                    <li class="menu-item active"><a href="/" class="active">home</a></li>
-                    <li class="menu-item"><a href="#">Item_1</a></li>
-                    <li class="menu-item"><a href="#">Item_2</a></li>
-                    <li class="menu-item"><a href="#">Item_3</a></li>
+                    <li class="menu-item active"><a href="#" class="active">home</a></li>
+                    <li class="menu-item"><a href="#top">Item_1</a></li>
+                    <li class="menu-item"><a href="#test_1">Item_2</a></li>
+                    <li class="menu-item"><a href="#test_2">Item_3</a></li>
                 </ul>
             </nav>
             <nav class="menu user-menu">
                 <ul id="user-menu" class="menu user-menu">
-                    <li class="menu-item active"><a href="#">Item_1</a></li>
-                    <li class="menu-item"><a href="#">Item_2</a></li>
-                    <li class="menu-item"><a href="#">Item_3</a></li>
+                    <li class="menu-item active"><a href="#top">Item_1</a></li>
+                    <li class="menu-item"><a href="#test_1">Item_2</a></li>
+                    <li class="menu-item"><a href="#test_2">Item_3</a></li>
                 </ul>
             </nav>
         </aside>
 
         <main>
 
-            <section id="content" class="container fw page-menu" menuItemName="content">
+            <section id="content" class="container fw page-menu" menuItemName="top">
                 <div class="container">
                     <div class="boxes fh align-content-center space-top-bot">
                         <div class="box box-100">
@@ -146,8 +146,8 @@
                 </div>
             </section>
             
-            <section id="test_1" class="container fw page-menu" menuItemName="Test_section_1"></section>
-            <section id="test_2" class="container fw page-menu" menuItemName="Test_section_2"></section>
+            <section id="test_1" class="container fw page-menu fh fw-bg" menuItemName="Test_1"></section>
+            <section id="test_2" class="container fw page-menu fh" menuItemName="Test_2"></section>
 
         </main>
 
@@ -167,16 +167,16 @@
                     <nav class="menu footer-menu">
                         <ul id="footer-menu" class="menu footer-menu p-0">
                             <li class="item active">
-                                <a href="#" class="active">Item_1</a>
+                                <a href="#" class="active">home</a>
                             </li>
                             <li class="item">
-                                <a href="#">Item_1</a>
+                                <a href="#top">Item_1</a>
                             </li>
                             <li class="item">
-                                <a href="#">Item_3</a>
+                                <a href="#test_1">Item_3</a>
                             </li>
                             <li class="item">
-                                <a href="#">Item_4</a>
+                                <a href="#test_1">Item_4</a>
                             </li>
                         </ul>
                     </nav>
@@ -213,7 +213,7 @@
                 <ul id="target-group" class="menu actions hidden">
                     <li class="action">
                         <a href="#" class="">
-                            <i class="iconoir-settings icon"></i>
+                            <i class="iconoir-wolf icon"></i>
                             Link
                         </a>
                     </li>
