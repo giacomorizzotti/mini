@@ -9658,7 +9658,7 @@ body.mini .btn {
     text-align: center;
   }
 }
-body.mini .btn:hover, body.mini .btn.clicked {
+body.mini .btn:hover, body.mini .btn.clicked, body.mini .btn.active {
   color: var(--white);
   background: var(--link-color);
   border-color: var(--link-color);

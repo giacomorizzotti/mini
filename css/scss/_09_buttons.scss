@@ -24,7 +24,7 @@ body {
                 text-align: center;
             }
 
-            &:hover, &.clicked {
+            &:hover, &.clicked, &.active {
                 color: var(--white);
                 background: var(--link-color);
                 border-color: var(--link-color);
