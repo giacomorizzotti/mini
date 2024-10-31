@@ -9706,1380 +9706,1380 @@ body.mini .btn.XL, body.mini .btn.xl {
 body.mini .btn.XXL, body.mini .btn.xxl {
   padding: calc(var(--padding) * 1.25) calc(var(--padding) * 1.75);
 }
-body.mini-btn {
+body.mini .wh-btn {
   color: var(--white) !important;
   border-color: var(--white) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .wh-btn:hover, body.mini .wh-btn.clicked {
   color: var(--black) !important;
   background: var(--white) !important;
   border-color: var(--white) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .wh-btn-hover:hover, body.mini .wh-btn-hover.clicked {
   color: var(--white) !important;
   border-color: var(--white) !important;
 }
-body.mini-btn-bg {
+body.mini .wh-btn-bg {
   color: var(--black) !important;
   border-color: var(--white) !important;
   background: var(--white) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
-  color: var(--white) !important;
-  border-color: var(--white) !important;
-  background: transparent !important;
-}
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
-  color: var(--black) !important;
-  border-color: var(--white) !important;
-  background: var(--white) !important;
-}
-body.mini-btn {
-  color: var(--white) !important;
-  border-color: var(--white) !important;
-}
-body.mini-btn:hover, body.mini-btn.clicked {
-  color: var(--black) !important;
-  background: var(--white) !important;
-  border-color: var(--white) !important;
-}
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
-  color: var(--white) !important;
-  border-color: var(--white) !important;
-}
-body.mini-btn-bg {
-  color: var(--black) !important;
-  border-color: var(--white) !important;
-  background: var(--white) !important;
-}
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .wh-btn-bg:hover, body.mini .wh-btn-bg.clicked {
   color: var(--white) !important;
   border-color: var(--white) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .wh-btn-bg-hover:hover, body.mini .wh-btn-bg-hover.clicked {
   color: var(--black) !important;
   border-color: var(--white) !important;
   background: var(--white) !important;
 }
-body.mini-btn {
+body.mini .white-btn {
+  color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+body.mini .white-btn:hover, body.mini .white-btn.clicked {
+  color: var(--black) !important;
+  background: var(--white) !important;
+  border-color: var(--white) !important;
+}
+body.mini .white-btn-hover:hover, body.mini .white-btn-hover.clicked {
+  color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+body.mini .white-btn-bg {
+  color: var(--black) !important;
+  border-color: var(--white) !important;
+  background: var(--white) !important;
+}
+body.mini .white-btn-bg:hover, body.mini .white-btn-bg.clicked {
+  color: var(--white) !important;
+  border-color: var(--white) !important;
+  background: transparent !important;
+}
+body.mini .white-btn-bg-hover:hover, body.mini .white-btn-bg-hover.clicked {
+  color: var(--black) !important;
+  border-color: var(--white) !important;
+  background: var(--white) !important;
+}
+body.mini .fw-btn {
   color: var(--false-white) !important;
   border-color: var(--false-white) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .fw-btn:hover, body.mini .fw-btn.clicked {
   color: var(--black) !important;
   background: var(--false-white) !important;
   border-color: var(--false-white) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .fw-btn-hover:hover, body.mini .fw-btn-hover.clicked {
   color: var(--false-white) !important;
   border-color: var(--false-white) !important;
 }
-body.mini-btn-bg {
+body.mini .fw-btn-bg {
   color: var(--black) !important;
   border-color: var(--false-white) !important;
   background: var(--false-white) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .fw-btn-bg:hover, body.mini .fw-btn-bg.clicked {
   color: var(--false-white) !important;
   border-color: var(--false-white) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .fw-btn-bg-hover:hover, body.mini .fw-btn-bg-hover.clicked {
   color: var(--black) !important;
   border-color: var(--false-white) !important;
   background: var(--false-white) !important;
 }
-body.mini-btn {
+body.mini .light-grey-btn {
   color: var(--light-grey) !important;
   border-color: var(--light-grey) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .light-grey-btn:hover, body.mini .light-grey-btn.clicked {
   color: var(--black) !important;
   background: var(--light-grey) !important;
   border-color: var(--light-grey) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .light-grey-btn-hover:hover, body.mini .light-grey-btn-hover.clicked {
   color: var(--light-grey) !important;
   border-color: var(--light-grey) !important;
 }
-body.mini-btn-bg {
+body.mini .light-grey-btn-bg {
   color: var(--black) !important;
   border-color: var(--light-grey) !important;
   background: var(--light-grey) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .light-grey-btn-bg:hover, body.mini .light-grey-btn-bg.clicked {
   color: var(--light-grey) !important;
   border-color: var(--light-grey) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .light-grey-btn-bg-hover:hover, body.mini .light-grey-btn-bg-hover.clicked {
   color: var(--black) !important;
   border-color: var(--light-grey) !important;
   background: var(--light-grey) !important;
 }
-body.mini-btn {
+body.mini .grey-btn {
   color: var(--grey) !important;
   border-color: var(--grey) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .grey-btn:hover, body.mini .grey-btn.clicked {
   color: var(--white) !important;
   background: var(--grey) !important;
   border-color: var(--grey) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .grey-btn-hover:hover, body.mini .grey-btn-hover.clicked {
   color: var(--grey) !important;
   border-color: var(--grey) !important;
 }
-body.mini-btn-bg {
+body.mini .grey-btn-bg {
   color: var(--white) !important;
   border-color: var(--grey) !important;
   background: var(--grey) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .grey-btn-bg:hover, body.mini .grey-btn-bg.clicked {
   color: var(--grey) !important;
   border-color: var(--grey) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .grey-btn-bg-hover:hover, body.mini .grey-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--grey) !important;
   background: var(--grey) !important;
 }
-body.mini-btn {
+body.mini .dark-grey-btn {
   color: var(--dark-grey) !important;
   border-color: var(--dark-grey) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .dark-grey-btn:hover, body.mini .dark-grey-btn.clicked {
   color: var(--white) !important;
   background: var(--dark-grey) !important;
   border-color: var(--dark-grey) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .dark-grey-btn-hover:hover, body.mini .dark-grey-btn-hover.clicked {
   color: var(--dark-grey) !important;
   border-color: var(--dark-grey) !important;
 }
-body.mini-btn-bg {
+body.mini .dark-grey-btn-bg {
   color: var(--white) !important;
   border-color: var(--dark-grey) !important;
   background: var(--dark-grey) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .dark-grey-btn-bg:hover, body.mini .dark-grey-btn-bg.clicked {
   color: var(--dark-grey) !important;
   border-color: var(--dark-grey) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .dark-grey-btn-bg-hover:hover, body.mini .dark-grey-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--dark-grey) !important;
   background: var(--dark-grey) !important;
 }
-body.mini-btn {
+body.mini .fb-btn {
   color: var(--false-black) !important;
   border-color: var(--false-black) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .fb-btn:hover, body.mini .fb-btn.clicked {
   color: var(--white) !important;
   background: var(--false-black) !important;
   border-color: var(--false-black) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .fb-btn-hover:hover, body.mini .fb-btn-hover.clicked {
   color: var(--false-black) !important;
   border-color: var(--false-black) !important;
 }
-body.mini-btn-bg {
+body.mini .fb-btn-bg {
   color: var(--white) !important;
   border-color: var(--false-black) !important;
   background: var(--false-black) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .fb-btn-bg:hover, body.mini .fb-btn-bg.clicked {
   color: var(--false-black) !important;
   border-color: var(--false-black) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .fb-btn-bg-hover:hover, body.mini .fb-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--false-black) !important;
   background: var(--false-black) !important;
 }
-body.mini-btn {
+body.mini .bk-btn {
   color: var(--black) !important;
   border-color: var(--black) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .bk-btn:hover, body.mini .bk-btn.clicked {
   color: var(--white) !important;
   background: var(--black) !important;
   border-color: var(--black) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .bk-btn-hover:hover, body.mini .bk-btn-hover.clicked {
   color: var(--black) !important;
   border-color: var(--black) !important;
 }
-body.mini-btn-bg {
+body.mini .bk-btn-bg {
   color: var(--white) !important;
   border-color: var(--black) !important;
   background: var(--black) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .bk-btn-bg:hover, body.mini .bk-btn-bg.clicked {
   color: var(--black) !important;
   border-color: var(--black) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .bk-btn-bg-hover:hover, body.mini .bk-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--black) !important;
   background: var(--black) !important;
 }
-body.mini-btn {
+body.mini .black-btn {
   color: var(--black) !important;
   border-color: var(--black) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .black-btn:hover, body.mini .black-btn.clicked {
   color: var(--white) !important;
   background: var(--black) !important;
   border-color: var(--black) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .black-btn-hover:hover, body.mini .black-btn-hover.clicked {
   color: var(--black) !important;
   border-color: var(--black) !important;
 }
-body.mini-btn-bg {
+body.mini .black-btn-bg {
   color: var(--white) !important;
   border-color: var(--black) !important;
   background: var(--black) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .black-btn-bg:hover, body.mini .black-btn-bg.clicked {
   color: var(--black) !important;
   border-color: var(--black) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .black-btn-bg-hover:hover, body.mini .black-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--black) !important;
   background: var(--black) !important;
 }
-body.mini-btn {
+body.mini .col-btn {
   color: var(--main-color) !important;
   border-color: var(--main-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .col-btn:hover, body.mini .col-btn.clicked {
   color: var(--white) !important;
   background: var(--main-color) !important;
   border-color: var(--main-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .col-btn-hover:hover, body.mini .col-btn-hover.clicked {
   color: var(--main-color) !important;
   border-color: var(--main-color) !important;
 }
-body.mini-btn-bg {
+body.mini .col-btn-bg {
   color: var(--white) !important;
   border-color: var(--main-color) !important;
   background: var(--main-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
-  color: var(--main-color) !important;
-  border-color: var(--main-color) !important;
-  background: transparent !important;
-}
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
-  color: var(--white) !important;
-  border-color: var(--main-color) !important;
-  background: var(--main-color) !important;
-}
-body.mini-btn {
-  color: var(--main-color) !important;
-  border-color: var(--main-color) !important;
-}
-body.mini-btn:hover, body.mini-btn.clicked {
-  color: var(--white) !important;
-  background: var(--main-color) !important;
-  border-color: var(--main-color) !important;
-}
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
-  color: var(--main-color) !important;
-  border-color: var(--main-color) !important;
-}
-body.mini-btn-bg {
-  color: var(--white) !important;
-  border-color: var(--main-color) !important;
-  background: var(--main-color) !important;
-}
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .col-btn-bg:hover, body.mini .col-btn-bg.clicked {
   color: var(--main-color) !important;
   border-color: var(--main-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .col-btn-bg-hover:hover, body.mini .col-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--main-color) !important;
   background: var(--main-color) !important;
 }
-body.mini-btn {
+body.mini .color-btn {
   color: var(--main-color) !important;
   border-color: var(--main-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .color-btn:hover, body.mini .color-btn.clicked {
   color: var(--white) !important;
   background: var(--main-color) !important;
   border-color: var(--main-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .color-btn-hover:hover, body.mini .color-btn-hover.clicked {
   color: var(--main-color) !important;
   border-color: var(--main-color) !important;
 }
-body.mini-btn-bg {
+body.mini .color-btn-bg {
   color: var(--white) !important;
   border-color: var(--main-color) !important;
   background: var(--main-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .color-btn-bg:hover, body.mini .color-btn-bg.clicked {
   color: var(--main-color) !important;
   border-color: var(--main-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .color-btn-bg-hover:hover, body.mini .color-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--main-color) !important;
   background: var(--main-color) !important;
 }
-body.mini-btn {
+body.mini .main-color-btn {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini .main-color-btn:hover, body.mini .main-color-btn.clicked {
+  color: var(--white) !important;
+  background: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini .main-color-btn-hover:hover, body.mini .main-color-btn-hover.clicked {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+body.mini .main-color-btn-bg {
+  color: var(--white) !important;
+  border-color: var(--main-color) !important;
+  background: var(--main-color) !important;
+}
+body.mini .main-color-btn-bg:hover, body.mini .main-color-btn-bg.clicked {
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  background: transparent !important;
+}
+body.mini .main-color-btn-bg-hover:hover, body.mini .main-color-btn-bg-hover.clicked {
+  color: var(--white) !important;
+  border-color: var(--main-color) !important;
+  background: var(--main-color) !important;
+}
+body.mini .color-dark-btn {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .color-dark-btn:hover, body.mini .color-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .color-dark-btn-hover:hover, body.mini .color-dark-btn-hover.clicked {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .color-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--main-color-dark) !important;
   background: var(--main-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .color-dark-btn-bg:hover, body.mini .color-dark-btn-bg.clicked {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .color-dark-btn-bg-hover:hover, body.mini .color-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--main-color-dark) !important;
   background: var(--main-color-dark) !important;
 }
-body.mini-btn {
+body.mini .main-color-dark-btn {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .main-color-dark-btn:hover, body.mini .main-color-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .main-color-dark-btn-hover:hover, body.mini .main-color-dark-btn-hover.clicked {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .main-color-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--main-color-dark) !important;
   background: var(--main-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .main-color-dark-btn-bg:hover, body.mini .main-color-dark-btn-bg.clicked {
   color: var(--main-color-dark) !important;
   border-color: var(--main-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .main-color-dark-btn-bg-hover:hover, body.mini .main-color-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--main-color-dark) !important;
   background: var(--main-color-dark) !important;
 }
-body.mini-btn {
+body.mini .second-color-btn {
   color: var(--second-color) !important;
   border-color: var(--second-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .second-color-btn:hover, body.mini .second-color-btn.clicked {
   color: var(--white) !important;
   background: var(--second-color) !important;
   border-color: var(--second-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .second-color-btn-hover:hover, body.mini .second-color-btn-hover.clicked {
   color: var(--second-color) !important;
   border-color: var(--second-color) !important;
 }
-body.mini-btn-bg {
+body.mini .second-color-btn-bg {
   color: var(--white) !important;
   border-color: var(--second-color) !important;
   background: var(--second-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .second-color-btn-bg:hover, body.mini .second-color-btn-bg.clicked {
   color: var(--second-color) !important;
   border-color: var(--second-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .second-color-btn-bg-hover:hover, body.mini .second-color-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--second-color) !important;
   background: var(--second-color) !important;
 }
-body.mini-btn {
+body.mini .second-color-dark-btn {
   color: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .second-color-dark-btn:hover, body.mini .second-color-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .second-color-dark-btn-hover:hover, body.mini .second-color-dark-btn-hover.clicked {
   color: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .second-color-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--second-color-dark) !important;
   background: var(--second-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .second-color-dark-btn-bg:hover, body.mini .second-color-dark-btn-bg.clicked {
   color: var(--second-color-dark) !important;
   border-color: var(--second-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .second-color-dark-btn-bg-hover:hover, body.mini .second-color-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--second-color-dark) !important;
   background: var(--second-color-dark) !important;
 }
-body.mini-btn {
+body.mini .third-color-btn {
   color: var(--third-color) !important;
   border-color: var(--third-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .third-color-btn:hover, body.mini .third-color-btn.clicked {
   color: var(--white) !important;
   background: var(--third-color) !important;
   border-color: var(--third-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .third-color-btn-hover:hover, body.mini .third-color-btn-hover.clicked {
   color: var(--third-color) !important;
   border-color: var(--third-color) !important;
 }
-body.mini-btn-bg {
+body.mini .third-color-btn-bg {
   color: var(--white) !important;
   border-color: var(--third-color) !important;
   background: var(--third-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .third-color-btn-bg:hover, body.mini .third-color-btn-bg.clicked {
   color: var(--third-color) !important;
   border-color: var(--third-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .third-color-btn-bg-hover:hover, body.mini .third-color-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--third-color) !important;
   background: var(--third-color) !important;
 }
-body.mini-btn {
+body.mini .third-color-dark-btn {
   color: var(--third-color-dark) !important;
   border-color: var(--third-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .third-color-dark-btn:hover, body.mini .third-color-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--third-color-dark) !important;
   border-color: var(--third-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .third-color-dark-btn-hover:hover, body.mini .third-color-dark-btn-hover.clicked {
   color: var(--third-color-dark) !important;
   border-color: var(--third-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .third-color-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--third-color-dark) !important;
   background: var(--third-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .third-color-dark-btn-bg:hover, body.mini .third-color-dark-btn-bg.clicked {
   color: var(--third-color-dark) !important;
   border-color: var(--third-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .third-color-dark-btn-bg-hover:hover, body.mini .third-color-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--third-color-dark) !important;
   background: var(--third-color-dark) !important;
 }
-body.mini-btn {
+body.mini .fourth-color-btn {
   color: var(--fourth-color) !important;
   border-color: var(--fourth-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .fourth-color-btn:hover, body.mini .fourth-color-btn.clicked {
   color: var(--white) !important;
   background: var(--fourth-color) !important;
   border-color: var(--fourth-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .fourth-color-btn-hover:hover, body.mini .fourth-color-btn-hover.clicked {
   color: var(--fourth-color) !important;
   border-color: var(--fourth-color) !important;
 }
-body.mini-btn-bg {
+body.mini .fourth-color-btn-bg {
   color: var(--white) !important;
   border-color: var(--fourth-color) !important;
   background: var(--fourth-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .fourth-color-btn-bg:hover, body.mini .fourth-color-btn-bg.clicked {
   color: var(--fourth-color) !important;
   border-color: var(--fourth-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .fourth-color-btn-bg-hover:hover, body.mini .fourth-color-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--fourth-color) !important;
   background: var(--fourth-color) !important;
 }
-body.mini-btn {
+body.mini .fourth-color-dark-btn {
   color: var(--fourth-color-dark) !important;
   border-color: var(--fourth-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .fourth-color-dark-btn:hover, body.mini .fourth-color-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--fourth-color-dark) !important;
   border-color: var(--fourth-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .fourth-color-dark-btn-hover:hover, body.mini .fourth-color-dark-btn-hover.clicked {
   color: var(--fourth-color-dark) !important;
   border-color: var(--fourth-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .fourth-color-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--fourth-color-dark) !important;
   background: var(--fourth-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .fourth-color-dark-btn-bg:hover, body.mini .fourth-color-dark-btn-bg.clicked {
   color: var(--fourth-color-dark) !important;
   border-color: var(--fourth-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .fourth-color-dark-btn-bg-hover:hover, body.mini .fourth-color-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--fourth-color-dark) !important;
   background: var(--fourth-color-dark) !important;
 }
-body.mini-btn {
+body.mini .link-btn {
   color: var(--link-color) !important;
   border-color: var(--link-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .link-btn:hover, body.mini .link-btn.clicked {
   color: var(--white) !important;
   background: var(--link-color) !important;
   border-color: var(--link-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .link-btn-hover:hover, body.mini .link-btn-hover.clicked {
   color: var(--link-color) !important;
   border-color: var(--link-color) !important;
 }
-body.mini-btn-bg {
+body.mini .link-btn-bg {
   color: var(--white) !important;
   border-color: var(--link-color) !important;
   background: var(--link-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .link-btn-bg:hover, body.mini .link-btn-bg.clicked {
   color: var(--link-color) !important;
   border-color: var(--link-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .link-btn-bg-hover:hover, body.mini .link-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--link-color) !important;
   background: var(--link-color) !important;
 }
-body.mini-btn {
+body.mini .link-hover-btn {
   color: var(--link-hover-color) !important;
   border-color: var(--link-hover-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .link-hover-btn:hover, body.mini .link-hover-btn.clicked {
   color: var(--white) !important;
   background: var(--link-hover-color) !important;
   border-color: var(--link-hover-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .link-hover-btn-hover:hover, body.mini .link-hover-btn-hover.clicked {
   color: var(--link-hover-color) !important;
   border-color: var(--link-hover-color) !important;
 }
-body.mini-btn-bg {
+body.mini .link-hover-btn-bg {
   color: var(--white) !important;
   border-color: var(--link-hover-color) !important;
   background: var(--link-hover-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .link-hover-btn-bg:hover, body.mini .link-hover-btn-bg.clicked {
   color: var(--link-hover-color) !important;
   border-color: var(--link-hover-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .link-hover-btn-bg-hover:hover, body.mini .link-hover-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--link-hover-color) !important;
   background: var(--link-hover-color) !important;
 }
-body.mini-btn {
+body.mini .info-btn {
   color: var(--info) !important;
   border-color: var(--info) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .info-btn:hover, body.mini .info-btn.clicked {
   color: var(--white) !important;
   background: var(--info) !important;
   border-color: var(--info) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .info-btn-hover:hover, body.mini .info-btn-hover.clicked {
   color: var(--info) !important;
   border-color: var(--info) !important;
 }
-body.mini-btn-bg {
+body.mini .info-btn-bg {
   color: var(--white) !important;
   border-color: var(--info) !important;
   background: var(--info) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .info-btn-bg:hover, body.mini .info-btn-bg.clicked {
   color: var(--info) !important;
   border-color: var(--info) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .info-btn-bg-hover:hover, body.mini .info-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--info) !important;
   background: var(--info) !important;
 }
-body.mini-btn {
+body.mini .success-btn {
   color: var(--success) !important;
   border-color: var(--success) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .success-btn:hover, body.mini .success-btn.clicked {
   color: var(--white) !important;
   background: var(--success) !important;
   border-color: var(--success) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .success-btn-hover:hover, body.mini .success-btn-hover.clicked {
   color: var(--success) !important;
   border-color: var(--success) !important;
 }
-body.mini-btn-bg {
+body.mini .success-btn-bg {
   color: var(--white) !important;
   border-color: var(--success) !important;
   background: var(--success) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .success-btn-bg:hover, body.mini .success-btn-bg.clicked {
   color: var(--success) !important;
   border-color: var(--success) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .success-btn-bg-hover:hover, body.mini .success-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--success) !important;
   background: var(--success) !important;
 }
-body.mini-btn {
+body.mini .warning-btn {
   color: var(--warning) !important;
   border-color: var(--warning) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .warning-btn:hover, body.mini .warning-btn.clicked {
   color: var(--white) !important;
   background: var(--warning) !important;
   border-color: var(--warning) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .warning-btn-hover:hover, body.mini .warning-btn-hover.clicked {
   color: var(--warning) !important;
   border-color: var(--warning) !important;
 }
-body.mini-btn-bg {
+body.mini .warning-btn-bg {
   color: var(--white) !important;
   border-color: var(--warning) !important;
   background: var(--warning) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .warning-btn-bg:hover, body.mini .warning-btn-bg.clicked {
   color: var(--warning) !important;
   border-color: var(--warning) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .warning-btn-bg-hover:hover, body.mini .warning-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--warning) !important;
   background: var(--warning) !important;
 }
-body.mini-btn {
+body.mini .danger-btn {
   color: var(--danger) !important;
   border-color: var(--danger) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .danger-btn:hover, body.mini .danger-btn.clicked {
   color: var(--white) !important;
   background: var(--danger) !important;
   border-color: var(--danger) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .danger-btn-hover:hover, body.mini .danger-btn-hover.clicked {
   color: var(--danger) !important;
   border-color: var(--danger) !important;
 }
-body.mini-btn-bg {
+body.mini .danger-btn-bg {
   color: var(--white) !important;
   border-color: var(--danger) !important;
   background: var(--danger) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .danger-btn-bg:hover, body.mini .danger-btn-bg.clicked {
   color: var(--danger) !important;
   border-color: var(--danger) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .danger-btn-bg-hover:hover, body.mini .danger-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--danger) !important;
   background: var(--danger) !important;
 }
-body.mini-btn {
+body.mini .bad-btn {
   color: var(--bad) !important;
   border-color: var(--bad) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .bad-btn:hover, body.mini .bad-btn.clicked {
   color: var(--white) !important;
   background: var(--bad) !important;
   border-color: var(--bad) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .bad-btn-hover:hover, body.mini .bad-btn-hover.clicked {
   color: var(--bad) !important;
   border-color: var(--bad) !important;
 }
-body.mini-btn-bg {
+body.mini .bad-btn-bg {
   color: var(--white) !important;
   border-color: var(--bad) !important;
   background: var(--bad) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .bad-btn-bg:hover, body.mini .bad-btn-bg.clicked {
   color: var(--bad) !important;
   border-color: var(--bad) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .bad-btn-bg-hover:hover, body.mini .bad-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--bad) !important;
   background: var(--bad) !important;
 }
-body.mini-btn {
+body.mini .acid-green-btn {
   color: var(--acid-green) !important;
   border-color: var(--acid-green) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .acid-green-btn:hover, body.mini .acid-green-btn.clicked {
   color: var(--white) !important;
   background: var(--acid-green) !important;
   border-color: var(--acid-green) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .acid-green-btn-hover:hover, body.mini .acid-green-btn-hover.clicked {
   color: var(--acid-green) !important;
   border-color: var(--acid-green) !important;
 }
-body.mini-btn-bg {
+body.mini .acid-green-btn-bg {
   color: var(--white) !important;
   border-color: var(--acid-green) !important;
   background: var(--acid-green) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .acid-green-btn-bg:hover, body.mini .acid-green-btn-bg.clicked {
   color: var(--acid-green) !important;
   border-color: var(--acid-green) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .acid-green-btn-bg-hover:hover, body.mini .acid-green-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--acid-green) !important;
   background: var(--acid-green) !important;
 }
-body.mini-btn {
+body.mini .ginger-bread-btn {
   color: var(--gingerbread) !important;
   border-color: var(--gingerbread) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .ginger-bread-btn:hover, body.mini .ginger-bread-btn.clicked {
   color: var(--white) !important;
   background: var(--gingerbread) !important;
   border-color: var(--gingerbread) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .ginger-bread-btn-hover:hover, body.mini .ginger-bread-btn-hover.clicked {
   color: var(--gingerbread) !important;
   border-color: var(--gingerbread) !important;
 }
-body.mini-btn-bg {
+body.mini .ginger-bread-btn-bg {
   color: var(--white) !important;
   border-color: var(--gingerbread) !important;
   background: var(--gingerbread) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .ginger-bread-btn-bg:hover, body.mini .ginger-bread-btn-bg.clicked {
   color: var(--gingerbread) !important;
   border-color: var(--gingerbread) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .ginger-bread-btn-bg-hover:hover, body.mini .ginger-bread-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--gingerbread) !important;
   background: var(--gingerbread) !important;
 }
-body.mini-btn {
+body.mini .mini-btn {
   color: var(--mini-color) !important;
   border-color: var(--mini-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .mini-btn:hover, body.mini .mini-btn.clicked {
   color: var(--white) !important;
   background: var(--mini-color) !important;
   border-color: var(--mini-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .mini-btn-hover:hover, body.mini .mini-btn-hover.clicked {
   color: var(--mini-color) !important;
   border-color: var(--mini-color) !important;
 }
-body.mini-btn-bg {
+body.mini .mini-btn-bg {
   color: var(--white) !important;
   border-color: var(--mini-color) !important;
   background: var(--mini-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .mini-btn-bg:hover, body.mini .mini-btn-bg.clicked {
   color: var(--mini-color) !important;
   border-color: var(--mini-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .mini-btn-bg-hover:hover, body.mini .mini-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--mini-color) !important;
   background: var(--mini-color) !important;
 }
-body.mini-btn {
+body.mini .mini-dark-btn {
   color: var(--mini-color-dark) !important;
   border-color: var(--mini-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .mini-dark-btn:hover, body.mini .mini-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--mini-color-dark) !important;
   border-color: var(--mini-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .mini-dark-btn-hover:hover, body.mini .mini-dark-btn-hover.clicked {
   color: var(--mini-color-dark) !important;
   border-color: var(--mini-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .mini-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--mini-color-dark) !important;
   background: var(--mini-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .mini-dark-btn-bg:hover, body.mini .mini-dark-btn-bg.clicked {
   color: var(--mini-color-dark) !important;
   border-color: var(--mini-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .mini-dark-btn-bg-hover:hover, body.mini .mini-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--mini-color-dark) !important;
   background: var(--mini-color-dark) !important;
 }
-body.mini-btn {
+body.mini .mini-second-btn {
   color: var(--mini-second) !important;
   border-color: var(--mini-second) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .mini-second-btn:hover, body.mini .mini-second-btn.clicked {
   color: var(--white) !important;
   background: var(--mini-second) !important;
   border-color: var(--mini-second) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .mini-second-btn-hover:hover, body.mini .mini-second-btn-hover.clicked {
   color: var(--mini-second) !important;
   border-color: var(--mini-second) !important;
 }
-body.mini-btn-bg {
+body.mini .mini-second-btn-bg {
   color: var(--white) !important;
   border-color: var(--mini-second) !important;
   background: var(--mini-second) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .mini-second-btn-bg:hover, body.mini .mini-second-btn-bg.clicked {
   color: var(--mini-second) !important;
   border-color: var(--mini-second) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .mini-second-btn-bg-hover:hover, body.mini .mini-second-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--mini-second) !important;
   background: var(--mini-second) !important;
 }
-body.mini-btn {
+body.mini .mini-third-btn {
   color: var(--mini-third) !important;
   border-color: var(--mini-third) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .mini-third-btn:hover, body.mini .mini-third-btn.clicked {
   color: var(--white) !important;
   background: var(--mini-third) !important;
   border-color: var(--mini-third) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .mini-third-btn-hover:hover, body.mini .mini-third-btn-hover.clicked {
   color: var(--mini-third) !important;
   border-color: var(--mini-third) !important;
 }
-body.mini-btn-bg {
+body.mini .mini-third-btn-bg {
   color: var(--white) !important;
   border-color: var(--mini-third) !important;
   background: var(--mini-third) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .mini-third-btn-bg:hover, body.mini .mini-third-btn-bg.clicked {
   color: var(--mini-third) !important;
   border-color: var(--mini-third) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .mini-third-btn-bg-hover:hover, body.mini .mini-third-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--mini-third) !important;
   background: var(--mini-third) !important;
 }
-body.mini-btn {
+body.mini .mini-fourth-btn {
   color: var(--mini-fourth) !important;
   border-color: var(--mini-fourth) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .mini-fourth-btn:hover, body.mini .mini-fourth-btn.clicked {
   color: var(--white) !important;
   background: var(--mini-fourth) !important;
   border-color: var(--mini-fourth) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .mini-fourth-btn-hover:hover, body.mini .mini-fourth-btn-hover.clicked {
   color: var(--mini-fourth) !important;
   border-color: var(--mini-fourth) !important;
 }
-body.mini-btn-bg {
+body.mini .mini-fourth-btn-bg {
   color: var(--white) !important;
   border-color: var(--mini-fourth) !important;
   background: var(--mini-fourth) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .mini-fourth-btn-bg:hover, body.mini .mini-fourth-btn-bg.clicked {
   color: var(--mini-fourth) !important;
   border-color: var(--mini-fourth) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .mini-fourth-btn-bg-hover:hover, body.mini .mini-fourth-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--mini-fourth) !important;
   background: var(--mini-fourth) !important;
 }
-body.mini-btn {
+body.mini .uwa-btn {
   color: var(--uwa-color) !important;
   border-color: var(--uwa-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .uwa-btn:hover, body.mini .uwa-btn.clicked {
   color: var(--white) !important;
   background: var(--uwa-color) !important;
   border-color: var(--uwa-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .uwa-btn-hover:hover, body.mini .uwa-btn-hover.clicked {
   color: var(--uwa-color) !important;
   border-color: var(--uwa-color) !important;
 }
-body.mini-btn-bg {
+body.mini .uwa-btn-bg {
   color: var(--white) !important;
   border-color: var(--uwa-color) !important;
   background: var(--uwa-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .uwa-btn-bg:hover, body.mini .uwa-btn-bg.clicked {
   color: var(--uwa-color) !important;
   border-color: var(--uwa-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .uwa-btn-bg-hover:hover, body.mini .uwa-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--uwa-color) !important;
   background: var(--uwa-color) !important;
 }
-body.mini-btn {
+body.mini .uwa-dark-btn {
   color: var(--uwa-color-dark) !important;
   border-color: var(--uwa-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .uwa-dark-btn:hover, body.mini .uwa-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--uwa-color-dark) !important;
   border-color: var(--uwa-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .uwa-dark-btn-hover:hover, body.mini .uwa-dark-btn-hover.clicked {
   color: var(--uwa-color-dark) !important;
   border-color: var(--uwa-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .uwa-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--uwa-color-dark) !important;
   background: var(--uwa-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .uwa-dark-btn-bg:hover, body.mini .uwa-dark-btn-bg.clicked {
   color: var(--uwa-color-dark) !important;
   border-color: var(--uwa-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .uwa-dark-btn-bg-hover:hover, body.mini .uwa-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--uwa-color-dark) !important;
   background: var(--uwa-color-dark) !important;
 }
-body.mini-btn {
+body.mini .uwa-second-btn {
   color: var(--uwa-second-color) !important;
   border-color: var(--uwa-second-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .uwa-second-btn:hover, body.mini .uwa-second-btn.clicked {
   color: var(--white) !important;
   background: var(--uwa-second-color) !important;
   border-color: var(--uwa-second-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .uwa-second-btn-hover:hover, body.mini .uwa-second-btn-hover.clicked {
   color: var(--uwa-second-color) !important;
   border-color: var(--uwa-second-color) !important;
 }
-body.mini-btn-bg {
+body.mini .uwa-second-btn-bg {
   color: var(--white) !important;
   border-color: var(--uwa-second-color) !important;
   background: var(--uwa-second-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .uwa-second-btn-bg:hover, body.mini .uwa-second-btn-bg.clicked {
   color: var(--uwa-second-color) !important;
   border-color: var(--uwa-second-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .uwa-second-btn-bg-hover:hover, body.mini .uwa-second-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--uwa-second-color) !important;
   background: var(--uwa-second-color) !important;
 }
-body.mini-btn {
+body.mini .uwa-third-btn {
   color: var(--uwa-third-color) !important;
   border-color: var(--uwa-third-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .uwa-third-btn:hover, body.mini .uwa-third-btn.clicked {
   color: var(--white) !important;
   background: var(--uwa-third-color) !important;
   border-color: var(--uwa-third-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .uwa-third-btn-hover:hover, body.mini .uwa-third-btn-hover.clicked {
   color: var(--uwa-third-color) !important;
   border-color: var(--uwa-third-color) !important;
 }
-body.mini-btn-bg {
+body.mini .uwa-third-btn-bg {
   color: var(--white) !important;
   border-color: var(--uwa-third-color) !important;
   background: var(--uwa-third-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .uwa-third-btn-bg:hover, body.mini .uwa-third-btn-bg.clicked {
   color: var(--uwa-third-color) !important;
   border-color: var(--uwa-third-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .uwa-third-btn-bg-hover:hover, body.mini .uwa-third-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--uwa-third-color) !important;
   background: var(--uwa-third-color) !important;
 }
-body.mini-btn {
+body.mini .uwa-fourth-btn {
   color: var(--uwa-fourth-color) !important;
   border-color: var(--uwa-fourth-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .uwa-fourth-btn:hover, body.mini .uwa-fourth-btn.clicked {
   color: var(--white) !important;
   background: var(--uwa-fourth-color) !important;
   border-color: var(--uwa-fourth-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .uwa-fourth-btn-hover:hover, body.mini .uwa-fourth-btn-hover.clicked {
   color: var(--uwa-fourth-color) !important;
   border-color: var(--uwa-fourth-color) !important;
 }
-body.mini-btn-bg {
+body.mini .uwa-fourth-btn-bg {
   color: var(--white) !important;
   border-color: var(--uwa-fourth-color) !important;
   background: var(--uwa-fourth-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .uwa-fourth-btn-bg:hover, body.mini .uwa-fourth-btn-bg.clicked {
   color: var(--uwa-fourth-color) !important;
   border-color: var(--uwa-fourth-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .uwa-fourth-btn-bg-hover:hover, body.mini .uwa-fourth-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--uwa-fourth-color) !important;
   background: var(--uwa-fourth-color) !important;
 }
-body.mini-btn {
+body.mini .uwa-link-btn {
   color: var(--uwa-link-color) !important;
   border-color: var(--uwa-link-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .uwa-link-btn:hover, body.mini .uwa-link-btn.clicked {
   color: var(--white) !important;
   background: var(--uwa-link-color) !important;
   border-color: var(--uwa-link-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .uwa-link-btn-hover:hover, body.mini .uwa-link-btn-hover.clicked {
   color: var(--uwa-link-color) !important;
   border-color: var(--uwa-link-color) !important;
 }
-body.mini-btn-bg {
+body.mini .uwa-link-btn-bg {
   color: var(--white) !important;
   border-color: var(--uwa-link-color) !important;
   background: var(--uwa-link-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .uwa-link-btn-bg:hover, body.mini .uwa-link-btn-bg.clicked {
   color: var(--uwa-link-color) !important;
   border-color: var(--uwa-link-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .uwa-link-btn-bg-hover:hover, body.mini .uwa-link-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--uwa-link-color) !important;
   background: var(--uwa-link-color) !important;
 }
-body.mini-btn {
+body.mini .aroma-btn {
   color: var(--aroma-color) !important;
   border-color: var(--aroma-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .aroma-btn:hover, body.mini .aroma-btn.clicked {
   color: var(--white) !important;
   background: var(--aroma-color) !important;
   border-color: var(--aroma-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .aroma-btn-hover:hover, body.mini .aroma-btn-hover.clicked {
   color: var(--aroma-color) !important;
   border-color: var(--aroma-color) !important;
 }
-body.mini-btn-bg {
+body.mini .aroma-btn-bg {
   color: var(--white) !important;
   border-color: var(--aroma-color) !important;
   background: var(--aroma-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .aroma-btn-bg:hover, body.mini .aroma-btn-bg.clicked {
   color: var(--aroma-color) !important;
   border-color: var(--aroma-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .aroma-btn-bg-hover:hover, body.mini .aroma-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--aroma-color) !important;
   background: var(--aroma-color) !important;
 }
-body.mini-btn {
+body.mini .aroma-dark-btn {
   color: var(--aroma-color-dark) !important;
   border-color: var(--aroma-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .aroma-dark-btn:hover, body.mini .aroma-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--aroma-color-dark) !important;
   border-color: var(--aroma-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .aroma-dark-btn-hover:hover, body.mini .aroma-dark-btn-hover.clicked {
   color: var(--aroma-color-dark) !important;
   border-color: var(--aroma-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .aroma-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--aroma-color-dark) !important;
   background: var(--aroma-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .aroma-dark-btn-bg:hover, body.mini .aroma-dark-btn-bg.clicked {
   color: var(--aroma-color-dark) !important;
   border-color: var(--aroma-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .aroma-dark-btn-bg-hover:hover, body.mini .aroma-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--aroma-color-dark) !important;
   background: var(--aroma-color-dark) !important;
 }
-body.mini-btn {
+body.mini .pdp-btn {
   color: var(--pezzidipla-color) !important;
   border-color: var(--pezzidipla-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .pdp-btn:hover, body.mini .pdp-btn.clicked {
   color: var(--white) !important;
   background: var(--pezzidipla-color) !important;
   border-color: var(--pezzidipla-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .pdp-btn-hover:hover, body.mini .pdp-btn-hover.clicked {
   color: var(--pezzidipla-color) !important;
   border-color: var(--pezzidipla-color) !important;
 }
-body.mini-btn-bg {
+body.mini .pdp-btn-bg {
   color: var(--white) !important;
   border-color: var(--pezzidipla-color) !important;
   background: var(--pezzidipla-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .pdp-btn-bg:hover, body.mini .pdp-btn-bg.clicked {
   color: var(--pezzidipla-color) !important;
   border-color: var(--pezzidipla-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .pdp-btn-bg-hover:hover, body.mini .pdp-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--pezzidipla-color) !important;
   background: var(--pezzidipla-color) !important;
 }
-body.mini-btn {
+body.mini .pdp-second-btn {
   color: var(--pezzidipla-second-color) !important;
   border-color: var(--pezzidipla-second-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .pdp-second-btn:hover, body.mini .pdp-second-btn.clicked {
   color: var(--white) !important;
   background: var(--pezzidipla-second-color) !important;
   border-color: var(--pezzidipla-second-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .pdp-second-btn-hover:hover, body.mini .pdp-second-btn-hover.clicked {
   color: var(--pezzidipla-second-color) !important;
   border-color: var(--pezzidipla-second-color) !important;
 }
-body.mini-btn-bg {
+body.mini .pdp-second-btn-bg {
   color: var(--white) !important;
   border-color: var(--pezzidipla-second-color) !important;
   background: var(--pezzidipla-second-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .pdp-second-btn-bg:hover, body.mini .pdp-second-btn-bg.clicked {
   color: var(--pezzidipla-second-color) !important;
   border-color: var(--pezzidipla-second-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .pdp-second-btn-bg-hover:hover, body.mini .pdp-second-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--pezzidipla-second-color) !important;
   background: var(--pezzidipla-second-color) !important;
 }
-body.mini-btn {
+body.mini .pdp-third-btn {
   color: var(--pezzidipla-third-color) !important;
   border-color: var(--pezzidipla-third-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .pdp-third-btn:hover, body.mini .pdp-third-btn.clicked {
   color: var(--white) !important;
   background: var(--pezzidipla-third-color) !important;
   border-color: var(--pezzidipla-third-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .pdp-third-btn-hover:hover, body.mini .pdp-third-btn-hover.clicked {
   color: var(--pezzidipla-third-color) !important;
   border-color: var(--pezzidipla-third-color) !important;
 }
-body.mini-btn-bg {
+body.mini .pdp-third-btn-bg {
   color: var(--white) !important;
   border-color: var(--pezzidipla-third-color) !important;
   background: var(--pezzidipla-third-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .pdp-third-btn-bg:hover, body.mini .pdp-third-btn-bg.clicked {
   color: var(--pezzidipla-third-color) !important;
   border-color: var(--pezzidipla-third-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .pdp-third-btn-bg-hover:hover, body.mini .pdp-third-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--pezzidipla-third-color) !important;
   background: var(--pezzidipla-third-color) !important;
 }
-body.mini-btn {
+body.mini .pdp-fourth-btn {
   color: var(--pezzidipla-fourth-color) !important;
   border-color: var(--pezzidipla-fourth-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .pdp-fourth-btn:hover, body.mini .pdp-fourth-btn.clicked {
   color: var(--white) !important;
   background: var(--pezzidipla-fourth-color) !important;
   border-color: var(--pezzidipla-fourth-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .pdp-fourth-btn-hover:hover, body.mini .pdp-fourth-btn-hover.clicked {
   color: var(--pezzidipla-fourth-color) !important;
   border-color: var(--pezzidipla-fourth-color) !important;
 }
-body.mini-btn-bg {
+body.mini .pdp-fourth-btn-bg {
   color: var(--white) !important;
   border-color: var(--pezzidipla-fourth-color) !important;
   background: var(--pezzidipla-fourth-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .pdp-fourth-btn-bg:hover, body.mini .pdp-fourth-btn-bg.clicked {
   color: var(--pezzidipla-fourth-color) !important;
   border-color: var(--pezzidipla-fourth-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .pdp-fourth-btn-bg-hover:hover, body.mini .pdp-fourth-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--pezzidipla-fourth-color) !important;
   background: var(--pezzidipla-fourth-color) !important;
 }
-body.mini-btn {
+body.mini .lns-btn {
   color: var(--lanuovastartup-color) !important;
   border-color: var(--lanuovastartup-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .lns-btn:hover, body.mini .lns-btn.clicked {
   color: var(--white) !important;
   background: var(--lanuovastartup-color) !important;
   border-color: var(--lanuovastartup-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .lns-btn-hover:hover, body.mini .lns-btn-hover.clicked {
   color: var(--lanuovastartup-color) !important;
   border-color: var(--lanuovastartup-color) !important;
 }
-body.mini-btn-bg {
+body.mini .lns-btn-bg {
   color: var(--white) !important;
   border-color: var(--lanuovastartup-color) !important;
   background: var(--lanuovastartup-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .lns-btn-bg:hover, body.mini .lns-btn-bg.clicked {
   color: var(--lanuovastartup-color) !important;
   border-color: var(--lanuovastartup-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .lns-btn-bg-hover:hover, body.mini .lns-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--lanuovastartup-color) !important;
   background: var(--lanuovastartup-color) !important;
 }
-body.mini-btn {
+body.mini .lns-dark-btn {
   color: var(--lanuovastartup-color-dark) !important;
   border-color: var(--lanuovastartup-color-dark) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .lns-dark-btn:hover, body.mini .lns-dark-btn.clicked {
   color: var(--white) !important;
   background: var(--lanuovastartup-color-dark) !important;
   border-color: var(--lanuovastartup-color-dark) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .lns-dark-btn-hover:hover, body.mini .lns-dark-btn-hover.clicked {
   color: var(--lanuovastartup-color-dark) !important;
   border-color: var(--lanuovastartup-color-dark) !important;
 }
-body.mini-btn-bg {
+body.mini .lns-dark-btn-bg {
   color: var(--white) !important;
   border-color: var(--lanuovastartup-color-dark) !important;
   background: var(--lanuovastartup-color-dark) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .lns-dark-btn-bg:hover, body.mini .lns-dark-btn-bg.clicked {
   color: var(--lanuovastartup-color-dark) !important;
   border-color: var(--lanuovastartup-color-dark) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .lns-dark-btn-bg-hover:hover, body.mini .lns-dark-btn-bg-hover.clicked {
   color: var(--white) !important;
   border-color: var(--lanuovastartup-color-dark) !important;
   background: var(--lanuovastartup-color-dark) !important;
 }
-body.mini-btn {
+body.mini .dt-btn {
   color: var(--doingthings-color) !important;
   border-color: var(--doingthings-color) !important;
 }
-body.mini-btn:hover, body.mini-btn.clicked {
+body.mini .dt-btn:hover, body.mini .dt-btn.clicked {
   color: var(--black) !important;
   background: var(--doingthings-color) !important;
   border-color: var(--doingthings-color) !important;
 }
-body.mini-btn-hover:hover, body.mini-btn-hover.clicked {
+body.mini .dt-btn-hover:hover, body.mini .dt-btn-hover.clicked {
   color: var(--doingthings-color) !important;
   border-color: var(--doingthings-color) !important;
 }
-body.mini-btn-bg {
+body.mini .dt-btn-bg {
   color: var(--black) !important;
   border-color: var(--doingthings-color) !important;
   background: var(--doingthings-color) !important;
 }
-body.mini-btn-bg:hover, body.mini-btn-bg.clicked {
+body.mini .dt-btn-bg:hover, body.mini .dt-btn-bg.clicked {
   color: var(--doingthings-color) !important;
   border-color: var(--doingthings-color) !important;
   background: transparent !important;
 }
-body.mini-btn-bg-hover:hover, body.mini-btn-bg-hover.clicked {
+body.mini .dt-btn-bg-hover:hover, body.mini .dt-btn-bg-hover.clicked {
   color: var(--black) !important;
   border-color: var(--doingthings-color) !important;
   background: var(--doingthings-color) !important;
 }
 
-body.mini .border, body.mini .border-s-dt, body.mini .border-s-lns-dark, body.mini .border-s-lns, body.mini .border-s-pdp-fourth, body.mini .border-s-pdp-third, body.mini .border-s-pdp-second, body.mini .border-s-pdp, body.mini .border-s-aroma-dark, body.mini .border-s-aroma, body.mini .border-s-uwa-link, body.mini .border-s-uwa-fourth, body.mini .border-s-uwa-third, body.mini .border-s-uwa-second, body.mini .border-s-uwa-dark, body.mini .border-s-uwa, body.mini .border-s-mini-fourth, body.mini .border-s-mini-third, body.mini .border-s-mini-second, body.mini .border-s-mini-dark, body.mini .border-s-mini, body.mini .border-s-ginger-bread, body.mini .border-s-acid-green, body.mini .border-s-bad, body.mini .border-s-danger, body.mini .border-s-warning, body.mini .border-s-success, body.mini .border-s-info, body.mini .border-s-link-hover, body.mini .border-s-link, body.mini .border-s-fourth-color-dark, body.mini .border-s-fourth-color, body.mini .border-s-third-color-dark, body.mini .border-s-third-color, body.mini .border-s-second-color-dark, body.mini .border-s-second-color, body.mini .border-s-main-color-dark, body.mini .border-s-color-dark, body.mini .border-s-main-color, body.mini .border-s-color, body.mini .border-s-col, body.mini .border-s-black, body.mini .border-s-bk, body.mini .border-s-fb, body.mini .border-s-dark-grey, body.mini .border-s-grey, body.mini .border-s-light-grey, body.mini .border-s-fw, body.mini .border-s-white, body.mini .border-s-wh, body.mini .border-s-10, body.mini .border-s-5, body.mini .border-s-4, body.mini .border-s-3, body.mini .border-s-2, body.mini .border-s-1, body.mini .border-s, body.mini .border-b-dt, body.mini .border-b-lns-dark, body.mini .border-b-lns, body.mini .border-b-pdp-fourth, body.mini .border-b-pdp-third, body.mini .border-b-pdp-second, body.mini .border-b-pdp, body.mini .border-b-aroma-dark, body.mini .border-b-aroma, body.mini .border-b-uwa-link, body.mini .border-b-uwa-fourth, body.mini .border-b-uwa-third, body.mini .border-b-uwa-second, body.mini .border-b-uwa-dark, body.mini .border-b-uwa, body.mini .border-b-mini-fourth, body.mini .border-b-mini-third, body.mini .border-b-mini-second, body.mini .border-b-mini-dark, body.mini .border-b-mini, body.mini .border-b-ginger-bread, body.mini .border-b-acid-green, body.mini .border-b-bad, body.mini .border-b-danger, body.mini .border-b-warning, body.mini .border-b-success, body.mini .border-b-info, body.mini .border-b-link-hover, body.mini .border-b-link, body.mini .border-b-fourth-color-dark, body.mini .border-b-fourth-color, body.mini .border-b-third-color-dark, body.mini .border-b-third-color, body.mini .border-b-second-color-dark, body.mini .border-b-second-color, body.mini .border-b-main-color-dark, body.mini .border-b-color-dark, body.mini .border-b-main-color, body.mini .border-b-color, body.mini .border-b-col, body.mini .border-b-black, body.mini .border-b-bk, body.mini .border-b-fb, body.mini .border-b-dark-grey, body.mini .border-b-grey, body.mini .border-b-light-grey, body.mini .border-b-fw, body.mini .border-b-white, body.mini .border-b-wh, body.mini .border-b-10, body.mini .border-b-5, body.mini .border-b-4, body.mini .border-b-3, body.mini .border-b-2, body.mini .border-b-1, body.mini .border-b, body.mini .border-e-dt, body.mini .border-e-lns-dark, body.mini .border-e-lns, body.mini .border-e-pdp-fourth, body.mini .border-e-pdp-third, body.mini .border-e-pdp-second, body.mini .border-e-pdp, body.mini .border-e-aroma-dark, body.mini .border-e-aroma, body.mini .border-e-uwa-link, body.mini .border-e-uwa-fourth, body.mini .border-e-uwa-third, body.mini .border-e-uwa-second, body.mini .border-e-uwa-dark, body.mini .border-e-uwa, body.mini .border-e-mini-fourth, body.mini .border-e-mini-third, body.mini .border-e-mini-second, body.mini .border-e-mini-dark, body.mini .border-e-mini, body.mini .border-e-ginger-bread, body.mini .border-e-acid-green, body.mini .border-e-bad, body.mini .border-e-danger, body.mini .border-e-warning, body.mini .border-e-success, body.mini .border-e-info, body.mini .border-e-link-hover, body.mini .border-e-link, body.mini .border-e-fourth-color-dark, body.mini .border-e-fourth-color, body.mini .border-e-third-color-dark, body.mini .border-e-third-color, body.mini .border-e-second-color-dark, body.mini .border-e-second-color, body.mini .border-e-main-color-dark, body.mini .border-e-color-dark, body.mini .border-e-main-color, body.mini .border-e-color, body.mini .border-e-col, body.mini .border-e-black, body.mini .border-e-bk, body.mini .border-e-fb, body.mini .border-e-dark-grey, body.mini .border-e-grey, body.mini .border-e-light-grey, body.mini .border-e-fw, body.mini .border-e-white, body.mini .border-e-wh, body.mini .border-e-10, body.mini .border-e-5, body.mini .border-e-4, body.mini .border-e-3, body.mini .border-e-2, body.mini .border-e-1, body.mini .border-e, body.mini .border-t-dt, body.mini .border-t-lns-dark, body.mini .border-t-lns, body.mini .border-t-pdp-fourth, body.mini .border-t-pdp-third, body.mini .border-t-pdp-second, body.mini .border-t-pdp, body.mini .border-t-aroma-dark, body.mini .border-t-aroma, body.mini .border-t-uwa-link, body.mini .border-t-uwa-fourth, body.mini .border-t-uwa-third, body.mini .border-t-uwa-second, body.mini .border-t-uwa-dark, body.mini .border-t-uwa, body.mini .border-t-mini-fourth, body.mini .border-t-mini-third, body.mini .border-t-mini-second, body.mini .border-t-mini-dark, body.mini .border-t-mini, body.mini .border-t-ginger-bread, body.mini .border-t-acid-green, body.mini .border-t-bad, body.mini .border-t-danger, body.mini .border-t-warning, body.mini .border-t-success, body.mini .border-t-info, body.mini .border-t-link-hover, body.mini .border-t-link, body.mini .border-t-fourth-color-dark, body.mini .border-t-fourth-color, body.mini .border-t-third-color-dark, body.mini .border-t-third-color, body.mini .border-t-second-color-dark, body.mini .border-t-second-color, body.mini .border-t-main-color-dark, body.mini .border-t-color-dark, body.mini .border-t-main-color, body.mini .border-t-color, body.mini .border-t-col, body.mini .border-t-black, body.mini .border-t-bk, body.mini .border-t-fb, body.mini .border-t-dark-grey, body.mini .border-t-grey, body.mini .border-t-light-grey, body.mini .border-t-fw, body.mini .border-t-white, body.mini .border-t-wh, body.mini .border-t-10, body.mini .border-t-5, body.mini .border-t-4, body.mini .border-t-3, body.mini .border-t-2, body.mini .border-t-1, body.mini .border-t, body.mini .border-dt, body.mini .border-lns-dark, body.mini .border-lns, body.mini .border-pdp-fourth, body.mini .border-pdp-third, body.mini .border-pdp-second, body.mini .border-pdp, body.mini .border-aroma-dark, body.mini .border-aroma, body.mini .border-uwa-link, body.mini .border-uwa-fourth, body.mini .border-uwa-third, body.mini .border-uwa-second, body.mini .border-uwa-dark, body.mini .border-uwa, body.mini .border-mini-fourth, body.mini .border-mini-third, body.mini .border-mini-second, body.mini .border-mini-dark, body.mini .border-mini, body.mini .border-ginger-bread, body.mini .border-acid-green, body.mini .border-bad, body.mini .border-danger, body.mini .border-warning, body.mini .border-success, body.mini .border-info, body.mini .border-link-hover, body.mini .border-link, body.mini .border-fourth-color-dark, body.mini .border-fourth-color, body.mini .border-third-color-dark, body.mini .border-third-color, body.mini .border-second-color-dark, body.mini .border-second-color, body.mini .border-main-color-dark, body.mini .border-color-dark, body.mini .border-main-color, body.mini .border-color, body.mini .border-col, body.mini .border-black, body.mini .border-bk, body.mini .border-fb, body.mini .border-dark-grey, body.mini .border-grey, body.mini .border-light-grey, body.mini .border-fw, body.mini .border-white, body.mini .border-wh, body.mini .border-10, body.mini .border-5, body.mini .border-4, body.mini .border-3, body.mini .border-2, body.mini .border-1 {
+body.mini .border, body.mini .dt-border, body.mini .dt-border-10, body.mini .dt-border-5, body.mini .dt-border-4, body.mini .dt-border-3, body.mini .dt-border-2, body.mini .dt-border-1, body.mini .lns-dark-border, body.mini .lns-dark-border-10, body.mini .lns-dark-border-5, body.mini .lns-dark-border-4, body.mini .lns-dark-border-3, body.mini .lns-dark-border-2, body.mini .lns-dark-border-1, body.mini .lns-border, body.mini .lns-border-10, body.mini .lns-border-5, body.mini .lns-border-4, body.mini .lns-border-3, body.mini .lns-border-2, body.mini .lns-border-1, body.mini .pdp-fourth-border, body.mini .pdp-fourth-border-10, body.mini .pdp-fourth-border-5, body.mini .pdp-fourth-border-4, body.mini .pdp-fourth-border-3, body.mini .pdp-fourth-border-2, body.mini .pdp-fourth-border-1, body.mini .pdp-third-border, body.mini .pdp-third-border-10, body.mini .pdp-third-border-5, body.mini .pdp-third-border-4, body.mini .pdp-third-border-3, body.mini .pdp-third-border-2, body.mini .pdp-third-border-1, body.mini .pdp-second-border, body.mini .pdp-second-border-10, body.mini .pdp-second-border-5, body.mini .pdp-second-border-4, body.mini .pdp-second-border-3, body.mini .pdp-second-border-2, body.mini .pdp-second-border-1, body.mini .pdp-border, body.mini .pdp-border-10, body.mini .pdp-border-5, body.mini .pdp-border-4, body.mini .pdp-border-3, body.mini .pdp-border-2, body.mini .pdp-border-1, body.mini .aroma-dark-border, body.mini .aroma-dark-border-10, body.mini .aroma-dark-border-5, body.mini .aroma-dark-border-4, body.mini .aroma-dark-border-3, body.mini .aroma-dark-border-2, body.mini .aroma-dark-border-1, body.mini .aroma-border, body.mini .aroma-border-10, body.mini .aroma-border-5, body.mini .aroma-border-4, body.mini .aroma-border-3, body.mini .aroma-border-2, body.mini .aroma-border-1, body.mini .uwa-link-border, body.mini .uwa-link-border-10, body.mini .uwa-link-border-5, body.mini .uwa-link-border-4, body.mini .uwa-link-border-3, body.mini .uwa-link-border-2, body.mini .uwa-link-border-1, body.mini .uwa-fourth-border, body.mini .uwa-fourth-border-10, body.mini .uwa-fourth-border-5, body.mini .uwa-fourth-border-4, body.mini .uwa-fourth-border-3, body.mini .uwa-fourth-border-2, body.mini .uwa-fourth-border-1, body.mini .uwa-third-border, body.mini .uwa-third-border-10, body.mini .uwa-third-border-5, body.mini .uwa-third-border-4, body.mini .uwa-third-border-3, body.mini .uwa-third-border-2, body.mini .uwa-third-border-1, body.mini .uwa-second-border, body.mini .uwa-second-border-10, body.mini .uwa-second-border-5, body.mini .uwa-second-border-4, body.mini .uwa-second-border-3, body.mini .uwa-second-border-2, body.mini .uwa-second-border-1, body.mini .uwa-dark-border, body.mini .uwa-dark-border-10, body.mini .uwa-dark-border-5, body.mini .uwa-dark-border-4, body.mini .uwa-dark-border-3, body.mini .uwa-dark-border-2, body.mini .uwa-dark-border-1, body.mini .uwa-border, body.mini .uwa-border-10, body.mini .uwa-border-5, body.mini .uwa-border-4, body.mini .uwa-border-3, body.mini .uwa-border-2, body.mini .uwa-border-1, body.mini .mini-fourth-border, body.mini .mini-fourth-border-10, body.mini .mini-fourth-border-5, body.mini .mini-fourth-border-4, body.mini .mini-fourth-border-3, body.mini .mini-fourth-border-2, body.mini .mini-fourth-border-1, body.mini .mini-third-border, body.mini .mini-third-border-10, body.mini .mini-third-border-5, body.mini .mini-third-border-4, body.mini .mini-third-border-3, body.mini .mini-third-border-2, body.mini .mini-third-border-1, body.mini .mini-second-border, body.mini .mini-second-border-10, body.mini .mini-second-border-5, body.mini .mini-second-border-4, body.mini .mini-second-border-3, body.mini .mini-second-border-2, body.mini .mini-second-border-1, body.mini .mini-dark-border, body.mini .mini-dark-border-10, body.mini .mini-dark-border-5, body.mini .mini-dark-border-4, body.mini .mini-dark-border-3, body.mini .mini-dark-border-2, body.mini .mini-dark-border-1, body.mini .mini-border, body.mini .mini-border-10, body.mini .mini-border-5, body.mini .mini-border-4, body.mini .mini-border-3, body.mini .mini-border-2, body.mini .mini-border-1, body.mini .ginger-bread-border, body.mini .ginger-bread-border-10, body.mini .ginger-bread-border-5, body.mini .ginger-bread-border-4, body.mini .ginger-bread-border-3, body.mini .ginger-bread-border-2, body.mini .ginger-bread-border-1, body.mini .acid-green-border, body.mini .acid-green-border-10, body.mini .acid-green-border-5, body.mini .acid-green-border-4, body.mini .acid-green-border-3, body.mini .acid-green-border-2, body.mini .acid-green-border-1, body.mini .bad-border, body.mini .bad-border-10, body.mini .bad-border-5, body.mini .bad-border-4, body.mini .bad-border-3, body.mini .bad-border-2, body.mini .bad-border-1, body.mini .danger-border, body.mini .danger-border-10, body.mini .danger-border-5, body.mini .danger-border-4, body.mini .danger-border-3, body.mini .danger-border-2, body.mini .danger-border-1, body.mini .warning-border, body.mini .warning-border-10, body.mini .warning-border-5, body.mini .warning-border-4, body.mini .warning-border-3, body.mini .warning-border-2, body.mini .warning-border-1, body.mini .success-border, body.mini .success-border-10, body.mini .success-border-5, body.mini .success-border-4, body.mini .success-border-3, body.mini .success-border-2, body.mini .success-border-1, body.mini .info-border, body.mini .info-border-10, body.mini .info-border-5, body.mini .info-border-4, body.mini .info-border-3, body.mini .info-border-2, body.mini .info-border-1, body.mini .link-hover-border, body.mini .link-hover-border-10, body.mini .link-hover-border-5, body.mini .link-hover-border-4, body.mini .link-hover-border-3, body.mini .link-hover-border-2, body.mini .link-hover-border-1, body.mini .link-border, body.mini .link-border-10, body.mini .link-border-5, body.mini .link-border-4, body.mini .link-border-3, body.mini .link-border-2, body.mini .link-border-1, body.mini .fourth-color-dark-border, body.mini .fourth-color-dark-border-10, body.mini .fourth-color-dark-border-5, body.mini .fourth-color-dark-border-4, body.mini .fourth-color-dark-border-3, body.mini .fourth-color-dark-border-2, body.mini .fourth-color-dark-border-1, body.mini .fourth-color-border, body.mini .fourth-color-border-10, body.mini .fourth-color-border-5, body.mini .fourth-color-border-4, body.mini .fourth-color-border-3, body.mini .fourth-color-border-2, body.mini .fourth-color-border-1, body.mini .third-color-dark-border, body.mini .third-color-dark-border-10, body.mini .third-color-dark-border-5, body.mini .third-color-dark-border-4, body.mini .third-color-dark-border-3, body.mini .third-color-dark-border-2, body.mini .third-color-dark-border-1, body.mini .third-color-border, body.mini .third-color-border-10, body.mini .third-color-border-5, body.mini .third-color-border-4, body.mini .third-color-border-3, body.mini .third-color-border-2, body.mini .third-color-border-1, body.mini .second-color-dark-border, body.mini .second-color-dark-border-10, body.mini .second-color-dark-border-5, body.mini .second-color-dark-border-4, body.mini .second-color-dark-border-3, body.mini .second-color-dark-border-2, body.mini .second-color-dark-border-1, body.mini .second-color-border, body.mini .second-color-border-10, body.mini .second-color-border-5, body.mini .second-color-border-4, body.mini .second-color-border-3, body.mini .second-color-border-2, body.mini .second-color-border-1, body.mini .main-color-dark-border, body.mini .main-color-dark-border-10, body.mini .main-color-dark-border-5, body.mini .main-color-dark-border-4, body.mini .main-color-dark-border-3, body.mini .main-color-dark-border-2, body.mini .main-color-dark-border-1, body.mini .color-dark-border, body.mini .color-dark-border-10, body.mini .color-dark-border-5, body.mini .color-dark-border-4, body.mini .color-dark-border-3, body.mini .color-dark-border-2, body.mini .color-dark-border-1, body.mini .main-color-border, body.mini .main-color-border-10, body.mini .main-color-border-5, body.mini .main-color-border-4, body.mini .main-color-border-3, body.mini .main-color-border-2, body.mini .main-color-border-1, body.mini .color-border, body.mini .color-border-10, body.mini .color-border-5, body.mini .color-border-4, body.mini .color-border-3, body.mini .color-border-2, body.mini .color-border-1, body.mini .col-border, body.mini .col-border-10, body.mini .col-border-5, body.mini .col-border-4, body.mini .col-border-3, body.mini .col-border-2, body.mini .col-border-1, body.mini .black-border, body.mini .black-border-10, body.mini .black-border-5, body.mini .black-border-4, body.mini .black-border-3, body.mini .black-border-2, body.mini .black-border-1, body.mini .bk-border, body.mini .bk-border-10, body.mini .bk-border-5, body.mini .bk-border-4, body.mini .bk-border-3, body.mini .bk-border-2, body.mini .bk-border-1, body.mini .fb-border, body.mini .fb-border-10, body.mini .fb-border-5, body.mini .fb-border-4, body.mini .fb-border-3, body.mini .fb-border-2, body.mini .fb-border-1, body.mini .dark-grey-border, body.mini .dark-grey-border-10, body.mini .dark-grey-border-5, body.mini .dark-grey-border-4, body.mini .dark-grey-border-3, body.mini .dark-grey-border-2, body.mini .dark-grey-border-1, body.mini .grey-border, body.mini .grey-border-10, body.mini .grey-border-5, body.mini .grey-border-4, body.mini .grey-border-3, body.mini .grey-border-2, body.mini .grey-border-1, body.mini .light-grey-border, body.mini .light-grey-border-10, body.mini .light-grey-border-5, body.mini .light-grey-border-4, body.mini .light-grey-border-3, body.mini .light-grey-border-2, body.mini .light-grey-border-1, body.mini .fw-border, body.mini .fw-border-10, body.mini .fw-border-5, body.mini .fw-border-4, body.mini .fw-border-3, body.mini .fw-border-2, body.mini .fw-border-1, body.mini .white-border, body.mini .white-border-10, body.mini .white-border-5, body.mini .white-border-4, body.mini .white-border-3, body.mini .white-border-2, body.mini .white-border-1, body.mini .wh-border, body.mini .wh-border-10, body.mini .wh-border-5, body.mini .wh-border-4, body.mini .wh-border-3, body.mini .wh-border-2, body.mini .wh-border-1, body.mini .border-s-dt, body.mini .border-s-lns-dark, body.mini .border-s-lns, body.mini .border-s-pdp-fourth, body.mini .border-s-pdp-third, body.mini .border-s-pdp-second, body.mini .border-s-pdp, body.mini .border-s-aroma-dark, body.mini .border-s-aroma, body.mini .border-s-uwa-link, body.mini .border-s-uwa-fourth, body.mini .border-s-uwa-third, body.mini .border-s-uwa-second, body.mini .border-s-uwa-dark, body.mini .border-s-uwa, body.mini .border-s-mini-fourth, body.mini .border-s-mini-third, body.mini .border-s-mini-second, body.mini .border-s-mini-dark, body.mini .border-s-mini, body.mini .border-s-ginger-bread, body.mini .border-s-acid-green, body.mini .border-s-bad, body.mini .border-s-danger, body.mini .border-s-warning, body.mini .border-s-success, body.mini .border-s-info, body.mini .border-s-link-hover, body.mini .border-s-link, body.mini .border-s-fourth-color-dark, body.mini .border-s-fourth-color, body.mini .border-s-third-color-dark, body.mini .border-s-third-color, body.mini .border-s-second-color-dark, body.mini .border-s-second-color, body.mini .border-s-main-color-dark, body.mini .border-s-color-dark, body.mini .border-s-main-color, body.mini .border-s-color, body.mini .border-s-col, body.mini .border-s-black, body.mini .border-s-bk, body.mini .border-s-fb, body.mini .border-s-dark-grey, body.mini .border-s-grey, body.mini .border-s-light-grey, body.mini .border-s-fw, body.mini .border-s-white, body.mini .border-s-wh, body.mini .border-s-10, body.mini .border-s-5, body.mini .border-s-4, body.mini .border-s-3, body.mini .border-s-2, body.mini .border-s-1, body.mini .border-s, body.mini .border-b-dt, body.mini .border-b-lns-dark, body.mini .border-b-lns, body.mini .border-b-pdp-fourth, body.mini .border-b-pdp-third, body.mini .border-b-pdp-second, body.mini .border-b-pdp, body.mini .border-b-aroma-dark, body.mini .border-b-aroma, body.mini .border-b-uwa-link, body.mini .border-b-uwa-fourth, body.mini .border-b-uwa-third, body.mini .border-b-uwa-second, body.mini .border-b-uwa-dark, body.mini .border-b-uwa, body.mini .border-b-mini-fourth, body.mini .border-b-mini-third, body.mini .border-b-mini-second, body.mini .border-b-mini-dark, body.mini .border-b-mini, body.mini .border-b-ginger-bread, body.mini .border-b-acid-green, body.mini .border-b-bad, body.mini .border-b-danger, body.mini .border-b-warning, body.mini .border-b-success, body.mini .border-b-info, body.mini .border-b-link-hover, body.mini .border-b-link, body.mini .border-b-fourth-color-dark, body.mini .border-b-fourth-color, body.mini .border-b-third-color-dark, body.mini .border-b-third-color, body.mini .border-b-second-color-dark, body.mini .border-b-second-color, body.mini .border-b-main-color-dark, body.mini .border-b-color-dark, body.mini .border-b-main-color, body.mini .border-b-color, body.mini .border-b-col, body.mini .border-b-black, body.mini .border-b-bk, body.mini .border-b-fb, body.mini .border-b-dark-grey, body.mini .border-b-grey, body.mini .border-b-light-grey, body.mini .border-b-fw, body.mini .border-b-white, body.mini .border-b-wh, body.mini .border-b-10, body.mini .border-b-5, body.mini .border-b-4, body.mini .border-b-3, body.mini .border-b-2, body.mini .border-b-1, body.mini .border-b, body.mini .border-e-dt, body.mini .border-e-lns-dark, body.mini .border-e-lns, body.mini .border-e-pdp-fourth, body.mini .border-e-pdp-third, body.mini .border-e-pdp-second, body.mini .border-e-pdp, body.mini .border-e-aroma-dark, body.mini .border-e-aroma, body.mini .border-e-uwa-link, body.mini .border-e-uwa-fourth, body.mini .border-e-uwa-third, body.mini .border-e-uwa-second, body.mini .border-e-uwa-dark, body.mini .border-e-uwa, body.mini .border-e-mini-fourth, body.mini .border-e-mini-third, body.mini .border-e-mini-second, body.mini .border-e-mini-dark, body.mini .border-e-mini, body.mini .border-e-ginger-bread, body.mini .border-e-acid-green, body.mini .border-e-bad, body.mini .border-e-danger, body.mini .border-e-warning, body.mini .border-e-success, body.mini .border-e-info, body.mini .border-e-link-hover, body.mini .border-e-link, body.mini .border-e-fourth-color-dark, body.mini .border-e-fourth-color, body.mini .border-e-third-color-dark, body.mini .border-e-third-color, body.mini .border-e-second-color-dark, body.mini .border-e-second-color, body.mini .border-e-main-color-dark, body.mini .border-e-color-dark, body.mini .border-e-main-color, body.mini .border-e-color, body.mini .border-e-col, body.mini .border-e-black, body.mini .border-e-bk, body.mini .border-e-fb, body.mini .border-e-dark-grey, body.mini .border-e-grey, body.mini .border-e-light-grey, body.mini .border-e-fw, body.mini .border-e-white, body.mini .border-e-wh, body.mini .border-e-10, body.mini .border-e-5, body.mini .border-e-4, body.mini .border-e-3, body.mini .border-e-2, body.mini .border-e-1, body.mini .border-e, body.mini .border-t-dt, body.mini .border-t-lns-dark, body.mini .border-t-lns, body.mini .border-t-pdp-fourth, body.mini .border-t-pdp-third, body.mini .border-t-pdp-second, body.mini .border-t-pdp, body.mini .border-t-aroma-dark, body.mini .border-t-aroma, body.mini .border-t-uwa-link, body.mini .border-t-uwa-fourth, body.mini .border-t-uwa-third, body.mini .border-t-uwa-second, body.mini .border-t-uwa-dark, body.mini .border-t-uwa, body.mini .border-t-mini-fourth, body.mini .border-t-mini-third, body.mini .border-t-mini-second, body.mini .border-t-mini-dark, body.mini .border-t-mini, body.mini .border-t-ginger-bread, body.mini .border-t-acid-green, body.mini .border-t-bad, body.mini .border-t-danger, body.mini .border-t-warning, body.mini .border-t-success, body.mini .border-t-info, body.mini .border-t-link-hover, body.mini .border-t-link, body.mini .border-t-fourth-color-dark, body.mini .border-t-fourth-color, body.mini .border-t-third-color-dark, body.mini .border-t-third-color, body.mini .border-t-second-color-dark, body.mini .border-t-second-color, body.mini .border-t-main-color-dark, body.mini .border-t-color-dark, body.mini .border-t-main-color, body.mini .border-t-color, body.mini .border-t-col, body.mini .border-t-black, body.mini .border-t-bk, body.mini .border-t-fb, body.mini .border-t-dark-grey, body.mini .border-t-grey, body.mini .border-t-light-grey, body.mini .border-t-fw, body.mini .border-t-white, body.mini .border-t-wh, body.mini .border-t-10, body.mini .border-t-5, body.mini .border-t-4, body.mini .border-t-3, body.mini .border-t-2, body.mini .border-t-1, body.mini .border-t, body.mini .border-dt, body.mini .border-lns-dark, body.mini .border-lns, body.mini .border-pdp-fourth, body.mini .border-pdp-third, body.mini .border-pdp-second, body.mini .border-pdp, body.mini .border-aroma-dark, body.mini .border-aroma, body.mini .border-uwa-link, body.mini .border-uwa-fourth, body.mini .border-uwa-third, body.mini .border-uwa-second, body.mini .border-uwa-dark, body.mini .border-uwa, body.mini .border-mini-fourth, body.mini .border-mini-third, body.mini .border-mini-second, body.mini .border-mini-dark, body.mini .border-mini, body.mini .border-ginger-bread, body.mini .border-acid-green, body.mini .border-bad, body.mini .border-danger, body.mini .border-warning, body.mini .border-success, body.mini .border-info, body.mini .border-link-hover, body.mini .border-link, body.mini .border-fourth-color-dark, body.mini .border-fourth-color, body.mini .border-third-color-dark, body.mini .border-third-color, body.mini .border-second-color-dark, body.mini .border-second-color, body.mini .border-main-color-dark, body.mini .border-color-dark, body.mini .border-main-color, body.mini .border-color, body.mini .border-col, body.mini .border-black, body.mini .border-bk, body.mini .border-fb, body.mini .border-dark-grey, body.mini .border-grey, body.mini .border-light-grey, body.mini .border-fw, body.mini .border-white, body.mini .border-wh, body.mini .border-10, body.mini .border-5, body.mini .border-4, body.mini .border-3, body.mini .border-2, body.mini .border-1 {
   border-width: 1px;
   border-style: solid;
   border-color: var(--light-grey);
@@ -12340,6 +12340,1329 @@ body.mini .border-s-dt {
   border-width: 0;
   border-left-width: 1px !important;
   border-left-color: var(--doingthings-color) !important;
+}
+body.mini .wh-border, body.mini .wh-border-10, body.mini .wh-border-5, body.mini .wh-border-4, body.mini .wh-border-3, body.mini .wh-border-2, body.mini .wh-border-1 {
+  border-color: var(--white);
+}
+body.mini .wh-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .wh-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .wh-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .wh-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .wh-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .wh-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .white-border, body.mini .white-border-10, body.mini .white-border-5, body.mini .white-border-4, body.mini .white-border-3, body.mini .white-border-2, body.mini .white-border-1 {
+  border-color: var(--white);
+}
+body.mini .white-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .white-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .white-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .white-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .white-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .white-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .fw-border, body.mini .fw-border-10, body.mini .fw-border-5, body.mini .fw-border-4, body.mini .fw-border-3, body.mini .fw-border-2, body.mini .fw-border-1 {
+  border-color: var(--false-white);
+}
+body.mini .fw-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .fw-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .fw-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .fw-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .fw-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .fw-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .light-grey-border, body.mini .light-grey-border-10, body.mini .light-grey-border-5, body.mini .light-grey-border-4, body.mini .light-grey-border-3, body.mini .light-grey-border-2, body.mini .light-grey-border-1 {
+  border-color: var(--light-grey);
+}
+body.mini .light-grey-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .light-grey-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .light-grey-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .light-grey-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .light-grey-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .light-grey-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .grey-border, body.mini .grey-border-10, body.mini .grey-border-5, body.mini .grey-border-4, body.mini .grey-border-3, body.mini .grey-border-2, body.mini .grey-border-1 {
+  border-color: var(--grey);
+}
+body.mini .grey-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .grey-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .grey-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .grey-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .grey-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .grey-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .dark-grey-border, body.mini .dark-grey-border-10, body.mini .dark-grey-border-5, body.mini .dark-grey-border-4, body.mini .dark-grey-border-3, body.mini .dark-grey-border-2, body.mini .dark-grey-border-1 {
+  border-color: var(--dark-grey);
+}
+body.mini .dark-grey-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .dark-grey-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .dark-grey-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .dark-grey-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .dark-grey-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .dark-grey-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .fb-border, body.mini .fb-border-10, body.mini .fb-border-5, body.mini .fb-border-4, body.mini .fb-border-3, body.mini .fb-border-2, body.mini .fb-border-1 {
+  border-color: var(--false-black);
+}
+body.mini .fb-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .fb-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .fb-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .fb-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .fb-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .fb-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .bk-border, body.mini .bk-border-10, body.mini .bk-border-5, body.mini .bk-border-4, body.mini .bk-border-3, body.mini .bk-border-2, body.mini .bk-border-1 {
+  border-color: var(--black);
+}
+body.mini .bk-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .bk-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .bk-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .bk-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .bk-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .bk-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .black-border, body.mini .black-border-10, body.mini .black-border-5, body.mini .black-border-4, body.mini .black-border-3, body.mini .black-border-2, body.mini .black-border-1 {
+  border-color: var(--black);
+}
+body.mini .black-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .black-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .black-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .black-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .black-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .black-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .col-border, body.mini .col-border-10, body.mini .col-border-5, body.mini .col-border-4, body.mini .col-border-3, body.mini .col-border-2, body.mini .col-border-1 {
+  border-color: var(--main-color);
+}
+body.mini .col-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .col-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .col-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .col-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .col-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .col-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .color-border, body.mini .color-border-10, body.mini .color-border-5, body.mini .color-border-4, body.mini .color-border-3, body.mini .color-border-2, body.mini .color-border-1 {
+  border-color: var(--main-color);
+}
+body.mini .color-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .color-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .color-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .color-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .color-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .color-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .main-color-border, body.mini .main-color-border-10, body.mini .main-color-border-5, body.mini .main-color-border-4, body.mini .main-color-border-3, body.mini .main-color-border-2, body.mini .main-color-border-1 {
+  border-color: var(--main-color);
+}
+body.mini .main-color-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .main-color-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .main-color-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .main-color-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .main-color-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .main-color-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .color-dark-border, body.mini .color-dark-border-10, body.mini .color-dark-border-5, body.mini .color-dark-border-4, body.mini .color-dark-border-3, body.mini .color-dark-border-2, body.mini .color-dark-border-1 {
+  border-color: var(--main-color-dark);
+}
+body.mini .color-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .color-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .color-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .color-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .color-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .color-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .main-color-dark-border, body.mini .main-color-dark-border-10, body.mini .main-color-dark-border-5, body.mini .main-color-dark-border-4, body.mini .main-color-dark-border-3, body.mini .main-color-dark-border-2, body.mini .main-color-dark-border-1 {
+  border-color: var(--main-color-dark);
+}
+body.mini .main-color-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .main-color-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .main-color-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .main-color-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .main-color-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .main-color-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .second-color-border, body.mini .second-color-border-10, body.mini .second-color-border-5, body.mini .second-color-border-4, body.mini .second-color-border-3, body.mini .second-color-border-2, body.mini .second-color-border-1 {
+  border-color: var(--second-color);
+}
+body.mini .second-color-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .second-color-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .second-color-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .second-color-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .second-color-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .second-color-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .second-color-dark-border, body.mini .second-color-dark-border-10, body.mini .second-color-dark-border-5, body.mini .second-color-dark-border-4, body.mini .second-color-dark-border-3, body.mini .second-color-dark-border-2, body.mini .second-color-dark-border-1 {
+  border-color: var(--second-color-dark);
+}
+body.mini .second-color-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .second-color-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .second-color-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .second-color-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .second-color-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .second-color-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .third-color-border, body.mini .third-color-border-10, body.mini .third-color-border-5, body.mini .third-color-border-4, body.mini .third-color-border-3, body.mini .third-color-border-2, body.mini .third-color-border-1 {
+  border-color: var(--third-color);
+}
+body.mini .third-color-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .third-color-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .third-color-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .third-color-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .third-color-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .third-color-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .third-color-dark-border, body.mini .third-color-dark-border-10, body.mini .third-color-dark-border-5, body.mini .third-color-dark-border-4, body.mini .third-color-dark-border-3, body.mini .third-color-dark-border-2, body.mini .third-color-dark-border-1 {
+  border-color: var(--third-color-dark);
+}
+body.mini .third-color-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .third-color-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .third-color-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .third-color-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .third-color-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .third-color-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .fourth-color-border, body.mini .fourth-color-border-10, body.mini .fourth-color-border-5, body.mini .fourth-color-border-4, body.mini .fourth-color-border-3, body.mini .fourth-color-border-2, body.mini .fourth-color-border-1 {
+  border-color: var(--fourth-color);
+}
+body.mini .fourth-color-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .fourth-color-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .fourth-color-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .fourth-color-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .fourth-color-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .fourth-color-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .fourth-color-dark-border, body.mini .fourth-color-dark-border-10, body.mini .fourth-color-dark-border-5, body.mini .fourth-color-dark-border-4, body.mini .fourth-color-dark-border-3, body.mini .fourth-color-dark-border-2, body.mini .fourth-color-dark-border-1 {
+  border-color: var(--fourth-color-dark);
+}
+body.mini .fourth-color-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .fourth-color-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .fourth-color-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .fourth-color-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .fourth-color-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .fourth-color-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .link-border, body.mini .link-border-10, body.mini .link-border-5, body.mini .link-border-4, body.mini .link-border-3, body.mini .link-border-2, body.mini .link-border-1 {
+  border-color: var(--link-color);
+}
+body.mini .link-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .link-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .link-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .link-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .link-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .link-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .link-hover-border, body.mini .link-hover-border-10, body.mini .link-hover-border-5, body.mini .link-hover-border-4, body.mini .link-hover-border-3, body.mini .link-hover-border-2, body.mini .link-hover-border-1 {
+  border-color: var(--link-hover-color);
+}
+body.mini .link-hover-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .link-hover-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .link-hover-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .link-hover-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .link-hover-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .link-hover-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .info-border, body.mini .info-border-10, body.mini .info-border-5, body.mini .info-border-4, body.mini .info-border-3, body.mini .info-border-2, body.mini .info-border-1 {
+  border-color: var(--info);
+}
+body.mini .info-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .info-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .info-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .info-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .info-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .info-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .success-border, body.mini .success-border-10, body.mini .success-border-5, body.mini .success-border-4, body.mini .success-border-3, body.mini .success-border-2, body.mini .success-border-1 {
+  border-color: var(--success);
+}
+body.mini .success-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .success-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .success-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .success-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .success-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .success-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .warning-border, body.mini .warning-border-10, body.mini .warning-border-5, body.mini .warning-border-4, body.mini .warning-border-3, body.mini .warning-border-2, body.mini .warning-border-1 {
+  border-color: var(--warning);
+}
+body.mini .warning-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .warning-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .warning-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .warning-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .warning-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .warning-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .danger-border, body.mini .danger-border-10, body.mini .danger-border-5, body.mini .danger-border-4, body.mini .danger-border-3, body.mini .danger-border-2, body.mini .danger-border-1 {
+  border-color: var(--danger);
+}
+body.mini .danger-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .danger-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .danger-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .danger-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .danger-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .danger-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .bad-border, body.mini .bad-border-10, body.mini .bad-border-5, body.mini .bad-border-4, body.mini .bad-border-3, body.mini .bad-border-2, body.mini .bad-border-1 {
+  border-color: var(--bad);
+}
+body.mini .bad-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .bad-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .bad-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .bad-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .bad-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .bad-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .acid-green-border, body.mini .acid-green-border-10, body.mini .acid-green-border-5, body.mini .acid-green-border-4, body.mini .acid-green-border-3, body.mini .acid-green-border-2, body.mini .acid-green-border-1 {
+  border-color: var(--acid-green);
+}
+body.mini .acid-green-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .acid-green-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .acid-green-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .acid-green-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .acid-green-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .acid-green-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .ginger-bread-border, body.mini .ginger-bread-border-10, body.mini .ginger-bread-border-5, body.mini .ginger-bread-border-4, body.mini .ginger-bread-border-3, body.mini .ginger-bread-border-2, body.mini .ginger-bread-border-1 {
+  border-color: var(--gingerbread);
+}
+body.mini .ginger-bread-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .ginger-bread-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .ginger-bread-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .ginger-bread-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .ginger-bread-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .ginger-bread-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .mini-border, body.mini .mini-border-10, body.mini .mini-border-5, body.mini .mini-border-4, body.mini .mini-border-3, body.mini .mini-border-2, body.mini .mini-border-1 {
+  border-color: var(--mini-color);
+}
+body.mini .mini-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .mini-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .mini-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .mini-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .mini-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .mini-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .mini-dark-border, body.mini .mini-dark-border-10, body.mini .mini-dark-border-5, body.mini .mini-dark-border-4, body.mini .mini-dark-border-3, body.mini .mini-dark-border-2, body.mini .mini-dark-border-1 {
+  border-color: var(--mini-color-dark);
+}
+body.mini .mini-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .mini-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .mini-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .mini-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .mini-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .mini-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .mini-second-border, body.mini .mini-second-border-10, body.mini .mini-second-border-5, body.mini .mini-second-border-4, body.mini .mini-second-border-3, body.mini .mini-second-border-2, body.mini .mini-second-border-1 {
+  border-color: var(--mini-second);
+}
+body.mini .mini-second-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .mini-second-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .mini-second-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .mini-second-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .mini-second-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .mini-second-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .mini-third-border, body.mini .mini-third-border-10, body.mini .mini-third-border-5, body.mini .mini-third-border-4, body.mini .mini-third-border-3, body.mini .mini-third-border-2, body.mini .mini-third-border-1 {
+  border-color: var(--mini-third);
+}
+body.mini .mini-third-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .mini-third-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .mini-third-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .mini-third-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .mini-third-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .mini-third-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .mini-fourth-border, body.mini .mini-fourth-border-10, body.mini .mini-fourth-border-5, body.mini .mini-fourth-border-4, body.mini .mini-fourth-border-3, body.mini .mini-fourth-border-2, body.mini .mini-fourth-border-1 {
+  border-color: var(--mini-fourth);
+}
+body.mini .mini-fourth-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .mini-fourth-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .mini-fourth-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .mini-fourth-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .mini-fourth-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .mini-fourth-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .uwa-border, body.mini .uwa-border-10, body.mini .uwa-border-5, body.mini .uwa-border-4, body.mini .uwa-border-3, body.mini .uwa-border-2, body.mini .uwa-border-1 {
+  border-color: var(--uwa-color);
+}
+body.mini .uwa-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .uwa-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .uwa-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .uwa-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .uwa-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .uwa-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .uwa-dark-border, body.mini .uwa-dark-border-10, body.mini .uwa-dark-border-5, body.mini .uwa-dark-border-4, body.mini .uwa-dark-border-3, body.mini .uwa-dark-border-2, body.mini .uwa-dark-border-1 {
+  border-color: var(--uwa-color-dark);
+}
+body.mini .uwa-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .uwa-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .uwa-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .uwa-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .uwa-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .uwa-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .uwa-second-border, body.mini .uwa-second-border-10, body.mini .uwa-second-border-5, body.mini .uwa-second-border-4, body.mini .uwa-second-border-3, body.mini .uwa-second-border-2, body.mini .uwa-second-border-1 {
+  border-color: var(--uwa-second-color);
+}
+body.mini .uwa-second-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .uwa-second-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .uwa-second-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .uwa-second-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .uwa-second-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .uwa-second-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .uwa-third-border, body.mini .uwa-third-border-10, body.mini .uwa-third-border-5, body.mini .uwa-third-border-4, body.mini .uwa-third-border-3, body.mini .uwa-third-border-2, body.mini .uwa-third-border-1 {
+  border-color: var(--uwa-third-color);
+}
+body.mini .uwa-third-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .uwa-third-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .uwa-third-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .uwa-third-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .uwa-third-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .uwa-third-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .uwa-fourth-border, body.mini .uwa-fourth-border-10, body.mini .uwa-fourth-border-5, body.mini .uwa-fourth-border-4, body.mini .uwa-fourth-border-3, body.mini .uwa-fourth-border-2, body.mini .uwa-fourth-border-1 {
+  border-color: var(--uwa-fourth-color);
+}
+body.mini .uwa-fourth-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .uwa-fourth-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .uwa-fourth-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .uwa-fourth-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .uwa-fourth-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .uwa-fourth-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .uwa-link-border, body.mini .uwa-link-border-10, body.mini .uwa-link-border-5, body.mini .uwa-link-border-4, body.mini .uwa-link-border-3, body.mini .uwa-link-border-2, body.mini .uwa-link-border-1 {
+  border-color: var(--uwa-link-color);
+}
+body.mini .uwa-link-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .uwa-link-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .uwa-link-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .uwa-link-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .uwa-link-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .uwa-link-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .aroma-border, body.mini .aroma-border-10, body.mini .aroma-border-5, body.mini .aroma-border-4, body.mini .aroma-border-3, body.mini .aroma-border-2, body.mini .aroma-border-1 {
+  border-color: var(--aroma-color);
+}
+body.mini .aroma-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .aroma-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .aroma-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .aroma-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .aroma-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .aroma-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .aroma-dark-border, body.mini .aroma-dark-border-10, body.mini .aroma-dark-border-5, body.mini .aroma-dark-border-4, body.mini .aroma-dark-border-3, body.mini .aroma-dark-border-2, body.mini .aroma-dark-border-1 {
+  border-color: var(--aroma-color-dark);
+}
+body.mini .aroma-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .aroma-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .aroma-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .aroma-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .aroma-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .aroma-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .pdp-border, body.mini .pdp-border-10, body.mini .pdp-border-5, body.mini .pdp-border-4, body.mini .pdp-border-3, body.mini .pdp-border-2, body.mini .pdp-border-1 {
+  border-color: var(--pezzidipla-color);
+}
+body.mini .pdp-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .pdp-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .pdp-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .pdp-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .pdp-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .pdp-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .pdp-second-border, body.mini .pdp-second-border-10, body.mini .pdp-second-border-5, body.mini .pdp-second-border-4, body.mini .pdp-second-border-3, body.mini .pdp-second-border-2, body.mini .pdp-second-border-1 {
+  border-color: var(--pezzidipla-second-color);
+}
+body.mini .pdp-second-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .pdp-second-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .pdp-second-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .pdp-second-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .pdp-second-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .pdp-second-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .pdp-third-border, body.mini .pdp-third-border-10, body.mini .pdp-third-border-5, body.mini .pdp-third-border-4, body.mini .pdp-third-border-3, body.mini .pdp-third-border-2, body.mini .pdp-third-border-1 {
+  border-color: var(--pezzidipla-third-color);
+}
+body.mini .pdp-third-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .pdp-third-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .pdp-third-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .pdp-third-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .pdp-third-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .pdp-third-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .pdp-fourth-border, body.mini .pdp-fourth-border-10, body.mini .pdp-fourth-border-5, body.mini .pdp-fourth-border-4, body.mini .pdp-fourth-border-3, body.mini .pdp-fourth-border-2, body.mini .pdp-fourth-border-1 {
+  border-color: var(--pezzidipla-fourth-color);
+}
+body.mini .pdp-fourth-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .pdp-fourth-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .pdp-fourth-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .pdp-fourth-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .pdp-fourth-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .pdp-fourth-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .lns-border, body.mini .lns-border-10, body.mini .lns-border-5, body.mini .lns-border-4, body.mini .lns-border-3, body.mini .lns-border-2, body.mini .lns-border-1 {
+  border-color: var(--lanuovastartup-color);
+}
+body.mini .lns-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .lns-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .lns-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .lns-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .lns-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .lns-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .lns-dark-border, body.mini .lns-dark-border-10, body.mini .lns-dark-border-5, body.mini .lns-dark-border-4, body.mini .lns-dark-border-3, body.mini .lns-dark-border-2, body.mini .lns-dark-border-1 {
+  border-color: var(--lanuovastartup-color-dark);
+}
+body.mini .lns-dark-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .lns-dark-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .lns-dark-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .lns-dark-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .lns-dark-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .lns-dark-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
+}
+body.mini .dt-border, body.mini .dt-border-10, body.mini .dt-border-5, body.mini .dt-border-4, body.mini .dt-border-3, body.mini .dt-border-2, body.mini .dt-border-1 {
+  border-color: var(--doingthings-color);
+}
+body.mini .dt-border-1 {
+  border-width: 0;
+  border-width: 1px !important;
+}
+body.mini .dt-border-2 {
+  border-width: 0;
+  border-width: 2px !important;
+}
+body.mini .dt-border-3 {
+  border-width: 0;
+  border-width: 3px !important;
+}
+body.mini .dt-border-4 {
+  border-width: 0;
+  border-width: 4px !important;
+}
+body.mini .dt-border-5 {
+  border-width: 0;
+  border-width: 5px !important;
+}
+body.mini .dt-border-10 {
+  border-width: 0;
+  border-width: 10px !important;
 }
 body.mini .b-rad-1, body.mini .border-radius-1 {
   -webkit-border-radius: 1px;
@@ -17868,7 +19191,7 @@ body.mini.menu-open .sheet aside#side-right.open, body.mini.menu-open .sheet asi
   }
 }
 body.mini.menu-open .sheet aside#side-left.open {
-  padding-top: calc(var(--padding) * 2);
+  padding: calc(var(--padding) * 2) 0;
 }
 body.mini.scroll.menu-open header#header {
   background: var(--sheet-color);

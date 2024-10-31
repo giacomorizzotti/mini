@@ -364,7 +364,7 @@ body {
           }
         }
         aside#side-left.open {
-          padding-top: calc( var(--padding) * 2 );
+          padding: calc( var(--padding) * 2 ) 0;
         }
       }
     }

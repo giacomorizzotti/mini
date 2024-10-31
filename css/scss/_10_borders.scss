@@ -44,6 +44,20 @@ body {
       }
 
     }
+    
+    @each $colorname, $colorcode, $colortext in $colors {
+      .#{$colorname}-border {
+        @extend .border;
+        border-color: $colorcode;
+        @each $bordWidthLabel, $bordWidth in $thickness {   
+          &-#{$bordWidthLabel} {
+            @extend .#{$colorname}-border;
+            border-width: 0;
+            border-width: $bordWidth!important;
+          }
+        }
+      }
+    }
 
     // border radius
     @each $borderRadiusLabel, $borderRadiusAngle in $borderRadius {
