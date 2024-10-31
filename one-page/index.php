@@ -249,6 +249,7 @@
     <?php /* <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/giacomorizzotti/mini@main/js/mini.js"></script> */ ?>
     <?php ### LOCAL ### ?>
     <script type="text/javascript" src="../js/mini.js"></script>
+    <script type="text/javascript" src="../js/debug.js"></script>
 
     <?php ### AOS ### ?>
     <?php /* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */ ?>

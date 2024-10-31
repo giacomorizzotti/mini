@@ -20754,7 +20754,7 @@ body.mini.admin-bar header#header {
 body.mini {
   /* DEV tag */
 }
-body.mini #debugBox {
+body.mini #debug-box {
   position: fixed;
   z-index: 999;
   bottom: 0;
@@ -20769,7 +20769,7 @@ body.mini #debugBox {
   max-width: 50%;
 }
 @media (min-width: 768px) {
-  body.mini #debugBox {
+  body.mini #debug-box {
     bottom: 0;
     border-bottom: 2px solid var(--black);
     border-left: none;
@@ -20778,17 +20778,17 @@ body.mini #debugBox {
     max-width: none;
   }
 }
-body.mini #debugBox .debugData {
+body.mini #debug-box .debug-data {
   margin-bottom: calc(var(--margin) * 0.25);
   margin-right: 0;
 }
 @media (min-width: 768px) {
-  body.mini #debugBox .debugData {
+  body.mini #debug-box .debug-data {
     margin-bottom: 0;
     margin-right: calc(var(--margin) * 0.5);
   }
 }
-body.mini #debugBox .debugData p {
+body.mini #debug-box .debug-data p {
   display: block;
   background: var(--black);
   padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
@@ -20797,11 +20797,11 @@ body.mini #debugBox .debugData p {
   line-height: 1;
 }
 @media (min-width: 768px) {
-  body.mini #debugBox .debugData p {
+  body.mini #debug-box .debug-data p {
     margin: calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) 0 calc(var(--margin) * 0.25);
   }
 }
-body.mini .devTag {
+body.mini .dev-tag {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -20813,7 +20813,7 @@ body.mini .devTag {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
-body.mini .devTag p {
+body.mini .dev-tag p {
   padding: calc(var(--margin) * 0.5);
   color: #fff;
   margin: 0;
@@ -20823,17 +20823,17 @@ body.mini .devTag p {
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  body.mini .devTag p {
+  body.mini .dev-tag p {
     padding: calc(var(--margin) * 0.75);
   }
 }
-body.mini .devTag:hover {
+body.mini .dev-tag:hover {
   box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
 }
-body.mini .devTag.dev {
+body.mini .dev-tag.dev {
   background: var(--warning);
 }
-body.mini .devTag.prod {
+body.mini .dev-tag.prod {
   background: var(--success);
 }
 body.mini #msg {

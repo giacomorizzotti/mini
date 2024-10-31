@@ -51,7 +51,7 @@ window.mobileCheck = function() {
 };
 
 // WEBSITE SETTINGS
-var website
+var website = {}
 // Update website settings cookie
 function updateWebsiteCookie() {
     setCookie('website', JSON.stringify(website))
@@ -835,8 +835,9 @@ function dropDownMenuItems() {
     }
 }
 
+
 // LANGs
-website.lang = 'it'
+website.lang = 'it';
 updateWebsiteCookie()
 
 // STARs background
@@ -902,3 +903,4 @@ window.onload = function() {
 
 };
 */
+
