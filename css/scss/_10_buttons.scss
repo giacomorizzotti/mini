@@ -1,4 +1,4 @@
-/* BUTTONS */
+// BUTTONS
 body {
     &.mini {
 
@@ -12,7 +12,7 @@ body {
             margin: calc( var(--margin) * 0.5 ) calc( var(--margin) * 1 ) calc( var(--margin) * 0.5 ) 0;
             border: 1px solid var(--link-color);
             font-weight: 700;
-            transition: all 0.3s ease;
+            transition: color ease-out 0.15s, background-color ease-out 0.15s, border-color ease-out 0.15s;
             background: transparent;
             cursor: pointer;
             vertical-align: middle;
@@ -31,13 +31,14 @@ body {
             }
 
             &-bg {
+                @extend .btn;
                 color: var(--white);
                 border-color: var(--link-color);
                 background: var(--link-color);
                 &:hover, &.clicked {
-                color: var(--link-color);
-                border-color: var(--link-color);
-                background: transparent;
+                    color: var(--link-color);
+                    border-color: var(--link-color);
+                    background: transparent;
                 }
             }
 
@@ -70,38 +71,42 @@ body {
             }
         }
         
-            
         @each $colorname, $colorcode, $colortext in $colors {
             .#{$colorname} {
                 &-btn {
+                    @extend .btn;
                     color: $colorcode!important;
                     border-color: $colorcode!important;
-                    &:hover, &.clicked {
+                    background-color: transparent!important;
+                    &:hover, &.clicked, &.active {
                         color: $colortext!important;
-                        background: $colorcode!important;
+                        background-color: $colorcode!important;
                         border-color: $colorcode!important;
                     }
-                    &-hover {
-                        &:hover, &.clicked {
+                    &-hover, &-clicked, &-active {
+                        @extend .btn;
+                        &:hover, &.clicked, &.active {
                             color: $colorcode!important;
                             border-color: $colorcode!important;
                         }
                     }
                     &-bg {
+                        @extend .btn-bg;
                         color: $colortext!important;
                         border-color: $colorcode!important;
-                        background: $colorcode!important;
-                        &:hover, &.clicked {
+                        background-color: $colorcode!important;
+                        &:hover, &.clicked, &.active {
                             color: $colorcode!important;
                             border-color: $colorcode!important;
-                            background: transparent!important;
+                            background-color: transparent!important;
                         }
-                        &-hover {
-                        &:hover, &.clicked {
-                            color: $colortext!important;
-                            border-color: $colorcode!important;
-                            background: $colorcode!important;
-                        }
+                        &-hover, &-clicked, &-active {
+                            @extend .btn-bg;
+                            &:hover, &.clicked, &.active {
+                                color: $colortext!important;
+                                border-color: $colorcode!important;
+                                background-color: $colorcode!important;
+                            }
                         }
                     }
                 }

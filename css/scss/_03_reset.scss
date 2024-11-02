@@ -1,4 +1,4 @@
-/* RESET */
+// RESET
 
 *, *::after,*::before{
   box-sizing:border-box;
@@ -17,7 +17,7 @@ html {
   overflow-x: hidden;
 }
 
-/* scrollbar */
+// scrollbar
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid rgba(0,0,0,0.05);
 }
 
-/* text selection */
+// text selection
 ::-moz-selection { background: transparent; color: var(--text-selection-bg); }
 ::selection { background: transparent ; color: var(--text-selection-bg); }
 .colTxt::-moz-selection, .colBox::-moz-selection, .colBg::-moz-selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }

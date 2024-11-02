@@ -205,7 +205,7 @@
 
             <li class="action-group">
 
-                <a href="#add-family-finances" class="" onmousedown="hideElement('.actions');showElement('#target-group');">
+                <a href="#add-family-finances" class="" onmousedown="toggleAndCloseOthers('#target-group', '.actions')">
                     <i class="iconoir-jellyfish icon"></i>
                     <span class="label">Link</span>
                 </a>

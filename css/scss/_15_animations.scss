@@ -1,8 +1,8 @@
 
-/* ANIMATIONS */
+// ANIMATIONS
 
 
-/* VIBING TEXT */
+// VIBING TEXT
 @mixin transition {
   @for $i from 1 through 20 {
     div:nth-child(#{$i}) {
@@ -36,7 +36,7 @@
   }
 }
 
-/* heart animation */
+// heart animation
 @keyframes heart {
   0%   {transform: scale(1);}
   2%  {transform: scale(1.05);}
@@ -50,7 +50,7 @@
   animation: heart 2s infinite;
 }
 
-/* pulse animation */
+// pulse animation
 @-webkit-keyframes pulse {
   0% {-webkit-box-shadow: 0 0 0 0 var(--pulse-color);}
   70% {-webkit-box-shadow: 0 0 0 10px var(--transp);}
@@ -66,9 +66,8 @@
   animation: pulse 3.5s infinite;
 }
 
-/* stars background */
+// stars background
 .stars-bg, .starsBg {
-  /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
   overflow: hidden;
 
   #stars1 {

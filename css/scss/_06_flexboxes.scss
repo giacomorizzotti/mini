@@ -1,10 +1,10 @@
 
-/* MAIN STRUCTURE */
+// MAIN STRUCTURE
 
 body {
   &.mini {
 
-    /* FLEX BOXES */
+    // FLEXBOXES
     
     $width: 
       "8" 100% 50% 33.333333% 16.666666% 8.333333% 12 6 4 1.999999 0.999999,
@@ -405,13 +405,11 @@ body {
       }
     }
 
-    /*
-    .box:has( > .boxes) {
-      margin-top: 0!important;
-      margin-bottom: 0!important;
-      padding: 0!important;
-    }
-    */
+    //.box:has( > .boxes) {
+    //  margin-top: 0!important;
+    //  margin-bottom: 0!important;
+    //  padding: 0!important;
+    //}
 
   }
 }

@@ -1,5 +1,5 @@
 
-/* COLORS */
+// COLORS
 
 body {
   &.mini {
@@ -32,7 +32,7 @@ body {
           background-color: $colorcode!important;
         }
         
-        /* bubbles */
+        // bubbles
         &-bubble {
           &:after {
             content: "";
@@ -129,7 +129,7 @@ body {
       */
     }
 
-    /* gradients */
+    // gradients
     .grad-f2s {
       @include gradient(135deg, $f2s);
     }

@@ -1,8 +1,8 @@
 
-/* BASICS */
+// BASICS
 
 
-/* fluid typography */
+// fluid typography
 @use 'sass:math';
 
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value, $mob-value) {
@@ -29,11 +29,10 @@
   @return math.div( $value, ($value * 0 + 1) );
 }
 
-/*
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-*/
+
+//@function strip-unit($value) {
+//  @return $value / ($value * 0 + 1);
+//}
 
 :root {
   @include fluid-type(--font-size, $min_screen, $max_screen, $min_font, $max_font, $mob_font);
@@ -123,7 +122,7 @@ body {
       }
     }
 
-    /* top position */
+    // top position
     #top {
         position:absolute;
         height:0;
@@ -131,7 +130,7 @@ body {
         top: 0;
     }
 
-    /* link to top */
+    // link to top
     .top-link {
       width: calc( var(--baseline) * 4 );
       height: calc( var(--baseline) * 4 );
@@ -173,7 +172,7 @@ body {
       visibility: visible;
     }
 
-    /* loader */
+    // loader
     .loader {
       display: block;
       width: 100%;

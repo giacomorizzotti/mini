@@ -1,7 +1,7 @@
-/* FORMS */
+// FORMS
 body {
     &.mini {
-        /* forms */
+        // forms
         form {
             margin: 0;
             label {
@@ -47,7 +47,7 @@ body {
             }
         }
 
-        /* checkboxes */
+        // checkboxes
         input[type="checkbox"] {
             width: 1px!important;
             height: 1px!important;
@@ -115,7 +115,7 @@ body {
     
         }
     
-        /* radio buttons */
+        // radio buttons
         input[type="radio"] {
             display: none;
             &+label {

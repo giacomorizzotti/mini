@@ -1,4 +1,4 @@
-/* MIXINs */
+// MIXINs
 
 
 $colors: //color name, color code, text color over color
@@ -68,7 +68,7 @@ $borderRadius: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px, '15':15p
 
 $sides: ('t':'top','e':'right','b':'bottom','s':'left',);
 
-/* gradients */
+// gradients
 $f2s: var(--main-color) 0%, var(--second-color) 100%;
 $f2t: var(--main-color) 0%, var(--third-color) 100%;
 $s2t: var(--second-color) 0%, var(--third-color) 100%;
@@ -86,26 +86,26 @@ $gradFalseWhiteToWhite: var(--white) 0%, var(--false-white) 100%;
   background: linear-gradient($direction, $list)!important;
 }
 
-/* border radius */
+// border radius
 @mixin borderRadius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
 
-/* text shadow */
+// text shadow
 @mixin textShadow($distance, $range, $color) {
   text-shadow: $distance $distance $range $color;
 }
 
-/* box shadow */
+// box shadow
 @mixin boxShadow($distance, $range, $color) {
   -webkit-box-shadow: $distance $distance $range 0 $color;
   -moz-box-shadow: $distance $distance $range 0 $color;
   box-shadow: $distance $distance $range 0 $color;
 }
 
-/* width - min & max */
+// width - min & max
 @mixin width($width) {
   min-width: $width;
   width: $width;

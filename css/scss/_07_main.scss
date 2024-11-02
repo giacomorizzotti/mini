@@ -1,10 +1,10 @@
 
-/* MAIN */
+// MAIN
 
 body {
   &.mini {
 
-    /* images */
+    // images
     img {
       &.img {
         width: 100%;
@@ -16,7 +16,7 @@ body {
       }
     }
 
-    /* attach to relative parent */
+    // attach to relative parent
     .fit {
       position: absolute!important;
       top: 0;
@@ -25,7 +25,7 @@ body {
       left: 0;
     }
 
-    /* spacing */
+    // spacing
     &.space-top, .space-top {
       padding-top: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
     }
@@ -37,12 +37,12 @@ body {
       padding-bottom: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
     }
 
-    /* turn top */
+    // turn top
     .turn-top {
       margin-top: calc( ( (var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2) ) * -1 )!Important;
     }
 
-    /* spacing */
+    // spacing
     $spaceThickness: (
       '05':calc(var(--baseline) * 0.5), 
       '1':calc(var(--baseline) * 1), 
@@ -69,7 +69,7 @@ body {
       }
     }
 
-    /* sep */
+    // sep
     $sepThickness: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
     .sep {
       display: block;
@@ -84,7 +84,7 @@ body {
       }
     }
     
-    /* hr */
+    // hr
     hr {
       border-style: solid;
       border-right: none;
@@ -92,59 +92,59 @@ body {
       border-left: none;
     }
     
-    /* overflow HIDDEN */
+    // overflow HIDDEN
     .oh, .overflow-hidden {
       overflow: hidden!important;
     }
 
 
-    /* fixed height */
+    // fixed height
     .fh, .full-height {
-      min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+      min-height: 100vh; // Fallback for browsers that do not support Custom Properties
       min-height: 100dvh;
     }
     .fhf, .full-height-fixed {
-      height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+      height: 100vh; // Fallback for browsers that do not support Custom Properties
       height: 100dvh;
     }
     .hfh, .half-full-height {
-      min-height: 50vh; /* Fallback for browsers that do not support Custom Properties */
+      min-height: 50vh; // Fallback for browsers that do not support Custom Properties
       min-height: 50dvh;
     }
     .hfhf, .half-full-height-fixed {
-      height: 50vh; /* Fallback for browsers that do not support Custom Properties */
+      height: 50vh; // Fallback for browsers that do not support Custom Properties
       height: 50dvh;
     }
     .one-quarter-full-height {
-      min-height: 25vh; /* Fallback for browsers that do not support Custom Properties */
+      min-height: 25vh; // Fallback for browsers that do not support Custom Properties
       min-height: 25dvh;
     }
     .one-quarter-height-fixed {
-      height: 25vh; /* Fallback for browsers that do not support Custom Properties */
+      height: 25vh; // Fallback for browsers that do not support Custom Properties
       height: 25dvh;
     }
     .three-quarter-full-height {
-      min-height: 75vh; /* Fallback for browsers that do not support Custom Properties */
+      min-height: 75vh; // Fallback for browsers that do not support Custom Properties
       min-height: 75dvh;
     }
     .three-quarter-height-fixed {
-      height: 75vh; /* Fallback for browsers that do not support Custom Properties */
+      height: 75vh; // Fallback for browsers that do not support Custom Properties
       height: 75dvh;
     }
     .one-third-full-height {
-      min-height: 33.3333333vh; /* Fallback for browsers that do not support Custom Properties */
+      min-height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
       min-height: 33.3333333dvh;
     }
     .one-third-height-fixed {
-      height: 33.3333333vh; /* Fallback for browsers that do not support Custom Properties */
+      height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
       height: 33.3333333dvh;
     }
     .two-third-full-height {
-      min-height: 66.666666vh; /* Fallback for browsers that do not support Custom Properties */
+      min-height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
       min-height: 66.666666dvh;
     }
     .two-third-height-fixed {
-      height: 66.666666vh; /* Fallback for browsers that do not support Custom Properties */
+      height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
       height: 66.666666dvh;
     }
 
@@ -164,7 +164,7 @@ body {
       width: 100%;
     }
 
-    /* positioning */
+    // positioning
     .relative, .position-relative {
       position: relative;
     }
@@ -175,7 +175,7 @@ body {
       position: fixed;
     }
 
-    /* horizontal positioning*/
+    // horizontal positioning
     .h-left, .h-start, {
       margin-left: 0!important;
       margin-right: auto!important;
@@ -189,7 +189,7 @@ body {
       margin-right: 0!important;
     }
 
-    /* vertical positioning */
+    // vertical positioning
     .v-top {
     	position: relative;
     	top: 0;
@@ -215,7 +215,7 @@ body {
       position:relative;
     }
 
-    /* box shadow */
+    // box shadow
     .box-shadow-3 {
       transition: box-shadow 0.2s ease;
       @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ));
@@ -337,12 +337,12 @@ body {
       }
     }
 
-    /* pointer */
+    // pointer
     .pointer {
       cursor: pointer;
     }
 
-    /* img and vid as background */
+    // img and vid as background
     .use-as-bg {
       overflow: hidden;
       & > img, & > video {
@@ -373,77 +373,12 @@ body {
       }
     }
 
-    /* dot mask (dotted background) */
+    // dot mask (dotted background)
     .dot-bg, .dot-mask {
       &.inv, &.invert {
         filter: invert(1);
       }
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIiGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MDkrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkZjAzYzJlNS01NGY0LTRmNDItYmU2Ni03NWJlN2JiMzdhODciIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDNlOGFhNC05ZTcyLTA1NDQtYWRkNi1mN2IwOWUxMzFjNDgiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQxMmExNGRiLTc2NzQtZWY0Yi1hYTI5LTVkZjk2NjA2NjQ5MyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xNFQxNzozNzowOSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMGNhNjNiMi1jOTFkLWQ1NDEtOGQzZS0xOWFiMDJkOTQwYjciIHN0RXZ0OndoZW49IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGYwM2MyZTUtNTRmNC00ZjQyLWJlNjYtNzViZTdiYjM3YTg3IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwY2E2M2IyLWM5MWQtZDU0MS04ZDNlLTE5YWIwMmQ5NDBiNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KoMGWAAAAEUlEQVQIHWNgYGD4DwRgEowBT8IJ98nucTsAAAAASUVORK5CYII=');
-    }
-
-    
-
-    /* hidden & shown */
-    .hidden {
-      display: block!important;
-      opacity: 0!important;
-      visibility: hidden!important;
-      width: 0!important;
-      height: 0!important;
-      transition: all 0.15s ease;
-      margin:0!important;
-      padding:0!important;
-      min-width: 0!important;
-      min-height: 0!important;
-      overflow: hidden;
-      border:0!important;
-    }
-    .shown {
-      opacity: 1!important;
-      visibility: visible!important;
-      transition: all 0.15s ease;
-    }
-    &.top {
-      .top-hidden, .scroll-shown {
-        display: block!important;
-        opacity: 0!important;
-        visibility: hidden!important;
-        width: 0!important;
-        height: 0!important;
-        transition: all 0.15s ease;
-        margin:0!important;
-        padding:0!important;
-        min-width: 0!important;
-        min-height: 0!important;
-        overflow: hidden;
-        border:0!important;
-      }
-      .top-shown, .scroll-hidden {
-        opacity: 1!important;
-        visibility: visible!important;
-        transition: all 0.15s ease;
-      }
-    }
-    &.scroll {
-      .top-shown, .scroll-hidden {
-        display: block!important;
-        opacity: 0!important;
-        visibility: hidden!important;
-        width: 0!important;
-        height: 0!important;
-        transition: all 0.15s ease;
-        margin:0!important;
-        padding:0!important;
-        min-width: 0!important;
-        min-height: 0!important;
-        overflow: hidden;
-        border:0!important;
-      }
-      .top-hidden, .scroll-shown {
-        opacity: 1!important;
-        visibility: visible!important;
-        transition: all 0.15s ease;
-      }
     }
 
   }

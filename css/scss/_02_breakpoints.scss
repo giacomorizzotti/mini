@@ -1,5 +1,5 @@
 
-/* BREAKPOINTS */
+// BREAKPOINTS
 
 // Small devices ONLY/DOWN // 576px down
 @mixin smOnly {
@@ -152,7 +152,7 @@
 }
 
 
-/* breakpoint NO visibility */
+// breakpoint NO visibility
 @include sm {
   .sm-down {
     display: none!important;
