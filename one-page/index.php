@@ -200,17 +200,17 @@
         </p>
     </div>
 
-    <div id="actions" onmouseleave="hideElement('.actions');">
+    <div id="actions" onmouseleave="hideElement('.actions');removeClickedClass('.action-btn')">
         <ul class="menu action-groups">
 
             <li class="action-group">
 
-                <a href="#add-family-finances" class="" onmousedown="toggleAndCloseOthers('#target-group', '.actions')">
-                    <i class="iconoir-jellyfish icon"></i>
+                <a href="#" class="action-btn" onmousedown="toggleAndCloseOthers('#target-group-wolf', '.actions', '.action-btn', this)">
+                    <i class="iconoir-wolf icon"></i>
                     <span class="label">Link</span>
                 </a>
 
-                <ul id="target-group" class="menu actions hidden">
+                <ul id="target-group-wolf" class="menu actions hidden">
                     <li class="action">
                         <a href="#" class="">
                             <i class="iconoir-wolf icon"></i>
@@ -235,8 +235,38 @@
 
             <li class="action-group">
 
-                <a id="admin-menu-toggle" href="#add-family-finances" class="" >
-                    <i class="iconoir-settings icon"></i>
+                <a href="#" class="action-btn" onmousedown="toggleAndCloseOthers('#target-group-jellyfish', '.actions', '.action-btn', this)">
+                    <i class="iconoir-jellyfish icon"></i>
+                    <span class="label">Link</span>
+                </a>
+
+                <ul id="target-group-jellyfish" class="menu actions hidden">
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-jellyfish icon"></i>
+                            Link
+                        </a>
+                    </li>
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-jellyfish icon"></i>
+                            Link
+                        </a>
+                    </li>
+                    <li class="action">
+                        <a href="#" class="">
+                            <i class="iconoir-jellyfish icon"></i>
+                            Link
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="action-group">
+
+                <a id="admin-menu-toggle" href="#add-family-finances" class="aroma-bg aroma-dark-bg-hover" >
+                    <i class="iconoir-settings icon aroma-bg"></i>
                     <span class="label">Settings</span>
                 </a>
 

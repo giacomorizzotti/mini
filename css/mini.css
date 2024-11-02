@@ -9783,7 +9783,7 @@ body.mini #actions {
   z-index: 9;
   padding: var(--padding) calc(var(--padding) * 1) 0 calc(var(--padding) * 1);
   background-color: var(--white);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 576px) {
   body.mini #actions {
@@ -9807,17 +9807,18 @@ body.mini #actions ul.action-groups li.action-group > a {
   flex-flow: row;
   align-items: center;
   margin: 0;
-  color: var(--white);
-  border-color: var(--link-color);
-  background: var(--link-color);
   padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
   font-size: calc(var(--p) * 1.25);
   -webkit-border-radius: 3rem;
   -moz-border-radius: 3rem;
   border-radius: 3rem;
+  color: var(--white);
+  background: var(--link-color);
+  border-color: var(--link-color);
 }
 body.mini #actions ul.action-groups li.action-group > a:hover, body.mini #actions ul.action-groups li.action-group > a.active, body.mini #actions ul.action-groups li.action-group > a.clicked {
   background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
 }
 body.mini #actions ul.action-groups li.action-group > a .icon {
   display: flex;
@@ -9886,7 +9887,8 @@ body.mini #actions ul.action-groups li.action-group ul.actions li.action > a {
   display: flex;
   flex-flow: row;
   align-items: center;
-  background: rgb(255, 255, 255);
+  background-color: var(--white);
+  transition: background-color 0.25s ease;
   margin: 0;
   padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.5) calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
   -webkit-border-radius: calc(40px + var(--padding) * 0.5);
@@ -9895,6 +9897,9 @@ body.mini #actions ul.action-groups li.action-group ul.actions li.action > a {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+body.mini #actions ul.action-groups li.action-group ul.actions li.action > a:hover .icon, body.mini #actions ul.action-groups li.action-group ul.actions li.action > a.active .icon {
+  background-color: var(--link-hover-color);
 }
 body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
   display: flex;
@@ -9914,9 +9919,6 @@ body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .ic
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
-body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon:hover, body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon.active {
-  background-color: var(--link-hover-color);
 }
 @media (min-width: 576px) {
   body.mini #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
@@ -11699,7 +11701,7 @@ body.mini .dt-btn-bg-hover:hover, body.mini .dt-btn-bg-hover.clicked, body.mini 
   background-color: var(--doingthings-color) !important;
 }
 
-body.mini .border, body.mini .dt-border, body.mini .dt-border-10, body.mini .dt-border-5, body.mini .dt-border-4, body.mini .dt-border-3, body.mini .dt-border-2, body.mini .dt-border-1, body.mini .lns-dark-border, body.mini .lns-dark-border-10, body.mini .lns-dark-border-5, body.mini .lns-dark-border-4, body.mini .lns-dark-border-3, body.mini .lns-dark-border-2, body.mini .lns-dark-border-1, body.mini .lns-border, body.mini .lns-border-10, body.mini .lns-border-5, body.mini .lns-border-4, body.mini .lns-border-3, body.mini .lns-border-2, body.mini .lns-border-1, body.mini .pdp-fourth-border, body.mini .pdp-fourth-border-10, body.mini .pdp-fourth-border-5, body.mini .pdp-fourth-border-4, body.mini .pdp-fourth-border-3, body.mini .pdp-fourth-border-2, body.mini .pdp-fourth-border-1, body.mini .pdp-third-border, body.mini .pdp-third-border-10, body.mini .pdp-third-border-5, body.mini .pdp-third-border-4, body.mini .pdp-third-border-3, body.mini .pdp-third-border-2, body.mini .pdp-third-border-1, body.mini .pdp-second-border, body.mini .pdp-second-border-10, body.mini .pdp-second-border-5, body.mini .pdp-second-border-4, body.mini .pdp-second-border-3, body.mini .pdp-second-border-2, body.mini .pdp-second-border-1, body.mini .pdp-border, body.mini .pdp-border-10, body.mini .pdp-border-5, body.mini .pdp-border-4, body.mini .pdp-border-3, body.mini .pdp-border-2, body.mini .pdp-border-1, body.mini .aroma-dark-border, body.mini .aroma-dark-border-10, body.mini .aroma-dark-border-5, body.mini .aroma-dark-border-4, body.mini .aroma-dark-border-3, body.mini .aroma-dark-border-2, body.mini .aroma-dark-border-1, body.mini .aroma-border, body.mini .aroma-border-10, body.mini .aroma-border-5, body.mini .aroma-border-4, body.mini .aroma-border-3, body.mini .aroma-border-2, body.mini .aroma-border-1, body.mini .uwa-link-border, body.mini .uwa-link-border-10, body.mini .uwa-link-border-5, body.mini .uwa-link-border-4, body.mini .uwa-link-border-3, body.mini .uwa-link-border-2, body.mini .uwa-link-border-1, body.mini .uwa-fourth-border, body.mini .uwa-fourth-border-10, body.mini .uwa-fourth-border-5, body.mini .uwa-fourth-border-4, body.mini .uwa-fourth-border-3, body.mini .uwa-fourth-border-2, body.mini .uwa-fourth-border-1, body.mini .uwa-third-border, body.mini .uwa-third-border-10, body.mini .uwa-third-border-5, body.mini .uwa-third-border-4, body.mini .uwa-third-border-3, body.mini .uwa-third-border-2, body.mini .uwa-third-border-1, body.mini .uwa-second-border, body.mini .uwa-second-border-10, body.mini .uwa-second-border-5, body.mini .uwa-second-border-4, body.mini .uwa-second-border-3, body.mini .uwa-second-border-2, body.mini .uwa-second-border-1, body.mini .uwa-dark-border, body.mini .uwa-dark-border-10, body.mini .uwa-dark-border-5, body.mini .uwa-dark-border-4, body.mini .uwa-dark-border-3, body.mini .uwa-dark-border-2, body.mini .uwa-dark-border-1, body.mini .uwa-border, body.mini .uwa-border-10, body.mini .uwa-border-5, body.mini .uwa-border-4, body.mini .uwa-border-3, body.mini .uwa-border-2, body.mini .uwa-border-1, body.mini .mini-fourth-border, body.mini .mini-fourth-border-10, body.mini .mini-fourth-border-5, body.mini .mini-fourth-border-4, body.mini .mini-fourth-border-3, body.mini .mini-fourth-border-2, body.mini .mini-fourth-border-1, body.mini .mini-third-border, body.mini .mini-third-border-10, body.mini .mini-third-border-5, body.mini .mini-third-border-4, body.mini .mini-third-border-3, body.mini .mini-third-border-2, body.mini .mini-third-border-1, body.mini .mini-second-border, body.mini .mini-second-border-10, body.mini .mini-second-border-5, body.mini .mini-second-border-4, body.mini .mini-second-border-3, body.mini .mini-second-border-2, body.mini .mini-second-border-1, body.mini .mini-dark-border, body.mini .mini-dark-border-10, body.mini .mini-dark-border-5, body.mini .mini-dark-border-4, body.mini .mini-dark-border-3, body.mini .mini-dark-border-2, body.mini .mini-dark-border-1, body.mini .mini-border, body.mini .mini-border-10, body.mini .mini-border-5, body.mini .mini-border-4, body.mini .mini-border-3, body.mini .mini-border-2, body.mini .mini-border-1, body.mini .ginger-bread-border, body.mini .ginger-bread-border-10, body.mini .ginger-bread-border-5, body.mini .ginger-bread-border-4, body.mini .ginger-bread-border-3, body.mini .ginger-bread-border-2, body.mini .ginger-bread-border-1, body.mini .acid-green-border, body.mini .acid-green-border-10, body.mini .acid-green-border-5, body.mini .acid-green-border-4, body.mini .acid-green-border-3, body.mini .acid-green-border-2, body.mini .acid-green-border-1, body.mini .bad-border, body.mini .bad-border-10, body.mini .bad-border-5, body.mini .bad-border-4, body.mini .bad-border-3, body.mini .bad-border-2, body.mini .bad-border-1, body.mini .danger-border, body.mini .danger-border-10, body.mini .danger-border-5, body.mini .danger-border-4, body.mini .danger-border-3, body.mini .danger-border-2, body.mini .danger-border-1, body.mini .warning-border, body.mini .warning-border-10, body.mini .warning-border-5, body.mini .warning-border-4, body.mini .warning-border-3, body.mini .warning-border-2, body.mini .warning-border-1, body.mini .success-border, body.mini .success-border-10, body.mini .success-border-5, body.mini .success-border-4, body.mini .success-border-3, body.mini .success-border-2, body.mini .success-border-1, body.mini .info-border, body.mini .info-border-10, body.mini .info-border-5, body.mini .info-border-4, body.mini .info-border-3, body.mini .info-border-2, body.mini .info-border-1, body.mini .link-hover-border, body.mini .link-hover-border-10, body.mini .link-hover-border-5, body.mini .link-hover-border-4, body.mini .link-hover-border-3, body.mini .link-hover-border-2, body.mini .link-hover-border-1, body.mini .link-border, body.mini .link-border-10, body.mini .link-border-5, body.mini .link-border-4, body.mini .link-border-3, body.mini .link-border-2, body.mini .link-border-1, body.mini .fourth-color-dark-border, body.mini .fourth-color-dark-border-10, body.mini .fourth-color-dark-border-5, body.mini .fourth-color-dark-border-4, body.mini .fourth-color-dark-border-3, body.mini .fourth-color-dark-border-2, body.mini .fourth-color-dark-border-1, body.mini .fourth-color-border, body.mini .fourth-color-border-10, body.mini .fourth-color-border-5, body.mini .fourth-color-border-4, body.mini .fourth-color-border-3, body.mini .fourth-color-border-2, body.mini .fourth-color-border-1, body.mini .third-color-dark-border, body.mini .third-color-dark-border-10, body.mini .third-color-dark-border-5, body.mini .third-color-dark-border-4, body.mini .third-color-dark-border-3, body.mini .third-color-dark-border-2, body.mini .third-color-dark-border-1, body.mini .third-color-border, body.mini .third-color-border-10, body.mini .third-color-border-5, body.mini .third-color-border-4, body.mini .third-color-border-3, body.mini .third-color-border-2, body.mini .third-color-border-1, body.mini .second-color-dark-border, body.mini .second-color-dark-border-10, body.mini .second-color-dark-border-5, body.mini .second-color-dark-border-4, body.mini .second-color-dark-border-3, body.mini .second-color-dark-border-2, body.mini .second-color-dark-border-1, body.mini .second-color-border, body.mini .second-color-border-10, body.mini .second-color-border-5, body.mini .second-color-border-4, body.mini .second-color-border-3, body.mini .second-color-border-2, body.mini .second-color-border-1, body.mini .main-color-dark-border, body.mini .main-color-dark-border-10, body.mini .main-color-dark-border-5, body.mini .main-color-dark-border-4, body.mini .main-color-dark-border-3, body.mini .main-color-dark-border-2, body.mini .main-color-dark-border-1, body.mini .color-dark-border, body.mini .color-dark-border-10, body.mini .color-dark-border-5, body.mini .color-dark-border-4, body.mini .color-dark-border-3, body.mini .color-dark-border-2, body.mini .color-dark-border-1, body.mini .main-color-border, body.mini .main-color-border-10, body.mini .main-color-border-5, body.mini .main-color-border-4, body.mini .main-color-border-3, body.mini .main-color-border-2, body.mini .main-color-border-1, body.mini .color-border, body.mini .color-border-10, body.mini .color-border-5, body.mini .color-border-4, body.mini .color-border-3, body.mini .color-border-2, body.mini .color-border-1, body.mini .col-border, body.mini .col-border-10, body.mini .col-border-5, body.mini .col-border-4, body.mini .col-border-3, body.mini .col-border-2, body.mini .col-border-1, body.mini .black-border, body.mini .black-border-10, body.mini .black-border-5, body.mini .black-border-4, body.mini .black-border-3, body.mini .black-border-2, body.mini .black-border-1, body.mini .bk-border, body.mini .bk-border-10, body.mini .bk-border-5, body.mini .bk-border-4, body.mini .bk-border-3, body.mini .bk-border-2, body.mini .bk-border-1, body.mini .fb-border, body.mini .fb-border-10, body.mini .fb-border-5, body.mini .fb-border-4, body.mini .fb-border-3, body.mini .fb-border-2, body.mini .fb-border-1, body.mini .dark-grey-border, body.mini .dark-grey-border-10, body.mini .dark-grey-border-5, body.mini .dark-grey-border-4, body.mini .dark-grey-border-3, body.mini .dark-grey-border-2, body.mini .dark-grey-border-1, body.mini .grey-border, body.mini .grey-border-10, body.mini .grey-border-5, body.mini .grey-border-4, body.mini .grey-border-3, body.mini .grey-border-2, body.mini .grey-border-1, body.mini .light-grey-border, body.mini .light-grey-border-10, body.mini .light-grey-border-5, body.mini .light-grey-border-4, body.mini .light-grey-border-3, body.mini .light-grey-border-2, body.mini .light-grey-border-1, body.mini .fw-border, body.mini .fw-border-10, body.mini .fw-border-5, body.mini .fw-border-4, body.mini .fw-border-3, body.mini .fw-border-2, body.mini .fw-border-1, body.mini .white-border, body.mini .white-border-10, body.mini .white-border-5, body.mini .white-border-4, body.mini .white-border-3, body.mini .white-border-2, body.mini .white-border-1, body.mini .wh-border, body.mini .wh-border-10, body.mini .wh-border-5, body.mini .wh-border-4, body.mini .wh-border-3, body.mini .wh-border-2, body.mini .wh-border-1, body.mini .border-s-dt, body.mini .border-s-lns-dark, body.mini .border-s-lns, body.mini .border-s-pdp-fourth, body.mini .border-s-pdp-third, body.mini .border-s-pdp-second, body.mini .border-s-pdp, body.mini .border-s-aroma-dark, body.mini .border-s-aroma, body.mini .border-s-uwa-link, body.mini .border-s-uwa-fourth, body.mini .border-s-uwa-third, body.mini .border-s-uwa-second, body.mini .border-s-uwa-dark, body.mini .border-s-uwa, body.mini .border-s-mini-fourth, body.mini .border-s-mini-third, body.mini .border-s-mini-second, body.mini .border-s-mini-dark, body.mini .border-s-mini, body.mini .border-s-ginger-bread, body.mini .border-s-acid-green, body.mini .border-s-bad, body.mini .border-s-danger, body.mini .border-s-warning, body.mini .border-s-success, body.mini .border-s-info, body.mini .border-s-link-hover, body.mini .border-s-link, body.mini .border-s-fourth-color-dark, body.mini .border-s-fourth-color, body.mini .border-s-third-color-dark, body.mini .border-s-third-color, body.mini .border-s-second-color-dark, body.mini .border-s-second-color, body.mini .border-s-main-color-dark, body.mini .border-s-color-dark, body.mini .border-s-main-color, body.mini .border-s-color, body.mini .border-s-col, body.mini .border-s-black, body.mini .border-s-bk, body.mini .border-s-fb, body.mini .border-s-dark-grey, body.mini .border-s-grey, body.mini .border-s-light-grey, body.mini .border-s-fw, body.mini .border-s-white, body.mini .border-s-wh, body.mini .border-s-10, body.mini .border-s-5, body.mini .border-s-4, body.mini .border-s-3, body.mini .border-s-2, body.mini .border-s-1, body.mini .border-s, body.mini .border-b-dt, body.mini .border-b-lns-dark, body.mini .border-b-lns, body.mini .border-b-pdp-fourth, body.mini .border-b-pdp-third, body.mini .border-b-pdp-second, body.mini .border-b-pdp, body.mini .border-b-aroma-dark, body.mini .border-b-aroma, body.mini .border-b-uwa-link, body.mini .border-b-uwa-fourth, body.mini .border-b-uwa-third, body.mini .border-b-uwa-second, body.mini .border-b-uwa-dark, body.mini .border-b-uwa, body.mini .border-b-mini-fourth, body.mini .border-b-mini-third, body.mini .border-b-mini-second, body.mini .border-b-mini-dark, body.mini .border-b-mini, body.mini .border-b-ginger-bread, body.mini .border-b-acid-green, body.mini .border-b-bad, body.mini .border-b-danger, body.mini .border-b-warning, body.mini .border-b-success, body.mini .border-b-info, body.mini .border-b-link-hover, body.mini .border-b-link, body.mini .border-b-fourth-color-dark, body.mini .border-b-fourth-color, body.mini .border-b-third-color-dark, body.mini .border-b-third-color, body.mini .border-b-second-color-dark, body.mini .border-b-second-color, body.mini .border-b-main-color-dark, body.mini .border-b-color-dark, body.mini .border-b-main-color, body.mini .border-b-color, body.mini .border-b-col, body.mini .border-b-black, body.mini .border-b-bk, body.mini .border-b-fb, body.mini .border-b-dark-grey, body.mini .border-b-grey, body.mini .border-b-light-grey, body.mini .border-b-fw, body.mini .border-b-white, body.mini .border-b-wh, body.mini .border-b-10, body.mini .border-b-5, body.mini .border-b-4, body.mini .border-b-3, body.mini .border-b-2, body.mini .border-b-1, body.mini .border-b, body.mini .border-e-dt, body.mini .border-e-lns-dark, body.mini .border-e-lns, body.mini .border-e-pdp-fourth, body.mini .border-e-pdp-third, body.mini .border-e-pdp-second, body.mini .border-e-pdp, body.mini .border-e-aroma-dark, body.mini .border-e-aroma, body.mini .border-e-uwa-link, body.mini .border-e-uwa-fourth, body.mini .border-e-uwa-third, body.mini .border-e-uwa-second, body.mini .border-e-uwa-dark, body.mini .border-e-uwa, body.mini .border-e-mini-fourth, body.mini .border-e-mini-third, body.mini .border-e-mini-second, body.mini .border-e-mini-dark, body.mini .border-e-mini, body.mini .border-e-ginger-bread, body.mini .border-e-acid-green, body.mini .border-e-bad, body.mini .border-e-danger, body.mini .border-e-warning, body.mini .border-e-success, body.mini .border-e-info, body.mini .border-e-link-hover, body.mini .border-e-link, body.mini .border-e-fourth-color-dark, body.mini .border-e-fourth-color, body.mini .border-e-third-color-dark, body.mini .border-e-third-color, body.mini .border-e-second-color-dark, body.mini .border-e-second-color, body.mini .border-e-main-color-dark, body.mini .border-e-color-dark, body.mini .border-e-main-color, body.mini .border-e-color, body.mini .border-e-col, body.mini .border-e-black, body.mini .border-e-bk, body.mini .border-e-fb, body.mini .border-e-dark-grey, body.mini .border-e-grey, body.mini .border-e-light-grey, body.mini .border-e-fw, body.mini .border-e-white, body.mini .border-e-wh, body.mini .border-e-10, body.mini .border-e-5, body.mini .border-e-4, body.mini .border-e-3, body.mini .border-e-2, body.mini .border-e-1, body.mini .border-e, body.mini .border-t-dt, body.mini .border-t-lns-dark, body.mini .border-t-lns, body.mini .border-t-pdp-fourth, body.mini .border-t-pdp-third, body.mini .border-t-pdp-second, body.mini .border-t-pdp, body.mini .border-t-aroma-dark, body.mini .border-t-aroma, body.mini .border-t-uwa-link, body.mini .border-t-uwa-fourth, body.mini .border-t-uwa-third, body.mini .border-t-uwa-second, body.mini .border-t-uwa-dark, body.mini .border-t-uwa, body.mini .border-t-mini-fourth, body.mini .border-t-mini-third, body.mini .border-t-mini-second, body.mini .border-t-mini-dark, body.mini .border-t-mini, body.mini .border-t-ginger-bread, body.mini .border-t-acid-green, body.mini .border-t-bad, body.mini .border-t-danger, body.mini .border-t-warning, body.mini .border-t-success, body.mini .border-t-info, body.mini .border-t-link-hover, body.mini .border-t-link, body.mini .border-t-fourth-color-dark, body.mini .border-t-fourth-color, body.mini .border-t-third-color-dark, body.mini .border-t-third-color, body.mini .border-t-second-color-dark, body.mini .border-t-second-color, body.mini .border-t-main-color-dark, body.mini .border-t-color-dark, body.mini .border-t-main-color, body.mini .border-t-color, body.mini .border-t-col, body.mini .border-t-black, body.mini .border-t-bk, body.mini .border-t-fb, body.mini .border-t-dark-grey, body.mini .border-t-grey, body.mini .border-t-light-grey, body.mini .border-t-fw, body.mini .border-t-white, body.mini .border-t-wh, body.mini .border-t-10, body.mini .border-t-5, body.mini .border-t-4, body.mini .border-t-3, body.mini .border-t-2, body.mini .border-t-1, body.mini .border-t, body.mini .border-dt, body.mini .border-lns-dark, body.mini .border-lns, body.mini .border-pdp-fourth, body.mini .border-pdp-third, body.mini .border-pdp-second, body.mini .border-pdp, body.mini .border-aroma-dark, body.mini .border-aroma, body.mini .border-uwa-link, body.mini .border-uwa-fourth, body.mini .border-uwa-third, body.mini .border-uwa-second, body.mini .border-uwa-dark, body.mini .border-uwa, body.mini .border-mini-fourth, body.mini .border-mini-third, body.mini .border-mini-second, body.mini .border-mini-dark, body.mini .border-mini, body.mini .border-ginger-bread, body.mini .border-acid-green, body.mini .border-bad, body.mini .border-danger, body.mini .border-warning, body.mini .border-success, body.mini .border-info, body.mini .border-link-hover, body.mini .border-link, body.mini .border-fourth-color-dark, body.mini .border-fourth-color, body.mini .border-third-color-dark, body.mini .border-third-color, body.mini .border-second-color-dark, body.mini .border-second-color, body.mini .border-main-color-dark, body.mini .border-color-dark, body.mini .border-main-color, body.mini .border-color, body.mini .border-col, body.mini .border-black, body.mini .border-bk, body.mini .border-fb, body.mini .border-dark-grey, body.mini .border-grey, body.mini .border-light-grey, body.mini .border-fw, body.mini .border-white, body.mini .border-wh, body.mini .border-10, body.mini .border-5, body.mini .border-4, body.mini .border-3, body.mini .border-2, body.mini .border-1 {
+body.mini .border, body.mini .dt-border, body.mini .dt-border-10, body.mini .dt-border-5, body.mini .dt-border-4, body.mini .dt-border-3, body.mini .dt-border-2, body.mini .dt-border-1, body.mini .lns-dark-border, body.mini .lns-dark-border-10, body.mini .lns-dark-border-5, body.mini .lns-dark-border-4, body.mini .lns-dark-border-3, body.mini .lns-dark-border-2, body.mini .lns-dark-border-1, body.mini .lns-border, body.mini .lns-border-10, body.mini .lns-border-5, body.mini .lns-border-4, body.mini .lns-border-3, body.mini .lns-border-2, body.mini .lns-border-1, body.mini .pdp-fourth-border, body.mini .pdp-fourth-border-10, body.mini .pdp-fourth-border-5, body.mini .pdp-fourth-border-4, body.mini .pdp-fourth-border-3, body.mini .pdp-fourth-border-2, body.mini .pdp-fourth-border-1, body.mini .pdp-third-border, body.mini .pdp-third-border-10, body.mini .pdp-third-border-5, body.mini .pdp-third-border-4, body.mini .pdp-third-border-3, body.mini .pdp-third-border-2, body.mini .pdp-third-border-1, body.mini .pdp-second-border, body.mini .pdp-second-border-10, body.mini .pdp-second-border-5, body.mini .pdp-second-border-4, body.mini .pdp-second-border-3, body.mini .pdp-second-border-2, body.mini .pdp-second-border-1, body.mini .pdp-border, body.mini .pdp-border-10, body.mini .pdp-border-5, body.mini .pdp-border-4, body.mini .pdp-border-3, body.mini .pdp-border-2, body.mini .pdp-border-1, body.mini .aroma-dark-border, body.mini .aroma-dark-border-10, body.mini .aroma-dark-border-5, body.mini .aroma-dark-border-4, body.mini .aroma-dark-border-3, body.mini .aroma-dark-border-2, body.mini .aroma-dark-border-1, body.mini .aroma-border, body.mini .aroma-border-10, body.mini .aroma-border-5, body.mini .aroma-border-4, body.mini .aroma-border-3, body.mini .aroma-border-2, body.mini .aroma-border-1, body.mini .uwa-link-border, body.mini .uwa-link-border-10, body.mini .uwa-link-border-5, body.mini .uwa-link-border-4, body.mini .uwa-link-border-3, body.mini .uwa-link-border-2, body.mini .uwa-link-border-1, body.mini .uwa-fourth-border, body.mini .uwa-fourth-border-10, body.mini .uwa-fourth-border-5, body.mini .uwa-fourth-border-4, body.mini .uwa-fourth-border-3, body.mini .uwa-fourth-border-2, body.mini .uwa-fourth-border-1, body.mini .uwa-third-border, body.mini .uwa-third-border-10, body.mini .uwa-third-border-5, body.mini .uwa-third-border-4, body.mini .uwa-third-border-3, body.mini .uwa-third-border-2, body.mini .uwa-third-border-1, body.mini .uwa-second-border, body.mini .uwa-second-border-10, body.mini .uwa-second-border-5, body.mini .uwa-second-border-4, body.mini .uwa-second-border-3, body.mini .uwa-second-border-2, body.mini .uwa-second-border-1, body.mini .uwa-dark-border, body.mini .uwa-dark-border-10, body.mini .uwa-dark-border-5, body.mini .uwa-dark-border-4, body.mini .uwa-dark-border-3, body.mini .uwa-dark-border-2, body.mini .uwa-dark-border-1, body.mini .uwa-border, body.mini .uwa-border-10, body.mini .uwa-border-5, body.mini .uwa-border-4, body.mini .uwa-border-3, body.mini .uwa-border-2, body.mini .uwa-border-1, body.mini .mini-fourth-border, body.mini .mini-fourth-border-10, body.mini .mini-fourth-border-5, body.mini .mini-fourth-border-4, body.mini .mini-fourth-border-3, body.mini .mini-fourth-border-2, body.mini .mini-fourth-border-1, body.mini .mini-third-border, body.mini .mini-third-border-10, body.mini .mini-third-border-5, body.mini .mini-third-border-4, body.mini .mini-third-border-3, body.mini .mini-third-border-2, body.mini .mini-third-border-1, body.mini .mini-second-border, body.mini .mini-second-border-10, body.mini .mini-second-border-5, body.mini .mini-second-border-4, body.mini .mini-second-border-3, body.mini .mini-second-border-2, body.mini .mini-second-border-1, body.mini .mini-dark-border, body.mini .mini-dark-border-10, body.mini .mini-dark-border-5, body.mini .mini-dark-border-4, body.mini .mini-dark-border-3, body.mini .mini-dark-border-2, body.mini .mini-dark-border-1, body.mini .mini-border, body.mini .mini-border-10, body.mini .mini-border-5, body.mini .mini-border-4, body.mini .mini-border-3, body.mini .mini-border-2, body.mini .mini-border-1, body.mini .ginger-bread-border, body.mini .ginger-bread-border-10, body.mini .ginger-bread-border-5, body.mini .ginger-bread-border-4, body.mini .ginger-bread-border-3, body.mini .ginger-bread-border-2, body.mini .ginger-bread-border-1, body.mini .acid-green-border, body.mini .acid-green-border-10, body.mini .acid-green-border-5, body.mini .acid-green-border-4, body.mini .acid-green-border-3, body.mini .acid-green-border-2, body.mini .acid-green-border-1, body.mini .bad-border, body.mini .bad-border-10, body.mini .bad-border-5, body.mini .bad-border-4, body.mini .bad-border-3, body.mini .bad-border-2, body.mini .bad-border-1, body.mini .danger-border, body.mini .danger-border-10, body.mini .danger-border-5, body.mini .danger-border-4, body.mini .danger-border-3, body.mini .danger-border-2, body.mini .danger-border-1, body.mini .warning-border, body.mini .warning-border-10, body.mini .warning-border-5, body.mini .warning-border-4, body.mini .warning-border-3, body.mini .warning-border-2, body.mini .warning-border-1, body.mini .success-border, body.mini .success-border-10, body.mini .success-border-5, body.mini .success-border-4, body.mini .success-border-3, body.mini .success-border-2, body.mini .success-border-1, body.mini .info-border, body.mini .info-border-10, body.mini .info-border-5, body.mini .info-border-4, body.mini .info-border-3, body.mini .info-border-2, body.mini .info-border-1, body.mini .link-hover-border, body.mini .link-hover-border-10, body.mini .link-hover-border-5, body.mini .link-hover-border-4, body.mini .link-hover-border-3, body.mini .link-hover-border-2, body.mini .link-hover-border-1, body.mini .link-border, body.mini .link-border-10, body.mini .link-border-5, body.mini .link-border-4, body.mini .link-border-3, body.mini .link-border-2, body.mini .link-border-1, body.mini .fourth-color-dark-border, body.mini .fourth-color-dark-border-10, body.mini .fourth-color-dark-border-5, body.mini .fourth-color-dark-border-4, body.mini .fourth-color-dark-border-3, body.mini .fourth-color-dark-border-2, body.mini .fourth-color-dark-border-1, body.mini .fourth-color-border, body.mini .fourth-color-border-10, body.mini .fourth-color-border-5, body.mini .fourth-color-border-4, body.mini .fourth-color-border-3, body.mini .fourth-color-border-2, body.mini .fourth-color-border-1, body.mini .third-color-dark-border, body.mini .third-color-dark-border-10, body.mini .third-color-dark-border-5, body.mini .third-color-dark-border-4, body.mini .third-color-dark-border-3, body.mini .third-color-dark-border-2, body.mini .third-color-dark-border-1, body.mini .third-color-border, body.mini .third-color-border-10, body.mini .third-color-border-5, body.mini .third-color-border-4, body.mini .third-color-border-3, body.mini .third-color-border-2, body.mini .third-color-border-1, body.mini .second-color-dark-border, body.mini .second-color-dark-border-10, body.mini .second-color-dark-border-5, body.mini .second-color-dark-border-4, body.mini .second-color-dark-border-3, body.mini .second-color-dark-border-2, body.mini .second-color-dark-border-1, body.mini .second-color-border, body.mini .second-color-border-10, body.mini .second-color-border-5, body.mini .second-color-border-4, body.mini .second-color-border-3, body.mini .second-color-border-2, body.mini .second-color-border-1, body.mini .main-color-dark-border, body.mini .main-color-dark-border-10, body.mini .main-color-dark-border-5, body.mini .main-color-dark-border-4, body.mini .main-color-dark-border-3, body.mini .main-color-dark-border-2, body.mini .main-color-dark-border-1, body.mini .color-dark-border, body.mini .color-dark-border-10, body.mini .color-dark-border-5, body.mini .color-dark-border-4, body.mini .color-dark-border-3, body.mini .color-dark-border-2, body.mini .color-dark-border-1, body.mini .main-color-border, body.mini .main-color-border-10, body.mini .main-color-border-5, body.mini .main-color-border-4, body.mini .main-color-border-3, body.mini .main-color-border-2, body.mini .main-color-border-1, body.mini .color-border, body.mini .color-border-10, body.mini .color-border-5, body.mini .color-border-4, body.mini .color-border-3, body.mini .color-border-2, body.mini .color-border-1, body.mini .col-border, body.mini .col-border-10, body.mini .col-border-5, body.mini .col-border-4, body.mini .col-border-3, body.mini .col-border-2, body.mini .col-border-1, body.mini .black-border, body.mini .black-border-10, body.mini .black-border-5, body.mini .black-border-4, body.mini .black-border-3, body.mini .black-border-2, body.mini .black-border-1, body.mini .bk-border, body.mini .bk-border-10, body.mini .bk-border-5, body.mini .bk-border-4, body.mini .bk-border-3, body.mini .bk-border-2, body.mini .bk-border-1, body.mini .fb-border, body.mini .fb-border-10, body.mini .fb-border-5, body.mini .fb-border-4, body.mini .fb-border-3, body.mini .fb-border-2, body.mini .fb-border-1, body.mini .dark-grey-border, body.mini .dark-grey-border-10, body.mini .dark-grey-border-5, body.mini .dark-grey-border-4, body.mini .dark-grey-border-3, body.mini .dark-grey-border-2, body.mini .dark-grey-border-1, body.mini .grey-border, body.mini .grey-border-10, body.mini .grey-border-5, body.mini .grey-border-4, body.mini .grey-border-3, body.mini .grey-border-2, body.mini .grey-border-1, body.mini .light-grey-border, body.mini .light-grey-border-10, body.mini .light-grey-border-5, body.mini .light-grey-border-4, body.mini .light-grey-border-3, body.mini .light-grey-border-2, body.mini .light-grey-border-1, body.mini .fw-border, body.mini .fw-border-10, body.mini .fw-border-5, body.mini .fw-border-4, body.mini .fw-border-3, body.mini .fw-border-2, body.mini .fw-border-1, body.mini .white-border, body.mini .white-border-10, body.mini .white-border-5, body.mini .white-border-4, body.mini .white-border-3, body.mini .white-border-2, body.mini .white-border-1, body.mini .wh-border, body.mini .wh-border-10, body.mini .wh-border-5, body.mini .wh-border-4, body.mini .wh-border-3, body.mini .wh-border-2, body.mini .wh-border-1, body.mini .border-s-dt, body.mini .border-s-lns-dark, body.mini .border-s-lns, body.mini .border-s-pdp-fourth, body.mini .border-s-pdp-third, body.mini .border-s-pdp-second, body.mini .border-s-pdp, body.mini .border-s-aroma-dark, body.mini .border-s-aroma, body.mini .border-s-uwa-link, body.mini .border-s-uwa-fourth, body.mini .border-s-uwa-third, body.mini .border-s-uwa-second, body.mini .border-s-uwa-dark, body.mini .border-s-uwa, body.mini .border-s-mini-fourth, body.mini .border-s-mini-third, body.mini .border-s-mini-second, body.mini .border-s-mini-dark, body.mini .border-s-mini, body.mini .border-s-ginger-bread, body.mini .border-s-acid-green, body.mini .border-s-bad, body.mini .border-s-danger, body.mini .border-s-warning, body.mini .border-s-success, body.mini .border-s-info, body.mini .border-s-link-hover, body.mini .border-s-link, body.mini .border-s-fourth-color-dark, body.mini .border-s-fourth-color, body.mini .border-s-third-color-dark, body.mini .border-s-third-color, body.mini .border-s-second-color-dark, body.mini .border-s-second-color, body.mini .border-s-main-color-dark, body.mini .border-s-color-dark, body.mini .border-s-main-color, body.mini .border-s-color, body.mini .border-s-col, body.mini .border-s-black, body.mini .border-s-bk, body.mini .border-s-fb, body.mini .border-s-dark-grey, body.mini .border-s-grey, body.mini .border-s-light-grey, body.mini .border-s-fw, body.mini .border-s-white, body.mini .border-s-wh, body.mini .border-s-10, body.mini .border-s-5, body.mini .border-s-4, body.mini .border-s-3, body.mini .border-s-2, body.mini .border-s-1, body.mini .border-s, body.mini .border-b-dt, body.mini .border-b-lns-dark, body.mini .border-b-lns, body.mini .border-b-pdp-fourth, body.mini .border-b-pdp-third, body.mini .border-b-pdp-second, body.mini .border-b-pdp, body.mini .border-b-aroma-dark, body.mini .border-b-aroma, body.mini .border-b-uwa-link, body.mini .border-b-uwa-fourth, body.mini .border-b-uwa-third, body.mini .border-b-uwa-second, body.mini .border-b-uwa-dark, body.mini .border-b-uwa, body.mini .border-b-mini-fourth, body.mini .border-b-mini-third, body.mini .border-b-mini-second, body.mini .border-b-mini-dark, body.mini .border-b-mini, body.mini .border-b-ginger-bread, body.mini .border-b-acid-green, body.mini .border-b-bad, body.mini .border-b-danger, body.mini .border-b-warning, body.mini .border-b-success, body.mini .border-b-info, body.mini .border-b-link-hover, body.mini .border-b-link, body.mini .border-b-fourth-color-dark, body.mini .border-b-fourth-color, body.mini .border-b-third-color-dark, body.mini .border-b-third-color, body.mini .border-b-second-color-dark, body.mini .border-b-second-color, body.mini .border-b-main-color-dark, body.mini .border-b-color-dark, body.mini .border-b-main-color, body.mini .border-b-color, body.mini .border-b-col, body.mini .border-b-black, body.mini .border-b-bk, body.mini .border-b-fb, body.mini .border-b-dark-grey, body.mini .border-b-grey, body.mini .border-b-light-grey, body.mini .border-b-fw, body.mini .border-b-white, body.mini .border-b-wh, body.mini .border-b-10, body.mini .border-b-5, body.mini .border-b-4, body.mini .border-b-3, body.mini .border-b-2, body.mini .border-b-1, body.mini .border-b, body.mini .border-e-dt, body.mini .border-e-lns-dark, body.mini .border-e-lns, body.mini .border-e-pdp-fourth, body.mini .border-e-pdp-third, body.mini .border-e-pdp-second, body.mini .border-e-pdp, body.mini .border-e-aroma-dark, body.mini .border-e-aroma, body.mini .border-e-uwa-link, body.mini .border-e-uwa-fourth, body.mini .border-e-uwa-third, body.mini .border-e-uwa-second, body.mini .border-e-uwa-dark, body.mini .border-e-uwa, body.mini .border-e-mini-fourth, body.mini .border-e-mini-third, body.mini .border-e-mini-second, body.mini .border-e-mini-dark, body.mini .border-e-mini, body.mini .border-e-ginger-bread, body.mini .border-e-acid-green, body.mini .border-e-bad, body.mini .border-e-danger, body.mini .border-e-warning, body.mini .border-e-success, body.mini .border-e-info, body.mini .border-e-link-hover, body.mini .border-e-link, body.mini .border-e-fourth-color-dark, body.mini .border-e-fourth-color, body.mini .border-e-third-color-dark, body.mini .border-e-third-color, body.mini .border-e-second-color-dark, body.mini .border-e-second-color, body.mini .border-e-main-color-dark, body.mini .border-e-color-dark, body.mini .border-e-main-color, body.mini .border-e-color, body.mini .border-e-col, body.mini .border-e-black, body.mini .border-e-bk, body.mini .border-e-fb, body.mini .border-e-dark-grey, body.mini .border-e-grey, body.mini .border-e-light-grey, body.mini .border-e-fw, body.mini .border-e-white, body.mini .border-e-wh, body.mini .border-e-10, body.mini .border-e-5, body.mini .border-e-4, body.mini .border-e-3, body.mini .border-e-2, body.mini .border-e-1, body.mini .border-e, body.mini .border-t-dt, body.mini .border-t-lns-dark, body.mini .border-t-lns, body.mini .border-t-pdp-fourth, body.mini .border-t-pdp-third, body.mini .border-t-pdp-second, body.mini .border-t-pdp, body.mini .border-t-aroma-dark, body.mini .border-t-aroma, body.mini .border-t-uwa-link, body.mini .border-t-uwa-fourth, body.mini .border-t-uwa-third, body.mini .border-t-uwa-second, body.mini .border-t-uwa-dark, body.mini .border-t-uwa, body.mini .border-t-mini-fourth, body.mini .border-t-mini-third, body.mini .border-t-mini-second, body.mini .border-t-mini-dark, body.mini .border-t-mini, body.mini .border-t-ginger-bread, body.mini .border-t-acid-green, body.mini .border-t-bad, body.mini .border-t-danger, body.mini .border-t-warning, body.mini .border-t-success, body.mini .border-t-info, body.mini .border-t-link-hover, body.mini .border-t-link, body.mini .border-t-fourth-color-dark, body.mini .border-t-fourth-color, body.mini .border-t-third-color-dark, body.mini .border-t-third-color, body.mini .border-t-second-color-dark, body.mini .border-t-second-color, body.mini .border-t-main-color-dark, body.mini .border-t-color-dark, body.mini .border-t-main-color, body.mini .border-t-color, body.mini .border-t-col, body.mini .border-t-black, body.mini .border-t-bk, body.mini .border-t-fb, body.mini .border-t-dark-grey, body.mini .border-t-grey, body.mini .border-t-light-grey, body.mini .border-t-fw, body.mini .border-t-white, body.mini .border-t-wh, body.mini .border-t-10, body.mini .border-t-5, body.mini .border-t-4, body.mini .border-t-3, body.mini .border-t-2, body.mini .border-t-1, body.mini .border-t, body.mini .border-10, body.mini .border-5, body.mini .border-4, body.mini .border-3, body.mini .border-2, body.mini .border-1 {
   border-width: 1px;
   border-style: solid;
   border-color: var(--light-grey);
@@ -11721,153 +11723,6 @@ body.mini .border-5 {
 }
 body.mini .border-10 {
   border-width: 10px !important;
-}
-body.mini .border-wh {
-  border-color: var(--white);
-}
-body.mini .border-white {
-  border-color: var(--white);
-}
-body.mini .border-fw {
-  border-color: var(--false-white);
-}
-body.mini .border-light-grey {
-  border-color: var(--light-grey);
-}
-body.mini .border-grey {
-  border-color: var(--grey);
-}
-body.mini .border-dark-grey {
-  border-color: var(--dark-grey);
-}
-body.mini .border-fb {
-  border-color: var(--false-black);
-}
-body.mini .border-bk {
-  border-color: var(--black);
-}
-body.mini .border-black {
-  border-color: var(--black);
-}
-body.mini .border-col {
-  border-color: var(--main-color);
-}
-body.mini .border-color {
-  border-color: var(--main-color);
-}
-body.mini .border-main-color {
-  border-color: var(--main-color);
-}
-body.mini .border-color-dark {
-  border-color: var(--main-color-dark);
-}
-body.mini .border-main-color-dark {
-  border-color: var(--main-color-dark);
-}
-body.mini .border-second-color {
-  border-color: var(--second-color);
-}
-body.mini .border-second-color-dark {
-  border-color: var(--second-color-dark);
-}
-body.mini .border-third-color {
-  border-color: var(--third-color);
-}
-body.mini .border-third-color-dark {
-  border-color: var(--third-color-dark);
-}
-body.mini .border-fourth-color {
-  border-color: var(--fourth-color);
-}
-body.mini .border-fourth-color-dark {
-  border-color: var(--fourth-color-dark);
-}
-body.mini .border-link {
-  border-color: var(--link-color);
-}
-body.mini .border-link-hover {
-  border-color: var(--link-hover-color);
-}
-body.mini .border-info {
-  border-color: var(--info);
-}
-body.mini .border-success {
-  border-color: var(--success);
-}
-body.mini .border-warning {
-  border-color: var(--warning);
-}
-body.mini .border-danger {
-  border-color: var(--danger);
-}
-body.mini .border-bad {
-  border-color: var(--bad);
-}
-body.mini .border-acid-green {
-  border-color: var(--acid-green);
-}
-body.mini .border-ginger-bread {
-  border-color: var(--gingerbread);
-}
-body.mini .border-mini {
-  border-color: var(--mini-color);
-}
-body.mini .border-mini-dark {
-  border-color: var(--mini-color-dark);
-}
-body.mini .border-mini-second {
-  border-color: var(--mini-second);
-}
-body.mini .border-mini-third {
-  border-color: var(--mini-third);
-}
-body.mini .border-mini-fourth {
-  border-color: var(--mini-fourth);
-}
-body.mini .border-uwa {
-  border-color: var(--uwa-color);
-}
-body.mini .border-uwa-dark {
-  border-color: var(--uwa-color-dark);
-}
-body.mini .border-uwa-second {
-  border-color: var(--uwa-second-color);
-}
-body.mini .border-uwa-third {
-  border-color: var(--uwa-third-color);
-}
-body.mini .border-uwa-fourth {
-  border-color: var(--uwa-fourth-color);
-}
-body.mini .border-uwa-link {
-  border-color: var(--uwa-link-color);
-}
-body.mini .border-aroma {
-  border-color: var(--aroma-color);
-}
-body.mini .border-aroma-dark {
-  border-color: var(--aroma-color-dark);
-}
-body.mini .border-pdp {
-  border-color: var(--pezzidipla-color);
-}
-body.mini .border-pdp-second {
-  border-color: var(--pezzidipla-second-color);
-}
-body.mini .border-pdp-third {
-  border-color: var(--pezzidipla-third-color);
-}
-body.mini .border-pdp-fourth {
-  border-color: var(--pezzidipla-fourth-color);
-}
-body.mini .border-lns {
-  border-color: var(--lanuovastartup-color);
-}
-body.mini .border-lns-dark {
-  border-color: var(--lanuovastartup-color-dark);
-}
-body.mini .border-dt {
-  border-color: var(--doingthings-color);
 }
 body.mini .border-t {
   border-width: 0;
@@ -16065,6 +15920,9 @@ body.mini {
 body.mini .wh-txt, body.mini .wh-text {
   color: var(--white) !important;
 }
+body.mini .wh-txt-hover:hover, body.mini .wh-txt-hover.clicked, body.mini .wh-txt-hover.active, body.mini .wh-txt-clicked:hover, body.mini .wh-txt-clicked.clicked, body.mini .wh-txt-clicked.active, body.mini .wh-txt-active:hover, body.mini .wh-txt-active.clicked, body.mini .wh-txt-active.active, body.mini .wh-text-hover:hover, body.mini .wh-text-hover.clicked, body.mini .wh-text-hover.active, body.mini .wh-text-clicked:hover, body.mini .wh-text-clicked.clicked, body.mini .wh-text-clicked.active, body.mini .wh-text-active:hover, body.mini .wh-text-active.clicked, body.mini .wh-text-active.active {
+  color: var(--white) !important;
+}
 body.mini .wh-box {
   background: var(--white) !important;
   color: var(--black) !important;
@@ -16081,6 +15939,9 @@ body.mini .wh-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .wh-bg {
+  background-color: var(--white) !important;
+}
+body.mini .wh-bg-hover:hover, body.mini .wh-bg-hover.clicked, body.mini .wh-bg-hover.active, body.mini .wh-bg-clicked:hover, body.mini .wh-bg-clicked.clicked, body.mini .wh-bg-clicked.active, body.mini .wh-bg-active:hover, body.mini .wh-bg-active.clicked, body.mini .wh-bg-active.active {
   background-color: var(--white) !important;
 }
 body.mini .wh-bubble:after, body.mini .wh-bubble-down:after, body.mini .wh-bubble-down-right:after, body.mini .wh-bubble-down-left:after, body.mini .wh-bubble-up:after, body.mini .wh-bubble-up-right:after, body.mini .wh-bubble-up-left:after {
@@ -16124,6 +15985,9 @@ body.mini .wh-bubble-down-right::after {
 body.mini .white-txt, body.mini .white-text {
   color: var(--white) !important;
 }
+body.mini .white-txt-hover:hover, body.mini .white-txt-hover.clicked, body.mini .white-txt-hover.active, body.mini .white-txt-clicked:hover, body.mini .white-txt-clicked.clicked, body.mini .white-txt-clicked.active, body.mini .white-txt-active:hover, body.mini .white-txt-active.clicked, body.mini .white-txt-active.active, body.mini .white-text-hover:hover, body.mini .white-text-hover.clicked, body.mini .white-text-hover.active, body.mini .white-text-clicked:hover, body.mini .white-text-clicked.clicked, body.mini .white-text-clicked.active, body.mini .white-text-active:hover, body.mini .white-text-active.clicked, body.mini .white-text-active.active {
+  color: var(--white) !important;
+}
 body.mini .white-box {
   background: var(--white) !important;
   color: var(--black) !important;
@@ -16140,6 +16004,9 @@ body.mini .white-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .white-bg {
+  background-color: var(--white) !important;
+}
+body.mini .white-bg-hover:hover, body.mini .white-bg-hover.clicked, body.mini .white-bg-hover.active, body.mini .white-bg-clicked:hover, body.mini .white-bg-clicked.clicked, body.mini .white-bg-clicked.active, body.mini .white-bg-active:hover, body.mini .white-bg-active.clicked, body.mini .white-bg-active.active {
   background-color: var(--white) !important;
 }
 body.mini .white-bubble:after, body.mini .white-bubble-down:after, body.mini .white-bubble-down-right:after, body.mini .white-bubble-down-left:after, body.mini .white-bubble-up:after, body.mini .white-bubble-up-right:after, body.mini .white-bubble-up-left:after {
@@ -16183,6 +16050,9 @@ body.mini .white-bubble-down-right::after {
 body.mini .fw-txt, body.mini .fw-text {
   color: var(--false-white) !important;
 }
+body.mini .fw-txt-hover:hover, body.mini .fw-txt-hover.clicked, body.mini .fw-txt-hover.active, body.mini .fw-txt-clicked:hover, body.mini .fw-txt-clicked.clicked, body.mini .fw-txt-clicked.active, body.mini .fw-txt-active:hover, body.mini .fw-txt-active.clicked, body.mini .fw-txt-active.active, body.mini .fw-text-hover:hover, body.mini .fw-text-hover.clicked, body.mini .fw-text-hover.active, body.mini .fw-text-clicked:hover, body.mini .fw-text-clicked.clicked, body.mini .fw-text-clicked.active, body.mini .fw-text-active:hover, body.mini .fw-text-active.clicked, body.mini .fw-text-active.active {
+  color: var(--false-white) !important;
+}
 body.mini .fw-box {
   background: var(--false-white) !important;
   color: var(--black) !important;
@@ -16199,6 +16069,9 @@ body.mini .fw-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .fw-bg {
+  background-color: var(--false-white) !important;
+}
+body.mini .fw-bg-hover:hover, body.mini .fw-bg-hover.clicked, body.mini .fw-bg-hover.active, body.mini .fw-bg-clicked:hover, body.mini .fw-bg-clicked.clicked, body.mini .fw-bg-clicked.active, body.mini .fw-bg-active:hover, body.mini .fw-bg-active.clicked, body.mini .fw-bg-active.active {
   background-color: var(--false-white) !important;
 }
 body.mini .fw-bubble:after, body.mini .fw-bubble-down:after, body.mini .fw-bubble-down-right:after, body.mini .fw-bubble-down-left:after, body.mini .fw-bubble-up:after, body.mini .fw-bubble-up-right:after, body.mini .fw-bubble-up-left:after {
@@ -16242,6 +16115,9 @@ body.mini .fw-bubble-down-right::after {
 body.mini .light-grey-txt, body.mini .light-grey-text {
   color: var(--light-grey) !important;
 }
+body.mini .light-grey-txt-hover:hover, body.mini .light-grey-txt-hover.clicked, body.mini .light-grey-txt-hover.active, body.mini .light-grey-txt-clicked:hover, body.mini .light-grey-txt-clicked.clicked, body.mini .light-grey-txt-clicked.active, body.mini .light-grey-txt-active:hover, body.mini .light-grey-txt-active.clicked, body.mini .light-grey-txt-active.active, body.mini .light-grey-text-hover:hover, body.mini .light-grey-text-hover.clicked, body.mini .light-grey-text-hover.active, body.mini .light-grey-text-clicked:hover, body.mini .light-grey-text-clicked.clicked, body.mini .light-grey-text-clicked.active, body.mini .light-grey-text-active:hover, body.mini .light-grey-text-active.clicked, body.mini .light-grey-text-active.active {
+  color: var(--light-grey) !important;
+}
 body.mini .light-grey-box {
   background: var(--light-grey) !important;
   color: var(--black) !important;
@@ -16258,6 +16134,9 @@ body.mini .light-grey-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .light-grey-bg {
+  background-color: var(--light-grey) !important;
+}
+body.mini .light-grey-bg-hover:hover, body.mini .light-grey-bg-hover.clicked, body.mini .light-grey-bg-hover.active, body.mini .light-grey-bg-clicked:hover, body.mini .light-grey-bg-clicked.clicked, body.mini .light-grey-bg-clicked.active, body.mini .light-grey-bg-active:hover, body.mini .light-grey-bg-active.clicked, body.mini .light-grey-bg-active.active {
   background-color: var(--light-grey) !important;
 }
 body.mini .light-grey-bubble:after, body.mini .light-grey-bubble-down:after, body.mini .light-grey-bubble-down-right:after, body.mini .light-grey-bubble-down-left:after, body.mini .light-grey-bubble-up:after, body.mini .light-grey-bubble-up-right:after, body.mini .light-grey-bubble-up-left:after {
@@ -16301,6 +16180,9 @@ body.mini .light-grey-bubble-down-right::after {
 body.mini .grey-txt, body.mini .grey-text {
   color: var(--grey) !important;
 }
+body.mini .grey-txt-hover:hover, body.mini .grey-txt-hover.clicked, body.mini .grey-txt-hover.active, body.mini .grey-txt-clicked:hover, body.mini .grey-txt-clicked.clicked, body.mini .grey-txt-clicked.active, body.mini .grey-txt-active:hover, body.mini .grey-txt-active.clicked, body.mini .grey-txt-active.active, body.mini .grey-text-hover:hover, body.mini .grey-text-hover.clicked, body.mini .grey-text-hover.active, body.mini .grey-text-clicked:hover, body.mini .grey-text-clicked.clicked, body.mini .grey-text-clicked.active, body.mini .grey-text-active:hover, body.mini .grey-text-active.clicked, body.mini .grey-text-active.active {
+  color: var(--grey) !important;
+}
 body.mini .grey-box {
   background: var(--grey) !important;
   color: var(--white) !important;
@@ -16317,6 +16199,9 @@ body.mini .grey-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .grey-bg {
+  background-color: var(--grey) !important;
+}
+body.mini .grey-bg-hover:hover, body.mini .grey-bg-hover.clicked, body.mini .grey-bg-hover.active, body.mini .grey-bg-clicked:hover, body.mini .grey-bg-clicked.clicked, body.mini .grey-bg-clicked.active, body.mini .grey-bg-active:hover, body.mini .grey-bg-active.clicked, body.mini .grey-bg-active.active {
   background-color: var(--grey) !important;
 }
 body.mini .grey-bubble:after, body.mini .grey-bubble-down:after, body.mini .grey-bubble-down-right:after, body.mini .grey-bubble-down-left:after, body.mini .grey-bubble-up:after, body.mini .grey-bubble-up-right:after, body.mini .grey-bubble-up-left:after {
@@ -16360,6 +16245,9 @@ body.mini .grey-bubble-down-right::after {
 body.mini .dark-grey-txt, body.mini .dark-grey-text {
   color: var(--dark-grey) !important;
 }
+body.mini .dark-grey-txt-hover:hover, body.mini .dark-grey-txt-hover.clicked, body.mini .dark-grey-txt-hover.active, body.mini .dark-grey-txt-clicked:hover, body.mini .dark-grey-txt-clicked.clicked, body.mini .dark-grey-txt-clicked.active, body.mini .dark-grey-txt-active:hover, body.mini .dark-grey-txt-active.clicked, body.mini .dark-grey-txt-active.active, body.mini .dark-grey-text-hover:hover, body.mini .dark-grey-text-hover.clicked, body.mini .dark-grey-text-hover.active, body.mini .dark-grey-text-clicked:hover, body.mini .dark-grey-text-clicked.clicked, body.mini .dark-grey-text-clicked.active, body.mini .dark-grey-text-active:hover, body.mini .dark-grey-text-active.clicked, body.mini .dark-grey-text-active.active {
+  color: var(--dark-grey) !important;
+}
 body.mini .dark-grey-box {
   background: var(--dark-grey) !important;
   color: var(--white) !important;
@@ -16376,6 +16264,9 @@ body.mini .dark-grey-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .dark-grey-bg {
+  background-color: var(--dark-grey) !important;
+}
+body.mini .dark-grey-bg-hover:hover, body.mini .dark-grey-bg-hover.clicked, body.mini .dark-grey-bg-hover.active, body.mini .dark-grey-bg-clicked:hover, body.mini .dark-grey-bg-clicked.clicked, body.mini .dark-grey-bg-clicked.active, body.mini .dark-grey-bg-active:hover, body.mini .dark-grey-bg-active.clicked, body.mini .dark-grey-bg-active.active {
   background-color: var(--dark-grey) !important;
 }
 body.mini .dark-grey-bubble:after, body.mini .dark-grey-bubble-down:after, body.mini .dark-grey-bubble-down-right:after, body.mini .dark-grey-bubble-down-left:after, body.mini .dark-grey-bubble-up:after, body.mini .dark-grey-bubble-up-right:after, body.mini .dark-grey-bubble-up-left:after {
@@ -16419,6 +16310,9 @@ body.mini .dark-grey-bubble-down-right::after {
 body.mini .fb-txt, body.mini .fb-text {
   color: var(--false-black) !important;
 }
+body.mini .fb-txt-hover:hover, body.mini .fb-txt-hover.clicked, body.mini .fb-txt-hover.active, body.mini .fb-txt-clicked:hover, body.mini .fb-txt-clicked.clicked, body.mini .fb-txt-clicked.active, body.mini .fb-txt-active:hover, body.mini .fb-txt-active.clicked, body.mini .fb-txt-active.active, body.mini .fb-text-hover:hover, body.mini .fb-text-hover.clicked, body.mini .fb-text-hover.active, body.mini .fb-text-clicked:hover, body.mini .fb-text-clicked.clicked, body.mini .fb-text-clicked.active, body.mini .fb-text-active:hover, body.mini .fb-text-active.clicked, body.mini .fb-text-active.active {
+  color: var(--false-black) !important;
+}
 body.mini .fb-box {
   background: var(--false-black) !important;
   color: var(--white) !important;
@@ -16435,6 +16329,9 @@ body.mini .fb-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .fb-bg {
+  background-color: var(--false-black) !important;
+}
+body.mini .fb-bg-hover:hover, body.mini .fb-bg-hover.clicked, body.mini .fb-bg-hover.active, body.mini .fb-bg-clicked:hover, body.mini .fb-bg-clicked.clicked, body.mini .fb-bg-clicked.active, body.mini .fb-bg-active:hover, body.mini .fb-bg-active.clicked, body.mini .fb-bg-active.active {
   background-color: var(--false-black) !important;
 }
 body.mini .fb-bubble:after, body.mini .fb-bubble-down:after, body.mini .fb-bubble-down-right:after, body.mini .fb-bubble-down-left:after, body.mini .fb-bubble-up:after, body.mini .fb-bubble-up-right:after, body.mini .fb-bubble-up-left:after {
@@ -16478,6 +16375,9 @@ body.mini .fb-bubble-down-right::after {
 body.mini .bk-txt, body.mini .bk-text {
   color: var(--black) !important;
 }
+body.mini .bk-txt-hover:hover, body.mini .bk-txt-hover.clicked, body.mini .bk-txt-hover.active, body.mini .bk-txt-clicked:hover, body.mini .bk-txt-clicked.clicked, body.mini .bk-txt-clicked.active, body.mini .bk-txt-active:hover, body.mini .bk-txt-active.clicked, body.mini .bk-txt-active.active, body.mini .bk-text-hover:hover, body.mini .bk-text-hover.clicked, body.mini .bk-text-hover.active, body.mini .bk-text-clicked:hover, body.mini .bk-text-clicked.clicked, body.mini .bk-text-clicked.active, body.mini .bk-text-active:hover, body.mini .bk-text-active.clicked, body.mini .bk-text-active.active {
+  color: var(--black) !important;
+}
 body.mini .bk-box {
   background: var(--black) !important;
   color: var(--white) !important;
@@ -16494,6 +16394,9 @@ body.mini .bk-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .bk-bg {
+  background-color: var(--black) !important;
+}
+body.mini .bk-bg-hover:hover, body.mini .bk-bg-hover.clicked, body.mini .bk-bg-hover.active, body.mini .bk-bg-clicked:hover, body.mini .bk-bg-clicked.clicked, body.mini .bk-bg-clicked.active, body.mini .bk-bg-active:hover, body.mini .bk-bg-active.clicked, body.mini .bk-bg-active.active {
   background-color: var(--black) !important;
 }
 body.mini .bk-bubble:after, body.mini .bk-bubble-down:after, body.mini .bk-bubble-down-right:after, body.mini .bk-bubble-down-left:after, body.mini .bk-bubble-up:after, body.mini .bk-bubble-up-right:after, body.mini .bk-bubble-up-left:after {
@@ -16537,6 +16440,9 @@ body.mini .bk-bubble-down-right::after {
 body.mini .black-txt, body.mini .black-text {
   color: var(--black) !important;
 }
+body.mini .black-txt-hover:hover, body.mini .black-txt-hover.clicked, body.mini .black-txt-hover.active, body.mini .black-txt-clicked:hover, body.mini .black-txt-clicked.clicked, body.mini .black-txt-clicked.active, body.mini .black-txt-active:hover, body.mini .black-txt-active.clicked, body.mini .black-txt-active.active, body.mini .black-text-hover:hover, body.mini .black-text-hover.clicked, body.mini .black-text-hover.active, body.mini .black-text-clicked:hover, body.mini .black-text-clicked.clicked, body.mini .black-text-clicked.active, body.mini .black-text-active:hover, body.mini .black-text-active.clicked, body.mini .black-text-active.active {
+  color: var(--black) !important;
+}
 body.mini .black-box {
   background: var(--black) !important;
   color: var(--white) !important;
@@ -16553,6 +16459,9 @@ body.mini .black-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .black-bg {
+  background-color: var(--black) !important;
+}
+body.mini .black-bg-hover:hover, body.mini .black-bg-hover.clicked, body.mini .black-bg-hover.active, body.mini .black-bg-clicked:hover, body.mini .black-bg-clicked.clicked, body.mini .black-bg-clicked.active, body.mini .black-bg-active:hover, body.mini .black-bg-active.clicked, body.mini .black-bg-active.active {
   background-color: var(--black) !important;
 }
 body.mini .black-bubble:after, body.mini .black-bubble-down:after, body.mini .black-bubble-down-right:after, body.mini .black-bubble-down-left:after, body.mini .black-bubble-up:after, body.mini .black-bubble-up-right:after, body.mini .black-bubble-up-left:after {
@@ -16596,6 +16505,9 @@ body.mini .black-bubble-down-right::after {
 body.mini .col-txt, body.mini .col-text {
   color: var(--main-color) !important;
 }
+body.mini .col-txt-hover:hover, body.mini .col-txt-hover.clicked, body.mini .col-txt-hover.active, body.mini .col-txt-clicked:hover, body.mini .col-txt-clicked.clicked, body.mini .col-txt-clicked.active, body.mini .col-txt-active:hover, body.mini .col-txt-active.clicked, body.mini .col-txt-active.active, body.mini .col-text-hover:hover, body.mini .col-text-hover.clicked, body.mini .col-text-hover.active, body.mini .col-text-clicked:hover, body.mini .col-text-clicked.clicked, body.mini .col-text-clicked.active, body.mini .col-text-active:hover, body.mini .col-text-active.clicked, body.mini .col-text-active.active {
+  color: var(--main-color) !important;
+}
 body.mini .col-box {
   background: var(--main-color) !important;
   color: var(--white) !important;
@@ -16612,6 +16524,9 @@ body.mini .col-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .col-bg {
+  background-color: var(--main-color) !important;
+}
+body.mini .col-bg-hover:hover, body.mini .col-bg-hover.clicked, body.mini .col-bg-hover.active, body.mini .col-bg-clicked:hover, body.mini .col-bg-clicked.clicked, body.mini .col-bg-clicked.active, body.mini .col-bg-active:hover, body.mini .col-bg-active.clicked, body.mini .col-bg-active.active {
   background-color: var(--main-color) !important;
 }
 body.mini .col-bubble:after, body.mini .col-bubble-down:after, body.mini .col-bubble-down-right:after, body.mini .col-bubble-down-left:after, body.mini .col-bubble-up:after, body.mini .col-bubble-up-right:after, body.mini .col-bubble-up-left:after {
@@ -16655,6 +16570,9 @@ body.mini .col-bubble-down-right::after {
 body.mini .color-txt, body.mini .color-text {
   color: var(--main-color) !important;
 }
+body.mini .color-txt-hover:hover, body.mini .color-txt-hover.clicked, body.mini .color-txt-hover.active, body.mini .color-txt-clicked:hover, body.mini .color-txt-clicked.clicked, body.mini .color-txt-clicked.active, body.mini .color-txt-active:hover, body.mini .color-txt-active.clicked, body.mini .color-txt-active.active, body.mini .color-text-hover:hover, body.mini .color-text-hover.clicked, body.mini .color-text-hover.active, body.mini .color-text-clicked:hover, body.mini .color-text-clicked.clicked, body.mini .color-text-clicked.active, body.mini .color-text-active:hover, body.mini .color-text-active.clicked, body.mini .color-text-active.active {
+  color: var(--main-color) !important;
+}
 body.mini .color-box {
   background: var(--main-color) !important;
   color: var(--white) !important;
@@ -16671,6 +16589,9 @@ body.mini .color-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .color-bg {
+  background-color: var(--main-color) !important;
+}
+body.mini .color-bg-hover:hover, body.mini .color-bg-hover.clicked, body.mini .color-bg-hover.active, body.mini .color-bg-clicked:hover, body.mini .color-bg-clicked.clicked, body.mini .color-bg-clicked.active, body.mini .color-bg-active:hover, body.mini .color-bg-active.clicked, body.mini .color-bg-active.active {
   background-color: var(--main-color) !important;
 }
 body.mini .color-bubble:after, body.mini .color-bubble-down:after, body.mini .color-bubble-down-right:after, body.mini .color-bubble-down-left:after, body.mini .color-bubble-up:after, body.mini .color-bubble-up-right:after, body.mini .color-bubble-up-left:after {
@@ -16714,6 +16635,9 @@ body.mini .color-bubble-down-right::after {
 body.mini .main-color-txt, body.mini .main-color-text {
   color: var(--main-color) !important;
 }
+body.mini .main-color-txt-hover:hover, body.mini .main-color-txt-hover.clicked, body.mini .main-color-txt-hover.active, body.mini .main-color-txt-clicked:hover, body.mini .main-color-txt-clicked.clicked, body.mini .main-color-txt-clicked.active, body.mini .main-color-txt-active:hover, body.mini .main-color-txt-active.clicked, body.mini .main-color-txt-active.active, body.mini .main-color-text-hover:hover, body.mini .main-color-text-hover.clicked, body.mini .main-color-text-hover.active, body.mini .main-color-text-clicked:hover, body.mini .main-color-text-clicked.clicked, body.mini .main-color-text-clicked.active, body.mini .main-color-text-active:hover, body.mini .main-color-text-active.clicked, body.mini .main-color-text-active.active {
+  color: var(--main-color) !important;
+}
 body.mini .main-color-box {
   background: var(--main-color) !important;
   color: var(--white) !important;
@@ -16730,6 +16654,9 @@ body.mini .main-color-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .main-color-bg {
+  background-color: var(--main-color) !important;
+}
+body.mini .main-color-bg-hover:hover, body.mini .main-color-bg-hover.clicked, body.mini .main-color-bg-hover.active, body.mini .main-color-bg-clicked:hover, body.mini .main-color-bg-clicked.clicked, body.mini .main-color-bg-clicked.active, body.mini .main-color-bg-active:hover, body.mini .main-color-bg-active.clicked, body.mini .main-color-bg-active.active {
   background-color: var(--main-color) !important;
 }
 body.mini .main-color-bubble:after, body.mini .main-color-bubble-down:after, body.mini .main-color-bubble-down-right:after, body.mini .main-color-bubble-down-left:after, body.mini .main-color-bubble-up:after, body.mini .main-color-bubble-up-right:after, body.mini .main-color-bubble-up-left:after {
@@ -16773,6 +16700,9 @@ body.mini .main-color-bubble-down-right::after {
 body.mini .color-dark-txt, body.mini .color-dark-text {
   color: var(--main-color-dark) !important;
 }
+body.mini .color-dark-txt-hover:hover, body.mini .color-dark-txt-hover.clicked, body.mini .color-dark-txt-hover.active, body.mini .color-dark-txt-clicked:hover, body.mini .color-dark-txt-clicked.clicked, body.mini .color-dark-txt-clicked.active, body.mini .color-dark-txt-active:hover, body.mini .color-dark-txt-active.clicked, body.mini .color-dark-txt-active.active, body.mini .color-dark-text-hover:hover, body.mini .color-dark-text-hover.clicked, body.mini .color-dark-text-hover.active, body.mini .color-dark-text-clicked:hover, body.mini .color-dark-text-clicked.clicked, body.mini .color-dark-text-clicked.active, body.mini .color-dark-text-active:hover, body.mini .color-dark-text-active.clicked, body.mini .color-dark-text-active.active {
+  color: var(--main-color-dark) !important;
+}
 body.mini .color-dark-box {
   background: var(--main-color-dark) !important;
   color: var(--white) !important;
@@ -16789,6 +16719,9 @@ body.mini .color-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .color-dark-bg {
+  background-color: var(--main-color-dark) !important;
+}
+body.mini .color-dark-bg-hover:hover, body.mini .color-dark-bg-hover.clicked, body.mini .color-dark-bg-hover.active, body.mini .color-dark-bg-clicked:hover, body.mini .color-dark-bg-clicked.clicked, body.mini .color-dark-bg-clicked.active, body.mini .color-dark-bg-active:hover, body.mini .color-dark-bg-active.clicked, body.mini .color-dark-bg-active.active {
   background-color: var(--main-color-dark) !important;
 }
 body.mini .color-dark-bubble:after, body.mini .color-dark-bubble-down:after, body.mini .color-dark-bubble-down-right:after, body.mini .color-dark-bubble-down-left:after, body.mini .color-dark-bubble-up:after, body.mini .color-dark-bubble-up-right:after, body.mini .color-dark-bubble-up-left:after {
@@ -16832,6 +16765,9 @@ body.mini .color-dark-bubble-down-right::after {
 body.mini .main-color-dark-txt, body.mini .main-color-dark-text {
   color: var(--main-color-dark) !important;
 }
+body.mini .main-color-dark-txt-hover:hover, body.mini .main-color-dark-txt-hover.clicked, body.mini .main-color-dark-txt-hover.active, body.mini .main-color-dark-txt-clicked:hover, body.mini .main-color-dark-txt-clicked.clicked, body.mini .main-color-dark-txt-clicked.active, body.mini .main-color-dark-txt-active:hover, body.mini .main-color-dark-txt-active.clicked, body.mini .main-color-dark-txt-active.active, body.mini .main-color-dark-text-hover:hover, body.mini .main-color-dark-text-hover.clicked, body.mini .main-color-dark-text-hover.active, body.mini .main-color-dark-text-clicked:hover, body.mini .main-color-dark-text-clicked.clicked, body.mini .main-color-dark-text-clicked.active, body.mini .main-color-dark-text-active:hover, body.mini .main-color-dark-text-active.clicked, body.mini .main-color-dark-text-active.active {
+  color: var(--main-color-dark) !important;
+}
 body.mini .main-color-dark-box {
   background: var(--main-color-dark) !important;
   color: var(--white) !important;
@@ -16848,6 +16784,9 @@ body.mini .main-color-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .main-color-dark-bg {
+  background-color: var(--main-color-dark) !important;
+}
+body.mini .main-color-dark-bg-hover:hover, body.mini .main-color-dark-bg-hover.clicked, body.mini .main-color-dark-bg-hover.active, body.mini .main-color-dark-bg-clicked:hover, body.mini .main-color-dark-bg-clicked.clicked, body.mini .main-color-dark-bg-clicked.active, body.mini .main-color-dark-bg-active:hover, body.mini .main-color-dark-bg-active.clicked, body.mini .main-color-dark-bg-active.active {
   background-color: var(--main-color-dark) !important;
 }
 body.mini .main-color-dark-bubble:after, body.mini .main-color-dark-bubble-down:after, body.mini .main-color-dark-bubble-down-right:after, body.mini .main-color-dark-bubble-down-left:after, body.mini .main-color-dark-bubble-up:after, body.mini .main-color-dark-bubble-up-right:after, body.mini .main-color-dark-bubble-up-left:after {
@@ -16891,6 +16830,9 @@ body.mini .main-color-dark-bubble-down-right::after {
 body.mini .second-color-txt, body.mini .second-color-text {
   color: var(--second-color) !important;
 }
+body.mini .second-color-txt-hover:hover, body.mini .second-color-txt-hover.clicked, body.mini .second-color-txt-hover.active, body.mini .second-color-txt-clicked:hover, body.mini .second-color-txt-clicked.clicked, body.mini .second-color-txt-clicked.active, body.mini .second-color-txt-active:hover, body.mini .second-color-txt-active.clicked, body.mini .second-color-txt-active.active, body.mini .second-color-text-hover:hover, body.mini .second-color-text-hover.clicked, body.mini .second-color-text-hover.active, body.mini .second-color-text-clicked:hover, body.mini .second-color-text-clicked.clicked, body.mini .second-color-text-clicked.active, body.mini .second-color-text-active:hover, body.mini .second-color-text-active.clicked, body.mini .second-color-text-active.active {
+  color: var(--second-color) !important;
+}
 body.mini .second-color-box {
   background: var(--second-color) !important;
   color: var(--white) !important;
@@ -16907,6 +16849,9 @@ body.mini .second-color-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .second-color-bg {
+  background-color: var(--second-color) !important;
+}
+body.mini .second-color-bg-hover:hover, body.mini .second-color-bg-hover.clicked, body.mini .second-color-bg-hover.active, body.mini .second-color-bg-clicked:hover, body.mini .second-color-bg-clicked.clicked, body.mini .second-color-bg-clicked.active, body.mini .second-color-bg-active:hover, body.mini .second-color-bg-active.clicked, body.mini .second-color-bg-active.active {
   background-color: var(--second-color) !important;
 }
 body.mini .second-color-bubble:after, body.mini .second-color-bubble-down:after, body.mini .second-color-bubble-down-right:after, body.mini .second-color-bubble-down-left:after, body.mini .second-color-bubble-up:after, body.mini .second-color-bubble-up-right:after, body.mini .second-color-bubble-up-left:after {
@@ -16950,6 +16895,9 @@ body.mini .second-color-bubble-down-right::after {
 body.mini .second-color-dark-txt, body.mini .second-color-dark-text {
   color: var(--second-color-dark) !important;
 }
+body.mini .second-color-dark-txt-hover:hover, body.mini .second-color-dark-txt-hover.clicked, body.mini .second-color-dark-txt-hover.active, body.mini .second-color-dark-txt-clicked:hover, body.mini .second-color-dark-txt-clicked.clicked, body.mini .second-color-dark-txt-clicked.active, body.mini .second-color-dark-txt-active:hover, body.mini .second-color-dark-txt-active.clicked, body.mini .second-color-dark-txt-active.active, body.mini .second-color-dark-text-hover:hover, body.mini .second-color-dark-text-hover.clicked, body.mini .second-color-dark-text-hover.active, body.mini .second-color-dark-text-clicked:hover, body.mini .second-color-dark-text-clicked.clicked, body.mini .second-color-dark-text-clicked.active, body.mini .second-color-dark-text-active:hover, body.mini .second-color-dark-text-active.clicked, body.mini .second-color-dark-text-active.active {
+  color: var(--second-color-dark) !important;
+}
 body.mini .second-color-dark-box {
   background: var(--second-color-dark) !important;
   color: var(--white) !important;
@@ -16966,6 +16914,9 @@ body.mini .second-color-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .second-color-dark-bg {
+  background-color: var(--second-color-dark) !important;
+}
+body.mini .second-color-dark-bg-hover:hover, body.mini .second-color-dark-bg-hover.clicked, body.mini .second-color-dark-bg-hover.active, body.mini .second-color-dark-bg-clicked:hover, body.mini .second-color-dark-bg-clicked.clicked, body.mini .second-color-dark-bg-clicked.active, body.mini .second-color-dark-bg-active:hover, body.mini .second-color-dark-bg-active.clicked, body.mini .second-color-dark-bg-active.active {
   background-color: var(--second-color-dark) !important;
 }
 body.mini .second-color-dark-bubble:after, body.mini .second-color-dark-bubble-down:after, body.mini .second-color-dark-bubble-down-right:after, body.mini .second-color-dark-bubble-down-left:after, body.mini .second-color-dark-bubble-up:after, body.mini .second-color-dark-bubble-up-right:after, body.mini .second-color-dark-bubble-up-left:after {
@@ -17009,6 +16960,9 @@ body.mini .second-color-dark-bubble-down-right::after {
 body.mini .third-color-txt, body.mini .third-color-text {
   color: var(--third-color) !important;
 }
+body.mini .third-color-txt-hover:hover, body.mini .third-color-txt-hover.clicked, body.mini .third-color-txt-hover.active, body.mini .third-color-txt-clicked:hover, body.mini .third-color-txt-clicked.clicked, body.mini .third-color-txt-clicked.active, body.mini .third-color-txt-active:hover, body.mini .third-color-txt-active.clicked, body.mini .third-color-txt-active.active, body.mini .third-color-text-hover:hover, body.mini .third-color-text-hover.clicked, body.mini .third-color-text-hover.active, body.mini .third-color-text-clicked:hover, body.mini .third-color-text-clicked.clicked, body.mini .third-color-text-clicked.active, body.mini .third-color-text-active:hover, body.mini .third-color-text-active.clicked, body.mini .third-color-text-active.active {
+  color: var(--third-color) !important;
+}
 body.mini .third-color-box {
   background: var(--third-color) !important;
   color: var(--white) !important;
@@ -17025,6 +16979,9 @@ body.mini .third-color-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .third-color-bg {
+  background-color: var(--third-color) !important;
+}
+body.mini .third-color-bg-hover:hover, body.mini .third-color-bg-hover.clicked, body.mini .third-color-bg-hover.active, body.mini .third-color-bg-clicked:hover, body.mini .third-color-bg-clicked.clicked, body.mini .third-color-bg-clicked.active, body.mini .third-color-bg-active:hover, body.mini .third-color-bg-active.clicked, body.mini .third-color-bg-active.active {
   background-color: var(--third-color) !important;
 }
 body.mini .third-color-bubble:after, body.mini .third-color-bubble-down:after, body.mini .third-color-bubble-down-right:after, body.mini .third-color-bubble-down-left:after, body.mini .third-color-bubble-up:after, body.mini .third-color-bubble-up-right:after, body.mini .third-color-bubble-up-left:after {
@@ -17068,6 +17025,9 @@ body.mini .third-color-bubble-down-right::after {
 body.mini .third-color-dark-txt, body.mini .third-color-dark-text {
   color: var(--third-color-dark) !important;
 }
+body.mini .third-color-dark-txt-hover:hover, body.mini .third-color-dark-txt-hover.clicked, body.mini .third-color-dark-txt-hover.active, body.mini .third-color-dark-txt-clicked:hover, body.mini .third-color-dark-txt-clicked.clicked, body.mini .third-color-dark-txt-clicked.active, body.mini .third-color-dark-txt-active:hover, body.mini .third-color-dark-txt-active.clicked, body.mini .third-color-dark-txt-active.active, body.mini .third-color-dark-text-hover:hover, body.mini .third-color-dark-text-hover.clicked, body.mini .third-color-dark-text-hover.active, body.mini .third-color-dark-text-clicked:hover, body.mini .third-color-dark-text-clicked.clicked, body.mini .third-color-dark-text-clicked.active, body.mini .third-color-dark-text-active:hover, body.mini .third-color-dark-text-active.clicked, body.mini .third-color-dark-text-active.active {
+  color: var(--third-color-dark) !important;
+}
 body.mini .third-color-dark-box {
   background: var(--third-color-dark) !important;
   color: var(--white) !important;
@@ -17084,6 +17044,9 @@ body.mini .third-color-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .third-color-dark-bg {
+  background-color: var(--third-color-dark) !important;
+}
+body.mini .third-color-dark-bg-hover:hover, body.mini .third-color-dark-bg-hover.clicked, body.mini .third-color-dark-bg-hover.active, body.mini .third-color-dark-bg-clicked:hover, body.mini .third-color-dark-bg-clicked.clicked, body.mini .third-color-dark-bg-clicked.active, body.mini .third-color-dark-bg-active:hover, body.mini .third-color-dark-bg-active.clicked, body.mini .third-color-dark-bg-active.active {
   background-color: var(--third-color-dark) !important;
 }
 body.mini .third-color-dark-bubble:after, body.mini .third-color-dark-bubble-down:after, body.mini .third-color-dark-bubble-down-right:after, body.mini .third-color-dark-bubble-down-left:after, body.mini .third-color-dark-bubble-up:after, body.mini .third-color-dark-bubble-up-right:after, body.mini .third-color-dark-bubble-up-left:after {
@@ -17127,6 +17090,9 @@ body.mini .third-color-dark-bubble-down-right::after {
 body.mini .fourth-color-txt, body.mini .fourth-color-text {
   color: var(--fourth-color) !important;
 }
+body.mini .fourth-color-txt-hover:hover, body.mini .fourth-color-txt-hover.clicked, body.mini .fourth-color-txt-hover.active, body.mini .fourth-color-txt-clicked:hover, body.mini .fourth-color-txt-clicked.clicked, body.mini .fourth-color-txt-clicked.active, body.mini .fourth-color-txt-active:hover, body.mini .fourth-color-txt-active.clicked, body.mini .fourth-color-txt-active.active, body.mini .fourth-color-text-hover:hover, body.mini .fourth-color-text-hover.clicked, body.mini .fourth-color-text-hover.active, body.mini .fourth-color-text-clicked:hover, body.mini .fourth-color-text-clicked.clicked, body.mini .fourth-color-text-clicked.active, body.mini .fourth-color-text-active:hover, body.mini .fourth-color-text-active.clicked, body.mini .fourth-color-text-active.active {
+  color: var(--fourth-color) !important;
+}
 body.mini .fourth-color-box {
   background: var(--fourth-color) !important;
   color: var(--white) !important;
@@ -17143,6 +17109,9 @@ body.mini .fourth-color-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .fourth-color-bg {
+  background-color: var(--fourth-color) !important;
+}
+body.mini .fourth-color-bg-hover:hover, body.mini .fourth-color-bg-hover.clicked, body.mini .fourth-color-bg-hover.active, body.mini .fourth-color-bg-clicked:hover, body.mini .fourth-color-bg-clicked.clicked, body.mini .fourth-color-bg-clicked.active, body.mini .fourth-color-bg-active:hover, body.mini .fourth-color-bg-active.clicked, body.mini .fourth-color-bg-active.active {
   background-color: var(--fourth-color) !important;
 }
 body.mini .fourth-color-bubble:after, body.mini .fourth-color-bubble-down:after, body.mini .fourth-color-bubble-down-right:after, body.mini .fourth-color-bubble-down-left:after, body.mini .fourth-color-bubble-up:after, body.mini .fourth-color-bubble-up-right:after, body.mini .fourth-color-bubble-up-left:after {
@@ -17186,6 +17155,9 @@ body.mini .fourth-color-bubble-down-right::after {
 body.mini .fourth-color-dark-txt, body.mini .fourth-color-dark-text {
   color: var(--fourth-color-dark) !important;
 }
+body.mini .fourth-color-dark-txt-hover:hover, body.mini .fourth-color-dark-txt-hover.clicked, body.mini .fourth-color-dark-txt-hover.active, body.mini .fourth-color-dark-txt-clicked:hover, body.mini .fourth-color-dark-txt-clicked.clicked, body.mini .fourth-color-dark-txt-clicked.active, body.mini .fourth-color-dark-txt-active:hover, body.mini .fourth-color-dark-txt-active.clicked, body.mini .fourth-color-dark-txt-active.active, body.mini .fourth-color-dark-text-hover:hover, body.mini .fourth-color-dark-text-hover.clicked, body.mini .fourth-color-dark-text-hover.active, body.mini .fourth-color-dark-text-clicked:hover, body.mini .fourth-color-dark-text-clicked.clicked, body.mini .fourth-color-dark-text-clicked.active, body.mini .fourth-color-dark-text-active:hover, body.mini .fourth-color-dark-text-active.clicked, body.mini .fourth-color-dark-text-active.active {
+  color: var(--fourth-color-dark) !important;
+}
 body.mini .fourth-color-dark-box {
   background: var(--fourth-color-dark) !important;
   color: var(--white) !important;
@@ -17202,6 +17174,9 @@ body.mini .fourth-color-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .fourth-color-dark-bg {
+  background-color: var(--fourth-color-dark) !important;
+}
+body.mini .fourth-color-dark-bg-hover:hover, body.mini .fourth-color-dark-bg-hover.clicked, body.mini .fourth-color-dark-bg-hover.active, body.mini .fourth-color-dark-bg-clicked:hover, body.mini .fourth-color-dark-bg-clicked.clicked, body.mini .fourth-color-dark-bg-clicked.active, body.mini .fourth-color-dark-bg-active:hover, body.mini .fourth-color-dark-bg-active.clicked, body.mini .fourth-color-dark-bg-active.active {
   background-color: var(--fourth-color-dark) !important;
 }
 body.mini .fourth-color-dark-bubble:after, body.mini .fourth-color-dark-bubble-down:after, body.mini .fourth-color-dark-bubble-down-right:after, body.mini .fourth-color-dark-bubble-down-left:after, body.mini .fourth-color-dark-bubble-up:after, body.mini .fourth-color-dark-bubble-up-right:after, body.mini .fourth-color-dark-bubble-up-left:after {
@@ -17245,6 +17220,9 @@ body.mini .fourth-color-dark-bubble-down-right::after {
 body.mini .link-txt, body.mini .link-text {
   color: var(--link-color) !important;
 }
+body.mini .link-txt-hover:hover, body.mini .link-txt-hover.clicked, body.mini .link-txt-hover.active, body.mini .link-txt-clicked:hover, body.mini .link-txt-clicked.clicked, body.mini .link-txt-clicked.active, body.mini .link-txt-active:hover, body.mini .link-txt-active.clicked, body.mini .link-txt-active.active, body.mini .link-text-hover:hover, body.mini .link-text-hover.clicked, body.mini .link-text-hover.active, body.mini .link-text-clicked:hover, body.mini .link-text-clicked.clicked, body.mini .link-text-clicked.active, body.mini .link-text-active:hover, body.mini .link-text-active.clicked, body.mini .link-text-active.active {
+  color: var(--link-color) !important;
+}
 body.mini .link-box {
   background: var(--link-color) !important;
   color: var(--white) !important;
@@ -17261,6 +17239,9 @@ body.mini .link-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .link-bg {
+  background-color: var(--link-color) !important;
+}
+body.mini .link-bg-hover:hover, body.mini .link-bg-hover.clicked, body.mini .link-bg-hover.active, body.mini .link-bg-clicked:hover, body.mini .link-bg-clicked.clicked, body.mini .link-bg-clicked.active, body.mini .link-bg-active:hover, body.mini .link-bg-active.clicked, body.mini .link-bg-active.active {
   background-color: var(--link-color) !important;
 }
 body.mini .link-bubble:after, body.mini .link-bubble-down:after, body.mini .link-bubble-down-right:after, body.mini .link-bubble-down-left:after, body.mini .link-bubble-up:after, body.mini .link-bubble-up-right:after, body.mini .link-bubble-up-left:after {
@@ -17304,6 +17285,9 @@ body.mini .link-bubble-down-right::after {
 body.mini .link-hover-txt, body.mini .link-hover-text {
   color: var(--link-hover-color) !important;
 }
+body.mini .link-hover-txt-hover:hover, body.mini .link-hover-txt-hover.clicked, body.mini .link-hover-txt-hover.active, body.mini .link-hover-txt-clicked:hover, body.mini .link-hover-txt-clicked.clicked, body.mini .link-hover-txt-clicked.active, body.mini .link-hover-txt-active:hover, body.mini .link-hover-txt-active.clicked, body.mini .link-hover-txt-active.active, body.mini .link-hover-text-hover:hover, body.mini .link-hover-text-hover.clicked, body.mini .link-hover-text-hover.active, body.mini .link-hover-text-clicked:hover, body.mini .link-hover-text-clicked.clicked, body.mini .link-hover-text-clicked.active, body.mini .link-hover-text-active:hover, body.mini .link-hover-text-active.clicked, body.mini .link-hover-text-active.active {
+  color: var(--link-hover-color) !important;
+}
 body.mini .link-hover-box {
   background: var(--link-hover-color) !important;
   color: var(--white) !important;
@@ -17320,6 +17304,9 @@ body.mini .link-hover-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .link-hover-bg {
+  background-color: var(--link-hover-color) !important;
+}
+body.mini .link-hover-bg-hover:hover, body.mini .link-hover-bg-hover.clicked, body.mini .link-hover-bg-hover.active, body.mini .link-hover-bg-clicked:hover, body.mini .link-hover-bg-clicked.clicked, body.mini .link-hover-bg-clicked.active, body.mini .link-hover-bg-active:hover, body.mini .link-hover-bg-active.clicked, body.mini .link-hover-bg-active.active {
   background-color: var(--link-hover-color) !important;
 }
 body.mini .link-hover-bubble:after, body.mini .link-hover-bubble-down:after, body.mini .link-hover-bubble-down-right:after, body.mini .link-hover-bubble-down-left:after, body.mini .link-hover-bubble-up:after, body.mini .link-hover-bubble-up-right:after, body.mini .link-hover-bubble-up-left:after {
@@ -17363,6 +17350,9 @@ body.mini .link-hover-bubble-down-right::after {
 body.mini .info-txt, body.mini .info-text {
   color: var(--info) !important;
 }
+body.mini .info-txt-hover:hover, body.mini .info-txt-hover.clicked, body.mini .info-txt-hover.active, body.mini .info-txt-clicked:hover, body.mini .info-txt-clicked.clicked, body.mini .info-txt-clicked.active, body.mini .info-txt-active:hover, body.mini .info-txt-active.clicked, body.mini .info-txt-active.active, body.mini .info-text-hover:hover, body.mini .info-text-hover.clicked, body.mini .info-text-hover.active, body.mini .info-text-clicked:hover, body.mini .info-text-clicked.clicked, body.mini .info-text-clicked.active, body.mini .info-text-active:hover, body.mini .info-text-active.clicked, body.mini .info-text-active.active {
+  color: var(--info) !important;
+}
 body.mini .info-box {
   background: var(--info) !important;
   color: var(--white) !important;
@@ -17379,6 +17369,9 @@ body.mini .info-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .info-bg {
+  background-color: var(--info) !important;
+}
+body.mini .info-bg-hover:hover, body.mini .info-bg-hover.clicked, body.mini .info-bg-hover.active, body.mini .info-bg-clicked:hover, body.mini .info-bg-clicked.clicked, body.mini .info-bg-clicked.active, body.mini .info-bg-active:hover, body.mini .info-bg-active.clicked, body.mini .info-bg-active.active {
   background-color: var(--info) !important;
 }
 body.mini .info-bubble:after, body.mini .info-bubble-down:after, body.mini .info-bubble-down-right:after, body.mini .info-bubble-down-left:after, body.mini .info-bubble-up:after, body.mini .info-bubble-up-right:after, body.mini .info-bubble-up-left:after {
@@ -17422,6 +17415,9 @@ body.mini .info-bubble-down-right::after {
 body.mini .success-txt, body.mini .success-text {
   color: var(--success) !important;
 }
+body.mini .success-txt-hover:hover, body.mini .success-txt-hover.clicked, body.mini .success-txt-hover.active, body.mini .success-txt-clicked:hover, body.mini .success-txt-clicked.clicked, body.mini .success-txt-clicked.active, body.mini .success-txt-active:hover, body.mini .success-txt-active.clicked, body.mini .success-txt-active.active, body.mini .success-text-hover:hover, body.mini .success-text-hover.clicked, body.mini .success-text-hover.active, body.mini .success-text-clicked:hover, body.mini .success-text-clicked.clicked, body.mini .success-text-clicked.active, body.mini .success-text-active:hover, body.mini .success-text-active.clicked, body.mini .success-text-active.active {
+  color: var(--success) !important;
+}
 body.mini .success-box {
   background: var(--success) !important;
   color: var(--white) !important;
@@ -17438,6 +17434,9 @@ body.mini .success-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .success-bg {
+  background-color: var(--success) !important;
+}
+body.mini .success-bg-hover:hover, body.mini .success-bg-hover.clicked, body.mini .success-bg-hover.active, body.mini .success-bg-clicked:hover, body.mini .success-bg-clicked.clicked, body.mini .success-bg-clicked.active, body.mini .success-bg-active:hover, body.mini .success-bg-active.clicked, body.mini .success-bg-active.active {
   background-color: var(--success) !important;
 }
 body.mini .success-bubble:after, body.mini .success-bubble-down:after, body.mini .success-bubble-down-right:after, body.mini .success-bubble-down-left:after, body.mini .success-bubble-up:after, body.mini .success-bubble-up-right:after, body.mini .success-bubble-up-left:after {
@@ -17481,6 +17480,9 @@ body.mini .success-bubble-down-right::after {
 body.mini .warning-txt, body.mini .warning-text {
   color: var(--warning) !important;
 }
+body.mini .warning-txt-hover:hover, body.mini .warning-txt-hover.clicked, body.mini .warning-txt-hover.active, body.mini .warning-txt-clicked:hover, body.mini .warning-txt-clicked.clicked, body.mini .warning-txt-clicked.active, body.mini .warning-txt-active:hover, body.mini .warning-txt-active.clicked, body.mini .warning-txt-active.active, body.mini .warning-text-hover:hover, body.mini .warning-text-hover.clicked, body.mini .warning-text-hover.active, body.mini .warning-text-clicked:hover, body.mini .warning-text-clicked.clicked, body.mini .warning-text-clicked.active, body.mini .warning-text-active:hover, body.mini .warning-text-active.clicked, body.mini .warning-text-active.active {
+  color: var(--warning) !important;
+}
 body.mini .warning-box {
   background: var(--warning) !important;
   color: var(--white) !important;
@@ -17497,6 +17499,9 @@ body.mini .warning-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .warning-bg {
+  background-color: var(--warning) !important;
+}
+body.mini .warning-bg-hover:hover, body.mini .warning-bg-hover.clicked, body.mini .warning-bg-hover.active, body.mini .warning-bg-clicked:hover, body.mini .warning-bg-clicked.clicked, body.mini .warning-bg-clicked.active, body.mini .warning-bg-active:hover, body.mini .warning-bg-active.clicked, body.mini .warning-bg-active.active {
   background-color: var(--warning) !important;
 }
 body.mini .warning-bubble:after, body.mini .warning-bubble-down:after, body.mini .warning-bubble-down-right:after, body.mini .warning-bubble-down-left:after, body.mini .warning-bubble-up:after, body.mini .warning-bubble-up-right:after, body.mini .warning-bubble-up-left:after {
@@ -17540,6 +17545,9 @@ body.mini .warning-bubble-down-right::after {
 body.mini .danger-txt, body.mini .danger-text {
   color: var(--danger) !important;
 }
+body.mini .danger-txt-hover:hover, body.mini .danger-txt-hover.clicked, body.mini .danger-txt-hover.active, body.mini .danger-txt-clicked:hover, body.mini .danger-txt-clicked.clicked, body.mini .danger-txt-clicked.active, body.mini .danger-txt-active:hover, body.mini .danger-txt-active.clicked, body.mini .danger-txt-active.active, body.mini .danger-text-hover:hover, body.mini .danger-text-hover.clicked, body.mini .danger-text-hover.active, body.mini .danger-text-clicked:hover, body.mini .danger-text-clicked.clicked, body.mini .danger-text-clicked.active, body.mini .danger-text-active:hover, body.mini .danger-text-active.clicked, body.mini .danger-text-active.active {
+  color: var(--danger) !important;
+}
 body.mini .danger-box {
   background: var(--danger) !important;
   color: var(--white) !important;
@@ -17556,6 +17564,9 @@ body.mini .danger-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .danger-bg {
+  background-color: var(--danger) !important;
+}
+body.mini .danger-bg-hover:hover, body.mini .danger-bg-hover.clicked, body.mini .danger-bg-hover.active, body.mini .danger-bg-clicked:hover, body.mini .danger-bg-clicked.clicked, body.mini .danger-bg-clicked.active, body.mini .danger-bg-active:hover, body.mini .danger-bg-active.clicked, body.mini .danger-bg-active.active {
   background-color: var(--danger) !important;
 }
 body.mini .danger-bubble:after, body.mini .danger-bubble-down:after, body.mini .danger-bubble-down-right:after, body.mini .danger-bubble-down-left:after, body.mini .danger-bubble-up:after, body.mini .danger-bubble-up-right:after, body.mini .danger-bubble-up-left:after {
@@ -17599,6 +17610,9 @@ body.mini .danger-bubble-down-right::after {
 body.mini .bad-txt, body.mini .bad-text {
   color: var(--bad) !important;
 }
+body.mini .bad-txt-hover:hover, body.mini .bad-txt-hover.clicked, body.mini .bad-txt-hover.active, body.mini .bad-txt-clicked:hover, body.mini .bad-txt-clicked.clicked, body.mini .bad-txt-clicked.active, body.mini .bad-txt-active:hover, body.mini .bad-txt-active.clicked, body.mini .bad-txt-active.active, body.mini .bad-text-hover:hover, body.mini .bad-text-hover.clicked, body.mini .bad-text-hover.active, body.mini .bad-text-clicked:hover, body.mini .bad-text-clicked.clicked, body.mini .bad-text-clicked.active, body.mini .bad-text-active:hover, body.mini .bad-text-active.clicked, body.mini .bad-text-active.active {
+  color: var(--bad) !important;
+}
 body.mini .bad-box {
   background: var(--bad) !important;
   color: var(--white) !important;
@@ -17615,6 +17629,9 @@ body.mini .bad-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .bad-bg {
+  background-color: var(--bad) !important;
+}
+body.mini .bad-bg-hover:hover, body.mini .bad-bg-hover.clicked, body.mini .bad-bg-hover.active, body.mini .bad-bg-clicked:hover, body.mini .bad-bg-clicked.clicked, body.mini .bad-bg-clicked.active, body.mini .bad-bg-active:hover, body.mini .bad-bg-active.clicked, body.mini .bad-bg-active.active {
   background-color: var(--bad) !important;
 }
 body.mini .bad-bubble:after, body.mini .bad-bubble-down:after, body.mini .bad-bubble-down-right:after, body.mini .bad-bubble-down-left:after, body.mini .bad-bubble-up:after, body.mini .bad-bubble-up-right:after, body.mini .bad-bubble-up-left:after {
@@ -17658,6 +17675,9 @@ body.mini .bad-bubble-down-right::after {
 body.mini .acid-green-txt, body.mini .acid-green-text {
   color: var(--acid-green) !important;
 }
+body.mini .acid-green-txt-hover:hover, body.mini .acid-green-txt-hover.clicked, body.mini .acid-green-txt-hover.active, body.mini .acid-green-txt-clicked:hover, body.mini .acid-green-txt-clicked.clicked, body.mini .acid-green-txt-clicked.active, body.mini .acid-green-txt-active:hover, body.mini .acid-green-txt-active.clicked, body.mini .acid-green-txt-active.active, body.mini .acid-green-text-hover:hover, body.mini .acid-green-text-hover.clicked, body.mini .acid-green-text-hover.active, body.mini .acid-green-text-clicked:hover, body.mini .acid-green-text-clicked.clicked, body.mini .acid-green-text-clicked.active, body.mini .acid-green-text-active:hover, body.mini .acid-green-text-active.clicked, body.mini .acid-green-text-active.active {
+  color: var(--acid-green) !important;
+}
 body.mini .acid-green-box {
   background: var(--acid-green) !important;
   color: var(--white) !important;
@@ -17674,6 +17694,9 @@ body.mini .acid-green-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .acid-green-bg {
+  background-color: var(--acid-green) !important;
+}
+body.mini .acid-green-bg-hover:hover, body.mini .acid-green-bg-hover.clicked, body.mini .acid-green-bg-hover.active, body.mini .acid-green-bg-clicked:hover, body.mini .acid-green-bg-clicked.clicked, body.mini .acid-green-bg-clicked.active, body.mini .acid-green-bg-active:hover, body.mini .acid-green-bg-active.clicked, body.mini .acid-green-bg-active.active {
   background-color: var(--acid-green) !important;
 }
 body.mini .acid-green-bubble:after, body.mini .acid-green-bubble-down:after, body.mini .acid-green-bubble-down-right:after, body.mini .acid-green-bubble-down-left:after, body.mini .acid-green-bubble-up:after, body.mini .acid-green-bubble-up-right:after, body.mini .acid-green-bubble-up-left:after {
@@ -17717,6 +17740,9 @@ body.mini .acid-green-bubble-down-right::after {
 body.mini .ginger-bread-txt, body.mini .ginger-bread-text {
   color: var(--gingerbread) !important;
 }
+body.mini .ginger-bread-txt-hover:hover, body.mini .ginger-bread-txt-hover.clicked, body.mini .ginger-bread-txt-hover.active, body.mini .ginger-bread-txt-clicked:hover, body.mini .ginger-bread-txt-clicked.clicked, body.mini .ginger-bread-txt-clicked.active, body.mini .ginger-bread-txt-active:hover, body.mini .ginger-bread-txt-active.clicked, body.mini .ginger-bread-txt-active.active, body.mini .ginger-bread-text-hover:hover, body.mini .ginger-bread-text-hover.clicked, body.mini .ginger-bread-text-hover.active, body.mini .ginger-bread-text-clicked:hover, body.mini .ginger-bread-text-clicked.clicked, body.mini .ginger-bread-text-clicked.active, body.mini .ginger-bread-text-active:hover, body.mini .ginger-bread-text-active.clicked, body.mini .ginger-bread-text-active.active {
+  color: var(--gingerbread) !important;
+}
 body.mini .ginger-bread-box {
   background: var(--gingerbread) !important;
   color: var(--white) !important;
@@ -17733,6 +17759,9 @@ body.mini .ginger-bread-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .ginger-bread-bg {
+  background-color: var(--gingerbread) !important;
+}
+body.mini .ginger-bread-bg-hover:hover, body.mini .ginger-bread-bg-hover.clicked, body.mini .ginger-bread-bg-hover.active, body.mini .ginger-bread-bg-clicked:hover, body.mini .ginger-bread-bg-clicked.clicked, body.mini .ginger-bread-bg-clicked.active, body.mini .ginger-bread-bg-active:hover, body.mini .ginger-bread-bg-active.clicked, body.mini .ginger-bread-bg-active.active {
   background-color: var(--gingerbread) !important;
 }
 body.mini .ginger-bread-bubble:after, body.mini .ginger-bread-bubble-down:after, body.mini .ginger-bread-bubble-down-right:after, body.mini .ginger-bread-bubble-down-left:after, body.mini .ginger-bread-bubble-up:after, body.mini .ginger-bread-bubble-up-right:after, body.mini .ginger-bread-bubble-up-left:after {
@@ -17776,6 +17805,9 @@ body.mini .ginger-bread-bubble-down-right::after {
 body.mini .mini-txt, body.mini .mini-text {
   color: var(--mini-color) !important;
 }
+body.mini .mini-txt-hover:hover, body.mini .mini-txt-hover.clicked, body.mini .mini-txt-hover.active, body.mini .mini-txt-clicked:hover, body.mini .mini-txt-clicked.clicked, body.mini .mini-txt-clicked.active, body.mini .mini-txt-active:hover, body.mini .mini-txt-active.clicked, body.mini .mini-txt-active.active, body.mini .mini-text-hover:hover, body.mini .mini-text-hover.clicked, body.mini .mini-text-hover.active, body.mini .mini-text-clicked:hover, body.mini .mini-text-clicked.clicked, body.mini .mini-text-clicked.active, body.mini .mini-text-active:hover, body.mini .mini-text-active.clicked, body.mini .mini-text-active.active {
+  color: var(--mini-color) !important;
+}
 body.mini .mini-box {
   background: var(--mini-color) !important;
   color: var(--white) !important;
@@ -17792,6 +17824,9 @@ body.mini .mini-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .mini-bg {
+  background-color: var(--mini-color) !important;
+}
+body.mini .mini-bg-hover:hover, body.mini .mini-bg-hover.clicked, body.mini .mini-bg-hover.active, body.mini .mini-bg-clicked:hover, body.mini .mini-bg-clicked.clicked, body.mini .mini-bg-clicked.active, body.mini .mini-bg-active:hover, body.mini .mini-bg-active.clicked, body.mini .mini-bg-active.active {
   background-color: var(--mini-color) !important;
 }
 body.mini .mini-bubble:after, body.mini .mini-bubble-down:after, body.mini .mini-bubble-down-right:after, body.mini .mini-bubble-down-left:after, body.mini .mini-bubble-up:after, body.mini .mini-bubble-up-right:after, body.mini .mini-bubble-up-left:after {
@@ -17835,6 +17870,9 @@ body.mini .mini-bubble-down-right::after {
 body.mini .mini-dark-txt, body.mini .mini-dark-text {
   color: var(--mini-color-dark) !important;
 }
+body.mini .mini-dark-txt-hover:hover, body.mini .mini-dark-txt-hover.clicked, body.mini .mini-dark-txt-hover.active, body.mini .mini-dark-txt-clicked:hover, body.mini .mini-dark-txt-clicked.clicked, body.mini .mini-dark-txt-clicked.active, body.mini .mini-dark-txt-active:hover, body.mini .mini-dark-txt-active.clicked, body.mini .mini-dark-txt-active.active, body.mini .mini-dark-text-hover:hover, body.mini .mini-dark-text-hover.clicked, body.mini .mini-dark-text-hover.active, body.mini .mini-dark-text-clicked:hover, body.mini .mini-dark-text-clicked.clicked, body.mini .mini-dark-text-clicked.active, body.mini .mini-dark-text-active:hover, body.mini .mini-dark-text-active.clicked, body.mini .mini-dark-text-active.active {
+  color: var(--mini-color-dark) !important;
+}
 body.mini .mini-dark-box {
   background: var(--mini-color-dark) !important;
   color: var(--white) !important;
@@ -17851,6 +17889,9 @@ body.mini .mini-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .mini-dark-bg {
+  background-color: var(--mini-color-dark) !important;
+}
+body.mini .mini-dark-bg-hover:hover, body.mini .mini-dark-bg-hover.clicked, body.mini .mini-dark-bg-hover.active, body.mini .mini-dark-bg-clicked:hover, body.mini .mini-dark-bg-clicked.clicked, body.mini .mini-dark-bg-clicked.active, body.mini .mini-dark-bg-active:hover, body.mini .mini-dark-bg-active.clicked, body.mini .mini-dark-bg-active.active {
   background-color: var(--mini-color-dark) !important;
 }
 body.mini .mini-dark-bubble:after, body.mini .mini-dark-bubble-down:after, body.mini .mini-dark-bubble-down-right:after, body.mini .mini-dark-bubble-down-left:after, body.mini .mini-dark-bubble-up:after, body.mini .mini-dark-bubble-up-right:after, body.mini .mini-dark-bubble-up-left:after {
@@ -17894,6 +17935,9 @@ body.mini .mini-dark-bubble-down-right::after {
 body.mini .mini-second-txt, body.mini .mini-second-text {
   color: var(--mini-second) !important;
 }
+body.mini .mini-second-txt-hover:hover, body.mini .mini-second-txt-hover.clicked, body.mini .mini-second-txt-hover.active, body.mini .mini-second-txt-clicked:hover, body.mini .mini-second-txt-clicked.clicked, body.mini .mini-second-txt-clicked.active, body.mini .mini-second-txt-active:hover, body.mini .mini-second-txt-active.clicked, body.mini .mini-second-txt-active.active, body.mini .mini-second-text-hover:hover, body.mini .mini-second-text-hover.clicked, body.mini .mini-second-text-hover.active, body.mini .mini-second-text-clicked:hover, body.mini .mini-second-text-clicked.clicked, body.mini .mini-second-text-clicked.active, body.mini .mini-second-text-active:hover, body.mini .mini-second-text-active.clicked, body.mini .mini-second-text-active.active {
+  color: var(--mini-second) !important;
+}
 body.mini .mini-second-box {
   background: var(--mini-second) !important;
   color: var(--white) !important;
@@ -17910,6 +17954,9 @@ body.mini .mini-second-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .mini-second-bg {
+  background-color: var(--mini-second) !important;
+}
+body.mini .mini-second-bg-hover:hover, body.mini .mini-second-bg-hover.clicked, body.mini .mini-second-bg-hover.active, body.mini .mini-second-bg-clicked:hover, body.mini .mini-second-bg-clicked.clicked, body.mini .mini-second-bg-clicked.active, body.mini .mini-second-bg-active:hover, body.mini .mini-second-bg-active.clicked, body.mini .mini-second-bg-active.active {
   background-color: var(--mini-second) !important;
 }
 body.mini .mini-second-bubble:after, body.mini .mini-second-bubble-down:after, body.mini .mini-second-bubble-down-right:after, body.mini .mini-second-bubble-down-left:after, body.mini .mini-second-bubble-up:after, body.mini .mini-second-bubble-up-right:after, body.mini .mini-second-bubble-up-left:after {
@@ -17953,6 +18000,9 @@ body.mini .mini-second-bubble-down-right::after {
 body.mini .mini-third-txt, body.mini .mini-third-text {
   color: var(--mini-third) !important;
 }
+body.mini .mini-third-txt-hover:hover, body.mini .mini-third-txt-hover.clicked, body.mini .mini-third-txt-hover.active, body.mini .mini-third-txt-clicked:hover, body.mini .mini-third-txt-clicked.clicked, body.mini .mini-third-txt-clicked.active, body.mini .mini-third-txt-active:hover, body.mini .mini-third-txt-active.clicked, body.mini .mini-third-txt-active.active, body.mini .mini-third-text-hover:hover, body.mini .mini-third-text-hover.clicked, body.mini .mini-third-text-hover.active, body.mini .mini-third-text-clicked:hover, body.mini .mini-third-text-clicked.clicked, body.mini .mini-third-text-clicked.active, body.mini .mini-third-text-active:hover, body.mini .mini-third-text-active.clicked, body.mini .mini-third-text-active.active {
+  color: var(--mini-third) !important;
+}
 body.mini .mini-third-box {
   background: var(--mini-third) !important;
   color: var(--white) !important;
@@ -17969,6 +18019,9 @@ body.mini .mini-third-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .mini-third-bg {
+  background-color: var(--mini-third) !important;
+}
+body.mini .mini-third-bg-hover:hover, body.mini .mini-third-bg-hover.clicked, body.mini .mini-third-bg-hover.active, body.mini .mini-third-bg-clicked:hover, body.mini .mini-third-bg-clicked.clicked, body.mini .mini-third-bg-clicked.active, body.mini .mini-third-bg-active:hover, body.mini .mini-third-bg-active.clicked, body.mini .mini-third-bg-active.active {
   background-color: var(--mini-third) !important;
 }
 body.mini .mini-third-bubble:after, body.mini .mini-third-bubble-down:after, body.mini .mini-third-bubble-down-right:after, body.mini .mini-third-bubble-down-left:after, body.mini .mini-third-bubble-up:after, body.mini .mini-third-bubble-up-right:after, body.mini .mini-third-bubble-up-left:after {
@@ -18012,6 +18065,9 @@ body.mini .mini-third-bubble-down-right::after {
 body.mini .mini-fourth-txt, body.mini .mini-fourth-text {
   color: var(--mini-fourth) !important;
 }
+body.mini .mini-fourth-txt-hover:hover, body.mini .mini-fourth-txt-hover.clicked, body.mini .mini-fourth-txt-hover.active, body.mini .mini-fourth-txt-clicked:hover, body.mini .mini-fourth-txt-clicked.clicked, body.mini .mini-fourth-txt-clicked.active, body.mini .mini-fourth-txt-active:hover, body.mini .mini-fourth-txt-active.clicked, body.mini .mini-fourth-txt-active.active, body.mini .mini-fourth-text-hover:hover, body.mini .mini-fourth-text-hover.clicked, body.mini .mini-fourth-text-hover.active, body.mini .mini-fourth-text-clicked:hover, body.mini .mini-fourth-text-clicked.clicked, body.mini .mini-fourth-text-clicked.active, body.mini .mini-fourth-text-active:hover, body.mini .mini-fourth-text-active.clicked, body.mini .mini-fourth-text-active.active {
+  color: var(--mini-fourth) !important;
+}
 body.mini .mini-fourth-box {
   background: var(--mini-fourth) !important;
   color: var(--white) !important;
@@ -18028,6 +18084,9 @@ body.mini .mini-fourth-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .mini-fourth-bg {
+  background-color: var(--mini-fourth) !important;
+}
+body.mini .mini-fourth-bg-hover:hover, body.mini .mini-fourth-bg-hover.clicked, body.mini .mini-fourth-bg-hover.active, body.mini .mini-fourth-bg-clicked:hover, body.mini .mini-fourth-bg-clicked.clicked, body.mini .mini-fourth-bg-clicked.active, body.mini .mini-fourth-bg-active:hover, body.mini .mini-fourth-bg-active.clicked, body.mini .mini-fourth-bg-active.active {
   background-color: var(--mini-fourth) !important;
 }
 body.mini .mini-fourth-bubble:after, body.mini .mini-fourth-bubble-down:after, body.mini .mini-fourth-bubble-down-right:after, body.mini .mini-fourth-bubble-down-left:after, body.mini .mini-fourth-bubble-up:after, body.mini .mini-fourth-bubble-up-right:after, body.mini .mini-fourth-bubble-up-left:after {
@@ -18071,6 +18130,9 @@ body.mini .mini-fourth-bubble-down-right::after {
 body.mini .uwa-txt, body.mini .uwa-text {
   color: var(--uwa-color) !important;
 }
+body.mini .uwa-txt-hover:hover, body.mini .uwa-txt-hover.clicked, body.mini .uwa-txt-hover.active, body.mini .uwa-txt-clicked:hover, body.mini .uwa-txt-clicked.clicked, body.mini .uwa-txt-clicked.active, body.mini .uwa-txt-active:hover, body.mini .uwa-txt-active.clicked, body.mini .uwa-txt-active.active, body.mini .uwa-text-hover:hover, body.mini .uwa-text-hover.clicked, body.mini .uwa-text-hover.active, body.mini .uwa-text-clicked:hover, body.mini .uwa-text-clicked.clicked, body.mini .uwa-text-clicked.active, body.mini .uwa-text-active:hover, body.mini .uwa-text-active.clicked, body.mini .uwa-text-active.active {
+  color: var(--uwa-color) !important;
+}
 body.mini .uwa-box {
   background: var(--uwa-color) !important;
   color: var(--white) !important;
@@ -18087,6 +18149,9 @@ body.mini .uwa-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .uwa-bg {
+  background-color: var(--uwa-color) !important;
+}
+body.mini .uwa-bg-hover:hover, body.mini .uwa-bg-hover.clicked, body.mini .uwa-bg-hover.active, body.mini .uwa-bg-clicked:hover, body.mini .uwa-bg-clicked.clicked, body.mini .uwa-bg-clicked.active, body.mini .uwa-bg-active:hover, body.mini .uwa-bg-active.clicked, body.mini .uwa-bg-active.active {
   background-color: var(--uwa-color) !important;
 }
 body.mini .uwa-bubble:after, body.mini .uwa-bubble-down:after, body.mini .uwa-bubble-down-right:after, body.mini .uwa-bubble-down-left:after, body.mini .uwa-bubble-up:after, body.mini .uwa-bubble-up-right:after, body.mini .uwa-bubble-up-left:after {
@@ -18130,6 +18195,9 @@ body.mini .uwa-bubble-down-right::after {
 body.mini .uwa-dark-txt, body.mini .uwa-dark-text {
   color: var(--uwa-color-dark) !important;
 }
+body.mini .uwa-dark-txt-hover:hover, body.mini .uwa-dark-txt-hover.clicked, body.mini .uwa-dark-txt-hover.active, body.mini .uwa-dark-txt-clicked:hover, body.mini .uwa-dark-txt-clicked.clicked, body.mini .uwa-dark-txt-clicked.active, body.mini .uwa-dark-txt-active:hover, body.mini .uwa-dark-txt-active.clicked, body.mini .uwa-dark-txt-active.active, body.mini .uwa-dark-text-hover:hover, body.mini .uwa-dark-text-hover.clicked, body.mini .uwa-dark-text-hover.active, body.mini .uwa-dark-text-clicked:hover, body.mini .uwa-dark-text-clicked.clicked, body.mini .uwa-dark-text-clicked.active, body.mini .uwa-dark-text-active:hover, body.mini .uwa-dark-text-active.clicked, body.mini .uwa-dark-text-active.active {
+  color: var(--uwa-color-dark) !important;
+}
 body.mini .uwa-dark-box {
   background: var(--uwa-color-dark) !important;
   color: var(--white) !important;
@@ -18146,6 +18214,9 @@ body.mini .uwa-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .uwa-dark-bg {
+  background-color: var(--uwa-color-dark) !important;
+}
+body.mini .uwa-dark-bg-hover:hover, body.mini .uwa-dark-bg-hover.clicked, body.mini .uwa-dark-bg-hover.active, body.mini .uwa-dark-bg-clicked:hover, body.mini .uwa-dark-bg-clicked.clicked, body.mini .uwa-dark-bg-clicked.active, body.mini .uwa-dark-bg-active:hover, body.mini .uwa-dark-bg-active.clicked, body.mini .uwa-dark-bg-active.active {
   background-color: var(--uwa-color-dark) !important;
 }
 body.mini .uwa-dark-bubble:after, body.mini .uwa-dark-bubble-down:after, body.mini .uwa-dark-bubble-down-right:after, body.mini .uwa-dark-bubble-down-left:after, body.mini .uwa-dark-bubble-up:after, body.mini .uwa-dark-bubble-up-right:after, body.mini .uwa-dark-bubble-up-left:after {
@@ -18189,6 +18260,9 @@ body.mini .uwa-dark-bubble-down-right::after {
 body.mini .uwa-second-txt, body.mini .uwa-second-text {
   color: var(--uwa-second-color) !important;
 }
+body.mini .uwa-second-txt-hover:hover, body.mini .uwa-second-txt-hover.clicked, body.mini .uwa-second-txt-hover.active, body.mini .uwa-second-txt-clicked:hover, body.mini .uwa-second-txt-clicked.clicked, body.mini .uwa-second-txt-clicked.active, body.mini .uwa-second-txt-active:hover, body.mini .uwa-second-txt-active.clicked, body.mini .uwa-second-txt-active.active, body.mini .uwa-second-text-hover:hover, body.mini .uwa-second-text-hover.clicked, body.mini .uwa-second-text-hover.active, body.mini .uwa-second-text-clicked:hover, body.mini .uwa-second-text-clicked.clicked, body.mini .uwa-second-text-clicked.active, body.mini .uwa-second-text-active:hover, body.mini .uwa-second-text-active.clicked, body.mini .uwa-second-text-active.active {
+  color: var(--uwa-second-color) !important;
+}
 body.mini .uwa-second-box {
   background: var(--uwa-second-color) !important;
   color: var(--white) !important;
@@ -18205,6 +18279,9 @@ body.mini .uwa-second-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .uwa-second-bg {
+  background-color: var(--uwa-second-color) !important;
+}
+body.mini .uwa-second-bg-hover:hover, body.mini .uwa-second-bg-hover.clicked, body.mini .uwa-second-bg-hover.active, body.mini .uwa-second-bg-clicked:hover, body.mini .uwa-second-bg-clicked.clicked, body.mini .uwa-second-bg-clicked.active, body.mini .uwa-second-bg-active:hover, body.mini .uwa-second-bg-active.clicked, body.mini .uwa-second-bg-active.active {
   background-color: var(--uwa-second-color) !important;
 }
 body.mini .uwa-second-bubble:after, body.mini .uwa-second-bubble-down:after, body.mini .uwa-second-bubble-down-right:after, body.mini .uwa-second-bubble-down-left:after, body.mini .uwa-second-bubble-up:after, body.mini .uwa-second-bubble-up-right:after, body.mini .uwa-second-bubble-up-left:after {
@@ -18248,6 +18325,9 @@ body.mini .uwa-second-bubble-down-right::after {
 body.mini .uwa-third-txt, body.mini .uwa-third-text {
   color: var(--uwa-third-color) !important;
 }
+body.mini .uwa-third-txt-hover:hover, body.mini .uwa-third-txt-hover.clicked, body.mini .uwa-third-txt-hover.active, body.mini .uwa-third-txt-clicked:hover, body.mini .uwa-third-txt-clicked.clicked, body.mini .uwa-third-txt-clicked.active, body.mini .uwa-third-txt-active:hover, body.mini .uwa-third-txt-active.clicked, body.mini .uwa-third-txt-active.active, body.mini .uwa-third-text-hover:hover, body.mini .uwa-third-text-hover.clicked, body.mini .uwa-third-text-hover.active, body.mini .uwa-third-text-clicked:hover, body.mini .uwa-third-text-clicked.clicked, body.mini .uwa-third-text-clicked.active, body.mini .uwa-third-text-active:hover, body.mini .uwa-third-text-active.clicked, body.mini .uwa-third-text-active.active {
+  color: var(--uwa-third-color) !important;
+}
 body.mini .uwa-third-box {
   background: var(--uwa-third-color) !important;
   color: var(--white) !important;
@@ -18264,6 +18344,9 @@ body.mini .uwa-third-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .uwa-third-bg {
+  background-color: var(--uwa-third-color) !important;
+}
+body.mini .uwa-third-bg-hover:hover, body.mini .uwa-third-bg-hover.clicked, body.mini .uwa-third-bg-hover.active, body.mini .uwa-third-bg-clicked:hover, body.mini .uwa-third-bg-clicked.clicked, body.mini .uwa-third-bg-clicked.active, body.mini .uwa-third-bg-active:hover, body.mini .uwa-third-bg-active.clicked, body.mini .uwa-third-bg-active.active {
   background-color: var(--uwa-third-color) !important;
 }
 body.mini .uwa-third-bubble:after, body.mini .uwa-third-bubble-down:after, body.mini .uwa-third-bubble-down-right:after, body.mini .uwa-third-bubble-down-left:after, body.mini .uwa-third-bubble-up:after, body.mini .uwa-third-bubble-up-right:after, body.mini .uwa-third-bubble-up-left:after {
@@ -18307,6 +18390,9 @@ body.mini .uwa-third-bubble-down-right::after {
 body.mini .uwa-fourth-txt, body.mini .uwa-fourth-text {
   color: var(--uwa-fourth-color) !important;
 }
+body.mini .uwa-fourth-txt-hover:hover, body.mini .uwa-fourth-txt-hover.clicked, body.mini .uwa-fourth-txt-hover.active, body.mini .uwa-fourth-txt-clicked:hover, body.mini .uwa-fourth-txt-clicked.clicked, body.mini .uwa-fourth-txt-clicked.active, body.mini .uwa-fourth-txt-active:hover, body.mini .uwa-fourth-txt-active.clicked, body.mini .uwa-fourth-txt-active.active, body.mini .uwa-fourth-text-hover:hover, body.mini .uwa-fourth-text-hover.clicked, body.mini .uwa-fourth-text-hover.active, body.mini .uwa-fourth-text-clicked:hover, body.mini .uwa-fourth-text-clicked.clicked, body.mini .uwa-fourth-text-clicked.active, body.mini .uwa-fourth-text-active:hover, body.mini .uwa-fourth-text-active.clicked, body.mini .uwa-fourth-text-active.active {
+  color: var(--uwa-fourth-color) !important;
+}
 body.mini .uwa-fourth-box {
   background: var(--uwa-fourth-color) !important;
   color: var(--white) !important;
@@ -18323,6 +18409,9 @@ body.mini .uwa-fourth-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .uwa-fourth-bg {
+  background-color: var(--uwa-fourth-color) !important;
+}
+body.mini .uwa-fourth-bg-hover:hover, body.mini .uwa-fourth-bg-hover.clicked, body.mini .uwa-fourth-bg-hover.active, body.mini .uwa-fourth-bg-clicked:hover, body.mini .uwa-fourth-bg-clicked.clicked, body.mini .uwa-fourth-bg-clicked.active, body.mini .uwa-fourth-bg-active:hover, body.mini .uwa-fourth-bg-active.clicked, body.mini .uwa-fourth-bg-active.active {
   background-color: var(--uwa-fourth-color) !important;
 }
 body.mini .uwa-fourth-bubble:after, body.mini .uwa-fourth-bubble-down:after, body.mini .uwa-fourth-bubble-down-right:after, body.mini .uwa-fourth-bubble-down-left:after, body.mini .uwa-fourth-bubble-up:after, body.mini .uwa-fourth-bubble-up-right:after, body.mini .uwa-fourth-bubble-up-left:after {
@@ -18366,6 +18455,9 @@ body.mini .uwa-fourth-bubble-down-right::after {
 body.mini .uwa-link-txt, body.mini .uwa-link-text {
   color: var(--uwa-link-color) !important;
 }
+body.mini .uwa-link-txt-hover:hover, body.mini .uwa-link-txt-hover.clicked, body.mini .uwa-link-txt-hover.active, body.mini .uwa-link-txt-clicked:hover, body.mini .uwa-link-txt-clicked.clicked, body.mini .uwa-link-txt-clicked.active, body.mini .uwa-link-txt-active:hover, body.mini .uwa-link-txt-active.clicked, body.mini .uwa-link-txt-active.active, body.mini .uwa-link-text-hover:hover, body.mini .uwa-link-text-hover.clicked, body.mini .uwa-link-text-hover.active, body.mini .uwa-link-text-clicked:hover, body.mini .uwa-link-text-clicked.clicked, body.mini .uwa-link-text-clicked.active, body.mini .uwa-link-text-active:hover, body.mini .uwa-link-text-active.clicked, body.mini .uwa-link-text-active.active {
+  color: var(--uwa-link-color) !important;
+}
 body.mini .uwa-link-box {
   background: var(--uwa-link-color) !important;
   color: var(--white) !important;
@@ -18382,6 +18474,9 @@ body.mini .uwa-link-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .uwa-link-bg {
+  background-color: var(--uwa-link-color) !important;
+}
+body.mini .uwa-link-bg-hover:hover, body.mini .uwa-link-bg-hover.clicked, body.mini .uwa-link-bg-hover.active, body.mini .uwa-link-bg-clicked:hover, body.mini .uwa-link-bg-clicked.clicked, body.mini .uwa-link-bg-clicked.active, body.mini .uwa-link-bg-active:hover, body.mini .uwa-link-bg-active.clicked, body.mini .uwa-link-bg-active.active {
   background-color: var(--uwa-link-color) !important;
 }
 body.mini .uwa-link-bubble:after, body.mini .uwa-link-bubble-down:after, body.mini .uwa-link-bubble-down-right:after, body.mini .uwa-link-bubble-down-left:after, body.mini .uwa-link-bubble-up:after, body.mini .uwa-link-bubble-up-right:after, body.mini .uwa-link-bubble-up-left:after {
@@ -18425,6 +18520,9 @@ body.mini .uwa-link-bubble-down-right::after {
 body.mini .aroma-txt, body.mini .aroma-text {
   color: var(--aroma-color) !important;
 }
+body.mini .aroma-txt-hover:hover, body.mini .aroma-txt-hover.clicked, body.mini .aroma-txt-hover.active, body.mini .aroma-txt-clicked:hover, body.mini .aroma-txt-clicked.clicked, body.mini .aroma-txt-clicked.active, body.mini .aroma-txt-active:hover, body.mini .aroma-txt-active.clicked, body.mini .aroma-txt-active.active, body.mini .aroma-text-hover:hover, body.mini .aroma-text-hover.clicked, body.mini .aroma-text-hover.active, body.mini .aroma-text-clicked:hover, body.mini .aroma-text-clicked.clicked, body.mini .aroma-text-clicked.active, body.mini .aroma-text-active:hover, body.mini .aroma-text-active.clicked, body.mini .aroma-text-active.active {
+  color: var(--aroma-color) !important;
+}
 body.mini .aroma-box {
   background: var(--aroma-color) !important;
   color: var(--white) !important;
@@ -18441,6 +18539,9 @@ body.mini .aroma-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .aroma-bg {
+  background-color: var(--aroma-color) !important;
+}
+body.mini .aroma-bg-hover:hover, body.mini .aroma-bg-hover.clicked, body.mini .aroma-bg-hover.active, body.mini .aroma-bg-clicked:hover, body.mini .aroma-bg-clicked.clicked, body.mini .aroma-bg-clicked.active, body.mini .aroma-bg-active:hover, body.mini .aroma-bg-active.clicked, body.mini .aroma-bg-active.active {
   background-color: var(--aroma-color) !important;
 }
 body.mini .aroma-bubble:after, body.mini .aroma-bubble-down:after, body.mini .aroma-bubble-down-right:after, body.mini .aroma-bubble-down-left:after, body.mini .aroma-bubble-up:after, body.mini .aroma-bubble-up-right:after, body.mini .aroma-bubble-up-left:after {
@@ -18484,6 +18585,9 @@ body.mini .aroma-bubble-down-right::after {
 body.mini .aroma-dark-txt, body.mini .aroma-dark-text {
   color: var(--aroma-color-dark) !important;
 }
+body.mini .aroma-dark-txt-hover:hover, body.mini .aroma-dark-txt-hover.clicked, body.mini .aroma-dark-txt-hover.active, body.mini .aroma-dark-txt-clicked:hover, body.mini .aroma-dark-txt-clicked.clicked, body.mini .aroma-dark-txt-clicked.active, body.mini .aroma-dark-txt-active:hover, body.mini .aroma-dark-txt-active.clicked, body.mini .aroma-dark-txt-active.active, body.mini .aroma-dark-text-hover:hover, body.mini .aroma-dark-text-hover.clicked, body.mini .aroma-dark-text-hover.active, body.mini .aroma-dark-text-clicked:hover, body.mini .aroma-dark-text-clicked.clicked, body.mini .aroma-dark-text-clicked.active, body.mini .aroma-dark-text-active:hover, body.mini .aroma-dark-text-active.clicked, body.mini .aroma-dark-text-active.active {
+  color: var(--aroma-color-dark) !important;
+}
 body.mini .aroma-dark-box {
   background: var(--aroma-color-dark) !important;
   color: var(--white) !important;
@@ -18500,6 +18604,9 @@ body.mini .aroma-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .aroma-dark-bg {
+  background-color: var(--aroma-color-dark) !important;
+}
+body.mini .aroma-dark-bg-hover:hover, body.mini .aroma-dark-bg-hover.clicked, body.mini .aroma-dark-bg-hover.active, body.mini .aroma-dark-bg-clicked:hover, body.mini .aroma-dark-bg-clicked.clicked, body.mini .aroma-dark-bg-clicked.active, body.mini .aroma-dark-bg-active:hover, body.mini .aroma-dark-bg-active.clicked, body.mini .aroma-dark-bg-active.active {
   background-color: var(--aroma-color-dark) !important;
 }
 body.mini .aroma-dark-bubble:after, body.mini .aroma-dark-bubble-down:after, body.mini .aroma-dark-bubble-down-right:after, body.mini .aroma-dark-bubble-down-left:after, body.mini .aroma-dark-bubble-up:after, body.mini .aroma-dark-bubble-up-right:after, body.mini .aroma-dark-bubble-up-left:after {
@@ -18543,6 +18650,9 @@ body.mini .aroma-dark-bubble-down-right::after {
 body.mini .pdp-txt, body.mini .pdp-text {
   color: var(--pezzidipla-color) !important;
 }
+body.mini .pdp-txt-hover:hover, body.mini .pdp-txt-hover.clicked, body.mini .pdp-txt-hover.active, body.mini .pdp-txt-clicked:hover, body.mini .pdp-txt-clicked.clicked, body.mini .pdp-txt-clicked.active, body.mini .pdp-txt-active:hover, body.mini .pdp-txt-active.clicked, body.mini .pdp-txt-active.active, body.mini .pdp-text-hover:hover, body.mini .pdp-text-hover.clicked, body.mini .pdp-text-hover.active, body.mini .pdp-text-clicked:hover, body.mini .pdp-text-clicked.clicked, body.mini .pdp-text-clicked.active, body.mini .pdp-text-active:hover, body.mini .pdp-text-active.clicked, body.mini .pdp-text-active.active {
+  color: var(--pezzidipla-color) !important;
+}
 body.mini .pdp-box {
   background: var(--pezzidipla-color) !important;
   color: var(--white) !important;
@@ -18559,6 +18669,9 @@ body.mini .pdp-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .pdp-bg {
+  background-color: var(--pezzidipla-color) !important;
+}
+body.mini .pdp-bg-hover:hover, body.mini .pdp-bg-hover.clicked, body.mini .pdp-bg-hover.active, body.mini .pdp-bg-clicked:hover, body.mini .pdp-bg-clicked.clicked, body.mini .pdp-bg-clicked.active, body.mini .pdp-bg-active:hover, body.mini .pdp-bg-active.clicked, body.mini .pdp-bg-active.active {
   background-color: var(--pezzidipla-color) !important;
 }
 body.mini .pdp-bubble:after, body.mini .pdp-bubble-down:after, body.mini .pdp-bubble-down-right:after, body.mini .pdp-bubble-down-left:after, body.mini .pdp-bubble-up:after, body.mini .pdp-bubble-up-right:after, body.mini .pdp-bubble-up-left:after {
@@ -18602,6 +18715,9 @@ body.mini .pdp-bubble-down-right::after {
 body.mini .pdp-second-txt, body.mini .pdp-second-text {
   color: var(--pezzidipla-second-color) !important;
 }
+body.mini .pdp-second-txt-hover:hover, body.mini .pdp-second-txt-hover.clicked, body.mini .pdp-second-txt-hover.active, body.mini .pdp-second-txt-clicked:hover, body.mini .pdp-second-txt-clicked.clicked, body.mini .pdp-second-txt-clicked.active, body.mini .pdp-second-txt-active:hover, body.mini .pdp-second-txt-active.clicked, body.mini .pdp-second-txt-active.active, body.mini .pdp-second-text-hover:hover, body.mini .pdp-second-text-hover.clicked, body.mini .pdp-second-text-hover.active, body.mini .pdp-second-text-clicked:hover, body.mini .pdp-second-text-clicked.clicked, body.mini .pdp-second-text-clicked.active, body.mini .pdp-second-text-active:hover, body.mini .pdp-second-text-active.clicked, body.mini .pdp-second-text-active.active {
+  color: var(--pezzidipla-second-color) !important;
+}
 body.mini .pdp-second-box {
   background: var(--pezzidipla-second-color) !important;
   color: var(--white) !important;
@@ -18618,6 +18734,9 @@ body.mini .pdp-second-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .pdp-second-bg {
+  background-color: var(--pezzidipla-second-color) !important;
+}
+body.mini .pdp-second-bg-hover:hover, body.mini .pdp-second-bg-hover.clicked, body.mini .pdp-second-bg-hover.active, body.mini .pdp-second-bg-clicked:hover, body.mini .pdp-second-bg-clicked.clicked, body.mini .pdp-second-bg-clicked.active, body.mini .pdp-second-bg-active:hover, body.mini .pdp-second-bg-active.clicked, body.mini .pdp-second-bg-active.active {
   background-color: var(--pezzidipla-second-color) !important;
 }
 body.mini .pdp-second-bubble:after, body.mini .pdp-second-bubble-down:after, body.mini .pdp-second-bubble-down-right:after, body.mini .pdp-second-bubble-down-left:after, body.mini .pdp-second-bubble-up:after, body.mini .pdp-second-bubble-up-right:after, body.mini .pdp-second-bubble-up-left:after {
@@ -18661,6 +18780,9 @@ body.mini .pdp-second-bubble-down-right::after {
 body.mini .pdp-third-txt, body.mini .pdp-third-text {
   color: var(--pezzidipla-third-color) !important;
 }
+body.mini .pdp-third-txt-hover:hover, body.mini .pdp-third-txt-hover.clicked, body.mini .pdp-third-txt-hover.active, body.mini .pdp-third-txt-clicked:hover, body.mini .pdp-third-txt-clicked.clicked, body.mini .pdp-third-txt-clicked.active, body.mini .pdp-third-txt-active:hover, body.mini .pdp-third-txt-active.clicked, body.mini .pdp-third-txt-active.active, body.mini .pdp-third-text-hover:hover, body.mini .pdp-third-text-hover.clicked, body.mini .pdp-third-text-hover.active, body.mini .pdp-third-text-clicked:hover, body.mini .pdp-third-text-clicked.clicked, body.mini .pdp-third-text-clicked.active, body.mini .pdp-third-text-active:hover, body.mini .pdp-third-text-active.clicked, body.mini .pdp-third-text-active.active {
+  color: var(--pezzidipla-third-color) !important;
+}
 body.mini .pdp-third-box {
   background: var(--pezzidipla-third-color) !important;
   color: var(--white) !important;
@@ -18677,6 +18799,9 @@ body.mini .pdp-third-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .pdp-third-bg {
+  background-color: var(--pezzidipla-third-color) !important;
+}
+body.mini .pdp-third-bg-hover:hover, body.mini .pdp-third-bg-hover.clicked, body.mini .pdp-third-bg-hover.active, body.mini .pdp-third-bg-clicked:hover, body.mini .pdp-third-bg-clicked.clicked, body.mini .pdp-third-bg-clicked.active, body.mini .pdp-third-bg-active:hover, body.mini .pdp-third-bg-active.clicked, body.mini .pdp-third-bg-active.active {
   background-color: var(--pezzidipla-third-color) !important;
 }
 body.mini .pdp-third-bubble:after, body.mini .pdp-third-bubble-down:after, body.mini .pdp-third-bubble-down-right:after, body.mini .pdp-third-bubble-down-left:after, body.mini .pdp-third-bubble-up:after, body.mini .pdp-third-bubble-up-right:after, body.mini .pdp-third-bubble-up-left:after {
@@ -18720,6 +18845,9 @@ body.mini .pdp-third-bubble-down-right::after {
 body.mini .pdp-fourth-txt, body.mini .pdp-fourth-text {
   color: var(--pezzidipla-fourth-color) !important;
 }
+body.mini .pdp-fourth-txt-hover:hover, body.mini .pdp-fourth-txt-hover.clicked, body.mini .pdp-fourth-txt-hover.active, body.mini .pdp-fourth-txt-clicked:hover, body.mini .pdp-fourth-txt-clicked.clicked, body.mini .pdp-fourth-txt-clicked.active, body.mini .pdp-fourth-txt-active:hover, body.mini .pdp-fourth-txt-active.clicked, body.mini .pdp-fourth-txt-active.active, body.mini .pdp-fourth-text-hover:hover, body.mini .pdp-fourth-text-hover.clicked, body.mini .pdp-fourth-text-hover.active, body.mini .pdp-fourth-text-clicked:hover, body.mini .pdp-fourth-text-clicked.clicked, body.mini .pdp-fourth-text-clicked.active, body.mini .pdp-fourth-text-active:hover, body.mini .pdp-fourth-text-active.clicked, body.mini .pdp-fourth-text-active.active {
+  color: var(--pezzidipla-fourth-color) !important;
+}
 body.mini .pdp-fourth-box {
   background: var(--pezzidipla-fourth-color) !important;
   color: var(--white) !important;
@@ -18736,6 +18864,9 @@ body.mini .pdp-fourth-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .pdp-fourth-bg {
+  background-color: var(--pezzidipla-fourth-color) !important;
+}
+body.mini .pdp-fourth-bg-hover:hover, body.mini .pdp-fourth-bg-hover.clicked, body.mini .pdp-fourth-bg-hover.active, body.mini .pdp-fourth-bg-clicked:hover, body.mini .pdp-fourth-bg-clicked.clicked, body.mini .pdp-fourth-bg-clicked.active, body.mini .pdp-fourth-bg-active:hover, body.mini .pdp-fourth-bg-active.clicked, body.mini .pdp-fourth-bg-active.active {
   background-color: var(--pezzidipla-fourth-color) !important;
 }
 body.mini .pdp-fourth-bubble:after, body.mini .pdp-fourth-bubble-down:after, body.mini .pdp-fourth-bubble-down-right:after, body.mini .pdp-fourth-bubble-down-left:after, body.mini .pdp-fourth-bubble-up:after, body.mini .pdp-fourth-bubble-up-right:after, body.mini .pdp-fourth-bubble-up-left:after {
@@ -18779,6 +18910,9 @@ body.mini .pdp-fourth-bubble-down-right::after {
 body.mini .lns-txt, body.mini .lns-text {
   color: var(--lanuovastartup-color) !important;
 }
+body.mini .lns-txt-hover:hover, body.mini .lns-txt-hover.clicked, body.mini .lns-txt-hover.active, body.mini .lns-txt-clicked:hover, body.mini .lns-txt-clicked.clicked, body.mini .lns-txt-clicked.active, body.mini .lns-txt-active:hover, body.mini .lns-txt-active.clicked, body.mini .lns-txt-active.active, body.mini .lns-text-hover:hover, body.mini .lns-text-hover.clicked, body.mini .lns-text-hover.active, body.mini .lns-text-clicked:hover, body.mini .lns-text-clicked.clicked, body.mini .lns-text-clicked.active, body.mini .lns-text-active:hover, body.mini .lns-text-active.clicked, body.mini .lns-text-active.active {
+  color: var(--lanuovastartup-color) !important;
+}
 body.mini .lns-box {
   background: var(--lanuovastartup-color) !important;
   color: var(--white) !important;
@@ -18795,6 +18929,9 @@ body.mini .lns-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .lns-bg {
+  background-color: var(--lanuovastartup-color) !important;
+}
+body.mini .lns-bg-hover:hover, body.mini .lns-bg-hover.clicked, body.mini .lns-bg-hover.active, body.mini .lns-bg-clicked:hover, body.mini .lns-bg-clicked.clicked, body.mini .lns-bg-clicked.active, body.mini .lns-bg-active:hover, body.mini .lns-bg-active.clicked, body.mini .lns-bg-active.active {
   background-color: var(--lanuovastartup-color) !important;
 }
 body.mini .lns-bubble:after, body.mini .lns-bubble-down:after, body.mini .lns-bubble-down-right:after, body.mini .lns-bubble-down-left:after, body.mini .lns-bubble-up:after, body.mini .lns-bubble-up-right:after, body.mini .lns-bubble-up-left:after {
@@ -18838,6 +18975,9 @@ body.mini .lns-bubble-down-right::after {
 body.mini .lns-dark-txt, body.mini .lns-dark-text {
   color: var(--lanuovastartup-color-dark) !important;
 }
+body.mini .lns-dark-txt-hover:hover, body.mini .lns-dark-txt-hover.clicked, body.mini .lns-dark-txt-hover.active, body.mini .lns-dark-txt-clicked:hover, body.mini .lns-dark-txt-clicked.clicked, body.mini .lns-dark-txt-clicked.active, body.mini .lns-dark-txt-active:hover, body.mini .lns-dark-txt-active.clicked, body.mini .lns-dark-txt-active.active, body.mini .lns-dark-text-hover:hover, body.mini .lns-dark-text-hover.clicked, body.mini .lns-dark-text-hover.active, body.mini .lns-dark-text-clicked:hover, body.mini .lns-dark-text-clicked.clicked, body.mini .lns-dark-text-clicked.active, body.mini .lns-dark-text-active:hover, body.mini .lns-dark-text-active.clicked, body.mini .lns-dark-text-active.active {
+  color: var(--lanuovastartup-color-dark) !important;
+}
 body.mini .lns-dark-box {
   background: var(--lanuovastartup-color-dark) !important;
   color: var(--white) !important;
@@ -18854,6 +18994,9 @@ body.mini .lns-dark-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .lns-dark-bg {
+  background-color: var(--lanuovastartup-color-dark) !important;
+}
+body.mini .lns-dark-bg-hover:hover, body.mini .lns-dark-bg-hover.clicked, body.mini .lns-dark-bg-hover.active, body.mini .lns-dark-bg-clicked:hover, body.mini .lns-dark-bg-clicked.clicked, body.mini .lns-dark-bg-clicked.active, body.mini .lns-dark-bg-active:hover, body.mini .lns-dark-bg-active.clicked, body.mini .lns-dark-bg-active.active {
   background-color: var(--lanuovastartup-color-dark) !important;
 }
 body.mini .lns-dark-bubble:after, body.mini .lns-dark-bubble-down:after, body.mini .lns-dark-bubble-down-right:after, body.mini .lns-dark-bubble-down-left:after, body.mini .lns-dark-bubble-up:after, body.mini .lns-dark-bubble-up-right:after, body.mini .lns-dark-bubble-up-left:after {
@@ -18897,6 +19040,9 @@ body.mini .lns-dark-bubble-down-right::after {
 body.mini .dt-txt, body.mini .dt-text {
   color: var(--doingthings-color) !important;
 }
+body.mini .dt-txt-hover:hover, body.mini .dt-txt-hover.clicked, body.mini .dt-txt-hover.active, body.mini .dt-txt-clicked:hover, body.mini .dt-txt-clicked.clicked, body.mini .dt-txt-clicked.active, body.mini .dt-txt-active:hover, body.mini .dt-txt-active.clicked, body.mini .dt-txt-active.active, body.mini .dt-text-hover:hover, body.mini .dt-text-hover.clicked, body.mini .dt-text-hover.active, body.mini .dt-text-clicked:hover, body.mini .dt-text-clicked.clicked, body.mini .dt-text-clicked.active, body.mini .dt-text-active:hover, body.mini .dt-text-active.clicked, body.mini .dt-text-active.active {
+  color: var(--doingthings-color) !important;
+}
 body.mini .dt-box {
   background: var(--doingthings-color) !important;
   color: var(--black) !important;
@@ -18913,6 +19059,9 @@ body.mini .dt-box.XS {
   margin: 0 4px 2px 0;
 }
 body.mini .dt-bg {
+  background-color: var(--doingthings-color) !important;
+}
+body.mini .dt-bg-hover:hover, body.mini .dt-bg-hover.clicked, body.mini .dt-bg-hover.active, body.mini .dt-bg-clicked:hover, body.mini .dt-bg-clicked.clicked, body.mini .dt-bg-clicked.active, body.mini .dt-bg-active:hover, body.mini .dt-bg-active.clicked, body.mini .dt-bg-active.active {
   background-color: var(--doingthings-color) !important;
 }
 body.mini .dt-bubble:after, body.mini .dt-bubble-down:after, body.mini .dt-bubble-down-right:after, body.mini .dt-bubble-down-left:after, body.mini .dt-bubble-up:after, body.mini .dt-bubble-up-right:after, body.mini .dt-bubble-up-left:after {
@@ -20173,6 +20322,19 @@ body.mini .px-5, body.mini .ph-5 {
 }
 .heart {
   animation: heart 2s infinite;
+}
+
+.transition, .trans {
+  transition: all 0.25s ease;
+}
+.transition-bg, .trans-bg {
+  transition: background-color 0.25s ease;
+}
+.transition-text, .transition-txt, .trans-text, .trans-txt {
+  transition: color 0.25s ease;
+}
+.transition-border, .trans-border {
+  transition: border-color 0.25s ease;
 }
 
 @-webkit-keyframes pulse {

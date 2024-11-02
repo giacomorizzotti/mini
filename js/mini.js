@@ -362,7 +362,7 @@ function collapse(targetObject) {
     }
     toggleClass(targetObject, 'shown', 'hidden');
 }
-function toggleAndCloseOthers(elementToShow, elementsToHide) {
+function toggleAndCloseOthers(elementToShow, elementsToHide, buttons=null, thisButton=null ) {
     var elsToToggle = document.querySelectorAll(elementToShow);
     var elsToHide = document.querySelectorAll(elementsToHide);
     for (j=0; j<elsToToggle.length; j++) {
@@ -381,6 +381,28 @@ function toggleAndCloseOthers(elementToShow, elementsToHide) {
             }
         }
     }
+    if (buttons && thisButton) {
+        var buttonsToClickClicked = document.querySelectorAll(buttons)
+        for (k=0; k<buttonsToClickClicked.length; k++) {
+            if (thisButton && buttonsToClickClicked[k].isSameNode(thisButton)) {
+                if(!buttonsToClickClicked[k].classList.contains('to-click') && !buttonsToClickClicked[k].classList.contains('clicked')) {
+                    buttonsToClickClicked[k].classList.add('clicked')
+                } else if ( buttonsToClickClicked[k].classList.contains('to-click') ) {
+                    buttonsToClickClicked[k].classList.remove('to-click')
+                    buttonsToClickClicked[k].classList.add('clicked')
+                } else if ( buttonsToClickClicked[k].classList.contains('clicked') ) {
+                    buttonsToClickClicked[k].classList.remove('clicked')
+                    buttonsToClickClicked[k].classList.add('to-click')
+                }
+            } else {
+                if(buttonsToClickClicked[k].classList.contains('clicked'))
+                    buttonsToClickClicked[k].classList.remove('clicked')
+                if(!buttonsToClickClicked[k].classList.contains('to-click'))
+                    buttonsToClickClicked[k].classList.add('to-click')
+            }   
+        }
+    }
+        
 }
 function showElement(targetObject) {
     removeClass(targetObject, 'hidden');
@@ -389,6 +411,22 @@ function showElement(targetObject) {
 function hideElement(targetObject) {
     removeClass(targetObject, 'shown');
     addClass(targetObject, 'hidden');
+}
+function removeClickedClass(targetObject) {
+    var els = document.querySelectorAll(targetObject);
+    for (j=0;j<els.length;j++) {
+        if (els[j].classList.contains('clicked'))
+            els[j].classList.remove('clicked')
+            els[j].classList.add('to-click')
+    }
+}
+function removeToClickClass(targetObject) {
+    var els = document.querySelectorAll(targetObject);
+    for (j=0;j<els.length;j++) {
+        if (els[j].classList.contains('to-click'))
+            els[j].classList.remove('to-click')
+            els[j].classList.add('clicked')
+    }
 }
 
 // COOKIES

@@ -13,12 +13,12 @@ body {
           border-width: $bordWidth!important;
         }
       }
-      @each $colorname, $colorcode, $colortext in $colors {
-        &-#{$colorname} {
-          @extend .border;
-          border-color: $colorcode;
-        }
-      }
+      //@each $colorname, $colorcode, $colortext in $colors {
+      //  &-#{$colorname} {
+      //    @extend .border;
+      //    border-color: $colorcode;
+      //  }
+      //}
       
       @each $sideLabel, $side in $sides {
         &-#{$sideLabel} {

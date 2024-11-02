@@ -20,6 +20,8 @@
     }
   }
 }
+
+// vibing text
 .vibing  {
   display: inline-block;
   transform: translateY(-3px);
@@ -46,8 +48,23 @@
   100%  {transform: scale(1);}
 }
 
+// heart
 .heart {
   animation: heart 2s infinite;
+}
+
+// transition
+.transition, .trans {
+  transition: all 0.25s ease;
+  &-bg {
+    transition: background-color 0.25s ease;
+  }
+  &-text, &-txt{
+    transition: color 0.25s ease;
+  }
+  &-border {
+    transition: border-color 0.25s ease;
+  }
 }
 
 // pulse animation
