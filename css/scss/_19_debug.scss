@@ -1,128 +1,122 @@
 
 // DEBUG TOOLS STYLING
 
-body {
-  &.mini {
+//DEBUG
+#debug-box {
 
-    //DEBUG
-    #debug-box {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: right;
+  border-left: 2px solid var(--black);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  padding: 0;
+  max-width: 50%;
 
-      position: fixed;
-      z-index: 999;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      text-align: right;
-      border-left: 2px solid var(--black);
-      display: flex;
-      flex-flow: column wrap;
-      align-items: start;
-      padding: 0;
-      max-width: 50%;
-
-      @include md {
-        bottom: 0;
-        border-bottom: 2px solid var(--black);
-        border-left: none;
-        flex-flow: row wrap;
-        padding: 0 calc( var(--padding) * 0.5 );
-        max-width: none;
-      }
-
-      .debug-data {
-
-        margin-bottom: calc( var(--margin) * 0.25 );
-        margin-right: 0;
-        @include md {
-          margin-bottom: 0;
-          margin-right: calc( var(--margin) * 0.5 );
-        }
-
-        p {
-          display: block;
-          background: var(--black);
-          padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
-          text-align: center;
-          width: auto;
-          line-height: 1;
-          @include md {
-            margin: calc( var(--margin) * 0.25 ) calc( var(--margin) * 0.25 ) 0 calc( var(--margin) * 0.25 );
-          }
-        }
-      }
-    }
-
-
-    // DEV tag
-    .dev-tag {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      transform: rotate(-45deg) translate(15px,30px);
-      transform-origin: center;
-      width: 80px;
-      height: 40px;
-      z-index: 999;
-      box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-      p {
-        padding: calc( var(--margin) * 0.5 );
-        color: #fff;
-        margin: 0;
-        text-align: center;
-        font-size: calc( var(--p) * 0.75 );
-        line-height: 1;
-        font-weight: 700;
-        @include md {
-          padding: calc( var(--margin) * 0.75 );
-        }
-      }
-      &:hover {
-        box-shadow: 0 0 0 5px rgba(0,0,0,0.05);
-      }
-      &.dev {
-        background: var(--warning);
-      }
-      &.prod {
-        background: var(--success);
-      }
-    }
-
-
-    // ERRORS
-    #msg {
-      position: fixed;
-      z-index: 999;
-      top: 75%;
-      right: 0;
-      transform: translate(0, -50%);
-      text-align: right;
-      display: flex;
-      flex-flow: column wrap;
-      p.label {
-        transform: rotate(-90deg) translate(100%, 0);
-        transform-origin: bottom right;
-        text-align: left;
-      }
-      #errors, #warnings {
-        padding: calc(var(--padding) * 0.5) var(--padding);
-        margin: calc(var(--margin) * 0.5) 0;
-        transition: transform 0.3s ease;
-        transform: translate(0,0);
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-        &.minified {
-          transform: translate( calc(100% - var(--padding)) , 0 );
-          &:hover {
-            transform: translate(0,0);
-          }
-        }
-      }
-
-    }
-
+  @include md {
+    bottom: 0;
+    border-bottom: 2px solid var(--black);
+    border-left: none;
+    flex-flow: row wrap;
+    padding: 0 calc( var(--padding) * 0.5 );
+    max-width: none;
   }
+
+  .debug-data {
+
+    margin-bottom: calc( var(--margin) * 0.25 );
+    margin-right: 0;
+    @include md {
+      margin-bottom: 0;
+      margin-right: calc( var(--margin) * 0.5 );
+    }
+
+    p {
+      display: block;
+      background: var(--black);
+      padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
+      text-align: center;
+      width: auto;
+      line-height: 1;
+      @include md {
+        margin: calc( var(--margin) * 0.25 ) calc( var(--margin) * 0.25 ) 0 calc( var(--margin) * 0.25 );
+      }
+    }
+  }
+}
+
+
+// DEV tag
+.dev-tag {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: rotate(-45deg) translate(15px,30px);
+  transform-origin: center;
+  width: 80px;
+  height: 40px;
+  z-index: 999;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  p {
+    padding: calc( var(--margin) * 0.5 );
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: calc( var(--p) * 0.75 );
+    line-height: 1;
+    font-weight: 700;
+    @include md {
+      padding: calc( var(--margin) * 0.75 );
+    }
+  }
+  &:hover {
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.05);
+  }
+  &.dev {
+    background: var(--warning);
+  }
+  &.prod {
+    background: var(--success);
+  }
+}
+
+
+// ERRORS
+#msg {
+  position: fixed;
+  z-index: 999;
+  top: 75%;
+  right: 0;
+  transform: translate(0, -50%);
+  text-align: right;
+  display: flex;
+  flex-flow: column wrap;
+  p.label {
+    transform: rotate(-90deg) translate(100%, 0);
+    transform-origin: bottom right;
+    text-align: left;
+  }
+  #errors, #warnings {
+    padding: calc(var(--padding) * 0.5) var(--padding);
+    margin: calc(var(--margin) * 0.5) 0;
+    transition: transform 0.3s ease;
+    transform: translate(0,0);
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &.minified {
+      transform: translate( calc(100% - var(--padding)) , 0 );
+      &:hover {
+        transform: translate(0,0);
+      }
+    }
+  }
+
 }

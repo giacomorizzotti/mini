@@ -1,11 +1,8 @@
+// WordPress
 body {
-  &.mini {
-    
-    &.admin-bar {
-      header#header {
-        top: 32px;
-      }
+  &.admin-bar {
+    header#header {
+      top: 32px;
     }
-
   }
 }

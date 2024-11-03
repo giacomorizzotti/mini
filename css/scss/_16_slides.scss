@@ -1,101 +1,95 @@
 // SLIDER
 
-body {
-  &.mini {
+.slider-wrapper {
+  width: 100%;
+  position: relative;
 
-    .slider-wrapper {
-      width: 100%;
-      position: relative;
-
-      i.slider-controls {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 32px;
-        height: 36px;
-        width: 36px;
-        background: rgb(0 0 0 / 65%);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, .23);
-        border-radius: 50%;
-        cursor: pointer;
-        line-height: 32px;
-        text-align: center;
-        transition: .3s ease;
-        z-index: 3;
-        padding: 2px;
-        color: var(--white);
-        &:first-child {
-          left: var(--margin);
-        }
-        &:last-child {
-          right: var(--margin);
-        }
-        &:active {
-          transform: translateY(-50%) scale(0.85);
-        }
-      }
-
-      .slider {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 100%;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        scroll-behavior: smooth;
-        margin: 0;
-        padding: 0;
-        
-        &.no-transition {
-          scroll-behavior: auto;
-        }
-        &::-webkit-scrollbar {
-          display: none;
-        }
-        &.dragging {
-          scroll-behavior: auto;
-          scroll-snap-type: none;
-          .card {
-            user-select: none;
-            cursor: grab;
-          }
-        }
-        .slide {
-          scroll-snap-align: start;
-          width: 100%;
-          display: flex;
-          height: 100%;
-          overflow: hidden;
-          position: relative;
-          margin: 0; 
-          padding: 0;
-          .img, .wp-block-image {
-            position: absolute;
-            display: block;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 0;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          .caption {
-            position: absolute;
-            display: block;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 0;
-          }
-        }
-      }
-
+  i.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    height: 36px;
+    width: 36px;
+    background: rgb(0 0 0 / 65%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .23);
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 32px;
+    text-align: center;
+    transition: .3s ease;
+    z-index: 3;
+    padding: 2px;
+    color: var(--white);
+    &:first-child {
+      left: var(--margin);
     }
-
+    &:last-child {
+      right: var(--margin);
+    }
+    &:active {
+      transform: translateY(-50%) scale(0.85);
+    }
   }
+
+  .slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    
+    &.no-transition {
+      scroll-behavior: auto;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &.dragging {
+      scroll-behavior: auto;
+      scroll-snap-type: none;
+      .card {
+        user-select: none;
+        cursor: grab;
+      }
+    }
+    .slide {
+      scroll-snap-align: start;
+      width: 100%;
+      display: flex;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      margin: 0; 
+      padding: 0;
+      .img, .wp-block-image {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .caption {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+      }
+    }
+  }
+
 }

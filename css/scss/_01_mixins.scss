@@ -1,5 +1,39 @@
 // MIXINs
 
+$boxWidth: 
+"8" 100% 50% 33.333333% 16.666666% 8.333333% 12 6 4 1.999999 0.999999,
+"10" 100% 50% 20% 20% 10% 12 6 2.4 2.4 1.2,
+"12" 100% 50% 25% 25% 12.5% 12 6 3 3 1.5,
+"16" 100% 50% 33.333333% 16.666666% 16.666666% 12 6 4 1.999999 1.999999,
+"20" 100% 50% 50% 20% 20% 12 6 6 2.4 2.4,
+"25" 100% 50% 50% 25% 25% 12 6 6 3 3,
+"30" 100% 50% 50% 30% 30% 12 6 6 30% 30%,
+"33" 100% 50% 33.333333% 33.333333% 33.333333% 12 6 4 4 4,
+"40" 100% 50% 40% 40% 40% 12 6 4.8 4.8 4.8,
+"50" 100% 50% 50% 50% 50% 12 6 6 6 6,
+"60" 100% 50% 60% 60% 60% 12 6 7.2 7.2 7.2,
+"66" 100% 50% 66.666666% 66.666666% 66.666666% 12 6 8 8 8,
+"70" 100% 100% 50% 70% 70% 12 12 6 8.4 8.4,
+"75" 100% 100% 50% 75% 75% 12 12 6 9 9,
+"80" 100% 100% 50% 80% 80% 12 12 6 9.6 9.6,
+"88" 100% 100% 75% 75% 87.5% 12 12 9 9 10.5,
+"90" 100% 100% 80% 80% 90% 12 12 9.6 9.6 10.8,
+"100" 100% 100% 100% 100% 100% 12 12 12 12 12,
+;
+
+$breakpoints:
+'sm' $screen-sm-min,
+'md' $screen-md-min,
+'lg' $screen-lg-min,
+'xl' $screen-xl-min,
+'xxl' $screen-xxl-min,
+;
+
+$orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+$flex: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+$multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 10, "20" 20;
 
 $colors: //color name, color code, text color over color
   "wh" var(--white) var(--black),
@@ -66,7 +100,54 @@ $thickness: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
     
 $borderRadius: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px, '15':15px, '20':20px, '25':25px, '30':30px, '50':50px, 'round':50%);
 
-$sides: ('t':'top','e':'right','b':'bottom','s':'left',);
+$sides: (
+  't':'top',
+  'e':'right',
+  'r':'right',
+  'b':'bottom',
+  's':'left',
+  'l':'left',
+);
+
+$spaceThickness: (
+  '05':calc(var(--baseline) * 0.5), 
+  '1':calc(var(--baseline) * 1), 
+  '15':calc(var(--baseline) * 1.5), 
+  '2':calc(var(--baseline) * 2), 
+  '25':calc(var(--baseline) * 2.5), 
+  '3':calc(var(--baseline) * 3), 
+  '4':calc(var(--baseline) * 4), 
+  '5':calc(var(--baseline) * 5), 
+  '6':calc(var(--baseline) * 6), 
+  '10':calc(var(--baseline) * 10), 
+  '20':calc(var(--baseline) * 20)
+);
+
+$sepThickness: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
+
+$marginThickness: (
+  '0':0, 
+  '05':calc(var(--margin) * 0.5), 
+  '1':calc(var(--margin) * 1), 
+  '15':calc(var(--margin) * 1.5), 
+  '2':calc(var(--margin) * 2), 
+  '25':calc(var(--margin) * 2.5), 
+  '3':calc(var(--margin) * 3), 
+  '4':calc(var(--margin) * 4), 
+  '5':calc(var(--margin) * 5)
+);
+
+$paddingThickness: (
+  '0':0, 
+  '05':calc(var(--padding) * 0.5), 
+  '1':calc(var(--padding) * 1), 
+  '15':calc(var(--padding) * 1.5), 
+  '2':calc(var(--padding) * 2), 
+  '25':calc(var(--padding) * 2.5), 
+  '3':calc(var(--padding) * 3), 
+  '4':calc(var(--padding) * 4), 
+  '5':calc(var(--padding) * 5)
+);
 
 // gradients
 $f2s: var(--main-color) 0%, var(--second-color) 100%;

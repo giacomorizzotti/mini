@@ -1,172 +1,186 @@
 
 // COLORS
 
-body {
-  &.mini {
-
-    @each $colorname, $colorcode, $colortext in $colors {
-      .#{$colorname} {
-        // texts
-        &-txt, &-text {
+@each $colorname, $colorcode, $colortext in $colors {
+  .#{$colorname} {
+    // texts
+    &-text {
+      color: $colorcode!important;
+      &-hover, &-clicked, &-active {
+        &:hover, &.clicked, &.active {
           color: $colorcode!important;
-          &-hover, &-clicked, &-active {
-            &:hover, &.clicked, &.active {
-              color: $colorcode!important;
-            }
-          }
         }
-        // text boxes
-        &-box {
-          background: $colorcode!important;
-          color: $colortext!important;
-          padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-          display: inline-block;
-          margin: 0 6px 8px 0;
-          &.S {
-            padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-            margin: 0 4px 4px 0;
-          }
-          &.XS {
-            padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-            margin: 0 4px 2px 0;
-          }
-        }
-        // backgrounds
-        &-bg {
+      }
+    }
+    // text boxes
+    &-box {
+      background: $colorcode!important;
+      color: $colortext!important;
+      padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+      display: inline-block;
+      margin: 0 6px 8px 0;
+      &.S {
+        padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+        margin: 0 4px 4px 0;
+      }
+      &.XS {
+        padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+        margin: 0 4px 2px 0;
+      }
+    }
+    // backgrounds
+    &-bg {
+      background-color: $colorcode!important;
+      &-hover, &-clicked, &-active {
+        &:hover, &.clicked, &.active {
           background-color: $colorcode!important;
-          &-hover, &-clicked, &-active {
-            &:hover, &.clicked, &.active {
-              background-color: $colorcode!important;
-            }
+        }
+      }
+    }
+    // borders
+    &-border {
+      @extend .border;
+      border-color: $colorcode!important;
+      &-hover, &-clicked, &-active {
+        &:hover, &.clicked, &.active {
+          border-color: $colorcode!important;
+        }
+      }
+      //@each $sideLabel, $side in $sides {
+      //  &-#{$sideLabel} { 
+      //    border-#{$side}-color: $colorcode!important;
+      //    &-hover, &-clicked, &-active {
+      //      &:hover, &.clicked, &.active {
+      //        border-#{$side}-color: $colorcode!important;
+      //      }
+      //    }
+      //  }
+      //}
+    }
+    // bubbles
+    &-bubble {
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+      }
+      &-up {
+        &::after {
+          @extend .#{$colorname}-bubble;
+          border-left: var(--baseline) solid transparent;
+          border-right: var(--baseline) solid transparent;
+          border-bottom: calc(var(--baseline)* 1.25) solid $colorcode;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -100%);
+        }
+        &-left {
+          &::after {
+            @extend .#{$colorname}-bubble-up;
+            left: calc(var(--margin)* 2);
+            transform: translate(0, -100%);
           }
         }
-        // bubbles
-        &-bubble {
-          &:after {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-          }
-          &-up {
-            &::after {
-              @extend .#{$colorname}-bubble;
-              border-left: var(--baseline) solid transparent;
-              border-right: var(--baseline) solid transparent;
-              border-bottom: calc(var(--baseline)* 1.25) solid $colorcode;
-              top: 0;
-              left: 50%;
-              transform: translate(-50%, -100%);
-            }
-            &-left {
-              &::after {
-                @extend .#{$colorname}-bubble-up;
-                left: calc(var(--margin)* 2);
-                transform: translate(0, -100%);
-              }
-            }
-            &-right {
-              &::after {
-                @extend .#{$colorname}-bubble-up;
-                right: calc(var(--margin)* 2);
-                transform: translate(0, -100%);
-              }
-            }
-          }
-          &-down {
-            &::after {
-              @extend .#{$colorname}-bubble;
-              border-top: calc(var(--baseline)* 1.25) solid $colorcode;
-              border-left: var(--baseline) solid transparent;
-              border-right: var(--baseline) solid transparent;
-              top: 100%;
-              left: 50%;
-              transform: translate(-50%, 0);
-            }
-            &-left {
-              &::after {
-                @extend .#{$colorname}-bubble-down;
-                left: calc(var(--margin)* 2);
-                transform: none;
-              }
-            }
-            &-right {
-              &::after {
-                @extend .#{$colorname}-bubble-down;
-                right: calc(var(--margin)* 2);
-                transform: none;
-              }
-            }
+        &-right {
+          &::after {
+            @extend .#{$colorname}-bubble-up;
+            right: calc(var(--margin)* 2);
+            transform: translate(0, -100%);
           }
         }
       }
-      /*
-      input[type="radio"]+label.#{$colorname} {
-        &-btn {
+      &-down {
+        &::after {
+          @extend .#{$colorname}-bubble;
+          border-top: calc(var(--baseline)* 1.25) solid $colorcode;
+          border-left: var(--baseline) solid transparent;
+          border-right: var(--baseline) solid transparent;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+        &-left {
+          &::after {
+            @extend .#{$colorname}-bubble-down;
+            left: calc(var(--margin)* 2);
+            transform: none;
+          }
+        }
+        &-right {
+          &::after {
+            @extend .#{$colorname}-bubble-down;
+            right: calc(var(--margin)* 2);
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+  /*
+  input[type="radio"]+label.#{$colorname} {
+    &-btn {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      &:hover {
+        color: $colortext!important;
+        background: $colorcode!important;
+        border-color: $colorcode!important;
+      }
+      &-bg {
+        color: $colortext!important;
+        border-color: $colorcode!important;
+        background: $colorcode!important;
+        &:hover {
           color: $colorcode!important;
           border-color: $colorcode!important;
-          &:hover {
-            color: $colortext!important;
-            background: $colorcode!important;
-            border-color: $colorcode!important;
-          }
-          &-bg {
-            color: $colortext!important;
-            border-color: $colorcode!important;
-            background: $colorcode!important;
-            &:hover {
-              color: $colorcode!important;
-              border-color: $colorcode!important;
-              background: transparent!important;
-            }
-          }
+          background: transparent!important;
         }
       }
-      input[type="radio"]:checked+label.#{$colorname} {
-        &-btn {
-          color: $colortext!important;
-          background: $colorcode!important;
-          border-color: $colorcode!important;
-          &-bg {
-            color: $colorcode!important;
-            border-color: $colorcode!important;
-            background: transparent!important;
-          }
-        }
-      }
-      */
     }
-    // gradients
-    .grad-f2s {
-      @include gradient(135deg, $f2s);
-    }
-    .grad-f2t {
-      @include gradient(135deg, $f2t);
-    }
-    .grad-s2t {
-      @include gradient(135deg, $s2t);
-    }
-    .grad-t2f {
-      @include gradient(135deg, $t2f);
-    }
-    .grad-main {
-      @include gradient(135deg, $gradMain);
-    }
-    .grad-second {
-      @include gradient(135deg, $gradSecond);
-    }
-    .grad-third {
-      @include gradient(135deg, $gradThird);
-    }
-    .grad-fourth {
-      @include gradient(135deg, $gradFourth);
-    }
-    .grad-fw-down-w {
-      @include gradient(0deg, $gradFalseWhiteToWhite);
-    }
-    .grad-fw-up-w {
-      @include gradient(180deg, $gradFalseWhiteToWhite);
-    }
-
   }
+  input[type="radio"]:checked+label.#{$colorname} {
+    &-btn {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+      &-bg {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+  */
+}
+// gradients
+.grad-f2s {
+  @include gradient(135deg, $f2s);
+}
+.grad-f2t {
+  @include gradient(135deg, $f2t);
+}
+.grad-s2t {
+  @include gradient(135deg, $s2t);
+}
+.grad-t2f {
+  @include gradient(135deg, $t2f);
+}
+.grad-main {
+  @include gradient(135deg, $gradMain);
+}
+.grad-second {
+  @include gradient(135deg, $gradSecond);
+}
+.grad-third {
+  @include gradient(135deg, $gradThird);
+}
+.grad-fourth {
+  @include gradient(135deg, $gradFourth);
+}
+.grad-fw-down-w {
+  @include gradient(0deg, $gradFalseWhiteToWhite);
+}
+.grad-fw-up-w {
+  @include gradient(180deg, $gradFalseWhiteToWhite);
 }

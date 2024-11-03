@@ -1,113 +1,109 @@
 // BUTTONS
-body {
-    &.mini {
 
-        .btn {
+.btn {
+    color: var(--link-color);
+    font-size: var(--p);
+    line-height: calc( var(--p) * 1.5 );
+    width: auto;
+    padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+    display: inline-block;
+    margin: calc( var(--margin) * 0.5 ) calc( var(--margin) * 1 ) calc( var(--margin) * 0.5 ) 0;
+    border: 1px solid var(--link-color);
+    font-weight: 700;
+    transition: color ease-out 0.15s, background-color ease-out 0.15s, border-color ease-out 0.15s;
+    background: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+    @include borderRadius(3px);
+
+    @include mdDown {
+        display: block;
+        margin: 0 0 var(--margin) 0;
+        text-align: center;
+    }
+
+    &:hover, &.clicked, &.active {
+        color: var(--white);
+        background: var(--link-color);
+        border-color: var(--link-color);
+    }
+
+    &-bg {
+        @extend .btn;
+        color: var(--white);
+        border-color: var(--link-color);
+        background: var(--link-color);
+        &:hover, &.clicked {
             color: var(--link-color);
-            font-size: var(--p);
-            line-height: calc( var(--p) * 1.5 );
-            width: auto;
-            padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-            display: inline-block;
-            margin: calc( var(--margin) * 0.5 ) calc( var(--margin) * 1 ) calc( var(--margin) * 0.5 ) 0;
-            border: 1px solid var(--link-color);
-            font-weight: 700;
-            transition: color ease-out 0.15s, background-color ease-out 0.15s, border-color ease-out 0.15s;
+            border-color: var(--link-color);
             background: transparent;
-            cursor: pointer;
-            vertical-align: middle;
-            @include borderRadius(3px);
-
-            @include mdDown {
-                display: block;
-                margin: 0 0 var(--margin) 0;
-                text-align: center;
-            }
-
-            &:hover, &.clicked, &.active {
-                color: var(--white);
-                background: var(--link-color);
-                border-color: var(--link-color);
-            }
-
-            &-bg {
-                @extend .btn;
-                color: var(--white);
-                border-color: var(--link-color);
-                background: var(--link-color);
-                &:hover, &.clicked {
-                    color: var(--link-color);
-                    border-color: var(--link-color);
-                    background: transparent;
-                }
-            }
-
-            &.XS, &.xs {
-                padding: calc(var(--padding)*.125) calc(var(--padding)*.25);
-                margin: calc(var(--margin) * .25) 0;
-                @include md {
-                margin: calc(var(--margin) * .25) calc(var(--margin) * 0.25) calc(var(--margin) * .25) 0;
-                }
-            }
-            &.S, &.s {
-                padding: calc(var(--padding)*.25) calc(var(--padding)*.5);
-                margin: calc(var(--margin) * .35) 0;
-                @include md {
-                margin: calc(var(--margin) * .35) calc(var(--margin) * 0.5) calc(var(--margin) * .35) 0;
-                }
-            }
-            &.L, &.l {
-                padding: calc(var(--padding)*0.625) calc(var(--padding)*1.125);
-                margin: calc(var(--margin) * .75) 0;
-                @include md {
-                margin: calc(var(--margin) * .75) calc(var(--margin) * 1.125) calc(var(--margin) * .75) 0;
-                }
-            }
-            &.XL, &.xl {
-                padding: calc(var(--padding)*0.85) calc(var(--padding)*1.35);
-            }
-            &.XXL, &.xxl {
-                padding: calc(var(--padding)*1.25) calc(var(--padding)*1.75);
-            }
         }
-        
-        @each $colorname, $colorcode, $colortext in $colors {
-            .#{$colorname} {
-                &-btn {
-                    @extend .btn;
+    }
+
+    &.XS, &.xs {
+        padding: calc(var(--padding)*.125) calc(var(--padding)*.25);
+        margin: calc(var(--margin) * .25) 0;
+        @include md {
+        margin: calc(var(--margin) * .25) calc(var(--margin) * 0.25) calc(var(--margin) * .25) 0;
+        }
+    }
+    &.S, &.s {
+        padding: calc(var(--padding)*.25) calc(var(--padding)*.5);
+        margin: calc(var(--margin) * .35) 0;
+        @include md {
+        margin: calc(var(--margin) * .35) calc(var(--margin) * 0.5) calc(var(--margin) * .35) 0;
+        }
+    }
+    &.L, &.l {
+        padding: calc(var(--padding)*0.625) calc(var(--padding)*1.125);
+        margin: calc(var(--margin) * .75) 0;
+        @include md {
+        margin: calc(var(--margin) * .75) calc(var(--margin) * 1.125) calc(var(--margin) * .75) 0;
+        }
+    }
+    &.XL, &.xl {
+        padding: calc(var(--padding)*0.85) calc(var(--padding)*1.35);
+    }
+    &.XXL, &.xxl {
+        padding: calc(var(--padding)*1.25) calc(var(--padding)*1.75);
+    }
+}
+
+@each $colorname, $colorcode, $colortext in $colors {
+    .#{$colorname} {
+        &-btn {
+            @extend .btn;
+            color: $colorcode!important;
+            border-color: $colorcode!important;
+            background-color: transparent!important;
+            &:hover, &.clicked, &.active {
+                color: $colortext!important;
+                background-color: $colorcode!important;
+                border-color: $colorcode!important;
+            }
+            &-hover, &-clicked, &-active {
+                @extend .btn;
+                &:hover, &.clicked, &.active {
+                    color: $colorcode!important;
+                    border-color: $colorcode!important;
+                }
+            }
+            &-bg {
+                @extend .btn-bg;
+                color: $colortext!important;
+                border-color: $colorcode!important;
+                background-color: $colorcode!important;
+                &:hover, &.clicked, &.active {
                     color: $colorcode!important;
                     border-color: $colorcode!important;
                     background-color: transparent!important;
+                }
+                &-hover, &-clicked, &-active {
+                    @extend .btn-bg;
                     &:hover, &.clicked, &.active {
                         color: $colortext!important;
-                        background-color: $colorcode!important;
-                        border-color: $colorcode!important;
-                    }
-                    &-hover, &-clicked, &-active {
-                        @extend .btn;
-                        &:hover, &.clicked, &.active {
-                            color: $colorcode!important;
-                            border-color: $colorcode!important;
-                        }
-                    }
-                    &-bg {
-                        @extend .btn-bg;
-                        color: $colortext!important;
                         border-color: $colorcode!important;
                         background-color: $colorcode!important;
-                        &:hover, &.clicked, &.active {
-                            color: $colorcode!important;
-                            border-color: $colorcode!important;
-                            background-color: transparent!important;
-                        }
-                        &-hover, &-clicked, &-active {
-                            @extend .btn-bg;
-                            &:hover, &.clicked, &.active {
-                                color: $colortext!important;
-                                border-color: $colorcode!important;
-                                background-color: $colorcode!important;
-                            }
-                        }
                     }
                 }
             }

@@ -1,137 +1,109 @@
 // MARGINS & PADDINGS
-body{
-  &.mini {
 
-    // margins
-    $marginThickness: (
-      '0':0, 
-      '05':calc(var(--margin) * 0.5), 
-      '1':calc(var(--margin) * 1), 
-      '15':calc(var(--margin) * 1.5), 
-      '2':calc(var(--margin) * 2), 
-      '25':calc(var(--margin) * 2.5), 
-      '3':calc(var(--margin) * 3), 
-      '4':calc(var(--margin) * 4), 
-      '5':calc(var(--margin) * 5)
-    );
-    .m {
-      @each $marginLabel, $margin in $marginThickness {
-        &-#{$marginLabel} {
-          margin: #{$margin}!important;
-        }
-      }
-      &t {
-        @each $marginLabel, $margin in $marginThickness {
-          &-#{$marginLabel} {
-            margin-top: #{$margin}!important;
-          }
-        }
-      }
-      &e, &r {
-        @each $marginLabel, $margin in $marginThickness {
-          &-#{$marginLabel} {
-            margin-right: #{$margin}!important;
-          }
-        }
-      }
-      &b {
-        @each $marginLabel, $margin in $marginThickness {
-          &-#{$marginLabel} {
-            margin-bottom: #{$margin}!important;
-          }
-        }
-      }
-      &s, &l {
-        @each $marginLabel, $margin in $marginThickness {
-          &-#{$marginLabel} {
-            margin-left: #{$margin}!important;
-          }
-        }
-      }
-      &y, &v {
-        @each $marginLabel, $margin in $marginThickness {
-          &-#{$marginLabel} {
-            margin-top: #{$margin}!important;
-            margin-bottom: #{$margin}!important;
-          }
-        }
-      }
-      &x, &h {
-        @each $marginLabel, $margin in $marginThickness {
-          &-#{$marginLabel} {
-            margin-left: #{$margin}!important;
-            margin-right: #{$margin}!important;
-          }
-        }
-      }
-
+// margins
+.m {
+  @each $marginLabel, $margin in $marginThickness {
+    &-#{$marginLabel} {
+      margin: #{$margin}!important;
     }
-
-    // paddings
-
-    $paddingThickness: (
-      '0':0, 
-      '05':calc(var(--padding) * 0.5), 
-      '1':calc(var(--padding) * 1), 
-      '15':calc(var(--padding) * 1.5), 
-      '2':calc(var(--padding) * 2), 
-      '25':calc(var(--padding) * 2.5), 
-      '3':calc(var(--padding) * 3), 
-      '4':calc(var(--padding) * 4), 
-      '5':calc(var(--padding) * 5)
-    );
-    .p {
-      @each $paddingLabel, $padding in $paddingThickness {
-        &-#{$paddingLabel} {
-          padding: #{$padding}!important;
-        }
-      }
-      &t {
-        @each $paddingLabel, $padding in $paddingThickness {
-          &-#{$paddingLabel} {
-            padding-top: #{$padding}!important;
-          }
-        }
-      }
-      &e, &r {
-        @each $paddingLabel, $padding in $paddingThickness {
-          &-#{$paddingLabel} {
-            padding-right: #{$padding}!important;
-          }
-        }
-      }
-      &b {
-        @each $paddingLabel, $padding in $paddingThickness {
-          &-#{$paddingLabel} {
-            padding-bottom: #{$padding}!important;
-          }
-        }
-      }
-      &s, &l {
-        @each $paddingLabel, $padding in $paddingThickness {
-          &-#{$paddingLabel} {
-            padding-left: #{$padding}!important;
-          }
-        }
-      }
-      &y, &v {
-        @each $paddingLabel, $padding in $paddingThickness {
-          &-#{$paddingLabel} {
-            padding-top: #{$padding}!important;
-            padding-bottom: #{$padding}!important;
-          }
-        }
-      }
-      &x, &h {
-        @each $paddingLabel, $padding in $paddingThickness {
-          &-#{$paddingLabel} {
-            padding-left: #{$padding}!important;
-            padding-right: #{$padding}!important;
-          }
-        }
-      }
-
-    }
-
   }
+  &t {
+    @each $marginLabel, $margin in $marginThickness {
+      &-#{$marginLabel} {
+        margin-top: #{$margin}!important;
+      }
+    }
+  }
+  &e, &r {
+    @each $marginLabel, $margin in $marginThickness {
+      &-#{$marginLabel} {
+        margin-right: #{$margin}!important;
+      }
+    }
+  }
+  &b {
+    @each $marginLabel, $margin in $marginThickness {
+      &-#{$marginLabel} {
+        margin-bottom: #{$margin}!important;
+      }
+    }
+  }
+  &s, &l {
+    @each $marginLabel, $margin in $marginThickness {
+      &-#{$marginLabel} {
+        margin-left: #{$margin}!important;
+      }
+    }
+  }
+  &y, &v {
+    @each $marginLabel, $margin in $marginThickness {
+      &-#{$marginLabel} {
+        margin-top: #{$margin}!important;
+        margin-bottom: #{$margin}!important;
+      }
+    }
+  }
+  &x, &h {
+    @each $marginLabel, $margin in $marginThickness {
+      &-#{$marginLabel} {
+        margin-left: #{$margin}!important;
+        margin-right: #{$margin}!important;
+      }
+    }
+  }
+
+}
+
+// paddings
+.p {
+  @each $paddingLabel, $padding in $paddingThickness {
+    &-#{$paddingLabel} {
+      padding: #{$padding}!important;
+    }
+  }
+  &t {
+    @each $paddingLabel, $padding in $paddingThickness {
+      &-#{$paddingLabel} {
+        padding-top: #{$padding}!important;
+      }
+    }
+  }
+  &e, &r {
+    @each $paddingLabel, $padding in $paddingThickness {
+      &-#{$paddingLabel} {
+        padding-right: #{$padding}!important;
+      }
+    }
+  }
+  &b {
+    @each $paddingLabel, $padding in $paddingThickness {
+      &-#{$paddingLabel} {
+        padding-bottom: #{$padding}!important;
+      }
+    }
+  }
+  &s, &l {
+    @each $paddingLabel, $padding in $paddingThickness {
+      &-#{$paddingLabel} {
+        padding-left: #{$padding}!important;
+      }
+    }
+  }
+  &y, &v {
+    @each $paddingLabel, $padding in $paddingThickness {
+      &-#{$paddingLabel} {
+        padding-top: #{$padding}!important;
+        padding-bottom: #{$padding}!important;
+      }
+    }
+  }
+  &x, &h {
+    @each $paddingLabel, $padding in $paddingThickness {
+      &-#{$paddingLabel} {
+        padding-left: #{$padding}!important;
+        padding-right: #{$padding}!important;
+      }
+    }
+  }
+
 }

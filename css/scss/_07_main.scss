@@ -1,385 +1,364 @@
 
 // MAIN
 
-body {
-  &.mini {
+// images
+img {
+  &.img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  &.invert, &.inv {
+    filter: brightness(0) invert(1);
+  }
+}
 
-    // images
-    img {
-      &.img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      &.invert, &.inv {
-        filter: brightness(0) invert(1);
-      }
-    }
+// attach to relative parent
+.fit {
+  position: absolute!important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
-    // attach to relative parent
-    .fit {
-      position: absolute!important;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
+// spacing
+.space-top {
+  padding-top: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
+}
+.space-top-bot {
+  padding-top: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
+  padding-bottom: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
+}
+.space-bot {
+  padding-bottom: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
+}
 
-    // spacing
-    &.space-top, .space-top {
-      padding-top: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-    }
-    &.space-top-bot, .space-top-bot {
-      padding-top: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-      padding-bottom: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-    }
-    &.space-bot, .space-bot {
-      padding-bottom: calc((var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-    }
+// turn top
+.turn-top {
+  margin-top: calc( ( (var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2) ) * -1 )!Important;
+}
 
-    // turn top
-    .turn-top {
-      margin-top: calc( ( (var(--logo-height)) + (var(--margin) * 2) + (var(--padding) * 2) ) * -1 )!Important;
-    }
-
-    // spacing
-    $spaceThickness: (
-      '05':calc(var(--baseline) * 0.5), 
-      '1':calc(var(--baseline) * 1), 
-      '15':calc(var(--baseline) * 1.5), 
-      '2':calc(var(--baseline) * 2), 
-      '25':calc(var(--baseline) * 2.5), 
-      '3':calc(var(--baseline) * 3), 
-      '4':calc(var(--baseline) * 4), 
-      '5':calc(var(--baseline) * 5), 
-      '6':calc(var(--baseline) * 6), 
-      '10':calc(var(--baseline) * 10), 
-      '20':calc(var(--baseline) * 20)
-    );
-    .space {
+// spacing
+.space {
+  display: block;
+  width: 100%;
+  height: calc(var(--baseline) * 1);
+  @each $spaceHeightLabel, $spaceHeight in $spaceThickness {
+    &-#{$spaceHeightLabel} {
       display: block;
       width: 100%;
-      height: calc(var(--baseline) * 1);
-      @each $spaceHeightLabel, $spaceHeight in $spaceThickness {
-        &-#{$spaceHeightLabel} {
-          display: block;
-          width: 100%;
-          height: #{$spaceHeight};
-        }
-      }
+      height: #{$spaceHeight};
     }
+  }
+}
 
-    // sep
-    $sepThickness: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
-    .sep {
+// sep
+.sep {
+  display: block;
+  width: 100%;
+  height:0;
+  @each $sepHeightLabel, $sepHeight in $sepThickness {
+    &-#{$sepHeightLabel} {
       display: block;
       width: 100%;
-      height:0;
-      @each $sepHeightLabel, $sepHeight in $sepThickness {
-        &-#{$sepHeightLabel} {
-          display: block;
-          width: 100%;
-          height: #{$sepHeight};
-        }
-      }
+      height: #{$sepHeight};
     }
-    
-    // hr
-    hr {
-      border-style: solid;
-      border-right: none;
-      border-bottom: none;
-      border-left: none;
-    }
-    
-    // overflow HIDDEN
-    .oh, .overflow-hidden {
-      overflow: hidden!important;
-    }
+  }
+}
 
+// hr
+hr {
+  border-style: solid;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
 
-    // fixed height
-    .fh, .full-height {
-      min-height: 100vh; // Fallback for browsers that do not support Custom Properties
-      min-height: 100dvh;
-    }
-    .fhf, .full-height-fixed {
-      height: 100vh; // Fallback for browsers that do not support Custom Properties
-      height: 100dvh;
-    }
-    .hfh, .half-full-height {
-      min-height: 50vh; // Fallback for browsers that do not support Custom Properties
-      min-height: 50dvh;
-    }
-    .hfhf, .half-full-height-fixed {
-      height: 50vh; // Fallback for browsers that do not support Custom Properties
-      height: 50dvh;
-    }
-    .one-quarter-full-height {
-      min-height: 25vh; // Fallback for browsers that do not support Custom Properties
-      min-height: 25dvh;
-    }
-    .one-quarter-height-fixed {
-      height: 25vh; // Fallback for browsers that do not support Custom Properties
-      height: 25dvh;
-    }
-    .three-quarter-full-height {
-      min-height: 75vh; // Fallback for browsers that do not support Custom Properties
-      min-height: 75dvh;
-    }
-    .three-quarter-height-fixed {
-      height: 75vh; // Fallback for browsers that do not support Custom Properties
-      height: 75dvh;
-    }
-    .one-third-full-height {
-      min-height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
-      min-height: 33.3333333dvh;
-    }
-    .one-third-height-fixed {
-      height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
-      height: 33.3333333dvh;
-    }
-    .two-third-full-height {
-      min-height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
-      min-height: 66.666666dvh;
-    }
-    .two-third-height-fixed {
-      height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
-      height: 66.666666dvh;
-    }
+// overflow HIDDEN
+.oh, .overflow-hidden {
+  overflow: hidden!important;
+}
 
-    .mh-100 {
-      min-height: 100%;
-    }
+// fixed height
+.fh, .full-height {
+  min-height: 100vh; // Fallback for browsers that do not support Custom Properties
+  min-height: 100dvh;
+}
+.fhf, .full-height-fixed {
+  height: 100vh; // Fallback for browsers that do not support Custom Properties
+  height: 100dvh;
+}
+.hfh, .half-full-height {
+  min-height: 50vh; // Fallback for browsers that do not support Custom Properties
+  min-height: 50dvh;
+}
+.hfhf, .half-full-height-fixed {
+  height: 50vh; // Fallback for browsers that do not support Custom Properties
+  height: 50dvh;
+}
+.one-quarter-full-height {
+  min-height: 25vh; // Fallback for browsers that do not support Custom Properties
+  min-height: 25dvh;
+}
+.one-quarter-height-fixed {
+  height: 25vh; // Fallback for browsers that do not support Custom Properties
+  height: 25dvh;
+}
+.three-quarter-full-height {
+  min-height: 75vh; // Fallback for browsers that do not support Custom Properties
+  min-height: 75dvh;
+}
+.three-quarter-height-fixed {
+  height: 75vh; // Fallback for browsers that do not support Custom Properties
+  height: 75dvh;
+}
+.one-third-full-height {
+  min-height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
+  min-height: 33.3333333dvh;
+}
+.one-third-height-fixed {
+  height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
+  height: 33.3333333dvh;
+}
+.two-third-full-height {
+  min-height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
+  min-height: 66.666666dvh;
+}
+.two-third-height-fixed {
+  height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
+  height: 66.666666dvh;
+}
 
-    .h-100 {
-      height: 100%;
-    }
+.mh-100 {
+  min-height: 100%;
+}
 
-    .mw-100 {
-      min-width: 100%;
-    }
+.h-100 {
+  height: 100%;
+}
 
-    .w-100 {
-      width: 100%;
-    }
+.mw-100 {
+  min-width: 100%;
+}
 
-    // positioning
-    .relative, .position-relative {
-      position: relative;
-    }
-    .absolute, .position-absolute {
-      position: absolute;
-    }
-    .fixed, .position-fixed {
-      position: fixed;
-    }
+.w-100 {
+  width: 100%;
+}
 
-    // horizontal positioning
-    .h-left, .h-start, {
-      margin-left: 0!important;
-      margin-right: auto!important;
-    }
-    .h-cent {
-      margin-left: auto!important;
-      margin-right: auto!important;
-    }
-    .h-right, .h-end {
-      margin-left: auto!important;
-      margin-right: 0!important;
-    }
+// positioning
+.relative, .position-relative {
+  position: relative;
+}
+.absolute, .position-absolute {
+  position: absolute;
+}
+.fixed, .position-fixed {
+  position: fixed;
+}
 
-    // vertical positioning
-    .v-top {
-    	position: relative;
-    	top: 0;
-    	margin-top:0;
-    	margin-bottom:auto;
-    	transform: translate(0, 0%);
-    }
-    .v-cent {
-    	position: relative;
-    	top: 50%;
-    	margin-top:0;
-    	margin-bottom:0;
-    	transform: translate(0, -50%);
-    }
-    .v-bot {
-    	position: relative;
-    	top: 100%;
-    	margin-top:auto;
-    	margin-bottom:0;
-    	transform: translate(0, -100%);
-    }
-    *:has( > .v-top), *:has( > .v-cent), *:has( > .v-bot), *:has( > .vTop), *:has( > .vCent), *:has( > .vBot) {
-      position:relative;
-    }
+// horizontal positioning
+.h-left, .h-start, {
+  margin-left: 0!important;
+  margin-right: auto!important;
+}
+.h-cent {
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+.h-right, .h-end {
+  margin-left: auto!important;
+  margin-right: 0!important;
+}
 
-    // box shadow
-    .box-shadow-3 {
+// vertical positioning
+.v-top {
+  position: relative;
+  top: 0;
+  margin-top:0;
+  margin-bottom:auto;
+  transform: translate(0, 0%);
+}
+.v-cent {
+  position: relative;
+  top: 50%;
+  margin-top:0;
+  margin-bottom:0;
+  transform: translate(0, -50%);
+}
+.v-bot {
+  position: relative;
+  top: 100%;
+  margin-top:auto;
+  margin-bottom:0;
+  transform: translate(0, -100%);
+}
+*:has( > .v-top), *:has( > .v-cent), *:has( > .v-bot), *:has( > .vTop), *:has( > .vCent), *:has( > .vBot) {
+  position:relative;
+}
+
+// box shadow
+.box-shadow-3 {
+  transition: box-shadow 0.2s ease;
+  @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ));
+  &-hover {
+    &:hover {
       transition: box-shadow 0.2s ease;
       @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ));
-      &-hover {
-        &:hover {
-          transition: box-shadow 0.2s ease;
-          @include boxShadow(0, 3px, rgb( 0 0 0 / 5% ));
-        }
-      }
-      &-dark {
+    }
+  }
+  &-dark {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 3px, rgb( 0 0 0 / 10% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 3px, rgb( 0 0 0 / 10% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 3px, rgb( 0 0 0 / 10% ));
-          }
-        }
       }
-      &-darker {
+    }
+  }
+  &-darker {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 3px, rgb( 0 0 0 / 65% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 3px, rgb( 0 0 0 / 65% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 3px, rgb( 0 0 0 / 65% ));
-          }
-        }
       }
     }
-    .box-shadow-s, .box-shadow-5 {
+  }
+}
+.box-shadow-s, .box-shadow-5 {
+  transition: box-shadow 0.2s ease;
+  @include boxShadow(0, 5px, rgb( 0 0 0 / 5% ));
+  &-hover {
+    &:hover {
       transition: box-shadow 0.2s ease;
       @include boxShadow(0, 5px, rgb( 0 0 0 / 5% ));
-      &-hover {
-        &:hover {
-          transition: box-shadow 0.2s ease;
-          @include boxShadow(0, 5px, rgb( 0 0 0 / 5% ));
-        }
-      }
-      &-dark {
+    }
+  }
+  &-dark {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 5px, rgb( 0 0 0 / 12.5% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 5px, rgb( 0 0 0 / 12.5% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 5px, rgb( 0 0 0 / 12.5% ));
-          }
-        }
       }
-      &-darker {
+    }
+  }
+  &-darker {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 5px, rgb( 0 0 0 / 65% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 5px, rgb( 0 0 0 / 65% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 5px, rgb( 0 0 0 / 65% ));
-          }
-        }
       }
     }
-    .box-shadow, .box-shadow-10 {
+  }
+}
+.box-shadow, .box-shadow-10 {
+  transition: box-shadow 0.2s ease;
+  @include boxShadow(0, 10px, rgb( 0 0 0 / 7.5% ));
+  &-hover {
+    &:hover {
       transition: box-shadow 0.2s ease;
       @include boxShadow(0, 10px, rgb( 0 0 0 / 7.5% ));
-      &-hover {
-        &:hover {
-          transition: box-shadow 0.2s ease;
-          @include boxShadow(0, 10px, rgb( 0 0 0 / 7.5% ));
-        }
-      }
-      &-dark {
+    }
+  }
+  &-dark {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 10px, rgb( 0 0 0 / 15% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 10px, rgb( 0 0 0 / 15% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 10px, rgb( 0 0 0 / 15% ));
-          }
-        }
       }
-      &-darker {
+    }
+  }
+  &-darker {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 10px, rgb( 0 0 0 / 70% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 10px, rgb( 0 0 0 / 70% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 10px, rgb( 0 0 0 / 70% ));
-          }
-        }
       }
     }
-    .box-shadow-l, .box-shadow-20 {
+  }
+}
+.box-shadow-l, .box-shadow-20 {
+  transition: box-shadow 0.2s ease;
+  @include boxShadow(0, 20px, rgb( 0 0 0 / 10% ));
+  &-hover {
+    &:hover {
       transition: box-shadow 0.2s ease;
       @include boxShadow(0, 20px, rgb( 0 0 0 / 10% ));
-      &-hover {
-        &:hover {
-          transition: box-shadow 0.2s ease;
-          @include boxShadow(0, 20px, rgb( 0 0 0 / 10% ));
-        }
-      }
-      &-dark {
+    }
+  }
+  &-dark {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 20px, rgb( 0 0 0 / 20% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 20px, rgb( 0 0 0 / 20% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 20px, rgb( 0 0 0 / 20% ));
-          }
-        }
       }
-      &-darker {
+    }
+  }
+  &-darker {
+    transition: box-shadow 0.2s ease;
+    @include boxShadow(0, 20px, rgb( 0 0 0 / 75% ));
+    &-hover {
+      &:hover {
         transition: box-shadow 0.2s ease;
         @include boxShadow(0, 20px, rgb( 0 0 0 / 75% ));
-        &-hover {
-          &:hover {
-            transition: box-shadow 0.2s ease;
-            @include boxShadow(0, 20px, rgb( 0 0 0 / 75% ));
-          }
-        }
       }
     }
-
-    // pointer
-    .pointer {
-      cursor: pointer;
-    }
-
-    // img and vid as background
-    .use-as-bg {
-      overflow: hidden;
-      & > img, & > video {
-        min-height: 100%;
-        min-width: 100%;
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
-      }
-      .dot-bg, .dot-mask {
-        &.inv, &.invert {
-          filter: invert(1);
-        }
-        position: absolute;
-        display: block;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIiGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MDkrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkZjAzYzJlNS01NGY0LTRmNDItYmU2Ni03NWJlN2JiMzdhODciIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDNlOGFhNC05ZTcyLTA1NDQtYWRkNi1mN2IwOWUxMzFjNDgiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQxMmExNGRiLTc2NzQtZWY0Yi1hYTI5LTVkZjk2NjA2NjQ5MyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xNFQxNzozNzowOSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMGNhNjNiMi1jOTFkLWQ1NDEtOGQzZS0xOWFiMDJkOTQwYjciIHN0RXZ0OndoZW49IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGYwM2MyZTUtNTRmNC00ZjQyLWJlNjYtNzViZTdiYjM3YTg3IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwY2E2M2IyLWM5MWQtZDU0MS04ZDNlLTE5YWIwMmQ5NDBiNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KoMGWAAAAEUlEQVQIHWNgYGD4DwRgEowBT8IJ98nucTsAAAAASUVORK5CYII=');
-      }
-    }
-
-    // dot mask (dotted background)
-    .dot-bg, .dot-mask {
-      &.inv, &.invert {
-        filter: invert(1);
-      }
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIiGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MDkrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkZjAzYzJlNS01NGY0LTRmNDItYmU2Ni03NWJlN2JiMzdhODciIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDNlOGFhNC05ZTcyLTA1NDQtYWRkNi1mN2IwOWUxMzFjNDgiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQxMmExNGRiLTc2NzQtZWY0Yi1hYTI5LTVkZjk2NjA2NjQ5MyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xNFQxNzozNzowOSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMGNhNjNiMi1jOTFkLWQ1NDEtOGQzZS0xOWFiMDJkOTQwYjciIHN0RXZ0OndoZW49IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGYwM2MyZTUtNTRmNC00ZjQyLWJlNjYtNzViZTdiYjM3YTg3IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwY2E2M2IyLWM5MWQtZDU0MS04ZDNlLTE5YWIwMmQ5NDBiNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KoMGWAAAAEUlEQVQIHWNgYGD4DwRgEowBT8IJ98nucTsAAAAASUVORK5CYII=');
-    }
-
   }
+}
+
+// pointer
+.pointer {
+  cursor: pointer;
+}
+
+// img and vid as background
+.use-as-bg {
+  overflow: hidden;
+  & > img, & > video {
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  .dot-bg, .dot-mask {
+    &.inv, &.invert {
+      filter: invert(1);
+    }
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIiGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MDkrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkZjAzYzJlNS01NGY0LTRmNDItYmU2Ni03NWJlN2JiMzdhODciIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDNlOGFhNC05ZTcyLTA1NDQtYWRkNi1mN2IwOWUxMzFjNDgiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQxMmExNGRiLTc2NzQtZWY0Yi1hYTI5LTVkZjk2NjA2NjQ5MyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xNFQxNzozNzowOSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMGNhNjNiMi1jOTFkLWQ1NDEtOGQzZS0xOWFiMDJkOTQwYjciIHN0RXZ0OndoZW49IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGYwM2MyZTUtNTRmNC00ZjQyLWJlNjYtNzViZTdiYjM3YTg3IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwY2E2M2IyLWM5MWQtZDU0MS04ZDNlLTE5YWIwMmQ5NDBiNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KoMGWAAAAEUlEQVQIHWNgYGD4DwRgEowBT8IJ98nucTsAAAAASUVORK5CYII=');
+  }
+}
+
+// dot mask (dotted background)
+.dot-bg, .dot-mask {
+  &.inv, &.invert {
+    filter: invert(1);
+  }
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIiGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MDkrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkZjAzYzJlNS01NGY0LTRmNDItYmU2Ni03NWJlN2JiMzdhODciIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDNlOGFhNC05ZTcyLTA1NDQtYWRkNi1mN2IwOWUxMzFjNDgiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQxMmExNGRiLTc2NzQtZWY0Yi1hYTI5LTVkZjk2NjA2NjQ5MyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xNFQxNzozNzowOSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMGNhNjNiMi1jOTFkLWQ1NDEtOGQzZS0xOWFiMDJkOTQwYjciIHN0RXZ0OndoZW49IjIwMjEtMTAtMTRUMTc6Mzc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGYwM2MyZTUtNTRmNC00ZjQyLWJlNjYtNzViZTdiYjM3YTg3IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTE0VDE3OjM3OjIwKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwY2E2M2IyLWM5MWQtZDU0MS04ZDNlLTE5YWIwMmQ5NDBiNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkMTJhMTRkYi03Njc0LWVmNGItYWEyOS01ZGY5NjYwNjY0OTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KoMGWAAAAEUlEQVQIHWNgYGD4DwRgEowBT8IJ98nucTsAAAAASUVORK5CYII=');
 }

@@ -2,38 +2,38 @@
 
 .container {
 
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 
-    max-width: calc( var(--max_screen) * 0.75 );
-    @include xxl {
-      max-width: calc( var(--max_screen) * 1 );
-    }
+  max-width: calc( var(--max_screen) * 0.75 );
+  @include xxl {
+    max-width: calc( var(--max_screen) * 1 );
+  }
 
-    &.fw, &.full-width {
-      @include width(100%);
+  &.fw, &.full-width {
+    @include width(100%);
 
-      &.forced {
-        @include width(100vw);
-        left: 50%;
-        transform: translate(calc(-50%), 0);
-      }
-
-    }
-
-    &.thin {
-      max-width: calc( var(--max_screen) * 0.5 );
-      @include xxl {
-        max-width: calc( var(--max_screen) * 0.75 );
-      }
-    }
-
-    &.wide {
-      max-width: calc( var(--max_screen) * 1 );
-      @include xxl {
-        max-width: calc( var(--max_screen) * 1.25 );
-      }
+    &.forced {
+      @include width(100vw);
+      left: 50%;
+      transform: translate(calc(-50%), 0);
     }
 
   }
+
+  &.thin {
+    max-width: calc( var(--max_screen) * 0.5 );
+    @include xxl {
+      max-width: calc( var(--max_screen) * 0.75 );
+    }
+  }
+
+  &.wide {
+    max-width: calc( var(--max_screen) * 1 );
+    @include xxl {
+      max-width: calc( var(--max_screen) * 1.25 );
+    }
+  }
+
+}

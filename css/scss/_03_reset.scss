@@ -41,26 +41,25 @@ body::-webkit-scrollbar-thumb {
 .colTxt::selection, .colBox::selection, .colBg::selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }
 
 body {
-  &.mini {
-  	padding: 0;
-  	margin: 0;
+  
+  padding: 0;
+  margin: 0;
+  position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
+  line-height: var(--baseline);
+  font-family: var(--font);
+  color: var(--black);
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    max-width: 100%;
-    overflow-x: hidden;
-    line-height: var(--baseline);
-    font-family: var(--font);
-    color: var(--black);
-
-    main {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    section {
-      position: relative;
-    }
-
   }
+
+  section {
+    position: relative;
+  }
+
 }
