@@ -104,6 +104,7 @@
     <div class="sheet">
 
         <aside id="side-left" class="">
+            <h5 class="grey-text light up-case px-2">Management</h5>
             <nav class="menu admin-menu">
                 <ul id="admin-menu" class="menu admin-menu">
                     <li class="menu-item active"><a href="#" class="active">home</a></li>
@@ -134,7 +135,7 @@
 
         <main>
 
-            <section id="content" class="container fw page-menu" menuItemName="top">
+            <section id="content" class="container fw page-menu" menuItemName="test_one">
                 <div class="container">
                     <div class="boxes fh align-content-center space-top-bot">
                         <div class="box box-100">
@@ -146,8 +147,25 @@
                 </div>
             </section>
             
-            <section id="test_1" class="container fw page-menu fh fw-bg" menuItemName="Test_1"></section>
-            <section id="test_2" class="container fw page-menu fh" menuItemName="Test_2"></section>
+            <section id="test_1" class="container fw page-menu fh fw-bg" menuItemName="test_two">
+                <div class="container">
+                    <div class="boxes space-top-bot">
+                        <div class="box-100">
+                            <h3>Second section</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="test_2" class="container fw page-menu fh" menuItemName="test_three">
+                <div class="container">
+                    <div class="boxes space-top-bot">
+                        <div class="box-100">
+                            <h3>Third section</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </main>
 

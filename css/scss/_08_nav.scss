@@ -152,23 +152,36 @@ body {
       margin: 0 0 0 0;
       z-index: 9;
       @include borderRadius(5px);
-      transition: width 0.2s ease-out, height 0.2s ease-out;
+      transition: width 0.2s ease-out, height 0.2s ease-out, width 0.25s ease-out, transform 0.25s ease-out;
+      transform-origin: center center;
       cursor: pointer;
       .line {
         display: block;
         height: calc( var(--menu-toggle-height) / 8);
-        min-width: 100%;
         width: 100%;
-        max-width: 100%;
-        //margin: 0 0 calc( var(--menu-toggle-height) / 7) 0;
-        //background: var(--white);
         margin: 0;
         background: var(--menu-toggle-color);
         @include borderRadius(5px);
-        transition: width 0.2s ease-out, height 0.2s ease-out;
+        transition: width 0.25s ease-out, height 0.25s ease-out, width 0.25s ease-out, transform 0.25s ease-out;
       }
-      &:hover {
-        
+      &:hover, &.clicked {
+        .line {
+          width: 70%;
+          &:first-child {
+            width: 100%;
+          }
+          &:last-child {
+            width: 85%;
+          }
+        }
+      }
+      &.clicked {
+        transform: rotate(90deg);
+        .line {
+          &:first-child {
+            background-color: var(--link-color);
+          }
+        }
       }
     }
     &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
@@ -386,7 +399,7 @@ body {
     @include md {display: flex;}
     li {
       &.item, &.menu-item {
-        font-style: italic;
+        //font-style: italic;
         font-weight: 300;
       }
       &.menu-icon {
@@ -592,6 +605,7 @@ body {
           flex-flow: column;
           align-items: start;
           li.action {
+            min-width: 220px;
             > a {
               display: flex;
               flex-flow: row;
@@ -613,6 +627,7 @@ body {
                 align-items: center;
                 text-align: center;
                 background-color: var(--link-color);
+                transition: background-color 0.25s ease;
                 color: var(--white);
                 font-size: calc( var(--p) * 1.25 );
                 line-height: 1;
@@ -684,10 +699,10 @@ body {
           position: absolute;
           height: 2px;
           width: 0;
-          background: var(--white);
-          bottom: 0;
+          background-color: var(--white);
+          bottom: -2px;
           left:0;
-          transition: all 0.3s ease;
+          transition: background-color 0.25s ease, width 0.25s ease;
           @include borderRadius (2px);
           @include md {
             background: var(--link-link-color);
@@ -695,34 +710,34 @@ body {
         }
       }
       &.active a, &.current-menu-item a, &.selected a, a.active, a.selected {
-        background: var(--link-hover-color);
+        background-color: var(--link-hover-color);
         color: var(--white);
         @include md {
           color: var(--link-hover-color);
-          background: transparent;
+          background-color: transparent;
         }
         &::after {
           width: 0;
-          background: var(--link-hover-color);
+          background-color: var(--link-hover-color);
           @include md {
             width: 100%;
-            background: var(--link-hover-color);
+            background-color: var(--link-hover-color);
           }
         }
       }
       &:hover a {
-        background: var(--link-color);
+        background-color: var(--link-color);
         color: var(--white);
         @include md {
           color: var(--link-color);
-          background: transparent;
+          background-color: transparent;
         }
         &::after {
           width: 0;
-          background: var(--link-color);
+          background-color: var(--link-color);
           @include md {
             width: 100%;
-            background: var(--link-color);
+            background-color: var(--link-color);
           }
         }
       }
@@ -757,6 +772,7 @@ body {
         color: var(--white);
         &::after {
           height: 4px;
+          bottom: -4px;
         }
       }
       &.active a, &.current-menu-item a, a.active, &:hover a {
@@ -770,18 +786,18 @@ body {
   ul#admin-menu {
     margin: 0 calc(var(--margin)* 2) calc(var(--margin)* 2) calc(var(--margin)* 2);
     padding: var(--padding);
-    background: var(--mini-color);
+    background-color: var(--mini-color);
     li.item, li.menu-item {
       a {
         &::after {
         }
       }
       &.active, &.current-item, &:hover {
-        background: var(--mini-color-dark);
+        background-color: var(--mini-color-dark);
       }
       &.active a, &.current-menu-item a, a.active, &:hover a {
         &::after {
-          background: var(--white);
+          background-color: var(--white);
         }
       }
     }

@@ -9457,21 +9457,35 @@ body header#header #menu-toggle {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  transition: width 0.2s ease-out, height 0.2s ease-out;
+  transition: width 0.2s ease-out, height 0.2s ease-out, width 0.25s ease-out, transform 0.25s ease-out;
+  transform-origin: center center;
   cursor: pointer;
 }
 body header#header #menu-toggle .line {
   display: block;
   height: calc(var(--menu-toggle-height) / 8);
-  min-width: 100%;
   width: 100%;
-  max-width: 100%;
   margin: 0;
   background: var(--menu-toggle-color);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  transition: width 0.2s ease-out, height 0.2s ease-out;
+  transition: width 0.25s ease-out, height 0.25s ease-out, width 0.25s ease-out, transform 0.25s ease-out;
+}
+body header#header #menu-toggle:hover .line, body header#header #menu-toggle.clicked .line {
+  width: 70%;
+}
+body header#header #menu-toggle:hover .line:first-child, body header#header #menu-toggle.clicked .line:first-child {
+  width: 100%;
+}
+body header#header #menu-toggle:hover .line:last-child, body header#header #menu-toggle.clicked .line:last-child {
+  width: 85%;
+}
+body header#header #menu-toggle.clicked {
+  transform: rotate(90deg);
+}
+body header#header #menu-toggle.clicked .line:first-child {
+  background-color: var(--link-color);
 }
 body header#header.neg #menu-toggle, body header#header.inv #menu-toggle, body header#header.top-neg #menu-toggle, body header#header.top-inv #menu-toggle, body header#header.top-bk #menu-toggle, body header#header.top-col #menu-toggle {
   background: var(--menu-toggle-color);
@@ -9668,7 +9682,6 @@ body ul#page-menu {
   }
 }
 body ul#page-menu li.item, body ul#page-menu li.menu-item {
-  font-style: italic;
   font-weight: 300;
 }
 body ul#page-menu li.menu-icon {
@@ -9853,6 +9866,9 @@ body #actions ul.action-groups li.action-group ul.actions {
     padding: 0 var(--padding);
   }
 }
+body #actions ul.action-groups li.action-group ul.actions li.action {
+  min-width: 220px;
+}
 body #actions ul.action-groups li.action-group ul.actions li.action > a {
   display: flex;
   flex-flow: row;
@@ -9877,6 +9893,7 @@ body #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
   align-items: center;
   text-align: center;
   background-color: var(--link-color);
+  transition: background-color 0.25s ease;
   color: var(--white);
   font-size: calc(var(--p) * 1.25);
   line-height: 1;
@@ -9956,10 +9973,10 @@ body ul.menu li.item a::after, body ul.menu li.menu-item a::after {
   position: absolute;
   height: 2px;
   width: 0;
-  background: var(--white);
-  bottom: 0;
+  background-color: var(--white);
+  bottom: -2px;
   left: 0;
-  transition: all 0.3s ease;
+  transition: background-color 0.25s ease, width 0.25s ease;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -9970,43 +9987,43 @@ body ul.menu li.item a::after, body ul.menu li.menu-item a::after {
   }
 }
 body ul.menu li.item.active a, body ul.menu li.item.current-menu-item a, body ul.menu li.item.selected a, body ul.menu li.item a.active, body ul.menu li.item a.selected, body ul.menu li.menu-item.active a, body ul.menu li.menu-item.current-menu-item a, body ul.menu li.menu-item.selected a, body ul.menu li.menu-item a.active, body ul.menu li.menu-item a.selected {
-  background: var(--link-hover-color);
+  background-color: var(--link-hover-color);
   color: var(--white);
 }
 @media (min-width: 768px) {
   body ul.menu li.item.active a, body ul.menu li.item.current-menu-item a, body ul.menu li.item.selected a, body ul.menu li.item a.active, body ul.menu li.item a.selected, body ul.menu li.menu-item.active a, body ul.menu li.menu-item.current-menu-item a, body ul.menu li.menu-item.selected a, body ul.menu li.menu-item a.active, body ul.menu li.menu-item a.selected {
     color: var(--link-hover-color);
-    background: transparent;
+    background-color: transparent;
   }
 }
 body ul.menu li.item.active a::after, body ul.menu li.item.current-menu-item a::after, body ul.menu li.item.selected a::after, body ul.menu li.item a.active::after, body ul.menu li.item a.selected::after, body ul.menu li.menu-item.active a::after, body ul.menu li.menu-item.current-menu-item a::after, body ul.menu li.menu-item.selected a::after, body ul.menu li.menu-item a.active::after, body ul.menu li.menu-item a.selected::after {
   width: 0;
-  background: var(--link-hover-color);
+  background-color: var(--link-hover-color);
 }
 @media (min-width: 768px) {
   body ul.menu li.item.active a::after, body ul.menu li.item.current-menu-item a::after, body ul.menu li.item.selected a::after, body ul.menu li.item a.active::after, body ul.menu li.item a.selected::after, body ul.menu li.menu-item.active a::after, body ul.menu li.menu-item.current-menu-item a::after, body ul.menu li.menu-item.selected a::after, body ul.menu li.menu-item a.active::after, body ul.menu li.menu-item a.selected::after {
     width: 100%;
-    background: var(--link-hover-color);
+    background-color: var(--link-hover-color);
   }
 }
 body ul.menu li.item:hover a, body ul.menu li.menu-item:hover a {
-  background: var(--link-color);
+  background-color: var(--link-color);
   color: var(--white);
 }
 @media (min-width: 768px) {
   body ul.menu li.item:hover a, body ul.menu li.menu-item:hover a {
     color: var(--link-color);
-    background: transparent;
+    background-color: transparent;
   }
 }
 body ul.menu li.item:hover a::after, body ul.menu li.menu-item:hover a::after {
   width: 0;
-  background: var(--link-color);
+  background-color: var(--link-color);
 }
 @media (min-width: 768px) {
   body ul.menu li.item:hover a::after, body ul.menu li.menu-item:hover a::after {
     width: 100%;
-    background: var(--link-color);
+    background-color: var(--link-color);
   }
 }
 body ul#page-menu {
@@ -10029,17 +10046,18 @@ body ul#main-menu li.item a, body ul#main-menu li.menu-item a {
 }
 body ul#main-menu li.item a::after, body ul#main-menu li.menu-item a::after {
   height: 4px;
+  bottom: -4px;
 }
 body ul#admin-menu {
   margin: 0 calc(var(--margin) * 2) calc(var(--margin) * 2) calc(var(--margin) * 2);
   padding: var(--padding);
-  background: var(--mini-color);
+  background-color: var(--mini-color);
 }
 body ul#admin-menu li.item.active, body ul#admin-menu li.item.current-item, body ul#admin-menu li.item:hover, body ul#admin-menu li.menu-item.active, body ul#admin-menu li.menu-item.current-item, body ul#admin-menu li.menu-item:hover {
-  background: var(--mini-color-dark);
+  background-color: var(--mini-color-dark);
 }
 body ul#admin-menu li.item.active a::after, body ul#admin-menu li.item.current-menu-item a::after, body ul#admin-menu li.item a.active::after, body ul#admin-menu li.item:hover a::after, body ul#admin-menu li.menu-item.active a::after, body ul#admin-menu li.menu-item.current-menu-item a::after, body ul#admin-menu li.menu-item a.active::after, body ul#admin-menu li.menu-item:hover a::after {
-  background: var(--white);
+  background-color: var(--white);
 }
 body ul#social-menu {
   flex-flow: row wrap;

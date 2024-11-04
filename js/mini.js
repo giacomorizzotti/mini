@@ -624,7 +624,7 @@ function buildPageMenu() {
         icon.classList.add("item");
         icon.classList.add("menu-icon");
         icon.setAttribute('title', "In this page")
-        icon.innerHTML = '<i class="fa fa-file-text-o" aria-hidden="true"></i>';
+        icon.innerHTML = '<i class="iconoir-page-star L"></i>';
         for (let i=0; i<autoMenu.length; i++) {
             autoMenu[0].appendChild(icon);
         }
