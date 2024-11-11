@@ -179,21 +179,12 @@ body {
         transform: rotate(90deg);
         .line {
           &:first-child {
-            background-color: var(--link-color);
+            background-color: var(--menu-toggle-line-special-color)!important;
           }
         }
       }
     }
-    &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
-      #menu-toggle {
-        background: var(--menu-toggle-color);
-        .line {
-          background: var(--white);
-        }
-      }
-
-    }
-    &.neg, &.inv, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
+    &.neg, &.inv {
       #menu-toggle {
         background: var(--menu-toggle-color);
         .line {
@@ -203,7 +194,16 @@ body {
     }
   }
   &.top {
-    
+    header#header {
+      &.top-neg, &.top-inv, &.top-bk, &.top-col {
+        #menu-toggle {
+          background: var(--menu-toggle-color);
+          .line {
+            background: var(--white);
+          }
+        }
+      }
+    }
   }
   &.scroll {
     header#header {
@@ -216,6 +216,14 @@ body {
           //height: calc( var(--scroll-menu-toggle-height) / 7);
           //margin: 0 0 calc( var(--scroll-menu-toggle-height) / 7) 0;
           height: calc( var(--scroll-menu-toggle-height) / 8);
+        }
+      }
+      &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
+        #menu-toggle {
+          background: var(--menu-toggle-color);
+          .line {
+            background: var(--white);
+          }
         }
       }
     }
@@ -305,6 +313,9 @@ body {
     header#header {
       &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
         background: var(--transp);
+        #menu-toggle {
+          background: var(--transp);
+        }
       }
       &.top, &.scroll {
         &-wh {

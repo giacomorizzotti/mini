@@ -45,6 +45,7 @@
   --pulse-color: rgb( 60 90 255 / 100%);
   --sheet-color: var(--false-black);
   --menu-toggle-color: var(--sheet-color);
+  --menu-toggle-line-special-color: var(--main-color);
   --theme-color: var(--main-color);
   --text-selection-bg: var(--main-color);
   --text-selection-color: var(--white);
@@ -8909,20 +8910,20 @@ img.invert, img.inv {
 }
 
 .space-top {
-  padding-top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
+  padding-top: calc((var(--menu-toggle-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
 }
 
 .space-top-bot {
-  padding-top: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
-  padding-bottom: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
+  padding-top: calc((var(--menu-toggle-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
+  padding-bottom: calc((var(--menu-toggle-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
 }
 
 .space-bot {
-  padding-bottom: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
+  padding-bottom: calc((var(--menu-toggle-height)) + var(--margin) * 2 + var(--padding) * 2) !important;
 }
 
 .turn-top {
-  margin-top: calc(((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2) * -1) !important;
+  margin-top: calc(((var(--menu-toggle-height)) + var(--margin) * 2 + var(--padding) * 2) * -1) !important;
 }
 
 .space {
@@ -9485,18 +9486,18 @@ body header#header #menu-toggle.clicked {
   transform: rotate(90deg);
 }
 body header#header #menu-toggle.clicked .line:first-child {
-  background-color: var(--link-color);
+  background-color: var(--menu-toggle-line-special-color) !important;
 }
-body header#header.neg #menu-toggle, body header#header.inv #menu-toggle, body header#header.top-neg #menu-toggle, body header#header.top-inv #menu-toggle, body header#header.top-bk #menu-toggle, body header#header.top-col #menu-toggle {
+body header#header.neg #menu-toggle, body header#header.inv #menu-toggle {
   background: var(--menu-toggle-color);
 }
-body header#header.neg #menu-toggle .line, body header#header.inv #menu-toggle .line, body header#header.top-neg #menu-toggle .line, body header#header.top-inv #menu-toggle .line, body header#header.top-bk #menu-toggle .line, body header#header.top-col #menu-toggle .line {
+body header#header.neg #menu-toggle .line, body header#header.inv #menu-toggle .line {
   background: var(--white);
 }
-body header#header.neg #menu-toggle, body header#header.inv #menu-toggle, body header#header.scroll-neg #menu-toggle, body header#header.scroll-inv #menu-toggle, body header#header.scroll-bk #menu-toggle, body header#header.scroll-col #menu-toggle {
+body.top header#header.top-neg #menu-toggle, body.top header#header.top-inv #menu-toggle, body.top header#header.top-bk #menu-toggle, body.top header#header.top-col #menu-toggle {
   background: var(--menu-toggle-color);
 }
-body header#header.neg #menu-toggle .line, body header#header.inv #menu-toggle .line, body header#header.scroll-neg #menu-toggle .line, body header#header.scroll-inv #menu-toggle .line, body header#header.scroll-bk #menu-toggle .line, body header#header.scroll-col #menu-toggle .line {
+body.top header#header.top-neg #menu-toggle .line, body.top header#header.top-inv #menu-toggle .line, body.top header#header.top-bk #menu-toggle .line, body.top header#header.top-col #menu-toggle .line {
   background: var(--white);
 }
 body.scroll header#header #menu-toggle {
@@ -9506,6 +9507,12 @@ body.scroll header#header #menu-toggle {
 }
 body.scroll header#header #menu-toggle .line {
   height: calc(var(--scroll-menu-toggle-height) / 8);
+}
+body.scroll header#header.scroll-neg #menu-toggle, body.scroll header#header.scroll-inv #menu-toggle, body.scroll header#header.scroll-bk #menu-toggle, body.scroll header#header.scroll-col #menu-toggle {
+  background: var(--menu-toggle-color);
+}
+body.scroll header#header.scroll-neg #menu-toggle .line, body.scroll header#header.scroll-inv #menu-toggle .line, body.scroll header#header.scroll-bk #menu-toggle .line, body.scroll header#header.scroll-col #menu-toggle .line {
+  background: var(--white);
 }
 body .sheet {
   display: flex;
@@ -9591,6 +9598,9 @@ body .sheet aside#side-right.open, body .sheet aside#side-left.open {
   }
 }
 body.menu-open header#header.neg, body.menu-open header#header.inv, body.menu-open header#header.top-neg, body.menu-open header#header.top-inv, body.menu-open header#header.top-bk, body.menu-open header#header.top-col, body.menu-open header#header.scroll-neg, body.menu-open header#header.scroll-inv, body.menu-open header#header.scroll-bk, body.menu-open header#header.scroll-col {
+  background: var(--transp);
+}
+body.menu-open header#header.neg #menu-toggle, body.menu-open header#header.inv #menu-toggle, body.menu-open header#header.top-neg #menu-toggle, body.menu-open header#header.top-inv #menu-toggle, body.menu-open header#header.top-bk #menu-toggle, body.menu-open header#header.top-col #menu-toggle, body.menu-open header#header.scroll-neg #menu-toggle, body.menu-open header#header.scroll-inv #menu-toggle, body.menu-open header#header.scroll-bk #menu-toggle, body.menu-open header#header.scroll-col #menu-toggle {
   background: var(--transp);
 }
 body.menu-open header#header.top-wh, body.menu-open header#header.scroll-wh {
