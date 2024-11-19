@@ -3,9 +3,11 @@
 
 // images
 img {
+	max-width: 100%;
+  height: auto;
   &.img {
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     display: block;
   }
   &.invert, &.inv {

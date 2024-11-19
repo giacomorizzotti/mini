@@ -455,7 +455,12 @@ body {
           &.drop-down, &.dropdown, &.sub-menu {
             display: flex;
             align-items: flex-start;
-            flex-flow: column;
+            flex-flow: row;
+            padding-left: calc( var(--padding) * 0.5 );
+            @include md {
+              flex-flow: column;
+            }
+            /*
             @include md {
               position: absolute;
               top: calc( 100% + ( var(--margin) * 0.5 ) );
@@ -466,7 +471,9 @@ body {
             -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
             -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
             box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+            */
 
+            /*
             // hidden
             opacity: 0;
             visibility: hidden;
@@ -476,13 +483,19 @@ body {
             overflow: hidden;
             border:0;
             padding: 0;
+            */
 
             li, li.item, li.menu-item, li.menu-sub-item, li.sub-menu-item {
               font-size: var(--p);
               line-height: 1.5;
+              margin: 0 var(--margin) var(--margin) 0;
+              @include md {
+                margin: 0;
+              }
               a {
                 color: var(--black);
                 transform: translate(0,0);
+                padding-top: 0 calc( var(--padding) * 0.5 );
               }
             }
           }
@@ -720,7 +733,7 @@ body {
           }
         }
       }
-      &.active a, &.current-menu-item a, &.selected a, a.active, a.selected {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, &.selected > a, a.active, a.selected {
         background-color: var(--link-hover-color);
         color: var(--white);
         @include md {
@@ -736,7 +749,7 @@ body {
           }
         }
       }
-      &:hover a {
+      &:hover > a {
         background-color: var(--link-color);
         color: var(--white);
         @include md {
@@ -764,7 +777,7 @@ body {
         &::after {
         }
       }
-      &.active a, &.current-menu-item a, a.active, &:hover a {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
         &::after {
         }
       }
@@ -786,8 +799,13 @@ body {
           bottom: -4px;
         }
       }
-      &.active a, &.current-menu-item a, a.active, &:hover a {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
         &::after {
+        }
+      }
+      ul.sub-menu {
+        li {
+          font-size: var(--h4);
         }
       }
     }
@@ -806,7 +824,7 @@ body {
       &.active, &.current-item, &:hover {
         background-color: var(--mini-color-dark);
       }
-      &.active a, &.current-menu-item a, a.active, &:hover a {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
         &::after {
           background-color: var(--white);
         }
@@ -821,7 +839,7 @@ body {
         &::after {
         }
       }
-      &.active a, &.current-menu-item a, a.active, &:hover a {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
         &::after {
         }
       }
@@ -836,7 +854,7 @@ body {
         &::after {
         }
       }
-      &.active a, &.current-menu-item a, a.active, &:hover a {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
         &::after {
         }
       }
@@ -852,7 +870,7 @@ body {
         &::after {
         }
       }
-      &.active a, &.current-menu-item a, a.active, &:hover a {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
         &::after {
         }
       }
@@ -866,7 +884,7 @@ body {
         &::after {
         }
       }
-      &.active a, &.current-menu-item a, a.active, &:hover a {
+      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
         &::after {
         }
       }

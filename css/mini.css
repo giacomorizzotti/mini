@@ -8892,9 +8892,13 @@ footer#footer .footer-logo img.logo.logotype:hover {
   align-items: stretch !important;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 img.img {
   width: 100%;
-  height: auto;
+  /*height: auto;*/
   display: block;
 }
 img.invert, img.inv {
@@ -9719,35 +9723,51 @@ body ul li.drop-down, body ul li.dropdown, body ul li.menu-item-has-children {
 body ul li.drop-down ul.drop-down, body ul li.drop-down ul.dropdown, body ul li.drop-down ul.sub-menu, body ul li.dropdown ul.drop-down, body ul li.dropdown ul.dropdown, body ul li.dropdown ul.sub-menu, body ul li.menu-item-has-children ul.drop-down, body ul li.menu-item-has-children ul.dropdown, body ul li.menu-item-has-children ul.sub-menu {
   display: flex;
   align-items: flex-start;
-  flex-flow: column;
+  flex-flow: row;
+  padding-left: calc(var(--padding) * 0.5);
+  /*
+  @include md {
+    position: absolute;
+    top: calc( 100% + ( var(--margin) * 0.5 ) );
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
   background: var(--white);
-  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
-  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+  -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+  */
+  /*
+  // hidden
   opacity: 0;
   visibility: hidden;
   width: 0;
   height: 0;
   transition: all 0.3s ease;
   overflow: hidden;
-  border: 0;
+  border:0;
   padding: 0;
+  */
 }
 @media (min-width: 768px) {
   body ul li.drop-down ul.drop-down, body ul li.drop-down ul.dropdown, body ul li.drop-down ul.sub-menu, body ul li.dropdown ul.drop-down, body ul li.dropdown ul.dropdown, body ul li.dropdown ul.sub-menu, body ul li.menu-item-has-children ul.drop-down, body ul li.menu-item-has-children ul.dropdown, body ul li.menu-item-has-children ul.sub-menu {
-    position: absolute;
-    top: calc(100% + var(--margin) * 0.5);
-    left: 50%;
-    transform: translate(-50%, 0);
+    flex-flow: column;
   }
 }
 body ul li.drop-down ul.drop-down li, body ul li.drop-down ul.drop-down li.item, body ul li.drop-down ul.drop-down li.menu-item, body ul li.drop-down ul.drop-down li.menu-sub-item, body ul li.drop-down ul.drop-down li.sub-menu-item, body ul li.drop-down ul.dropdown li, body ul li.drop-down ul.dropdown li.item, body ul li.drop-down ul.dropdown li.menu-item, body ul li.drop-down ul.dropdown li.menu-sub-item, body ul li.drop-down ul.dropdown li.sub-menu-item, body ul li.drop-down ul.sub-menu li, body ul li.drop-down ul.sub-menu li.item, body ul li.drop-down ul.sub-menu li.menu-item, body ul li.drop-down ul.sub-menu li.menu-sub-item, body ul li.drop-down ul.sub-menu li.sub-menu-item, body ul li.dropdown ul.drop-down li, body ul li.dropdown ul.drop-down li.item, body ul li.dropdown ul.drop-down li.menu-item, body ul li.dropdown ul.drop-down li.menu-sub-item, body ul li.dropdown ul.drop-down li.sub-menu-item, body ul li.dropdown ul.dropdown li, body ul li.dropdown ul.dropdown li.item, body ul li.dropdown ul.dropdown li.menu-item, body ul li.dropdown ul.dropdown li.menu-sub-item, body ul li.dropdown ul.dropdown li.sub-menu-item, body ul li.dropdown ul.sub-menu li, body ul li.dropdown ul.sub-menu li.item, body ul li.dropdown ul.sub-menu li.menu-item, body ul li.dropdown ul.sub-menu li.menu-sub-item, body ul li.dropdown ul.sub-menu li.sub-menu-item, body ul li.menu-item-has-children ul.drop-down li, body ul li.menu-item-has-children ul.drop-down li.item, body ul li.menu-item-has-children ul.drop-down li.menu-item, body ul li.menu-item-has-children ul.drop-down li.menu-sub-item, body ul li.menu-item-has-children ul.drop-down li.sub-menu-item, body ul li.menu-item-has-children ul.dropdown li, body ul li.menu-item-has-children ul.dropdown li.item, body ul li.menu-item-has-children ul.dropdown li.menu-item, body ul li.menu-item-has-children ul.dropdown li.menu-sub-item, body ul li.menu-item-has-children ul.dropdown li.sub-menu-item, body ul li.menu-item-has-children ul.sub-menu li, body ul li.menu-item-has-children ul.sub-menu li.item, body ul li.menu-item-has-children ul.sub-menu li.menu-item, body ul li.menu-item-has-children ul.sub-menu li.menu-sub-item, body ul li.menu-item-has-children ul.sub-menu li.sub-menu-item {
   font-size: var(--p);
   line-height: 1.5;
+  margin: 0 var(--margin) var(--margin) 0;
+}
+@media (min-width: 768px) {
+  body ul li.drop-down ul.drop-down li, body ul li.drop-down ul.drop-down li.item, body ul li.drop-down ul.drop-down li.menu-item, body ul li.drop-down ul.drop-down li.menu-sub-item, body ul li.drop-down ul.drop-down li.sub-menu-item, body ul li.drop-down ul.dropdown li, body ul li.drop-down ul.dropdown li.item, body ul li.drop-down ul.dropdown li.menu-item, body ul li.drop-down ul.dropdown li.menu-sub-item, body ul li.drop-down ul.dropdown li.sub-menu-item, body ul li.drop-down ul.sub-menu li, body ul li.drop-down ul.sub-menu li.item, body ul li.drop-down ul.sub-menu li.menu-item, body ul li.drop-down ul.sub-menu li.menu-sub-item, body ul li.drop-down ul.sub-menu li.sub-menu-item, body ul li.dropdown ul.drop-down li, body ul li.dropdown ul.drop-down li.item, body ul li.dropdown ul.drop-down li.menu-item, body ul li.dropdown ul.drop-down li.menu-sub-item, body ul li.dropdown ul.drop-down li.sub-menu-item, body ul li.dropdown ul.dropdown li, body ul li.dropdown ul.dropdown li.item, body ul li.dropdown ul.dropdown li.menu-item, body ul li.dropdown ul.dropdown li.menu-sub-item, body ul li.dropdown ul.dropdown li.sub-menu-item, body ul li.dropdown ul.sub-menu li, body ul li.dropdown ul.sub-menu li.item, body ul li.dropdown ul.sub-menu li.menu-item, body ul li.dropdown ul.sub-menu li.menu-sub-item, body ul li.dropdown ul.sub-menu li.sub-menu-item, body ul li.menu-item-has-children ul.drop-down li, body ul li.menu-item-has-children ul.drop-down li.item, body ul li.menu-item-has-children ul.drop-down li.menu-item, body ul li.menu-item-has-children ul.drop-down li.menu-sub-item, body ul li.menu-item-has-children ul.drop-down li.sub-menu-item, body ul li.menu-item-has-children ul.dropdown li, body ul li.menu-item-has-children ul.dropdown li.item, body ul li.menu-item-has-children ul.dropdown li.menu-item, body ul li.menu-item-has-children ul.dropdown li.menu-sub-item, body ul li.menu-item-has-children ul.dropdown li.sub-menu-item, body ul li.menu-item-has-children ul.sub-menu li, body ul li.menu-item-has-children ul.sub-menu li.item, body ul li.menu-item-has-children ul.sub-menu li.menu-item, body ul li.menu-item-has-children ul.sub-menu li.menu-sub-item, body ul li.menu-item-has-children ul.sub-menu li.sub-menu-item {
+    margin: 0;
+  }
 }
 body ul li.drop-down ul.drop-down li a, body ul li.drop-down ul.drop-down li.item a, body ul li.drop-down ul.drop-down li.menu-item a, body ul li.drop-down ul.drop-down li.menu-sub-item a, body ul li.drop-down ul.drop-down li.sub-menu-item a, body ul li.drop-down ul.dropdown li a, body ul li.drop-down ul.dropdown li.item a, body ul li.drop-down ul.dropdown li.menu-item a, body ul li.drop-down ul.dropdown li.menu-sub-item a, body ul li.drop-down ul.dropdown li.sub-menu-item a, body ul li.drop-down ul.sub-menu li a, body ul li.drop-down ul.sub-menu li.item a, body ul li.drop-down ul.sub-menu li.menu-item a, body ul li.drop-down ul.sub-menu li.menu-sub-item a, body ul li.drop-down ul.sub-menu li.sub-menu-item a, body ul li.dropdown ul.drop-down li a, body ul li.dropdown ul.drop-down li.item a, body ul li.dropdown ul.drop-down li.menu-item a, body ul li.dropdown ul.drop-down li.menu-sub-item a, body ul li.dropdown ul.drop-down li.sub-menu-item a, body ul li.dropdown ul.dropdown li a, body ul li.dropdown ul.dropdown li.item a, body ul li.dropdown ul.dropdown li.menu-item a, body ul li.dropdown ul.dropdown li.menu-sub-item a, body ul li.dropdown ul.dropdown li.sub-menu-item a, body ul li.dropdown ul.sub-menu li a, body ul li.dropdown ul.sub-menu li.item a, body ul li.dropdown ul.sub-menu li.menu-item a, body ul li.dropdown ul.sub-menu li.menu-sub-item a, body ul li.dropdown ul.sub-menu li.sub-menu-item a, body ul li.menu-item-has-children ul.drop-down li a, body ul li.menu-item-has-children ul.drop-down li.item a, body ul li.menu-item-has-children ul.drop-down li.menu-item a, body ul li.menu-item-has-children ul.drop-down li.menu-sub-item a, body ul li.menu-item-has-children ul.drop-down li.sub-menu-item a, body ul li.menu-item-has-children ul.dropdown li a, body ul li.menu-item-has-children ul.dropdown li.item a, body ul li.menu-item-has-children ul.dropdown li.menu-item a, body ul li.menu-item-has-children ul.dropdown li.menu-sub-item a, body ul li.menu-item-has-children ul.dropdown li.sub-menu-item a, body ul li.menu-item-has-children ul.sub-menu li a, body ul li.menu-item-has-children ul.sub-menu li.item a, body ul li.menu-item-has-children ul.sub-menu li.menu-item a, body ul li.menu-item-has-children ul.sub-menu li.menu-sub-item a, body ul li.menu-item-has-children ul.sub-menu li.sub-menu-item a {
   color: var(--black);
   transform: translate(0, 0);
+  padding-top: 0 calc(var(--padding) * 0.5);
 }
 body ul li.drop-down:hover::before, body ul li.dropdown:hover::before, body ul li.menu-item-has-children:hover::before {
   content: "";
@@ -9996,42 +10016,42 @@ body ul.menu li.item a::after, body ul.menu li.menu-item a::after {
     background: var(--link-link-color);
   }
 }
-body ul.menu li.item.active a, body ul.menu li.item.current-menu-item a, body ul.menu li.item.selected a, body ul.menu li.item a.active, body ul.menu li.item a.selected, body ul.menu li.menu-item.active a, body ul.menu li.menu-item.current-menu-item a, body ul.menu li.menu-item.selected a, body ul.menu li.menu-item a.active, body ul.menu li.menu-item a.selected {
+body ul.menu li.item.active > a, body ul.menu li.item.current-menu-item > a, body ul.menu li.item.current-page-parent > a, body ul.menu li.item.selected > a, body ul.menu li.item a.active, body ul.menu li.item a.selected, body ul.menu li.menu-item.active > a, body ul.menu li.menu-item.current-menu-item > a, body ul.menu li.menu-item.current-page-parent > a, body ul.menu li.menu-item.selected > a, body ul.menu li.menu-item a.active, body ul.menu li.menu-item a.selected {
   background-color: var(--link-hover-color);
   color: var(--white);
 }
 @media (min-width: 768px) {
-  body ul.menu li.item.active a, body ul.menu li.item.current-menu-item a, body ul.menu li.item.selected a, body ul.menu li.item a.active, body ul.menu li.item a.selected, body ul.menu li.menu-item.active a, body ul.menu li.menu-item.current-menu-item a, body ul.menu li.menu-item.selected a, body ul.menu li.menu-item a.active, body ul.menu li.menu-item a.selected {
+  body ul.menu li.item.active > a, body ul.menu li.item.current-menu-item > a, body ul.menu li.item.current-page-parent > a, body ul.menu li.item.selected > a, body ul.menu li.item a.active, body ul.menu li.item a.selected, body ul.menu li.menu-item.active > a, body ul.menu li.menu-item.current-menu-item > a, body ul.menu li.menu-item.current-page-parent > a, body ul.menu li.menu-item.selected > a, body ul.menu li.menu-item a.active, body ul.menu li.menu-item a.selected {
     color: var(--link-hover-color);
     background-color: transparent;
   }
 }
-body ul.menu li.item.active a::after, body ul.menu li.item.current-menu-item a::after, body ul.menu li.item.selected a::after, body ul.menu li.item a.active::after, body ul.menu li.item a.selected::after, body ul.menu li.menu-item.active a::after, body ul.menu li.menu-item.current-menu-item a::after, body ul.menu li.menu-item.selected a::after, body ul.menu li.menu-item a.active::after, body ul.menu li.menu-item a.selected::after {
+body ul.menu li.item.active > a::after, body ul.menu li.item.current-menu-item > a::after, body ul.menu li.item.current-page-parent > a::after, body ul.menu li.item.selected > a::after, body ul.menu li.item a.active::after, body ul.menu li.item a.selected::after, body ul.menu li.menu-item.active > a::after, body ul.menu li.menu-item.current-menu-item > a::after, body ul.menu li.menu-item.current-page-parent > a::after, body ul.menu li.menu-item.selected > a::after, body ul.menu li.menu-item a.active::after, body ul.menu li.menu-item a.selected::after {
   width: 0;
   background-color: var(--link-hover-color);
 }
 @media (min-width: 768px) {
-  body ul.menu li.item.active a::after, body ul.menu li.item.current-menu-item a::after, body ul.menu li.item.selected a::after, body ul.menu li.item a.active::after, body ul.menu li.item a.selected::after, body ul.menu li.menu-item.active a::after, body ul.menu li.menu-item.current-menu-item a::after, body ul.menu li.menu-item.selected a::after, body ul.menu li.menu-item a.active::after, body ul.menu li.menu-item a.selected::after {
+  body ul.menu li.item.active > a::after, body ul.menu li.item.current-menu-item > a::after, body ul.menu li.item.current-page-parent > a::after, body ul.menu li.item.selected > a::after, body ul.menu li.item a.active::after, body ul.menu li.item a.selected::after, body ul.menu li.menu-item.active > a::after, body ul.menu li.menu-item.current-menu-item > a::after, body ul.menu li.menu-item.current-page-parent > a::after, body ul.menu li.menu-item.selected > a::after, body ul.menu li.menu-item a.active::after, body ul.menu li.menu-item a.selected::after {
     width: 100%;
     background-color: var(--link-hover-color);
   }
 }
-body ul.menu li.item:hover a, body ul.menu li.menu-item:hover a {
+body ul.menu li.item:hover > a, body ul.menu li.menu-item:hover > a {
   background-color: var(--link-color);
   color: var(--white);
 }
 @media (min-width: 768px) {
-  body ul.menu li.item:hover a, body ul.menu li.menu-item:hover a {
+  body ul.menu li.item:hover > a, body ul.menu li.menu-item:hover > a {
     color: var(--link-color);
     background-color: transparent;
   }
 }
-body ul.menu li.item:hover a::after, body ul.menu li.menu-item:hover a::after {
+body ul.menu li.item:hover > a::after, body ul.menu li.menu-item:hover > a::after {
   width: 0;
   background-color: var(--link-color);
 }
 @media (min-width: 768px) {
-  body ul.menu li.item:hover a::after, body ul.menu li.menu-item:hover a::after {
+  body ul.menu li.item:hover > a::after, body ul.menu li.menu-item:hover > a::after {
     width: 100%;
     background-color: var(--link-color);
   }
@@ -10058,6 +10078,9 @@ body ul#main-menu li.item a::after, body ul#main-menu li.menu-item a::after {
   height: 4px;
   bottom: -4px;
 }
+body ul#main-menu li.item ul.sub-menu li, body ul#main-menu li.menu-item ul.sub-menu li {
+  font-size: var(--h4);
+}
 body ul#admin-menu {
   margin: 0 calc(var(--margin) * 2) calc(var(--margin) * 2) calc(var(--margin) * 2);
   padding: var(--padding);
@@ -10066,7 +10089,7 @@ body ul#admin-menu {
 body ul#admin-menu li.item.active, body ul#admin-menu li.item.current-item, body ul#admin-menu li.item:hover, body ul#admin-menu li.menu-item.active, body ul#admin-menu li.menu-item.current-item, body ul#admin-menu li.menu-item:hover {
   background-color: var(--mini-color-dark);
 }
-body ul#admin-menu li.item.active a::after, body ul#admin-menu li.item.current-menu-item a::after, body ul#admin-menu li.item a.active::after, body ul#admin-menu li.item:hover a::after, body ul#admin-menu li.menu-item.active a::after, body ul#admin-menu li.menu-item.current-menu-item a::after, body ul#admin-menu li.menu-item a.active::after, body ul#admin-menu li.menu-item:hover a::after {
+body ul#admin-menu li.item.active > a::after, body ul#admin-menu li.item.current-menu-item > a::after, body ul#admin-menu li.item.current-page-parent > a::after, body ul#admin-menu li.item a.active::after, body ul#admin-menu li.item:hover > a::after, body ul#admin-menu li.menu-item.active > a::after, body ul#admin-menu li.menu-item.current-menu-item > a::after, body ul#admin-menu li.menu-item.current-page-parent > a::after, body ul#admin-menu li.menu-item a.active::after, body ul#admin-menu li.menu-item:hover > a::after {
   background-color: var(--white);
 }
 body ul#social-menu {
@@ -10084,7 +10107,7 @@ form {
 form label {
   font-size: calc(var(--p) * 1);
   color: var(--grey);
-  line-height: 1;
+  line-height: 1.4;
   display: block;
   margin: 0 0 calc(var(--margin) * 0.75) 0;
 }
