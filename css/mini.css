@@ -9063,7 +9063,7 @@ hr {
   height: 50dvh;
 }
 
-.one-quarter-full-height {
+.one-quarter-height {
   min-height: 25vh;
   min-height: 25dvh;
 }
@@ -9073,7 +9073,7 @@ hr {
   height: 25dvh;
 }
 
-.three-quarter-full-height {
+.three-quarter-height {
   min-height: 75vh;
   min-height: 75dvh;
 }
@@ -9083,7 +9083,7 @@ hr {
   height: 75dvh;
 }
 
-.one-third-full-height {
+.one-third-height {
   min-height: 33.3333333vh;
   min-height: 33.3333333dvh;
 }
@@ -9093,7 +9093,7 @@ hr {
   height: 33.3333333dvh;
 }
 
-.two-third-full-height {
+.two-third-height {
   min-height: 66.666666vh;
   min-height: 66.666666dvh;
 }
@@ -17391,10 +17391,6 @@ blockquote::before {
   top: 15px;
   left: -17.5px;
   opacity: 0.8;
-  background: rgb(255, 255, 255);
-  -webkit-box-shadow: 0 0 20px rgb(255, 255, 255);
-  -moz-box-shadow: 0 0 20px rgb(255, 255, 255);
-  box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 blockquote::after {
   content: "”";
@@ -17409,10 +17405,6 @@ blockquote::after {
   bottom: 15px;
   right: -17.5px;
   opacity: 0.8;
-  background: rgb(255, 255, 255);
-  -webkit-box-shadow: 0 0 20px rgb(255, 255, 255);
-  -moz-box-shadow: 0 0 20px rgb(255, 255, 255);
-  box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 .label {
