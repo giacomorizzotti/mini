@@ -8,17 +8,24 @@ form {
         line-height: 1.4;
         display: block;
         margin: 0 0 calc( var(--margin) * 0.75) 0;
+        padding-left: var(--padding);
+        font-style: italic;
     }
     input, textarea, select {
     display: block;
     width: 100%;
-    @include borderRadius(3px);
+    //@include borderRadius(3px);
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
     padding: calc( var(--padding) * 0.75 ) calc( var(--padding) * 1 );
     border: none;
+    border-left: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
     font-weight: 700;
     background-color: var(--white);
-    -webkit-box-shadow: inset 0px 0px 2px var(--light-grey);
-    box-shadow: inset 0px 0px 2px var(--grey);
+    //-webkit-box-shadow: inset 0px 0px 2px var(--light-grey);
+    //box-shadow: inset 0px 0px 2px var(--grey);
     &::placeholder {
         color: var(--grey);
         font-weight: 300;
@@ -34,14 +41,14 @@ form {
     }
     }
     input {
-    font-size: var(--p);
+        font-size: var(--p);
     }
     textarea {
-    @include width(100%);
-    font-size: var(--p);
-    line-height: calc( var(--p) * 1.5);
-    font-family: var(--font-sans);
-    font-weight: 400;
+        @include width(100%);
+        font-size: var(--p);
+        line-height: calc( var(--p) * 1.5);
+        font-family: var(--font-sans);
+        font-weight: 400;
     }
 }
 
@@ -111,13 +118,31 @@ input[type="checkbox"] {
         }
     }
 
+    &.chip {
+        display: none;
+        &+label {
+            transition: background-color 0.25s ease, color 0.25s ease;
+            padding: var(--padding);
+            margin: 0;
+            @include borderRadius(3px);
+            background-color: var(--false-white);
+        }
+        &:checked+label {
+            background: var(--main-color);
+            color: var(--white);
+        }
+        &::before, &::after {
+            display: none;
+        }
+    }
+
 }
 
 // radio buttons
 input[type="radio"] {
     display: none;
     &+label {
-        background-color: var(--white);
+        background-color: var(--false-white);
     }
     &:checked+label {
         background: var(--main-color);

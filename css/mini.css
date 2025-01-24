@@ -9943,6 +9943,12 @@ body #actions ul.action-groups li.action-group ul.actions li.action > a .icon {
     padding: calc(var(--padding) * 1);
   }
 }
+body .menu-open-p-0 {
+  transition: padding 0.25s ease !important;
+}
+body.menu-open .menu-open-p-0 {
+  padding-top: 0 !important;
+}
 body ul.menu {
   list-style-type: none;
   display: block;
@@ -10110,19 +10116,21 @@ form label {
   line-height: 1.4;
   display: block;
   margin: 0 0 calc(var(--margin) * 0.75) 0;
+  padding-left: var(--padding);
+  font-style: italic;
 }
 form input, form textarea, form select {
   display: block;
   width: 100%;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-left-radius: 5px;
   padding: calc(var(--padding) * 0.75) calc(var(--padding) * 1);
   border: none;
+  border-left: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
   font-weight: 700;
   background-color: var(--white);
-  -webkit-box-shadow: inset 0px 0px 2px var(--light-grey);
-  box-shadow: inset 0px 0px 2px var(--grey);
 }
 form input::placeholder, form textarea::placeholder, form select::placeholder {
   color: var(--grey);
@@ -10217,12 +10225,31 @@ input[type=checkbox]:checked::after {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+input[type=checkbox].chip {
+  display: none;
+}
+input[type=checkbox].chip + label {
+  transition: background-color 0.25s ease, color 0.25s ease;
+  padding: var(--padding);
+  margin: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: var(--false-white);
+}
+input[type=checkbox].chip:checked + label {
+  background: var(--main-color);
+  color: var(--white);
+}
+input[type=checkbox].chip::before, input[type=checkbox].chip::after {
+  display: none;
+}
 
 input[type=radio] {
   display: none;
 }
 input[type=radio] + label {
-  background-color: var(--white);
+  background-color: var(--false-white);
 }
 input[type=radio]:checked + label {
   background: var(--main-color);
@@ -11890,6 +11917,21 @@ input[type=radio]:checked + label {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.wh-box-hover:hover, .wh-box-hover.clicked, .wh-box-hover.active, .wh-box-clicked:hover, .wh-box-clicked.clicked, .wh-box-clicked.active, .wh-box-active:hover, .wh-box-active.clicked, .wh-box-active.active {
+  background: var(--white) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.wh-box-hover.S, .wh-box-clicked.S, .wh-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.wh-box-hover.XS, .wh-box-clicked.XS, .wh-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .wh-bg {
   background-color: var(--white) !important;
 }
@@ -11994,6 +12036,21 @@ input[type="radio"]:checked+label.wh {
   margin: 0 4px 4px 0;
 }
 .white-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.white-box-hover:hover, .white-box-hover.clicked, .white-box-hover.active, .white-box-clicked:hover, .white-box-clicked.clicked, .white-box-clicked.active, .white-box-active:hover, .white-box-active.clicked, .white-box-active.active {
+  background: var(--white) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.white-box-hover.S, .white-box-clicked.S, .white-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.white-box-hover.XS, .white-box-clicked.XS, .white-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -12104,6 +12161,21 @@ input[type="radio"]:checked+label.white {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.fw-box-hover:hover, .fw-box-hover.clicked, .fw-box-hover.active, .fw-box-clicked:hover, .fw-box-clicked.clicked, .fw-box-clicked.active, .fw-box-active:hover, .fw-box-active.clicked, .fw-box-active.active {
+  background: var(--false-white) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.fw-box-hover.S, .fw-box-clicked.S, .fw-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.fw-box-hover.XS, .fw-box-clicked.XS, .fw-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .fw-bg {
   background-color: var(--false-white) !important;
 }
@@ -12208,6 +12280,21 @@ input[type="radio"]:checked+label.fw {
   margin: 0 4px 4px 0;
 }
 .light-grey-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.light-grey-box-hover:hover, .light-grey-box-hover.clicked, .light-grey-box-hover.active, .light-grey-box-clicked:hover, .light-grey-box-clicked.clicked, .light-grey-box-clicked.active, .light-grey-box-active:hover, .light-grey-box-active.clicked, .light-grey-box-active.active {
+  background: var(--light-grey) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.light-grey-box-hover.S, .light-grey-box-clicked.S, .light-grey-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.light-grey-box-hover.XS, .light-grey-box-clicked.XS, .light-grey-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -12318,6 +12405,21 @@ input[type="radio"]:checked+label.light-grey {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.grey-box-hover:hover, .grey-box-hover.clicked, .grey-box-hover.active, .grey-box-clicked:hover, .grey-box-clicked.clicked, .grey-box-clicked.active, .grey-box-active:hover, .grey-box-active.clicked, .grey-box-active.active {
+  background: var(--grey) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.grey-box-hover.S, .grey-box-clicked.S, .grey-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.grey-box-hover.XS, .grey-box-clicked.XS, .grey-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .grey-bg {
   background-color: var(--grey) !important;
 }
@@ -12422,6 +12524,21 @@ input[type="radio"]:checked+label.grey {
   margin: 0 4px 4px 0;
 }
 .dark-grey-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.dark-grey-box-hover:hover, .dark-grey-box-hover.clicked, .dark-grey-box-hover.active, .dark-grey-box-clicked:hover, .dark-grey-box-clicked.clicked, .dark-grey-box-clicked.active, .dark-grey-box-active:hover, .dark-grey-box-active.clicked, .dark-grey-box-active.active {
+  background: var(--dark-grey) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.dark-grey-box-hover.S, .dark-grey-box-clicked.S, .dark-grey-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.dark-grey-box-hover.XS, .dark-grey-box-clicked.XS, .dark-grey-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -12532,6 +12649,21 @@ input[type="radio"]:checked+label.dark-grey {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.fb-box-hover:hover, .fb-box-hover.clicked, .fb-box-hover.active, .fb-box-clicked:hover, .fb-box-clicked.clicked, .fb-box-clicked.active, .fb-box-active:hover, .fb-box-active.clicked, .fb-box-active.active {
+  background: var(--false-black) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.fb-box-hover.S, .fb-box-clicked.S, .fb-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.fb-box-hover.XS, .fb-box-clicked.XS, .fb-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .fb-bg {
   background-color: var(--false-black) !important;
 }
@@ -12636,6 +12768,21 @@ input[type="radio"]:checked+label.fb {
   margin: 0 4px 4px 0;
 }
 .bk-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.bk-box-hover:hover, .bk-box-hover.clicked, .bk-box-hover.active, .bk-box-clicked:hover, .bk-box-clicked.clicked, .bk-box-clicked.active, .bk-box-active:hover, .bk-box-active.clicked, .bk-box-active.active {
+  background: var(--black) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.bk-box-hover.S, .bk-box-clicked.S, .bk-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.bk-box-hover.XS, .bk-box-clicked.XS, .bk-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -12746,6 +12893,21 @@ input[type="radio"]:checked+label.bk {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.black-box-hover:hover, .black-box-hover.clicked, .black-box-hover.active, .black-box-clicked:hover, .black-box-clicked.clicked, .black-box-clicked.active, .black-box-active:hover, .black-box-active.clicked, .black-box-active.active {
+  background: var(--black) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.black-box-hover.S, .black-box-clicked.S, .black-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.black-box-hover.XS, .black-box-clicked.XS, .black-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .black-bg {
   background-color: var(--black) !important;
 }
@@ -12850,6 +13012,21 @@ input[type="radio"]:checked+label.black {
   margin: 0 4px 4px 0;
 }
 .col-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.col-box-hover:hover, .col-box-hover.clicked, .col-box-hover.active, .col-box-clicked:hover, .col-box-clicked.clicked, .col-box-clicked.active, .col-box-active:hover, .col-box-active.clicked, .col-box-active.active {
+  background: var(--main-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.col-box-hover.S, .col-box-clicked.S, .col-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.col-box-hover.XS, .col-box-clicked.XS, .col-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -12960,6 +13137,21 @@ input[type="radio"]:checked+label.col {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.color-box-hover:hover, .color-box-hover.clicked, .color-box-hover.active, .color-box-clicked:hover, .color-box-clicked.clicked, .color-box-clicked.active, .color-box-active:hover, .color-box-active.clicked, .color-box-active.active {
+  background: var(--main-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.color-box-hover.S, .color-box-clicked.S, .color-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.color-box-hover.XS, .color-box-clicked.XS, .color-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .color-bg {
   background-color: var(--main-color) !important;
 }
@@ -13064,6 +13256,21 @@ input[type="radio"]:checked+label.color {
   margin: 0 4px 4px 0;
 }
 .main-color-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.main-color-box-hover:hover, .main-color-box-hover.clicked, .main-color-box-hover.active, .main-color-box-clicked:hover, .main-color-box-clicked.clicked, .main-color-box-clicked.active, .main-color-box-active:hover, .main-color-box-active.clicked, .main-color-box-active.active {
+  background: var(--main-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.main-color-box-hover.S, .main-color-box-clicked.S, .main-color-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.main-color-box-hover.XS, .main-color-box-clicked.XS, .main-color-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -13174,6 +13381,21 @@ input[type="radio"]:checked+label.main-color {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.color-dark-box-hover:hover, .color-dark-box-hover.clicked, .color-dark-box-hover.active, .color-dark-box-clicked:hover, .color-dark-box-clicked.clicked, .color-dark-box-clicked.active, .color-dark-box-active:hover, .color-dark-box-active.clicked, .color-dark-box-active.active {
+  background: var(--main-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.color-dark-box-hover.S, .color-dark-box-clicked.S, .color-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.color-dark-box-hover.XS, .color-dark-box-clicked.XS, .color-dark-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .color-dark-bg {
   background-color: var(--main-color-dark) !important;
 }
@@ -13278,6 +13500,21 @@ input[type="radio"]:checked+label.color-dark {
   margin: 0 4px 4px 0;
 }
 .main-color-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.main-color-dark-box-hover:hover, .main-color-dark-box-hover.clicked, .main-color-dark-box-hover.active, .main-color-dark-box-clicked:hover, .main-color-dark-box-clicked.clicked, .main-color-dark-box-clicked.active, .main-color-dark-box-active:hover, .main-color-dark-box-active.clicked, .main-color-dark-box-active.active {
+  background: var(--main-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.main-color-dark-box-hover.S, .main-color-dark-box-clicked.S, .main-color-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.main-color-dark-box-hover.XS, .main-color-dark-box-clicked.XS, .main-color-dark-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -13388,6 +13625,21 @@ input[type="radio"]:checked+label.main-color-dark {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.second-color-box-hover:hover, .second-color-box-hover.clicked, .second-color-box-hover.active, .second-color-box-clicked:hover, .second-color-box-clicked.clicked, .second-color-box-clicked.active, .second-color-box-active:hover, .second-color-box-active.clicked, .second-color-box-active.active {
+  background: var(--second-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.second-color-box-hover.S, .second-color-box-clicked.S, .second-color-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.second-color-box-hover.XS, .second-color-box-clicked.XS, .second-color-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .second-color-bg {
   background-color: var(--second-color) !important;
 }
@@ -13492,6 +13744,21 @@ input[type="radio"]:checked+label.second-color {
   margin: 0 4px 4px 0;
 }
 .second-color-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.second-color-dark-box-hover:hover, .second-color-dark-box-hover.clicked, .second-color-dark-box-hover.active, .second-color-dark-box-clicked:hover, .second-color-dark-box-clicked.clicked, .second-color-dark-box-clicked.active, .second-color-dark-box-active:hover, .second-color-dark-box-active.clicked, .second-color-dark-box-active.active {
+  background: var(--second-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.second-color-dark-box-hover.S, .second-color-dark-box-clicked.S, .second-color-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.second-color-dark-box-hover.XS, .second-color-dark-box-clicked.XS, .second-color-dark-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -13602,6 +13869,21 @@ input[type="radio"]:checked+label.second-color-dark {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.third-color-box-hover:hover, .third-color-box-hover.clicked, .third-color-box-hover.active, .third-color-box-clicked:hover, .third-color-box-clicked.clicked, .third-color-box-clicked.active, .third-color-box-active:hover, .third-color-box-active.clicked, .third-color-box-active.active {
+  background: var(--third-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.third-color-box-hover.S, .third-color-box-clicked.S, .third-color-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.third-color-box-hover.XS, .third-color-box-clicked.XS, .third-color-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .third-color-bg {
   background-color: var(--third-color) !important;
 }
@@ -13706,6 +13988,21 @@ input[type="radio"]:checked+label.third-color {
   margin: 0 4px 4px 0;
 }
 .third-color-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.third-color-dark-box-hover:hover, .third-color-dark-box-hover.clicked, .third-color-dark-box-hover.active, .third-color-dark-box-clicked:hover, .third-color-dark-box-clicked.clicked, .third-color-dark-box-clicked.active, .third-color-dark-box-active:hover, .third-color-dark-box-active.clicked, .third-color-dark-box-active.active {
+  background: var(--third-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.third-color-dark-box-hover.S, .third-color-dark-box-clicked.S, .third-color-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.third-color-dark-box-hover.XS, .third-color-dark-box-clicked.XS, .third-color-dark-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -13816,6 +14113,21 @@ input[type="radio"]:checked+label.third-color-dark {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.fourth-color-box-hover:hover, .fourth-color-box-hover.clicked, .fourth-color-box-hover.active, .fourth-color-box-clicked:hover, .fourth-color-box-clicked.clicked, .fourth-color-box-clicked.active, .fourth-color-box-active:hover, .fourth-color-box-active.clicked, .fourth-color-box-active.active {
+  background: var(--fourth-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.fourth-color-box-hover.S, .fourth-color-box-clicked.S, .fourth-color-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.fourth-color-box-hover.XS, .fourth-color-box-clicked.XS, .fourth-color-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .fourth-color-bg {
   background-color: var(--fourth-color) !important;
 }
@@ -13920,6 +14232,21 @@ input[type="radio"]:checked+label.fourth-color {
   margin: 0 4px 4px 0;
 }
 .fourth-color-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.fourth-color-dark-box-hover:hover, .fourth-color-dark-box-hover.clicked, .fourth-color-dark-box-hover.active, .fourth-color-dark-box-clicked:hover, .fourth-color-dark-box-clicked.clicked, .fourth-color-dark-box-clicked.active, .fourth-color-dark-box-active:hover, .fourth-color-dark-box-active.clicked, .fourth-color-dark-box-active.active {
+  background: var(--fourth-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.fourth-color-dark-box-hover.S, .fourth-color-dark-box-clicked.S, .fourth-color-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.fourth-color-dark-box-hover.XS, .fourth-color-dark-box-clicked.XS, .fourth-color-dark-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -14030,6 +14357,21 @@ input[type="radio"]:checked+label.fourth-color-dark {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.link-box-hover:hover, .link-box-hover.clicked, .link-box-hover.active, .link-box-clicked:hover, .link-box-clicked.clicked, .link-box-clicked.active, .link-box-active:hover, .link-box-active.clicked, .link-box-active.active {
+  background: var(--link-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.link-box-hover.S, .link-box-clicked.S, .link-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.link-box-hover.XS, .link-box-clicked.XS, .link-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .link-bg {
   background-color: var(--link-color) !important;
 }
@@ -14134,6 +14476,21 @@ input[type="radio"]:checked+label.link {
   margin: 0 4px 4px 0;
 }
 .link-hover-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.link-hover-box-hover:hover, .link-hover-box-hover.clicked, .link-hover-box-hover.active, .link-hover-box-clicked:hover, .link-hover-box-clicked.clicked, .link-hover-box-clicked.active, .link-hover-box-active:hover, .link-hover-box-active.clicked, .link-hover-box-active.active {
+  background: var(--link-hover-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.link-hover-box-hover.S, .link-hover-box-clicked.S, .link-hover-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.link-hover-box-hover.XS, .link-hover-box-clicked.XS, .link-hover-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -14244,6 +14601,21 @@ input[type="radio"]:checked+label.link-hover {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.info-box-hover:hover, .info-box-hover.clicked, .info-box-hover.active, .info-box-clicked:hover, .info-box-clicked.clicked, .info-box-clicked.active, .info-box-active:hover, .info-box-active.clicked, .info-box-active.active {
+  background: var(--info) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.info-box-hover.S, .info-box-clicked.S, .info-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.info-box-hover.XS, .info-box-clicked.XS, .info-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .info-bg {
   background-color: var(--info) !important;
 }
@@ -14348,6 +14720,21 @@ input[type="radio"]:checked+label.info {
   margin: 0 4px 4px 0;
 }
 .success-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.success-box-hover:hover, .success-box-hover.clicked, .success-box-hover.active, .success-box-clicked:hover, .success-box-clicked.clicked, .success-box-clicked.active, .success-box-active:hover, .success-box-active.clicked, .success-box-active.active {
+  background: var(--success) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.success-box-hover.S, .success-box-clicked.S, .success-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.success-box-hover.XS, .success-box-clicked.XS, .success-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -14458,6 +14845,21 @@ input[type="radio"]:checked+label.success {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.warning-box-hover:hover, .warning-box-hover.clicked, .warning-box-hover.active, .warning-box-clicked:hover, .warning-box-clicked.clicked, .warning-box-clicked.active, .warning-box-active:hover, .warning-box-active.clicked, .warning-box-active.active {
+  background: var(--warning) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.warning-box-hover.S, .warning-box-clicked.S, .warning-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.warning-box-hover.XS, .warning-box-clicked.XS, .warning-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .warning-bg {
   background-color: var(--warning) !important;
 }
@@ -14562,6 +14964,21 @@ input[type="radio"]:checked+label.warning {
   margin: 0 4px 4px 0;
 }
 .danger-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.danger-box-hover:hover, .danger-box-hover.clicked, .danger-box-hover.active, .danger-box-clicked:hover, .danger-box-clicked.clicked, .danger-box-clicked.active, .danger-box-active:hover, .danger-box-active.clicked, .danger-box-active.active {
+  background: var(--danger) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.danger-box-hover.S, .danger-box-clicked.S, .danger-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.danger-box-hover.XS, .danger-box-clicked.XS, .danger-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -14672,6 +15089,21 @@ input[type="radio"]:checked+label.danger {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.bad-box-hover:hover, .bad-box-hover.clicked, .bad-box-hover.active, .bad-box-clicked:hover, .bad-box-clicked.clicked, .bad-box-clicked.active, .bad-box-active:hover, .bad-box-active.clicked, .bad-box-active.active {
+  background: var(--bad) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.bad-box-hover.S, .bad-box-clicked.S, .bad-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.bad-box-hover.XS, .bad-box-clicked.XS, .bad-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .bad-bg {
   background-color: var(--bad) !important;
 }
@@ -14776,6 +15208,21 @@ input[type="radio"]:checked+label.bad {
   margin: 0 4px 4px 0;
 }
 .acid-green-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.acid-green-box-hover:hover, .acid-green-box-hover.clicked, .acid-green-box-hover.active, .acid-green-box-clicked:hover, .acid-green-box-clicked.clicked, .acid-green-box-clicked.active, .acid-green-box-active:hover, .acid-green-box-active.clicked, .acid-green-box-active.active {
+  background: var(--acid-green) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.acid-green-box-hover.S, .acid-green-box-clicked.S, .acid-green-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.acid-green-box-hover.XS, .acid-green-box-clicked.XS, .acid-green-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -14886,6 +15333,21 @@ input[type="radio"]:checked+label.acid-green {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.ginger-bread-box-hover:hover, .ginger-bread-box-hover.clicked, .ginger-bread-box-hover.active, .ginger-bread-box-clicked:hover, .ginger-bread-box-clicked.clicked, .ginger-bread-box-clicked.active, .ginger-bread-box-active:hover, .ginger-bread-box-active.clicked, .ginger-bread-box-active.active {
+  background: var(--gingerbread) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.ginger-bread-box-hover.S, .ginger-bread-box-clicked.S, .ginger-bread-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.ginger-bread-box-hover.XS, .ginger-bread-box-clicked.XS, .ginger-bread-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .ginger-bread-bg {
   background-color: var(--gingerbread) !important;
 }
@@ -14990,6 +15452,21 @@ input[type="radio"]:checked+label.ginger-bread {
   margin: 0 4px 4px 0;
 }
 .mini-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.mini-box-hover:hover, .mini-box-hover.clicked, .mini-box-hover.active, .mini-box-clicked:hover, .mini-box-clicked.clicked, .mini-box-clicked.active, .mini-box-active:hover, .mini-box-active.clicked, .mini-box-active.active {
+  background: var(--mini-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.mini-box-hover.S, .mini-box-clicked.S, .mini-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.mini-box-hover.XS, .mini-box-clicked.XS, .mini-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -15100,6 +15577,21 @@ input[type="radio"]:checked+label.mini {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.mini-dark-box-hover:hover, .mini-dark-box-hover.clicked, .mini-dark-box-hover.active, .mini-dark-box-clicked:hover, .mini-dark-box-clicked.clicked, .mini-dark-box-clicked.active, .mini-dark-box-active:hover, .mini-dark-box-active.clicked, .mini-dark-box-active.active {
+  background: var(--mini-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.mini-dark-box-hover.S, .mini-dark-box-clicked.S, .mini-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.mini-dark-box-hover.XS, .mini-dark-box-clicked.XS, .mini-dark-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .mini-dark-bg {
   background-color: var(--mini-color-dark) !important;
 }
@@ -15204,6 +15696,21 @@ input[type="radio"]:checked+label.mini-dark {
   margin: 0 4px 4px 0;
 }
 .mini-second-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.mini-second-box-hover:hover, .mini-second-box-hover.clicked, .mini-second-box-hover.active, .mini-second-box-clicked:hover, .mini-second-box-clicked.clicked, .mini-second-box-clicked.active, .mini-second-box-active:hover, .mini-second-box-active.clicked, .mini-second-box-active.active {
+  background: var(--mini-second) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.mini-second-box-hover.S, .mini-second-box-clicked.S, .mini-second-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.mini-second-box-hover.XS, .mini-second-box-clicked.XS, .mini-second-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -15314,6 +15821,21 @@ input[type="radio"]:checked+label.mini-second {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.mini-third-box-hover:hover, .mini-third-box-hover.clicked, .mini-third-box-hover.active, .mini-third-box-clicked:hover, .mini-third-box-clicked.clicked, .mini-third-box-clicked.active, .mini-third-box-active:hover, .mini-third-box-active.clicked, .mini-third-box-active.active {
+  background: var(--mini-third) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.mini-third-box-hover.S, .mini-third-box-clicked.S, .mini-third-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.mini-third-box-hover.XS, .mini-third-box-clicked.XS, .mini-third-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .mini-third-bg {
   background-color: var(--mini-third) !important;
 }
@@ -15418,6 +15940,21 @@ input[type="radio"]:checked+label.mini-third {
   margin: 0 4px 4px 0;
 }
 .mini-fourth-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.mini-fourth-box-hover:hover, .mini-fourth-box-hover.clicked, .mini-fourth-box-hover.active, .mini-fourth-box-clicked:hover, .mini-fourth-box-clicked.clicked, .mini-fourth-box-clicked.active, .mini-fourth-box-active:hover, .mini-fourth-box-active.clicked, .mini-fourth-box-active.active {
+  background: var(--mini-fourth) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.mini-fourth-box-hover.S, .mini-fourth-box-clicked.S, .mini-fourth-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.mini-fourth-box-hover.XS, .mini-fourth-box-clicked.XS, .mini-fourth-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -15528,6 +16065,21 @@ input[type="radio"]:checked+label.mini-fourth {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.uwa-box-hover:hover, .uwa-box-hover.clicked, .uwa-box-hover.active, .uwa-box-clicked:hover, .uwa-box-clicked.clicked, .uwa-box-clicked.active, .uwa-box-active:hover, .uwa-box-active.clicked, .uwa-box-active.active {
+  background: var(--uwa-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.uwa-box-hover.S, .uwa-box-clicked.S, .uwa-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.uwa-box-hover.XS, .uwa-box-clicked.XS, .uwa-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .uwa-bg {
   background-color: var(--uwa-color) !important;
 }
@@ -15632,6 +16184,21 @@ input[type="radio"]:checked+label.uwa {
   margin: 0 4px 4px 0;
 }
 .uwa-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.uwa-dark-box-hover:hover, .uwa-dark-box-hover.clicked, .uwa-dark-box-hover.active, .uwa-dark-box-clicked:hover, .uwa-dark-box-clicked.clicked, .uwa-dark-box-clicked.active, .uwa-dark-box-active:hover, .uwa-dark-box-active.clicked, .uwa-dark-box-active.active {
+  background: var(--uwa-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.uwa-dark-box-hover.S, .uwa-dark-box-clicked.S, .uwa-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.uwa-dark-box-hover.XS, .uwa-dark-box-clicked.XS, .uwa-dark-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -15742,6 +16309,21 @@ input[type="radio"]:checked+label.uwa-dark {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.uwa-second-box-hover:hover, .uwa-second-box-hover.clicked, .uwa-second-box-hover.active, .uwa-second-box-clicked:hover, .uwa-second-box-clicked.clicked, .uwa-second-box-clicked.active, .uwa-second-box-active:hover, .uwa-second-box-active.clicked, .uwa-second-box-active.active {
+  background: var(--uwa-second-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.uwa-second-box-hover.S, .uwa-second-box-clicked.S, .uwa-second-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.uwa-second-box-hover.XS, .uwa-second-box-clicked.XS, .uwa-second-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .uwa-second-bg {
   background-color: var(--uwa-second-color) !important;
 }
@@ -15846,6 +16428,21 @@ input[type="radio"]:checked+label.uwa-second {
   margin: 0 4px 4px 0;
 }
 .uwa-third-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.uwa-third-box-hover:hover, .uwa-third-box-hover.clicked, .uwa-third-box-hover.active, .uwa-third-box-clicked:hover, .uwa-third-box-clicked.clicked, .uwa-third-box-clicked.active, .uwa-third-box-active:hover, .uwa-third-box-active.clicked, .uwa-third-box-active.active {
+  background: var(--uwa-third-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.uwa-third-box-hover.S, .uwa-third-box-clicked.S, .uwa-third-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.uwa-third-box-hover.XS, .uwa-third-box-clicked.XS, .uwa-third-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -15956,6 +16553,21 @@ input[type="radio"]:checked+label.uwa-third {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.uwa-fourth-box-hover:hover, .uwa-fourth-box-hover.clicked, .uwa-fourth-box-hover.active, .uwa-fourth-box-clicked:hover, .uwa-fourth-box-clicked.clicked, .uwa-fourth-box-clicked.active, .uwa-fourth-box-active:hover, .uwa-fourth-box-active.clicked, .uwa-fourth-box-active.active {
+  background: var(--uwa-fourth-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.uwa-fourth-box-hover.S, .uwa-fourth-box-clicked.S, .uwa-fourth-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.uwa-fourth-box-hover.XS, .uwa-fourth-box-clicked.XS, .uwa-fourth-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .uwa-fourth-bg {
   background-color: var(--uwa-fourth-color) !important;
 }
@@ -16060,6 +16672,21 @@ input[type="radio"]:checked+label.uwa-fourth {
   margin: 0 4px 4px 0;
 }
 .uwa-link-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.uwa-link-box-hover:hover, .uwa-link-box-hover.clicked, .uwa-link-box-hover.active, .uwa-link-box-clicked:hover, .uwa-link-box-clicked.clicked, .uwa-link-box-clicked.active, .uwa-link-box-active:hover, .uwa-link-box-active.clicked, .uwa-link-box-active.active {
+  background: var(--uwa-link-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.uwa-link-box-hover.S, .uwa-link-box-clicked.S, .uwa-link-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.uwa-link-box-hover.XS, .uwa-link-box-clicked.XS, .uwa-link-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -16170,6 +16797,21 @@ input[type="radio"]:checked+label.uwa-link {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.aroma-box-hover:hover, .aroma-box-hover.clicked, .aroma-box-hover.active, .aroma-box-clicked:hover, .aroma-box-clicked.clicked, .aroma-box-clicked.active, .aroma-box-active:hover, .aroma-box-active.clicked, .aroma-box-active.active {
+  background: var(--aroma-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.aroma-box-hover.S, .aroma-box-clicked.S, .aroma-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.aroma-box-hover.XS, .aroma-box-clicked.XS, .aroma-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .aroma-bg {
   background-color: var(--aroma-color) !important;
 }
@@ -16274,6 +16916,21 @@ input[type="radio"]:checked+label.aroma {
   margin: 0 4px 4px 0;
 }
 .aroma-dark-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.aroma-dark-box-hover:hover, .aroma-dark-box-hover.clicked, .aroma-dark-box-hover.active, .aroma-dark-box-clicked:hover, .aroma-dark-box-clicked.clicked, .aroma-dark-box-clicked.active, .aroma-dark-box-active:hover, .aroma-dark-box-active.clicked, .aroma-dark-box-active.active {
+  background: var(--aroma-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.aroma-dark-box-hover.S, .aroma-dark-box-clicked.S, .aroma-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.aroma-dark-box-hover.XS, .aroma-dark-box-clicked.XS, .aroma-dark-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -16384,6 +17041,21 @@ input[type="radio"]:checked+label.aroma-dark {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.pdp-box-hover:hover, .pdp-box-hover.clicked, .pdp-box-hover.active, .pdp-box-clicked:hover, .pdp-box-clicked.clicked, .pdp-box-clicked.active, .pdp-box-active:hover, .pdp-box-active.clicked, .pdp-box-active.active {
+  background: var(--pezzidipla-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.pdp-box-hover.S, .pdp-box-clicked.S, .pdp-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.pdp-box-hover.XS, .pdp-box-clicked.XS, .pdp-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .pdp-bg {
   background-color: var(--pezzidipla-color) !important;
 }
@@ -16488,6 +17160,21 @@ input[type="radio"]:checked+label.pdp {
   margin: 0 4px 4px 0;
 }
 .pdp-second-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.pdp-second-box-hover:hover, .pdp-second-box-hover.clicked, .pdp-second-box-hover.active, .pdp-second-box-clicked:hover, .pdp-second-box-clicked.clicked, .pdp-second-box-clicked.active, .pdp-second-box-active:hover, .pdp-second-box-active.clicked, .pdp-second-box-active.active {
+  background: var(--pezzidipla-second-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.pdp-second-box-hover.S, .pdp-second-box-clicked.S, .pdp-second-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.pdp-second-box-hover.XS, .pdp-second-box-clicked.XS, .pdp-second-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -16598,6 +17285,21 @@ input[type="radio"]:checked+label.pdp-second {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.pdp-third-box-hover:hover, .pdp-third-box-hover.clicked, .pdp-third-box-hover.active, .pdp-third-box-clicked:hover, .pdp-third-box-clicked.clicked, .pdp-third-box-clicked.active, .pdp-third-box-active:hover, .pdp-third-box-active.clicked, .pdp-third-box-active.active {
+  background: var(--pezzidipla-third-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.pdp-third-box-hover.S, .pdp-third-box-clicked.S, .pdp-third-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.pdp-third-box-hover.XS, .pdp-third-box-clicked.XS, .pdp-third-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .pdp-third-bg {
   background-color: var(--pezzidipla-third-color) !important;
 }
@@ -16702,6 +17404,21 @@ input[type="radio"]:checked+label.pdp-third {
   margin: 0 4px 4px 0;
 }
 .pdp-fourth-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.pdp-fourth-box-hover:hover, .pdp-fourth-box-hover.clicked, .pdp-fourth-box-hover.active, .pdp-fourth-box-clicked:hover, .pdp-fourth-box-clicked.clicked, .pdp-fourth-box-clicked.active, .pdp-fourth-box-active:hover, .pdp-fourth-box-active.clicked, .pdp-fourth-box-active.active {
+  background: var(--pezzidipla-fourth-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.pdp-fourth-box-hover.S, .pdp-fourth-box-clicked.S, .pdp-fourth-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.pdp-fourth-box-hover.XS, .pdp-fourth-box-clicked.XS, .pdp-fourth-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -16812,6 +17529,21 @@ input[type="radio"]:checked+label.pdp-fourth {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.lns-box-hover:hover, .lns-box-hover.clicked, .lns-box-hover.active, .lns-box-clicked:hover, .lns-box-clicked.clicked, .lns-box-clicked.active, .lns-box-active:hover, .lns-box-active.clicked, .lns-box-active.active {
+  background: var(--lanuovastartup-color) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.lns-box-hover.S, .lns-box-clicked.S, .lns-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.lns-box-hover.XS, .lns-box-clicked.XS, .lns-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .lns-bg {
   background-color: var(--lanuovastartup-color) !important;
 }
@@ -16919,6 +17651,21 @@ input[type="radio"]:checked+label.lns {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
+.lns-dark-box-hover:hover, .lns-dark-box-hover.clicked, .lns-dark-box-hover.active, .lns-dark-box-clicked:hover, .lns-dark-box-clicked.clicked, .lns-dark-box-clicked.active, .lns-dark-box-active:hover, .lns-dark-box-active.clicked, .lns-dark-box-active.active {
+  background: var(--lanuovastartup-color-dark) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.lns-dark-box-hover.S, .lns-dark-box-clicked.S, .lns-dark-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.lns-dark-box-hover.XS, .lns-dark-box-clicked.XS, .lns-dark-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
 .lns-dark-bg {
   background-color: var(--lanuovastartup-color-dark) !important;
 }
@@ -17023,6 +17770,21 @@ input[type="radio"]:checked+label.lns-dark {
   margin: 0 4px 4px 0;
 }
 .dt-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.dt-box-hover:hover, .dt-box-hover.clicked, .dt-box-hover.active, .dt-box-clicked:hover, .dt-box-clicked.clicked, .dt-box-clicked.active, .dt-box-active:hover, .dt-box-active.clicked, .dt-box-active.active {
+  background: var(--doingthings-color) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.dt-box-hover.S, .dt-box-clicked.S, .dt-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.dt-box-hover.XS, .dt-box-clicked.XS, .dt-box-active.XS {
   padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
   margin: 0 4px 2px 0;
 }
@@ -17184,7 +17946,7 @@ input[type="radio"]:checked+label.dt {
 
 p {
   font-size: var(--p);
-  line-height: calc(var(--p) * 1.75);
+  line-height: calc(var(--p) * 1.5);
   margin-bottom: var(--baseline);
   font-family: var(--font);
   color: var(--false-black);
@@ -17330,7 +18092,7 @@ ul, ol {
 ul li, ol li {
   margin: calc(var(--margin) * 0.5) 0;
   font-size: var(--p);
-  line-height: calc(var(--p) * 1.75);
+  line-height: calc(var(--p) * 1.5);
 }
 ul li::marker, ol li::marker {
   color: var(--main-color);
@@ -17540,7 +18302,6 @@ blockquote::after {
 
 *[class^=iconoir-], *[class*=" iconoir-"] {
   vertical-align: middle;
-  vertical-align: text-top !important;
 }
 
 .m-0 {

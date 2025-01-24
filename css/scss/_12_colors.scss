@@ -27,6 +27,23 @@
         padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
         margin: 0 4px 2px 0;
       }
+      &-hover, &-clicked, &-active {
+        &:hover, &.clicked, &.active {
+          background: $colorcode!important;
+          color: $colortext!important;
+          padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+          display: inline-block;
+          margin: 0 6px 8px 0;
+        }
+        &.S {
+          padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+          margin: 0 4px 4px 0;
+        }
+        &.XS {
+          padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+          margin: 0 4px 2px 0;
+        }
+      }
     }
     // backgrounds
     &-bg {

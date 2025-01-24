@@ -3,7 +3,7 @@
 
 p {
   font-size: var(--p);
-  line-height: calc(var(--p) * 1.75);
+  line-height: calc(var(--p) * 1.5);
   margin-bottom: var(--baseline);
   font-family: var(--font);
   color: var(--false-black);
@@ -156,7 +156,7 @@ ul, ol {
   li {
     margin: calc( var(--margin) * 0.5 ) 0;
     font-size: var(--p);
-    line-height: calc(var(--p) * 1.75);
+    line-height: calc(var(--p) * 1.5);
     &::marker {
       color: var(--main-color);
     }
@@ -377,5 +377,5 @@ blockquote {
 // iconoir
 *[class^='iconoir-'], *[class*=' iconoir-'] {
   vertical-align: middle;
-  vertical-align: text-top!important;
+  //vertical-align: text-top!important;
 }

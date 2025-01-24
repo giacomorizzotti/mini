@@ -673,6 +673,15 @@ body {
       }
     }
   }
+  
+  .menu-open-p-0 {
+    transition: padding 0.25s ease!important;
+  }
+  &.menu-open {
+    .menu-open-p-0 {
+      padding-top: 0!important;
+    }
+  }
 
   // generic menu
   ul.menu {
