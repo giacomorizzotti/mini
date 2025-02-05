@@ -43,15 +43,18 @@
         @include xl {
           width: calc( $widthPercentageXXL + ( var(--gap-x) * -2 ) ); // NEW
         }
+
       }
     }
 
     @each $breakpoint, $screenSize in $breakpoints {
       &-#{$breakpoint} {
-        @media (min-width: #{$screenSize}) {
-          @each $widthLabel, $widthPercentage in $boxWidth {
-            &-#{$widthLabel} {
-              width: $widthPercentage;
+        @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL in $boxWidth {
+          &-#{$widthLabel} {
+            @extend .box;
+            flex: 0 0 auto;
+            @media (min-width: #{$screenSize}) {
+              width: calc( $widthPercentageXXL + ( var(--gap-x) * -2 ) ); // NEW
             }
           }
         }

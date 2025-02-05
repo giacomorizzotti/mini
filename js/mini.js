@@ -178,9 +178,9 @@ function pagination(pageElements=30) {
         
             // go to first page button
             let firstPage = document.createElement("a");
-            firstPage.href = "#top";
+            //firstPage.href = "#top";
             firstPage.setAttribute("id", "page-start-btn");
-            firstPage.classList.add('page-start-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+            firstPage.classList.add('page-start-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
             firstPageLabel = document.createTextNode("<<");
             firstPage.appendChild(firstPageLabel);
             paginationControls.appendChild(firstPage);
@@ -193,15 +193,15 @@ function pagination(pageElements=30) {
             if ( thisPage > 1 ) {
     
                 let prevPage = document.createElement("a");
-                prevPage.href = "#top";
-                prevPage.setAttribute("id", "page-start-btn");
-                prevPage.classList.add('page-start-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+                //prevPage.href = "#top";
+                prevPage.setAttribute("id", "page-prev-btn");
+                prevPage.classList.add('page-prev-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
                 prevPageLabel = document.createTextNode("<");
                 prevPage.appendChild(prevPageLabel);
                 paginationControls.appendChild(prevPage);
         
                 prevPage.addEventListener("click", function() {
-                    showPage(thisPage-1);
+                    showPage(parseInt(thisPage)-1);
                 });
         
             }
@@ -219,7 +219,7 @@ function pagination(pageElements=30) {
                 } else {
                     pageBtn.setAttribute("id", "page-"+k+"-btn");
                 }
-                pageBtn.classList.add("page-btn", "page-"+k+"-btn", 'btn', 'me-05', 'mb-05', 'display-inline-block');
+                pageBtn.classList.add("page-btn", "page-"+k+"-btn", 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
                 pageBtn.setAttribute('page', k)
                 pageBtnLabel = document.createTextNode(k);
                 pageBtn.appendChild(pageBtnLabel);
@@ -235,15 +235,15 @@ function pagination(pageElements=30) {
             if ( thisPage < pages ) {
     
                 let nextPage = document.createElement("a");
-                nextPage.href = "#top";
-                nextPage.setAttribute("id", "page-start-btn");
-                nextPage.classList.add('page-start-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+                //nextPage.href = "#top";
+                nextPage.setAttribute("id", "page-next-btn");
+                nextPage.classList.add('page-next-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
                 nextPageLabel = document.createTextNode(">");
                 nextPage.appendChild(nextPageLabel);
                 paginationControls.appendChild(nextPage);
         
                 nextPage.addEventListener("click", function() {
-                    showPage(thisPage+1);
+                    showPage(parseInt(thisPage)+1);
                 });
         
             }
@@ -252,7 +252,7 @@ function pagination(pageElements=30) {
             let lastPage = document.createElement("a");
             lastPage.href = "#top";
             lastPage.setAttribute("id", "page-end-btn");
-            lastPage.classList.add('page-end-btn', 'btn', 'me-05', 'mb-05', 'display-inline-block');
+            lastPage.classList.add('page-end-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
             lastPageLabel = document.createTextNode(">>");
             lastPage.appendChild(lastPageLabel);
             paginationControls.appendChild(lastPage);

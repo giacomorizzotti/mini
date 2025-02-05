@@ -92,6 +92,31 @@
           left: 50%;
           transform: translate(-50%, -100%);
         }
+        &-s {
+          &::after {
+            @extend .#{$colorname}-bubble;
+            border-left: calc(var(--baseline) * 0.5) solid transparent;
+            border-right: calc(var(--baseline) * 0.5) solid transparent;
+            border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid $colorcode;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+          }
+          &-left {
+            &::after {
+              @extend .#{$colorname}-bubble-up-s;
+              left: calc(var(--margin)* 1);
+              transform: translate(0, -100%);
+            }
+          }
+          &-right {
+            &::after {
+              @extend .#{$colorname}-bubble-up-s;
+              right: calc(var(--margin)* 1);
+              transform: translate(0, -100%);
+            }
+          }
+        }
         &-left {
           &::after {
             @extend .#{$colorname}-bubble-up;
@@ -116,6 +141,31 @@
           top: 100%;
           left: 50%;
           transform: translate(-50%, 0);
+        }
+        &-s {
+          &::after {
+            @extend .#{$colorname}-bubble;
+            border-top: calc(var(--baseline) * 0.5 * 1.25) solid $colorcode;
+            border-left: calc(var(--baseline) * 0.5) solid transparent;
+            border-right: calc(var(--baseline) * 0.5) solid transparent;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+          &-left {
+            &::after {
+              @extend .#{$colorname}-bubble-up-s;
+              left: calc(var(--margin)* 0.5);
+              transform: translate(0, -100%);
+            }
+          }
+          &-right {
+            &::after {
+              @extend .#{$colorname}-bubble-up-s;
+              right: calc(var(--margin)* 0.5);
+              transform: translate(0, -100%);
+            }
+          }
         }
         &-left {
           &::after {

@@ -1,2 +1,0 @@
-<input type="{{ widget.type }}" name="{{ widget.name }}"{% if widget.value != None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}{% include "django/forms/widgets/attrs.html" %} class="chip">
-<label{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %} class="chip pointer p-05">{{ widget.label }}</label>
