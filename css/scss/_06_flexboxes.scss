@@ -8,40 +8,46 @@
   flex-flow: row wrap;
   position: relative;
 
-  width: calc(100% + (var(--gap) * 2));
-  margin: 0 calc( var(--gap) * -1 );
+  width: calc(100% + (var(--gap) * 2)); // OLD
+  margin: 0 calc( var(--gap) * -1 ); // OLD
   --gap: calc( var(--basic-gap) * 1 );
   --gap-y: calc( var(--gap) * 1 );
   --gap-x: calc( var(--gap) * 1 );
+  gap: var(--gap); // NEW
+  padding: var(--padding); // NEW
 
   .box {
 
     position: relative;
+    //margin: calc(var(--gap-y) * 1) calc(var(--gap-x) * 1); // OLD
     margin: 0; // NEW
-    margin: calc(var(--gap-y) * 1) calc(var(--gap-x) * 1); // NEW
-    padding: calc(var(--padding) * 1);
+    padding: calc(var(--padding) * 1); // NEW
     max-width: 100%;
-    flex: 11 1 auto;
+    //flex: 11 1 auto;
     
     @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL in $boxWidth {
       &-#{$widthLabel} {
         
         @extend .box;
-        flex: 0 0 auto;
 
-        width: calc( $widthPercentageSM + ( var(--gap-x) * -2 ) ); // NEW
+        //width: calc( $widthPercentageSM + ( var(--gap-x) * 0.666666 * -1 ) ); // OLD
+        flex: $ratioSM $ratioSM $widthPercentageSM; // NEW
 
         @include sm {
-          width: calc( $widthPercentageMD + ( var(--gap-x) * -2 ) ); // NEW
+          //width: calc( $widthPercentageMD + ( var(--gap-x) * 0.666666 * -1 ) ); // OLD
+          flex: $ratioMD $ratioMD $widthPercentageMD; // NEW
         }
         @include md {
-          width: calc( $widthPercentageLG + ( var(--gap-x) * -2 ) ); // NEW
+          //width: calc( $widthPercentageLG + ( var(--gap-x) * 0.666666 * -1 ) ); // OLD
+          flex: $ratioLG $ratioLG $widthPercentageLG; // NEW
         }
         @include lg {
-          width: calc( $widthPercentageXL + ( var(--gap-x) * -2 ) ); // NEW
+          //width: calc( $widthPercentageXL + ( var(--gap-x) * 0.666666 * -1 ) ); // OLD
+          flex: $ratioXL $ratioXL $widthPercentageXL; // NEW
         }
         @include xl {
-          width: calc( $widthPercentageXXL + ( var(--gap-x) * -2 ) ); // NEW
+          //width: calc( $widthPercentageXXL + ( var(--gap-x) * 0.666666 * -1 ) ); // OLD
+          flex: $ratioXXL $ratioXXL calc( $widthPercentageXXL + ( var(--gap-x) * 0.75 * -1 ) ); // NEW
         }
 
       }
@@ -49,12 +55,12 @@
 
     @each $breakpoint, $screenSize in $breakpoints {
       &-#{$breakpoint} {
-        @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL in $boxWidth {
+        @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL in $boxWidth {
           &-#{$widthLabel} {
-            @extend .box;
-            flex: 0 0 auto;
+            @extend .box-#{$widthLabel};
             @media (min-width: #{$screenSize}) {
-              width: calc( $widthPercentageXXL + ( var(--gap-x) * -2 ) ); // NEW
+              //width: calc( $widthPercentageXXL + ( var(--gap-x) * -2 ) ); // OLD
+              flex: $ratioXXL $ratioXXL calc( $widthPercentageXXL + ( var(--gap-x) * 0.75 * -1 ) ); // NEW
             }
           }
         }
