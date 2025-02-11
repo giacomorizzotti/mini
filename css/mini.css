@@ -9044,64 +9044,64 @@ footer#footer .footer-logo img.logo.logotype:hover {
 .gap-20, .g-20 {
   --gap: calc( var(--basic-gap) * 20 );
 }
-.gap-y-0, .g-y-0 {
+.gapy-0, .gap-y-0, .gy-0, .g-y-0 {
   --gap-y: calc( var(--basic-gap) * 0 );
 }
-.gap-y-05, .g-y-05 {
+.gapy-05, .gap-y-05, .gy-05, .g-y-05 {
   --gap-y: calc( var(--basic-gap) * 0.5 );
 }
-.gap-y-1, .g-y-1 {
+.gapy-1, .gap-y-1, .gy-1, .g-y-1 {
   --gap-y: calc( var(--basic-gap) * 1 );
 }
-.gap-y-15, .g-y-15 {
+.gapy-15, .gap-y-15, .gy-15, .g-y-15 {
   --gap-y: calc( var(--basic-gap) * 1.5 );
 }
-.gap-y-2, .g-y-2 {
+.gapy-2, .gap-y-2, .gy-2, .g-y-2 {
   --gap-y: calc( var(--basic-gap) * 2 );
 }
-.gap-y-3, .g-y-3 {
+.gapy-3, .gap-y-3, .gy-3, .g-y-3 {
   --gap-y: calc( var(--basic-gap) * 3 );
 }
-.gap-y-4, .g-y-4 {
+.gapy-4, .gap-y-4, .gy-4, .g-y-4 {
   --gap-y: calc( var(--basic-gap) * 4 );
 }
-.gap-y-5, .g-y-5 {
+.gapy-5, .gap-y-5, .gy-5, .g-y-5 {
   --gap-y: calc( var(--basic-gap) * 5 );
 }
-.gap-y-10, .g-y-10 {
+.gapy-10, .gap-y-10, .gy-10, .g-y-10 {
   --gap-y: calc( var(--basic-gap) * 10 );
 }
-.gap-y-20, .g-y-20 {
+.gapy-20, .gap-y-20, .gy-20, .g-y-20 {
   --gap-y: calc( var(--basic-gap) * 20 );
 }
-.gap-x-0, .g-x-0 {
+.gapx-0, .gap-x-0, .gx-0, .g-x-0 {
   --gap-x: calc( var(--basic-gap) * 0 );
 }
-.gap-x-05, .g-x-05 {
+.gapx-05, .gap-x-05, .gx-05, .g-x-05 {
   --gap-x: calc( var(--basic-gap) * 0.5 );
 }
-.gap-x-1, .g-x-1 {
+.gapx-1, .gap-x-1, .gx-1, .g-x-1 {
   --gap-x: calc( var(--basic-gap) * 1 );
 }
-.gap-x-15, .g-x-15 {
+.gapx-15, .gap-x-15, .gx-15, .g-x-15 {
   --gap-x: calc( var(--basic-gap) * 1.5 );
 }
-.gap-x-2, .g-x-2 {
+.gapx-2, .gap-x-2, .gx-2, .g-x-2 {
   --gap-x: calc( var(--basic-gap) * 2 );
 }
-.gap-x-3, .g-x-3 {
+.gapx-3, .gap-x-3, .gx-3, .g-x-3 {
   --gap-x: calc( var(--basic-gap) * 3 );
 }
-.gap-x-4, .g-x-4 {
+.gapx-4, .gap-x-4, .gx-4, .g-x-4 {
   --gap-x: calc( var(--basic-gap) * 4 );
 }
-.gap-x-5, .g-x-5 {
+.gapx-5, .gap-x-5, .gx-5, .g-x-5 {
   --gap-x: calc( var(--basic-gap) * 5 );
 }
-.gap-x-10, .g-x-10 {
+.gapx-10, .gap-x-10, .gx-10, .g-x-10 {
   --gap-x: calc( var(--basic-gap) * 10 );
 }
-.gap-x-20, .g-x-20 {
+.gapx-20, .gap-x-20, .gx-20, .g-x-20 {
   --gap-x: calc( var(--basic-gap) * 20 );
 }
 
@@ -9483,7 +9483,7 @@ hr {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.175);
 }
 .box-shadow-hover, .bs-hover {
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.4s ease;
 }
 .box-shadow-hover:hover, .bs-hover:hover {
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);

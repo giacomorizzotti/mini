@@ -300,14 +300,14 @@
       --gap: calc( var(--basic-gap) * #{$gap} );
     }
   }
-  &-y {
+  &y, &-y {
     @each $gap-label, $gap in $multiplier {
       &-#{$gap-label} {
         --gap-y: calc( var(--basic-gap) * #{$gap} );
       }
     }
   }
-  &-x {
+  &x, &-x {
     @each $gap-label, $gap in $multiplier {
       &-#{$gap-label} {
         --gap-x: calc( var(--basic-gap) * #{$gap} );

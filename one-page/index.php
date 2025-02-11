@@ -82,13 +82,13 @@
     <header id="header" class="header">
         <div class="container">
             <div class="boxes align-items-center justify-content-between">
-                <div class="box brand px-2">
+                <div class="box brand px-1">
                     <a href="#top" class="">
                         <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem me-1" alt="emblem"/>
                     </a>
                     <a href="#top" class=""><h3 class="site-title">mini</h3></a>
                 </div>
-                <div class="box menus px-2">
+                <div class="box menus px-1">
                     <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
                     <div id="head-menu" class="head-menu">
                         <nav class="menu page-menu">

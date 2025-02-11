@@ -10,8 +10,6 @@ window.addEventListener('load', function() {
     buildPageMenu()
     loaderGone()
     checkScrollTopCondition()
-    squareDiv()
-    squareFixDiv()
     fullHdDiv()
     imageCover()
     btnClickToClickFeature()
@@ -29,8 +27,6 @@ window.addEventListener('scroll', function() {
 
 // things to do on RESIZE
 window.addEventListener('resize', function() {
-    squareDiv()
-    squareFixDiv()
     fullHdDiv()
     imageCover()
 })
@@ -499,22 +495,6 @@ function checkScrollTopCondition() {
             body.classList.add('scroll');
         }
     }
-}
-
-// SQUARE DIV MIN
-// Checked on load and on resize
-function squareDiv() {
-    document.querySelectorAll(".square").forEach( function (item) {
-        item.style.minHeight = item.offsetWidth + "px"
-    });
-}
-
-// SQUARE DIV FIXED
-// Checked on load and on resize
-function squareFixDiv() {
-    document.querySelectorAll(".square-fixed").forEach( function (item) {
-        item.style.height = item.offsetWidth + "px"
-    });
 }
 
 // FULLHD DIV MIN
