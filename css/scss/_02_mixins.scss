@@ -151,6 +151,8 @@ $paddingThickness: (
   '5':calc(var(--padding) * 5)
 );
 
+$ten: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
 // gradients
 $f2s: var(--main-color) 0%, var(--second-color) 100%;
 $f2t: var(--main-color) 0%, var(--third-color) 100%;
@@ -182,11 +184,29 @@ $gradFalseWhiteToWhite: var(--white) 0%, var(--false-white) 100%;
 }
 
 // box shadow
+
 @mixin boxShadow($distance, $range, $color) {
   -webkit-box-shadow: $distance $distance $range 0 $color;
   -moz-box-shadow: $distance $distance $range 0 $color;
   box-shadow: $distance $distance $range 0 $color;
 }
+$boxShadowAreas: (
+  '3':3px,
+  's':3px,
+  '5':5px,
+  '10':10px,
+  '15':15px,
+  '20':20px,
+  'l':20px,
+);
+$boxShadowColors: (
+  'lightest':rgb( 0 0 0 / 7.5% ),
+  'lighter':rgb( 0 0 0 / 10% ),
+  'light':rgb( 0 0 0 / 12.5% ),
+  'dark':rgb( 0 0 0 / 25% ),
+  'darker': rgb( 0 0 0 / 45% ),
+  'darkest': rgb( 0 0 0 / 65% ),
+);
 
 // width - min & max
 @mixin width($width) {
