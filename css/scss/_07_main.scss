@@ -103,43 +103,43 @@ hr {
   height: 100vh; // Fallback for browsers that do not support Custom Properties
   height: 100dvh;
 }
-.hfh, .half-full-height {
+.hh, .hfh, .half-height, .half-full-height {
   min-height: 50vh; // Fallback for browsers that do not support Custom Properties
   min-height: 50dvh;
 }
-.hfhf, .half-full-height-fixed {
+.hhf, .hfhf, .half-height-fixed, .half-full-height-fixed {
   height: 50vh; // Fallback for browsers that do not support Custom Properties
   height: 50dvh;
 }
-.one-quarter-height {
+.one-quarter-height, .one-quarter-full-height {
   min-height: 25vh; // Fallback for browsers that do not support Custom Properties
   min-height: 25dvh;
 }
-.one-quarter-height-fixed {
+.one-quarter-height-fixed, .one-quarter-full-height-fixed {
   height: 25vh; // Fallback for browsers that do not support Custom Properties
   height: 25dvh;
 }
-.three-quarter-height {
+.three-quarter-height, .three-quarter-full-height {
   min-height: 75vh; // Fallback for browsers that do not support Custom Properties
   min-height: 75dvh;
 }
-.three-quarter-height-fixed {
+.three-quarter-height-fixed, .three-quarter-full-height-fixed {
   height: 75vh; // Fallback for browsers that do not support Custom Properties
   height: 75dvh;
 }
-.one-third-height {
+.one-third-height, .one-third-full-height {
   min-height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
   min-height: 33.3333333dvh;
 }
-.one-third-height-fixed {
+.one-third-height-fixed, .one-third-full-height-fixed {
   height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
   height: 33.3333333dvh;
 }
-.two-third-height {
+.two-third-height, .two-third-full-height {
   min-height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
   min-height: 66.666666dvh;
 }
-.two-third-height-fixed {
+.two-third-height-fixed, .two-third-full-height-fixed {
   height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
   height: 66.666666dvh;
 }
