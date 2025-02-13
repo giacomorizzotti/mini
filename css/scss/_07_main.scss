@@ -247,6 +247,11 @@ hr {
       }
     }
   }
+  @each $colorLabel, $color in $boxShadowColors {
+    &-#{$colorLabel} {
+      @include boxShadow(0, 10px, $color);
+    }
+  }
 }
 
 // pointer

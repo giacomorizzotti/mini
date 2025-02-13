@@ -4,17 +4,19 @@
 // FLEXBOXES
 
 .boxes {
+
   display: flex;
   flex-flow: row wrap;
   position: relative;
 
-  width: calc(100% + (var(--gap) * 2));
-  margin: 0 calc( var(--gap) * -1 );
+  // width: calc(100% + (var(--basic-gap) * 2));
+  // margin: 0 calc( var(--basic-gap) * -1 );
+  // padding: var(--gap-y) var(--gap-x); // NEW
+  // width: 100%; // NEW
   --gap: calc( var(--basic-gap) * 1 );
   --gap-y: calc( var(--gap) * 1 );
   --gap-x: calc( var(--gap) * 1 );
   gap: var(--gap-y) var(--gap-x); // NEW
-  padding: var(--padding); // NEW
 
   .box {
 
@@ -29,20 +31,25 @@
         
         @extend .box;
 
-        flex-basis: calc($widthPercentageSM + var(--gap) * -1); // NEW
+        flex-basis: calc($widthPercentageSM + var(--gap-x) * $ratioSM * -1); // NEW
+        max-width: $widthPercentageSM;
         flex-grow: 1;
 
         @include sm {
-          flex-basis: calc($widthPercentageMD + var(--gap) * -1); // NEW
+          flex-basis: calc($widthPercentageMD + var(--gap-x) * $ratioMD * -1); // NEW
+          max-width: $widthPercentageMD;
         }
         @include md {
-          flex-basis: calc($widthPercentageLG + var(--gap) * -1); // NEW
+          flex-basis: calc($widthPercentageLG + var(--gap-x) * $ratioLG * -1); // NEW
+          max-width: $widthPercentageLG;
         }
         @include lg {
-          flex-basis: calc($widthPercentageXL + var(--gap) * -1); // NEW
+          flex-basis: calc($widthPercentageXL + var(--gap-x) * $ratioXL * -1); // NEW
+          max-width: $widthPercentageXL;
         }
         @include xl {
-          flex-basis: calc($widthPercentageXXL + var(--gap) * -1); // NEW
+          flex-basis: calc($widthPercentageXXL + var(--gap-x) * $ratioXXL * -1); // NEW
+          max-width: $widthPercentageXXL;
         }
 
       }
@@ -54,7 +61,9 @@
           &-#{$widthLabel} {
             @extend .box-#{$widthLabel};
             @media (min-width: #{$screenSize}) {
+              flex-grow: 0;
               flex-basis: calc($widthPercentageXXL + var(--gap) * -1); // NEW
+              max-width: $widthPercentageXXL;
             }
           }
         }
