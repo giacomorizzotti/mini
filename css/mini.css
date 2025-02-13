@@ -9456,13 +9456,10 @@ footer#footer .footer-logo img.logo.logotype:hover {
   align-items: stretch !important;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 img.img {
   width: 100%;
-  /*height: auto;*/
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 img.invert, img.inv {
