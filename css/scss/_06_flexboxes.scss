@@ -26,29 +26,29 @@
     flex-basis: 100%;
     flex-basis: fit-content;
     
-    @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL in $boxWidth {
+    @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL, $moltiplicator in $boxWidth {
       &-#{$widthLabel} {
         
         @extend .box;
 
-        flex-basis: calc($widthPercentageSM + var(--gap-x) * $ratioSM * -1); // NEW
+        flex-basis: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1); // NEW
         max-width: $widthPercentageSM;
         flex-grow: 1;
 
         @include sm {
-          flex-basis: calc($widthPercentageMD + var(--gap-x) * $ratioMD * -1); // NEW
+          flex-basis: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1); // NEW
           max-width: $widthPercentageMD;
         }
         @include md {
-          flex-basis: calc($widthPercentageLG + var(--gap-x) * $ratioLG * -1); // NEW
+          flex-basis: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1); // NEW
           max-width: $widthPercentageLG;
         }
         @include lg {
-          flex-basis: calc($widthPercentageXL + var(--gap-x) * $ratioXL * -1); // NEW
+          flex-basis: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1); // NEW
           max-width: $widthPercentageXL;
         }
         @include xl {
-          flex-basis: calc($widthPercentageXXL + var(--gap-x) * $ratioXXL * -1); // NEW
+          flex-basis: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1); // NEW
           max-width: $widthPercentageXXL;
         }
 
