@@ -99,7 +99,7 @@ $colors: //color name, color code, text color over color
 
 $thickness: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
     
-$borderRadius: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px, '15':15px, '20':20px, '25':25px, '30':30px, '50':50px, 'round':50%);
+$borderRadius: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px, '15':15px, '20':20px, '25':25px, '30':30px, '50':50px, 'round':50%);
 
 $sides: (
   't':'top',
