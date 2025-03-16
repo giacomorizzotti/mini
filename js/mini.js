@@ -600,6 +600,8 @@ function buildPageMenu() {
     var autoMenuSection = document.querySelectorAll("section.page-menu");
     var autoMenu = document.querySelectorAll("ul#page-menu");
     if ( autoMenuSection.length > 0 ) {
+        document.body.classList.add('page-menu');
+        /*
         let icon = document.createElement("li");
         icon.classList.add("item");
         icon.classList.add("menu-icon");
@@ -608,6 +610,7 @@ function buildPageMenu() {
         for (let i=0; i<autoMenu.length; i++) {
             autoMenu[0].appendChild(icon);
         }
+        */
     } else {
         for (let i=0; i<autoMenu.length; i++) {
             autoMenu[0].style.display = "none";

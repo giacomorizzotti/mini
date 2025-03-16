@@ -71,10 +71,12 @@ function buildDebugBox() {
 function updateDebugBoxData() {
     // Mobile detection
     let mobileDetectionCont = document.querySelector('#mobile-detection > p');
-    if ( window.mobileCheck() == true ) {
-        mobileDetectionCont.innerHTML = '<span class="grey-text">dev</span> mobile';
-    } else {
-        mobileDetectionCont.innerHTML = '<span class="grey-text">dev</span> desktop';
+    if (émobileDetectionCont) {
+        if ( window.mobileCheck() == true ) {
+            mobileDetectionCont.innerHTML = '<span class="grey-text">dev</span> mobile';
+        } else {
+            mobileDetectionCont.innerHTML = '<span class="grey-text">dev</span> desktop';
+        }
     }
     // Screen size
     let screenSizeCont = document.querySelector('#screen-size > p');

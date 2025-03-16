@@ -32,24 +32,24 @@
         @extend .box;
 
         flex-basis: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1); // NEW
-        max-width: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1);
+        //max-width: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1);
         flex-grow: 1;
 
         @include sm {
           flex-basis: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1); // NEW
-          max-width: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1);
+          //max-width: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1);
         }
         @include md {
           flex-basis: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1); // NEW
-          max-width: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1);
+          //max-width: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1);
         }
         @include lg {
           flex-basis: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1); // NEW
-          max-width: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1);
+          //max-width: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1);
         }
         @include xl {
           flex-basis: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1); // NEW
-          max-width: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1);
+          //max-width: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1);
         }
 
       }

@@ -136,7 +136,7 @@ body.menu-open {
   right: var(--padding);
   transition: all 0.3s ease;
   @include borderRadius(50%);
-  z-index: 99;
+  z-index: 100;
   border: 2px solid var(--white);
   display: flex;
   align-items: center;

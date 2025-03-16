@@ -282,12 +282,12 @@ blockquote {
 // large text
 .L, .l {
   font-size: calc(var(--p) * 1.25)!important;
-  line-height: calc(var(--p) * 2.15)!important;
+  line-height: calc(var(--p) * 1.75)!important;
 }
 // extra large text
 .XL, .xl {
   font-size: calc(var(--p) * 1.5)!important;
-  line-height: calc(var(--p) * 2.5)!important;
+  line-height: calc(var(--p) * 2.25)!important;
 }
 // extra extra large text
 .XXL, .xxl {
