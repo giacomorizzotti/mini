@@ -74,116 +74,42 @@
 }
 
 
-
+.none, .d-none, .display-none {
+  display: none!important;
+}
 .flex, .d-flex, .display-flex {
   display: flex!important;
-  &-sm {
-    @include sm {
-      display: flex!important;
-    }
-  }
-  &-md {
-    @include md {
-      display: flex!important;
-    }
-  }
-  &-lg {
-    @include lg {
-      display: flex!important;
-    }
-  }
-  &-xl {
-    @include xl {
-      display: flex!important;
-    }
-  }
-  &-xxl {
-    @include xxl {
-      display: flex!important;
-    }
-  }
 }
 .block, .d-block, .display-block {
   display: block!important;
-  &-sm {
-    @include sm {
-      display: block!important;
-    }
-  }
-  &-md {
-    @include md {
-      display: block!important;
-    }
-  }
-  &-lg {
-    @include lg {
-      display: block!important;
-    }
-  }
-  &-xl {
-    @include xl {
-      display: block!important;
-    }
-  }
-  &-xxl {
-    @include xxl {
-      display: block!important;
-    }
-  }
 }
 .inline-block, .d-inline-block, .display-inline-block {
   display: inline-block!important;
-  &-sm {
-    @include sm {
-      display: inline-block!important;
-    }
-  }
-  &-md {
-    @include md {
-      display: inline-block!important;
-    }
-  }
-  &-lg {
-    @include lg {
-      display: inline-block!important;
-    }
-  }
-  &-xl {
-    @include xl {
-      display: inline-block!important;
-    }
-  }
-  &-xxl {
-    @include xxl {
-      display: inline-block!important;
-    }
-  }
 }
-.none, .d-none, .display-none {
-  display: none!important;
-  &-sm {
-    @include sm {
-      display: none!important;
-    }
-  }
-  &-md {
-    @include md {
-      display: none!important;
-    }
-  }
-  &-lg {
-    @include lg {
-      display: none!important;
-    }
-  }
-  &-xl {
-    @include xl {
-      display: none!important;
-    }
-  }
-  &-xxl {
-    @include xxl {
-      display: none!important;
+.inline, .d-inline, .display-inline {
+  display: inline!important;
+}
+
+.d, .display {
+  @each $breakpoint, $screenSize in $breakpoints {
+    &-#{$breakpoint} { 
+      @media (min-width: #{$screenSize}) {
+        &-none {
+          display: none!important;
+        }
+        &-flex {
+          display: flex;
+        }
+        &-block {
+          display: block;
+        }
+        &-inline-block {
+          display: inline-block;
+        }
+        &-inline {
+          display: inline;
+        }
+      }
     }
   }
 }
@@ -194,47 +120,13 @@
       order: #{$order};
     }
   }
-  &-sm {
-    @include sm {
-      @each $order in $orders {
-        &-#{$order} {
-          order: #{$order};
-        }
-      }
-    }
-  }
-  &-md {
-    @include md {
-      @each $order in $orders {
-        &-#{$order} {
-          order: #{$order};
-        }
-      }
-    }
-  }
-  &-lg {
-    @include lg {
-      @each $order in $orders {
-        &-#{$order} {
-          order: #{$order};
-        }
-      }
-    }
-  }
-  &-xl {
-    @include xl {
-      @each $order in $orders {
-        &-#{$order} {
-          order: #{$order};
-        }
-      }
-    }
-  }
-  &-xxl {
-    @include xxl {
-      @each $order in $orders {
-        &-#{$order} {
-          order: #{$order};
+  @each $breakpoint, $screenSize in $breakpoints {
+    &-#{$breakpoint} { 
+      @media (min-width: #{$screenSize}) {
+        @each $order in $orders {
+          &-#{$order} {
+            order: #{$order};
+          }
         }
       }
     }
@@ -242,7 +134,6 @@
 }
 
 .flex {
-
   @each $grow in $flex {
     &-#{$grow} {
       flex: #{$grow};

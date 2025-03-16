@@ -117,27 +117,27 @@ $screen-xxl-min: 1920px;
 }
 
 @include smDown {
-  .sm-up {
+  .sm-up, .sm {
     display: none!important;
   }
 }
 @include mdDown {
-  .md-up {
+  .md-up, .md {
     display: none!important;
   }
 }
 @include lgDown {
-  .lg-up {
+  .lg-up, .lg {
     display: none!important;
   }
 }
 @include xlDown {
-  .xl-up {
+  .xl-up, .xl {
     display: none!important;
   }
 }
 @include xxlDown {
-  .xxl-up {
+  .xxl-up, .xxl {
     display: none!important;
   }
 }

@@ -69,7 +69,7 @@ $colors: //color name, color code, text color over color
   "danger" var(--danger) var(--white),
   "bad" var(--bad) var(--white),
   "acid-green" var(--acid-green) var(--white),
-  "ginger-bread" var(--gingerbread) var(--white),
+  "gingerbread" var(--gingerbread) var(--white),
 
   "mini" var(--mini-color) var(--white),
   "mini-dark" var(--mini-color-dark) var(--white),
@@ -136,7 +136,8 @@ $marginThickness: (
   '25':calc(var(--margin) * 2.5), 
   '3':calc(var(--margin) * 3), 
   '4':calc(var(--margin) * 4), 
-  '5':calc(var(--margin) * 5)
+  '5':calc(var(--margin) * 5), 
+  'auto':auto
 );
 
 $paddingThickness: (

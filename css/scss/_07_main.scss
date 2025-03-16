@@ -34,18 +34,6 @@ img {
 .space-bot {
   padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
 }
-//body.scroll {
-//  .space-top {
-//    padding-top: calc((var(--scroll-menu-toggle-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-//  }
-//  .space-top-bot {
-//    padding-top: calc((var(--scroll-menu-toggle-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-//    padding-bottom: calc((var(--scroll-menu-toggle-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-//  }
-//  .space-bot {
-//    padding-bottom: calc((var(--scroll-menu-toggle-height)) + (var(--margin) * 2) + (var(--padding) * 2))!important;
-//  }
-//}
 
 // turn top
 .turn-top {
@@ -94,60 +82,81 @@ hr {
 }
 
 // fixed height
-.fh, .full-height {
+.fh, .height-100 {
   min-height: 100vh; // Fallback for browsers that do not support Custom Properties
   min-height: 100dvh;
 }
-.fhf, .full-height-fixed {
+.fhf, .height-100-fixed {
   height: 100vh; // Fallback for browsers that do not support Custom Properties
   height: 100dvh;
 }
-.hh, .hfh, .half-height, .half-full-height {
+.hh, .hfh, .height-50 {
   min-height: 50vh; // Fallback for browsers that do not support Custom Properties
   min-height: 50dvh;
 }
-.hhf, .hfhf, .half-height-fixed, .half-full-height-fixed {
+.hhf, .hfhf, .height-50-fixed {
   height: 50vh; // Fallback for browsers that do not support Custom Properties
   height: 50dvh;
 }
-.one-quarter-height, .one-quarter-full-height {
+.one-quarter-height, .height-25 {
   min-height: 25vh; // Fallback for browsers that do not support Custom Properties
   min-height: 25dvh;
 }
-.one-quarter-height-fixed, .one-quarter-full-height-fixed {
+.one-quarter-height-fixed, .height-25-fixed {
   height: 25vh; // Fallback for browsers that do not support Custom Properties
   height: 25dvh;
 }
-.three-quarter-height, .three-quarter-full-height {
+.three-quarter-height, .height-75 {
   min-height: 75vh; // Fallback for browsers that do not support Custom Properties
   min-height: 75dvh;
 }
-.three-quarter-height-fixed, .three-quarter-full-height-fixed {
+.three-quarter-height-fixed, .height-75 {
   height: 75vh; // Fallback for browsers that do not support Custom Properties
   height: 75dvh;
 }
-.one-third-height, .one-third-full-height {
+.one-third-height, .height-33 {
   min-height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
   min-height: 33.3333333dvh;
 }
-.one-third-height-fixed, .one-third-full-height-fixed {
+.one-third-height-fixed, .height-33-fixed {
   height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
   height: 33.3333333dvh;
 }
-.two-third-height, .two-third-full-height {
+.two-third-height, .height-66 {
   min-height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
   min-height: 66.666666dvh;
 }
-.two-third-height-fixed, .two-third-full-height-fixed {
+.two-third-height-fixed, .height-66-fixed {
   height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
   height: 66.666666dvh;
 }
 
-.square {
+.square, .ratio-1-1 {
   aspect-ratio: 1/1;
 }
-.full-hd {
+.full-hd, .ratio-16-9 {
   aspect-ratio: 16/9;
+}
+.ratio-16-10 {
+  aspect-ratio: 16/10;
+}
+.ratio-3-2 {
+  aspect-ratio: 3/2;
+}
+.ratio-3-1 {
+  aspect-ratio: 2/1;
+}
+.ratio-9-16 {
+  aspect-ratio: 9/16;
+}
+.ratio-10-16 {
+  aspect-ratio: 10/16;
+}
+.ratio-2-3 {
+  aspect-ratio: 2/3;
+}
+.ratio-1-2 {
+  aspect-ratio: 1/2;
 }
 
 .mh-100 {
@@ -184,20 +193,6 @@ hr {
 }
 .fixed, .position-fixed {
   position: fixed;
-}
-
-// horizontal positioning
-.h-left, .h-start, {
-  margin-left: 0!important;
-  margin-right: auto!important;
-}
-.h-cent {
-  margin-left: auto!important;
-  margin-right: auto!important;
-}
-.h-right, .h-end {
-  margin-left: auto!important;
-  margin-right: 0!important;
 }
 
 // vertical positioning
