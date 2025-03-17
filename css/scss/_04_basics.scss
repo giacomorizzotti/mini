@@ -1,6 +1,4 @@
-
 // BASICS
-
 
 // fluid typography
 @use 'sass:math';
@@ -28,9 +26,6 @@
 @function strip-unit($value) {
   @return math.div( $value, ($value * 0 + 1) );
 }
-//@function strip-unit($value) {
-//  @return $value / ($value * 0 + 1);
-//}
 
 :root {
   @include fluid-type(--font-size, $min_screen, $max_screen, $min_font, $max_font, $mob_font);
@@ -75,6 +70,7 @@ html {
     }
   }
 }
+
 body.menu-open {
   .sheet {
     padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2 ) 0 ;
@@ -144,7 +140,6 @@ body.menu-open {
   &:hover {
     @include borderRadius(5px);
   }
-
   p {
     font-weight:700;
     text-align: center;
@@ -155,7 +150,6 @@ body.menu-open {
     line-height: 1;
     width: 100%;
   }
-
 }
 
 body.top .top-link {
@@ -183,9 +177,7 @@ body.scroll .top-link {
   opacity: 1;
   @include borderRadius(0);
   scale: 1;
-
   transition: transform 0.15s ease-in, opacity 0.15s ease-in, filter 0.15s ease-in;
-
   img.loader-logo {
     display: block;
     width: 100px;
@@ -195,17 +187,14 @@ body.scroll .top-link {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
   &.done {
     transform: translate(0, -200%);
     opacity: 0;
     filter: blur(320px);
   }
-
   &.gone {
     display: none;
   }
-
 }
 
 .space-bot-action {

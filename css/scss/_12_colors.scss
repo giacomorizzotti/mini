@@ -1,4 +1,3 @@
-
 // COLORS
 
 @each $colorname, $colorcode, $colortext in $colors {
@@ -233,7 +232,7 @@
 .grad-t2f {
   @include gradient(135deg, $t2f);
 }
-.grad-main {
+.grad-main, .grad-first {
   @include gradient(135deg, $gradMain);
 }
 .grad-second {

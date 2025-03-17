@@ -1,6 +1,3 @@
-
-// MAIN STRUCTURE
-
 // FLEXBOXES
 
 .boxes {
@@ -8,11 +5,6 @@
   display: flex;
   flex-flow: row wrap;
   position: relative;
-
-  // width: calc(100% + (var(--basic-gap) * 2));
-  // margin: 0 calc( var(--basic-gap) * -1 );
-  // padding: var(--gap-y) var(--gap-x); // NEW
-  // width: 100%; // NEW
   --gap: calc( var(--basic-gap) * 1 );
   --gap-y: calc( var(--gap) * 1 );
   --gap-x: calc( var(--gap) * 1 );
@@ -28,28 +20,21 @@
     
     @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL, $moltiplicator in $boxWidth {
       &-#{$widthLabel} {
-        
         @extend .box;
-
         flex-basis: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1); // NEW
-        //max-width: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1);
         flex-grow: 1;
 
         @include sm {
           flex-basis: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1); // NEW
-          //max-width: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1);
         }
         @include md {
           flex-basis: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1); // NEW
-          //max-width: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1);
         }
         @include lg {
           flex-basis: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1); // NEW
-          //max-width: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1);
         }
         @include xl {
           flex-basis: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1); // NEW
-          //max-width: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1);
         }
 
       }
@@ -269,9 +254,3 @@
     align-items: stretch!important;
   }
 }
-
-//.box:has( > .boxes) {
-//  margin-top: 0!important;
-//  margin-bottom: 0!important;
-//  padding: 0!important;
-//}

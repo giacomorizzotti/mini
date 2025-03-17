@@ -1,8 +1,6 @@
-
 // DEBUG TOOLS STYLING
 
 :root:has(body.mini.high-contrast) {
-
       --main-color: black;
       --main-color-dark: black;
       --second-color: black;
@@ -28,7 +26,6 @@
       --light-grey: white;
       --false-white: white;
       --white: white;
-
 }
 
 html:has(body.mini.font-l) {

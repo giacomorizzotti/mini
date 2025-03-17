@@ -1,12 +1,12 @@
-
 // hidden & shown
+
 .hidden {
     display: block!important;
     opacity: 0!important;
     visibility: hidden!important;
     width: 0!important;
     height: 0!important;
-    transition: all 0.15s ease;
+    //transition: all 0.15s ease;
     margin:0!important;
     padding:0!important;
     min-width: 0!important;
@@ -14,50 +14,53 @@
     overflow: hidden;
     border:0!important;
 }
+
 .shown {
     opacity: 1!important;
     visibility: visible!important;
-    transition: all 0.15s ease;
+    //transition: all 0.15s ease;
 }
+
 body.top {
     .top-hidden, .scroll-shown {
-    display: block!important;
-    opacity: 0!important;
-    visibility: hidden!important;
-    width: 0!important;
-    height: 0!important;
-    transition: all 0.15s ease;
-    margin:0!important;
-    padding:0!important;
-    min-width: 0!important;
-    min-height: 0!important;
-    overflow: hidden;
-    border:0!important;
+        display: block!important;
+        opacity: 0!important;
+        visibility: hidden!important;
+        width: 0!important;
+        height: 0!important;
+        //transition: all 0.15s ease;
+        margin:0!important;
+        padding:0!important;
+        min-width: 0!important;
+        min-height: 0!important;
+        overflow: hidden;
+        border:0!important;
     }
     .top-shown, .scroll-hidden {
-    opacity: 1!important;
-    visibility: visible!important;
-    transition: all 0.15s ease;
+        opacity: 1!important;
+        visibility: visible!important;
+        //transition: all 0.15s ease;
     }
 }
+
 body.scroll {
     .top-shown, .scroll-hidden {
-    display: block!important;
-    opacity: 0!important;
-    visibility: hidden!important;
-    width: 0!important;
-    height: 0!important;
-    transition: all 0.15s ease;
-    margin:0!important;
-    padding:0!important;
-    min-width: 0!important;
-    min-height: 0!important;
-    overflow: hidden;
-    border:0!important;
+        display: block!important;
+        opacity: 0!important;
+        visibility: hidden!important;
+        width: 0!important;
+        height: 0!important;
+        //transition: all 0.15s ease;
+        margin:0!important;
+        padding:0!important;
+        min-width: 0!important;
+        min-height: 0!important;
+        overflow: hidden;
+        border:0!important;
     }
     .top-hidden, .scroll-shown {
-    opacity: 1!important;
-    visibility: visible!important;
-    transition: all 0.15s ease;
+        opacity: 1!important;
+        visibility: visible!important;
+        //transition: all 0.15s ease;
     }
 }

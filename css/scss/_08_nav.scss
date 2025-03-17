@@ -1,4 +1,3 @@
-
 // MENUs STYLING
 
 body {
@@ -346,7 +345,6 @@ body {
       }
     }
     .sheet {
-      //padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2) 0 ;
       padding: calc((var(--logo-height)) + var(--padding) * 2 + var(--padding) * 2 + var(--padding) * 1 ) 0 ;
         
       main {
@@ -406,7 +404,6 @@ body {
 
   // page menu
   ul#page-menu {
-    //display: none;
     @include mdDown {
       display: flex;
       transform: rotate(-90deg) translate(0, -100%);
@@ -817,20 +814,6 @@ body {
             width: 100%;
             background-color: var(--link-color);
           }
-        }
-      }
-    }
-  }
-
-  // page menu
-  ul#page-menu {
-    li.item, li.menu-item {
-      a {
-        &::after {
-        }
-      }
-      &.active > a, &.current-menu-item > a, &.current-page-parent > a, a.active, &:hover > a {
-        &::after {
         }
       }
     }
