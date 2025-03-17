@@ -22,19 +22,24 @@
       &-#{$widthLabel} {
         @extend .box;
         flex-basis: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1); // NEW
+        max-width: $widthPercentageSM;
         flex-grow: 1;
 
         @include sm {
           flex-basis: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1); // NEW
+          max-width: $widthPercentageMD;
         }
         @include md {
           flex-basis: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1); // NEW
+          max-width: $widthPercentageLG;
         }
         @include lg {
           flex-basis: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1); // NEW
+          max-width: $widthPercentageXL;
         }
         @include xl {
           flex-basis: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1); // NEW
+          max-width: $widthPercentageXXL;
         }
 
       }
