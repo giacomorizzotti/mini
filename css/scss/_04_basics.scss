@@ -73,7 +73,7 @@ html {
 
 body.menu-open {
   .sheet {
-    padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2 ) 0 ;
+    //padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2 ) 0 ;
     main {
       -webkit-border-top-right-radius: 15px;
       -webkit-border-bottom-right-radius: 15px;

@@ -57,7 +57,6 @@ if (slider) {
 
   let dragStop = () => {
     isDragging = false;
-
     slider.classList.remove("dragging");
   };
 

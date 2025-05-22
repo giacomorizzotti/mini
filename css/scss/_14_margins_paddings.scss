@@ -1,5 +1,31 @@
 // MARGINS & PADDINGS
 
+$marginThickness: (
+  '-1':calc(var(--margin) * -1), 
+  '0':0, 
+  '05':calc(var(--margin) * 0.5), 
+  '1':calc(var(--margin) * 1), 
+  '15':calc(var(--margin) * 1.5), 
+  '2':calc(var(--margin) * 2), 
+  '25':calc(var(--margin) * 2.5), 
+  '3':calc(var(--margin) * 3), 
+  '4':calc(var(--margin) * 4), 
+  '5':calc(var(--margin) * 5), 
+  'auto':auto
+);
+
+$paddingThickness: (
+  '0':0, 
+  '05':calc(var(--padding) * 0.5), 
+  '1':calc(var(--padding) * 1), 
+  '15':calc(var(--padding) * 1.5), 
+  '2':calc(var(--padding) * 2), 
+  '25':calc(var(--padding) * 2.5), 
+  '3':calc(var(--padding) * 3), 
+  '4':calc(var(--padding) * 4), 
+  '5':calc(var(--padding) * 5)
+);
+
 // margins
 .m {
   @each $marginLabel, $margin in $marginThickness {

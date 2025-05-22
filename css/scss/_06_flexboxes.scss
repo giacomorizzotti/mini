@@ -1,5 +1,43 @@
 // FLEXBOXES
 
+.container {
+
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  max-width: calc( var(--max_screen) * 0.75 );
+  @include xxl {
+    max-width: calc( var(--max_screen) * 1 );
+  }
+
+  &.fw, &.full-width {
+    @include width(100%);
+
+    &.forced {
+      @include width(100vw);
+      left: 50%;
+      transform: translate(calc(-50%), 0);
+    }
+
+  }
+
+  &.thin {
+    max-width: calc( var(--max_screen) * 0.5 );
+    @include xxl {
+      max-width: calc( var(--max_screen) * 0.75 );
+    }
+  }
+
+  &.wide {
+    max-width: calc( var(--max_screen) * 1 );
+    @include xxl {
+      max-width: calc( var(--max_screen) * 1.25 );
+    }
+  }
+
+}
+
 .boxes {
 
   display: flex;
@@ -23,7 +61,8 @@
         @extend .box;
         flex-basis: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1); // NEW
         max-width: $widthPercentageSM;
-        flex-grow: 1;
+        //flex-grow: 1;
+        flex-grow: 0;
 
         @include sm {
           flex-basis: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1); // NEW
@@ -47,12 +86,11 @@
 
     @each $breakpoint, $screenSize in $breakpoints {
       &-#{$breakpoint} {
-        @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL in $boxWidth {
+        @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL, $moltiplicator in $boxWidth {
           &-#{$widthLabel} {
             @extend .box-#{$widthLabel};
             @media (min-width: #{$screenSize}) {
-              flex-grow: 0;
-              flex-basis: calc($widthPercentageXXL + var(--gap) * -1); // NEW
+              flex-basis: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1); // NEW
               max-width: $widthPercentageXXL;
             }
           }
@@ -63,199 +101,3 @@
   }
 }
 
-
-.none, .d-none, .display-none {
-  display: none!important;
-}
-.flex, .d-flex, .display-flex {
-  display: flex!important;
-}
-.block, .d-block, .display-block {
-  display: block!important;
-}
-.inline-block, .d-inline-block, .display-inline-block {
-  display: inline-block!important;
-}
-.inline, .d-inline, .display-inline {
-  display: inline!important;
-}
-
-.d, .display {
-  @each $breakpoint, $screenSize in $breakpoints {
-    &-#{$breakpoint} { 
-      @media (min-width: #{$screenSize}) {
-        &-none {
-          display: none!important;
-        }
-        &-flex {
-          display: flex;
-        }
-        &-block {
-          display: block;
-        }
-        &-inline-block {
-          display: inline-block;
-        }
-        &-inline {
-          display: inline;
-        }
-      }
-    }
-  }
-}
-
-.order {
-  @each $order in $orders {
-    &-#{$order} {
-      order: #{$order};
-    }
-  }
-  @each $breakpoint, $screenSize in $breakpoints {
-    &-#{$breakpoint} { 
-      @media (min-width: #{$screenSize}) {
-        @each $order in $orders {
-          &-#{$order} {
-            order: #{$order};
-          }
-        }
-      }
-    }
-  }
-}
-
-.flex {
-  @each $grow in $flex {
-    &-#{$grow} {
-      flex: #{$grow};
-      @each $shrink in $flex {
-        &-#{$shrink} {
-          flex: #{$shrink};
-        }
-        @each $basis in $flex {
-          &-#{$basis} {
-            flex: #{$basis};
-          }
-        }
-      }
-    }
-  }
-
-  &-direction {
-    &-row {
-      flex-direction: row!important;
-    }
-    &-row-rev, &-row-reverse {
-      flex-direction: row-reverse!important;
-    }
-    &-col, &-column {
-      flex-direction: column!important;
-    }
-    &-col-rev, &-col-reverse, &-column-rev, &-column-reverse {
-      flex-direction: column-reverse!important;
-    }
-  }
-
-  &-wrap {
-    flex-wrap: wrap!important;
-  }
-  &-no-wrap, &-nowrap {
-    flex-wrap: nowrap!important;
-  }
-
-  &-flow {
-    &-row {
-      &-wrap {
-        flex-flow: row wrap;
-      }
-      &-nowrap {
-        flex-flow: row nowrap;
-      }
-    }
-    &-column {
-      &-wrap {
-        flex-flow: column wrap;
-      }
-      &-nowrap {
-        flex-flow: column nowrap;
-      }
-    }
-  }
-  
-}
-
-.gap, .g {
-  --gap: calc( var(--basic-gap) * 1 );
-  @each $gap-label, $gap in $multiplier {
-    &-#{$gap-label} {
-      --gap: calc( var(--basic-gap) * #{$gap} );
-    }
-  }
-  &y, &-y {
-    @each $gap-label, $gap in $multiplier {
-      &-#{$gap-label} {
-        --gap-y: calc( var(--basic-gap) * #{$gap} );
-      }
-    }
-  }
-  &x, &-x {
-    @each $gap-label, $gap in $multiplier {
-      &-#{$gap-label} {
-        --gap-x: calc( var(--basic-gap) * #{$gap} );
-      }
-    }
-  }
-}
-
-.justify-content, .jc {
-  &-start {
-    justify-content: flex-start!important;
-  }
-  &-end {
-    justify-content: flex-end!important;
-  }
-  &-center {
-    justify-content: center!important;
-  }
-  &-between {
-    justify-content: space-between!important;
-  }
-  &-around {
-    justify-content: space-around!important;
-  }
-}
-
-.align-content, .ac {
-  &-start {
-    align-content: flex-start!important;
-  }
-  &-end {
-    align-content: flex-end!important;
-  }
-  &-center {
-    align-content: center!important;
-  }
-  &-stretch {
-    align-content: stretch!important;
-  }
-  &-between {
-    align-content: space-between!important;
-  }
-  &-around {
-    align-content: space-around!important;
-  }
-}
-
-.align-items, .ai {
-  &-start {
-    align-items: flex-start!important;
-  }
-  &-end {
-    align-items: flex-end!important;
-  }
-  &-center {
-    align-items: center!important;
-  }
-  &-stretch {
-    align-items: stretch!important;
-  }
-}

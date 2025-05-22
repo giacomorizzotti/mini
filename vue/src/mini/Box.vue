@@ -1,0 +1,94 @@
+<script setup>
+  import { computed } from 'vue'
+  const props = defineProps({
+    size: {
+      type: [Number, String],
+      default: null
+    }
+  })
+  const boxClass = computed(() => props.size ? `box-${props.size}`: `box`)
+</script>
+
+<template>
+  <div :class="boxClass">
+    <slot />
+  </div>
+</template>
+
+<style lang="scss" scoped>
+$boxWidth: 
+"8" 100% 50% 33.333333% 16.666666% 8.333333% 12 6 4 1.999999 0.999999 0.926666,
+"10" 100% 50% 20% 20% 10% 12 6 2.4 2.4 1.2 0.9,
+"12" 100% 50% 25% 25% 12.5% 12 6 3 3 1.5 0.875,
+"16" 100% 50% 33.333333% 16.666666% 16.666666% 12 6 4 1.999999 1.999999 0.84333333,
+"20" 100% 50% 50% 20% 20% 12 6 6 2.4 2.4 0.8,
+"25" 100% 50% 50% 25% 25% 12 6 6 3 3 0.75,
+"30" 100% 50% 50% 30% 30% 12 6 6 4 4 0.7,
+"33" 100% 50% 33.333333% 33.333333% 33.333333% 12 6 4 4 4 0.666666,
+"40" 100% 50% 40% 40% 40% 12 6 4.8 4.8 4.8 0.6,
+"50" 100% 50% 50% 50% 50% 12 6 6 6 6 0.5,
+"60" 100% 50% 60% 60% 60% 12 6 7.2 7.2 7.2 0.4,
+"66" 100% 50% 66.666666% 66.666666% 66.666666% 12 6 8 8 8 0.333333,
+"70" 100% 100% 50% 70% 70% 12 12 6 8.4 8.4 0.3,
+"75" 100% 100% 50% 75% 75% 12 12 6 9 9 0.25,
+"80" 100% 100% 50% 80% 80% 12 12 6 9.6 9.6 0.2,
+"88" 100% 100% 75% 75% 87.5% 12 12 9 9 10.5 0.125,
+"90" 100% 100% 80% 80% 90% 12 12 9.6 9.6 10.8 0.1,
+"100" 100% 100% 100% 100% 100% 12 12 12 12 12 0,
+;
+$breakpoints:
+'zero' 0,
+'sm' var(--screen-sm),
+'md' var(--screen-md),
+'lg' var(--screen-lg),
+'xl' var(--screen-xl),
+'xxl' var(--screen-xxl),
+;
+.box {
+  position: relative;
+  margin: 0; // NEW
+  padding: calc(var(--padding) * 1); // NEW
+  flex-basis: 100%;
+  flex-basis: fit-content;
+  @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL, $moltiplicator in $boxWidth {
+    &-#{$widthLabel} {
+      @extend .box;
+      flex-basis: calc($widthPercentageSM + var(--gap-x) * $moltiplicator * -1); // NEW
+      max-width: $widthPercentageSM;
+      //flex-grow: 1;
+      flex-grow: 0;
+
+      @media only screen and (min-width: 576px) {
+        flex-basis: calc($widthPercentageMD + var(--gap-x) * $moltiplicator * -1); // NEW
+        max-width: $widthPercentageMD;
+      }
+      @media only screen and (min-width: 768px) {
+        flex-basis: calc($widthPercentageLG + var(--gap-x) * $moltiplicator * -1); // NEW
+        max-width: $widthPercentageLG;
+      }
+      @media only screen and (min-width: 992px) {
+        flex-basis: calc($widthPercentageXL + var(--gap-x) * $moltiplicator * -1); // NEW
+        max-width: $widthPercentageXL;
+      }
+      @media only screen and (min-width: 1200px) {
+        flex-basis: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1); // NEW
+        max-width: $widthPercentageXXL;
+      }
+
+    }
+  }
+  @each $breakpoint, $screenSize in $breakpoints {
+    &-#{$breakpoint} {
+      @each $widthLabel, $widthPercentageSM, $widthPercentageMD, $widthPercentageLG, $widthPercentageXL, $widthPercentageXXL, $ratioSM, $ratioMD, $ratioLG, $ratioXL, $ratioXXL, $moltiplicator in $boxWidth {
+        &-#{$widthLabel} {
+          @extend .box-#{$widthLabel};
+          @media (min-width: #{$screenSize}) {
+            flex-basis: calc($widthPercentageXXL + var(--gap-x) * $moltiplicator * -1); // NEW
+            max-width: $widthPercentageXXL;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

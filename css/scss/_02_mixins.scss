@@ -23,11 +23,11 @@ $boxWidth:
 
 $breakpoints:
 'zero' 0,
-'sm' $screen-sm-min,
-'md' $screen-md-min,
-'lg' $screen-lg-min,
-'xl' $screen-xl-min,
-'xxl' $screen-xxl-min,
+'sm' var(--screen-sm),
+'md' var(--screen-md),
+'lg' var(--screen-lg),
+'xl' var(--screen-xl),
+'xxl' var(--screen-xxl),
 ;
 
 $orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
@@ -97,9 +97,6 @@ $colors: //color name, color code, text color over color
 
   "dt" var(--doingthings-color) var(--black);
 
-$thickness: ('1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
-    
-$borderRadius: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px, '15':15px, '20':20px, '25':25px, '30':30px, '50':50px, 'round':50%);
 
 $sides: (
   't':'top',
@@ -110,104 +107,12 @@ $sides: (
   'l':'left',
 );
 
-$spaceThickness: (
-  '05':calc(var(--baseline) * 0.5), 
-  '1':calc(var(--baseline) * 1), 
-  '15':calc(var(--baseline) * 1.5), 
-  '2':calc(var(--baseline) * 2), 
-  '25':calc(var(--baseline) * 2.5), 
-  '3':calc(var(--baseline) * 3), 
-  '4':calc(var(--baseline) * 4), 
-  '5':calc(var(--baseline) * 5), 
-  '6':calc(var(--baseline) * 6), 
-  '10':calc(var(--baseline) * 10), 
-  '20':calc(var(--baseline) * 20)
-);
-
-$sepThickness: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
-
-$marginThickness: (
-  '-1':calc(var(--margin) * -1), 
-  '0':0, 
-  '05':calc(var(--margin) * 0.5), 
-  '1':calc(var(--margin) * 1), 
-  '15':calc(var(--margin) * 1.5), 
-  '2':calc(var(--margin) * 2), 
-  '25':calc(var(--margin) * 2.5), 
-  '3':calc(var(--margin) * 3), 
-  '4':calc(var(--margin) * 4), 
-  '5':calc(var(--margin) * 5), 
-  'auto':auto
-);
-
-$paddingThickness: (
-  '0':0, 
-  '05':calc(var(--padding) * 0.5), 
-  '1':calc(var(--padding) * 1), 
-  '15':calc(var(--padding) * 1.5), 
-  '2':calc(var(--padding) * 2), 
-  '25':calc(var(--padding) * 2.5), 
-  '3':calc(var(--padding) * 3), 
-  '4':calc(var(--padding) * 4), 
-  '5':calc(var(--padding) * 5)
-);
-
-$ten: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-// gradients
-$f2s: var(--main-color) 0%, var(--second-color) 100%;
-$f2t: var(--main-color) 0%, var(--third-color) 100%;
-$s2t: var(--second-color) 0%, var(--third-color) 100%;
-$t2f: var(--third-color) 0%, var(--fourth-color) 100%;
-$gradMain: var(--main-color) 0%, var(--main-color-dark) 100%;
-$gradSecond: var(--second-color) 0%, var(--second-color-dark) 100%;
-$gradThird: var(--third-color) 0%, var(--third-color-dark) 100%;
-$gradFourth: var(--fourth-color) 0%, var(--fourth-color-dark) 100%;
-$gradFalseWhiteToWhite: var(--white) 0%, var(--false-white) 100%;
-
-@mixin gradient($direction, $list) {
-  background: -webkit-linear-gradient($direction, $list)!important;
-  background: -moz-linear-gradient($direction, $list)!important;
-  background: -o-linear-gradient($direction, $list)!important;
-  background: linear-gradient($direction, $list)!important;
-}
-
-// border radius
-@mixin borderRadius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
 
 // text shadow
 @mixin textShadow($distance, $range, $color) {
   text-shadow: $distance $distance $range $color;
 }
 
-// box shadow
-
-@mixin boxShadow($distance, $range, $color) {
-  -webkit-box-shadow: $distance $distance $range 0 $color;
-  -moz-box-shadow: $distance $distance $range 0 $color;
-  box-shadow: $distance $distance $range 0 $color;
-}
-$boxShadowAreas: (
-  '3':3px,
-  's':3px,
-  '5':5px,
-  '10':10px,
-  '15':15px,
-  '20':20px,
-  'l':20px,
-);
-$boxShadowColors: (
-  'lightest':rgb( 0 0 0 / 7.5% ),
-  'lighter':rgb( 0 0 0 / 10% ),
-  'light':rgb( 0 0 0 / 12.5% ),
-  'dark':rgb( 0 0 0 / 25% ),
-  'darker': rgb( 0 0 0 / 45% ),
-  'darkest': rgb( 0 0 0 / 65% ),
-);
 
 // width - min & max
 @mixin width($width) {

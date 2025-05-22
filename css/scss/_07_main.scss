@@ -1,5 +1,21 @@
 // MAIN
 
+$sepThickness: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px);
+$spaceThickness: (
+  '05':calc(var(--baseline) * 0.5), 
+  '1':calc(var(--baseline) * 1), 
+  '15':calc(var(--baseline) * 1.5), 
+  '2':calc(var(--baseline) * 2), 
+  '25':calc(var(--baseline) * 2.5), 
+  '3':calc(var(--baseline) * 3), 
+  '4':calc(var(--baseline) * 4), 
+  '5':calc(var(--baseline) * 5), 
+  '6':calc(var(--baseline) * 6), 
+  '10':calc(var(--baseline) * 10), 
+  '20':calc(var(--baseline) * 20)
+);
+$ten: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
 // images
 img {
   &.img {
@@ -24,19 +40,23 @@ img {
 
 // spacing
 .space-top {
-  padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+  //padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+  padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
 }
 .space-top-bot {
-  padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
-  padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+  //padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+  //padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+  padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
+  padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
 }
 .space-bot {
-  padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+  //padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+  padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
 }
 
 // turn top
 .turn-top {
-  margin-top: calc( ( (var(--menu-toggle-height)) + (var(--margin) * 2) + (var(--padding) * 2) ) * -1 )!Important;
+  margin-top: calc( ( (var(--menu-toggle-height)) + (var(--margin) * 2) * -1 ))!Important;
 }
 
 // spacing
@@ -219,8 +239,29 @@ hr {
 *:has( > .v-top), *:has( > .v-cent), *:has( > .v-bot), *:has( > .vTop), *:has( > .vCent), *:has( > .vBot) {
   position:relative;
 }
-
 // box shadow
+@mixin boxShadow($distance, $range, $color) {
+  -webkit-box-shadow: $distance $distance $range 0 $color;
+  -moz-box-shadow: $distance $distance $range 0 $color;
+  box-shadow: $distance $distance $range 0 $color;
+}
+$boxShadowAreas: (
+  '3':3px,
+  's':3px,
+  '5':5px,
+  '10':10px,
+  '15':15px,
+  '20':20px,
+  'l':20px,
+);
+$boxShadowColors: (
+  'lightest':rgb( 0 0 0 / 7.5% ),
+  'lighter':rgb( 0 0 0 / 10% ),
+  'light':rgb( 0 0 0 / 12.5% ),
+  'dark':rgb( 0 0 0 / 25% ),
+  'darker': rgb( 0 0 0 / 45% ),
+  'darkest': rgb( 0 0 0 / 65% ),
+);
 .box-shadow, .bs {
   @include boxShadow(0, 10px, rgb( 0 0 0 / 17.5% ));
   &-hover {

@@ -1,19 +1,21 @@
-// STRUCTURE
+<script setup>
+</script>
 
-.none, .d-none, .display-none {
-  display: none!important;
-}
-.flex, .d-flex, .display-flex {
-  display: flex!important;
-}
-.block, .d-block, .display-block {
-  display: block!important;
-}
-.inline-block, .d-inline-block, .display-inline-block {
-  display: inline-block!important;
-}
-.inline, .d-inline, .display-inline {
-  display: inline!important;
+<template>
+  <div class="boxes">
+    <slot />
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.boxes {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  --gap: calc( var(--basic-gap) * 1 );
+  --gap-y: calc( var(--gap) * 1 );
+  --gap-x: calc( var(--gap) * 1 );
+  gap: var(--gap-y) var(--gap-x); // NEW
 }
 
 $breakpoints:
@@ -24,36 +26,9 @@ $breakpoints:
 'xl' var(--screen-xl),
 'xxl' var(--screen-xxl),
 ;
-
 $orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-
 $flex: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-
 $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 10, "20" 20;
-
-.d, .display {
-  @each $breakpoint, $screenSize in $breakpoints {
-    &-#{$breakpoint} { 
-      @media (min-width: #{$screenSize}) {
-        &-none {
-          display: none!important;
-        }
-        &-flex {
-          display: flex;
-        }
-        &-block {
-          display: block;
-        }
-        &-inline-block {
-          display: inline-block;
-        }
-        &-inline {
-          display: inline;
-        }
-      }
-    }
-  }
-}
 
 .order {
   @each $order in $orders {
@@ -210,3 +185,4 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
     align-items: stretch!important;
   }
 }
+</style>
