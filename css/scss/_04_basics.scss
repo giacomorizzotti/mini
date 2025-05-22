@@ -131,14 +131,18 @@ body.menu-open {
   bottom: var(--padding);
   right: var(--padding);
   transition: all 0.3s ease;
-  @include borderRadius(50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   z-index: 100;
   border: 2px solid var(--white);
   display: flex;
   align-items: center;
   align-content: center;  
   &:hover {
-    @include borderRadius(5px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
   p {
     font-weight:700;
@@ -175,7 +179,9 @@ body.scroll .top-link {
   background: var(--white);
   z-index: 109;
   opacity: 1;
-  @include borderRadius(0);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   scale: 1;
   transition: transform 0.15s ease-in, opacity 0.15s ease-in, filter 0.15s ease-in;
   img.loader-logo {

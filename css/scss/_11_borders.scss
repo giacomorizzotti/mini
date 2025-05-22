@@ -19,7 +19,16 @@ $borderRadius: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px, '
       border-width: $bordWidth!important;
     }
   }
-  
+/*
+$sides: (
+  't':'top',
+  'e':'right',
+  'r':'right',
+  'b':'bottom',
+  's':'left',
+  'l':'left',
+);
+*/
   //@each $sideLabel, $side in $sides {
   //  &-#{$sideLabel} {
   //    @extend .border;

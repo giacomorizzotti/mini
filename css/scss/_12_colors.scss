@@ -1,4 +1,5 @@
 // COLORS
+
 $colors: //color name, color code, text color over color
   "wh" var(--white) var(--black),
   "white" var(--white) var(--black),
@@ -59,6 +60,17 @@ $colors: //color name, color code, text color over color
   "lns-dark" var(--lanuovastartup-color-dark) var(--white),
 
   "dt" var(--doingthings-color) var(--black);
+
+/*
+$sides: (
+  't':'top',
+  'e':'right',
+  'r':'right',
+  'b':'bottom',
+  's':'left',
+  'l':'left',
+);
+*/
 
 @each $colorname, $colorcode, $colortext in $colors {
   .#{$colorname} {
