@@ -12,7 +12,14 @@
     siteTitle: {
       type: [String],
       default: 'mini'
-    }
+    },
+    company: {type: [String], default: "UWA.agency"},
+    phone: {type: [String], default: "+345 329 7079"},
+    email: {type: [String], default: "ciao@uwa.agency"},
+    address: {type: [String], default: "Via Sant'Andrea Apostolo 32"},
+    addressTwo: {type: [String], default: "28100, Novara [NO], Italy"},
+    TaxNumber: {type: [String], default: "0123456789"},
+    idCode: {type: [String], default: "0123456789"},
   })
 </script>
 
@@ -21,8 +28,13 @@
     <Container>
         <Boxes class="space-top-bot">
             <Box size="33">
-                <p class="">&nbsp;©&nbsp;<span class="bold">uwa.agency</span></p>
-                <p class="s">A <a href="https://mini.uwa.agency/" target="_blank" class="mini-text"><i>mini</i></a> based website by <a href="https://www.uwa.agency/" target="_blank" class="mini-text"><strong>{{siteTitle}}</strong></a></p>
+                <p class="">&nbsp;©&nbsp;<span class="bold">{{ props.company }}</span></p>
+                <p v-if="props.address" class="mb-0">{{ props.address }}</p>
+                <p v-if="props.addressTwo" class="mt-0">{{ props.addressTwo }}</p>
+                <p v-if="props.email" class="mb-0"><span class="label">email:</span> <b>{{ props.email }}</b></p>
+                <p v-if="props.phone" class="mt-0"><span class="label">phone:</span> <b>{{ props.phone }}</b></p>
+                <p v-if="props.TaxNumber" class="mb-0"><span class="label">P.IVA:</span> <b>{{ props.TaxNumber }}</b></p>
+                <p v-if="props.idCode" class="mt-0"><span class="label">C.F:</span> <b>{{ props.idCode }}</b></p>
             </Box>
             <Box size="33">
                 <a href="#/home" class=""><img :src="logoUrl" class="logo emblem" alt="logo"/></a>

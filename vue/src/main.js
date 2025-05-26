@@ -11,4 +11,4 @@ import '/home/projects/mini/css/scss/_14_margins_paddings.scss'
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+createApp(App).mount('#mini')

@@ -8,6 +8,7 @@ import Aside from './mini/Aside.vue';
 import Main from './mini/Main.vue';
 import Menu from './mini/Menu.vue';
 import Footer from './mini/MiniFooter.vue';
+import Credits from './mini/MiniCredits.vue';
 import Loader from './mini/Loader.vue';
 
 
@@ -68,6 +69,7 @@ const currentView = computed(() => {
     </Aside>
   </Sheet>
   <Footer/>
+  <Credits/>
 </template>
 
 <style scoped>
