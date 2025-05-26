@@ -1,12 +1,25 @@
 <script setup>
+import { computed } from 'vue'
 import { menuState } from '@/composables/menuState'
 const { isMenuOpen } = menuState()
+import { useScroll } from '@vueuse/core'
+const scroll = useScroll(window)
+
+const sheetClasses = computed(() => {
+  const classes = []
+  // Scroll
+  scroll.arrivedState.top ? classes.push('top') : classes.push('scrolled')
+  // Menu open
+  if (isMenuOpen.value == true) classes.push('open-menu')
+  return classes
+})
+
 </script>
 
 <template>
   <div 
     id="sheet"
-    :class="{ 'open-menu': isMenuOpen }"
+    :class="sheetClasses"
   >
     <slot />
   </div>

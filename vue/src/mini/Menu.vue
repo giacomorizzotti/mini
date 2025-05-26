@@ -1,19 +1,28 @@
 <script setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { menuState } from '@/composables/menuState'
 const { isMenuOpen } = menuState()
+const currentPath = ref(window.location.hash)
+
+window.addEventListener('hashchange', () => {
+  currentPath.value = window.location.hash
+})
 
 const props = defineProps({
   menuItems: {
     type: [Array],
     default: [
-      {title:'home', link:'#top', target:null, active:true},
-      {title:'about', link:'#top', target:null},
-      {title:'what', link:'#top', target:null},
-      {title:'how', link:'#top', target:null},
-      {title:'where', link:'#top', target:null},
-      {title:'contacts', link:'#top', target:null}
+      {title:'home', link:'#/', target:null},
+      {title:'about', link:'#/about', target:null},
+      {title:'what', link:'#/what', target:null},
+      {title:'how', link:'#/how', target:null},
+      {title:'where', link:'#/where', target:null},
+      {title:'contacts', link:'#/contacts', target:null}
     ]
+  },
+  menuToggleOnClick: {
+    type: [Boolean],
+    default: true
   },
   direction: {
     type: [String],
@@ -29,13 +38,29 @@ const directionClass = computed(() => {
   }
   return classes
 })
+
+function isActive(item) {
+  return currentPath.value === item.link
+}
+
+const toggleMenu = () => {
+  if (props.menuToggleOnClick === true) {
+    if (isMenuOpen.value == false) window.scrollTo(0,0);
+    isMenuOpen.value = !isMenuOpen.value
+  }
+}
 </script>
 
 <template>
   <nav class="menu" :class="{ 'open-menu': isMenuOpen }">
     <ul class="menu" :class="directionClass">
-      <li v-for="item in menuItems" class="item" :class="{ 'active': item.active }">
-        <a :href="item.link" class="" :target="item.target">{{ item.title }}</a>
+      <li v-for="item in menuItems" class="item" :class="{ 'active': isActive(item) }">
+        <a 
+          :href="item.link" 
+          class="" 
+          :target="item.target" 
+          @click="toggleMenu"
+        >{{ item.title }}</a>
       </li>
     </ul>
   </nav>

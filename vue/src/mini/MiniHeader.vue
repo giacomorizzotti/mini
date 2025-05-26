@@ -14,7 +14,7 @@ const props = defineProps({
     type: [String],
     default: 'https://mini.uwa.agency/img/brand/mini_emblem.svg'
   },
-  siteTitle: {
+  title: {
     type: [String],
     default: 'mini'
   }
@@ -29,14 +29,14 @@ const props = defineProps({
       <Box id="brand" class="p-0">
         <Boxes class="g-0">
           <Box>
-            <a href="#top" class="">
+            <a href="#/" class="">
                 <img :src="logoUrl" class="header-logo" alt="logo"/>
             </a>
           </Box>
           <Box>
-            <a href="#top" class="">
+            <a href="#/" class="">
               <h3 class="site-title">
-                {{ siteTitle }}
+                {{ title }}
               </h3>
             </a>
           </Box>
@@ -45,7 +45,7 @@ const props = defineProps({
       <Box id="head-menus" class="p-0">
         <Boxes class="g-0">
           <HeaderMenuBox>
-            <Menu id="page-menu" direction="row"/>
+            <Menu id="page-menu" direction="row" :menuToggleOnClick="false"/>
           </HeaderMenuBox>
           <Box>
             <MenuToggle/>

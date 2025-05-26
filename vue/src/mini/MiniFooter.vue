@@ -25,7 +25,7 @@
                 <p class="s">A <a href="https://mini.uwa.agency/" target="_blank" class="mini-text"><i>mini</i></a> based website by <a href="https://www.uwa.agency/" target="_blank" class="mini-text"><strong>{{siteTitle}}</strong></a></p>
             </Box>
             <Box size="33">
-                <a href="#top" class=""><img :src="logoUrl" class="logo emblem" alt="logo"/></a>
+                <a href="#/home" class=""><img :src="logoUrl" class="logo emblem" alt="logo"/></a>
             </Box>
             <Box size="33">
               <Menu id="footer-menu"/>
