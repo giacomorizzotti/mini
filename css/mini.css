@@ -31,12 +31,12 @@
   --main-color: rgb( 60 90 255 / 100% );
   --main-color-dark: rgb( 50 75 180 / 100% );
   --main-color-transp: rgb( 60 90 255 / 20% );
-  --second-color: rgb( 50 75 180 / 100% );
-  --second-color-dark: rgb( 37 56 133 / 100% );
+  --second-color: rgb( 45 70 170 / 100% );
+  --second-color-dark: rgb(25 40 95 / 100% );
   --third-color: rgb( 60 30 99 / 100% );
   --third-color-dark: rgb( 34 15 61 / 100% );
-  --fourth-color: rgb( 220 230 0 / 100% );
-  --fourth-color-dark: rgb( 180 190 0 / 100% );
+  --fourth-color: rgb( 230 0 60 / 100% );
+  --fourth-color-dark: rgb(160 0 45 / 100% );
   --link-color: rgb(121 48 238 / 100% );
   --link-hover-color: rgb(72 34 176 / 100% );
   --info: rgb( 113 202 189 / 100% );
@@ -91,12 +91,12 @@
   --title-font: var(--font-second);
   --baseline: 0.625rem;
   --h1: 2rem;
-  --h2: 1.5rem;
-  --h3: 1.25rem;
-  --h4: 1rem;
-  --h5: 0.875rem;
-  --h6: 0.75rem;
-  --p: 0.75rem;
+  --h2: 1.75rem;
+  --h3: 1.45rem;
+  --h4: 1.3rem;
+  --h5: 1.15rem;
+  --h6: 1rem;
+  --p: 1rem;
 }
 
 @media (max-width: 576px) {
@@ -11406,7 +11406,7 @@ input[type=radio]:checked + label {
   --button-hover-border-color: var(--doingthings-color)!important;
 }
 
-.btn {
+.btn, .wh-btn, .white-btn, .false-white-btn, .light-grey-btn, .grey-btn, .dark-grey-btn, .false-black-btn, .bk-btn, .black-btn, .col-btn, .color-btn, .main-color-btn, .color-dark-btn, .main-color-dark-btn, .second-color-btn, .second-color-dark-btn, .third-color-btn, .third-color-dark-btn, .fourth-color-btn, .fourth-color-dark-btn, .info-btn, .success-btn, .warning-btn, .danger-btn, .bad-btn, .acid-green-btn, .gingerbread-btn, .mini-btn, .mini-dark-btn, .mini-second-btn, .mini-third-btn, .mini-fourth-btn, .uwa-btn, .uwa-dark-btn, .uwa-second-btn, .uwa-third-btn, .uwa-fourth-btn, .uwa-link-btn, .aroma-btn, .aroma-dark-btn, .pdp-btn, .pdp-second-btn, .pdp-third-btn, .pdp-fourth-btn, .lns-btn, .lns-dark-btn, .dt-btn {
   --button-text-color: var(--white);
   --button-background-color: var(--link-color);
   --button-border-color: var(--link-color);
@@ -11431,79 +11431,79 @@ input[type=radio]:checked + label {
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-.btn.hard {
+.btn.hard, .hard.wh-btn, .hard.white-btn, .hard.false-white-btn, .hard.light-grey-btn, .hard.grey-btn, .hard.dark-grey-btn, .hard.false-black-btn, .hard.bk-btn, .hard.black-btn, .hard.col-btn, .hard.color-btn, .hard.main-color-btn, .hard.color-dark-btn, .hard.main-color-dark-btn, .hard.second-color-btn, .hard.second-color-dark-btn, .hard.third-color-btn, .hard.third-color-dark-btn, .hard.fourth-color-btn, .hard.fourth-color-dark-btn, .hard.info-btn, .hard.success-btn, .hard.warning-btn, .hard.danger-btn, .hard.bad-btn, .hard.acid-green-btn, .hard.gingerbread-btn, .hard.mini-btn, .hard.mini-dark-btn, .hard.mini-second-btn, .hard.mini-third-btn, .hard.mini-fourth-btn, .hard.uwa-btn, .hard.uwa-dark-btn, .hard.uwa-second-btn, .hard.uwa-third-btn, .hard.uwa-fourth-btn, .hard.uwa-link-btn, .hard.aroma-btn, .hard.aroma-dark-btn, .hard.pdp-btn, .hard.pdp-second-btn, .hard.pdp-third-btn, .hard.pdp-fourth-btn, .hard.lns-btn, .hard.lns-dark-btn, .hard.dt-btn {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-.btn.smooth {
+.btn.smooth, .smooth.wh-btn, .smooth.white-btn, .smooth.false-white-btn, .smooth.light-grey-btn, .smooth.grey-btn, .smooth.dark-grey-btn, .smooth.false-black-btn, .smooth.bk-btn, .smooth.black-btn, .smooth.col-btn, .smooth.color-btn, .smooth.main-color-btn, .smooth.color-dark-btn, .smooth.main-color-dark-btn, .smooth.second-color-btn, .smooth.second-color-dark-btn, .smooth.third-color-btn, .smooth.third-color-dark-btn, .smooth.fourth-color-btn, .smooth.fourth-color-dark-btn, .smooth.info-btn, .smooth.success-btn, .smooth.warning-btn, .smooth.danger-btn, .smooth.bad-btn, .smooth.acid-green-btn, .smooth.gingerbread-btn, .smooth.mini-btn, .smooth.mini-dark-btn, .smooth.mini-second-btn, .smooth.mini-third-btn, .smooth.mini-fourth-btn, .smooth.uwa-btn, .smooth.uwa-dark-btn, .smooth.uwa-second-btn, .smooth.uwa-third-btn, .smooth.uwa-fourth-btn, .smooth.uwa-link-btn, .smooth.aroma-btn, .smooth.aroma-dark-btn, .smooth.pdp-btn, .smooth.pdp-second-btn, .smooth.pdp-third-btn, .smooth.pdp-fourth-btn, .smooth.lns-btn, .smooth.lns-dark-btn, .smooth.dt-btn {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.btn.round {
+.btn.round, .round.wh-btn, .round.white-btn, .round.false-white-btn, .round.light-grey-btn, .round.grey-btn, .round.dark-grey-btn, .round.false-black-btn, .round.bk-btn, .round.black-btn, .round.col-btn, .round.color-btn, .round.main-color-btn, .round.color-dark-btn, .round.main-color-dark-btn, .round.second-color-btn, .round.second-color-dark-btn, .round.third-color-btn, .round.third-color-dark-btn, .round.fourth-color-btn, .round.fourth-color-dark-btn, .round.info-btn, .round.success-btn, .round.warning-btn, .round.danger-btn, .round.bad-btn, .round.acid-green-btn, .round.gingerbread-btn, .round.mini-btn, .round.mini-dark-btn, .round.mini-second-btn, .round.mini-third-btn, .round.mini-fourth-btn, .round.uwa-btn, .round.uwa-dark-btn, .round.uwa-second-btn, .round.uwa-third-btn, .round.uwa-fourth-btn, .round.uwa-link-btn, .round.aroma-btn, .round.aroma-dark-btn, .round.pdp-btn, .round.pdp-second-btn, .round.pdp-third-btn, .round.pdp-fourth-btn, .round.lns-btn, .round.lns-dark-btn, .round.dt-btn {
   -webkit-border-radius: 250px;
   -moz-border-radius: 250px;
   border-radius: 250px;
 }
-.btn:last-child {
+.btn:last-child, .wh-btn:last-child, .white-btn:last-child, .false-white-btn:last-child, .light-grey-btn:last-child, .grey-btn:last-child, .dark-grey-btn:last-child, .false-black-btn:last-child, .bk-btn:last-child, .black-btn:last-child, .col-btn:last-child, .color-btn:last-child, .main-color-btn:last-child, .color-dark-btn:last-child, .main-color-dark-btn:last-child, .second-color-btn:last-child, .second-color-dark-btn:last-child, .third-color-btn:last-child, .third-color-dark-btn:last-child, .fourth-color-btn:last-child, .fourth-color-dark-btn:last-child, .info-btn:last-child, .success-btn:last-child, .warning-btn:last-child, .danger-btn:last-child, .bad-btn:last-child, .acid-green-btn:last-child, .gingerbread-btn:last-child, .mini-btn:last-child, .mini-dark-btn:last-child, .mini-second-btn:last-child, .mini-third-btn:last-child, .mini-fourth-btn:last-child, .uwa-btn:last-child, .uwa-dark-btn:last-child, .uwa-second-btn:last-child, .uwa-third-btn:last-child, .uwa-fourth-btn:last-child, .uwa-link-btn:last-child, .aroma-btn:last-child, .aroma-dark-btn:last-child, .pdp-btn:last-child, .pdp-second-btn:last-child, .pdp-third-btn:last-child, .pdp-fourth-btn:last-child, .lns-btn:last-child, .lns-dark-btn:last-child, .dt-btn:last-child {
   margin-right: 0;
 }
-.btn:hover {
+.btn:hover, .wh-btn:hover, .white-btn:hover, .false-white-btn:hover, .light-grey-btn:hover, .grey-btn:hover, .dark-grey-btn:hover, .false-black-btn:hover, .bk-btn:hover, .black-btn:hover, .col-btn:hover, .color-btn:hover, .main-color-btn:hover, .color-dark-btn:hover, .main-color-dark-btn:hover, .second-color-btn:hover, .second-color-dark-btn:hover, .third-color-btn:hover, .third-color-dark-btn:hover, .fourth-color-btn:hover, .fourth-color-dark-btn:hover, .info-btn:hover, .success-btn:hover, .warning-btn:hover, .danger-btn:hover, .bad-btn:hover, .acid-green-btn:hover, .gingerbread-btn:hover, .mini-btn:hover, .mini-dark-btn:hover, .mini-second-btn:hover, .mini-third-btn:hover, .mini-fourth-btn:hover, .uwa-btn:hover, .uwa-dark-btn:hover, .uwa-second-btn:hover, .uwa-third-btn:hover, .uwa-fourth-btn:hover, .uwa-link-btn:hover, .aroma-btn:hover, .aroma-dark-btn:hover, .pdp-btn:hover, .pdp-second-btn:hover, .pdp-third-btn:hover, .pdp-fourth-btn:hover, .lns-btn:hover, .lns-dark-btn:hover, .dt-btn:hover {
   color: var(--button-text-color);
   background: var(--button-background-color);
   border-color: var(--button-border-color);
   box-shadow: 0 0 15px -5px var(--button-border-color);
 }
-.btn.clicked, .btn.active {
+.btn.clicked, .clicked.wh-btn, .clicked.white-btn, .clicked.false-white-btn, .clicked.light-grey-btn, .clicked.grey-btn, .clicked.dark-grey-btn, .clicked.false-black-btn, .clicked.bk-btn, .clicked.black-btn, .clicked.col-btn, .clicked.color-btn, .clicked.main-color-btn, .clicked.color-dark-btn, .clicked.main-color-dark-btn, .clicked.second-color-btn, .clicked.second-color-dark-btn, .clicked.third-color-btn, .clicked.third-color-dark-btn, .clicked.fourth-color-btn, .clicked.fourth-color-dark-btn, .clicked.info-btn, .clicked.success-btn, .clicked.warning-btn, .clicked.danger-btn, .clicked.bad-btn, .clicked.acid-green-btn, .clicked.gingerbread-btn, .clicked.mini-btn, .clicked.mini-dark-btn, .clicked.mini-second-btn, .clicked.mini-third-btn, .clicked.mini-fourth-btn, .clicked.uwa-btn, .clicked.uwa-dark-btn, .clicked.uwa-second-btn, .clicked.uwa-third-btn, .clicked.uwa-fourth-btn, .clicked.uwa-link-btn, .clicked.aroma-btn, .clicked.aroma-dark-btn, .clicked.pdp-btn, .clicked.pdp-second-btn, .clicked.pdp-third-btn, .clicked.pdp-fourth-btn, .clicked.lns-btn, .clicked.lns-dark-btn, .clicked.dt-btn, .btn.active, .active.wh-btn, .active.white-btn, .active.false-white-btn, .active.light-grey-btn, .active.grey-btn, .active.dark-grey-btn, .active.false-black-btn, .active.bk-btn, .active.black-btn, .active.col-btn, .active.color-btn, .active.main-color-btn, .active.color-dark-btn, .active.main-color-dark-btn, .active.second-color-btn, .active.second-color-dark-btn, .active.third-color-btn, .active.third-color-dark-btn, .active.fourth-color-btn, .active.fourth-color-dark-btn, .active.info-btn, .active.success-btn, .active.warning-btn, .active.danger-btn, .active.bad-btn, .active.acid-green-btn, .active.gingerbread-btn, .active.mini-btn, .active.mini-dark-btn, .active.mini-second-btn, .active.mini-third-btn, .active.mini-fourth-btn, .active.uwa-btn, .active.uwa-dark-btn, .active.uwa-second-btn, .active.uwa-third-btn, .active.uwa-fourth-btn, .active.uwa-link-btn, .active.aroma-btn, .active.aroma-dark-btn, .active.pdp-btn, .active.pdp-second-btn, .active.pdp-third-btn, .active.pdp-fourth-btn, .active.lns-btn, .active.lns-dark-btn, .active.dt-btn {
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
-.btn.invert {
+.btn.invert, .invert.wh-btn, .invert.white-btn, .invert.false-white-btn, .invert.light-grey-btn, .invert.grey-btn, .invert.dark-grey-btn, .invert.false-black-btn, .invert.bk-btn, .invert.black-btn, .invert.col-btn, .invert.color-btn, .invert.main-color-btn, .invert.color-dark-btn, .invert.main-color-dark-btn, .invert.second-color-btn, .invert.second-color-dark-btn, .invert.third-color-btn, .invert.third-color-dark-btn, .invert.fourth-color-btn, .invert.fourth-color-dark-btn, .invert.info-btn, .invert.success-btn, .invert.warning-btn, .invert.danger-btn, .invert.bad-btn, .invert.acid-green-btn, .invert.gingerbread-btn, .invert.mini-btn, .invert.mini-dark-btn, .invert.mini-second-btn, .invert.mini-third-btn, .invert.mini-fourth-btn, .invert.uwa-btn, .invert.uwa-dark-btn, .invert.uwa-second-btn, .invert.uwa-third-btn, .invert.uwa-fourth-btn, .invert.uwa-link-btn, .invert.aroma-btn, .invert.aroma-dark-btn, .invert.pdp-btn, .invert.pdp-second-btn, .invert.pdp-third-btn, .invert.pdp-fourth-btn, .invert.lns-btn, .invert.lns-dark-btn, .invert.dt-btn {
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
-.btn.invert.clicked, .btn.invert.active {
+.btn.invert.clicked, .invert.clicked.wh-btn, .invert.clicked.white-btn, .invert.clicked.false-white-btn, .invert.clicked.light-grey-btn, .invert.clicked.grey-btn, .invert.clicked.dark-grey-btn, .invert.clicked.false-black-btn, .invert.clicked.bk-btn, .invert.clicked.black-btn, .invert.clicked.col-btn, .invert.clicked.color-btn, .invert.clicked.main-color-btn, .invert.clicked.color-dark-btn, .invert.clicked.main-color-dark-btn, .invert.clicked.second-color-btn, .invert.clicked.second-color-dark-btn, .invert.clicked.third-color-btn, .invert.clicked.third-color-dark-btn, .invert.clicked.fourth-color-btn, .invert.clicked.fourth-color-dark-btn, .invert.clicked.info-btn, .invert.clicked.success-btn, .invert.clicked.warning-btn, .invert.clicked.danger-btn, .invert.clicked.bad-btn, .invert.clicked.acid-green-btn, .invert.clicked.gingerbread-btn, .invert.clicked.mini-btn, .invert.clicked.mini-dark-btn, .invert.clicked.mini-second-btn, .invert.clicked.mini-third-btn, .invert.clicked.mini-fourth-btn, .invert.clicked.uwa-btn, .invert.clicked.uwa-dark-btn, .invert.clicked.uwa-second-btn, .invert.clicked.uwa-third-btn, .invert.clicked.uwa-fourth-btn, .invert.clicked.uwa-link-btn, .invert.clicked.aroma-btn, .invert.clicked.aroma-dark-btn, .invert.clicked.pdp-btn, .invert.clicked.pdp-second-btn, .invert.clicked.pdp-third-btn, .invert.clicked.pdp-fourth-btn, .invert.clicked.lns-btn, .invert.clicked.lns-dark-btn, .invert.clicked.dt-btn, .btn.invert.active, .invert.active.wh-btn, .invert.active.white-btn, .invert.active.false-white-btn, .invert.active.light-grey-btn, .invert.active.grey-btn, .invert.active.dark-grey-btn, .invert.active.false-black-btn, .invert.active.bk-btn, .invert.active.black-btn, .invert.active.col-btn, .invert.active.color-btn, .invert.active.main-color-btn, .invert.active.color-dark-btn, .invert.active.main-color-dark-btn, .invert.active.second-color-btn, .invert.active.second-color-dark-btn, .invert.active.third-color-btn, .invert.active.third-color-dark-btn, .invert.active.fourth-color-btn, .invert.active.fourth-color-dark-btn, .invert.active.info-btn, .invert.active.success-btn, .invert.active.warning-btn, .invert.active.danger-btn, .invert.active.bad-btn, .invert.active.acid-green-btn, .invert.active.gingerbread-btn, .invert.active.mini-btn, .invert.active.mini-dark-btn, .invert.active.mini-second-btn, .invert.active.mini-third-btn, .invert.active.mini-fourth-btn, .invert.active.uwa-btn, .invert.active.uwa-dark-btn, .invert.active.uwa-second-btn, .invert.active.uwa-third-btn, .invert.active.uwa-fourth-btn, .invert.active.uwa-link-btn, .invert.active.aroma-btn, .invert.active.aroma-dark-btn, .invert.active.pdp-btn, .invert.active.pdp-second-btn, .invert.active.pdp-third-btn, .invert.active.pdp-fourth-btn, .invert.active.lns-btn, .invert.active.lns-dark-btn, .invert.active.dt-btn {
   color: var(--button-text-color);
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-.btn.xs {
+.btn.xs, .xs.wh-btn, .xs.white-btn, .xs.false-white-btn, .xs.light-grey-btn, .xs.grey-btn, .xs.dark-grey-btn, .xs.false-black-btn, .xs.bk-btn, .xs.black-btn, .xs.col-btn, .xs.color-btn, .xs.main-color-btn, .xs.color-dark-btn, .xs.main-color-dark-btn, .xs.second-color-btn, .xs.second-color-dark-btn, .xs.third-color-btn, .xs.third-color-dark-btn, .xs.fourth-color-btn, .xs.fourth-color-dark-btn, .xs.info-btn, .xs.success-btn, .xs.warning-btn, .xs.danger-btn, .xs.bad-btn, .xs.acid-green-btn, .xs.gingerbread-btn, .xs.mini-btn, .xs.mini-dark-btn, .xs.mini-second-btn, .xs.mini-third-btn, .xs.mini-fourth-btn, .xs.uwa-btn, .xs.uwa-dark-btn, .xs.uwa-second-btn, .xs.uwa-third-btn, .xs.uwa-fourth-btn, .xs.uwa-link-btn, .xs.aroma-btn, .xs.aroma-dark-btn, .xs.pdp-btn, .xs.pdp-second-btn, .xs.pdp-third-btn, .xs.pdp-fourth-btn, .xs.lns-btn, .xs.lns-dark-btn, .xs.dt-btn {
   padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.25);
   margin: calc(var(--margin) * 0.25) 0;
 }
 @media only screen and (min-width: 768px) {
-  .btn.xs {
+  .btn.xs, .xs.wh-btn, .xs.white-btn, .xs.false-white-btn, .xs.light-grey-btn, .xs.grey-btn, .xs.dark-grey-btn, .xs.false-black-btn, .xs.bk-btn, .xs.black-btn, .xs.col-btn, .xs.color-btn, .xs.main-color-btn, .xs.color-dark-btn, .xs.main-color-dark-btn, .xs.second-color-btn, .xs.second-color-dark-btn, .xs.third-color-btn, .xs.third-color-dark-btn, .xs.fourth-color-btn, .xs.fourth-color-dark-btn, .xs.info-btn, .xs.success-btn, .xs.warning-btn, .xs.danger-btn, .xs.bad-btn, .xs.acid-green-btn, .xs.gingerbread-btn, .xs.mini-btn, .xs.mini-dark-btn, .xs.mini-second-btn, .xs.mini-third-btn, .xs.mini-fourth-btn, .xs.uwa-btn, .xs.uwa-dark-btn, .xs.uwa-second-btn, .xs.uwa-third-btn, .xs.uwa-fourth-btn, .xs.uwa-link-btn, .xs.aroma-btn, .xs.aroma-dark-btn, .xs.pdp-btn, .xs.pdp-second-btn, .xs.pdp-third-btn, .xs.pdp-fourth-btn, .xs.lns-btn, .xs.lns-dark-btn, .xs.dt-btn {
     margin: calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) 0;
   }
 }
-.btn.s {
+.btn.s, .s.wh-btn, .s.white-btn, .s.false-white-btn, .s.light-grey-btn, .s.grey-btn, .s.dark-grey-btn, .s.false-black-btn, .s.bk-btn, .s.black-btn, .s.col-btn, .s.color-btn, .s.main-color-btn, .s.color-dark-btn, .s.main-color-dark-btn, .s.second-color-btn, .s.second-color-dark-btn, .s.third-color-btn, .s.third-color-dark-btn, .s.fourth-color-btn, .s.fourth-color-dark-btn, .s.info-btn, .s.success-btn, .s.warning-btn, .s.danger-btn, .s.bad-btn, .s.acid-green-btn, .s.gingerbread-btn, .s.mini-btn, .s.mini-dark-btn, .s.mini-second-btn, .s.mini-third-btn, .s.mini-fourth-btn, .s.uwa-btn, .s.uwa-dark-btn, .s.uwa-second-btn, .s.uwa-third-btn, .s.uwa-fourth-btn, .s.uwa-link-btn, .s.aroma-btn, .s.aroma-dark-btn, .s.pdp-btn, .s.pdp-second-btn, .s.pdp-third-btn, .s.pdp-fourth-btn, .s.lns-btn, .s.lns-dark-btn, .s.dt-btn {
   padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
   margin: calc(var(--margin) * 0.35) 0;
 }
 @media only screen and (min-width: 768px) {
-  .btn.s {
+  .btn.s, .s.wh-btn, .s.white-btn, .s.false-white-btn, .s.light-grey-btn, .s.grey-btn, .s.dark-grey-btn, .s.false-black-btn, .s.bk-btn, .s.black-btn, .s.col-btn, .s.color-btn, .s.main-color-btn, .s.color-dark-btn, .s.main-color-dark-btn, .s.second-color-btn, .s.second-color-dark-btn, .s.third-color-btn, .s.third-color-dark-btn, .s.fourth-color-btn, .s.fourth-color-dark-btn, .s.info-btn, .s.success-btn, .s.warning-btn, .s.danger-btn, .s.bad-btn, .s.acid-green-btn, .s.gingerbread-btn, .s.mini-btn, .s.mini-dark-btn, .s.mini-second-btn, .s.mini-third-btn, .s.mini-fourth-btn, .s.uwa-btn, .s.uwa-dark-btn, .s.uwa-second-btn, .s.uwa-third-btn, .s.uwa-fourth-btn, .s.uwa-link-btn, .s.aroma-btn, .s.aroma-dark-btn, .s.pdp-btn, .s.pdp-second-btn, .s.pdp-third-btn, .s.pdp-fourth-btn, .s.lns-btn, .s.lns-dark-btn, .s.dt-btn {
     margin: calc(var(--margin) * 0.35) calc(var(--margin) * 0.5) calc(var(--margin) * 0.35) 0;
   }
 }
-.btn.l {
+.btn.l, .l.wh-btn, .l.white-btn, .l.false-white-btn, .l.light-grey-btn, .l.grey-btn, .l.dark-grey-btn, .l.false-black-btn, .l.bk-btn, .l.black-btn, .l.col-btn, .l.color-btn, .l.main-color-btn, .l.color-dark-btn, .l.main-color-dark-btn, .l.second-color-btn, .l.second-color-dark-btn, .l.third-color-btn, .l.third-color-dark-btn, .l.fourth-color-btn, .l.fourth-color-dark-btn, .l.info-btn, .l.success-btn, .l.warning-btn, .l.danger-btn, .l.bad-btn, .l.acid-green-btn, .l.gingerbread-btn, .l.mini-btn, .l.mini-dark-btn, .l.mini-second-btn, .l.mini-third-btn, .l.mini-fourth-btn, .l.uwa-btn, .l.uwa-dark-btn, .l.uwa-second-btn, .l.uwa-third-btn, .l.uwa-fourth-btn, .l.uwa-link-btn, .l.aroma-btn, .l.aroma-dark-btn, .l.pdp-btn, .l.pdp-second-btn, .l.pdp-third-btn, .l.pdp-fourth-btn, .l.lns-btn, .l.lns-dark-btn, .l.dt-btn {
   padding: calc(var(--padding) * 0.625) calc(var(--padding) * 1.125);
   margin: calc(var(--margin) * 0.75) 0;
 }
 @media only screen and (min-width: 768px) {
-  .btn.l {
+  .btn.l, .l.wh-btn, .l.white-btn, .l.false-white-btn, .l.light-grey-btn, .l.grey-btn, .l.dark-grey-btn, .l.false-black-btn, .l.bk-btn, .l.black-btn, .l.col-btn, .l.color-btn, .l.main-color-btn, .l.color-dark-btn, .l.main-color-dark-btn, .l.second-color-btn, .l.second-color-dark-btn, .l.third-color-btn, .l.third-color-dark-btn, .l.fourth-color-btn, .l.fourth-color-dark-btn, .l.info-btn, .l.success-btn, .l.warning-btn, .l.danger-btn, .l.bad-btn, .l.acid-green-btn, .l.gingerbread-btn, .l.mini-btn, .l.mini-dark-btn, .l.mini-second-btn, .l.mini-third-btn, .l.mini-fourth-btn, .l.uwa-btn, .l.uwa-dark-btn, .l.uwa-second-btn, .l.uwa-third-btn, .l.uwa-fourth-btn, .l.uwa-link-btn, .l.aroma-btn, .l.aroma-dark-btn, .l.pdp-btn, .l.pdp-second-btn, .l.pdp-third-btn, .l.pdp-fourth-btn, .l.lns-btn, .l.lns-dark-btn, .l.dt-btn {
     margin: calc(var(--margin) * 0.75) calc(var(--margin) * 1.125) calc(var(--margin) * 0.75) 0;
   }
 }
-.btn.xl {
+.btn.xl, .xl.wh-btn, .xl.white-btn, .xl.false-white-btn, .xl.light-grey-btn, .xl.grey-btn, .xl.dark-grey-btn, .xl.false-black-btn, .xl.bk-btn, .xl.black-btn, .xl.col-btn, .xl.color-btn, .xl.main-color-btn, .xl.color-dark-btn, .xl.main-color-dark-btn, .xl.second-color-btn, .xl.second-color-dark-btn, .xl.third-color-btn, .xl.third-color-dark-btn, .xl.fourth-color-btn, .xl.fourth-color-dark-btn, .xl.info-btn, .xl.success-btn, .xl.warning-btn, .xl.danger-btn, .xl.bad-btn, .xl.acid-green-btn, .xl.gingerbread-btn, .xl.mini-btn, .xl.mini-dark-btn, .xl.mini-second-btn, .xl.mini-third-btn, .xl.mini-fourth-btn, .xl.uwa-btn, .xl.uwa-dark-btn, .xl.uwa-second-btn, .xl.uwa-third-btn, .xl.uwa-fourth-btn, .xl.uwa-link-btn, .xl.aroma-btn, .xl.aroma-dark-btn, .xl.pdp-btn, .xl.pdp-second-btn, .xl.pdp-third-btn, .xl.pdp-fourth-btn, .xl.lns-btn, .xl.lns-dark-btn, .xl.dt-btn {
   padding: calc(var(--padding) * 0.85) calc(var(--padding) * 1.35);
 }
-.btn.xxl {
+.btn.xxl, .xxl.wh-btn, .xxl.white-btn, .xxl.false-white-btn, .xxl.light-grey-btn, .xxl.grey-btn, .xxl.dark-grey-btn, .xxl.false-black-btn, .xxl.bk-btn, .xxl.black-btn, .xxl.col-btn, .xxl.color-btn, .xxl.main-color-btn, .xxl.color-dark-btn, .xxl.main-color-dark-btn, .xxl.second-color-btn, .xxl.second-color-dark-btn, .xxl.third-color-btn, .xxl.third-color-dark-btn, .xxl.fourth-color-btn, .xxl.fourth-color-dark-btn, .xxl.info-btn, .xxl.success-btn, .xxl.warning-btn, .xxl.danger-btn, .xxl.bad-btn, .xxl.acid-green-btn, .xxl.gingerbread-btn, .xxl.mini-btn, .xxl.mini-dark-btn, .xxl.mini-second-btn, .xxl.mini-third-btn, .xxl.mini-fourth-btn, .xxl.uwa-btn, .xxl.uwa-dark-btn, .xxl.uwa-second-btn, .xxl.uwa-third-btn, .xxl.uwa-fourth-btn, .xxl.uwa-link-btn, .xxl.aroma-btn, .xxl.aroma-dark-btn, .xxl.pdp-btn, .xxl.pdp-second-btn, .xxl.pdp-third-btn, .xxl.pdp-fourth-btn, .xxl.lns-btn, .xxl.lns-dark-btn, .xxl.dt-btn {
   padding: calc(var(--padding) * 1.25) calc(var(--padding) * 1.75);
 }
-.btn.clicking {
+.btn.clicking, .clicking.wh-btn, .clicking.white-btn, .clicking.false-white-btn, .clicking.light-grey-btn, .clicking.grey-btn, .clicking.dark-grey-btn, .clicking.false-black-btn, .clicking.bk-btn, .clicking.black-btn, .clicking.col-btn, .clicking.color-btn, .clicking.main-color-btn, .clicking.color-dark-btn, .clicking.main-color-dark-btn, .clicking.second-color-btn, .clicking.second-color-dark-btn, .clicking.third-color-btn, .clicking.third-color-dark-btn, .clicking.fourth-color-btn, .clicking.fourth-color-dark-btn, .clicking.info-btn, .clicking.success-btn, .clicking.warning-btn, .clicking.danger-btn, .clicking.bad-btn, .clicking.acid-green-btn, .clicking.gingerbread-btn, .clicking.mini-btn, .clicking.mini-dark-btn, .clicking.mini-second-btn, .clicking.mini-third-btn, .clicking.mini-fourth-btn, .clicking.uwa-btn, .clicking.uwa-dark-btn, .clicking.uwa-second-btn, .clicking.uwa-third-btn, .clicking.uwa-fourth-btn, .clicking.uwa-link-btn, .clicking.aroma-btn, .clicking.aroma-dark-btn, .clicking.pdp-btn, .clicking.pdp-second-btn, .clicking.pdp-third-btn, .clicking.pdp-fourth-btn, .clicking.lns-btn, .clicking.lns-dark-btn, .clicking.dt-btn {
   animation-name: clickingAnimation;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
@@ -11512,14 +11512,14 @@ input[type=radio]:checked + label {
 }
 @-webkit-keyframes clickingAnimation {
   from {
-    box-shadow: 0 0 0 var(--button-border-color);
+    box-shadow: 0 0 15px -5px var(--button-border-color), 0 0 0 var(--button-border-color);
   }
   to {
-    box-shadow: 0 0 12px 0 var(--button-border-color);
+    box-shadow: 0 0 15px -5px var(--button-border-color), 0 0 10px 10px rgba(255, 255, 255, 0);
   }
 }
 
-.border, .dt-border, .lns-dark-border, .lns-border, .pdp-fourth-border, .pdp-third-border, .pdp-second-border, .pdp-border, .aroma-dark-border, .aroma-border, .uwa-link-border, .uwa-fourth-border, .uwa-third-border, .uwa-second-border, .uwa-dark-border, .uwa-border, .mini-fourth-border, .mini-third-border, .mini-second-border, .mini-dark-border, .mini-border, .gingerbread-border, .acid-green-border, .bad-border, .danger-border, .warning-border, .success-border, .info-border, .link-hover-border, .link-border, .fourth-color-dark-border, .fourth-color-border, .third-color-dark-border, .third-color-border, .second-color-dark-border, .second-color-border, .main-color-dark-border, .color-dark-border, .main-color-border, .color-border, .col-border, .black-border, .bk-border, .fb-border, .dark-grey-border, .grey-border, .light-grey-border, .fw-border, .white-border, .wh-border, .border-10, .border-5, .border-4, .border-3, .border-2, .border-1 {
+.border, .dt-border, .lns-dark-border, .lns-border, .pdp-fourth-border, .pdp-third-border, .pdp-second-border, .pdp-border, .aroma-dark-border, .aroma-border, .uwa-link-border, .uwa-fourth-border, .uwa-third-border, .uwa-second-border, .uwa-dark-border, .uwa-border, .mini-fourth-border, .mini-third-border, .mini-second-border, .mini-dark-border, .mini-border, .gingerbread-border, .acid-green-border, .bad-border, .danger-border, .warning-border, .success-border, .info-border, .link-hover-border, .link-border, .fourth-color-dark-border, .fourth-color-border, .third-color-dark-border, .third-color-border, .second-color-dark-border, .second-color-border, .main-color-dark-border, .color-dark-border, .main-color-border, .color-border, .col-border, .black-border, .bk-border, .false-black-border, .fb-border, .dark-grey-border, .grey-border, .light-grey-border, .false-white-border, .fw-border, .white-border, .wh-border, .border-10, .border-5, .border-4, .border-3, .border-2, .border-1 {
   border-width: 1px;
   border-style: solid;
   border-color: var(--light-grey);
@@ -12091,6 +12091,160 @@ input[type="radio"]+label.fw {
   }
 }
 input[type="radio"]:checked+label.fw {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.false-white-text {
+  color: var(--false-white) !important;
+}
+.false-white-text-hover:hover, .false-white-text-hover.clicked, .false-white-text-hover.active, .false-white-text-clicked:hover, .false-white-text-clicked.clicked, .false-white-text-clicked.active, .false-white-text-active:hover, .false-white-text-active.clicked, .false-white-text-active.active {
+  color: var(--false-white) !important;
+}
+.false-white-box {
+  background: var(--false-white) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.false-white-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.false-white-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.false-white-box-hover:hover, .false-white-box-hover.clicked, .false-white-box-hover.active, .false-white-box-clicked:hover, .false-white-box-clicked.clicked, .false-white-box-clicked.active, .false-white-box-active:hover, .false-white-box-active.clicked, .false-white-box-active.active {
+  background: var(--false-white) !important;
+  color: var(--black) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.false-white-box-hover.S, .false-white-box-clicked.S, .false-white-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.false-white-box-hover.XS, .false-white-box-clicked.XS, .false-white-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.false-white-bg {
+  background-color: var(--false-white) !important;
+}
+.false-white-bg-hover:hover, .false-white-bg-hover.clicked, .false-white-bg-hover.active, .false-white-bg-clicked:hover, .false-white-bg-clicked.clicked, .false-white-bg-clicked.active, .false-white-bg-active:hover, .false-white-bg-active.clicked, .false-white-bg-active.active {
+  background-color: var(--false-white) !important;
+}
+.false-white-border {
+  border-color: var(--false-white) !important;
+}
+.false-white-border-hover:hover, .false-white-border-hover.clicked, .false-white-border-hover.active, .false-white-border-clicked:hover, .false-white-border-clicked.clicked, .false-white-border-clicked.active, .false-white-border-active:hover, .false-white-border-active.clicked, .false-white-border-active.active {
+  border-color: var(--false-white) !important;
+}
+.false-white-bubble:after, .false-white-bubble-bottom-s:after, .false-white-bubble-bottom-s-right:after, .false-white-bubble-bottom-s-left:after, .false-white-bubble-bottom:after, .false-white-bubble-bottom-right:after, .false-white-bubble-bottom-left:after, .false-white-bubble-top-s:after, .false-white-bubble-top-s-right:after, .false-white-bubble-top-s-left:after, .false-white-bubble-top:after, .false-white-bubble-top-right:after, .false-white-bubble-top-left:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.false-white-bubble-top::after, .false-white-bubble-top-right::after, .false-white-bubble-top-left::after {
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--false-white);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.false-white-bubble-top-s::after, .false-white-bubble-top-s-right::after, .false-white-bubble-top-s-left::after {
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--false-white);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.false-white-bubble-top-s-left::after {
+  left: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.false-white-bubble-top-s-right::after {
+  right: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.false-white-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.false-white-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.false-white-bubble-bottom::after, .false-white-bubble-bottom-right::after, .false-white-bubble-bottom-left::after {
+  border-top: calc(var(--baseline) * 1.25) solid var(--false-white);
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.false-white-bubble-bottom-s::after, .false-white-bubble-bottom-s-right::after, .false-white-bubble-bottom-s-left::after {
+  border-top: calc(var(--baseline) * 0.5 * 1.25) solid var(--false-white);
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.false-white-bubble-bottom-s-left::after {
+  left: calc(var(--margin) * 0.5);
+  transform: translate(100%, 0);
+}
+.false-white-bubble-bottom-s-right::after {
+  right: calc(var(--margin) * 0.5);
+  transform: translate(-100%, 0);
+}
+.false-white-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  transform: none;
+}
+.false-white-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  transform: none;
+}
+
+/*
+input[type="radio"]+label.false-white {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.false-white {
   &-btn {
     color: $colortext!important;
     background: $colorcode!important;
@@ -12707,6 +12861,160 @@ input[type="radio"]+label.fb {
   }
 }
 input[type="radio"]:checked+label.fb {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.false-black-text {
+  color: var(--false-black) !important;
+}
+.false-black-text-hover:hover, .false-black-text-hover.clicked, .false-black-text-hover.active, .false-black-text-clicked:hover, .false-black-text-clicked.clicked, .false-black-text-clicked.active, .false-black-text-active:hover, .false-black-text-active.clicked, .false-black-text-active.active {
+  color: var(--false-black) !important;
+}
+.false-black-box {
+  background: var(--false-black) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.false-black-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.false-black-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.false-black-box-hover:hover, .false-black-box-hover.clicked, .false-black-box-hover.active, .false-black-box-clicked:hover, .false-black-box-clicked.clicked, .false-black-box-clicked.active, .false-black-box-active:hover, .false-black-box-active.clicked, .false-black-box-active.active {
+  background: var(--false-black) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.false-black-box-hover.S, .false-black-box-clicked.S, .false-black-box-active.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.false-black-box-hover.XS, .false-black-box-clicked.XS, .false-black-box-active.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.false-black-bg {
+  background-color: var(--false-black) !important;
+}
+.false-black-bg-hover:hover, .false-black-bg-hover.clicked, .false-black-bg-hover.active, .false-black-bg-clicked:hover, .false-black-bg-clicked.clicked, .false-black-bg-clicked.active, .false-black-bg-active:hover, .false-black-bg-active.clicked, .false-black-bg-active.active {
+  background-color: var(--false-black) !important;
+}
+.false-black-border {
+  border-color: var(--false-black) !important;
+}
+.false-black-border-hover:hover, .false-black-border-hover.clicked, .false-black-border-hover.active, .false-black-border-clicked:hover, .false-black-border-clicked.clicked, .false-black-border-clicked.active, .false-black-border-active:hover, .false-black-border-active.clicked, .false-black-border-active.active {
+  border-color: var(--false-black) !important;
+}
+.false-black-bubble:after, .false-black-bubble-bottom-s:after, .false-black-bubble-bottom-s-right:after, .false-black-bubble-bottom-s-left:after, .false-black-bubble-bottom:after, .false-black-bubble-bottom-right:after, .false-black-bubble-bottom-left:after, .false-black-bubble-top-s:after, .false-black-bubble-top-s-right:after, .false-black-bubble-top-s-left:after, .false-black-bubble-top:after, .false-black-bubble-top-right:after, .false-black-bubble-top-left:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.false-black-bubble-top::after, .false-black-bubble-top-right::after, .false-black-bubble-top-left::after {
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--false-black);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.false-black-bubble-top-s::after, .false-black-bubble-top-s-right::after, .false-black-bubble-top-s-left::after {
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--false-black);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.false-black-bubble-top-s-left::after {
+  left: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.false-black-bubble-top-s-right::after {
+  right: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.false-black-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.false-black-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.false-black-bubble-bottom::after, .false-black-bubble-bottom-right::after, .false-black-bubble-bottom-left::after {
+  border-top: calc(var(--baseline) * 1.25) solid var(--false-black);
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.false-black-bubble-bottom-s::after, .false-black-bubble-bottom-s-right::after, .false-black-bubble-bottom-s-left::after {
+  border-top: calc(var(--baseline) * 0.5 * 1.25) solid var(--false-black);
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.false-black-bubble-bottom-s-left::after {
+  left: calc(var(--margin) * 0.5);
+  transform: translate(100%, 0);
+}
+.false-black-bubble-bottom-s-right::after {
+  right: calc(var(--margin) * 0.5);
+  transform: translate(-100%, 0);
+}
+.false-black-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  transform: none;
+}
+.false-black-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  transform: none;
+}
+
+/*
+input[type="radio"]+label.false-black {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.false-black {
   &-btn {
     color: $colortext!important;
     background: $colorcode!important;
@@ -19337,7 +19645,7 @@ h1 .title, h2 .title, h3 .title, h4 .title, h5 .title, h6 .title, p .title, li .
   font-family: var(--title-font);
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--false-black);
   font-family: var(--title-font);

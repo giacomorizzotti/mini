@@ -2,3 +2,4 @@ public/
 django/
 **/__pycache__/
 api/
+vue/
