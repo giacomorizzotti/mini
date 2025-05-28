@@ -58,7 +58,6 @@ $colors: //color name, color code, text color over color
 @each $colorname, $colorcode, $colortext in $colors {
   .#{$colorname} {
       &-btn {
-        @extend .btn;
           --button-text-color: #{$colortext}!important;
           --button-background-color: #{$colorcode}!important;
           --button-border-color: #{$colorcode}!important;

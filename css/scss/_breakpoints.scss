@@ -1,15 +1,15 @@
 // BREAKPOINTS
 
-  // Small tablets and large smartphones (landscape view)
-  $screen-sm: 576px;
-  // Small tablets (portrait view)
-  $screen-md: 768px;
-  // Tablets and small desktops
-  $screen-lg: 992px;
-  // Large tablets and desktops
-  $screen-xl: 1200px;
-  // Largest desktops
-  $screen-xxl: 1920px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm: 576px;
+// Small tablets (portrait view)
+$screen-md: 768px;
+// Tablets and small desktops
+$screen-lg: 992px;
+// Large tablets and desktops
+$screen-xl: 1200px;
+// Largest desktops
+$screen-xxl: 1920px;
 
 // Small devices ONLY/DOWN // 576px down
 @mixin smOnly {

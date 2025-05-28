@@ -1,21 +1,5 @@
 // STRUCTURE
 
-.none, .d-none, .display-none {
-  display: none!important;
-}
-.flex, .d-flex, .display-flex {
-  display: flex!important;
-}
-.block, .d-block, .display-block {
-  display: block!important;
-}
-.inline-block, .d-inline-block, .display-inline-block {
-  display: inline-block!important;
-}
-.inline, .d-inline, .display-inline {
-  display: inline!important;
-}
-
 $breakpoints:
   'zero' 0,
   'sm' 576px,
@@ -24,56 +8,61 @@ $breakpoints:
   'xl' 1400px,
   'xxl' 1920px,
 ;
-
 $orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-
 $flex: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-
 $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 10, "20" 20;
 
-.d, .display {
-  @each $breakpoint, $screenSize in $breakpoints {
-    &-#{$breakpoint} { 
-      @media (min-width: #{$screenSize}) {
-        &-none {
-          display: none!important;
-        }
-        &-flex {
-          display: flex;
-        }
-        &-block {
-          display: block;
-        }
-        &-inline-block {
-          display: inline-block;
-        }
-        &-inline {
-          display: inline;
-        }
-      }
-    }
-  }
+// Display
+.none, .display-none {
+  display: none!important;
+}
+.flex, .display-flex {
+  display: flex!important;
+}
+.block, .display-block {
+  display: block!important;
+}
+.inline-block, .display-inline-block {
+  display: inline-block!important;
+}
+.inline, .display-inline {
+  display: inline!important;
 }
 
+// Order
 .order {
   @each $order in $orders {
     &-#{$order} {
       order: #{$order};
     }
   }
-  @each $breakpoint, $screenSize in $breakpoints {
-    &-#{$breakpoint} { 
-      @media (min-width: #{$screenSize}) {
-        @each $order in $orders {
-          &-#{$order} {
-            order: #{$order};
-          }
-        }
+}
+
+// Gap
+.gap, .g {
+  --gap: calc( var(--basic-gap) * 1 );
+  @each $gap-label, $gap in $multiplier {
+    &-#{$gap-label} {
+      --gap: calc( var(--basic-gap) * #{$gap} );
+    }
+  }
+  &y, &-y {
+    @each $gap-label, $gap in $multiplier {
+      &-#{$gap-label} {
+        --gap-y: calc( var(--basic-gap) * #{$gap} );
+      }
+    }
+  }
+  &x, &-x {
+    @each $gap-label, $gap in $multiplier {
+      &-#{$gap-label} {
+        --gap-x: calc( var(--basic-gap) * #{$gap} );
       }
     }
   }
 }
 
+// Flex classes
 .flex {
   @each $grow in $flex {
     &-#{$grow} {
@@ -95,13 +84,13 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
     &-row {
       flex-direction: row!important;
     }
-    &-row-rev, &-row-reverse {
+    &-row-reverse {
       flex-direction: row-reverse!important;
     }
-    &-col, &-column {
+    &-column {
       flex-direction: column!important;
     }
-    &-col-rev, &-col-reverse, &-column-rev, &-column-reverse {
+    &-column-reverse {
       flex-direction: column-reverse!important;
     }
   }
@@ -134,30 +123,7 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
   
 }
 
-.gap, .g {
-  --gap: calc( var(--basic-gap) * 1 );
-  @each $gap-label, $gap in $multiplier {
-    &-#{$gap-label} {
-      --gap: calc( var(--basic-gap) * #{$gap} );
-    }
-  }
-  &y, &-y {
-    @each $gap-label, $gap in $multiplier {
-      &-#{$gap-label} {
-        --gap-y: calc( var(--basic-gap) * #{$gap} );
-      }
-    }
-  }
-  &x, &-x {
-    @each $gap-label, $gap in $multiplier {
-      &-#{$gap-label} {
-        --gap-x: calc( var(--basic-gap) * #{$gap} );
-      }
-    }
-  }
-}
-
-.justify-content, .jc {
+.justify-content {
   &-start {
     justify-content: flex-start!important;
   }
@@ -175,7 +141,7 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
   }
 }
 
-.align-content, .ac {
+.align-content {
   &-start {
     align-content: flex-start!important;
   }
@@ -196,7 +162,7 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
   }
 }
 
-.align-items, .ai {
+.align-items {
   &-start {
     align-items: flex-start!important;
   }
@@ -208,5 +174,160 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
   }
   &-stretch {
     align-items: stretch!important;
+  }
+}
+
+// breakpoint clsses
+@each $breakpoint, $screenSize in $breakpoints {
+  #{$breakpoint}- {
+    @media (min-width: #{$screenSize}) {
+
+      // Display
+      .none, .display-none {
+        display: none!important;
+      }
+      .flex, .display-flex {
+        display: flex!important;
+      }
+      .block, .display-block {
+        display: block!important;
+      }
+      .inline-block, .display-inline-block {
+        display: inline-block!important;
+      }
+      .inline, .display-inline {
+        display: inline!important;
+      }
+
+      // Order
+      .order {
+        @each $order in $orders {
+          &-#{$order} {
+            order: #{$order};
+          }
+        }
+      }
+
+      // Gap
+      .gap, .g {
+        --gap: calc( var(--basic-gap) * 1 );
+        @each $gap-label, $gap in $multiplier {
+          &-#{$gap-label} {
+            --gap: calc( var(--basic-gap) * #{$gap} );
+          }
+        }
+        &y, &-y {
+          @each $gap-label, $gap in $multiplier {
+            &-#{$gap-label} {
+              --gap-y: calc( var(--basic-gap) * #{$gap} );
+            }
+          }
+        }
+        &x, &-x {
+          @each $gap-label, $gap in $multiplier {
+            &-#{$gap-label} {
+              --gap-x: calc( var(--basic-gap) * #{$gap} );
+            }
+          }
+        }
+      }
+
+      // Flex classes
+      .flex {
+        &-direction {
+          &-row {
+            flex-direction: row!important;
+          }
+          &-row-reverse {
+            flex-direction: row-reverse!important;
+          }
+          &-column {
+            flex-direction: column!important;
+          }
+          &-column-reverse {
+            flex-direction: column-reverse!important;
+          }
+        }
+        &-wrap {
+          flex-wrap: wrap!important;
+        }
+        &-no-wrap, &-nowrap {
+          flex-wrap: nowrap!important;
+        }
+        &-flow {
+          &-row {
+            &-wrap {
+              flex-flow: row wrap;
+            }
+            &-nowrap {
+              flex-flow: row nowrap;
+            }
+          }
+          &-column {
+            &-wrap {
+              flex-flow: column wrap;
+            }
+            &-nowrap {
+              flex-flow: column nowrap;
+            }
+          }
+        }
+      }
+
+      .justify-content {
+        &-start {
+          justify-content: flex-start!important;
+        }
+        &-end {
+          justify-content: flex-end!important;
+        }
+        &-center {
+          justify-content: center!important;
+        }
+        &-between {
+          justify-content: space-between!important;
+        }
+        &-around {
+          justify-content: space-around!important;
+        }
+      }
+
+      .align-content {
+        &-start {
+          align-content: flex-start!important;
+        }
+        &-end {
+          align-content: flex-end!important;
+        }
+        &-center {
+          align-content: center!important;
+        }
+        &-stretch {
+          align-content: stretch!important;
+        }
+        &-between {
+          align-content: space-between!important;
+        }
+        &-around {
+          align-content: space-around!important;
+        }
+      }
+
+      .align-items {
+        &-start {
+          align-items: flex-start!important;
+        }
+        &-end {
+          align-items: flex-end!important;
+        }
+        &-center {
+          align-items: center!important;
+        }
+        &-stretch {
+          align-items: stretch!important;
+        }
+      }
+
+    }
   }
 }

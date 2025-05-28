@@ -1,16 +1,16 @@
 /* mini */
 /* A simple CSS framework to build wonderful websites in... minutes! */
 
+@import "scss/reset"; // Standalone
 @import "scss/vars"; // Standalone
 @import "scss/breakpoints"; // Standalone
-@import "scss/reset"; // Standalone
 @import "scss/basics";
 @import "scss/flexboxes";
 @import "scss/structure"; // Standalone
 @import "scss/main"; // Standalone
 @import "scss/nav";
-@import "scss/forms";
-@import "scss/buttons";
+@import "scss/forms"; // Standalone
+@import "scss/buttons"; // Standalone
 @import "scss/borders"; // Standalone
 @import "scss/colors"; // Standalone
 @import "scss/typo"; // Standalone

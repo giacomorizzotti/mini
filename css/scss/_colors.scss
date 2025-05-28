@@ -61,17 +61,6 @@ $colors: //color name, color code, text color over color
 
   "dt" var(--doingthings-color) var(--black);
 
-/*
-$sides: (
-  't':'top',
-  'e':'right',
-  'r':'right',
-  'b':'bottom',
-  's':'left',
-  'l':'left',
-);
-*/
-
 @each $colorname, $colorcode, $colortext in $colors {
   .#{$colorname} {
     // texts
@@ -134,16 +123,6 @@ $sides: (
           border-color: $colorcode!important;
         }
       }
-      //@each $sideLabel, $side in $sides {
-      //  &-#{$sideLabel} { 
-      //    border-#{$side}-color: $colorcode!important;
-      //    &-hover, &-clicked, &-active {
-      //      &:hover, &.clicked, &.active {
-      //        border-#{$side}-color: $colorcode!important;
-      //      }
-      //    }
-      //  }
-      //}
     }
     // bubbles
     &-bubble {

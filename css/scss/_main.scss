@@ -40,17 +40,13 @@ img {
 
 // spacing
 .space-top {
-  //padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
   padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
 }
 .space-top-bot {
-  //padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
-  //padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
   padding-top: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
   padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
 }
 .space-bot {
-  //padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
   padding-bottom: calc((var(--menu-toggle-height)) + (var(--padding) * 2))!important;
 }
 
@@ -101,51 +97,51 @@ hr {
 }
 
 // fixed height
-.fh, .height-100 {
+.fh {
   min-height: 100vh; // Fallback for browsers that do not support Custom Properties
   min-height: 100dvh;
 }
-.fhf, .height-100-fixed {
+.fhf {
   height: 100vh; // Fallback for browsers that do not support Custom Properties
   height: 100dvh;
 }
-.hh, .hfh, .height-50 {
+.hh {
   min-height: 50vh; // Fallback for browsers that do not support Custom Properties
   min-height: 50dvh;
 }
-.hhf, .hfhf, .height-50-fixed {
+.hhf {
   height: 50vh; // Fallback for browsers that do not support Custom Properties
   height: 50dvh;
 }
-.one-quarter-height, .height-25 {
+.h25 {
   min-height: 25vh; // Fallback for browsers that do not support Custom Properties
   min-height: 25dvh;
 }
-.one-quarter-height-fixed, .height-25-fixed {
+.h25f {
   height: 25vh; // Fallback for browsers that do not support Custom Properties
   height: 25dvh;
 }
-.three-quarter-height, .height-75 {
+.h75 {
   min-height: 75vh; // Fallback for browsers that do not support Custom Properties
   min-height: 75dvh;
 }
-.three-quarter-height-fixed, .height-75 {
+.h75f {
   height: 75vh; // Fallback for browsers that do not support Custom Properties
   height: 75dvh;
 }
-.one-third-height, .height-33 {
+.h33 {
   min-height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
   min-height: 33.3333333dvh;
 }
-.one-third-height-fixed, .height-33-fixed {
+.h33f {
   height: 33.3333333vh; // Fallback for browsers that do not support Custom Properties
   height: 33.3333333dvh;
 }
-.two-third-height, .height-66 {
+.h66 {
   min-height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
   min-height: 66.666666dvh;
 }
-.two-third-height-fixed, .height-66-fixed {
+.h66f {
   height: 66.666666vh; // Fallback for browsers that do not support Custom Properties
   height: 66.666666dvh;
 }
@@ -181,7 +177,6 @@ hr {
 .mh-100 {
   min-height: 100%;
 }
-
 .h-100 {
   height: 100%;
 }
@@ -189,7 +184,6 @@ hr {
 .mw-100 {
   min-width: 100%;
 }
-
 .w-100 {
   width: 100%;
 }
@@ -255,35 +249,30 @@ $boxShadowAreas: (
   'l':20px,
 );
 $boxShadowColors: (
-  'lightest':rgb( 0 0 0 / 7.5% ),
-  'lighter':rgb( 0 0 0 / 10% ),
-  'light':rgb( 0 0 0 / 12.5% ),
-  'dark':rgb( 0 0 0 / 25% ),
-  'darker': rgb( 0 0 0 / 45% ),
+  'lightest':rgb( 0 0 0 / 3% ),
+  'lighter':rgb( 0 0 0 / 5% ),
+  'light':rgb( 0 0 0 / 7.5% ),
+  'dark':rgb( 0 0 0 / 12.5% ),
+  'darker': rgb( 0 0 0 / 25% ),
   'darkest': rgb( 0 0 0 / 65% ),
 );
 .box-shadow, .bs {
-  @include boxShadow(0, 10px, rgb( 0 0 0 / 17.5% ));
+  @include boxShadow(0, 10px, rgb( 0 0 0 / 5% ));
   &-hover {
     @extend .box-shadow, .bs;
     transition: box-shadow 0.4s ease;
     &:hover {
-      @include boxShadow(0, 15px, rgb( 0 0 0 / 25% ));
-    }
-  }
-  @each $areaLabel, $area in $boxShadowAreas {
-    &-#{$areaLabel} {
-      @include boxShadow(0, $area, rgb( 0 0 0 / 25% ));
-      @each $colorLabel, $color in $boxShadowColors {
-        &-#{$colorLabel} {
-          @include boxShadow(0, $area, $color);
-        }
-      }
+      @include boxShadow(0, 15px, rgb( 0 0 0 / 12.5% ));
     }
   }
   @each $colorLabel, $color in $boxShadowColors {
     &-#{$colorLabel} {
       @include boxShadow(0, 10px, $color);
+      @each $areaLabel, $area in $boxShadowAreas {
+        &-#{$areaLabel} {
+          @include boxShadow(0, $area, $color);
+        }
+      }
     }
   }
 }

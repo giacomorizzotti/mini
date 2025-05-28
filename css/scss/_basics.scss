@@ -1,40 +1,5 @@
 // BASICS
 
-// fluid typography
-@use 'sass:math';
-
-@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value, $mob-value) {
-  & {
-    @each $property in $properties {
-      #{$property}: $mob-value;
-    }
-
-    @media screen and (min-width: $min-vw) {
-      @each $property in $properties {
-        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-    }
-
-    @media screen and (min-width: $max-vw) {
-      @each $property in $properties {
-        #{$property}: $max-value;
-      }
-    }
-  }
-}
-
-@function strip-unit($value) {
-  @return math.div( $value, ($value * 0 + 1) );
-}
-
-:root {
-  @include fluid-type(--font-size, $min_screen, $max_screen, $min_font, $max_font, $mob_font);
-}
-
-html {
-  font-size: var(--font-size);
-}
-
 .sheet {
   display: flex;
   flex-flow: column wrap;
@@ -73,7 +38,6 @@ html {
 
 body.menu-open {
   .sheet {
-    //padding: calc((var(--logo-height)) + var(--margin) * 2 + var(--padding) * 2 + var(--margin) * 2 ) 0 ;
     main {
       -webkit-border-top-right-radius: 15px;
       -webkit-border-bottom-right-radius: 15px;

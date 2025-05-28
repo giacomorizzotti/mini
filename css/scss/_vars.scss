@@ -20,11 +20,7 @@
   --basic-gap: 0.625rem; // 10px
 
   // min-max screen size
-  --min-screen: 576px; // 576px
   --max-screen: 1400px; // 1400px
-  --min-font: 0.875rem; // 14px
-  --max-font: 1.125rem; // 16px
-  --mob-font: 1.125rem; // 16px
 
   // logo
   --logo-height: 1.25rem;
@@ -80,7 +76,7 @@
   --menu-toggle-color: var(--sheet-color);
   --menu-toggle-line-special-color: var(--main-color);
   --theme-color: var(--main-color);
-  --text-selection-bg: var(--main-color);
+  --text-selection-bg: var(--link-color);
   --text-selection-color: var(--white);
   --scrollbar-color-bg: var(--main-color);
   --scrollbar-color-thumb: var(--white);
@@ -146,10 +142,3 @@
 
 }
 
-// responsive fonts
-$min_screen: 576px; // 576px
-$max_screen: 1400px; // 1400px
-$min_font: 0.875rem; // 14px
-//$max_font: 1.375rem; // 22px
-$max_font: 1.125rem; // 18px
-$mob_font: 1.125rem; // 18px
