@@ -37,8 +37,8 @@ body::-webkit-scrollbar-thumb {
 // text selection
 ::-moz-selection { background: transparent; color: var(--text-selection-bg); }
 ::selection { background: transparent ; color: var(--text-selection-bg); }
-.link-text::-moz-selection, .link-box::-moz-selection, .link-bg::-moz-selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }
-.link-text::selection, .link-box::selection, .link-bg::selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }
+.link-text::-moz-selection, .link-box::-moz-selection, .link-bg::-moz-selection, a::-moz-selection, a::-moz-selection, a::-moz-selection, .btn::-moz-selection, .btn::-moz-selection, .btn::-moz-selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }
+.link-text::selection, .link-box::selection, .link-bg::selection, a::selection, a::selection, a::selection, .btn::selection, .btn::selection, .btn::selection {background: rgba(0,0,0,0.4); color: var(--text-selection-color); }
 
 body {
   

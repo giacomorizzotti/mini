@@ -81,7 +81,6 @@ $colors: //color name, color code, text color over color
   display: inline-block;
   margin: calc( var(--margin) * 0.5 ) calc( var(--margin) * 1 ) calc( var(--margin) * 0.5 ) 0;
   border: 1px solid;
-  font-weight: 700;
   transition: color ease-out 0.15s, background-color ease-out 0.15s, border-color ease-out 0.15s, box-shadow ease-out 0.15s;
   cursor: pointer;
   vertical-align: middle;
