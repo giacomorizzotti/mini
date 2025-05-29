@@ -77,6 +77,7 @@ $breakpoints: (
 .boxes {
   display: flex;
   position: relative;
+  flex-flow: row wrap;
   --gap: calc(var(--basic-gap) * 1);
   --gap-y: calc(var(--gap) * 1);
   --gap-x: calc(var(--gap) * 1);
