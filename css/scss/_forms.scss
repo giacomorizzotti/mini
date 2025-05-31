@@ -31,10 +31,6 @@ form {
         &[type="submit"] {
             -webkit-box-shadow: none;
             box-shadow: none;
-            @include mdDown {
-                display: block;
-                width: 100%;
-            }
         }
     }
     input {
