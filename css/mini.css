@@ -166,7 +166,7 @@ body section {
   --h4: 1.3rem;
   --h5: 1.15rem;
   --h6: 1rem;
-  --p: 0.9rem;
+  --p: 1rem;
 }
 
 @media (max-width: 576px) {
@@ -19839,7 +19839,7 @@ input[type="radio"]:checked+label.dt {
 }
 
 :root {
-  --font-size: 1.125rem;
+  --font-size: 1;
 }
 @media screen and (min-width: 576px) {
   :root {

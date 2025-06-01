@@ -6,7 +6,7 @@ $min_screen: 576px; // 576px
 $max_screen: 1400px; // 1400px
 $min_font: 0.875rem; // 14px
 $max_font: 1.125rem; // 18px
-$mob_font: 1.125rem; // 18px
+$mob_font: 1; // 18px
 
 @use 'sass:math';
 
