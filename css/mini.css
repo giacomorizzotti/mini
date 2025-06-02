@@ -534,26 +534,26 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-8 {
-    flex-basis: 8.333333%;
-    max-width: 8.333333%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-8 {
-    flex-basis: 8.333333%;
-    max-width: 8.333333%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-8 {
-    flex-basis: 8.333333%;
-    max-width: 8.333333%;
+    flex-basis: 33.333333%;
+    max-width: 33.333333%;
   }
 }
 @media (min-width: 992px) {
   .boxes .box-lg-8 {
-    flex-basis: 8.333333%;
-    max-width: 8.333333%;
+    flex-basis: 16.666666%;
+    max-width: 16.666666%;
   }
 }
 @media (min-width: 1400px) {
@@ -564,8 +564,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-8 {
-    flex-basis: 8.333333%;
-    max-width: 8.333333%;
+    flex-basis: 0.926666;
+    max-width: 0.926666;
   }
 }
 @media (min-width: 0) {
@@ -600,26 +600,26 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-10 {
-    flex-basis: 10%;
-    max-width: 10%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-10 {
-    flex-basis: 10%;
-    max-width: 10%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-10 {
-    flex-basis: 10%;
-    max-width: 10%;
+    flex-basis: 20%;
+    max-width: 20%;
   }
 }
 @media (min-width: 992px) {
   .boxes .box-lg-10 {
-    flex-basis: 10%;
-    max-width: 10%;
+    flex-basis: 20%;
+    max-width: 20%;
   }
 }
 @media (min-width: 1400px) {
@@ -630,8 +630,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-10 {
-    flex-basis: 10%;
-    max-width: 10%;
+    flex-basis: 0.9;
+    max-width: 0.9;
   }
 }
 @media (min-width: 0) {
@@ -666,26 +666,26 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-12 {
-    flex-basis: 12.5%;
-    max-width: 12.5%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-12 {
-    flex-basis: 12.5%;
-    max-width: 12.5%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-12 {
-    flex-basis: 12.5%;
-    max-width: 12.5%;
+    flex-basis: 25%;
+    max-width: 25%;
   }
 }
 @media (min-width: 992px) {
   .boxes .box-lg-12 {
-    flex-basis: 12.5%;
-    max-width: 12.5%;
+    flex-basis: 25%;
+    max-width: 25%;
   }
 }
 @media (min-width: 1400px) {
@@ -696,8 +696,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-12 {
-    flex-basis: 12.5%;
-    max-width: 12.5%;
+    flex-basis: 0.875;
+    max-width: 0.875;
   }
 }
 @media (min-width: 0) {
@@ -732,20 +732,20 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-16 {
-    flex-basis: 16.666666%;
-    max-width: 16.666666%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-16 {
-    flex-basis: 16.666666%;
-    max-width: 16.666666%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-16 {
-    flex-basis: 16.666666%;
-    max-width: 16.666666%;
+    flex-basis: 33.333333%;
+    max-width: 33.333333%;
   }
 }
 @media (min-width: 992px) {
@@ -762,8 +762,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-16 {
-    flex-basis: 16.666666%;
-    max-width: 16.666666%;
+    flex-basis: 0.84333333;
+    max-width: 0.84333333;
   }
 }
 @media (min-width: 0) {
@@ -798,20 +798,20 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-20 {
-    flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-20 {
-    flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-20 {
-    flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -828,8 +828,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-20 {
-    flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 0.8;
+    max-width: 0.8;
   }
 }
 @media (min-width: 0) {
@@ -864,20 +864,20 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-25 {
-    flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-25 {
-    flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-25 {
-    flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -894,8 +894,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-25 {
-    flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 0.75;
+    max-width: 0.75;
   }
 }
 @media (min-width: 0) {
@@ -930,20 +930,20 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-30 {
-    flex-basis: 30%;
-    max-width: 30%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-30 {
-    flex-basis: 30%;
-    max-width: 30%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-30 {
-    flex-basis: 30%;
-    max-width: 30%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -960,8 +960,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-30 {
-    flex-basis: 30%;
-    max-width: 30%;
+    flex-basis: 0.7;
+    max-width: 0.7;
   }
 }
 @media (min-width: 0) {
@@ -996,14 +996,14 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-33 {
-    flex-basis: 33.333333%;
-    max-width: 33.333333%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-33 {
-    flex-basis: 33.333333%;
-    max-width: 33.333333%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -1026,8 +1026,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-33 {
-    flex-basis: 33.333333%;
-    max-width: 33.333333%;
+    flex-basis: 0.666666;
+    max-width: 0.666666;
   }
 }
 @media (min-width: 0) {
@@ -1062,14 +1062,14 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-40 {
-    flex-basis: 40%;
-    max-width: 40%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-40 {
-    flex-basis: 40%;
-    max-width: 40%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -1092,8 +1092,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-40 {
-    flex-basis: 40%;
-    max-width: 40%;
+    flex-basis: 0.6;
+    max-width: 0.6;
   }
 }
 @media (min-width: 0) {
@@ -1128,8 +1128,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-50 {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
@@ -1158,8 +1158,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-50 {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 0.5;
+    max-width: 0.5;
   }
 }
 @media (min-width: 0) {
@@ -1194,14 +1194,14 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-60 {
-    flex-basis: 60%;
-    max-width: 60%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-60 {
-    flex-basis: 60%;
-    max-width: 60%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -1224,8 +1224,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-60 {
-    flex-basis: 60%;
-    max-width: 60%;
+    flex-basis: 0.4;
+    max-width: 0.4;
   }
 }
 @media (min-width: 0) {
@@ -1260,14 +1260,14 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-66 {
-    flex-basis: 66.666666%;
-    max-width: 66.666666%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-66 {
-    flex-basis: 66.666666%;
-    max-width: 66.666666%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -1290,8 +1290,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-66 {
-    flex-basis: 66.666666%;
-    max-width: 66.666666%;
+    flex-basis: 0.333333;
+    max-width: 0.333333;
   }
 }
 @media (min-width: 0) {
@@ -1326,20 +1326,20 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-70 {
-    flex-basis: 70%;
-    max-width: 70%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-70 {
-    flex-basis: 70%;
-    max-width: 70%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-70 {
-    flex-basis: 70%;
-    max-width: 70%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -1356,8 +1356,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-70 {
-    flex-basis: 70%;
-    max-width: 70%;
+    flex-basis: 0.3;
+    max-width: 0.3;
   }
 }
 @media (min-width: 0) {
@@ -1392,20 +1392,20 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-75 {
-    flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-75 {
-    flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-75 {
-    flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -1422,8 +1422,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-75 {
-    flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 0.25;
+    max-width: 0.25;
   }
 }
 @media (min-width: 0) {
@@ -1458,20 +1458,20 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-80 {
-    flex-basis: 80%;
-    max-width: 80%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-80 {
-    flex-basis: 80%;
-    max-width: 80%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-80 {
-    flex-basis: 80%;
-    max-width: 80%;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -1488,8 +1488,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-80 {
-    flex-basis: 80%;
-    max-width: 80%;
+    flex-basis: 0.2;
+    max-width: 0.2;
   }
 }
 @media (min-width: 0) {
@@ -1524,26 +1524,26 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-88 {
-    flex-basis: 87.5%;
-    max-width: 87.5%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-88 {
-    flex-basis: 87.5%;
-    max-width: 87.5%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-88 {
-    flex-basis: 87.5%;
-    max-width: 87.5%;
+    flex-basis: 75%;
+    max-width: 75%;
   }
 }
 @media (min-width: 992px) {
   .boxes .box-lg-88 {
-    flex-basis: 87.5%;
-    max-width: 87.5%;
+    flex-basis: 75%;
+    max-width: 75%;
   }
 }
 @media (min-width: 1400px) {
@@ -1554,8 +1554,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-88 {
-    flex-basis: 87.5%;
-    max-width: 87.5%;
+    flex-basis: 0.125;
+    max-width: 0.125;
   }
 }
 @media (min-width: 0) {
@@ -1590,26 +1590,26 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 0) {
   .boxes .box-zero-90 {
-    flex-basis: 90%;
-    max-width: 90%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 576px) {
   .boxes .box-sm-90 {
-    flex-basis: 90%;
-    max-width: 90%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .boxes .box-md-90 {
-    flex-basis: 90%;
-    max-width: 90%;
+    flex-basis: 80%;
+    max-width: 80%;
   }
 }
 @media (min-width: 992px) {
   .boxes .box-lg-90 {
-    flex-basis: 90%;
-    max-width: 90%;
+    flex-basis: 80%;
+    max-width: 80%;
   }
 }
 @media (min-width: 1400px) {
@@ -1620,8 +1620,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-90 {
-    flex-basis: 90%;
-    max-width: 90%;
+    flex-basis: 0.1;
+    max-width: 0.1;
   }
 }
 @media (min-width: 0) {
@@ -1686,8 +1686,8 @@ footer#footer .footer-logo img.logo.logotype:hover {
 }
 @media (min-width: 1920px) {
   .boxes .box-xxl-100 {
-    flex-basis: 100%;
-    max-width: 100%;
+    flex-basis: 0;
+    max-width: 0;
   }
 }
 

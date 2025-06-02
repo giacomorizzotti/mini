@@ -107,9 +107,9 @@ $breakpoints: (
       }
       
       // Generate .box-{{label}}-{{breakpoint}} classes
-      @for $i from 1 through 6 {
-        $breakpoint: nth(map-keys($breakpoints), $i);
-        $width: nth($widths, 5);
+      @each $breakpoint, $minwidth in $breakpoints {
+        $index: index(map-keys($breakpoints), $breakpoint);
+        $width: nth($widths, $index);
         &-#{$breakpoint}-#{$label} {
           @include respond($breakpoint) {
             flex-basis: #{$width};
