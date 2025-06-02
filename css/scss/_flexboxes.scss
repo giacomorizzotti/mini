@@ -99,7 +99,7 @@ $breakpoints: (
         $width: nth($widths, $index);
         &-#{$breakpoint}-#{$label} {
           @include respond($breakpoint) {
-            flex-basis: #{$width};
+            flex-basis: calc(#{$width} + var(--gap-x) * nth($widths, 6) * -1);
             max-width: #{$width};
           }
         }
