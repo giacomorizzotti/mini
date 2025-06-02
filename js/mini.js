@@ -94,9 +94,9 @@ function pagination(pageElements=30) {
                     if ( elements[i].classList.contains('d-none') ) {
                         elements[i].classList.remove('d-none')
                     }
-                    elements[i].classList.add('d-block');
+                    elements[i].classList.add('block');
                 } else {
-                    elements[i].classList.add('d-none');
+                    elements[i].classList.add('none');
                 }
             }
             thisPage = 1;
@@ -132,17 +132,17 @@ function pagination(pageElements=30) {
             //console.log(endingElement);
 
             for (var m = 0; m < elements.length; m++) {
-                if ( elements[m].classList.contains('d-block') ) {
-                    elements[m].classList.remove('d-block');
-                    elements[m].classList.add('d-none');
+                if ( elements[m].classList.contains('block') ) {
+                    elements[m].classList.remove('block');
+                    elements[m].classList.add('none');
                 }
             }
 
             for (var n = startingElement; n < endingElement; n++) {
                 if ( elements[n] != null ) {
-                    if ( elements[n].classList.contains('d-none') ) {
-                        elements[n].classList.remove('d-none');
-                        elements[n].classList.add('d-block');
+                    if ( elements[n].classList.contains('none') ) {
+                        elements[n].classList.remove('none');
+                        elements[n].classList.add('block');
                     }
                 }
             }
