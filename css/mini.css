@@ -11559,9 +11559,9 @@ body #actions ul.action-groups li.action-group > a .icon {
   font-size: calc(var(--p) * 1.75);
   line-height: 1;
   height: 8vw;
-  max-height: 48px;
+  max-height: 52px;
   width: 8vw;
-  max-width: 48px;
+  max-width: 52px;
   padding: 0;
   margin: 0;
   -webkit-border-radius: 50%;
