@@ -22,7 +22,7 @@ $box-widths: (
 );
 
 $breakpoints: (
-  "": 0,
+  "zero": 0,
   "sm": 576px,
   "md": 768px,
   "lg": 992px,
@@ -96,7 +96,7 @@ $breakpoints: (
       @each $label in $labels {
         $widths: map-get($box-widths, $label);
         $index: index(map-keys($breakpoints), $breakpoint);
-        $width: nth($widths, $index);
+        $width: if($index == 6, nth($widths, 5), nth($widths, $index));
         &-#{$breakpoint}-#{$label} {
           @include respond($breakpoint) {
             flex-basis: calc(#{$width} + var(--gap-x) * nth($widths, 6) * -1);
