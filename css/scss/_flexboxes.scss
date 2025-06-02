@@ -22,7 +22,7 @@ $box-widths: (
 );
 
 $breakpoints: (
-  "": 0,
+  "zero": 0,
   "sm": 576px,
   "md": 768px,
   "lg": 992px,
@@ -105,6 +105,20 @@ $breakpoints: (
           }
         }
       }
+      
+      // Generate .box-{{label}}-{{breakpoint}} classes
+      @for $i from 1 through 6 {
+        $breakpoint: nth(map-keys($breakpoints), $i);
+        $width: nth($widths, 5);
+        &-#{$breakpoint}-#{$label} {
+          @include respond($breakpoint) {
+            flex-basis: #{$width};
+            max-width: #{$width};
+          }
+        }
+      }
+
     }
+
   }
 }
