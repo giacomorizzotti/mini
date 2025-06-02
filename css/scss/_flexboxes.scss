@@ -22,7 +22,7 @@ $box-widths: (
 );
 
 $breakpoints: (
-  "": 0,
+  "zero": 0,
   "sm": 576px,
   "md": 768px,
   "lg": 992px,
@@ -89,6 +89,22 @@ $breakpoints: (
     padding: calc(var(--padding) * 1);
     flex-basis: 100%;
     flex-grow: 0;
+  
+    // Generate .box-{{breakpoint}}-{{label}} classes in breakpoint order
+    @each $breakpoint, $minwidth in $breakpoints {
+      $labels: map-keys($box-widths);
+      @each $label in $labels {
+        $widths: map-get($box-widths, $label);
+        $index: index(map-keys($breakpoints), $breakpoint);
+        $width: nth($widths, $index);
+        &-#{$breakpoint}-#{$label} {
+          @include respond($breakpoint) {
+            flex-basis: #{$width};
+            max-width: #{$width};
+          }
+        }
+      }
+    }
 
     // Generate responsive box width classes
     @each $label, $widths in $box-widths {
@@ -105,6 +121,7 @@ $breakpoints: (
           }
         }
       }
+
     }
   }
 }
