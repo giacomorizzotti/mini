@@ -499,7 +499,6 @@ footer#footer .footer-logo img.logo.logotype:hover {
   position: relative;
   margin: 0;
   padding: calc(var(--padding) * 1);
-  flex-basis: 100%;
   flex-grow: 0;
 }
 @media (min-width: 0) {

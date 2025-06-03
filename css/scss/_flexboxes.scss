@@ -87,7 +87,7 @@ $breakpoints: (
     position: relative;
     margin: 0;
     padding: calc(var(--padding) * 1);
-    flex-basis: 100%;
+    //flex-basis: 100%;
     flex-grow: 0;
   
     // Generate .box-{{breakpoint}}-{{label}} classes in breakpoint order
