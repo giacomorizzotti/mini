@@ -1,16 +1,52 @@
 // BASICS
 
+// Small devices UP // 576px up
+$screen-sm: 576px;
+@mixin sm {
+   @media (min-width: #{$screen-sm}) {
+       @content;
+   }
+}
+// Medium devices UP // 768px up
+$screen-md: 768px;
+@mixin md {
+   @media (min-width: #{$screen-md}) {
+       @content;
+   }
+}
+// Large devices UP // 992px up
+$screen-lg: 992px;
+@mixin lg {
+   @media (min-width: #{$screen-lg}) {
+       @content;
+   }
+}
+// Extra large devices UP // 1200px up
+$screen-xl: 1200px;
+@mixin xl {
+   @media (min-width: #{$screen-xl}) {
+       @content;
+   }
+}
+// Extra large devices UP // 1200px up
+$screen-xxl: 1920px;
+@mixin xxl {
+   @media (min-width: #{$screen-xxl}) {
+       @content;
+   }
+}
+
 .sheet {
   display: flex;
   flex-flow: column wrap;
   align-items: stretch;
+  background: var(--sheet-color);
+  transition: padding 0.2s ease-out;
   @include lg {
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-start;
   }
-  background: var(--sheet-color);
-  transition: padding 0.2s ease-out;
   main {
     background: var(--white);
     transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
