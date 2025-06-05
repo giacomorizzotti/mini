@@ -445,20 +445,27 @@ body {
   // page menu
   ul#page-menu {
     display: flex;
+    position: fixed;
     transform: rotate(-90deg) translate(0, -100%);
     flex-flow: row-reverse wrap;
     justify-content: flex-start;
-    position: fixed;
     transform-origin: top right;
     width: 100vh;
     top: 0;
     right: 0;
     height: auto;
-    padding-right: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1))!important;
+    padding-right: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1));
     @include md {
+      position: relative;
+      transform: none;
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-end;
+      width: auto;
+      top: 0;
+      right: 0;
+      height: auto;
+      padding-right: var(--padding);
     }
     li {
       &.item, &.menu-item {
