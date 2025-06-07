@@ -443,7 +443,7 @@ body {
   }
 
   // page menu
-  ul#page-menu {
+  #page-menu {
     display: flex;
     position: fixed;
     transform: rotate(-90deg) translate(0, -100%);
@@ -497,7 +497,7 @@ body {
   }
   &.top.menu-open, &.top header.neg, &.top header.inv, &.top header.top-neg, &.top header.top-inv, &.top header.top-bk, &.top header.top-col,
   &.scroll.menu-open, &.scroll header.neg, &.scroll header.inv, &.scroll header.scroll-neg, &.scroll header.scroll-inv, &.scroll header.scroll-bk, &.scroll header.scroll-col {
-    ul#page-menu {
+    #page-menu {
       li {
         &.item, &.menu-item {
           a {
