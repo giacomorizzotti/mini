@@ -11360,7 +11360,7 @@ body.scroll.menu-open header#header {
   -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
-body #page-menu {
+body #page-menu ul {
   display: flex;
   position: fixed;
   transform: rotate(-90deg) translate(0, -100%);
@@ -11374,7 +11374,7 @@ body #page-menu {
   padding-right: calc((var(--menu-toggle-height)) + var(--padding) * 2 + var(--padding) * 1);
 }
 @media (min-width: 768px) {
-  body #page-menu {
+  body #page-menu ul {
     position: relative;
     transform: none;
     display: flex;
@@ -11387,16 +11387,19 @@ body #page-menu {
     padding-right: var(--padding);
   }
 }
-body #page-menu li.item, body #page-menu li.menu-item {
+body #page-menu ul li.item, body #page-menu ul li.menu-item {
   font-weight: 300;
 }
-body #page-menu li.menu-icon {
+body #page-menu ul li.item a, body #page-menu ul li.menu-item a {
+  padding: calc(var(--padding) * 0.5) var(--padding);
+}
+body #page-menu ul li.menu-icon {
   color: var(--main-color-dark);
   padding: var(--padding);
   border: 5px solid var(--main-color-dark);
 }
 @media (min-width: 768px) {
-  body #page-menu li.menu-icon {
+  body #page-menu ul li.menu-icon {
     background-color: transparent;
     color: var(--grey);
     padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
@@ -11797,41 +11800,48 @@ body ul#lang-menu li.item, body ul#lang-menu li.menu-item {
 form {
   margin: 0;
 }
-form label {
+
+label {
   font-size: calc(var(--p) * 1);
   color: var(--grey);
   line-height: 1.4;
   display: block;
   margin: 0 0 calc(var(--margin) * 0.75) 0;
   padding-left: var(--padding);
-  font-style: italic;
 }
-form input, form textarea, form select {
+
+input, textarea, select {
   display: block;
   width: 100%;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-bottom-left-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   padding: calc(var(--padding) * 0.75) calc(var(--padding) * 1);
-  border: none;
-  border-left: 1px solid var(--grey);
-  border-bottom: 1px solid var(--grey);
   font-weight: 700;
   background-color: var(--white);
+  border: 1px solid var(--light-grey);
+  box-shadow: 0 0 15px -5px var(--light-grey);
+  transition: box-shadow 0.25s ease;
 }
-form input::placeholder, form textarea::placeholder, form select::placeholder {
+input::placeholder, textarea::placeholder, select::placeholder {
   color: var(--grey);
   font-weight: 300;
   font-style: italic;
 }
-form input[type=submit], form textarea[type=submit], form select[type=submit] {
+input[type=submit], textarea[type=submit], select[type=submit] {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-form input {
+input:focus, textarea:focus, select:focus {
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 15px -5px var(--main-color);
+}
+
+input {
   font-size: var(--p);
 }
-form textarea {
+
+textarea {
   min-width: 100%;
   width: 100%;
   max-width: 100%;
@@ -20746,7 +20756,6 @@ blockquote::after {
 
 .label {
   color: var(--grey);
-  font-style: italic;
 }
 
 .p {

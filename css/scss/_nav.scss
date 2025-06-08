@@ -443,7 +443,7 @@ body {
   }
 
   // page menu
-  #page-menu {
+  #page-menu ul {
     display: flex;
     position: fixed;
     transform: rotate(-90deg) translate(0, -100%);
@@ -472,14 +472,7 @@ body {
         //font-style: italic;
         font-weight: 300;
         a {
-          &.active {
-            &::after {
-            }
-          }
-        }
-      }
-      &:hover {
-        a {
+          padding: calc(var(--padding) * 0.5) var(--padding);
         }
       }
       &.menu-icon {
