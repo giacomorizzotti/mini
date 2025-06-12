@@ -11152,6 +11152,7 @@ body header#header #menu-toggle .line {
 }
 body header#header #menu-toggle:hover .line, body header#header #menu-toggle.clicked .line {
   width: 70%;
+  background: var(--white);
 }
 body header#header #menu-toggle:hover .line:first-child, body header#header #menu-toggle.clicked .line:first-child {
   width: 100%;

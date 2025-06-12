@@ -206,6 +206,7 @@ body {
       &:hover, &.clicked {
         .line {
           width: 70%;
+          background: var(--white);
           &:first-child {
             width: 100%;
           }
