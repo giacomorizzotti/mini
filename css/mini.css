@@ -20700,6 +20700,7 @@ pre, .pre {
   font-family: var(--font-mono);
   font-size: calc(var(--p) * 0.85);
   margin: calc(var(--margin) * 1.5) 0;
+  line-height: 1.3;
   overflow-x: auto;
   color: var(--white);
   white-space: pre-line;
