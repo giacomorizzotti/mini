@@ -11152,7 +11152,6 @@ body header#header #menu-toggle .line {
 }
 body header#header #menu-toggle:hover .line, body header#header #menu-toggle.clicked .line {
   width: 70%;
-  background: var(--white);
 }
 body header#header #menu-toggle:hover .line:first-child, body header#header #menu-toggle.clicked .line:first-child {
   width: 100%;
@@ -11162,6 +11161,7 @@ body header#header #menu-toggle:hover .line:last-child, body header#header #menu
 }
 body header#header #menu-toggle.clicked {
   transform: rotate(90deg);
+  background: var(--white);
 }
 body header#header #menu-toggle.clicked .line:first-child {
   background-color: var(--menu-toggle-line-special-color) !important;

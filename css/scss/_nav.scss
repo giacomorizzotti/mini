@@ -206,7 +206,6 @@ body {
       &:hover, &.clicked {
         .line {
           width: 70%;
-          background: var(--white);
           &:first-child {
             width: 100%;
           }
@@ -217,6 +216,7 @@ body {
       }
       &.clicked {
         transform: rotate(90deg);
+        background: var(--white);
         .line {
           &:first-child {
             background-color: var(--menu-toggle-line-special-color)!important;
