@@ -216,8 +216,8 @@ body {
       }
       &.clicked {
         transform: rotate(90deg);
-        background: var(--white);
         .line {
+          background: var(--white);
           &:first-child {
             background-color: var(--menu-toggle-line-special-color)!important;
           }

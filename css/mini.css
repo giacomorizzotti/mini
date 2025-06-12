@@ -11161,6 +11161,8 @@ body header#header #menu-toggle:hover .line:last-child, body header#header #menu
 }
 body header#header #menu-toggle.clicked {
   transform: rotate(90deg);
+}
+body header#header #menu-toggle.clicked .line {
   background: var(--white);
 }
 body header#header #menu-toggle.clicked .line:first-child {
