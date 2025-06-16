@@ -349,6 +349,17 @@ header#header {
     }
   }
 }
+.top {
+  .open-menu {
+    #page-menu ul li {
+      &.item, &.menu-item {
+        a {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
 header#header {
   &.top.open-menu, &.top header.neg, &.top header.inv, &.top header.top-neg, &.top header.top-inv, &.top header.top-bk, &.top header.top-col,
   &.scroll.open-menu, &.scroll header.neg, &.scroll header.inv, &.scroll header.scroll-neg, &.scroll header.scroll-inv, &.scroll header.scroll-bk, &.scroll header.scroll-col {

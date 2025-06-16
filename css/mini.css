@@ -11413,6 +11413,10 @@ header#header.scroll.open-menu header#header {
   }
 }
 
+.top .open-menu #page-menu ul li.item a, .top .open-menu #page-menu ul li.menu-item a {
+  color: var(--white);
+}
+
 header#header.top.open-menu #page-menu li.item a, header#header.top.open-menu #page-menu li.menu-item a, header#header.top header.neg #page-menu li.item a, header#header.top header.neg #page-menu li.menu-item a, header#header.top header.inv #page-menu li.item a, header#header.top header.inv #page-menu li.menu-item a, header#header.top header.top-neg #page-menu li.item a, header#header.top header.top-neg #page-menu li.menu-item a, header#header.top header.top-inv #page-menu li.item a, header#header.top header.top-inv #page-menu li.menu-item a, header#header.top header.top-bk #page-menu li.item a, header#header.top header.top-bk #page-menu li.menu-item a, header#header.top header.top-col #page-menu li.item a, header#header.top header.top-col #page-menu li.menu-item a, header#header.scroll.open-menu #page-menu li.item a, header#header.scroll.open-menu #page-menu li.menu-item a, header#header.scroll header.neg #page-menu li.item a, header#header.scroll header.neg #page-menu li.menu-item a, header#header.scroll header.inv #page-menu li.item a, header#header.scroll header.inv #page-menu li.menu-item a, header#header.scroll header.scroll-neg #page-menu li.item a, header#header.scroll header.scroll-neg #page-menu li.menu-item a, header#header.scroll header.scroll-inv #page-menu li.item a, header#header.scroll header.scroll-inv #page-menu li.menu-item a, header#header.scroll header.scroll-bk #page-menu li.item a, header#header.scroll header.scroll-bk #page-menu li.menu-item a, header#header.scroll header.scroll-col #page-menu li.item a, header#header.scroll header.scroll-col #page-menu li.menu-item a {
   color: var(--white);
 }
