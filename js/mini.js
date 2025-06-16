@@ -598,7 +598,7 @@ function btnClickToClickFeature() {
 // Add elements to page menu
 function buildPageMenu() {
     var autoMenuSection = document.querySelectorAll("section.page-menu");
-    var autoMenu = document.querySelectorAll("ul#page-menu");
+    var autoMenu = document.querySelectorAll("#page-menu ul");
     if ( autoMenuSection.length > 0 ) {
         document.body.classList.add('page-menu');
         /*
@@ -677,27 +677,43 @@ function menuToggle() {
     var sideLeft = document.getElementById('side-left');
     var sideRight = document.getElementById('side-right');
     var mainMenuItem = document.querySelectorAll('#side-right > nav.menu > ul.menu > li.menu-item > a');
+    var header = document.getElementById('header');
+    var sheet = document.getElementById('sheet');
     if ( sideRight ) {
-        sideRight.classList.add('closed');
+        sideRight.classList.add('closed-menu');
         if (menuToggle)
             menuToggle.classList.add('to-click');
         function toggleMenuVisibility() {
             window.scrollTo(0, 0);
             if (sideRight) {
-                if (sideRight.classList.contains("closed")) {
-                    sideRight.classList.add("open");
-                    sideRight.classList.remove("closed");
-                    if (!body.classList.contains("menu-open")) {
-                        body.classList.add("menu-open");
+                if (sideRight.classList.contains("closed-menu")) {
+                    sideRight.classList.add("open-menu");
+                    sideRight.classList.remove("closed-menu");
+                    if (!body.classList.contains("open-menu")) {
+                        body.classList.add("open-menu");
                     }
-                } else if (sideRight.classList.contains("open")) {
-                    sideRight.classList.add("closed");
-                    sideRight.classList.remove("open");
-                    if (body.classList.contains("menu-open") ) {
-                        if ( !sideLeft || !sideLeft.children.length > 0 || ( sideLeft && sideLeft.classList.contains('closed') ) ) {
-                            body.classList.remove("menu-open");
+                } else if (sideRight.classList.contains("open-menu")) {
+                    sideRight.classList.add("closed-menu");
+                    sideRight.classList.remove("open-menu");
+                    if (body.classList.contains("open-menu") ) {
+                        if ( !sideLeft || !sideLeft.children.length > 0 || ( sideLeft && sideLeft.classList.contains('closed-menu') ) ) {
+                            body.classList.remove("open-menu");
                         }
                     }
+                }
+            }
+            if (sheet) {
+                if (sheet.classList.contains('open-menu')) {
+                    sheet.classList.remove('open-menu')
+                } else {
+                    sheet.classList.add('open-menu')
+                }
+            }
+            if (header) {
+                if (header.classList.contains('open-menu')) {
+                    header.classList.remove('open-menu')
+                } else {
+                    header.classList.add('open-menu')
                 }
             }
             if (menuToggle && menuToggle.classList.contains('clicked')) {
@@ -710,14 +726,16 @@ function menuToggle() {
         }
         function hideMenuVisibility() {
             if (sideRight) {
-                if (sideRight.classList.contains("open")) {
-                    sideRight.classList.add("closed");
-                    sideRight.classList.remove("open");
+                if (sideRight.classList.contains("open-menu")) {
+                    sideRight.classList.add("closed-menu");
+                    sideRight.classList.remove("open-menu");
                 }
             }
-            if (body.classList.contains("menu-open")) {
-                if ( !sideLeft || !sideLeft.children.length > 0 || ( sideLeft && sideLeft.classList.contains('closed') ) ) {
-                    body.classList.remove("menu-open");
+            if (body.classList.contains("open-menu")) {
+                if ( !sideLeft || !sideLeft.children.length > 0 || ( sideLeft && sideLeft.classList.contains('closed-menu') ) ) {
+                    body.classList.remove("open-menu");
+                    sheet.classList.remove("open-menu");
+                    header.classList.remove("open-menu");
                 }
             }
             if (menuToggle && menuToggle.classList.contains('clicked')) {
@@ -731,9 +749,9 @@ function menuToggle() {
             if(!mainMenuItem[i].parentElement.classList.contains('drop-down')) {
                 mainMenuItem[i].addEventListener('click', function() {
                     for (j=0;j<headMenu.length;j++) {
-                        if (headMenu[j].classList.contains("open")) {
-                            headMenu[j].classList.add("closed");
-                            headMenu[j].classList.remove("open");
+                        if (headMenu[j].classList.contains("open-menu")) {
+                            headMenu[j].classList.add("closed-menu");
+                            headMenu[j].classList.remove("open-menu");
                         }
                     }
                 })
@@ -766,48 +784,48 @@ function adminMenuToggle() {
         var sideRight = document.getElementById('side-right');
         if (website.adminMenuOpen == true) {
             if (sideLeft)
-                sideLeft.classList.add('open')
+                sideLeft.classList.add('open-menu')
         }
         // start with left sidebar open
         if (
-            !sideLeft.classList.contains('open') && 
-            !sideLeft.classList.contains('closed')
+            !sideLeft.classList.contains('open-menu') && 
+            !sideLeft.classList.contains('closed-menu')
         ) {
-            sideLeft.classList.add('closed')
+            sideLeft.classList.add('closed-menu')
             if (!adminMenuToggle.classList.contains('to-click'))
                 adminMenuToggle.classList.add('to-click')
         } else if (
-            sideLeft.classList.contains('open')
+            sideLeft.classList.contains('open-menu')
         ) {
             if (!adminMenuToggle.classList.contains('clicked'))
                 adminMenuToggle.classList.add('clicked')
-            if (!body.classList.contains("menu-open"))
-                body.classList.add("menu-open")
+            if (!body.classList.contains("open-menu"))
+                body.classList.add("open-menu")
         } else if (
-            sideLeft.classList.contains('closed')
+            sideLeft.classList.contains('closed-menu')
         ) {
             if (!adminMenuToggle.classList.contains('to-click'))
                 adminMenuToggle.classList.add('to-click')
-            if (body.classList.contains("menu-open")) {
-                body.classList.remove("menu-open");
+            if (body.classList.contains("open-menu")) {
+                body.classList.remove("open-menu");
             }
         }
         function toggleMenuVisibility() {
             if (sideLeft && sideLeft.children.length > 0) {
-                if (sideLeft.classList.contains("closed")) {
-                    sideLeft.classList.add("open");
-                    sideLeft.classList.remove("closed");
-                    if (!body.classList.contains("menu-open")) {
-                        body.classList.add("menu-open");
+                if (sideLeft.classList.contains("closed-menu")) {
+                    sideLeft.classList.add("open-menu");
+                    sideLeft.classList.remove("closed-menu");
+                    if (!body.classList.contains("open-menu")) {
+                        body.classList.add("open-menu");
                     }
                     website.adminMenuOpen = true;
                     updateWebsiteCookie()
-                } else if (sideLeft.classList.contains("open")) {
-                    sideLeft.classList.add("closed");
-                    sideLeft.classList.remove("open");
-                    if (body.classList.contains("menu-open") ) {
-                        if ( !sideRight || ( sideRight && sideRight.classList.contains('closed') ) ) {
-                            body.classList.remove("menu-open");
+                } else if (sideLeft.classList.contains("open-menu")) {
+                    sideLeft.classList.add("closed-menu");
+                    sideLeft.classList.remove("open-menu");
+                    if (body.classList.contains("open-menu") ) {
+                        if ( !sideRight || ( sideRight && sideRight.classList.contains('closed-menu') ) ) {
+                            body.classList.remove("open-menu");
                         }
                     }
                     website.adminMenuOpen = false;

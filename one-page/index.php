@@ -91,8 +91,8 @@
                 <div class="box menus px-1">
                     <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
                     <div id="head-menu" class="head-menu">
-                        <nav class="menu page-menu">
-                            <ul id="page-menu" class="menu page-menu">
+                        <nav id="page-menu" class="menu page-menu">
+                            <ul class="menu page-menu">
                             </ul>
                         </nav>
                     </div>
@@ -101,7 +101,7 @@
         </div>
     </header>
 
-    <div class="sheet">
+    <div id="sheet">
 
         <aside id="side-left" class="">
             <h5 class="grey-text light up-case px-2">Management</h5>
