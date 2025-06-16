@@ -56,22 +56,6 @@ header#header {
     &-col {
       background: var(--main-color);
     }
-    &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
-      .brand {
-        color: var(--white);
-        a {
-          .logo {
-            filter: brightness(0) invert(1);
-          }
-          .site-title {
-            color: var(--white);
-          }
-        }
-        .site-description {
-          color: var(--white);
-        }
-      }
-    }
   }
   &.scroll {
     &-wh {
@@ -82,6 +66,22 @@ header#header {
     }
     &-col {
       background: var(--main-color);
+    }
+  }
+  &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
+    .brand {
+      color: var(--white);
+      a {
+        .logo {
+          filter: brightness(0) invert(1);
+        }
+        .site-title {
+          color: var(--white);
+        }
+      }
+      .site-description {
+        color: var(--white);
+      }
     }
   }
 }

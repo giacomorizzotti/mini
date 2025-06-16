@@ -257,18 +257,6 @@ header#header.top-bk {
 header#header.top-col {
   background: var(--main-color);
 }
-header#header.top.neg .brand, header#header.top.inv .brand, header#header.top.top-neg .brand, header#header.top.top-inv .brand, header#header.top.top-bk .brand, header#header.top.top-col .brand {
-  color: var(--white);
-}
-header#header.top.neg .brand a .logo, header#header.top.inv .brand a .logo, header#header.top.top-neg .brand a .logo, header#header.top.top-inv .brand a .logo, header#header.top.top-bk .brand a .logo, header#header.top.top-col .brand a .logo {
-  filter: brightness(0) invert(1);
-}
-header#header.top.neg .brand a .site-title, header#header.top.inv .brand a .site-title, header#header.top.top-neg .brand a .site-title, header#header.top.top-inv .brand a .site-title, header#header.top.top-bk .brand a .site-title, header#header.top.top-col .brand a .site-title {
-  color: var(--white);
-}
-header#header.top.neg .brand .site-description, header#header.top.inv .brand .site-description, header#header.top.top-neg .brand .site-description, header#header.top.top-inv .brand .site-description, header#header.top.top-bk .brand .site-description, header#header.top.top-col .brand .site-description {
-  color: var(--white);
-}
 header#header.scroll-wh {
   background: var(--white);
 }
@@ -277,6 +265,18 @@ header#header.scroll-bk {
 }
 header#header.scroll-col {
   background: var(--main-color);
+}
+header#header.neg .brand, header#header.inv .brand, header#header.top-neg .brand, header#header.top-inv .brand, header#header.top-bk .brand, header#header.top-col .brand {
+  color: var(--white);
+}
+header#header.neg .brand a .logo, header#header.inv .brand a .logo, header#header.top-neg .brand a .logo, header#header.top-inv .brand a .logo, header#header.top-bk .brand a .logo, header#header.top-col .brand a .logo {
+  filter: brightness(0) invert(1);
+}
+header#header.neg .brand a .site-title, header#header.inv .brand a .site-title, header#header.top-neg .brand a .site-title, header#header.top-inv .brand a .site-title, header#header.top-bk .brand a .site-title, header#header.top-col .brand a .site-title {
+  color: var(--white);
+}
+header#header.neg .brand .site-description, header#header.inv .brand .site-description, header#header.top-neg .brand .site-description, header#header.top-inv .brand .site-description, header#header.top-bk .brand .site-description, header#header.top-col .brand .site-description {
+  color: var(--white);
 }
 
 header#header .brand {
