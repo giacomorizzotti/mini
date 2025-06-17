@@ -7,6 +7,21 @@ header#header {
   left: 0;
   z-index: 99;
   transition: background-color 0.2s ease-out;
+  &.open-menu {
+    position: relative;
+    flex-basis: 100%;
+    background-color: var(--sheet-color);
+  }
+}
+
+header#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  transition: background-color 0.2s ease-out;
 }
 body.top {
   header#header {

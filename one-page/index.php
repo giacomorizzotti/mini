@@ -79,30 +79,31 @@
     <div id="top"></div>
     <a href="#top"><div class="top-link"><p class=""><i class="iconoir-dot-arrow-up"></i></p></div></a>
 
-    <header id="header" class="header">
-        <div class="container">
-            <div class="boxes py-1 align-items-center justify-content-between">
-                <div class="box brand px-1">
-                    <a href="#top" class="">
-                        <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem me-1" alt="emblem"/>
-                    </a>
-                    <a href="#top" class=""><h3 class="site-title">mini</h3></a>
-                </div>
-                <div class="box menus px-1">
-                    <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
-                    <div id="head-menu" class="head-menu">
-                        <nav id="page-menu" class="menu page-menu">
-                            <ul class="menu page-menu">
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <div id="sheet">
 
+        <header id="header" class="header">
+            <div class="container">
+                <div class="boxes py-1 align-items-center justify-content-between">
+                    <div class="box brand px-1">
+                        <a href="#top" class="">
+                            <img src="https://mini.uwa.agency/img/brand/mini_emblem.svg" class="logo emblem me-1" alt="emblem"/>
+                        </a>
+                        <a href="#top" class=""><h3 class="site-title">mini</h3></a>
+                    </div>
+                    <div class="box menus px-1">
+                        <div id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+                        <div id="head-menu" class="head-menu">
+                            <nav id="page-menu" class="menu page-menu">
+                                <ul class="menu page-menu">
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
         <aside id="side-left" class="">
             <h5 class="grey-text light up-case px-2">Management</h5>
             <nav class="menu admin-menu">
@@ -140,7 +141,7 @@
                     <div class="boxes fh align-content-center space-top-bot">
                         <div class="box box-100">
 
-                            <h1 class="m-0"><i class="iconoir-linux fourth-color-box m-0"></i><span class="fw-box dark-grey-text" style="line-height: 1; vertical-align: text-top;">&nbsp;mini.</span></h1>
+                            <h1 class="m-0"><i class="iconoir-linux fourth-color-box m-0" style="vertical-align: middle;"></i><span class="dark-grey-text" style="line-height: 1; vertical-align: middle;">&nbsp;mini.</span></h1>
 
                         </div>
                     </div>
@@ -191,10 +192,10 @@
                                 <a href="#top">Item_1</a>
                             </li>
                             <li class="item">
-                                <a href="#test_1">Item_3</a>
+                                <a href="#test_1">Item_2</a>
                             </li>
                             <li class="item">
-                                <a href="#test_1">Item_4</a>
+                                <a href="#test_2">Item_3</a>
                             </li>
                         </ul>
                     </nav>

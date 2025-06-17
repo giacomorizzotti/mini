@@ -1,6 +1,7 @@
 // aside
 #sheet {
   aside#side-right, aside#side-left {
+    min-width: 1px;
     transition: flex 0.2s ease-out;
     flex: 0 0 0;
     overflow: hidden;

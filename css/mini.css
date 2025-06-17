@@ -10210,6 +10210,21 @@ header#header {
   z-index: 99;
   transition: background-color 0.2s ease-out;
 }
+header#header.open-menu {
+  position: relative;
+  flex-basis: 100%;
+  background-color: var(--sheet-color);
+}
+
+header#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  transition: background-color 0.2s ease-out;
+}
 
 body.top header#header.top-wh {
   background: var(--white);
@@ -10247,11 +10262,9 @@ body.scroll header#header.scroll-col, body.scrolled header#header.scroll-col {
     align-items: stretch;
   }
 }
-#sheet.open-menu {
-  padding-top: calc((var(--menu-toggle-height)) + var(--margin) * 2);
-}
 
 #sheet aside#side-right, #sheet aside#side-left {
+  min-width: 1px;
   transition: flex 0.2s ease-out;
   flex: 0 0 0;
   overflow: hidden;
@@ -10333,6 +10346,7 @@ body.open-menu aside#side-right.open-menu, body.open-menu aside#side-left.open-m
   transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
   flex: 10;
   overflow: hidden;
+  min-width: 1px;
 }
 @media only screen and (min-width: 992px) {
   #sheet main {
