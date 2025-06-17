@@ -1,0 +1,156 @@
+// ACTIONS
+
+#actions {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  padding: var(--padding) calc( var(--padding) * 1 ) 0 calc( var(--padding) * 1 );
+  background-color: var(--white);
+  box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+  @include sm {
+    background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  ul.action-groups {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    li.action-group {
+      margin: 0 var(--margin) var(--margin) 0;
+      > a {
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        margin: 0;
+        padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 );
+        font-size: calc( var(--p) * 1.25 );
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        border-radius: 3rem;
+        color: var(--white);
+        background: var(--link-color);
+        border-color: var(--link-color);
+        &:hover, &.active, &.clicked {
+          background-color: var(--link-hover-color);
+          border-color: var(--link-hover-color);
+          .icon {
+            
+          }
+          .label {
+          }
+        }
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: var(--link-color);
+          color: var(--white);
+          font-size: calc( var(--p) * 1.75 );
+          line-height: 1;
+          height: 8vw;
+          max-height: 52px;
+          width: 8vw;
+          max-width: 52px;
+          padding: 0;
+          margin: 0;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          @include sm {
+            padding: calc( var(--padding) * 1 );
+          }
+        }
+        .label {
+          display: none;
+          margin: 0 var(--margin);
+          position: absolute;
+          width: auto;
+          white-space: nowrap;
+          z-index: 10;
+          top: 30%;
+          left: 70%;
+          transform: translate(0, -100%);
+          margin: 0;
+          background-color: var(--link-hover-color);
+          padding: calc(var(--padding)* 0.5) calc(var(--padding)* 1);
+          -webkit-border-radius: 10px;
+          -webkit-border-bottom-left-radius: 0;
+          -moz-border-radius: 10px;
+          -moz-border-radius-bottomleft: 0;
+          border-radius: 10px;
+          border-bottom-left-radius: 0;
+          border: 2px solid;
+          border-color: var(--link-color);
+        }
+      }
+      ul.actions {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0, -100%);
+        width: 100%;
+        height: auto;
+        padding: calc(var(--padding)* 0.5) var(--padding);
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        @include sm {
+          padding: 0 var(--padding);
+        }
+        li.action {
+          min-width: 220px;
+          > a {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            background-color: var(--white);
+            transition: background-color 0.25s ease;
+            margin: 0;
+            padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 1.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 );
+            -webkit-border-radius: calc( 40px + var(--padding) * 0.5 );
+            -moz-border-radius: calc( 40px + var(--padding) * 0.5 );
+            border-radius: calc( 40px + var(--padding) * 0.5 );              
+            -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+            -moz-box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+            box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+            &:hover, &.active {
+              .icon {
+                background-color: var(--link-hover-color);
+              }
+            }
+            .icon {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              background-color: var(--link-color);
+              transition: background-color 0.25s ease;
+              color: var(--white);
+              font-size: calc( var(--p) * 1.25 );
+              line-height: 1;
+              height: 8vw;
+              max-height: 48px;
+              width: 8vw;
+              max-width: 48px;
+              padding: calc( var(--padding) * 0 );
+              margin: 0 var(--margin) 0 0;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              @include sm {
+                font-size: calc( var(--p) * 1.5 );
+                padding: calc( var(--padding) * 1 );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

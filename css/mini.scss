@@ -1,27 +1,38 @@
 /* mini */
 /* A simple CSS framework to build wonderful websites in... minutes! */
 
-@import "scss/reset"; // Standalone
-@import "scss/vars"; // Standalone
-@import "scss/breakpoints"; // Standalone
-@import "scss/flexboxes"; // Standalone
-@import "scss/structure"; // Standalone
-@import "scss/main"; // Standalone
-@import "scss/img"; // Standalone
+@import "scss/reset";
+@import "scss/vars";
+@import "scss/breakpoints";
+@import "scss/flexboxes";
+@import "scss/container";
+@import "scss/boxes";
+@import "scss/box";
+@import "scss/header";
+@import "scss/sheet";
+@import "scss/aside";
+@import "scss/main";
+@import "scss/footer";
+@import "scss/brand";
+@import "scss/basic";
+@import "scss/img";
 @import "scss/nav";
-@import "scss/forms"; // Standalone
-@import "scss/buttons"; // Standalone
-@import "scss/borders"; // Standalone
-@import "scss/colors"; // Standalone
-@import "scss/typo"; // Standalone
-@import "scss/margins_paddings"; // Standalone
-@import "scss/animations"; // Standalone
+@import "scss/menu_toggle";
+@import "scss/page_menu";
+@import "scss/actions_menu";
+@import "scss/forms";
+@import "scss/buttons";
+@import "scss/borders";
+@import "scss/colors";
+@import "scss/typo";
+@import "scss/margins_paddings";
+@import "scss/show_hide";
+//@import "scss/animations";
 @import "scss/slides";
 @import "scss/gdpr";
 @import "scss/wp";
 @import "scss/debug";
 @import "scss/accessibility";
-@import "scss/show_hide";
 
 /* 
 * the end.

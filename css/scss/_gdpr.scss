@@ -1,7 +1,7 @@
 // GDPR
 #black-layer {
     position: fixed;
-    z-index: 100;
+    z-index: 900;
     bottom: 0;
     right: 0;
     width: 100vw;
@@ -18,7 +18,7 @@
 }
 #consent-banner {
     position: fixed;
-    z-index: 101;
+    z-index: 901;
     top: auto;
     bottom: 0;
     left: auto;
@@ -72,7 +72,6 @@
             text-align: left;
             font-size: var(--h1);
             line-height: calc( var(--h1) * 1.25 );
-
             @media only screen and (min-width: 768px) {
                 width: 60px;
             }
@@ -131,18 +130,18 @@
         }
         .cookie-banner-content {
             width: auto;
-        .consent-label {
-            display: none;
-        }
-        .consent-buttons {
-            display: none;
-        }
-        p.consent-status {
-            display: inline-block;
-            color: var(--white);
-            font-weight: 700;
-            font-style: italic;
-        }
+            .consent-label {
+                display: none;
+            }
+            .consent-buttons {
+                display: none;
+            }
+            p.consent-status {
+                display: inline-block;
+                color: var(--white);
+                font-weight: 700;
+                font-style: italic;
+            }
         }
     }
 }
