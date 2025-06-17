@@ -481,8 +481,8 @@ function loaderGone() {
 function checkScrollTopCondition() {
     var body = document.body;
     if ( window.pageYOffset < 80 ) {
-        if ( body.classList.contains('scroll') ) {
-            body.classList.remove('scroll');
+        if ( body.classList.contains('scrolled') ) {
+            body.classList.remove('scrolled');
         }
         if (!body.classList.contains('top')) {
             body.classList.add('top');
@@ -491,8 +491,8 @@ function checkScrollTopCondition() {
         if (body.classList.contains('top')) {
             body.classList.remove('top');
         }
-        if (!body.classList.contains('scroll')) {
-            body.classList.add('scroll');
+        if (!body.classList.contains('scrolled')) {
+            body.classList.add('scrolled');
         }
     }
 }
@@ -725,10 +725,22 @@ function menuToggle() {
             }
         }
         function hideMenuVisibility() {
+            if (header) {
+                if (header.classList.contains("open-menu")) {
+                    header.classList.add("closed-menu");
+                    header.classList.remove("open-menu");
+                }
+            }
             if (sideRight) {
                 if (sideRight.classList.contains("open-menu")) {
                     sideRight.classList.add("closed-menu");
                     sideRight.classList.remove("open-menu");
+                }
+            }
+            if (sheet) {
+                if (sheet.classList.contains("open-menu")) {
+                    sheet.classList.add("closed-menu");
+                    sheet.classList.remove("open-menu");
                 }
             }
             if (body.classList.contains("open-menu")) {

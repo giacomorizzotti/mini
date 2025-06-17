@@ -1,6 +1,5 @@
 // FLEXBOXES
 
-
 $box-widths: (
   "8":   (100%, 50%, 33.333333%, 16.666666%, 8.333333%),
   "10":  (100%, 50%, 20%, 20%, 10%),
@@ -21,7 +20,6 @@ $box-widths: (
   "90":  (100%, 100%, 80%, 80%, 90%),
   "100": (100%, 100%, 100%, 100%, 100%),
 );
-
 $breakpoints: (
   "zero": 0,
   "sm": 576px,
@@ -30,6 +28,9 @@ $breakpoints: (
   "xl": 1400px,
   "xxl": 1920px,
 );
+$orders: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$flex: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 10, "20" 20;
 
 @mixin respond($breakpoint) {
   @if $breakpoint != "" {
@@ -38,6 +39,317 @@ $breakpoints: (
     }
   } @else {
     @content;
+  }
+}
+
+// Display
+.none, .display-none {
+  display: none!important;
+}
+.flex, .display-flex {
+  display: flex!important;
+}
+.block, .display-block {
+  display: block!important;
+}
+.inline-block, .display-inline-block {
+  display: inline-block!important;
+}
+.inline, .display-inline {
+  display: inline!important;
+}
+
+// Order
+.order {
+  @each $order in $orders {
+    &-#{$order} {
+      order: #{$order};
+    }
+  }
+}
+
+// Gap
+.gap, .g {
+  --gap: calc( var(--basic-gap) * 1 );
+  @each $gap-label, $gap in $multiplier {
+    &-#{$gap-label} {
+      --gap: calc( var(--basic-gap) * #{$gap} );
+    }
+  }
+  &y, &-y {
+    @each $gap-label, $gap in $multiplier {
+      &-#{$gap-label} {
+        --gap-y: calc( var(--basic-gap) * #{$gap} );
+      }
+    }
+  }
+  &x, &-x {
+    @each $gap-label, $gap in $multiplier {
+      &-#{$gap-label} {
+        --gap-x: calc( var(--basic-gap) * #{$gap} );
+      }
+    }
+  }
+}
+
+// Flex classes
+.flex {
+  @each $grow in $flex {
+    &-#{$grow} {
+      flex: #{$grow};
+      @each $shrink in $flex {
+        &-#{$shrink} {
+          flex: #{$shrink};
+        }
+        @each $basis in $flex {
+          &-#{$basis} {
+            flex: #{$basis};
+          }
+        }
+      }
+    }
+  }
+
+  &-direction {
+    &-row {
+      flex-direction: row!important;
+    }
+    &-row-reverse {
+      flex-direction: row-reverse!important;
+    }
+    &-column {
+      flex-direction: column!important;
+    }
+    &-column-reverse {
+      flex-direction: column-reverse!important;
+    }
+  }
+
+  &-wrap {
+    flex-wrap: wrap!important;
+  }
+  &-no-wrap, &-nowrap {
+    flex-wrap: nowrap!important;
+  }
+
+  &-flow {
+    &-row {
+      &-wrap {
+        flex-flow: row wrap;
+      }
+      &-nowrap {
+        flex-flow: row nowrap;
+      }
+    }
+    &-column {
+      &-wrap {
+        flex-flow: column wrap;
+      }
+      &-nowrap {
+        flex-flow: column nowrap;
+      }
+    }
+  }
+  
+}
+
+.justify-content {
+  &-start {
+    justify-content: flex-start!important;
+  }
+  &-end {
+    justify-content: flex-end!important;
+  }
+  &-center {
+    justify-content: center!important;
+  }
+  &-between {
+    justify-content: space-between!important;
+  }
+  &-around {
+    justify-content: space-around!important;
+  }
+}
+
+.align-content {
+  &-start {
+    align-content: flex-start!important;
+  }
+  &-end {
+    align-content: flex-end!important;
+  }
+  &-center {
+    align-content: center!important;
+  }
+  &-stretch {
+    align-content: stretch!important;
+  }
+  &-between {
+    align-content: space-between!important;
+  }
+  &-around {
+    align-content: space-around!important;
+  }
+}
+
+.align-items {
+  &-start {
+    align-items: flex-start!important;
+  }
+  &-end {
+    align-items: flex-end!important;
+  }
+  &-center {
+    align-items: center!important;
+  }
+  &-stretch {
+    align-items: stretch!important;
+  }
+}
+
+// breakpoint clsses
+@each $breakpoint, $screenSize in $breakpoints {
+  #{$breakpoint}- {
+    @media (min-width: #{$screenSize}) {
+
+      // Display
+      .none, .display-none {
+        display: none!important;
+      }
+      .flex, .display-flex {
+        display: flex!important;
+      }
+      .block, .display-block {
+        display: block!important;
+      }
+      .inline-block, .display-inline-block {
+        display: inline-block!important;
+      }
+      .inline, .display-inline {
+        display: inline!important;
+      }
+
+      // Order
+      .order {
+        @each $order in $orders {
+          &-#{$order} {
+            order: #{$order};
+          }
+        }
+      }
+
+      // Gap
+      .gap, .g {
+        --gap: calc( var(--basic-gap) * 1 );
+        @each $gap-label, $gap in $multiplier {
+          &-#{$gap-label} {
+            --gap: calc( var(--basic-gap) * #{$gap} );
+          }
+        }
+        &y, &-y {
+          @each $gap-label, $gap in $multiplier {
+            &-#{$gap-label} {
+              --gap-y: calc( var(--basic-gap) * #{$gap} );
+            }
+          }
+        }
+        &x, &-x {
+          @each $gap-label, $gap in $multiplier {
+            &-#{$gap-label} {
+              --gap-x: calc( var(--basic-gap) * #{$gap} );
+            }
+          }
+        }
+      }
+
+      // Flex classes
+      $flex-directions: row, row-reverse, column, column-reverse;
+      $flex-wraps: wrap, nowrap;
+      $flex-flows: (
+        row: (wrap, nowrap),
+        column: (wrap, nowrap)
+      );
+
+      .flex {
+        @each $dir in $flex-directions {
+          &-direction-#{$dir} {
+            flex-direction: #{$dir}!important;
+          }
+        }
+        @each $wrap in $flex-wraps {
+          &-wrap#{if($wrap == nowrap, '', '-' + $wrap)} {
+            flex-wrap: #{$wrap}!important;
+          }
+        }
+        // Support both -no-wrap and -nowrap
+        &-no-wrap, &-nowrap {
+          flex-wrap: nowrap!important;
+        }
+        // Flex-flow combinations
+        @each $main, $subs in $flex-flows {
+          @each $sub in $subs {
+            &-flow-#{$main}-#{$sub} {
+              flex-flow: #{$main} #{$sub};
+            }
+          }
+        }
+      }
+
+      .justify-content {
+        &-start {
+          justify-content: flex-start!important;
+        }
+        &-end {
+          justify-content: flex-end!important;
+        }
+        &-center {
+          justify-content: center!important;
+        }
+        &-between {
+          justify-content: space-between!important;
+        }
+        &-around {
+          justify-content: space-around!important;
+        }
+      }
+
+      .align-content {
+        &-start {
+          align-content: flex-start!important;
+        }
+        &-end {
+          align-content: flex-end!important;
+        }
+        &-center {
+          align-content: center!important;
+        }
+        &-stretch {
+          align-content: stretch!important;
+        }
+        &-between {
+          align-content: space-between!important;
+        }
+        &-around {
+          align-content: space-around!important;
+        }
+      }
+
+      .align-items {
+        &-start {
+          align-items: flex-start!important;
+        }
+        &-end {
+          align-items: flex-end!important;
+        }
+        &-center {
+          align-items: center!important;
+        }
+        &-stretch {
+          align-items: stretch!important;
+        }
+      }
+
+    }
   }
 }
 

@@ -4,10 +4,10 @@
 @import "scss/reset"; // Standalone
 @import "scss/vars"; // Standalone
 @import "scss/breakpoints"; // Standalone
-@import "scss/basics";
 @import "scss/flexboxes"; // Standalone
 @import "scss/structure"; // Standalone
 @import "scss/main"; // Standalone
+@import "scss/img"; // Standalone
 @import "scss/nav";
 @import "scss/forms"; // Standalone
 @import "scss/buttons"; // Standalone
@@ -21,7 +21,7 @@
 @import "scss/wp";
 @import "scss/debug";
 @import "scss/accessibility";
-@import "scss/after";
+@import "scss/show_hide";
 
 /* 
 * the end.
