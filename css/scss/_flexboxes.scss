@@ -182,7 +182,7 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
   #{$breakpoint}- {
     @media (min-width: #{$screenSize}) {
 
-      // Display
+      // Displayg
       .none, .display-none {
         display: none!important;
       }
@@ -213,20 +213,20 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
         --gap: calc( var(--basic-gap) * 1 );
         @each $gap-label, $gap in $multiplier {
           &-#{$gap-label} {
-            --gap: calc( var(--basic-gap) * #{$gap} );
+            --gap: calc( var(--basic-gap) * #{$gap} )!important;
           }
         }
         &y, &-y {
           @each $gap-label, $gap in $multiplier {
             &-#{$gap-label} {
-              --gap-y: calc( var(--basic-gap) * #{$gap} );
+              --gap-y: calc( var(--basic-gap) * #{$gap} )!important;
             }
           }
         }
         &x, &-x {
           @each $gap-label, $gap in $multiplier {
             &-#{$gap-label} {
-              --gap-x: calc( var(--basic-gap) * #{$gap} );
+              --gap-x: calc( var(--basic-gap) * #{$gap} )!important;
             }
           }
         }

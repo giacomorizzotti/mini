@@ -149,6 +149,11 @@ input[type="radio"] {
     display: none;
     &+label {
         background-color: var(--false-white);
+        padding: var(--padding);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        cursor: pointer;
     }
     &:checked+label {
         background: var(--main-color);

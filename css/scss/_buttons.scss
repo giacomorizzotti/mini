@@ -133,23 +133,17 @@ $colors: //color name, color code, text color over color
   &.xs, &.XS {
     padding: calc(var(--padding)*.125) calc(var(--padding)*.25);
     margin: calc(var(--margin) * .25) 0;
-    @media only screen and (min-width:768px) {
-        margin: calc(var(--margin) * .25) calc(var(--margin) * 0.25) calc(var(--margin) * .25) 0;
-    }
+    margin: calc(var(--margin) * .25) calc(var(--margin) * 0.25) calc(var(--margin) * .25) 0;
   }
   &.s, &.S {
     padding: calc(var(--padding)*.25) calc(var(--padding)*.5);
     margin: calc(var(--margin) * .35) 0;
-    @media only screen and (min-width:768px) {
-        margin: calc(var(--margin) * .35) calc(var(--margin) * 0.5) calc(var(--margin) * .35) 0;
-    }
+    margin: calc(var(--margin) * .35) calc(var(--margin) * 0.5) calc(var(--margin) * .35) 0;
   }
   &.l, &.L {
     padding: calc(var(--padding)*0.625) calc(var(--padding)*1.125);
     margin: calc(var(--margin) * .75) 0;
-    @media only screen and (min-width:768px) {
-        margin: calc(var(--margin) * .75) calc(var(--margin) * 1.125) calc(var(--margin) * .75) 0;
-    }
+    margin: calc(var(--margin) * .75) calc(var(--margin) * 1.125) calc(var(--margin) * .75) 0;
   }
   &.xl, &.XL {
     padding: calc(var(--padding)*0.85) calc(var(--padding)*1.35);
