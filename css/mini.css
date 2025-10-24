@@ -297,67 +297,67 @@ body section {
 }
 
 .gap, .g {
-  --gap: calc( var(--basic-gap) * 1 );
+  --gap: calc( var(--gap) * 1 );
 }
 .gap-0, .g-0 {
-  --gap: calc( var(--basic-gap) * 0 );
+  --gap: calc( var(--gap) * 0 );
 }
 .gap-05, .g-05 {
-  --gap: calc( var(--basic-gap) * 0.5 );
+  --gap: calc( var(--gap) * 0.5 );
 }
 .gap-1, .g-1 {
-  --gap: calc( var(--basic-gap) * 1 );
+  --gap: calc( var(--gap) * 1 );
 }
 .gap-15, .g-15 {
-  --gap: calc( var(--basic-gap) * 1.5 );
+  --gap: calc( var(--gap) * 1.5 );
 }
 .gap-2, .g-2 {
-  --gap: calc( var(--basic-gap) * 2 );
+  --gap: calc( var(--gap) * 2 );
 }
 .gap-3, .g-3 {
-  --gap: calc( var(--basic-gap) * 3 );
+  --gap: calc( var(--gap) * 3 );
 }
 .gap-4, .g-4 {
-  --gap: calc( var(--basic-gap) * 4 );
+  --gap: calc( var(--gap) * 4 );
 }
 .gap-5, .g-5 {
-  --gap: calc( var(--basic-gap) * 5 );
+  --gap: calc( var(--gap) * 5 );
 }
 .gap-10, .g-10 {
-  --gap: calc( var(--basic-gap) * 10 );
+  --gap: calc( var(--gap) * 10 );
 }
 .gap-20, .g-20 {
-  --gap: calc( var(--basic-gap) * 20 );
+  --gap: calc( var(--gap) * 20 );
 }
 .gapy-0, .gap-y-0, .gy-0, .g-y-0 {
-  --gap-y: calc( var(--basic-gap) * 0 );
+  --gap-y: calc( var(--gap) * 0 );
 }
 .gapy-05, .gap-y-05, .gy-05, .g-y-05 {
-  --gap-y: calc( var(--basic-gap) * 0.5 );
+  --gap-y: calc( var(--gap) * 0.5 );
 }
 .gapy-1, .gap-y-1, .gy-1, .g-y-1 {
-  --gap-y: calc( var(--basic-gap) * 1 );
+  --gap-y: calc( var(--gap) * 1 );
 }
 .gapy-15, .gap-y-15, .gy-15, .g-y-15 {
-  --gap-y: calc( var(--basic-gap) * 1.5 );
+  --gap-y: calc( var(--gap) * 1.5 );
 }
 .gapy-2, .gap-y-2, .gy-2, .g-y-2 {
-  --gap-y: calc( var(--basic-gap) * 2 );
+  --gap-y: calc( var(--gap) * 2 );
 }
 .gapy-3, .gap-y-3, .gy-3, .g-y-3 {
-  --gap-y: calc( var(--basic-gap) * 3 );
+  --gap-y: calc( var(--gap) * 3 );
 }
 .gapy-4, .gap-y-4, .gy-4, .g-y-4 {
-  --gap-y: calc( var(--basic-gap) * 4 );
+  --gap-y: calc( var(--gap) * 4 );
 }
 .gapy-5, .gap-y-5, .gy-5, .g-y-5 {
-  --gap-y: calc( var(--basic-gap) * 5 );
+  --gap-y: calc( var(--gap) * 5 );
 }
 .gapy-10, .gap-y-10, .gy-10, .g-y-10 {
-  --gap-y: calc( var(--basic-gap) * 10 );
+  --gap-y: calc( var(--gap) * 10 );
 }
 .gapy-20, .gap-y-20, .gy-20, .g-y-20 {
-  --gap-y: calc( var(--basic-gap) * 20 );
+  --gap-y: calc( var(--gap) * 20 );
 }
 .gapx-0, .gap-x-0, .gx-0, .g-x-0 {
   --gap-x: calc( var(--basic-gap) * 0 );
