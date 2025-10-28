@@ -40,10 +40,12 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
 
 // Gap
 .gap, .g {
-  --gap: calc( var(--basic-gap) * 1 );
+  --gap-x: calc( var(--basic-gap) * 1 );
+  --gap-y: calc( var(--basic-gap) * 1 );
   @each $gap-label, $gap in $multiplier {
     &-#{$gap-label} {
-      --gap: calc( var(--basic-gap) * #{$gap} ) !important;
+      --gap-x: calc( var(--basic-gap) * #{$gap} ) !important;
+      --gap-y: calc( var(--basic-gap) * #{$gap} ) !important;
     }
   }
   &y, &-y {
@@ -210,10 +212,12 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
 
       // Gap
       .gap, .g {
-        --gap: calc( var(--basic-gap) * 1 );
+        --gap-x: calc( var(--basic-gap) * 1 );
+        --gap-y: calc( var(--basic-gap) * 1 );
         @each $gap-label, $gap in $multiplier {
           &-#{$gap-label} {
-            --gap: calc( var(--basic-gap) * #{$gap} )!important;
+            --gap-x: calc( var(--basic-gap) * #{$gap} )!important;
+            --gap-y: calc( var(--basic-gap) * #{$gap} )!important;
           }
         }
         &y, &-y {

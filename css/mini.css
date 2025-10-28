@@ -297,37 +297,48 @@ body section {
 }
 
 .gap, .g {
-  --gap: calc( var(--basic-gap) * 1 );
+  --gap-x: calc( var(--basic-gap) * 1 );
+  --gap-y: calc( var(--basic-gap) * 1 );
 }
 .gap-0, .g-0 {
-  --gap: calc( var(--basic-gap) * 0 ) !important;
+  --gap-x: calc( var(--basic-gap) * 0 ) !important;
+  --gap-y: calc( var(--basic-gap) * 0 ) !important;
 }
 .gap-05, .g-05 {
-  --gap: calc( var(--basic-gap) * 0.5 ) !important;
+  --gap-x: calc( var(--basic-gap) * 0.5 ) !important;
+  --gap-y: calc( var(--basic-gap) * 0.5 ) !important;
 }
 .gap-1, .g-1 {
-  --gap: calc( var(--basic-gap) * 1 ) !important;
+  --gap-x: calc( var(--basic-gap) * 1 ) !important;
+  --gap-y: calc( var(--basic-gap) * 1 ) !important;
 }
 .gap-15, .g-15 {
-  --gap: calc( var(--basic-gap) * 1.5 ) !important;
+  --gap-x: calc( var(--basic-gap) * 1.5 ) !important;
+  --gap-y: calc( var(--basic-gap) * 1.5 ) !important;
 }
 .gap-2, .g-2 {
-  --gap: calc( var(--basic-gap) * 2 ) !important;
+  --gap-x: calc( var(--basic-gap) * 2 ) !important;
+  --gap-y: calc( var(--basic-gap) * 2 ) !important;
 }
 .gap-3, .g-3 {
-  --gap: calc( var(--basic-gap) * 3 ) !important;
+  --gap-x: calc( var(--basic-gap) * 3 ) !important;
+  --gap-y: calc( var(--basic-gap) * 3 ) !important;
 }
 .gap-4, .g-4 {
-  --gap: calc( var(--basic-gap) * 4 ) !important;
+  --gap-x: calc( var(--basic-gap) * 4 ) !important;
+  --gap-y: calc( var(--basic-gap) * 4 ) !important;
 }
 .gap-5, .g-5 {
-  --gap: calc( var(--basic-gap) * 5 ) !important;
+  --gap-x: calc( var(--basic-gap) * 5 ) !important;
+  --gap-y: calc( var(--basic-gap) * 5 ) !important;
 }
 .gap-10, .g-10 {
-  --gap: calc( var(--basic-gap) * 10 ) !important;
+  --gap-x: calc( var(--basic-gap) * 10 ) !important;
+  --gap-y: calc( var(--basic-gap) * 10 ) !important;
 }
 .gap-20, .g-20 {
-  --gap: calc( var(--basic-gap) * 20 ) !important;
+  --gap-x: calc( var(--basic-gap) * 20 ) !important;
+  --gap-y: calc( var(--basic-gap) * 20 ) !important;
 }
 .gapy-0, .gap-y-0, .gy-0, .g-y-0 {
   --gap-y: calc( var(--basic-gap) * 0 ) !important;
@@ -7659,37 +7670,48 @@ body section {
     order: 12;
   }
   zero- .gap, zero- .g {
-    --gap: calc( var(--basic-gap) * 1 );
+    --gap-x: calc( var(--basic-gap) * 1 );
+    --gap-y: calc( var(--basic-gap) * 1 );
   }
   zero- .gap-0, zero- .g-0 {
-    --gap: calc( var(--basic-gap) * 0 )!important;
+    --gap-x: calc( var(--basic-gap) * 0 )!important;
+    --gap-y: calc( var(--basic-gap) * 0 )!important;
   }
   zero- .gap-05, zero- .g-05 {
-    --gap: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.5 )!important;
   }
   zero- .gap-1, zero- .g-1 {
-    --gap: calc( var(--basic-gap) * 1 )!important;
+    --gap-x: calc( var(--basic-gap) * 1 )!important;
+    --gap-y: calc( var(--basic-gap) * 1 )!important;
   }
   zero- .gap-15, zero- .g-15 {
-    --gap: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 1.5 )!important;
   }
   zero- .gap-2, zero- .g-2 {
-    --gap: calc( var(--basic-gap) * 2 )!important;
+    --gap-x: calc( var(--basic-gap) * 2 )!important;
+    --gap-y: calc( var(--basic-gap) * 2 )!important;
   }
   zero- .gap-3, zero- .g-3 {
-    --gap: calc( var(--basic-gap) * 3 )!important;
+    --gap-x: calc( var(--basic-gap) * 3 )!important;
+    --gap-y: calc( var(--basic-gap) * 3 )!important;
   }
   zero- .gap-4, zero- .g-4 {
-    --gap: calc( var(--basic-gap) * 4 )!important;
+    --gap-x: calc( var(--basic-gap) * 4 )!important;
+    --gap-y: calc( var(--basic-gap) * 4 )!important;
   }
   zero- .gap-5, zero- .g-5 {
-    --gap: calc( var(--basic-gap) * 5 )!important;
+    --gap-x: calc( var(--basic-gap) * 5 )!important;
+    --gap-y: calc( var(--basic-gap) * 5 )!important;
   }
   zero- .gap-10, zero- .g-10 {
-    --gap: calc( var(--basic-gap) * 10 )!important;
+    --gap-x: calc( var(--basic-gap) * 10 )!important;
+    --gap-y: calc( var(--basic-gap) * 10 )!important;
   }
   zero- .gap-20, zero- .g-20 {
-    --gap: calc( var(--basic-gap) * 20 )!important;
+    --gap-x: calc( var(--basic-gap) * 20 )!important;
+    --gap-y: calc( var(--basic-gap) * 20 )!important;
   }
   zero- .gapy-0, zero- .gap-y-0, zero- .gy-0, zero- .g-y-0 {
     --gap-y: calc( var(--basic-gap) * 0 )!important;
@@ -7884,37 +7906,48 @@ body section {
     order: 12;
   }
   sm- .gap, sm- .g {
-    --gap: calc( var(--basic-gap) * 1 );
+    --gap-x: calc( var(--basic-gap) * 1 );
+    --gap-y: calc( var(--basic-gap) * 1 );
   }
   sm- .gap-0, sm- .g-0 {
-    --gap: calc( var(--basic-gap) * 0 )!important;
+    --gap-x: calc( var(--basic-gap) * 0 )!important;
+    --gap-y: calc( var(--basic-gap) * 0 )!important;
   }
   sm- .gap-05, sm- .g-05 {
-    --gap: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.5 )!important;
   }
   sm- .gap-1, sm- .g-1 {
-    --gap: calc( var(--basic-gap) * 1 )!important;
+    --gap-x: calc( var(--basic-gap) * 1 )!important;
+    --gap-y: calc( var(--basic-gap) * 1 )!important;
   }
   sm- .gap-15, sm- .g-15 {
-    --gap: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 1.5 )!important;
   }
   sm- .gap-2, sm- .g-2 {
-    --gap: calc( var(--basic-gap) * 2 )!important;
+    --gap-x: calc( var(--basic-gap) * 2 )!important;
+    --gap-y: calc( var(--basic-gap) * 2 )!important;
   }
   sm- .gap-3, sm- .g-3 {
-    --gap: calc( var(--basic-gap) * 3 )!important;
+    --gap-x: calc( var(--basic-gap) * 3 )!important;
+    --gap-y: calc( var(--basic-gap) * 3 )!important;
   }
   sm- .gap-4, sm- .g-4 {
-    --gap: calc( var(--basic-gap) * 4 )!important;
+    --gap-x: calc( var(--basic-gap) * 4 )!important;
+    --gap-y: calc( var(--basic-gap) * 4 )!important;
   }
   sm- .gap-5, sm- .g-5 {
-    --gap: calc( var(--basic-gap) * 5 )!important;
+    --gap-x: calc( var(--basic-gap) * 5 )!important;
+    --gap-y: calc( var(--basic-gap) * 5 )!important;
   }
   sm- .gap-10, sm- .g-10 {
-    --gap: calc( var(--basic-gap) * 10 )!important;
+    --gap-x: calc( var(--basic-gap) * 10 )!important;
+    --gap-y: calc( var(--basic-gap) * 10 )!important;
   }
   sm- .gap-20, sm- .g-20 {
-    --gap: calc( var(--basic-gap) * 20 )!important;
+    --gap-x: calc( var(--basic-gap) * 20 )!important;
+    --gap-y: calc( var(--basic-gap) * 20 )!important;
   }
   sm- .gapy-0, sm- .gap-y-0, sm- .gy-0, sm- .g-y-0 {
     --gap-y: calc( var(--basic-gap) * 0 )!important;
@@ -8109,37 +8142,48 @@ body section {
     order: 12;
   }
   md- .gap, md- .g {
-    --gap: calc( var(--basic-gap) * 1 );
+    --gap-x: calc( var(--basic-gap) * 1 );
+    --gap-y: calc( var(--basic-gap) * 1 );
   }
   md- .gap-0, md- .g-0 {
-    --gap: calc( var(--basic-gap) * 0 )!important;
+    --gap-x: calc( var(--basic-gap) * 0 )!important;
+    --gap-y: calc( var(--basic-gap) * 0 )!important;
   }
   md- .gap-05, md- .g-05 {
-    --gap: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.5 )!important;
   }
   md- .gap-1, md- .g-1 {
-    --gap: calc( var(--basic-gap) * 1 )!important;
+    --gap-x: calc( var(--basic-gap) * 1 )!important;
+    --gap-y: calc( var(--basic-gap) * 1 )!important;
   }
   md- .gap-15, md- .g-15 {
-    --gap: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 1.5 )!important;
   }
   md- .gap-2, md- .g-2 {
-    --gap: calc( var(--basic-gap) * 2 )!important;
+    --gap-x: calc( var(--basic-gap) * 2 )!important;
+    --gap-y: calc( var(--basic-gap) * 2 )!important;
   }
   md- .gap-3, md- .g-3 {
-    --gap: calc( var(--basic-gap) * 3 )!important;
+    --gap-x: calc( var(--basic-gap) * 3 )!important;
+    --gap-y: calc( var(--basic-gap) * 3 )!important;
   }
   md- .gap-4, md- .g-4 {
-    --gap: calc( var(--basic-gap) * 4 )!important;
+    --gap-x: calc( var(--basic-gap) * 4 )!important;
+    --gap-y: calc( var(--basic-gap) * 4 )!important;
   }
   md- .gap-5, md- .g-5 {
-    --gap: calc( var(--basic-gap) * 5 )!important;
+    --gap-x: calc( var(--basic-gap) * 5 )!important;
+    --gap-y: calc( var(--basic-gap) * 5 )!important;
   }
   md- .gap-10, md- .g-10 {
-    --gap: calc( var(--basic-gap) * 10 )!important;
+    --gap-x: calc( var(--basic-gap) * 10 )!important;
+    --gap-y: calc( var(--basic-gap) * 10 )!important;
   }
   md- .gap-20, md- .g-20 {
-    --gap: calc( var(--basic-gap) * 20 )!important;
+    --gap-x: calc( var(--basic-gap) * 20 )!important;
+    --gap-y: calc( var(--basic-gap) * 20 )!important;
   }
   md- .gapy-0, md- .gap-y-0, md- .gy-0, md- .g-y-0 {
     --gap-y: calc( var(--basic-gap) * 0 )!important;
@@ -8334,37 +8378,48 @@ body section {
     order: 12;
   }
   lg- .gap, lg- .g {
-    --gap: calc( var(--basic-gap) * 1 );
+    --gap-x: calc( var(--basic-gap) * 1 );
+    --gap-y: calc( var(--basic-gap) * 1 );
   }
   lg- .gap-0, lg- .g-0 {
-    --gap: calc( var(--basic-gap) * 0 )!important;
+    --gap-x: calc( var(--basic-gap) * 0 )!important;
+    --gap-y: calc( var(--basic-gap) * 0 )!important;
   }
   lg- .gap-05, lg- .g-05 {
-    --gap: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.5 )!important;
   }
   lg- .gap-1, lg- .g-1 {
-    --gap: calc( var(--basic-gap) * 1 )!important;
+    --gap-x: calc( var(--basic-gap) * 1 )!important;
+    --gap-y: calc( var(--basic-gap) * 1 )!important;
   }
   lg- .gap-15, lg- .g-15 {
-    --gap: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 1.5 )!important;
   }
   lg- .gap-2, lg- .g-2 {
-    --gap: calc( var(--basic-gap) * 2 )!important;
+    --gap-x: calc( var(--basic-gap) * 2 )!important;
+    --gap-y: calc( var(--basic-gap) * 2 )!important;
   }
   lg- .gap-3, lg- .g-3 {
-    --gap: calc( var(--basic-gap) * 3 )!important;
+    --gap-x: calc( var(--basic-gap) * 3 )!important;
+    --gap-y: calc( var(--basic-gap) * 3 )!important;
   }
   lg- .gap-4, lg- .g-4 {
-    --gap: calc( var(--basic-gap) * 4 )!important;
+    --gap-x: calc( var(--basic-gap) * 4 )!important;
+    --gap-y: calc( var(--basic-gap) * 4 )!important;
   }
   lg- .gap-5, lg- .g-5 {
-    --gap: calc( var(--basic-gap) * 5 )!important;
+    --gap-x: calc( var(--basic-gap) * 5 )!important;
+    --gap-y: calc( var(--basic-gap) * 5 )!important;
   }
   lg- .gap-10, lg- .g-10 {
-    --gap: calc( var(--basic-gap) * 10 )!important;
+    --gap-x: calc( var(--basic-gap) * 10 )!important;
+    --gap-y: calc( var(--basic-gap) * 10 )!important;
   }
   lg- .gap-20, lg- .g-20 {
-    --gap: calc( var(--basic-gap) * 20 )!important;
+    --gap-x: calc( var(--basic-gap) * 20 )!important;
+    --gap-y: calc( var(--basic-gap) * 20 )!important;
   }
   lg- .gapy-0, lg- .gap-y-0, lg- .gy-0, lg- .g-y-0 {
     --gap-y: calc( var(--basic-gap) * 0 )!important;
@@ -8559,37 +8614,48 @@ body section {
     order: 12;
   }
   xl- .gap, xl- .g {
-    --gap: calc( var(--basic-gap) * 1 );
+    --gap-x: calc( var(--basic-gap) * 1 );
+    --gap-y: calc( var(--basic-gap) * 1 );
   }
   xl- .gap-0, xl- .g-0 {
-    --gap: calc( var(--basic-gap) * 0 )!important;
+    --gap-x: calc( var(--basic-gap) * 0 )!important;
+    --gap-y: calc( var(--basic-gap) * 0 )!important;
   }
   xl- .gap-05, xl- .g-05 {
-    --gap: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.5 )!important;
   }
   xl- .gap-1, xl- .g-1 {
-    --gap: calc( var(--basic-gap) * 1 )!important;
+    --gap-x: calc( var(--basic-gap) * 1 )!important;
+    --gap-y: calc( var(--basic-gap) * 1 )!important;
   }
   xl- .gap-15, xl- .g-15 {
-    --gap: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 1.5 )!important;
   }
   xl- .gap-2, xl- .g-2 {
-    --gap: calc( var(--basic-gap) * 2 )!important;
+    --gap-x: calc( var(--basic-gap) * 2 )!important;
+    --gap-y: calc( var(--basic-gap) * 2 )!important;
   }
   xl- .gap-3, xl- .g-3 {
-    --gap: calc( var(--basic-gap) * 3 )!important;
+    --gap-x: calc( var(--basic-gap) * 3 )!important;
+    --gap-y: calc( var(--basic-gap) * 3 )!important;
   }
   xl- .gap-4, xl- .g-4 {
-    --gap: calc( var(--basic-gap) * 4 )!important;
+    --gap-x: calc( var(--basic-gap) * 4 )!important;
+    --gap-y: calc( var(--basic-gap) * 4 )!important;
   }
   xl- .gap-5, xl- .g-5 {
-    --gap: calc( var(--basic-gap) * 5 )!important;
+    --gap-x: calc( var(--basic-gap) * 5 )!important;
+    --gap-y: calc( var(--basic-gap) * 5 )!important;
   }
   xl- .gap-10, xl- .g-10 {
-    --gap: calc( var(--basic-gap) * 10 )!important;
+    --gap-x: calc( var(--basic-gap) * 10 )!important;
+    --gap-y: calc( var(--basic-gap) * 10 )!important;
   }
   xl- .gap-20, xl- .g-20 {
-    --gap: calc( var(--basic-gap) * 20 )!important;
+    --gap-x: calc( var(--basic-gap) * 20 )!important;
+    --gap-y: calc( var(--basic-gap) * 20 )!important;
   }
   xl- .gapy-0, xl- .gap-y-0, xl- .gy-0, xl- .g-y-0 {
     --gap-y: calc( var(--basic-gap) * 0 )!important;
@@ -8784,37 +8850,48 @@ body section {
     order: 12;
   }
   xxl- .gap, xxl- .g {
-    --gap: calc( var(--basic-gap) * 1 );
+    --gap-x: calc( var(--basic-gap) * 1 );
+    --gap-y: calc( var(--basic-gap) * 1 );
   }
   xxl- .gap-0, xxl- .g-0 {
-    --gap: calc( var(--basic-gap) * 0 )!important;
+    --gap-x: calc( var(--basic-gap) * 0 )!important;
+    --gap-y: calc( var(--basic-gap) * 0 )!important;
   }
   xxl- .gap-05, xxl- .g-05 {
-    --gap: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.5 )!important;
   }
   xxl- .gap-1, xxl- .g-1 {
-    --gap: calc( var(--basic-gap) * 1 )!important;
+    --gap-x: calc( var(--basic-gap) * 1 )!important;
+    --gap-y: calc( var(--basic-gap) * 1 )!important;
   }
   xxl- .gap-15, xxl- .g-15 {
-    --gap: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-x: calc( var(--basic-gap) * 1.5 )!important;
+    --gap-y: calc( var(--basic-gap) * 1.5 )!important;
   }
   xxl- .gap-2, xxl- .g-2 {
-    --gap: calc( var(--basic-gap) * 2 )!important;
+    --gap-x: calc( var(--basic-gap) * 2 )!important;
+    --gap-y: calc( var(--basic-gap) * 2 )!important;
   }
   xxl- .gap-3, xxl- .g-3 {
-    --gap: calc( var(--basic-gap) * 3 )!important;
+    --gap-x: calc( var(--basic-gap) * 3 )!important;
+    --gap-y: calc( var(--basic-gap) * 3 )!important;
   }
   xxl- .gap-4, xxl- .g-4 {
-    --gap: calc( var(--basic-gap) * 4 )!important;
+    --gap-x: calc( var(--basic-gap) * 4 )!important;
+    --gap-y: calc( var(--basic-gap) * 4 )!important;
   }
   xxl- .gap-5, xxl- .g-5 {
-    --gap: calc( var(--basic-gap) * 5 )!important;
+    --gap-x: calc( var(--basic-gap) * 5 )!important;
+    --gap-y: calc( var(--basic-gap) * 5 )!important;
   }
   xxl- .gap-10, xxl- .g-10 {
-    --gap: calc( var(--basic-gap) * 10 )!important;
+    --gap-x: calc( var(--basic-gap) * 10 )!important;
+    --gap-y: calc( var(--basic-gap) * 10 )!important;
   }
   xxl- .gap-20, xxl- .g-20 {
-    --gap: calc( var(--basic-gap) * 20 )!important;
+    --gap-x: calc( var(--basic-gap) * 20 )!important;
+    --gap-y: calc( var(--basic-gap) * 20 )!important;
   }
   xxl- .gapy-0, xxl- .gap-y-0, xxl- .gy-0, xxl- .g-y-0 {
     --gap-y: calc( var(--basic-gap) * 0 )!important;
