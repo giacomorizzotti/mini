@@ -275,6 +275,9 @@ hr {
       z-index: $num;
     }
   }
+  &-top {
+    z-index: 1000;
+  }
 }
 
 // positioning

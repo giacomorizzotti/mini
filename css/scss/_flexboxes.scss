@@ -96,6 +96,12 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
       flex-direction: column-reverse!important;
     }
   }
+  &-row {
+    flex-direction: row!important;
+  }
+  &-column {
+    flex-direction: column!important;
+  }
 
   &-wrap {
     flex-wrap: wrap!important;
@@ -121,6 +127,14 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
         flex-flow: column nowrap;
       }
     }
+  }
+
+  &-grow{
+    flex: 1!important;
+  }
+
+  &-shrink{
+    flex-grow: 0 1 auto!important;
   }
   
 }

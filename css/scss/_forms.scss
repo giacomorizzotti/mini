@@ -51,98 +51,101 @@ textarea {
 }
 
 // checkboxes
-input[type="checkbox"] {
-    width: 1px!important;
-    height: 1px!important;
-    top: calc(var(--margin)*5);
-    left: calc(var(--margin)*1.5);
-    position: relative;
-    margin-top: calc(var(--margin)*1);
-    margin-bottom: calc(var(--margin)*3.5);
-    width: 24px!important;
-    height: 24px!important;
-    top: 0;
-    left: 0;
-    margin: calc(var(--margin)*1) 0 calc(var(--margin)*1) 0;
+:not(#iubenda-cs-banner), :not(#iubenda-iframe) {
+    input[type="checkbox"] {
+        width: 1px!important;
+        height: 1px!important;
+        top: calc(var(--margin)*5);
+        left: calc(var(--margin)*1.5);
+        position: relative;
+        margin-top: calc(var(--margin)*1);
+        margin-bottom: calc(var(--margin)*3.5);
+        width: 24px!important;
+        height: 24px!important;
+        top: 0;
+        left: 0;
+        margin: calc(var(--margin)*1) 0 calc(var(--margin)*1) 0;
 
-    &.neg, &.inv {
+        &.neg, &.inv {
+            &::before {
+                background: var(--white);
+            }
+        }
+
         &::before {
+            content:"";
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: calc(var(--margin)*-5);
+            left: calc(var(--margin)*-2);
+            display: block;
             background: var(--white);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 2px var(--grey);
+            box-shadow: inset 0 0 2px var(--grey);
+            width: 30px;
+            height: 30px;
+            top:  -3px;
+            left: -3px;
         }
-    }
-
-    &::before {
-        content:"";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: calc(var(--margin)*-5);
-        left: calc(var(--margin)*-2);
-        display: block;
-        background: var(--white);
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: inset 0 0 2px var(--grey);
-        box-shadow: inset 0 0 2px var(--grey);
-        width: 30px;
-        height: 30px;
-        top:  -3px;
-        left: -3px;
-    }
-    &::after {
-        content:"";
-        width: 0;
-        height: 0;
-        position: absolute;
-        top: calc(var(--margin)* -5 + 5px)!important;
-        left: calc(var(--margin)* -2 + 5px)!important;
-        display: block;
-        background: var(--main-color);
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        top: 2px!important;
-        left: 2px !important;
-    }
-    &:checked {
         &::after {
-            top: 5px;
-            left: 5px;
-            width: 20px;
-            height: 20px;
-            opacity: 1;
-            visibility: visible;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-        }
-    }
-
-    &.chip {
-        display: none;
-        &+label {
-            transition: background-color 0.25s ease, color 0.25s ease;
-            padding: var(--padding);
-            margin: 0;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            background-color: var(--false-white);
-        }
-        &:checked+label {
+            content:"";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: calc(var(--margin)* -5 + 5px)!important;
+            left: calc(var(--margin)* -2 + 5px)!important;
+            display: block;
             background: var(--main-color);
-            color: var(--white);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            top: 2px!important;
+            left: 2px !important;
         }
-        &::before, &::after {
-            display: none;
+        &:checked {
+            &::after {
+                top: 5px;
+                left: 5px;
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+                visibility: visible;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+            }
         }
-    }
 
+        &.chip {
+            display: none;
+            &+label {
+                transition: background-color 0.25s ease, color 0.25s ease;
+                padding: var(--padding);
+                margin: 0;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                background-color: var(--false-white);
+            }
+            &:checked+label {
+                background: var(--main-color);
+                color: var(--white);
+            }
+            &::before, &::after {
+                display: none;
+            }
+        }
+
+    }
 }
+
 
 // radio buttons
 input[type="radio"] {

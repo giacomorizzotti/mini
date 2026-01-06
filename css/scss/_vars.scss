@@ -123,15 +123,19 @@
 
   // typo
 
+
   --font-sans: "Roboto", sans-serif;
   --font-second: "Oswald", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-handwriting: "Edu VIC WA NT Beginner", serif;
   --font-mono: "Roboto Mono", monospace;
 
-  --font: var(--font-sans);
-  --title-font: var(--font-second);
-
+  --font-main: var(--font-sans);
+  --text-font: var(--font-sans);
+  
+  --font: var(--font-main);
+  --title-font: var(--font-second), var(--font);
+  
   --baseline: 0.625rem; // 10px
 
   --h1: 2rem; // 32px
