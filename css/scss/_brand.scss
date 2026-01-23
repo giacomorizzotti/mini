@@ -5,14 +5,20 @@ header#header {
     flex-flow: row wrap;
     align-items: center;
     min-height: calc( (var(--padding) * 2 ) + var(--logo-height) );
+    .logo-box {
+      
+    }
     a {
       display: inline-block;
       .logo, .header-logo {
-        transition: all 0.3s ease;
+        //transition: min-height 0.25s ease;
         min-height: var(--logo-height);
         height: var(--logo-height);
         width: auto;
       }
+    }
+    .title-box {
+      
     }
     .site-title {
       display: inline-block;
@@ -21,11 +27,29 @@ header#header {
       line-height: 1!important;
     }
   }
+  .open-menu {
+  }
 }
 body.top {
   header#header {
-    &.neg, &.inv, &.top-neg, &.top-inv, &.top-bk, &.top-col {
+    &.neg, &.inv, &.invert, &.top-neg, &.top-inv, &.top-bk, &.top-col {
       #brand, .brand {
+        color: var(--white);
+        a {
+          .logo, .header-logo {
+            filter: brightness(0) invert(1);
+          }
+          .site-title {
+            color: var(--white);
+          }
+        }
+        .site-description {
+          color: var(--white);
+        }
+      }
+    }
+    #brand, .brand {
+      &.neg, &.inv, &.invert, &.top-neg, &.top-inv, &.top-bk, &.top-col {
         color: var(--white);
         a {
           .logo, .header-logo {
@@ -43,16 +67,19 @@ body.top {
   }
   .open-menu {
     header#header {
-      &.neg, &.inv, &.top-neg, &.top-inv, &.scroll-neg, &.scroll-inv {
+      &.neg, &.inv, &.invert, &.top-neg, &.top-inv, &.scroll-neg, &.scroll-inv {
         background: var(--transp);
       }
     }
     #brand, .brand {
+      min-height: calc( (var(--padding) * 2 ) + var(--scroll-logo-height) );
       img.logo {
         filter: brightness(0) invert(1);
       }
       .site-title, .header-logo {
         color:var(--white);
+          min-height: var(--scroll-logo-height);
+          height: var(--scroll-logo-height);
       }
       .site-description {
         color: var(--white);
@@ -71,8 +98,24 @@ body.scroll, body.scrolled {
         }
       }
     }
-    &.neg, &.inv, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
+    &.neg, &.inv, &.invert, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
       #brand, .brand {
+        color: var(--white);
+        a {
+          .logo, .header-logo {
+            filter: brightness(0) invert(1);
+          }
+          .site-title {
+            color: var(--white);
+          }
+        }
+        .site-description {
+          color: var(--white);
+        }
+      }
+    }
+    #brand, .brand {
+      &.neg, &.inv, &.invert, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
         color: var(--white);
         a {
           .logo, .header-logo {

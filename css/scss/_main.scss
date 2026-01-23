@@ -26,6 +26,7 @@ body.open-menu {
       box-shadow: 0 0 10px 10px rgba(0 0 0 / 10%);
       flex: 10;
       order: 3;
+      margin: 0 var(--margin);
       @media only screen and (min-width: 992px) {
         order: 2;
       }

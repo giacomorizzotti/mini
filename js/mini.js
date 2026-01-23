@@ -17,6 +17,7 @@ window.addEventListener('load', function() {
     starsBackground()
     pagination(30)
     vibingText()
+    setHeaderPaddingTop()
 })
 
 // things to do on SCROLL
@@ -29,6 +30,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('resize', function() {
     fullHdDiv()
     imageCover()
+    setHeaderPaddingTop()
 })
 
 // MOBILE DEVICE DETECTION
@@ -53,11 +55,12 @@ function updateWebsiteCookie() {
     setCookie('website', JSON.stringify(website))
 } 
 function setWebsiteCookie() {
-    if (readCookie('website'))
+    if (readCookie('website')) {
         website = JSON.parse(readCookie('website'))
-    else
+    } else {
         website = {}
         updateWebsiteCookie()
+    }
 }
 
 // DESKTOP/MOBILE class to body element
@@ -67,6 +70,34 @@ function addDeviceClassToBody() {
         document.body.classList.add('mobile')
     } else if ( window.mobileCheck() == false ) {
         document.body.classList.add('desktop')
+    }
+}
+
+// SET HEADER PADDING TOP
+// Sets padding-top of .space-top-bot and .space-top elements equal to header height
+function setHeaderPaddingTop() {
+    const header = document.getElementById('header');
+    if (header) {
+        const headerHeight = header.offsetHeight;
+        const elementsTopBot = document.querySelectorAll('.space-top-bot');
+        const elementsTop = document.querySelectorAll('.space-top');
+        const elementsBot = document.querySelectorAll('.space-bot');
+        
+        // Set padding-top for .space-top-bot elements
+        elementsTopBot.forEach(function(element) {
+            element.style.setProperty('padding-top', headerHeight + 'px', 'important');
+            element.style.setProperty('padding-bottom', headerHeight + 'px', 'important');
+        });
+        
+        // Set padding-top for .space-top elements
+        elementsTop.forEach(function(element) {
+            element.style.setProperty('padding-top', headerHeight + 'px', 'important');
+        });
+        
+        // Set padding-top for .space-top elements
+        elementsBot.forEach(function(element) {
+            element.style.setProperty('padding-bottom', headerHeight + 'px', 'important');
+        });
     }
 }
 
@@ -157,8 +188,8 @@ function pagination(pageElements=30) {
         function createControls() {
 
             if ( document.getElementsByClassName('pagination-controls-wrapper') != null ) {
-                controlWrappers = document.getElementsByClassName('pagination-controls-wrapper');
-                for ( i=0; i<controlWrappers.length; i++ ) {
+                let controlWrappers = document.getElementsByClassName('pagination-controls-wrapper');
+                for ( let i=0; i<controlWrappers.length; i++ ) {
                     controlWrappers[i].remove();
                 }
             }
@@ -177,7 +208,7 @@ function pagination(pageElements=30) {
             //firstPage.href = "#top";
             firstPage.setAttribute("id", "page-start-btn");
             firstPage.classList.add('page-start-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
-            firstPageLabel = document.createTextNode("<<");
+            let firstPageLabel = document.createTextNode("<<");
             firstPage.appendChild(firstPageLabel);
             paginationControls.appendChild(firstPage);
     
@@ -192,7 +223,7 @@ function pagination(pageElements=30) {
                 //prevPage.href = "#top";
                 prevPage.setAttribute("id", "page-prev-btn");
                 prevPage.classList.add('page-prev-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
-                prevPageLabel = document.createTextNode("<");
+                let prevPageLabel = document.createTextNode("<");
                 prevPage.appendChild(prevPageLabel);
                 paginationControls.appendChild(prevPage);
         
@@ -203,7 +234,7 @@ function pagination(pageElements=30) {
             }
     
             // go to page button
-            k=1;
+            let k=1;
             while (k <= pages) {
                 
                 let pageBtn = document.createElement("a");
@@ -217,7 +248,7 @@ function pagination(pageElements=30) {
                 }
                 pageBtn.classList.add("page-btn", "page-"+k+"-btn", 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
                 pageBtn.setAttribute('page', k)
-                pageBtnLabel = document.createTextNode(k);
+                let pageBtnLabel = document.createTextNode(k);
                 pageBtn.appendChild(pageBtnLabel);
                 paginationControls.appendChild(pageBtn);
     
@@ -234,7 +265,7 @@ function pagination(pageElements=30) {
                 //nextPage.href = "#top";
                 nextPage.setAttribute("id", "page-next-btn");
                 nextPage.classList.add('page-next-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
-                nextPageLabel = document.createTextNode(">");
+                let nextPageLabel = document.createTextNode(">");
                 nextPage.appendChild(nextPageLabel);
                 paginationControls.appendChild(nextPage);
         
@@ -249,7 +280,7 @@ function pagination(pageElements=30) {
             lastPage.href = "#top";
             lastPage.setAttribute("id", "page-end-btn");
             lastPage.classList.add('page-end-btn', 'btn', 'grey', 'S', 'me-05', 'mb-05', 'display-inline-block');
-            lastPageLabel = document.createTextNode(">>");
+            let lastPageLabel = document.createTextNode(">>");
             lastPage.appendChild(lastPageLabel);
             paginationControls.appendChild(lastPage);
     
@@ -259,15 +290,12 @@ function pagination(pageElements=30) {
     
             paginationControlsWrapper.appendChild(paginationControls);
 
-            parentDiv = pagination.parentNode
+            let parentDiv = pagination.parentNode
             parentDiv.insertBefore(paginationControlsWrapper, pagination)
 
-            function insertAfter(referenceNode, newNode) {
-                referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-            }
-            //insertAfter(pagination, paginationControlsWrapper.cloneNode(true));
+            // Removed unused insertAfter function
 
-            activeBtn = document.querySelectorAll('[page="'+thisPage+'"]');
+            let activeBtn = document.querySelectorAll('[page="'+thisPage+'"]');
             activeBtn[0].classList.add('clicked');
 
         }
@@ -351,7 +379,7 @@ function toggleClass(elementToLookFor, classToToggle, invertClassToToggle = null
 // Add this function in page elements
 function collapse(targetObject) {
     var element = document.querySelectorAll(targetObject);
-    for (i=0; i<element.length; i++) {
+    for (let i=0; i<element.length; i++) {
         if (!element[i].classList.contains("hidden") && !element[i].classList.contains("shown")) {
             element[i].classList.add("shown")
         }
@@ -361,7 +389,7 @@ function collapse(targetObject) {
 function toggleAndCloseOthers(elementToShow, elementsToHide, buttons=null, thisButton=null ) {
     var elsToToggle = document.querySelectorAll(elementToShow);
     var elsToHide = document.querySelectorAll(elementsToHide);
-    for (j=0; j<elsToToggle.length; j++) {
+    for (let j=0; j<elsToToggle.length; j++) {
         if (elsToToggle[j].classList.contains('shown')) {
             elsToToggle[j].classList.remove('shown')
             elsToToggle[j].classList.add('hidden')
@@ -369,17 +397,18 @@ function toggleAndCloseOthers(elementToShow, elementsToHide, buttons=null, thisB
             elsToToggle[j].classList.remove('hidden')
             elsToToggle[j].classList.add('shown')
         }
-        for (i=0; i<elsToHide.length; i++) {
+        for (let i=0; i<elsToHide.length; i++) {
             if (!elsToHide[i].isSameNode(elsToToggle[j])) {
-                if(elsToHide[i].classList.contains('shown'))
+                if(elsToHide[i].classList.contains('shown')) {
                     elsToHide[i].classList.remove('shown')
                     elsToHide[i].classList.add('hidden')
+                }
             }
         }
     }
     if (buttons && thisButton) {
         var buttonsToClickClicked = document.querySelectorAll(buttons)
-        for (k=0; k<buttonsToClickClicked.length; k++) {
+        for (let k=0; k<buttonsToClickClicked.length; k++) {
             if (thisButton && buttonsToClickClicked[k].isSameNode(thisButton)) {
                 if(!buttonsToClickClicked[k].classList.contains('to-click') && !buttonsToClickClicked[k].classList.contains('clicked')) {
                     buttonsToClickClicked[k].classList.add('clicked')
@@ -398,8 +427,8 @@ function toggleAndCloseOthers(elementToShow, elementsToHide, buttons=null, thisB
             }   
         }
     }
-        
 }
+        
 function showElement(targetObject) {
     removeClass(targetObject, 'hidden');
     addClass(targetObject, 'shown');
@@ -410,18 +439,20 @@ function hideElement(targetObject) {
 }
 function removeClickedClass(targetObject) {
     var els = document.querySelectorAll(targetObject);
-    for (j=0;j<els.length;j++) {
-        if (els[j].classList.contains('clicked'))
+    for (let j=0; j<els.length; j++) {
+        if (els[j].classList.contains('clicked')) {
             els[j].classList.remove('clicked')
             els[j].classList.add('to-click')
+        }
     }
 }
 function removeToClickClass(targetObject) {
     var els = document.querySelectorAll(targetObject);
-    for (j=0;j<els.length;j++) {
-        if (els[j].classList.contains('to-click'))
+    for (let j=0; j<els.length; j++) {
+        if (els[j].classList.contains('to-click')) {
             els[j].classList.remove('to-click')
             els[j].classList.add('clicked')
+        }
     }
 }
 
@@ -466,8 +497,8 @@ function deleteCookie(name) {
 
 // LOADER
 function loaderGone() {
-    if ( document.querySelectorAll(".loader") ) {
-        var loader = document.querySelectorAll(".loader");
+    var loader = document.querySelectorAll(".loader");
+    if (loader.length > 0) {
         loader[0].classList.add("done");
         setTimeout(function () {
             loader[0].classList.remove("done");
@@ -649,6 +680,7 @@ function pageMenuItemActiveOnScroll() {
             //console.log('there\'s a problem with one of the link in the main menu.');
         }
         var target = document.getElementById(thisAnchorHref);
+        if (!target) continue;
         var targetDistance = target.getBoundingClientRect();
         if (thisAnchor.href === 'top') {
             if ( targetDistance.bottom >= (0 - window.innerHeight) ) {
@@ -749,10 +781,10 @@ function menuToggle() {
         }
         if (menuToggle)
             menuToggle.onclick = toggleMenuVisibility;
-        for (i=0;i<mainMenuItem.length;i++) {
+        for (let i=0; i<mainMenuItem.length; i++) {
             if(!mainMenuItem[i].parentElement.classList.contains('drop-down')) {
                 mainMenuItem[i].addEventListener('click', function() {
-                    for (j=0;j<headMenu.length;j++) {
+                    for (let j=0; j<headMenu.length; j++) {
                         if (headMenu[j].classList.contains("open-menu")) {
                             headMenu[j].classList.remove("open-menu");
                         }
@@ -839,7 +871,7 @@ function adminMenuToggle() {
 // dropdown menu
 function dropDownMenuItems() {
     var dropDownMenu = document.querySelectorAll('li.menu-item.drop-down');
-    for (i=0; i<dropDownMenu.length; i++) {
+    for (let i=0; i<dropDownMenu.length; i++) {
         let thisDropDownItem = dropDownMenu[i];
         let thisDropDownMenu = thisDropDownItem.querySelectorAll('ul.menu.drop-down');
         if (thisDropDownMenu.length>0 && thisDropDownMenu.length<2) {

@@ -66,8 +66,18 @@ $colors: //color name, color code, text color over color
     // texts
     &-text {
       color: $colorcode!important;
-      &-hover, &-clicked, &-active {
-        &:hover, &.clicked, &.active {
+      &-hover {
+        &:hover {
+          color: $colorcode!important;
+        }
+      }
+      &-clicked {
+        &.clicked {
+          color: $colorcode!important;
+        }
+      }
+      &-active {
+        &.active {
           color: $colorcode!important;
         }
       }
@@ -76,9 +86,10 @@ $colors: //color name, color code, text color over color
     &-box {
       background: $colorcode!important;
       color: $colortext!important;
-      padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+      padding: calc(var(--padding) * 0.5);
       display: inline-block;
-      margin: 0 6px 8px 0;
+      margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
+      line-height: 0.8;
       &.S {
         padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
         margin: 0 4px 4px 0;
@@ -87,21 +98,31 @@ $colors: //color name, color code, text color over color
         padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
         margin: 0 4px 2px 0;
       }
-      &-hover, &-clicked, &-active {
-        &:hover, &.clicked, &.active {
+      &-hover {
+        &:hover {
           background: $colorcode!important;
           color: $colortext!important;
           padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
           display: inline-block;
           margin: 0 6px 8px 0;
         }
-        &.S {
-          padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
-          margin: 0 4px 4px 0;
+      }
+      &-clicked {
+        &.clicked {
+          background: $colorcode!important;
+          color: $colortext!important;
+          padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+          display: inline-block;
+          margin: 0 6px 8px 0;
         }
-        &.XS {
-          padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
-          margin: 0 4px 2px 0;
+      }
+      &-active {
+        &.active {
+          background: $colorcode!important;
+          color: $colortext!important;
+          padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+          display: inline-block;
+          margin: 0 6px 8px 0;
         }
       }
     }
@@ -118,8 +139,18 @@ $colors: //color name, color code, text color over color
     &-border {
       @extend .border !optional;
       border-color: $colorcode!important;
-      &-hover, &-clicked, &-active {
-        &:hover, &.clicked, &.active {
+      &-hover {
+        &:hover {
+          border-color: $colorcode!important;
+        }
+      }
+      &-clicked {
+        &.clicked {
+          border-color: $colorcode!important;
+        }
+      }
+      &-active {
+        &.active {
           border-color: $colorcode!important;
         }
       }
@@ -280,44 +311,82 @@ $colors: //color name, color code, text color over color
   background: linear-gradient($direction, $list)!important;
 }
 
-$f2s: var(--main-color) 0%, var(--second-color) 100%;
-$f2t: var(--main-color) 0%, var(--third-color) 100%;
-$s2t: var(--second-color) 0%, var(--third-color) 100%;
-$t2f: var(--third-color) 0%, var(--fourth-color) 100%;
-$gradMain: var(--main-color) 0%, var(--main-color-dark) 100%;
-$gradSecond: var(--second-color) 0%, var(--second-color-dark) 100%;
-$gradThird: var(--third-color) 0%, var(--third-color-dark) 100%;
-$gradFourth: var(--fourth-color) 0%, var(--fourth-color-dark) 100%;
-$gradFalseWhiteToWhite: var(--white) 0%, var(--false-white) 100%;
+$gradients:
+  "1-to-2" (var(--main-color) 0%, var(--second-color) 100%),
+  "f2s" (var(--main-color) 0%, var(--second-color) 100%),
+  "1-to-3" (var(--main-color) 0%, var(--third-color) 100%),
+  "f2t" (var(--main-color) 0%, var(--third-color) 100%),
+  "1-to-4" (var(--main-color) 0%, var(--fourth-color) 100%),
+  "2-to-3" (var(--second-color) 0%, var(--third-color) 100%),
+  "s2t" (var(--second-color) 0%, var(--third-color) 100%),
+  "3-to-4" (var(--third-color) 0%, var(--fourth-color) 100%),
+  "t2f" (var(--third-color) 0%, var(--fourth-color) 100%),
+  "main" (var(--main-color) 0%, var(--main-color-dark) 100%),
+  "first" (var(--main-color) 0%, var(--main-color-dark) 100%),
+  "second" (var(--second-color) 0%, var(--second-color-dark) 100%),
+  "third" (var(--third-color) 0%, var(--third-color-dark) 100%),
+  "fourth" (var(--fourth-color) 0%, var(--fourth-color-dark) 100%),
+  "fw-down-w" (var(--white) 0%, var(--false-white) 100%),
+  "fw-up-w" (var(--false-white) 0%, var(--white) 100%);
 
-// gradients
-.grad-f2s {
-  @include gradient(135deg, $f2s);
+$grainy-gradients:
+  "1-to-2" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%),
+  "f2s" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%),
+  "1-to-3" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%),
+  "f2t" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%),
+  "1-to-4" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%),
+  "2-to-3" (color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%),
+  "s2t" (color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%),
+  "3-to-4" (color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%),
+  "t2f" (color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%),
+  "main" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%),
+  "first" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%),
+  "second" (color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color-dark) 85%, transparent) 100%),
+  "third" (color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color-dark) 85%, transparent) 100%),
+  "fourth" (color-mix(in srgb, var(--fourth-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color-dark) 85%, transparent) 100%),
+  "fw-down-w" (color-mix(in srgb, var(--white) 85%, transparent) 0%, color-mix(in srgb, var(--false-white) 85%, transparent) 100%),
+  "fw-up-w" (color-mix(in srgb, var(--false-white) 85%, transparent) 0%, color-mix(in srgb, var(--white) 85%, transparent) 100%);
+
+
+@each $gradname, $gradstops in $gradients {
+  .grad-#{$gradname} {
+    @if $gradname == "fw-down-w" {
+      @include gradient(0deg, $gradstops);
+    } @else if $gradname == "fw-up-w" {
+      @include gradient(180deg, $gradstops);
+    } @else {
+      @include gradient(135deg, $gradstops);
+    }
+  }
 }
-.grad-f2t {
-  @include gradient(135deg, $f2t);
+
+.grainy-grad {
+    //filter: contrast(115%) brightness(115%);
+    background-size: 50% auto!important;
+    background-repeat: repeat;
+    background: 
+      linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), 
+      linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+      linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
-.grad-s2t {
-  @include gradient(135deg, $s2t);
+@each $gradname, $gradstops in $grainy-gradients {
+  .grainy-grad-#{$gradname} {
+    //filter: contrast(115%) brightness(115%);
+    background-size: 50% auto!important;
+    background-repeat: repeat;
+    background: 
+      linear-gradient(0deg, $gradstops),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+      linear-gradient(0deg, $gradstops),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+      linear-gradient(0deg, $gradstops),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")!important;
+  }
 }
-.grad-t2f {
-  @include gradient(135deg, $t2f);
-}
-.grad-main, .grad-first {
-  @include gradient(135deg, $gradMain);
-}
-.grad-second {
-  @include gradient(135deg, $gradSecond);
-}
-.grad-third {
-  @include gradient(135deg, $gradThird);
-}
-.grad-fourth {
-  @include gradient(135deg, $gradFourth);
-}
-.grad-fw-down-w {
-  @include gradient(0deg, $gradFalseWhiteToWhite);
-}
-.grad-fw-up-w {
-  @include gradient(180deg, $gradFalseWhiteToWhite);
+
+.invert, .inv, .neg, .negative {
+  filter: brightness(0) invert(1)!important;
 }

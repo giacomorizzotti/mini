@@ -23,12 +23,15 @@
   --max-screen: 1400px; // 1400px
 
   // logo
-  --logo-height: 1.25rem;
-  --scroll-logo-height: 1rem;
+  --logo-height: 1.5rem;
+  --scroll-logo-height: 1.3rem;
   
   // menu
   --menu-toggle-height: 3rem;
   --scroll-menu-toggle-height: 2.2rem;
+  --menu-toggle-color: transparent;
+  --menu-toggle-line-color: var(--black);
+  --menu-toggle-line-special-color: var(--main-color);
 
   // colors
   --black: rgb( 10 10 20 / 100% );
@@ -41,38 +44,33 @@
   --white: rgb( 255 255 255 / 100% );
   --transp: rgb( 0 0 0 / 0% );
 
-  --main-color: #3d5aff;
-  --main-color-dark: #2841a0;
-  --main-color-transp: #3c5aff33;
+  --main-color: #12616D;
+  --main-color-dark: #08363d;
+  --main-color-transp: #20836625;
 
-  --second-color: #38acc1;
-  --second-color-dark: #1e5a65;
+  --second-color: #1B5B88;
+  --second-color-dark: #112a3b;
 
-  --third-color: #7930ee;
-  --third-color-dark: #4822b0;
-  //--third-color: #3c1e63;
-  //--third-color-dark: #220f3d;
+  --third-color: #FE7E62;
+  --third-color-dark: #982308;
 
-  --fourth-color: #e6003c;
-  --fourth-color-dark: #a0002d;
+  --fourth-color: #653EAC;
+  --fourth-color-dark: #28134d;
 
-  --link-color: #1d96cf;
-  --link-hover-color: #136b94;
+  --link-color: #25B1A0;
+  --link-hover-color: #146158;
 
-  --info: #38acc1;
-  --success: #a0dc6e;
-  --warning: #f8bb53;
-  --danger: #ff6f61;
-  --bad: #eb3750;
+  --info: #449C93;
+  --success: #569E47;
+  --warning: #E57538;
+  --danger: #BE4646;
+  --bad: #B01127; 
 
   --acid-green: #C2F261;
   --stars-color: #ffffff80;
   --gingerbread: #54494b;
   --pulse-color: var(--link-color);
 
-  --sheet-color: var(--false-black);
-  --menu-toggle-color: var(--sheet-color);
-  --menu-toggle-line-special-color: var(--main-color);
   --theme-color: var(--main-color);
   --text-selection-bg: var(--link-color);
   --text-selection-color: var(--white);
@@ -80,16 +78,16 @@
   --scrollbar-color-thumb: var(--white);
 
   // mini
-  --mini-color: #3d5aff;
-  --mini-color-dark: #2841a0;
-  --mini-second-color: #38acc1;
-  --mini-second-color-dark: #1e5a65;
-  --mini-third-color: #3c1e63;
-  --mini-third-color-dark: #220f3d;
-  --mini-fourth-color: #e6003c;
-  --mini-fourth-color-dark: #a0002d;
-  --mini-link-color: #7930ee;
-  --mini-link-hover-color: #4822b0;
+  --mini-color: #1b9958;
+  --mini-color-dark: #05702B;
+  --mini-second-color: #025A5B;
+  --mini-second-color-dark: #003838;
+  --mini-third-color: #FF512C;
+  --mini-third-color-dark: #8D3522;
+  --mini-fourth-color: #5E0099;
+  --mini-fourth-color-dark: #2F004D;
+  --mini-link-color: #00C68F;
+  --mini-link-hover-color: #20896C;
 
   // UWA
   --uwa-color: #3c5aff;
@@ -124,7 +122,7 @@
   // typo
 
 
-  --font-sans: "Roboto", sans-serif;
+  --font-sans: "Barlow", sans-serif;
   --font-second: "Oswald", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-handwriting: "Edu VIC WA NT Beginner", serif;
@@ -134,7 +132,7 @@
   --text-font: var(--font-sans);
   
   --font: var(--font-main);
-  --title-font: var(--font-second), var(--font);
+  --title-font: var(--font);
   
   --baseline: 0.625rem; // 10px
 
