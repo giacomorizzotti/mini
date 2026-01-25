@@ -130,6 +130,18 @@ button, .btn {
       border-color: var(--button-border-color);
     }
   }
+  &-invert {
+    @extend button, .btn !optional;
+    color: var( --button-hover-text-color);
+    //background: var(--button-hover-background-color);
+    background: transparent;
+    border-color: var(--button-hover-border-color);
+    &.clicked, &.active {
+      color: var(--button-text-color);
+      background: var(--button-background-color);
+      border-color: var(--button-border-color);
+    }
+  }
   &.xs, &.XS {
     padding: calc(var(--padding)*.125) calc(var(--padding)*.25);
     margin: calc(var(--margin) * .25) 0;

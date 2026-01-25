@@ -47,12 +47,12 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-selection-bg);
 }
 
-.link-text::-moz-selection, .link-box::-moz-selection, .link-bg::-moz-selection, a::-moz-selection, a::-moz-selection, a::-moz-selection, .btn::-moz-selection, .btn::-moz-selection, .btn::-moz-selection {
+.link-text::-moz-selection, .link-box::-moz-selection, .link-bg::-moz-selection, a::-moz-selection, .btn::-moz-selection, button-invert::-moz-selection, .btn-invert::-moz-selection, .btn::-moz-selection {
   background: rgba(0, 0, 0, 0.4);
   color: var(--text-selection-color);
 }
 
-.link-text::selection, .link-box::selection, .link-bg::selection, a::selection, a::selection, a::selection, .btn::selection, .btn::selection, .btn::selection {
+.link-text::selection, .link-box::selection, .link-bg::selection, a::selection, .btn::selection, button-invert::selection, .btn-invert::selection, .btn::selection {
   background: rgba(0, 0, 0, 0.4);
   color: var(--text-selection-color);
 }
@@ -12374,7 +12374,7 @@ input[type=radio]:checked + label {
   --button-hover-border-color: var(--uwa-link-color)!important;
 }
 
-button, .btn {
+button, button-invert, .btn-invert, .btn {
   --button-text-color: var(--white);
   --button-background-color: var(--link-color);
   --button-border-color: var(--link-color);
@@ -12398,67 +12398,77 @@ button, .btn {
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-button.hard, .btn.hard {
+button.hard, button-invert.hard, .hard.btn-invert, .btn.hard {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-button.smooth, .btn.smooth {
+button.smooth, button-invert.smooth, .smooth.btn-invert, .btn.smooth {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-button.round, .btn.round {
+button.round, button-invert.round, .round.btn-invert, .btn.round {
   -webkit-border-radius: 250px;
   -moz-border-radius: 250px;
   border-radius: 250px;
 }
-button:last-child, .btn:last-child {
+button:last-child, button-invert:last-child, .btn-invert:last-child, .btn:last-child {
   margin-right: 0;
 }
-button:hover, .btn:hover {
+button:hover, button-invert:hover, .btn-invert:hover, .btn:hover {
   color: var(--button-text-color);
   background: var(--button-background-color);
   border-color: var(--button-border-color);
   box-shadow: 0 0 15px -5px var(--button-border-color);
 }
-button.clicked, button.active, .btn.clicked, .btn.active {
+button.clicked, button-invert.clicked, .clicked.btn-invert, button.active, button-invert.active, .active.btn-invert, .btn.clicked, .btn.active {
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
-button.invert, .btn.invert {
+button.invert, button-invert.invert, .invert.btn-invert, .btn.invert {
   color: var(--button-hover-text-color);
   background: transparent;
   border-color: var(--button-hover-border-color);
 }
-button.invert.clicked, button.invert.active, .btn.invert.clicked, .btn.invert.active {
+button.invert.clicked, button-invert.invert.clicked, .invert.clicked.btn-invert, button.invert.active, button-invert.invert.active, .invert.active.btn-invert, .btn.invert.clicked, .btn.invert.active {
   color: var(--button-text-color);
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-button.xs, button.XS, .btn.xs, .btn.XS {
+button-invert, .btn-invert {
+  color: var(--button-hover-text-color);
+  background: transparent;
+  border-color: var(--button-hover-border-color);
+}
+button-invert.clicked, button-invert.active, .btn-invert.clicked, .btn-invert.active {
+  color: var(--button-text-color);
+  background: var(--button-background-color);
+  border-color: var(--button-border-color);
+}
+button.xs, button-invert.xs, .xs.btn-invert, button.XS, button-invert.XS, .XS.btn-invert, .btn.xs, .btn.XS {
   padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.25);
   margin: calc(var(--margin) * 0.25) 0;
   margin: calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) 0;
 }
-button.s, button.S, .btn.s, .btn.S {
+button.s, button-invert.s, .s.btn-invert, button.S, button-invert.S, .S.btn-invert, .btn.s, .btn.S {
   padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
   margin: calc(var(--margin) * 0.35) 0;
   margin: calc(var(--margin) * 0.35) calc(var(--margin) * 0.5) calc(var(--margin) * 0.35) 0;
 }
-button.l, button.L, .btn.l, .btn.L {
+button.l, button-invert.l, .l.btn-invert, button.L, button-invert.L, .L.btn-invert, .btn.l, .btn.L {
   padding: calc(var(--padding) * 0.625) calc(var(--padding) * 1.125);
   margin: calc(var(--margin) * 0.75) 0;
   margin: calc(var(--margin) * 0.75) calc(var(--margin) * 1.125) calc(var(--margin) * 0.75) 0;
 }
-button.xl, button.XL, .btn.xl, .btn.XL {
+button.xl, button-invert.xl, .xl.btn-invert, button.XL, button-invert.XL, .XL.btn-invert, .btn.xl, .btn.XL {
   padding: calc(var(--padding) * 0.85) calc(var(--padding) * 1.35);
 }
-button.xxl, button.XXL, .btn.xxl, .btn.XXL {
+button.xxl, button-invert.xxl, .xxl.btn-invert, button.XXL, button-invert.XXL, .XXL.btn-invert, .btn.xxl, .btn.XXL {
   padding: calc(var(--padding) * 1.25) calc(var(--padding) * 1.75);
 }
-button.clicking, .btn.clicking {
+button.clicking, button-invert.clicking, .clicking.btn-invert, .btn.clicking {
   animation-name: clickingAnimation;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
