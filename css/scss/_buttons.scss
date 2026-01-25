@@ -57,14 +57,22 @@ $colors: //color name, color code, text color over color
 
 @each $colorname, $colorcode, $colortext in $colors {
   .#{$colorname} {
-      &-btn {
-          --button-text-color: #{$colortext}!important;
-          --button-background-color: #{$colorcode}!important;
-          --button-border-color: #{$colorcode}!important;
-          --button-hover-text-color: #{$colorcode}!important;
-          --button-hover-background-color: #{$colortext}!important;
-          --button-hover-border-color: #{$colorcode}!important;
+    &-btn {
+      --button-text-color: #{$colortext}!important;
+      --button-background-color: #{$colorcode}!important;
+      --button-border-color: #{$colorcode}!important;
+      --button-hover-text-color: #{$colorcode}!important;
+      --button-hover-background-color: #{$colortext}!important;
+      --button-hover-border-color: #{$colorcode}!important;
+      &-invert, &-inv, &-negative, &-neg {
+      --button-text-color: #{$colorcode}!important;
+      --button-background-color: #{$colortext}!important;
+      --button-border-color: #{$colorcode}!important;
+      --button-hover-text-color: #{$colortext}!important;
+      --button-hover-background-color: #{$colorcode}!important;
+      --button-hover-border-color: #{$colorcode}!important;
       }
+    }
   }
 }
 button, .btn {
@@ -120,10 +128,9 @@ button, .btn {
     border-color: var(--button-hover-border-color);
   }
   &-invert, &-inv, &-negative, &-neg {
-    @extend button, .btn !optional;
+    @extend .btn !optional;
     color: var( --button-hover-text-color);
-    //background: var(--button-hover-background-color);
-    background: transparent;
+    background: var(--button-hover-background-color);
     border-color: var(--button-hover-border-color);
     &.clicked, &.active {
       color: var(--button-text-color);

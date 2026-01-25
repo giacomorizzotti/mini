@@ -12040,6 +12040,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--black)!important;
   --button-hover-border-color: var(--white)!important;
 }
+.wh-btn-invert, .wh-btn-inv, .wh-btn-negative, .wh-btn-neg {
+  --button-text-color: var(--white)!important;
+  --button-background-color: var(--black)!important;
+  --button-border-color: var(--white)!important;
+  --button-hover-text-color: var(--black)!important;
+  --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--white)!important;
+}
 
 .white-btn {
   --button-text-color: var(--black)!important;
@@ -12047,6 +12055,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--white)!important;
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--black)!important;
+  --button-hover-border-color: var(--white)!important;
+}
+.white-btn-invert, .white-btn-inv, .white-btn-negative, .white-btn-neg {
+  --button-text-color: var(--white)!important;
+  --button-background-color: var(--black)!important;
+  --button-border-color: var(--white)!important;
+  --button-hover-text-color: var(--black)!important;
+  --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--white)!important;
 }
 
@@ -12058,6 +12074,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--black)!important;
   --button-hover-border-color: var(--false-white)!important;
 }
+.false-white-btn-invert, .false-white-btn-inv, .false-white-btn-negative, .false-white-btn-neg {
+  --button-text-color: var(--false-white)!important;
+  --button-background-color: var(--black)!important;
+  --button-border-color: var(--false-white)!important;
+  --button-hover-text-color: var(--black)!important;
+  --button-hover-background-color: var(--false-white)!important;
+  --button-hover-border-color: var(--false-white)!important;
+}
 
 .light-grey-btn {
   --button-text-color: var(--black)!important;
@@ -12065,6 +12089,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--light-grey)!important;
   --button-hover-text-color: var(--light-grey)!important;
   --button-hover-background-color: var(--black)!important;
+  --button-hover-border-color: var(--light-grey)!important;
+}
+.light-grey-btn-invert, .light-grey-btn-inv, .light-grey-btn-negative, .light-grey-btn-neg {
+  --button-text-color: var(--light-grey)!important;
+  --button-background-color: var(--black)!important;
+  --button-border-color: var(--light-grey)!important;
+  --button-hover-text-color: var(--black)!important;
+  --button-hover-background-color: var(--light-grey)!important;
   --button-hover-border-color: var(--light-grey)!important;
 }
 
@@ -12076,6 +12108,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--grey)!important;
 }
+.grey-btn-invert, .grey-btn-inv, .grey-btn-negative, .grey-btn-neg {
+  --button-text-color: var(--grey)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--grey)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--grey)!important;
+  --button-hover-border-color: var(--grey)!important;
+}
 
 .dark-grey-btn {
   --button-text-color: var(--white)!important;
@@ -12083,6 +12123,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--dark-grey)!important;
   --button-hover-text-color: var(--dark-grey)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--dark-grey)!important;
+}
+.dark-grey-btn-invert, .dark-grey-btn-inv, .dark-grey-btn-negative, .dark-grey-btn-neg {
+  --button-text-color: var(--dark-grey)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--dark-grey)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--dark-grey)!important;
   --button-hover-border-color: var(--dark-grey)!important;
 }
 
@@ -12094,6 +12142,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--false-black)!important;
 }
+.false-black-btn-invert, .false-black-btn-inv, .false-black-btn-negative, .false-black-btn-neg {
+  --button-text-color: var(--false-black)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--false-black)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--false-black)!important;
+  --button-hover-border-color: var(--false-black)!important;
+}
 
 .bk-btn {
   --button-text-color: var(--white)!important;
@@ -12101,6 +12157,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--black)!important;
   --button-hover-text-color: var(--black)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--black)!important;
+}
+.bk-btn-invert, .bk-btn-inv, .bk-btn-negative, .bk-btn-neg {
+  --button-text-color: var(--black)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--black)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--black)!important;
   --button-hover-border-color: var(--black)!important;
 }
 
@@ -12112,6 +12176,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--black)!important;
 }
+.black-btn-invert, .black-btn-inv, .black-btn-negative, .black-btn-neg {
+  --button-text-color: var(--black)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--black)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--black)!important;
+  --button-hover-border-color: var(--black)!important;
+}
 
 .col-btn {
   --button-text-color: var(--white)!important;
@@ -12119,6 +12191,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--main-color)!important;
   --button-hover-text-color: var(--main-color)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--main-color)!important;
+}
+.col-btn-invert, .col-btn-inv, .col-btn-negative, .col-btn-neg {
+  --button-text-color: var(--main-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--main-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--main-color)!important;
   --button-hover-border-color: var(--main-color)!important;
 }
 
@@ -12130,6 +12210,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--main-color)!important;
 }
+.color-btn-invert, .color-btn-inv, .color-btn-negative, .color-btn-neg {
+  --button-text-color: var(--main-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--main-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--main-color)!important;
+  --button-hover-border-color: var(--main-color)!important;
+}
 
 .main-color-btn {
   --button-text-color: var(--white)!important;
@@ -12137,6 +12225,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--main-color)!important;
   --button-hover-text-color: var(--main-color)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--main-color)!important;
+}
+.main-color-btn-invert, .main-color-btn-inv, .main-color-btn-negative, .main-color-btn-neg {
+  --button-text-color: var(--main-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--main-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--main-color)!important;
   --button-hover-border-color: var(--main-color)!important;
 }
 
@@ -12148,6 +12244,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--main-color-dark)!important;
 }
+.color-dark-btn-invert, .color-dark-btn-inv, .color-dark-btn-negative, .color-dark-btn-neg {
+  --button-text-color: var(--main-color-dark)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--main-color-dark)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--main-color-dark)!important;
+  --button-hover-border-color: var(--main-color-dark)!important;
+}
 
 .main-color-dark-btn {
   --button-text-color: var(--white)!important;
@@ -12155,6 +12259,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--main-color-dark)!important;
   --button-hover-text-color: var(--main-color-dark)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--main-color-dark)!important;
+}
+.main-color-dark-btn-invert, .main-color-dark-btn-inv, .main-color-dark-btn-negative, .main-color-dark-btn-neg {
+  --button-text-color: var(--main-color-dark)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--main-color-dark)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--main-color-dark)!important;
   --button-hover-border-color: var(--main-color-dark)!important;
 }
 
@@ -12166,6 +12278,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--second-color)!important;
 }
+.second-color-btn-invert, .second-color-btn-inv, .second-color-btn-negative, .second-color-btn-neg {
+  --button-text-color: var(--second-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--second-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--second-color)!important;
+  --button-hover-border-color: var(--second-color)!important;
+}
 
 .second-color-dark-btn {
   --button-text-color: var(--white)!important;
@@ -12173,6 +12293,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--second-color-dark)!important;
   --button-hover-text-color: var(--second-color-dark)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--second-color-dark)!important;
+}
+.second-color-dark-btn-invert, .second-color-dark-btn-inv, .second-color-dark-btn-negative, .second-color-dark-btn-neg {
+  --button-text-color: var(--second-color-dark)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--second-color-dark)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--second-color-dark)!important;
   --button-hover-border-color: var(--second-color-dark)!important;
 }
 
@@ -12184,6 +12312,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--third-color)!important;
 }
+.third-color-btn-invert, .third-color-btn-inv, .third-color-btn-negative, .third-color-btn-neg {
+  --button-text-color: var(--third-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--third-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--third-color)!important;
+  --button-hover-border-color: var(--third-color)!important;
+}
 
 .third-color-dark-btn {
   --button-text-color: var(--white)!important;
@@ -12191,6 +12327,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--third-color-dark)!important;
   --button-hover-text-color: var(--third-color-dark)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--third-color-dark)!important;
+}
+.third-color-dark-btn-invert, .third-color-dark-btn-inv, .third-color-dark-btn-negative, .third-color-dark-btn-neg {
+  --button-text-color: var(--third-color-dark)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--third-color-dark)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--third-color-dark)!important;
   --button-hover-border-color: var(--third-color-dark)!important;
 }
 
@@ -12202,6 +12346,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--fourth-color)!important;
 }
+.fourth-color-btn-invert, .fourth-color-btn-inv, .fourth-color-btn-negative, .fourth-color-btn-neg {
+  --button-text-color: var(--fourth-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--fourth-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--fourth-color)!important;
+  --button-hover-border-color: var(--fourth-color)!important;
+}
 
 .fourth-color-dark-btn {
   --button-text-color: var(--white)!important;
@@ -12209,6 +12361,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--fourth-color-dark)!important;
   --button-hover-text-color: var(--fourth-color-dark)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--fourth-color-dark)!important;
+}
+.fourth-color-dark-btn-invert, .fourth-color-dark-btn-inv, .fourth-color-dark-btn-negative, .fourth-color-dark-btn-neg {
+  --button-text-color: var(--fourth-color-dark)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--fourth-color-dark)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--fourth-color-dark)!important;
   --button-hover-border-color: var(--fourth-color-dark)!important;
 }
 
@@ -12220,6 +12380,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--info)!important;
 }
+.info-btn-invert, .info-btn-inv, .info-btn-negative, .info-btn-neg {
+  --button-text-color: var(--info)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--info)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--info)!important;
+  --button-hover-border-color: var(--info)!important;
+}
 
 .success-btn {
   --button-text-color: var(--white)!important;
@@ -12227,6 +12395,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--success)!important;
   --button-hover-text-color: var(--success)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--success)!important;
+}
+.success-btn-invert, .success-btn-inv, .success-btn-negative, .success-btn-neg {
+  --button-text-color: var(--success)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--success)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--success)!important;
   --button-hover-border-color: var(--success)!important;
 }
 
@@ -12238,6 +12414,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--warning)!important;
 }
+.warning-btn-invert, .warning-btn-inv, .warning-btn-negative, .warning-btn-neg {
+  --button-text-color: var(--warning)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--warning)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--warning)!important;
+  --button-hover-border-color: var(--warning)!important;
+}
 
 .danger-btn {
   --button-text-color: var(--white)!important;
@@ -12245,6 +12429,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--danger)!important;
   --button-hover-text-color: var(--danger)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--danger)!important;
+}
+.danger-btn-invert, .danger-btn-inv, .danger-btn-negative, .danger-btn-neg {
+  --button-text-color: var(--danger)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--danger)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--danger)!important;
   --button-hover-border-color: var(--danger)!important;
 }
 
@@ -12256,6 +12448,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--bad)!important;
 }
+.bad-btn-invert, .bad-btn-inv, .bad-btn-negative, .bad-btn-neg {
+  --button-text-color: var(--bad)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--bad)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--bad)!important;
+  --button-hover-border-color: var(--bad)!important;
+}
 
 .acid-green-btn {
   --button-text-color: var(--white)!important;
@@ -12263,6 +12463,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--acid-green)!important;
   --button-hover-text-color: var(--acid-green)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--acid-green)!important;
+}
+.acid-green-btn-invert, .acid-green-btn-inv, .acid-green-btn-negative, .acid-green-btn-neg {
+  --button-text-color: var(--acid-green)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--acid-green)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--acid-green)!important;
   --button-hover-border-color: var(--acid-green)!important;
 }
 
@@ -12274,6 +12482,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--gingerbread)!important;
 }
+.gingerbread-btn-invert, .gingerbread-btn-inv, .gingerbread-btn-negative, .gingerbread-btn-neg {
+  --button-text-color: var(--gingerbread)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--gingerbread)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--gingerbread)!important;
+  --button-hover-border-color: var(--gingerbread)!important;
+}
 
 .mini-btn {
   --button-text-color: var(--white)!important;
@@ -12281,6 +12497,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--mini-color)!important;
   --button-hover-text-color: var(--mini-color)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--mini-color)!important;
+}
+.mini-btn-invert, .mini-btn-inv, .mini-btn-negative, .mini-btn-neg {
+  --button-text-color: var(--mini-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--mini-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--mini-color)!important;
   --button-hover-border-color: var(--mini-color)!important;
 }
 
@@ -12292,6 +12516,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--mini-color-dark)!important;
 }
+.mini-dark-btn-invert, .mini-dark-btn-inv, .mini-dark-btn-negative, .mini-dark-btn-neg {
+  --button-text-color: var(--mini-color-dark)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--mini-color-dark)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--mini-color-dark)!important;
+  --button-hover-border-color: var(--mini-color-dark)!important;
+}
 
 .mini-second-btn {
   --button-text-color: var(--white)!important;
@@ -12299,6 +12531,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--mini-second)!important;
   --button-hover-text-color: var(--mini-second)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--mini-second)!important;
+}
+.mini-second-btn-invert, .mini-second-btn-inv, .mini-second-btn-negative, .mini-second-btn-neg {
+  --button-text-color: var(--mini-second)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--mini-second)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--mini-second)!important;
   --button-hover-border-color: var(--mini-second)!important;
 }
 
@@ -12310,6 +12550,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--mini-third)!important;
 }
+.mini-third-btn-invert, .mini-third-btn-inv, .mini-third-btn-negative, .mini-third-btn-neg {
+  --button-text-color: var(--mini-third)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--mini-third)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--mini-third)!important;
+  --button-hover-border-color: var(--mini-third)!important;
+}
 
 .mini-fourth-btn {
   --button-text-color: var(--white)!important;
@@ -12317,6 +12565,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--mini-fourth)!important;
   --button-hover-text-color: var(--mini-fourth)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--mini-fourth)!important;
+}
+.mini-fourth-btn-invert, .mini-fourth-btn-inv, .mini-fourth-btn-negative, .mini-fourth-btn-neg {
+  --button-text-color: var(--mini-fourth)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--mini-fourth)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--mini-fourth)!important;
   --button-hover-border-color: var(--mini-fourth)!important;
 }
 
@@ -12328,6 +12584,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--uwa-color)!important;
 }
+.uwa-btn-invert, .uwa-btn-inv, .uwa-btn-negative, .uwa-btn-neg {
+  --button-text-color: var(--uwa-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--uwa-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--uwa-color)!important;
+  --button-hover-border-color: var(--uwa-color)!important;
+}
 
 .uwa-dark-btn {
   --button-text-color: var(--white)!important;
@@ -12335,6 +12599,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--uwa-color-dark)!important;
   --button-hover-text-color: var(--uwa-color-dark)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--uwa-color-dark)!important;
+}
+.uwa-dark-btn-invert, .uwa-dark-btn-inv, .uwa-dark-btn-negative, .uwa-dark-btn-neg {
+  --button-text-color: var(--uwa-color-dark)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--uwa-color-dark)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--uwa-color-dark)!important;
   --button-hover-border-color: var(--uwa-color-dark)!important;
 }
 
@@ -12346,6 +12618,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--uwa-second-color)!important;
 }
+.uwa-second-btn-invert, .uwa-second-btn-inv, .uwa-second-btn-negative, .uwa-second-btn-neg {
+  --button-text-color: var(--uwa-second-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--uwa-second-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--uwa-second-color)!important;
+  --button-hover-border-color: var(--uwa-second-color)!important;
+}
 
 .uwa-third-btn {
   --button-text-color: var(--white)!important;
@@ -12353,6 +12633,14 @@ input[type=radio]:checked + label {
   --button-border-color: var(--uwa-third-color)!important;
   --button-hover-text-color: var(--uwa-third-color)!important;
   --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--uwa-third-color)!important;
+}
+.uwa-third-btn-invert, .uwa-third-btn-inv, .uwa-third-btn-negative, .uwa-third-btn-neg {
+  --button-text-color: var(--uwa-third-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--uwa-third-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--uwa-third-color)!important;
   --button-hover-border-color: var(--uwa-third-color)!important;
 }
 
@@ -12364,6 +12652,14 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--uwa-fourth-color)!important;
 }
+.uwa-fourth-btn-invert, .uwa-fourth-btn-inv, .uwa-fourth-btn-negative, .uwa-fourth-btn-neg {
+  --button-text-color: var(--uwa-fourth-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--uwa-fourth-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--uwa-fourth-color)!important;
+  --button-hover-border-color: var(--uwa-fourth-color)!important;
+}
 
 .uwa-link-btn {
   --button-text-color: var(--white)!important;
@@ -12373,8 +12669,16 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--uwa-link-color)!important;
 }
+.uwa-link-btn-invert, .uwa-link-btn-inv, .uwa-link-btn-negative, .uwa-link-btn-neg {
+  --button-text-color: var(--uwa-link-color)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--uwa-link-color)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--uwa-link-color)!important;
+  --button-hover-border-color: var(--uwa-link-color)!important;
+}
 
-button, button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg, .btn {
+button, .btn, button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg {
   --button-text-color: var(--white);
   --button-background-color: var(--link-color);
   --button-border-color: var(--link-color);
@@ -12398,38 +12702,38 @@ button, button-invert, button-inv, button-negative, button-neg, .btn-invert, .bt
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-button.hard, button-invert.hard, button-inv.hard, button-negative.hard, button-neg.hard, .hard.btn-invert, .hard.btn-inv, .hard.btn-negative, .hard.btn-neg, .btn.hard {
+button.hard, .btn.hard, button-invert.hard, button-inv.hard, button-negative.hard, button-neg.hard, .hard.btn-invert, .hard.btn-inv, .hard.btn-negative, .hard.btn-neg {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-button.smooth, button-invert.smooth, button-inv.smooth, button-negative.smooth, button-neg.smooth, .smooth.btn-invert, .smooth.btn-inv, .smooth.btn-negative, .smooth.btn-neg, .btn.smooth {
+button.smooth, .btn.smooth, button-invert.smooth, button-inv.smooth, button-negative.smooth, button-neg.smooth, .smooth.btn-invert, .smooth.btn-inv, .smooth.btn-negative, .smooth.btn-neg {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-button.round, button-invert.round, button-inv.round, button-negative.round, button-neg.round, .round.btn-invert, .round.btn-inv, .round.btn-negative, .round.btn-neg, .btn.round {
+button.round, .btn.round, button-invert.round, button-inv.round, button-negative.round, button-neg.round, .round.btn-invert, .round.btn-inv, .round.btn-negative, .round.btn-neg {
   -webkit-border-radius: 250px;
   -moz-border-radius: 250px;
   border-radius: 250px;
 }
-button:last-child, button-invert:last-child, button-inv:last-child, button-negative:last-child, button-neg:last-child, .btn-invert:last-child, .btn-inv:last-child, .btn-negative:last-child, .btn-neg:last-child, .btn:last-child {
+button:last-child, .btn:last-child, button-invert:last-child, button-inv:last-child, button-negative:last-child, button-neg:last-child, .btn-invert:last-child, .btn-inv:last-child, .btn-negative:last-child, .btn-neg:last-child {
   margin-right: 0;
 }
-button:hover, button-invert:hover, button-inv:hover, button-negative:hover, button-neg:hover, .btn-invert:hover, .btn-inv:hover, .btn-negative:hover, .btn-neg:hover, .btn:hover {
+button:hover, .btn:hover, button-invert:hover, button-inv:hover, button-negative:hover, button-neg:hover, .btn-invert:hover, .btn-inv:hover, .btn-negative:hover, .btn-neg:hover {
   color: var(--button-text-color);
   background: var(--button-background-color);
   border-color: var(--button-border-color);
   box-shadow: 0 0 15px -5px var(--button-border-color);
 }
-button.clicked, button-invert.clicked, button-inv.clicked, button-negative.clicked, button-neg.clicked, .clicked.btn-invert, .clicked.btn-inv, .clicked.btn-negative, .clicked.btn-neg, button.active, button-invert.active, button-inv.active, button-negative.active, button-neg.active, .active.btn-invert, .active.btn-inv, .active.btn-negative, .active.btn-neg, .btn.clicked, .btn.active {
+button.clicked, button.active, .btn.clicked, button-invert.clicked, button-inv.clicked, button-negative.clicked, button-neg.clicked, .clicked.btn-invert, .clicked.btn-inv, .clicked.btn-negative, .clicked.btn-neg, .btn.active, button-invert.active, button-inv.active, button-negative.active, button-neg.active, .active.btn-invert, .active.btn-inv, .active.btn-negative, .active.btn-neg {
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
 button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg {
   color: var(--button-hover-text-color);
-  background: transparent;
+  background: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
 button-invert.clicked, button-invert.active, button-inv.clicked, button-inv.active, button-negative.clicked, button-negative.active, button-neg.clicked, button-neg.active, .btn-invert.clicked, .btn-invert.active, .btn-inv.clicked, .btn-inv.active, .btn-negative.clicked, .btn-negative.active, .btn-neg.clicked, .btn-neg.active {
@@ -12437,28 +12741,28 @@ button-invert.clicked, button-invert.active, button-inv.clicked, button-inv.acti
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-button.xs, button-invert.xs, button-inv.xs, button-negative.xs, button-neg.xs, .xs.btn-invert, .xs.btn-inv, .xs.btn-negative, .xs.btn-neg, button.XS, button-invert.XS, button-inv.XS, button-negative.XS, button-neg.XS, .XS.btn-invert, .XS.btn-inv, .XS.btn-negative, .XS.btn-neg, .btn.xs, .btn.XS {
+button.xs, button.XS, .btn.xs, button-invert.xs, button-inv.xs, button-negative.xs, button-neg.xs, .xs.btn-invert, .xs.btn-inv, .xs.btn-negative, .xs.btn-neg, .btn.XS, button-invert.XS, button-inv.XS, button-negative.XS, button-neg.XS, .XS.btn-invert, .XS.btn-inv, .XS.btn-negative, .XS.btn-neg {
   padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.25);
   margin: calc(var(--margin) * 0.25) 0;
   margin: calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) 0;
 }
-button.s, button-invert.s, button-inv.s, button-negative.s, button-neg.s, .s.btn-invert, .s.btn-inv, .s.btn-negative, .s.btn-neg, button.S, button-invert.S, button-inv.S, button-negative.S, button-neg.S, .S.btn-invert, .S.btn-inv, .S.btn-negative, .S.btn-neg, .btn.s, .btn.S {
+button.s, button.S, .btn.s, button-invert.s, button-inv.s, button-negative.s, button-neg.s, .s.btn-invert, .s.btn-inv, .s.btn-negative, .s.btn-neg, .btn.S, button-invert.S, button-inv.S, button-negative.S, button-neg.S, .S.btn-invert, .S.btn-inv, .S.btn-negative, .S.btn-neg {
   padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
   margin: calc(var(--margin) * 0.35) 0;
   margin: calc(var(--margin) * 0.35) calc(var(--margin) * 0.5) calc(var(--margin) * 0.35) 0;
 }
-button.l, button-invert.l, button-inv.l, button-negative.l, button-neg.l, .l.btn-invert, .l.btn-inv, .l.btn-negative, .l.btn-neg, button.L, button-invert.L, button-inv.L, button-negative.L, button-neg.L, .L.btn-invert, .L.btn-inv, .L.btn-negative, .L.btn-neg, .btn.l, .btn.L {
+button.l, button.L, .btn.l, button-invert.l, button-inv.l, button-negative.l, button-neg.l, .l.btn-invert, .l.btn-inv, .l.btn-negative, .l.btn-neg, .btn.L, button-invert.L, button-inv.L, button-negative.L, button-neg.L, .L.btn-invert, .L.btn-inv, .L.btn-negative, .L.btn-neg {
   padding: calc(var(--padding) * 0.625) calc(var(--padding) * 1.125);
   margin: calc(var(--margin) * 0.75) 0;
   margin: calc(var(--margin) * 0.75) calc(var(--margin) * 1.125) calc(var(--margin) * 0.75) 0;
 }
-button.xl, button-invert.xl, button-inv.xl, button-negative.xl, button-neg.xl, .xl.btn-invert, .xl.btn-inv, .xl.btn-negative, .xl.btn-neg, button.XL, button-invert.XL, button-inv.XL, button-negative.XL, button-neg.XL, .XL.btn-invert, .XL.btn-inv, .XL.btn-negative, .XL.btn-neg, .btn.xl, .btn.XL {
+button.xl, button.XL, .btn.xl, button-invert.xl, button-inv.xl, button-negative.xl, button-neg.xl, .xl.btn-invert, .xl.btn-inv, .xl.btn-negative, .xl.btn-neg, .btn.XL, button-invert.XL, button-inv.XL, button-negative.XL, button-neg.XL, .XL.btn-invert, .XL.btn-inv, .XL.btn-negative, .XL.btn-neg {
   padding: calc(var(--padding) * 0.85) calc(var(--padding) * 1.35);
 }
-button.xxl, button-invert.xxl, button-inv.xxl, button-negative.xxl, button-neg.xxl, .xxl.btn-invert, .xxl.btn-inv, .xxl.btn-negative, .xxl.btn-neg, button.XXL, button-invert.XXL, button-inv.XXL, button-negative.XXL, button-neg.XXL, .XXL.btn-invert, .XXL.btn-inv, .XXL.btn-negative, .XXL.btn-neg, .btn.xxl, .btn.XXL {
+button.xxl, button.XXL, .btn.xxl, button-invert.xxl, button-inv.xxl, button-negative.xxl, button-neg.xxl, .xxl.btn-invert, .xxl.btn-inv, .xxl.btn-negative, .xxl.btn-neg, .btn.XXL, button-invert.XXL, button-inv.XXL, button-negative.XXL, button-neg.XXL, .XXL.btn-invert, .XXL.btn-inv, .XXL.btn-negative, .XXL.btn-neg {
   padding: calc(var(--padding) * 1.25) calc(var(--padding) * 1.75);
 }
-button.clicking, button-invert.clicking, button-inv.clicking, button-negative.clicking, button-neg.clicking, .clicking.btn-invert, .clicking.btn-inv, .clicking.btn-negative, .clicking.btn-neg, .btn.clicking {
+button.clicking, .btn.clicking, button-invert.clicking, button-inv.clicking, button-negative.clicking, button-neg.clicking, .clicking.btn-invert, .clicking.btn-inv, .clicking.btn-negative, .clicking.btn-neg {
   animation-name: clickingAnimation;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
@@ -19872,6 +20176,10 @@ input[type="radio"]:checked+label.uwa-link {
   }
 }
 */
+.transp-bg, .transparent-bg {
+  background-color: transparent !important;
+}
+
 .grad-1-to-2 {
   background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
@@ -19984,103 +20292,103 @@ input[type="radio"]:checked+label.uwa-link {
   background: linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
 }
 
-.grainy-grad {
+.grainy-grad, .grad-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-.grainy-grad-1-to-2 {
+.grainy-grad-1-to-2, .grad-1-to-2-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-f2s {
+.grainy-grad-f2s, .grad-f2s-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-1-to-3 {
+.grainy-grad-1-to-3, .grad-1-to-3-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-f2t {
+.grainy-grad-f2t, .grad-f2t-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-1-to-4 {
+.grainy-grad-1-to-4, .grad-1-to-4-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-2-to-3 {
+.grainy-grad-2-to-3, .grad-2-to-3-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-s2t {
+.grainy-grad-s2t, .grad-s2t-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-3-to-4 {
+.grainy-grad-3-to-4, .grad-3-to-4-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-t2f {
+.grainy-grad-t2f, .grad-t2f-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-main {
+.grainy-grad-main, .grad-main-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-first {
+.grainy-grad-first, .grad-first-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--main-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-second {
+.grainy-grad-second, .grad-second-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-third {
+.grainy-grad-third, .grad-third-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--third-color) 85%, transparent) 0%, color-mix(in srgb, var(--third-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-fourth {
+.grainy-grad-fourth, .grad-fourth-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--fourth-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--fourth-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--fourth-color) 85%, transparent) 0%, color-mix(in srgb, var(--fourth-color-dark) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-fw-down-w {
+.grainy-grad-fw-down-w, .grad-fw-down-w-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--white) 85%, transparent) 0%, color-mix(in srgb, var(--false-white) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--white) 85%, transparent) 0%, color-mix(in srgb, var(--false-white) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--white) 85%, transparent) 0%, color-mix(in srgb, var(--false-white) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
-.grainy-grad-fw-up-w {
+.grainy-grad-fw-up-w, .grad-fw-up-w-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
   background: linear-gradient(0deg, color-mix(in srgb, var(--false-white) 85%, transparent) 0%, color-mix(in srgb, var(--white) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--false-white) 85%, transparent) 0%, color-mix(in srgb, var(--white) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--false-white) 85%, transparent) 0%, color-mix(in srgb, var(--white) 85%, transparent) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
