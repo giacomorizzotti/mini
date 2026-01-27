@@ -248,6 +248,7 @@ code, .code {
   margin: 0 calc(var(--margin)*0.6);
   overflow-x: auto;
   color: var(--white);
+  vertical-align: middle;
 }
 
 blockquote {

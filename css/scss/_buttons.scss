@@ -75,7 +75,7 @@ $colors: //color name, color code, text color over color
     }
   }
 }
-button, .btn {
+button, .btn, .button {
   --button-text-color: var(--white);
   --button-background-color: var(--link-color);
   --button-border-color: var(--link-color);

@@ -47,12 +47,12 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-selection-bg);
 }
 
-.link-text::-moz-selection, .link-box::-moz-selection, .link-bg::-moz-selection, a::-moz-selection, .btn::-moz-selection, button-invert::-moz-selection, button-inv::-moz-selection, button-negative::-moz-selection, button-neg::-moz-selection, .btn-invert::-moz-selection, .btn-inv::-moz-selection, .btn-negative::-moz-selection, .btn-neg::-moz-selection, .btn::-moz-selection {
+.link-text::-moz-selection, .link-box::-moz-selection, .link-bg::-moz-selection, a::-moz-selection, .btn::-moz-selection, button-invert::-moz-selection, button-inv::-moz-selection, button-negative::-moz-selection, button-neg::-moz-selection, .btn-invert::-moz-selection, .btn-inv::-moz-selection, .btn-negative::-moz-selection, .btn-neg::-moz-selection, .button-invert::-moz-selection, .button-inv::-moz-selection, .button-negative::-moz-selection, .button-neg::-moz-selection, .btn::-moz-selection {
   background: rgba(0, 0, 0, 0.4);
   color: var(--text-selection-color);
 }
 
-.link-text::selection, .link-box::selection, .link-bg::selection, a::selection, .btn::selection, button-invert::selection, button-inv::selection, button-negative::selection, button-neg::selection, .btn-invert::selection, .btn-inv::selection, .btn-negative::selection, .btn-neg::selection, .btn::selection {
+.link-text::selection, .link-box::selection, .link-bg::selection, a::selection, .btn::selection, button-invert::selection, button-inv::selection, button-negative::selection, button-neg::selection, .btn-invert::selection, .btn-inv::selection, .btn-negative::selection, .btn-neg::selection, .button-invert::selection, .button-inv::selection, .button-negative::selection, .button-neg::selection, .btn::selection {
   background: rgba(0, 0, 0, 0.4);
   color: var(--text-selection-color);
 }
@@ -63,7 +63,7 @@ body {
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
-  line-height: var(--baseline);
+  line-height: 1.4;
   font-family: var(--font);
   color: var(--black);
 }
@@ -110,7 +110,7 @@ body section {
   --link-hover-color: #146158;
   --info: #449C93;
   --success: #569E47;
-  --warning: #E57538;
+  --warning: #D0841B;
   --danger: #BE4646;
   --bad: #B01127;
   --acid-green: #C2F261;
@@ -11887,7 +11887,6 @@ label {
   line-height: 1.4;
   display: block;
   margin: 0 0 calc(var(--margin) * 0.75) 0;
-  padding-left: var(--padding);
 }
 
 input, textarea, select {
@@ -11943,7 +11942,7 @@ textarea {
   height: 24px !important;
   top: 0;
   left: 0;
-  margin: calc(var(--margin) * 1) 0 calc(var(--margin) * 1) 0;
+  margin: calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1) 0;
 }
 :not(#iubenda-cs-banner) input[type=checkbox].neg::before, :not(#iubenda-cs-banner) input[type=checkbox].inv::before, :not(#iubenda-iframe) input[type=checkbox].neg::before, :not(#iubenda-iframe) input[type=checkbox].inv::before {
   background: var(--white);
@@ -12678,7 +12677,7 @@ input[type=radio]:checked + label {
   --button-hover-border-color: var(--uwa-link-color)!important;
 }
 
-button, .btn, button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg {
+button, .btn, button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg, .button-invert, .button-inv, .button-negative, .button-neg, .button {
   --button-text-color: var(--white);
   --button-background-color: var(--link-color);
   --button-border-color: var(--link-color);
@@ -12702,67 +12701,67 @@ button, .btn, button-invert, button-inv, button-negative, button-neg, .btn-inver
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-button.hard, .btn.hard, button-invert.hard, button-inv.hard, button-negative.hard, button-neg.hard, .hard.btn-invert, .hard.btn-inv, .hard.btn-negative, .hard.btn-neg {
+button.hard, .btn.hard, button-invert.hard, button-inv.hard, button-negative.hard, button-neg.hard, .hard.btn-invert, .hard.btn-inv, .hard.btn-negative, .hard.btn-neg, .hard.button-invert, .hard.button-inv, .hard.button-negative, .hard.button-neg, .button.hard {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-button.smooth, .btn.smooth, button-invert.smooth, button-inv.smooth, button-negative.smooth, button-neg.smooth, .smooth.btn-invert, .smooth.btn-inv, .smooth.btn-negative, .smooth.btn-neg {
+button.smooth, .btn.smooth, button-invert.smooth, button-inv.smooth, button-negative.smooth, button-neg.smooth, .smooth.btn-invert, .smooth.btn-inv, .smooth.btn-negative, .smooth.btn-neg, .smooth.button-invert, .smooth.button-inv, .smooth.button-negative, .smooth.button-neg, .button.smooth {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-button.round, .btn.round, button-invert.round, button-inv.round, button-negative.round, button-neg.round, .round.btn-invert, .round.btn-inv, .round.btn-negative, .round.btn-neg {
+button.round, .btn.round, button-invert.round, button-inv.round, button-negative.round, button-neg.round, .round.btn-invert, .round.btn-inv, .round.btn-negative, .round.btn-neg, .round.button-invert, .round.button-inv, .round.button-negative, .round.button-neg, .button.round {
   -webkit-border-radius: 250px;
   -moz-border-radius: 250px;
   border-radius: 250px;
 }
-button:last-child, .btn:last-child, button-invert:last-child, button-inv:last-child, button-negative:last-child, button-neg:last-child, .btn-invert:last-child, .btn-inv:last-child, .btn-negative:last-child, .btn-neg:last-child {
+button:last-child, .btn:last-child, button-invert:last-child, button-inv:last-child, button-negative:last-child, button-neg:last-child, .btn-invert:last-child, .btn-inv:last-child, .btn-negative:last-child, .btn-neg:last-child, .button-invert:last-child, .button-inv:last-child, .button-negative:last-child, .button-neg:last-child, .button:last-child {
   margin-right: 0;
 }
-button:hover, .btn:hover, button-invert:hover, button-inv:hover, button-negative:hover, button-neg:hover, .btn-invert:hover, .btn-inv:hover, .btn-negative:hover, .btn-neg:hover {
+button:hover, .btn:hover, button-invert:hover, button-inv:hover, button-negative:hover, button-neg:hover, .btn-invert:hover, .btn-inv:hover, .btn-negative:hover, .btn-neg:hover, .button-invert:hover, .button-inv:hover, .button-negative:hover, .button-neg:hover, .button:hover {
   color: var(--button-text-color);
   background: var(--button-background-color);
   border-color: var(--button-border-color);
   box-shadow: 0 0 15px -5px var(--button-border-color);
 }
-button.clicked, button.active, .btn.clicked, button-invert.clicked, button-inv.clicked, button-negative.clicked, button-neg.clicked, .clicked.btn-invert, .clicked.btn-inv, .clicked.btn-negative, .clicked.btn-neg, .btn.active, button-invert.active, button-inv.active, button-negative.active, button-neg.active, .active.btn-invert, .active.btn-inv, .active.btn-negative, .active.btn-neg {
+button.clicked, button.active, .btn.clicked, button-invert.clicked, button-inv.clicked, button-negative.clicked, button-neg.clicked, .clicked.btn-invert, .clicked.btn-inv, .clicked.btn-negative, .clicked.btn-neg, .clicked.button-invert, .clicked.button-inv, .clicked.button-negative, .clicked.button-neg, .btn.active, button-invert.active, button-inv.active, button-negative.active, button-neg.active, .active.btn-invert, .active.btn-inv, .active.btn-negative, .active.btn-neg, .active.button-invert, .active.button-inv, .active.button-negative, .active.button-neg, .button.clicked, .button.active {
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
-button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg {
+button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg, .button-invert, .button-inv, .button-negative, .button-neg {
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
-button-invert.clicked, button-invert.active, button-inv.clicked, button-inv.active, button-negative.clicked, button-negative.active, button-neg.clicked, button-neg.active, .btn-invert.clicked, .btn-invert.active, .btn-inv.clicked, .btn-inv.active, .btn-negative.clicked, .btn-negative.active, .btn-neg.clicked, .btn-neg.active {
+button-invert.clicked, button-invert.active, button-inv.clicked, button-inv.active, button-negative.clicked, button-negative.active, button-neg.clicked, button-neg.active, .btn-invert.clicked, .btn-invert.active, .btn-inv.clicked, .btn-inv.active, .btn-negative.clicked, .btn-negative.active, .btn-neg.clicked, .btn-neg.active, .button-invert.clicked, .button-invert.active, .button-inv.clicked, .button-inv.active, .button-negative.clicked, .button-negative.active, .button-neg.clicked, .button-neg.active {
   color: var(--button-text-color);
   background: var(--button-background-color);
   border-color: var(--button-border-color);
 }
-button.xs, button.XS, .btn.xs, button-invert.xs, button-inv.xs, button-negative.xs, button-neg.xs, .xs.btn-invert, .xs.btn-inv, .xs.btn-negative, .xs.btn-neg, .btn.XS, button-invert.XS, button-inv.XS, button-negative.XS, button-neg.XS, .XS.btn-invert, .XS.btn-inv, .XS.btn-negative, .XS.btn-neg {
+button.xs, button.XS, .btn.xs, button-invert.xs, button-inv.xs, button-negative.xs, button-neg.xs, .xs.btn-invert, .xs.btn-inv, .xs.btn-negative, .xs.btn-neg, .xs.button-invert, .xs.button-inv, .xs.button-negative, .xs.button-neg, .btn.XS, button-invert.XS, button-inv.XS, button-negative.XS, button-neg.XS, .XS.btn-invert, .XS.btn-inv, .XS.btn-negative, .XS.btn-neg, .XS.button-invert, .XS.button-inv, .XS.button-negative, .XS.button-neg, .button.xs, .button.XS {
   padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.25);
   margin: calc(var(--margin) * 0.25) 0;
   margin: calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) 0;
 }
-button.s, button.S, .btn.s, button-invert.s, button-inv.s, button-negative.s, button-neg.s, .s.btn-invert, .s.btn-inv, .s.btn-negative, .s.btn-neg, .btn.S, button-invert.S, button-inv.S, button-negative.S, button-neg.S, .S.btn-invert, .S.btn-inv, .S.btn-negative, .S.btn-neg {
+button.s, button.S, .btn.s, button-invert.s, button-inv.s, button-negative.s, button-neg.s, .s.btn-invert, .s.btn-inv, .s.btn-negative, .s.btn-neg, .s.button-invert, .s.button-inv, .s.button-negative, .s.button-neg, .btn.S, button-invert.S, button-inv.S, button-negative.S, button-neg.S, .S.btn-invert, .S.btn-inv, .S.btn-negative, .S.btn-neg, .S.button-invert, .S.button-inv, .S.button-negative, .S.button-neg, .button.s, .button.S {
   padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
   margin: calc(var(--margin) * 0.35) 0;
   margin: calc(var(--margin) * 0.35) calc(var(--margin) * 0.5) calc(var(--margin) * 0.35) 0;
 }
-button.l, button.L, .btn.l, button-invert.l, button-inv.l, button-negative.l, button-neg.l, .l.btn-invert, .l.btn-inv, .l.btn-negative, .l.btn-neg, .btn.L, button-invert.L, button-inv.L, button-negative.L, button-neg.L, .L.btn-invert, .L.btn-inv, .L.btn-negative, .L.btn-neg {
+button.l, button.L, .btn.l, button-invert.l, button-inv.l, button-negative.l, button-neg.l, .l.btn-invert, .l.btn-inv, .l.btn-negative, .l.btn-neg, .l.button-invert, .l.button-inv, .l.button-negative, .l.button-neg, .btn.L, button-invert.L, button-inv.L, button-negative.L, button-neg.L, .L.btn-invert, .L.btn-inv, .L.btn-negative, .L.btn-neg, .L.button-invert, .L.button-inv, .L.button-negative, .L.button-neg, .button.l, .button.L {
   padding: calc(var(--padding) * 0.625) calc(var(--padding) * 1.125);
   margin: calc(var(--margin) * 0.75) 0;
   margin: calc(var(--margin) * 0.75) calc(var(--margin) * 1.125) calc(var(--margin) * 0.75) 0;
 }
-button.xl, button.XL, .btn.xl, button-invert.xl, button-inv.xl, button-negative.xl, button-neg.xl, .xl.btn-invert, .xl.btn-inv, .xl.btn-negative, .xl.btn-neg, .btn.XL, button-invert.XL, button-inv.XL, button-negative.XL, button-neg.XL, .XL.btn-invert, .XL.btn-inv, .XL.btn-negative, .XL.btn-neg {
+button.xl, button.XL, .btn.xl, button-invert.xl, button-inv.xl, button-negative.xl, button-neg.xl, .xl.btn-invert, .xl.btn-inv, .xl.btn-negative, .xl.btn-neg, .xl.button-invert, .xl.button-inv, .xl.button-negative, .xl.button-neg, .btn.XL, button-invert.XL, button-inv.XL, button-negative.XL, button-neg.XL, .XL.btn-invert, .XL.btn-inv, .XL.btn-negative, .XL.btn-neg, .XL.button-invert, .XL.button-inv, .XL.button-negative, .XL.button-neg, .button.xl, .button.XL {
   padding: calc(var(--padding) * 0.85) calc(var(--padding) * 1.35);
 }
-button.xxl, button.XXL, .btn.xxl, button-invert.xxl, button-inv.xxl, button-negative.xxl, button-neg.xxl, .xxl.btn-invert, .xxl.btn-inv, .xxl.btn-negative, .xxl.btn-neg, .btn.XXL, button-invert.XXL, button-inv.XXL, button-negative.XXL, button-neg.XXL, .XXL.btn-invert, .XXL.btn-inv, .XXL.btn-negative, .XXL.btn-neg {
+button.xxl, button.XXL, .btn.xxl, button-invert.xxl, button-inv.xxl, button-negative.xxl, button-neg.xxl, .xxl.btn-invert, .xxl.btn-inv, .xxl.btn-negative, .xxl.btn-neg, .xxl.button-invert, .xxl.button-inv, .xxl.button-negative, .xxl.button-neg, .btn.XXL, button-invert.XXL, button-inv.XXL, button-negative.XXL, button-neg.XXL, .XXL.btn-invert, .XXL.btn-inv, .XXL.btn-negative, .XXL.btn-neg, .XXL.button-invert, .XXL.button-inv, .XXL.button-negative, .XXL.button-neg, .button.xxl, .button.XXL {
   padding: calc(var(--padding) * 1.25) calc(var(--padding) * 1.75);
 }
-button.clicking, .btn.clicking, button-invert.clicking, button-inv.clicking, button-negative.clicking, button-neg.clicking, .clicking.btn-invert, .clicking.btn-inv, .clicking.btn-negative, .clicking.btn-neg {
+button.clicking, .btn.clicking, button-invert.clicking, button-inv.clicking, button-negative.clicking, button-neg.clicking, .clicking.btn-invert, .clicking.btn-inv, .clicking.btn-negative, .clicking.btn-neg, .clicking.button-invert, .clicking.button-inv, .clicking.button-negative, .clicking.button-neg, .button.clicking {
   animation-name: clickingAnimation;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
@@ -12777,7 +12776,7 @@ button.clicking, .btn.clicking, button-invert.clicking, button-inv.clicking, but
     box-shadow: 0 0 15px -5px var(--button-border-color), 0 0 10px 10px rgba(255, 255, 255, 0);
   }
 }
-button-grad, .btn-grad {
+button-grad, .btn-grad, .button-grad {
   border-color: var(--main-color);
   transition: border-color 0.25s ease-out, background-position 0.25s ease-out, background-color 0.25s ease-out;
   background-size: 200% !important;
@@ -12785,12 +12784,12 @@ button-grad, .btn-grad {
   background-repeat: repeat;
   background: linear-gradient(125deg, var(--main-color) 0%, var(--second-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
-button-grad:hover, .btn-grad:hover {
+button-grad:hover, .btn-grad:hover, .button-grad:hover {
   border-color: var(--second-color);
   background-position: 99% !important;
   background: linear-gradient(125deg, var(--main-color) 0%, var(--second-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
-button-grad-second, .btn-grad-second {
+button-grad-second, .btn-grad-second, .button-grad-second {
   border-color: var(--third-color);
   transition: border-color 0.25s ease-out, background-position 0.25s ease-out, background-color 0.25s ease-out;
   background-size: 200% !important;
@@ -12798,7 +12797,7 @@ button-grad-second, .btn-grad-second {
   background-repeat: repeat;
   background: linear-gradient(125deg, var(--third-color) 0%, var(--fourth-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
-button-grad-second:hover, .btn-grad-second:hover {
+button-grad-second:hover, .btn-grad-second:hover, .button-grad-second:hover {
   border-color: var(--fourth-color);
   background-position: 99% !important;
   background: linear-gradient(125deg, var(--third-color) 0%, var(--fourth-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -20609,6 +20608,7 @@ code, .code {
   margin: 0 calc(var(--margin) * 0.6);
   overflow-x: auto;
   color: var(--white);
+  vertical-align: middle;
 }
 
 blockquote {
@@ -21575,6 +21575,80 @@ body.scroll .top-hidden, body.scroll .scroll-shown {
 
 body.admin-bar header#header {
   top: 32px;
+}
+body.admin-bar header#header.open-menu {
+  top: 0;
+}
+
+body.wp-admin input, body.wp-admin select, body.wp-admin textarea {
+  display: inline-block;
+}
+body.wp-admin p.search-box {
+  flex-wrap: nowrap;
+}
+body.wp-admin .tablenav {
+  height: auto;
+}
+body.wp-admin .bulkactions, body.wp-admin .actions {
+  display: flex;
+}
+body.wp-admin .desc {
+  font-style: inherit;
+  margin-top: 4px;
+  margin-left: 7px;
+  line-height: inherit;
+  font-size: var(--p) !important;
+}
+body.wp-admin .postbox-header .handle-actions {
+  display: flex;
+}
+body.wp-admin ul {
+  margin: 0;
+}
+body.wp-admin.update-core-php h2 {
+  margin-top: calc(var(--margin) * 2);
+}
+body.wp-admin .wp-core-ui .button-link {
+  font-size: var(--p);
+}
+body.wp-admin :not(#iubenda-cs-banner) input[type=checkbox], body.wp-admin :not(#iubenda-iframe) input[type=checkbox] {
+  margin: calc(var(--margin) * 0.5);
+  width: 16px !important;
+  height: 16px !important;
+}
+body.wp-admin :not(#iubenda-cs-banner) input[type=checkbox]::before, body.wp-admin :not(#iubenda-iframe) input[type=checkbox]::before {
+  width: 20px;
+  height: 20px;
+}
+body.wp-admin :not(#iubenda-cs-banner) input[type=checkbox]:checked::after, body.wp-admin :not(#iubenda-iframe) input[type=checkbox]:checked::after {
+  width: 10px;
+  height: 10px;
+}
+body.wp-admin .attachments-browser .media-toolbar-secondary {
+  max-width: 66%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+body.wp-admin .view-switch.media-grid-view-switch {
+  display: flex;
+}
+body.wp-admin .button-link {
+  margin: 0;
+  padding: 0 calc(var(--padding) * 0.5);
+  box-shadow: none;
+  border: 0;
+  border-radius: 5px;
+  background: var(--link-color);
+  cursor: pointer;
+  text-align: left;
+  color: var(--white);
+  text-decoration: none;
+  transition-property: border, background, color;
+  transition-duration: 0.05s;
+  transition-timing-function: ease-in-out;
+  vertical-align: middle;
 }
 
 #debug-box {
