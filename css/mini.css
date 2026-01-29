@@ -10389,6 +10389,7 @@ body.scroll header#header.scroll-col, body.scrolled header#header.scroll-col {
   transition: padding 0.2s ease-out;
   min-height: 100vh;
   overflow: hidden;
+  background: var(--second-color-dark);
 }
 @media only screen and (min-width: 992px) {
   #sheet {
