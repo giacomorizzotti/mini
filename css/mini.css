@@ -10365,11 +10365,20 @@ header#header.open-menu {
 body.top header#header.top-wh {
   background: var(--white);
 }
+body.top header#header.top-wh.open-menu {
+  background: transparent;
+}
 body.top header#header.top-bk {
   background: var(--black);
 }
+body.top header#header.top-bk.open-menu {
+  background: transparent;
+}
 body.top header#header.top-col {
   background: var(--main-color);
+}
+body.top header#header.top-col.open-menu {
+  background: transparent;
 }
 
 body.scroll header#header.scroll-wh, body.scrolled header#header.scroll-wh {
@@ -11438,22 +11447,22 @@ nav.menu ul.menu li.item a::after, nav.menu ul.menu li.menu-item a::after {
     background: var(--link-link-color);
   }
 }
-nav.menu ul.menu li.item.active > a, nav.menu ul.menu li.item.selected > a, nav.menu ul.menu li.item.router-link-active > a, nav.menu ul.menu li.item a.active, nav.menu ul.menu li.item a.selected, nav.menu ul.menu li.item a.router-link-active, nav.menu ul.menu li.menu-item.active > a, nav.menu ul.menu li.menu-item.selected > a, nav.menu ul.menu li.menu-item.router-link-active > a, nav.menu ul.menu li.menu-item a.active, nav.menu ul.menu li.menu-item a.selected, nav.menu ul.menu li.menu-item a.router-link-active {
+nav.menu ul.menu li.item.active > a, nav.menu ul.menu li.item.selected > a, nav.menu ul.menu li.item.router-link-active > a, nav.menu ul.menu li.item a.active, nav.menu ul.menu li.item a.selected, nav.menu ul.menu li.item a.router-link-active, nav.menu ul.menu li.item.current-menu-item > a, nav.menu ul.menu li.item.current-page-parent > a, nav.menu ul.menu li.menu-item.active > a, nav.menu ul.menu li.menu-item.selected > a, nav.menu ul.menu li.menu-item.router-link-active > a, nav.menu ul.menu li.menu-item a.active, nav.menu ul.menu li.menu-item a.selected, nav.menu ul.menu li.menu-item a.router-link-active, nav.menu ul.menu li.menu-item.current-menu-item > a, nav.menu ul.menu li.menu-item.current-page-parent > a {
   background-color: var(--link-hover-color);
   color: var(--white);
 }
 @media only screen and (min-width: 768px) {
-  nav.menu ul.menu li.item.active > a, nav.menu ul.menu li.item.selected > a, nav.menu ul.menu li.item.router-link-active > a, nav.menu ul.menu li.item a.active, nav.menu ul.menu li.item a.selected, nav.menu ul.menu li.item a.router-link-active, nav.menu ul.menu li.menu-item.active > a, nav.menu ul.menu li.menu-item.selected > a, nav.menu ul.menu li.menu-item.router-link-active > a, nav.menu ul.menu li.menu-item a.active, nav.menu ul.menu li.menu-item a.selected, nav.menu ul.menu li.menu-item a.router-link-active {
+  nav.menu ul.menu li.item.active > a, nav.menu ul.menu li.item.selected > a, nav.menu ul.menu li.item.router-link-active > a, nav.menu ul.menu li.item a.active, nav.menu ul.menu li.item a.selected, nav.menu ul.menu li.item a.router-link-active, nav.menu ul.menu li.item.current-menu-item > a, nav.menu ul.menu li.item.current-page-parent > a, nav.menu ul.menu li.menu-item.active > a, nav.menu ul.menu li.menu-item.selected > a, nav.menu ul.menu li.menu-item.router-link-active > a, nav.menu ul.menu li.menu-item a.active, nav.menu ul.menu li.menu-item a.selected, nav.menu ul.menu li.menu-item a.router-link-active, nav.menu ul.menu li.menu-item.current-menu-item > a, nav.menu ul.menu li.menu-item.current-page-parent > a {
     color: var(--link-hover-color);
     background-color: transparent;
   }
 }
-nav.menu ul.menu li.item.active > a::after, nav.menu ul.menu li.item.selected > a::after, nav.menu ul.menu li.item.router-link-active > a::after, nav.menu ul.menu li.item a.active::after, nav.menu ul.menu li.item a.selected::after, nav.menu ul.menu li.item a.router-link-active::after, nav.menu ul.menu li.menu-item.active > a::after, nav.menu ul.menu li.menu-item.selected > a::after, nav.menu ul.menu li.menu-item.router-link-active > a::after, nav.menu ul.menu li.menu-item a.active::after, nav.menu ul.menu li.menu-item a.selected::after, nav.menu ul.menu li.menu-item a.router-link-active::after {
+nav.menu ul.menu li.item.active > a::after, nav.menu ul.menu li.item.selected > a::after, nav.menu ul.menu li.item.router-link-active > a::after, nav.menu ul.menu li.item a.active::after, nav.menu ul.menu li.item a.selected::after, nav.menu ul.menu li.item a.router-link-active::after, nav.menu ul.menu li.item.current-menu-item > a::after, nav.menu ul.menu li.item.current-page-parent > a::after, nav.menu ul.menu li.menu-item.active > a::after, nav.menu ul.menu li.menu-item.selected > a::after, nav.menu ul.menu li.menu-item.router-link-active > a::after, nav.menu ul.menu li.menu-item a.active::after, nav.menu ul.menu li.menu-item a.selected::after, nav.menu ul.menu li.menu-item a.router-link-active::after, nav.menu ul.menu li.menu-item.current-menu-item > a::after, nav.menu ul.menu li.menu-item.current-page-parent > a::after {
   width: 0;
   background-color: var(--link-hover-color);
 }
 @media only screen and (min-width: 768px) {
-  nav.menu ul.menu li.item.active > a::after, nav.menu ul.menu li.item.selected > a::after, nav.menu ul.menu li.item.router-link-active > a::after, nav.menu ul.menu li.item a.active::after, nav.menu ul.menu li.item a.selected::after, nav.menu ul.menu li.item a.router-link-active::after, nav.menu ul.menu li.menu-item.active > a::after, nav.menu ul.menu li.menu-item.selected > a::after, nav.menu ul.menu li.menu-item.router-link-active > a::after, nav.menu ul.menu li.menu-item a.active::after, nav.menu ul.menu li.menu-item a.selected::after, nav.menu ul.menu li.menu-item a.router-link-active::after {
+  nav.menu ul.menu li.item.active > a::after, nav.menu ul.menu li.item.selected > a::after, nav.menu ul.menu li.item.router-link-active > a::after, nav.menu ul.menu li.item a.active::after, nav.menu ul.menu li.item a.selected::after, nav.menu ul.menu li.item a.router-link-active::after, nav.menu ul.menu li.item.current-menu-item > a::after, nav.menu ul.menu li.item.current-page-parent > a::after, nav.menu ul.menu li.menu-item.active > a::after, nav.menu ul.menu li.menu-item.selected > a::after, nav.menu ul.menu li.menu-item.router-link-active > a::after, nav.menu ul.menu li.menu-item a.active::after, nav.menu ul.menu li.menu-item a.selected::after, nav.menu ul.menu li.menu-item a.router-link-active::after, nav.menu ul.menu li.menu-item.current-menu-item > a::after, nav.menu ul.menu li.menu-item.current-page-parent > a::after {
     width: 100%;
     background-color: var(--link-hover-color);
   }
@@ -20298,6 +20307,12 @@ input[type="radio"]:checked+label.uwa-link {
   background: linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--second-color) 75%, transparent), color-mix(in srgb, var(--main-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
+.second-grainy-grad, .second-grad-grainy, .grad-grainy-second, .grainy-grad-second {
+  background-size: 50% auto !important;
+  background-repeat: repeat;
+  background: linear-gradient(0deg, color-mix(in srgb, var(--fourth-color) 75%, transparent), color-mix(in srgb, var(--third-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--fourth-color) 75%, transparent), color-mix(in srgb, var(--third-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), linear-gradient(0deg, color-mix(in srgb, var(--fourth-color) 75%, transparent), color-mix(in srgb, var(--third-color) 75%, transparent)), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
 .grainy-grad-1-to-2, .grad-1-to-2-grainy {
   background-size: 50% auto !important;
   background-repeat: repeat;
@@ -20763,7 +20778,7 @@ blockquote::after {
   transform: translate(0, calc(var(--baseline) * -0.25));
 }
 
-.desc {
+.desc, .description {
   font-size: calc(var(--p) * 0.85) !important;
   line-height: calc(var(--p) * 1.2) !important;
   margin: calc(var(--baseline) / 3) 0;

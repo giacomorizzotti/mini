@@ -139,7 +139,7 @@ nav.menu {
           }
         }
       }
-      &.active > a, &.selected > a, &.router-link-active > a, a.active, a.selected, a.router-link-active {
+      &.active > a, &.selected > a, &.router-link-active > a, a.active, a.selected, a.router-link-active, &.current-menu-item > a, &.current-page-parent > a {
         background-color: var(--link-hover-color);
         color: var(--white);
         @media only screen and (min-width: 768px) {

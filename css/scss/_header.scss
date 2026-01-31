@@ -17,12 +17,21 @@ body.top {
     &.top {
       &-wh {
         background: var(--white);
+        &.open-menu {
+          background: transparent;
+        }
       }
       &-bk {
         background: var(--black);
+        &.open-menu {
+          background: transparent;
+        }
       }
       &-col {
         background: var(--main-color);
+        &.open-menu {
+          background: transparent;
+        }
       }
     }
   }

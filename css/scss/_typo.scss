@@ -393,7 +393,7 @@ blockquote {
 }
 
 // desc text
-.desc {
+.desc, .description {
   font-size: calc(var(--p) * 0.85)!important;
   line-height: calc(var(--p) * 1.2)!important;
   margin: calc(var(--baseline)/3) 0;
