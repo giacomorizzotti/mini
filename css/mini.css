@@ -143,6 +143,9 @@ body section {
   --uwa-black: #100018;
   --uwa-link-color: #3c1e8c;
   --uwa-link-hover-color: #2d145a;
+  --light-blue: #21A2D7;
+  --blue: #0A5B9B;
+  --dark-blue: #072A46;
   --font-sans: "Barlow", sans-serif;
   --font-second: "Oswald", sans-serif;
   --font-serif: "Playfair Display", serif;
@@ -12817,7 +12820,7 @@ button-grad-second:hover, .btn-grad-second:hover, .button-grad-second:hover {
   cursor: pointer;
 }
 
-.border, .uwa-link-border, .uwa-fourth-border, .uwa-third-border, .uwa-second-border, .uwa-dark-border, .uwa-border, .mini-fourth-border, .mini-third-border, .mini-second-border, .mini-dark-border, .mini-border, .gingerbread-border, .acid-green-border, .bad-border, .danger-border, .warning-border, .success-border, .info-border, .link-hover-border, .link-border, .fourth-color-dark-border, .fourth-color-border, .third-color-dark-border, .third-color-border, .second-color-dark-border, .second-color-border, .main-color-dark-border, .color-dark-border, .main-color-border, .color-border, .col-border, .black-border, .bk-border, .false-black-border, .fb-border, .dark-grey-border, .grey-border, .light-grey-border, .false-white-border, .fw-border, .white-border, .wh-border, .border-10, .border-5, .border-4, .border-3, .border-2, .border-1 {
+.border, .dark-blue-border, .blue-border, .light-blue-border, .uwa-link-border, .uwa-fourth-border, .uwa-third-border, .uwa-second-border, .uwa-dark-border, .uwa-border, .mini-fourth-border, .mini-third-border, .mini-second-border, .mini-dark-border, .mini-border, .gingerbread-border, .acid-green-border, .bad-border, .danger-border, .warning-border, .success-border, .info-border, .link-hover-border, .link-border, .fourth-color-dark-border, .fourth-color-border, .third-color-dark-border, .third-color-border, .second-color-dark-border, .second-color-border, .main-color-dark-border, .color-dark-border, .main-color-border, .color-border, .col-border, .black-border, .bk-border, .false-black-border, .fb-border, .dark-grey-border, .grey-border, .light-grey-border, .false-white-border, .fw-border, .white-border, .wh-border, .border-10, .border-5, .border-4, .border-3, .border-2, .border-1 {
   border-width: 1px;
   border-style: solid;
   border-color: var(--light-grey);
@@ -20173,6 +20176,525 @@ input[type="radio"]+label.uwa-link {
   }
 }
 input[type="radio"]:checked+label.uwa-link {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.light-blue-text {
+  color: var(--light-blue) !important;
+}
+.light-blue-text-hover:hover {
+  color: var(--light-blue) !important;
+}
+.light-blue-text-clicked.clicked {
+  color: var(--light-blue) !important;
+}
+.light-blue-text-active.active {
+  color: var(--light-blue) !important;
+}
+.light-blue-box {
+  background: var(--light-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5);
+  display: inline-block;
+  margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
+  line-height: 0.8;
+}
+.light-blue-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.light-blue-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.light-blue-box-hover:hover {
+  background: var(--light-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.light-blue-box-clicked.clicked {
+  background: var(--light-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.light-blue-box-active.active {
+  background: var(--light-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.light-blue-bg {
+  background-color: var(--light-blue) !important;
+}
+.light-blue-bg-hover:hover, .light-blue-bg-hover.clicked, .light-blue-bg-hover.active, .light-blue-bg-clicked:hover, .light-blue-bg-clicked.clicked, .light-blue-bg-clicked.active, .light-blue-bg-active:hover, .light-blue-bg-active.clicked, .light-blue-bg-active.active {
+  background-color: var(--light-blue) !important;
+}
+.light-blue-border {
+  border-color: var(--light-blue) !important;
+}
+.light-blue-border-hover:hover {
+  border-color: var(--light-blue) !important;
+}
+.light-blue-border-clicked.clicked {
+  border-color: var(--light-blue) !important;
+}
+.light-blue-border-active.active {
+  border-color: var(--light-blue) !important;
+}
+.light-blue-bubble:after, .light-blue-bubble-bottom-s:after, .light-blue-bubble-bottom-s-right:after, .light-blue-bubble-bottom-s-left:after, .light-blue-bubble-bottom:after, .light-blue-bubble-bottom-right:after, .light-blue-bubble-bottom-left:after, .light-blue-bubble-top-s:after, .light-blue-bubble-top-s-right:after, .light-blue-bubble-top-s-left:after, .light-blue-bubble-top:after, .light-blue-bubble-top-right:after, .light-blue-bubble-top-left:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.light-blue-bubble-top::after, .light-blue-bubble-top-right::after, .light-blue-bubble-top-left::after {
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--light-blue);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.light-blue-bubble-top-s::after, .light-blue-bubble-top-s-right::after, .light-blue-bubble-top-s-left::after {
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--light-blue);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.light-blue-bubble-top-s-left::after {
+  left: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.light-blue-bubble-top-s-right::after {
+  right: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.light-blue-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.light-blue-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.light-blue-bubble-bottom::after, .light-blue-bubble-bottom-right::after, .light-blue-bubble-bottom-left::after {
+  border-top: calc(var(--baseline) * 1.25) solid var(--light-blue);
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.light-blue-bubble-bottom-s::after, .light-blue-bubble-bottom-s-right::after, .light-blue-bubble-bottom-s-left::after {
+  border-top: calc(var(--baseline) * 0.5 * 1.25) solid var(--light-blue);
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.light-blue-bubble-bottom-s-left::after {
+  left: calc(var(--margin) * 0.5);
+  transform: translate(100%, 0);
+}
+.light-blue-bubble-bottom-s-right::after {
+  right: calc(var(--margin) * 0.5);
+  transform: translate(-100%, 0);
+}
+.light-blue-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  transform: none;
+}
+.light-blue-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  transform: none;
+}
+
+/*
+input[type="radio"]+label.light-blue {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.light-blue {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.blue-text {
+  color: var(--blue) !important;
+}
+.blue-text-hover:hover {
+  color: var(--blue) !important;
+}
+.blue-text-clicked.clicked {
+  color: var(--blue) !important;
+}
+.blue-text-active.active {
+  color: var(--blue) !important;
+}
+.blue-box {
+  background: var(--blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5);
+  display: inline-block;
+  margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
+  line-height: 0.8;
+}
+.blue-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.blue-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.blue-box-hover:hover {
+  background: var(--blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.blue-box-clicked.clicked {
+  background: var(--blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.blue-box-active.active {
+  background: var(--blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.blue-bg {
+  background-color: var(--blue) !important;
+}
+.blue-bg-hover:hover, .blue-bg-hover.clicked, .blue-bg-hover.active, .blue-bg-clicked:hover, .blue-bg-clicked.clicked, .blue-bg-clicked.active, .blue-bg-active:hover, .blue-bg-active.clicked, .blue-bg-active.active {
+  background-color: var(--blue) !important;
+}
+.blue-border {
+  border-color: var(--blue) !important;
+}
+.blue-border-hover:hover {
+  border-color: var(--blue) !important;
+}
+.blue-border-clicked.clicked {
+  border-color: var(--blue) !important;
+}
+.blue-border-active.active {
+  border-color: var(--blue) !important;
+}
+.blue-bubble:after, .blue-bubble-bottom-s:after, .blue-bubble-bottom-s-right:after, .blue-bubble-bottom-s-left:after, .blue-bubble-bottom:after, .blue-bubble-bottom-right:after, .blue-bubble-bottom-left:after, .blue-bubble-top-s:after, .blue-bubble-top-s-right:after, .blue-bubble-top-s-left:after, .blue-bubble-top:after, .blue-bubble-top-right:after, .blue-bubble-top-left:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.blue-bubble-top::after, .blue-bubble-top-right::after, .blue-bubble-top-left::after {
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--blue);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.blue-bubble-top-s::after, .blue-bubble-top-s-right::after, .blue-bubble-top-s-left::after {
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--blue);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.blue-bubble-top-s-left::after {
+  left: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.blue-bubble-top-s-right::after {
+  right: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.blue-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.blue-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.blue-bubble-bottom::after, .blue-bubble-bottom-right::after, .blue-bubble-bottom-left::after {
+  border-top: calc(var(--baseline) * 1.25) solid var(--blue);
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.blue-bubble-bottom-s::after, .blue-bubble-bottom-s-right::after, .blue-bubble-bottom-s-left::after {
+  border-top: calc(var(--baseline) * 0.5 * 1.25) solid var(--blue);
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.blue-bubble-bottom-s-left::after {
+  left: calc(var(--margin) * 0.5);
+  transform: translate(100%, 0);
+}
+.blue-bubble-bottom-s-right::after {
+  right: calc(var(--margin) * 0.5);
+  transform: translate(-100%, 0);
+}
+.blue-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  transform: none;
+}
+.blue-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  transform: none;
+}
+
+/*
+input[type="radio"]+label.blue {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.blue {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.dark-blue-text {
+  color: var(--dark-blue) !important;
+}
+.dark-blue-text-hover:hover {
+  color: var(--dark-blue) !important;
+}
+.dark-blue-text-clicked.clicked {
+  color: var(--dark-blue) !important;
+}
+.dark-blue-text-active.active {
+  color: var(--dark-blue) !important;
+}
+.dark-blue-box {
+  background: var(--dark-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5);
+  display: inline-block;
+  margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
+  line-height: 0.8;
+}
+.dark-blue-box.S {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+  margin: 0 4px 4px 0;
+}
+.dark-blue-box.XS {
+  padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+  margin: 0 4px 2px 0;
+}
+.dark-blue-box-hover:hover {
+  background: var(--dark-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.dark-blue-box-clicked.clicked {
+  background: var(--dark-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.dark-blue-box-active.active {
+  background: var(--dark-blue) !important;
+  color: var(--white) !important;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  display: inline-block;
+  margin: 0 6px 8px 0;
+}
+.dark-blue-bg {
+  background-color: var(--dark-blue) !important;
+}
+.dark-blue-bg-hover:hover, .dark-blue-bg-hover.clicked, .dark-blue-bg-hover.active, .dark-blue-bg-clicked:hover, .dark-blue-bg-clicked.clicked, .dark-blue-bg-clicked.active, .dark-blue-bg-active:hover, .dark-blue-bg-active.clicked, .dark-blue-bg-active.active {
+  background-color: var(--dark-blue) !important;
+}
+.dark-blue-border {
+  border-color: var(--dark-blue) !important;
+}
+.dark-blue-border-hover:hover {
+  border-color: var(--dark-blue) !important;
+}
+.dark-blue-border-clicked.clicked {
+  border-color: var(--dark-blue) !important;
+}
+.dark-blue-border-active.active {
+  border-color: var(--dark-blue) !important;
+}
+.dark-blue-bubble:after, .dark-blue-bubble-bottom-s:after, .dark-blue-bubble-bottom-s-right:after, .dark-blue-bubble-bottom-s-left:after, .dark-blue-bubble-bottom:after, .dark-blue-bubble-bottom-right:after, .dark-blue-bubble-bottom-left:after, .dark-blue-bubble-top-s:after, .dark-blue-bubble-top-s-right:after, .dark-blue-bubble-top-s-left:after, .dark-blue-bubble-top:after, .dark-blue-bubble-top-right:after, .dark-blue-bubble-top-left:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.dark-blue-bubble-top::after, .dark-blue-bubble-top-right::after, .dark-blue-bubble-top-left::after {
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--dark-blue);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.dark-blue-bubble-top-s::after, .dark-blue-bubble-top-s-right::after, .dark-blue-bubble-top-s-left::after {
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--dark-blue);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.dark-blue-bubble-top-s-left::after {
+  left: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.dark-blue-bubble-top-s-right::after {
+  right: calc(var(--margin) * 1);
+  transform: translate(0, -100%);
+}
+.dark-blue-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.dark-blue-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  transform: translate(0, -100%);
+}
+.dark-blue-bubble-bottom::after, .dark-blue-bubble-bottom-right::after, .dark-blue-bubble-bottom-left::after {
+  border-top: calc(var(--baseline) * 1.25) solid var(--dark-blue);
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.dark-blue-bubble-bottom-s::after, .dark-blue-bubble-bottom-s-right::after, .dark-blue-bubble-bottom-s-left::after {
+  border-top: calc(var(--baseline) * 0.5 * 1.25) solid var(--dark-blue);
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.dark-blue-bubble-bottom-s-left::after {
+  left: calc(var(--margin) * 0.5);
+  transform: translate(100%, 0);
+}
+.dark-blue-bubble-bottom-s-right::after {
+  right: calc(var(--margin) * 0.5);
+  transform: translate(-100%, 0);
+}
+.dark-blue-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  transform: none;
+}
+.dark-blue-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  transform: none;
+}
+
+/*
+input[type="radio"]+label.dark-blue {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.dark-blue {
   &-btn {
     color: $colortext!important;
     background: $colorcode!important;

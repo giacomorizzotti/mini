@@ -46,7 +46,11 @@ $colors: //color name, color code, text color over color
   "uwa-second" var(--uwa-second-color) var(--white),
   "uwa-third" var(--uwa-third-color) var(--white),
   "uwa-fourth" var(--uwa-fourth-color) var(--white),
-  "uwa-link" var(--uwa-link-color) var(--white);
+  "uwa-link" var(--uwa-link-color) var(--white),
+
+  "light-blue" var(--light-blue) var(--white),
+  "blue" var(--blue) var(--white),
+  "dark-blue" var(--dark-blue) var(--white);
 
   //"aroma" var(--aroma-color) var(--white),
   //"aroma-dark" var(--aroma-color-dark) var(--white),
