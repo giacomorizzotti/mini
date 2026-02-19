@@ -131,10 +131,12 @@ button, .btn, .button {
     @extend .btn !optional;
     color: var( --button-hover-text-color);
     background: var(--button-hover-background-color);
+    background-color: transparent;
     border-color: var(--button-hover-border-color);
     &.clicked, &.active {
       color: var(--button-text-color);
       background: var(--button-background-color);
+      background-color: transparent;
       border-color: var(--button-border-color);
     }
   }

@@ -12746,11 +12746,13 @@ button.clicked, button.active, .btn.clicked, button-invert.clicked, button-inv.c
 button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg, .button-invert, .button-inv, .button-negative, .button-neg {
   color: var(--button-hover-text-color);
   background: var(--button-hover-background-color);
+  background-color: transparent;
   border-color: var(--button-hover-border-color);
 }
 button-invert.clicked, button-invert.active, button-inv.clicked, button-inv.active, button-negative.clicked, button-negative.active, button-neg.clicked, button-neg.active, .btn-invert.clicked, .btn-invert.active, .btn-inv.clicked, .btn-inv.active, .btn-negative.clicked, .btn-negative.active, .btn-neg.clicked, .btn-neg.active, .button-invert.clicked, .button-invert.active, .button-inv.clicked, .button-inv.active, .button-negative.clicked, .button-negative.active, .button-neg.clicked, .button-neg.active {
   color: var(--button-text-color);
   background: var(--button-background-color);
+  background-color: transparent;
   border-color: var(--button-border-color);
 }
 button.xs, button.XS, .btn.xs, button-invert.xs, button-inv.xs, button-negative.xs, button-neg.xs, .xs.btn-invert, .xs.btn-inv, .xs.btn-negative, .xs.btn-neg, .xs.button-invert, .xs.button-inv, .xs.button-negative, .xs.button-neg, .btn.XS, button-invert.XS, button-inv.XS, button-negative.XS, button-neg.XS, .XS.btn-invert, .XS.btn-inv, .XS.btn-negative, .XS.btn-neg, .XS.button-invert, .XS.button-inv, .XS.button-negative, .XS.button-neg, .button.xs, .button.XS {
