@@ -12690,6 +12690,57 @@ input[type=radio]:checked + label {
   --button-hover-border-color: var(--uwa-link-color)!important;
 }
 
+.light-blue-btn {
+  --button-text-color: var(--white)!important;
+  --button-background-color: var(--light-blue)!important;
+  --button-border-color: var(--light-blue)!important;
+  --button-hover-text-color: var(--light-blue)!important;
+  --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--light-blue)!important;
+}
+.light-blue-btn-invert, .light-blue-btn-inv, .light-blue-btn-negative, .light-blue-btn-neg {
+  --button-text-color: var(--light-blue)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--light-blue)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--light-blue)!important;
+  --button-hover-border-color: var(--light-blue)!important;
+}
+
+.blue-btn {
+  --button-text-color: var(--white)!important;
+  --button-background-color: var(--blue)!important;
+  --button-border-color: var(--blue)!important;
+  --button-hover-text-color: var(--blue)!important;
+  --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--blue)!important;
+}
+.blue-btn-invert, .blue-btn-inv, .blue-btn-negative, .blue-btn-neg {
+  --button-text-color: var(--blue)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--blue)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--blue)!important;
+  --button-hover-border-color: var(--blue)!important;
+}
+
+.dark-blue-btn {
+  --button-text-color: var(--white)!important;
+  --button-background-color: var(--dark-blue)!important;
+  --button-border-color: var(--dark-blue)!important;
+  --button-hover-text-color: var(--dark-blue)!important;
+  --button-hover-background-color: var(--white)!important;
+  --button-hover-border-color: var(--dark-blue)!important;
+}
+.dark-blue-btn-invert, .dark-blue-btn-inv, .dark-blue-btn-negative, .dark-blue-btn-neg {
+  --button-text-color: var(--dark-blue)!important;
+  --button-background-color: var(--white)!important;
+  --button-border-color: var(--dark-blue)!important;
+  --button-hover-text-color: var(--white)!important;
+  --button-hover-background-color: var(--dark-blue)!important;
+  --button-hover-border-color: var(--dark-blue)!important;
+}
+
 button, .btn, button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg, .button-invert, .button-inv, .button-negative, .button-neg, .button {
   --button-text-color: var(--white);
   --button-background-color: var(--link-color);
