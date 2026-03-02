@@ -1,4 +1,5 @@
 // box
+@use "sass:math";
 
 $box-widths: (
   "8":   (100%, 50%, 33.333333%, 16.666666%, 8.333333%),
@@ -44,6 +45,8 @@ $breakpoints: (
   position: relative;
   margin: 0;
   padding: calc(var(--padding) * 1);
+  box-sizing: border-box;
+  min-width: 0;
   //flex: 1 0 0%;
 
   // Generate .box-{{breakpoint}}-{{label}} classes in breakpoint order
@@ -55,7 +58,9 @@ $breakpoints: (
       $width: nth($widths, 5);
       &-#{$breakpoint}-#{$label} {
         @include respond($breakpoint) {
-          flex-basis: calc(#{$width} + var(--gap-x) * ( 100 - ( $width / 1% ) ) * 0.01 * -1);
+          $ratio: math.div($width, 1%);
+          $gapFactor: 100 - $ratio;
+          flex-basis: calc(#{$width} - var(--gap-x) * #{$gapFactor} * 0.01);
           max-width: #{$width};
         }
       }
@@ -70,7 +75,9 @@ $breakpoints: (
         $breakpoint: nth(map-keys($breakpoints), $i);
         $width: nth($widths, $i);
         @include respond($breakpoint) {
-          flex-basis: calc(#{$width} + var(--gap-x) * ( 100 - ( $width / 1% ) ) * 0.01 * -1);
+          $ratio: math.div($width, 1%);
+          $gapFactor: 100 - $ratio;
+          flex-basis: calc(#{$width} - var(--gap-x) * #{$gapFactor} * 0.01);
           max-width: #{$width};
         }
       }
