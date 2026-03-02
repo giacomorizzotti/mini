@@ -55,7 +55,7 @@ $breakpoints: (
       $width: nth($widths, 5);
       &-#{$breakpoint}-#{$label} {
         @include respond($breakpoint) {
-          flex-basis: calc(#{$width} + var(--gap-x) * ( 100 - ( $width / 1% ) ) * 0.01 * -1);
+          flex-basis: calc(#{$width} + var(--gap-x) * ( 100 - ( $width / 1% ) ) * 0.012 * -1);
           max-width: #{$width};
         }
       }
@@ -70,7 +70,7 @@ $breakpoints: (
         $breakpoint: nth(map-keys($breakpoints), $i);
         $width: nth($widths, $i);
         @include respond($breakpoint) {
-          flex-basis: calc(#{$width} + var(--gap-x) * ( 100 - ( $width / 1% ) ) * 0.01 * -1);
+          flex-basis: calc(#{$width} + var(--gap-x) * ( 100 - ( $width / 1% ) ) * 0.012 * -1);
           max-width: #{$width};
         }
       }
