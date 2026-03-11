@@ -10461,7 +10461,7 @@ body.scroll header#header.scroll-col, body.scrolled header#header.scroll-col {
 }
 
 #sheet main {
-  min-height: Āvh;
+  min-height: 100vh;
   order: 3;
   background: var(--white);
   transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
