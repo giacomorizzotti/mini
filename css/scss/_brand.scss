@@ -27,8 +27,6 @@ header#header {
       line-height: 1!important;
     }
   }
-  .open-menu {
-  }
 }
 body.top {
   header#header {
@@ -65,7 +63,7 @@ body.top {
       }
     }
   }
-  .open-menu {
+  .open-menu, .open {
     header#header {
       &.neg, &.inv, &.invert, &.top-neg, &.top-inv, &.scroll-neg, &.scroll-inv {
         background: var(--transp);

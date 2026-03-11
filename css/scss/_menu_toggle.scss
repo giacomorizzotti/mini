@@ -56,10 +56,6 @@ header#header {
             }
         }
     }
-    &.open-menu {
-        #menu-toggle {
-        }
-    }
     &.neg, &.inv {
         #menu-toggle {
             background: var(--menu-toggle-color);
@@ -79,7 +75,7 @@ body.top {
                 }
             }
         }
-        &.open-menu {
+        &.open-menu, &.open {
             &.neg, &.inv, &.top-neg, &.top-inv, &.scroll-neg, &.scroll-inv {
                 #menu-toggle {
                     background: var(--transp);

@@ -7,7 +7,7 @@ header#header {
   left: 0;
   z-index: 99;
   transition: transform 0.25s ease-out;
-  &.open-menu {
+  &.open-menu, &.open {
     position: relative;
     flex-basis: 100%;
   }
@@ -17,19 +17,19 @@ body.top {
     &.top {
       &-wh {
         background: var(--white);
-        &.open-menu {
+        &.open-menu, &.open {
           background: transparent;
         }
       }
       &-bk {
         background: var(--black);
-        &.open-menu {
+        &.open-menu, &.open {
           background: transparent;
         }
       }
       &-col {
         background: var(--main-color);
-        &.open-menu {
+        &.open-menu, &.open {
           background: transparent;
         }
       }

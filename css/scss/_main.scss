@@ -1,6 +1,7 @@
 // main
 #sheet {
   main {
+    min-height: \100vh;
     order: 3;
     background: var(--white);
     transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
@@ -31,5 +32,22 @@ body.open-menu {
         order: 2;
       }
     }
+  }
+}
+main.open {
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-right-radius: 15px;
+  -webkit-border-top-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  border-top-left-radius: 15px;
+  -webkit-box-shadow: 0 0 10px 10px rgba(0 0 0 / 10%);
+  -moz-box-shadow: 0 0 10px 10px rgba(0 0 0 / 10%);
+  box-shadow: 0 0 10px 10px rgba(0 0 0 / 10%);
+  flex: 10;
+  order: 3;
+  margin: 0 var(--margin);
+  @media only screen and (min-width: 992px) {
+    order: 2;
   }
 }
