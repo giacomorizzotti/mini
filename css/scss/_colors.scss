@@ -89,23 +89,23 @@ $colors: //color name, color code, text color over color
     // text boxes
     &-box {
       background: $colorcode!important;
-      color: $colortext!important;
-      padding: calc(var(--padding) * 0.5);
+      color: $colortext;
+      padding: calc(var(--padding) * 1);
       display: inline-block;
       margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
       line-height: 0.8;
       &.S {
-        padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.4);
+        padding: calc(var(--padding) * 0.4) calc(var(--padding) * 0.4);
         margin: 0 4px 4px 0;
       }
       &.XS {
-        padding: calc(var(--padding) * 0.1) calc(var(--padding) * 0.2);
+        padding: calc(var(--padding) * 0.2) calc(var(--padding) * 0.2);
         margin: 0 4px 2px 0;
       }
       &-hover {
         &:hover {
           background: $colorcode!important;
-          color: $colortext!important;
+          color: $colortext;
           padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
           display: inline-block;
           margin: 0 6px 8px 0;
@@ -114,7 +114,7 @@ $colors: //color name, color code, text color over color
       &-clicked {
         &.clicked {
           background: $colorcode!important;
-          color: $colortext!important;
+          color: $colortext;
           padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
           display: inline-block;
           margin: 0 6px 8px 0;
@@ -123,7 +123,7 @@ $colors: //color name, color code, text color over color
       &-active {
         &.active {
           background: $colorcode!important;
-          color: $colortext!important;
+          color: $colortext;
           padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
           display: inline-block;
           margin: 0 6px 8px 0;
