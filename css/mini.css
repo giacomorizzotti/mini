@@ -21196,6 +21196,22 @@ h1 .title, h2 .title, h3 .title, h4 .title, h5 .title, h6 .title, p .title, li .
   font-family: var(--title-font);
 }
 
+.title {
+  font-family: var(--title-font);
+  font-size: var(--h1);
+}
+
+.subtitle, .sub-title {
+  font-family: var(--title-font);
+  font-size: var(--h3);
+  font-weight: 300;
+}
+
+.pagetitle, .page-title {
+  background: linear-gradient(180deg, transparent 60%, var(--main-color-transp) 0);
+  padding: 1px 6px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--false-black);
