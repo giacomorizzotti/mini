@@ -62,6 +62,7 @@ $colors: //color name, color code, text color over color
 @each $colorname, $colorcode, $colortext in $colors {
   .#{$colorname} {
     &-btn {
+      @extend button, .btn, .button !optional;
       --button-text-color: #{$colortext}!important;
       --button-background-color: #{$colorcode}!important;
       --button-border-color: #{$colorcode}!important;
@@ -86,6 +87,7 @@ button, .btn, .button {
   --button-hover-text-color: var(--link-color);
   --button-hover-background-color: transparent;
   --button-hover-border-color: var(--link-color);
+  text-decoration: none;
   font-size: var(--p);
   line-height: calc( var(--p) * 1.5 );
   width: auto;
