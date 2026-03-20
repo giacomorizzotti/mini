@@ -21265,15 +21265,15 @@ h6 {
 a, .link {
   color: var(--link-color);
   transition: all 0.3s ease;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
 a:hover, .link:hover {
   color: var(--link-hover-color);
 }
 
-li a {
-  text-decoration: none;
+p a, p .link {
+  text-decoration: underline;
 }
 
 ul, ol {

@@ -291,15 +291,15 @@ h6 {
 a, .link {
   color: var(--link-color);
   transition: all 0.3s ease;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   &:hover {
     color: var(--link-hover-color);
   }
 }
-li {
-  a {
-    text-decoration: none;
+p {
+  a, .link {
+    text-decoration: underline;
   }
 }
 
