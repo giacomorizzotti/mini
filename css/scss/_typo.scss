@@ -348,16 +348,16 @@ pre, .pre {
 }
 
 code, .code {
-  padding: calc( var(--padding) * 1 );
+  padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.75 );
   background: var(--false-black);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: calc(var(--p)*.85);
+  font-size: calc(var(--p) * 0.85);
   line-height: calc(var(--p) * 1);
-  margin: 0 calc(var(--margin)*0.6);
+  margin: 0 calc(var(--margin) * 0.6);
   overflow-x: auto;
   color: var(--white);
   vertical-align: middle;
