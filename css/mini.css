@@ -10816,8 +10816,6 @@ body.scroll .top-link {
 .sep {
   display: block;
   width: 100%;
-  height: 1px;
-  background-color: var(--light-grey);
 }
 .sep-0 {
   display: block;
@@ -10850,6 +10848,48 @@ body.scroll .top-link {
   height: 5px;
 }
 .sep-10 {
+  display: block;
+  width: 100%;
+  height: 10px;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light-grey);
+}
+.line-0 {
+  display: block;
+  width: 100%;
+  height: 0;
+}
+.line-1 {
+  display: block;
+  width: 100%;
+  height: 1px;
+}
+.line-2 {
+  display: block;
+  width: 100%;
+  height: 2px;
+}
+.line-3 {
+  display: block;
+  width: 100%;
+  height: 3px;
+}
+.line-4 {
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+.line-5 {
+  display: block;
+  width: 100%;
+  height: 5px;
+}
+.line-10 {
   display: block;
   width: 100%;
   height: 10px;
