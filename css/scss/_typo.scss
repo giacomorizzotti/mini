@@ -187,6 +187,10 @@ h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, label {
     text-decoration: underline;
   }
 
+  &.decoration-none, &.text-decoration-none {
+    text-decoration: none;
+  }
+
   &.left, &.text-start {
     text-align: left;
   }

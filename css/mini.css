@@ -21201,6 +21201,9 @@ h1.italic, h1.text-italic, h2.italic, h2.text-italic, h3.italic, h3.text-italic,
 h1.underline, h1.underlined, h1.text-underline, h2.underline, h2.underlined, h2.text-underline, h3.underline, h3.underlined, h3.text-underline, h4.underline, h4.underlined, h4.text-underline, h5.underline, h5.underlined, h5.text-underline, h6.underline, h6.underlined, h6.text-underline, p.underline, p.underlined, p.text-underline, li.underline, li.underlined, li.text-underline, code.underline, code.underlined, code.text-underline, span.underline, span.underlined, span.text-underline, i.underline, i.underlined, i.text-underline, b.underline, b.underlined, b.text-underline, u.underline, u.underlined, u.text-underline, a.underline, a.underlined, a.text-underline, label.underline, label.underlined, label.text-underline {
   text-decoration: underline;
 }
+h1.decoration-none, h1.text-decoration-none, h2.decoration-none, h2.text-decoration-none, h3.decoration-none, h3.text-decoration-none, h4.decoration-none, h4.text-decoration-none, h5.decoration-none, h5.text-decoration-none, h6.decoration-none, h6.text-decoration-none, p.decoration-none, p.text-decoration-none, li.decoration-none, li.text-decoration-none, code.decoration-none, code.text-decoration-none, span.decoration-none, span.text-decoration-none, i.decoration-none, i.text-decoration-none, b.decoration-none, b.text-decoration-none, u.decoration-none, u.text-decoration-none, a.decoration-none, a.text-decoration-none, label.decoration-none, label.text-decoration-none {
+  text-decoration: none;
+}
 h1.left, h1.text-start, h2.left, h2.text-start, h3.left, h3.text-start, h4.left, h4.text-start, h5.left, h5.text-start, h6.left, h6.text-start, p.left, p.text-start, li.left, li.text-start, code.left, code.text-start, span.left, span.text-start, i.left, i.text-start, b.left, b.text-start, u.left, u.text-start, a.left, a.text-start, label.left, label.text-start {
   text-align: left;
 }
