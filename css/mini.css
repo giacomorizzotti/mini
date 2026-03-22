@@ -21241,6 +21241,15 @@ h1 .title, h2 .title, h3 .title, h4 .title, h5 .title, h6 .title, p .title, li .
   font-family: var(--title-font);
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .title {
   font-family: var(--title-font);
   font-size: var(--h1);

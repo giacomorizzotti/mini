@@ -230,6 +230,14 @@ h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, label {
   }
 
 }
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 .title {
   font-family: var(--title-font);
   font-size: var(--h1);
