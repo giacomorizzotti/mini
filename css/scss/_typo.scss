@@ -309,9 +309,11 @@ a, .link {
     color: var(--link-hover-color);
   }
 }
-p {
-  a, .link {
-    text-decoration: underline;
+article {
+  p {
+    a, .link {
+      text-decoration: underline;
+    }
   }
 }
 
