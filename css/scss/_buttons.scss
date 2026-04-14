@@ -147,25 +147,25 @@ button, .btn, .button {
     }
   }
   &.xs, &.XS {
-    padding: calc(var(--padding)*.125) calc(var(--padding)*.25);
+    padding: calc(var(--padding)*.125) calc(var(--padding)*.75);
     margin: calc(var(--margin) * .25) 0;
     margin: calc(var(--margin) * .25) calc(var(--margin) * 0.25) calc(var(--margin) * .25) 0;
   }
   &.s, &.S {
-    padding: calc(var(--padding)*.25) calc(var(--padding)*.5);
+    padding: calc(var(--padding)*.25) calc(var(--padding)*1);
     margin: calc(var(--margin) * .35) 0;
     margin: calc(var(--margin) * .35) calc(var(--margin) * 0.5) calc(var(--margin) * .35) 0;
   }
   &.l, &.L {
-    padding: calc(var(--padding)*0.625) calc(var(--padding)*1.125);
+    padding: calc(var(--padding)*0.625) calc(var(--padding)*1.875);
     margin: calc(var(--margin) * .75) 0;
     margin: calc(var(--margin) * .75) calc(var(--margin) * 1.125) calc(var(--margin) * .75) 0;
   }
   &.xl, &.XL {
-    padding: calc(var(--padding)*0.85) calc(var(--padding)*1.35);
+    padding: calc(var(--padding)*0.85) calc(var(--padding)*2.55);
   }
   &.xxl, &.XXL {
-    padding: calc(var(--padding)*1.25) calc(var(--padding)*1.75);
+    padding: calc(var(--padding)*1.25) calc(var(--padding)*3.75);
   }
   &.clicking {
     animation-name: clickingAnimation;

@@ -112,6 +112,7 @@
             align-items: center;
             background-color: var(--white);
             transition: background-color 0.25s ease;
+            color: var(--black);
             margin: 0;
             padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 1.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 );
             -webkit-border-radius: calc( 40px + var(--padding) * 0.5 );

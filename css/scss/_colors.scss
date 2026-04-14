@@ -37,9 +37,12 @@ $colors: //color name, color code, text color over color
 
   "mini" var(--mini-color) var(--white),
   "mini-dark" var(--mini-color-dark) var(--white),
-  "mini-second" var(--mini-second) var(--white),
-  "mini-third" var(--mini-third) var(--white),
-  "mini-fourth" var(--mini-fourth) var(--white),
+  "mini-second" var(--mini-second-color) var(--white),
+  "mini-second-dark" var(--mini-second-color-dark) var(--white),
+  "mini-third" var(--mini-third-color) var(--white),
+  "mini-third-dark" var(--mini-third-color-dark) var(--white),
+  "mini-fourth" var(--mini-fourth-color) var(--white),
+  "mini-fourth-dark" var(--mini-fourth-color-dark) var(--white),
 
   "uwa" var(--uwa-color) var(--white),
   "uwa-dark" var(--uwa-color-dark) var(--white),
@@ -92,42 +95,42 @@ $colors: //color name, color code, text color over color
       color: $colortext;
       padding: calc(var(--padding) * 1);
       display: inline-block;
-      margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
+      margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
       line-height: 0.8;
-      &.S {
-        padding: calc(var(--padding) * 0.4) calc(var(--padding) * 0.4);
+      border: 1px solid $colorcode;
+      &.S, .S & {
+        padding: calc(var(--padding) * 0.4) calc(var(--padding) * 0.4)!important;
         margin: 0 4px 4px 0;
       }
-      &.XS {
-        padding: calc(var(--padding) * 0.2) calc(var(--padding) * 0.2);
+      &.XS, .XS & {
+        padding: calc(var(--padding) * 0.2) calc(var(--padding) * 0.2)!important;
         margin: 0 4px 2px 0;
       }
       &-hover {
         &:hover {
-          background: $colorcode!important;
-          color: $colortext;
-          padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-          display: inline-block;
-          margin: 0 6px 8px 0;
+          @extend .#{$colorname}-box !optional;
+          background: $colortext!important;
+          color: $colorcode;
         }
       }
       &-clicked {
         &.clicked {
-          background: $colorcode!important;
-          color: $colortext;
-          padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-          display: inline-block;
-          margin: 0 6px 8px 0;
+          @extend .#{$colorname}-box !optional;
+          background: $colortext!important;
+          color: $colorcode;
         }
       }
       &-active {
-        &.active {
-          background: $colorcode!important;
-          color: $colortext;
-          padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-          display: inline-block;
-          margin: 0 6px 8px 0;
+          &.active {
+          @extend .#{$colorname}-box !optional;
+            background: $colortext!important;
+            color: $colorcode;
         }
+      }
+      &-invert {
+        @extend .#{$colorname}-box !optional;
+        background: $colortext!important;
+        color: $colorcode;
       }
     }
     // backgrounds
