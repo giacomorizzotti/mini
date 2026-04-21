@@ -10549,6 +10549,7 @@ header#header #brand, header#header .brand {
   flex-flow: row wrap;
   align-items: center;
   min-height: calc(var(--padding) * 2 + var(--logo-height));
+  max-width: calc(100% - var(--menu-toggle-height) - var(--padding) * 6);
 }
 header#header #brand a, header#header .brand a {
   display: inline-block;

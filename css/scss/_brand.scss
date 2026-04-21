@@ -5,6 +5,7 @@ header#header {
     flex-flow: row wrap;
     align-items: center;
     min-height: calc( (var(--padding) * 2 ) + var(--logo-height) );
+    max-width: calc(100% - var(--menu-toggle-height) - var(--padding) * 6);
     .logo-box {
       
     }
