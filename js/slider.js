@@ -1,7 +1,7 @@
 /* Created by Tivotal */
 
 let slider = document.querySelector(".slider");
-if (slider) {
+if (slider && !slider.classList.contains("single")) {
   let btns = document.querySelectorAll("i.slider-controls");
   let sliderChildren = [...slider.children];
   //let wrapper = document.querySelector(".slider-wrapper");
