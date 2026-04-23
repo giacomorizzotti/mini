@@ -12,7 +12,6 @@ $borderRadius: ('0':0, '1':1px, '2':2px, '3':3px, '4':4px, '5':5px, '10':10px, '
   border-width: 1px;
   border-style: solid;
   border-color: var(--light-grey);
-
   @each $bordWidthLabel, $bordWidth in $thickness {   
     &-#{$bordWidthLabel} {
       @extend .border;

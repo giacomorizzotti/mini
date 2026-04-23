@@ -153,12 +153,20 @@ body.scroll .top-link {
 .sep {
   display: block;
   width: 100%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: var(--false-white);
   @each $sepHeightLabel, $sepHeight in $sepThickness {
     &-#{$sepHeightLabel} {
       display: block;
       width: 100%;
-      height: #{$sepHeight};
+      //height: #{$sepHeight};
+      border-top-style: solid;
+      border-top-width: #{$sepHeight};
     }
+  }
+  &-0 {
+    border:none;
   }
 }
 

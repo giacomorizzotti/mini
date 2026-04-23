@@ -144,7 +144,6 @@ $colors: //color name, color code, text color over color
     }
     // borders
     &-border {
-      @extend .border !optional;
       border-color: $colorcode!important;
       &-hover {
         &:hover {
