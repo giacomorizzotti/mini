@@ -8,6 +8,8 @@ $min_font: 0.875rem; // 14px
 $max_font: 1rem; // 16px
 $mob_font: 0.875rem; // 15px
 
+$lineHeight: ('08':0.8, '1':1, '12':1.2, '15':1.5, '2':2);
+
 @use 'sass:math';
 
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value, $mob-value) {
@@ -250,6 +252,13 @@ h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, label {
 .pagetitle, .page-title {
   background: linear-gradient(180deg,transparent 60%,var(--main-color-transp) 0);
   padding: 1px 6px;
+}
+
+
+@each $lineHeightKey, $lineHeightValue in $lineHeight {
+  .lh-#{$lineHeightKey} {
+    line-height: $lineHeightValue;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

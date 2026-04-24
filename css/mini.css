@@ -11,7 +11,6 @@ html {
   font-smooth: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -21677,6 +21676,26 @@ h1 .title, h2 .title, h3 .title, h4 .title, h5 .title, h6 .title, p .title, li .
 .pagetitle, .page-title {
   background: linear-gradient(180deg, transparent 60%, var(--main-color-transp) 0);
   padding: 1px 6px;
+}
+
+.lh-08 {
+  line-height: 0.8;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.lh-12 {
+  line-height: 1.2;
+}
+
+.lh-15 {
+  line-height: 1.5;
+}
+
+.lh-2 {
+  line-height: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
