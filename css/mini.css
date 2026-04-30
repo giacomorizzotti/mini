@@ -22968,7 +22968,7 @@ body.scroll .top-hidden, body.scroll .scroll-shown {
 }
 .slider-wrapper i.slider-controls {
   position: absolute;
-  top: 50%;
+  top: 50vh;
   transform: translateY(-50%);
   font-size: 52px;
   height: 56px;
