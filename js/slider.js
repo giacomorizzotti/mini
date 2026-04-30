@@ -60,6 +60,20 @@ if (slider && !slider.classList.contains("single")) {
     slider.classList.remove("dragging");
   };
 
+  let updateActiveSlide = () => {
+    //calculate which slide is currently active based on scroll position
+    let currentIndex = Math.round(slider.scrollLeft / slideWidth);
+    let slides = slider.querySelectorAll(".slide");
+    
+    //remove active class from all slides
+    slides.forEach((slide) => slide.classList.remove("active"));
+    
+    //add active class to current slide
+    if (slides[currentIndex]) {
+      slides[currentIndex].classList.add("active");
+    }
+  };
+
   let infiniteScroll = () => {
     //if the slider is at begining, scroll to end
     //else slider at end , scroll to beginning
@@ -75,6 +89,9 @@ if (slider && !slider.classList.contains("single")) {
       slider.scrollLeft = slider.offsetWidth;
       slider.classList.remove("no-transition");
     }
+
+    //update active slide
+    updateActiveSlide();
 
     //clearing timeout & starting auto play if the mouse is not hovering the slider
     clearTimeout(timeoutId);
@@ -92,6 +109,9 @@ if (slider && !slider.classList.contains("single")) {
   };
 
   autoPlay();
+
+  //set initial active slide
+  updateActiveSlide();
 
   slider.addEventListener("mousedown", dragStart);
   slider.addEventListener("mousemove", dragging);

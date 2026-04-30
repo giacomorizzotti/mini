@@ -23051,6 +23051,9 @@ body.scroll .top-hidden, body.scroll .scroll-shown {
   left: 0;
   z-index: 0;
 }
+.slider-wrapper .slider .slide.active > .caption {
+  position: relative;
+}
 
 #black-layer {
   position: fixed;
