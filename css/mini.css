@@ -23028,7 +23028,7 @@ body.scroll .top-hidden, body.scroll .scroll-shown {
   margin: 0;
   padding: 0;
 }
-.slider-wrapper .slider .slide .img, .slider-wrapper .slider .slide .wp-block-image {
+.slider-wrapper .slider .slide > .img, .slider-wrapper .slider .slide > .wp-block-image {
   position: absolute;
   display: block;
   top: 0;
@@ -23037,12 +23037,12 @@ body.scroll .top-hidden, body.scroll .scroll-shown {
   left: 0;
   z-index: 0;
 }
-.slider-wrapper .slider .slide .img img, .slider-wrapper .slider .slide .wp-block-image img {
+.slider-wrapper .slider .slide > .img img, .slider-wrapper .slider .slide > .wp-block-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.slider-wrapper .slider .slide .caption {
+.slider-wrapper .slider .slide > .caption {
   position: absolute;
   display: block;
   top: 0;
