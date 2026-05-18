@@ -283,9 +283,26 @@ nav#social-menu ul {
 }
 
 // language menu
-ul#lang-menu {
-  flex-flow: row wrap;
-  li.item, li.menu-item {
-    display: inline-block;
+nav#lang-menu {
+  ul.menu {
+    flex-flow: row wrap;
+    li.item, li.menu-item {
+      margin: 0 calc(var(--margin) * 0.5);
+      display: inline-block;
+      background: var(--white);
+      &.active {
+        background: var(--black);
+        a {
+          color: var(--white);
+          background-color: transparent;
+          &:after {
+            background-color: var(--white);
+          }
+        }
+      }
+      a {
+        line-height: 1.2;
+      }
+    }
   }
 }

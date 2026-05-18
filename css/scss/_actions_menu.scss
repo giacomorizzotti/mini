@@ -95,7 +95,8 @@
         top: 0;
         left: 0;
         transform: translate(0, -100%);
-        width: 100%;
+        //width: 100%;
+        width: auto;
         height: auto;
         padding: calc(var(--padding)* 0.5) var(--padding);
         display: flex;

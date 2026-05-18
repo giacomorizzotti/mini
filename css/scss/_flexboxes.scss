@@ -136,6 +136,10 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
   &-shrink{
     flex-grow: 0 1 auto!important;
   }
+
+  &-noshrink{
+    flex-shrink: 0!important;
+  }
   
 }
 

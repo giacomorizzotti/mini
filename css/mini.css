@@ -7575,6 +7575,9 @@ body section {
 .flex-shrink {
   flex-grow: 0 1 auto !important;
 }
+.flex-noshrink {
+  flex-shrink: 0 !important;
+}
 
 .justify-content-start {
   justify-content: flex-start !important;
@@ -11694,11 +11697,26 @@ nav#social-menu ul {
   flex-flow: row wrap;
 }
 
-ul#lang-menu {
+nav#lang-menu ul.menu {
   flex-flow: row wrap;
 }
-ul#lang-menu li.item, ul#lang-menu li.menu-item {
+nav#lang-menu ul.menu li.item, nav#lang-menu ul.menu li.menu-item {
+  margin: 0 calc(var(--margin) * 0.5);
   display: inline-block;
+  background: var(--white);
+}
+nav#lang-menu ul.menu li.item.active, nav#lang-menu ul.menu li.menu-item.active {
+  background: var(--black);
+}
+nav#lang-menu ul.menu li.item.active a, nav#lang-menu ul.menu li.menu-item.active a {
+  color: var(--white);
+  background-color: transparent;
+}
+nav#lang-menu ul.menu li.item.active a:after, nav#lang-menu ul.menu li.menu-item.active a:after {
+  background-color: var(--white);
+}
+nav#lang-menu ul.menu li.item a, nav#lang-menu ul.menu li.menu-item a {
+  line-height: 1.2;
 }
 
 header#header #menu-toggle {
@@ -11943,7 +11961,7 @@ body.scroll header#header.scroll-neg #page-menu ul li.item a, body.scroll header
   top: 0;
   left: 0;
   transform: translate(0, -100%);
-  width: 100%;
+  width: auto;
   height: auto;
   padding: calc(var(--padding) * 0.5) var(--padding);
   display: flex;
