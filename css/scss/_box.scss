@@ -57,6 +57,7 @@ $breakpoints: (
       $index: index(map-keys($breakpoints), $breakpoint);
       $width: nth($widths, 5);
       &-#{$breakpoint}-#{$label} {
+        @extend .box;
         @include respond($breakpoint) {
           $ratio: math.div($width, 1%);
           $gapFactor: 100 - $ratio;

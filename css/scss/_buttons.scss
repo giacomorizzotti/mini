@@ -141,8 +141,8 @@ button, .btn, .button {
     border-color: var(--button-hover-border-color);
     &.clicked, &.active {
       color: var(--button-text-color);
-      background: var(--button-background-color);
       background-color: transparent;
+      background-color: var(--button-background-color);
       border-color: var(--button-border-color);
     }
   }

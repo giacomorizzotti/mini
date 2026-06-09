@@ -337,7 +337,8 @@ $gradients:
   "third" (var(--third-color) 0%, var(--third-color-dark) 100%),
   "fourth" (var(--fourth-color) 0%, var(--fourth-color-dark) 100%),
   "fw-down-w" (var(--white) 0%, var(--false-white) 100%),
-  "fw-up-w" (var(--false-white) 0%, var(--white) 100%);
+  "fw-up-w" (var(--false-white) 0%, var(--white) 100%),
+  "uwa" (var(--uwa-color) 0%, var(--uwa-second-color) 100%);
 
 $grainy-gradients:
   "1-to-2" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%),
