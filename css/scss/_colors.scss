@@ -99,11 +99,11 @@ $colors: //color name, color code, text color over color
       line-height: 0.8;
       border: 1px solid $colorcode;
       &.S, .S & {
-        padding: calc(var(--padding) * 0.4) calc(var(--padding) * 0.4)!important;
+        padding: calc(var(--padding) * 0.4) calc(var(--padding) * 0.75);
         margin: 0 4px 4px 0;
       }
       &.XS, .XS & {
-        padding: calc(var(--padding) * 0.2) calc(var(--padding) * 0.2)!important;
+        padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
         margin: 0 4px 2px 0;
       }
       &-hover {

@@ -70,12 +70,13 @@ $colors: //color name, color code, text color over color
       --button-hover-background-color: #{$colortext}!important;
       --button-hover-border-color: #{$colorcode}!important;
       &-invert, &-inv, &-negative, &-neg {
-      --button-text-color: #{$colorcode}!important;
-      --button-background-color: #{$colortext}!important;
-      --button-border-color: #{$colorcode}!important;
-      --button-hover-text-color: #{$colortext}!important;
-      --button-hover-background-color: #{$colorcode}!important;
-      --button-hover-border-color: #{$colorcode}!important;
+        @extend button, .btn, .button !optional;
+        --button-text-color: #{$colorcode}!important;
+        --button-background-color: #{$colortext}!important;
+        --button-border-color: #{$colorcode}!important;
+        --button-hover-text-color: #{$colortext}!important;
+        --button-hover-background-color: #{$colorcode}!important;
+        --button-hover-border-color: #{$colorcode}!important;
       }
     }
   }
