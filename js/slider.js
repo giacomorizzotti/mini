@@ -1,10 +1,16 @@
 /* Created by Tivotal */
 
-let slider = document.querySelector(".slider");
-if (slider && !slider.classList.contains("single")) {
-  let btns = document.querySelectorAll("i.slider-controls");
+document.querySelectorAll(".slider").forEach((slider) => {
+  if (slider.classList.contains("single")) return;
+
+  // Match this slider to its own prev/next buttons via the shared id suffix
+  // (slider-{id} / slider-prev-{id} / slider-next-{id}), so multiple
+  // slideshows on the same page stay independent.
+  let idSuffix = slider.id.replace(/^slider-/, "");
+  let prevBtn = document.getElementById("slider-prev-" + idSuffix);
+  let nextBtn = document.getElementById("slider-next-" + idSuffix);
+
   let sliderChildren = [...slider.children];
-  //let wrapper = document.querySelector(".slider-wrapper");
 
   //getting slide width
   let slideWidth = slider.querySelector(".slide").offsetWidth;
@@ -30,12 +36,17 @@ if (slider && !slider.classList.contains("single")) {
     slider.insertAdjacentHTML("beforeend", slide.outerHTML);
   });
 
-  btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      //if the clicked button id is left scrolling slider towards left by slide width else towards right by slide width
-      slider.scrollLeft += btn.id == "left" ? -slideWidth : slideWidth;
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      slider.scrollLeft -= slideWidth;
     });
-  });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      slider.scrollLeft += slideWidth;
+    });
+  }
 
   let dragStart = (e) => {
     isDragging = true;
@@ -64,10 +75,10 @@ if (slider && !slider.classList.contains("single")) {
     //calculate which slide is currently active based on scroll position
     let currentIndex = Math.round(slider.scrollLeft / slideWidth);
     let slides = slider.querySelectorAll(".slide");
-    
+
     //remove active class from all slides
     slides.forEach((slide) => slide.classList.remove("active"));
-    
+
     //add active class to current slide
     if (slides[currentIndex]) {
       slides[currentIndex].classList.add("active");
@@ -121,4 +132,4 @@ if (slider && !slider.classList.contains("single")) {
   //auto play will be active only when there is no hover on slider
   slider.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   slider.addEventListener("mouseleave", autoPlay);
-}
+});
