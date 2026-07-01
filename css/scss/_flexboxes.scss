@@ -130,7 +130,7 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
   }
 
   &-grow{
-    flex: 1!important;
+    flex-grow: 1!important;
   }
 
   &-shrink{

@@ -46,29 +46,29 @@
 
   --main-color: #12616D;
   --main-color-dark: #08363d;
-  --main-color-transp: #20836625;
+  --main-color-transp: #08363d25;
 
-  --second-color: #1B5B88;
-  --second-color-dark: #112a3b;
+  --second-color: rgb(15 90 135);
+  --second-color-dark: rgb(10 45 70);
 
-  --third-color: #fe6262;
-  --third-color-dark: #991c1c;
+  --third-color: rgb(254, 98, 98);
+  --third-color-dark: rgb(151, 28, 28);
 
-  --fourth-color: #653EAC;
-  --fourth-color-dark: #28134d;
+  --fourth-color: rgb(80 80 180);
+  --fourth-color-dark: rgb(40 40 100);
 
-  --link-color: #25B1A0;
-  --link-hover-color: #146158;
+  --link-color: rgb(25 170 188);
+  --link-hover-color: rgb(15 105 115);
 
-  --info: #4db8ad;
-  --success: #91c86a;
-  --warning: #f1b617;
-  --danger: #de4e4e;
-  --bad: #c3172f; 
+  --info: rgb(105 140 190);
+  --success: rgb(120 170 150);
+  --warning: rgb(230 160 100);
+  --danger: rgb(235 105 115);
+  --bad: rgb(175 75 100); 
 
-  --acid-green: #C2F261;
+  --acid-green: rgb(205 225 90);
   --stars-color: #ffffff80;
-  --gingerbread: #54494b;
+  --gingerbread: rgb(85 60 75);
   --pulse-color: var(--link-color);
 
   --theme-color: var(--main-color);
