@@ -5,7 +5,7 @@
   align-items: stretch;
   transition: padding 0.2s ease-out;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: clip;
   background: var(--fourth-color-dark);
   @media only screen and (min-width: 992px) {
     flex-flow: row wrap;

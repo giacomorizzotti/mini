@@ -1,12 +1,15 @@
 // header
 header#header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   right: 0;
   left: 0;
   z-index: 99;
   transition: transform 0.25s ease-out;
+  &.fixed {
+    position: fixed;  
+  }
   &.open-menu, &.open {
     position: relative;
     flex-basis: 100%;

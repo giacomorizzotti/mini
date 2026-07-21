@@ -87,6 +87,17 @@ $colors: //color name, color code, text color over color
         --button-hover-background-color: #{$activecolorcode}!important;
         --button-hover-border-color: #{$activecolorcode}!important;
       }
+      &-hover {
+        @extend button, .btn, .button !optional;
+        &:hover {
+          --button-text-color: #{$colortext}!important;
+          --button-background-color: #{$colorcode}!important;
+          --button-border-color: #{$colorcode}!important;
+          --button-hover-text-color: #{$colortext}!important;
+          --button-hover-background-color: #{$activecolorcode}!important;
+          --button-hover-border-color: #{$activecolorcode}!important;
+        }
+      }
     }
   }
 }

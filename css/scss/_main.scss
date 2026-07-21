@@ -6,7 +6,7 @@
     background: var(--white);
     transition: flex 0.2s ease-out, border-radius 0.2s ease-out, box-shadow 0.2s ease-out;
     flex: 10;
-    overflow: hidden;
+    overflow: clip;
     min-width: 1px;
     @media only screen and (min-width: 992px) {
       order: 2;
