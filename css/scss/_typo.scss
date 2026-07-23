@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, label {
   &.serif, &.text-serif {
     font-family: var(--font-serif);
   }
-  &.handwriting, &.text-serif {
+  &.handwriting, &.text-handwriting {
     font-family: var(--font-handwriting);
   }
   &.mono, &.text-mono {
