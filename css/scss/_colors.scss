@@ -162,111 +162,50 @@ $colors: //color name, color code, text color over color
       }
     }
     // bubbles
+    // $bubble-sizes: suffix -> alignment offset. Two sizes share identical direction logic.
+    $bubble-sizes: ('': calc(var(--margin) * 2), '-s': var(--margin));
     &-bubble {
-      &:after {
+      &::after {
         content: "";
         width: 0;
         height: 0;
         position: absolute;
+        border-left: var(--baseline) solid transparent;
+        border-right: var(--baseline) solid transparent;
+        border-bottom: calc(var(--baseline) * 1.25) solid $colorcode;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
       }
-      &-top {
+      &-s {
+        @extend .#{$colorname}-bubble !optional;
         &::after {
-          @extend .#{$colorname}-bubble !optional;
-          border-left: var(--baseline) solid transparent;
-          border-right: var(--baseline) solid transparent;
-          border-bottom: calc(var(--baseline)* 1.25) solid $colorcode;
-          top: 0;
-          left: 50%;
-          transform: translate(-50%, -100%);
-        }
-        &-s {
-          &::after {
-            @extend .#{$colorname}-bubble !optional;
-            border-left: calc(var(--baseline) * 0.5) solid transparent;
-            border-right: calc(var(--baseline) * 0.5) solid transparent;
-            border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid $colorcode;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -100%);
-          }
-          &-left {
-            &::after {
-              @extend .#{$colorname}-bubble-top-s !optional;
-              left: calc(var(--margin)* 1);
-              transform: translate(0, -100%);
-            }
-          }
-          &-right {
-            &::after {
-              @extend .#{$colorname}-bubble-top-s !optional;
-              right: calc(var(--margin)* 1);
-              transform: translate(0, -100%);
-            }
-          }
-        }
-        &-left {
-          &::after {
-            @extend .#{$colorname}-bubble-top !optional;
-            left: calc(var(--margin)* 2);
-            transform: translate(0, -100%);
-          }
-        }
-        &-right {
-          &::after {
-            @extend .#{$colorname}-bubble-top !optional;
-            right: calc(var(--margin)* 2);
-            transform: translate(0, -100%);
-          }
+          content: "";
+          border-left: calc(var(--baseline) * 0.5) solid transparent;
+          border-right: calc(var(--baseline) * 0.5) solid transparent;
+          border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid $colorcode;
         }
       }
-      &-bottom {
-        &::after {
-          @extend .#{$colorname}-bubble !optional;
-          border-top: calc(var(--baseline)* 1.25) solid $colorcode;
-          border-left: var(--baseline) solid transparent;
-          border-right: var(--baseline) solid transparent;
-          top: 100%;
-          left: 50%;
-          transform: translate(-50%, 0);
+      @each $sfx, $off in $bubble-sizes {
+        &#{$sfx}-top {
+          &::after { @extend .#{$colorname}-bubble#{$sfx} !optional; top: 0; left: 50%; transform: translate(-50%, -100%); }
+          &-left::after  { @extend .#{$colorname}-bubble#{$sfx}-top !optional; left: $off; right: auto; }
+          &-right::after { @extend .#{$colorname}-bubble#{$sfx}-top !optional; right: $off; left: auto; }
         }
-        &-s {
-          &::after {
-            @extend .#{$colorname}-bubble !optional;
-            border-top: calc(var(--baseline) * 0.5 * 1.25) solid $colorcode;
-            border-left: calc(var(--baseline) * 0.5) solid transparent;
-            border-right: calc(var(--baseline) * 0.5) solid transparent;
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%, 0);
-          }
-          &-left {
-            &::after {
-              @extend .#{$colorname}-bubble-bottom-s !optional;
-              left: calc(var(--margin)* 0.5);
-              transform: translate(100%, 0);
-            }
-          }
-          &-right {
-            &::after {
-              @extend .#{$colorname}-bubble-bottom-s !optional;
-              right: calc(var(--margin)* 0.5);
-              transform: translate(-100%, 0);
-            }
-          }
+        &#{$sfx}-bottom {
+          &::after { @extend .#{$colorname}-bubble#{$sfx} !optional; top: 100%; left: 50%; transform: translate(-50%, 0) rotate(180deg); }
+          &-left::after  { @extend .#{$colorname}-bubble#{$sfx}-bottom !optional; left: $off; right: auto; transform: rotate(180deg); }
+          &-right::after { @extend .#{$colorname}-bubble#{$sfx}-bottom !optional; right: $off; left: auto; transform: rotate(180deg); }
         }
-        &-left {
-          &::after {
-            @extend .#{$colorname}-bubble-bottom !optional;
-            left: calc(var(--margin)* 2);
-            transform: none;
-          }
+        &#{$sfx}-left {
+          &::after { @extend .#{$colorname}-bubble#{$sfx} !optional; top: 50%; left: 0%; transform: translate(-80%, 0) rotate(270deg); }
+          &-top::after    { @extend .#{$colorname}-bubble#{$sfx}-left !optional; top: $off; bottom: auto; }
+          &-bottom::after { @extend .#{$colorname}-bubble#{$sfx}-left !optional; top: auto; bottom: $off; }
         }
-        &-right {
-          &::after {
-            @extend .#{$colorname}-bubble-bottom !optional;
-            right: calc(var(--margin)* 2);
-            transform: none;
-          }
+        &#{$sfx}-right {
+          &::after { @extend .#{$colorname}-bubble#{$sfx} !optional; top: 50%; right: 0%; left: auto; transform: translate(80%, 0) rotate(90deg); }
+          &-top::after    { @extend .#{$colorname}-bubble#{$sfx}-right !optional; top: $off; bottom: auto; }
+          &-bottom::after { @extend .#{$colorname}-bubble#{$sfx}-right !optional; top: auto; bottom: $off; }
         }
       }
     }
