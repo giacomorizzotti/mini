@@ -72,7 +72,8 @@ $colors: //color name, color code, text color over color
       &-invert, &-inv, &-negative, &-neg {
         @extend button, .btn, .button !optional;
         --button-text-color: #{$colorcode}!important;
-        --button-background-color: #{$colortext}!important;
+        //--button-background-color: #{$colortext}!important;
+        --button-background-color: transparent!important;
         --button-border-color: #{$colorcode}!important;
         --button-hover-text-color: #{$colortext}!important;
         --button-hover-background-color: #{$activecolorcode}!important;

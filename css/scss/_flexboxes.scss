@@ -221,36 +221,34 @@ $multiplier: "0" 0, "05" 0.5, "1" 1, "15" 1.5, "2" 2, "3" 3, "4" 4, "5" 5, "10" 
       }
 
       // Order
-      .order {
-        @each $order in $orders {
-          &-#{$order} {
-            order: #{$order};
-          }
+      @each $order in $orders {
+        @at-root .#{$breakpoint}-order-#{$order} {
+          order: #{$order}!important;
         }
       }
 
       // Gap
-      .gap, .g {
-        --gap-x: calc( var(--basic-gap) * 1 );
-        --gap-y: calc( var(--basic-gap) * 1 );
-        @each $gap-label, $gap in $multiplier {
-          &-#{$gap-label} {
+      @at-root {
+        .#{$breakpoint}-gap,
+        .#{$breakpoint}-g {
+          --gap-x: calc( var(--basic-gap) * 1 );
+          --gap-y: calc( var(--basic-gap) * 1 );
+        }
+      }
+      @each $gap-label, $gap in $multiplier {
+        @at-root {
+          .#{$breakpoint}-gap-#{$gap-label},
+          .#{$breakpoint}-g-#{$gap-label} {
             --gap-x: calc( var(--basic-gap) * #{$gap} )!important;
             --gap-y: calc( var(--basic-gap) * #{$gap} )!important;
           }
-        }
-        &y, &-y {
-          @each $gap-label, $gap in $multiplier {
-            &-#{$gap-label} {
-              --gap-y: calc( var(--basic-gap) * #{$gap} )!important;
-            }
+          .#{$breakpoint}-gapy-#{$gap-label},
+          .#{$breakpoint}-gap-y-#{$gap-label} {
+            --gap-y: calc( var(--basic-gap) * #{$gap} )!important;
           }
-        }
-        &x, &-x {
-          @each $gap-label, $gap in $multiplier {
-            &-#{$gap-label} {
-              --gap-x: calc( var(--basic-gap) * #{$gap} )!important;
-            }
+          .#{$breakpoint}-gapx-#{$gap-label},
+          .#{$breakpoint}-gap-x-#{$gap-label} {
+            --gap-x: calc( var(--basic-gap) * #{$gap} )!important;
           }
         }
       }
