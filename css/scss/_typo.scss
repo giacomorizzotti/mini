@@ -76,27 +76,27 @@ html {
 // super small text
 .XS, .xs {
   font-size: calc(var(--p) * 0.7)!important;
-  line-height: calc(var(--p) * 1)!important;
+  line-height: calc(var(--p) * 1);
 }
 // small text
 .S, .s {
   font-size: calc(var(--p) * 0.85)!important;
-  line-height: calc(var(--p) * 1.25)!important;
+  line-height: calc(var(--p) * 1.25);
 }
 // large text
 .L, .l {
   font-size: calc(var(--p) * 1.25)!important;
-  line-height: calc(var(--p) * 2)!important;
+  line-height: calc(var(--p) * 2);
 }
 // extra large text
 .XL, .xl {
   font-size: calc(var(--p) * 1.5)!important;
-  line-height: calc(var(--p) * 2.5)!important;
+  line-height: calc(var(--p) * 2.5);
 }
 // extra extra large text
 .XXL, .xxl {
   font-size: calc(var(--p) * 2)!important;
-  line-height: calc(var(--p) * 2.75)!important;
+  line-height: calc(var(--p) * 2.75);
 }
 // big text
 .big {
@@ -440,14 +440,42 @@ blockquote {
   color: var(--light-grey);
 }
 
+// textbox
+.text-box {
+  display: inline-block;
+  background: var(--main-color);
+  color: var(--white);
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
+  display: inline-block;
+  line-height: 0.8!important;
+  vertical-align: text-bottom;
+  border: 1px solid var(--main-color);
+}
+
 // flags
 .flag {
   display: inline-block;
   font-size: calc(var(--p) * 0.65);
-  line-height: 1;
+  line-height: 0.8!important;
   padding: calc(var(--padding) * 0.25);
   vertical-align: top;
-  transform: translate(0, calc(var(--baseline) * -0.25));
+  //transform: translate(0, calc(var(--baseline) * -0.25));
+  border: 1px solid var(--main-color);
+}
+
+// chips
+.chip {
+  display: inline-block;
+  font-size: calc(var(--p) * 0.85);
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  line-height: 0.8!important;
+  vertical-align: text-bottom;
+  background: var(--main-color);
+  color: var(--white);
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
+  border: 1px solid var(--main-color);
 }
 
 // desc text

@@ -1,135 +1,111 @@
-/* Created by Tivotal */
+/* Created by Tivotal — updated */
 
 document.querySelectorAll(".slider").forEach((slider) => {
   if (slider.classList.contains("single")) return;
 
-  // Match this slider to its own prev/next buttons via the shared id suffix
-  // (slider-{id} / slider-prev-{id} / slider-next-{id}), so multiple
-  // slideshows on the same page stay independent.
-  let idSuffix = slider.id.replace(/^slider-/, "");
-  let prevBtn = document.getElementById("slider-prev-" + idSuffix);
-  let nextBtn = document.getElementById("slider-next-" + idSuffix);
+  // Match to prev/next buttons via shared ID suffix
+  // (slider-{id} / slider-prev-{id} / slider-next-{id})
+  const idSuffix   = slider.id.replace(/^slider-/, "");
+  const prevBtn    = document.getElementById("slider-prev-" + idSuffix);
+  const nextBtn    = document.getElementById("slider-next-" + idSuffix);
 
-  let sliderChildren = [...slider.children];
+  // Enable auto-play by adding data-autoplay to the slider element
+  const isAutoPlay = slider.hasAttribute("data-autoplay");
 
-  //getting slide width
-  let slideWidth = slider.querySelector(".slide").offsetWidth;
-  let isDragging = false,
-    startX,
-    startScrollLeft,
-    isAutoPlay = false,
-    timeoutId;
-
-  //getting number of slides can fit in slider at once
+  const sliderChildren = [...slider.children];
+  let slideWidth    = slider.querySelector(".slide").offsetWidth;
   let slidesPerView = Math.round(slider.offsetWidth / slideWidth);
+  let isDragging    = false, startX, startScrollLeft, timeoutId;
 
-  //inserting copied few last slides to beggining of slider for infinite scrolling
-  sliderChildren
-    .slice(-slidesPerView)
-    .reverse()
-    .forEach((slide) => {
-      slider.insertAdjacentHTML("afterbegin", slide.outerHTML);
-    });
-
-  //inserting copied few first slides to end of the slider for infinite scrolling
+  // Clone last N slides to start + first N slides to end for infinite scrolling
+  sliderChildren.slice(-slidesPerView).reverse().forEach((slide) => {
+    slider.insertAdjacentHTML("afterbegin", slide.outerHTML);
+  });
   sliderChildren.slice(0, slidesPerView).forEach((slide) => {
     slider.insertAdjacentHTML("beforeend", slide.outerHTML);
   });
 
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      slider.scrollLeft -= slideWidth;
-    });
-  }
+  // Position past the leading clones so the first real slide is visible
+  slider.scrollLeft = slideWidth * slidesPerView;
 
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      slider.scrollLeft += slideWidth;
-    });
-  }
+  // ── Resize ────────────────────────────────────────────────────────────────
+  // Keep slideWidth and slidesPerView in sync when the slider changes size
+  new ResizeObserver(() => {
+    slideWidth    = slider.querySelector(".slide").offsetWidth;
+    slidesPerView = Math.round(slider.offsetWidth / slideWidth);
+  }).observe(slider);
 
-  let dragStart = (e) => {
-    isDragging = true;
+  // ── Navigation ────────────────────────────────────────────────────────────
+  if (prevBtn) prevBtn.addEventListener("click", () => { slider.scrollLeft -= slideWidth; });
+  if (nextBtn) nextBtn.addEventListener("click", () => { slider.scrollLeft += slideWidth; });
 
-    slider.classList.add("dragging");
-
-    //recording initial cursor and scroll position
-    startX = e.pageX;
+  // ── Mouse drag ────────────────────────────────────────────────────────────
+  // mouseup goes on document so dragging survives the cursor leaving the slider.
+  // { once: true } prevents accumulating one handler per slider on document.
+  const dragStart = (e) => {
+    isDragging      = true;
+    startX          = e.pageX;
     startScrollLeft = slider.scrollLeft;
+    slider.classList.add("dragging");
+    document.addEventListener("mouseup", dragStop, { once: true });
   };
 
-  let dragging = (e) => {
-    //returning here if the isDragging value is false
+  const dragging = (e) => {
     if (!isDragging) return;
-
-    //scrolling slider according to mouse cursor
     slider.scrollLeft = startScrollLeft - (e.pageX - startX);
   };
 
-  let dragStop = () => {
+  const dragStop = () => {
     isDragging = false;
     slider.classList.remove("dragging");
   };
 
-  let updateActiveSlide = () => {
-    //calculate which slide is currently active based on scroll position
-    let currentIndex = Math.round(slider.scrollLeft / slideWidth);
-    let slides = slider.querySelectorAll(".slide");
+  slider.addEventListener("mousedown", dragStart);
+  slider.addEventListener("mousemove", dragging);
 
-    //remove active class from all slides
+  // ── Touch ─────────────────────────────────────────────────────────────────
+  // The slider is a native scroll container, so touch-swipe works automatically.
+  // We only need to apply/remove the dragging class for CSS transitions.
+  slider.addEventListener("touchstart", () => slider.classList.add("dragging"),   { passive: true });
+  slider.addEventListener("touchend",   () => slider.classList.remove("dragging"), { passive: true });
+
+  // ── Active slide ──────────────────────────────────────────────────────────
+  const updateActiveSlide = () => {
+    const currentIndex = Math.round(slider.scrollLeft / slideWidth);
+    const slides = slider.querySelectorAll(".slide");
     slides.forEach((slide) => slide.classList.remove("active"));
-
-    //add active class to current slide
-    if (slides[currentIndex]) {
-      slides[currentIndex].classList.add("active");
-    }
+    if (slides[currentIndex]) slides[currentIndex].classList.add("active");
   };
 
-  let infiniteScroll = () => {
-    //if the slider is at begining, scroll to end
-    //else slider at end , scroll to beginning
-    if (slider.scrollLeft === 0) {
+  // ── Infinite scroll ───────────────────────────────────────────────────────
+  const infiniteScroll = () => {
+    // Use <= / >= instead of strict equality to handle sub-pixel scrollLeft values
+    if (slider.scrollLeft <= 0) {
       slider.classList.add("no-transition");
       slider.scrollLeft = slider.scrollWidth - 2 * slider.offsetWidth;
       slider.classList.remove("no-transition");
-    } else if (
-      Math.ceil(slider.scrollLeft) ===
-      slider.scrollWidth - slider.offsetWidth
-    ) {
+    } else if (Math.ceil(slider.scrollLeft) >= slider.scrollWidth - slider.offsetWidth) {
       slider.classList.add("no-transition");
       slider.scrollLeft = slider.offsetWidth;
       slider.classList.remove("no-transition");
     }
-
-    //update active slide
     updateActiveSlide();
-
-    //clearing timeout & starting auto play if the mouse is not hovering the slider
     clearTimeout(timeoutId);
     if (!slider.matches(":hover")) autoPlay();
   };
 
-  let autoPlay = () => {
-    //if the device is not mobile or tab, enabling auto play
-    if (window.innerWidth < 800 || !isAutoPlay) return; //returning if the device is not desktop & isAutoPlay is false
-
-    //autoplaying the slider after every 2500 ms
-    timeoutId = setTimeout(() => {
-      slider.scrollLeft += slideWidth;
-    }, 2500);
+  // ── Auto-play ─────────────────────────────────────────────────────────────
+  // Activate with data-autoplay on the slider element.
+  // Automatically pauses below 768px and on hover.
+  const autoPlay = () => {
+    if (!isAutoPlay || window.innerWidth < 768) return;
+    timeoutId = setTimeout(() => { slider.scrollLeft += slideWidth; }, 2500);
   };
 
-  autoPlay();
-
-  //set initial active slide
-  updateActiveSlide();
-
-  slider.addEventListener("mousedown", dragStart);
-  slider.addEventListener("mousemove", dragging);
-  document.addEventListener("mouseup", dragStop);
-  slider.addEventListener("scroll", infiniteScroll);
-
-  //auto play will be active only when there is no hover on slider
+  slider.addEventListener("scroll",     infiniteScroll, { passive: true });
   slider.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   slider.addEventListener("mouseleave", autoPlay);
+
+  autoPlay();
+  updateActiveSlide();
 });

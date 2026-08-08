@@ -89,48 +89,132 @@ $colors: //color name, color code, text color over color
         }
       }
     }
-    // text boxes
-    &-box {
-      background: $colorcode!important;
-      color: $colortext;
-      padding: calc(var(--padding) * 1);
+    // text box
+    &-box, &-text-box {
       display: inline-block;
-      margin: 0 calc(var(--margin) * 0.25) calc(var(--margin) * 0.25) calc(var(--margin) * 0.25);
-      line-height: 0.8;
+      background: $colorcode;
+      color: $colortext;
+      padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.25);
+      display: inline-block;
+      vertical-align: text-bottom;
+      line-height: 0.8!important;
       border: 1px solid $colorcode;
-      &.S, .S & {
-        padding: calc(var(--padding) * 0.4) calc(var(--padding) * 0.75);
-        margin: 0 4px 4px 0;
-      }
-      &.XS, .XS & {
-        padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
-        margin: 0 4px 2px 0;
-      }
       &-hover {
         &:hover {
-          @extend .#{$colorname}-box !optional;
-          background: $colortext!important;
+          @extend .#{$colorname}-text-box !optional;
+          background: $colortext;
+          border: 1px solid $colortext;
           color: $colorcode;
         }
       }
       &-clicked {
         &.clicked {
-          @extend .#{$colorname}-box !optional;
-          background: $colortext!important;
+          @extend .#{$colorname}-text-box !optional;
+          background: $colortext;
+          border: 1px solid $colortext;
           color: $colorcode;
         }
       }
       &-active {
-          &.active {
-          @extend .#{$colorname}-box !optional;
-            background: $colortext!important;
-            color: $colorcode;
+        &.active {
+          @extend .#{$colorname}-text-box !optional;
+          background: $colortext;
+          border: 1px solid $colortext;
+          color: $colorcode;
         }
       }
       &-invert {
-        @extend .#{$colorname}-box !optional;
-        background: $colortext!important;
+        @extend .#{$colorname}-text-box !optional;
+        background: $colortext;
+        border: 1px solid $colortext;
         color: $colorcode;
+      }
+    }
+    // chips
+    &-chip {
+      display: inline-block;
+      font-size: calc(var(--p) * 0.85);
+      -webkit-border-radius: 999px;
+      -moz-border-radius: 999px;
+      border-radius: 999px;
+      line-height: 0.8!important;
+      vertical-align: text-bottom;
+      background: $colorcode;
+      color: $colortext;
+      padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
+      border: 1px solid $colorcode;
+      &-hover {
+        &:hover {
+          @extend .#{$colorname}-chip !optional;
+          background: $colortext;
+          border: 1px solid $colortext;
+          color: $colorcode;
+        }
+      }
+      &-clicked {
+        &.clicked {
+          @extend .#{$colorname}-chip !optional;
+          background: $colortext;
+          border: 1px solid $colortext;
+          color: $colorcode;
+        }
+      }
+      &-active {
+        &.active {
+          @extend .#{$colorname}-chip !optional;
+          background: $colortext;
+          border: 1px solid $colortext;
+          color: $colorcode;
+        }
+      }
+      &-invert {
+        @extend .#{$colorname}-chip !optional;
+        background: $colortext;
+        border: 1px solid $colortext;
+        color: $colorcode;
+      }
+    }
+    // flags
+    &-flag {
+      display: inline-block;
+      font-size: calc(var(--p) * 0.65);
+      line-height: 0.8!important;
+      padding: calc(var(--padding) * 0.25);
+      vertical-align: top;
+      background: $colorcode;
+      color: $colortext;
+      //transform: translate(0, calc(var(--baseline) * -0.25));
+      border: 1px solid var(--main-color);
+      border: 1px solid $colorcode;
+      &-hover {
+        &:hover {
+          @extend .#{$colorname}-flag !optional;
+          background: $colortext;
+          color: $colorcode;
+          border: 1px solid $colortext;
+        }
+      }
+      &-clicked {
+        &.clicked {
+          @extend .#{$colorname}-flag !optional;
+          background: $colortext;
+          color: $colorcode;
+          border: 1px solid $colortext;
+        }
+      }
+      &-active {
+        &.active {
+        @extend .#{$colorname}-flag !optional;
+          background: $colortext;
+          color: $colorcode;
+          border: 1px solid $colortext;
+        }
+      }
+      &-invert {
+        @extend .#{$colorname}-flag !optional;
+        background: $colortext;
+        color: $colorcode;
+        border: 1px solid $colortext;
       }
     }
     // backgrounds

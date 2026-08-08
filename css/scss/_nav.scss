@@ -1,41 +1,5 @@
 // MENUs STYLING
 
-// Small devices UP // 576px up
-$screen-sm: 576px;
-@mixin sm {
-   @media (min-width: #{$screen-sm}) {
-       @content;
-   }
-}
-// Medium devices UP // 768px up
-$screen-md: 768px;
-@mixin md {
-   @media (min-width: #{$screen-md}) {
-       @content;
-   }
-}
-// Large devices UP // 992px up
-$screen-lg: 992px;
-@mixin lg {
-   @media (min-width: #{$screen-lg}) {
-       @content;
-   }
-}
-// Extra large devices UP // 1200px up
-$screen-xl: 1200px;
-@mixin xl {
-   @media (min-width: #{$screen-xl}) {
-       @content;
-   }
-}
-// Extra large devices UP // 1200px up
-$screen-xxl: 1920px;
-@mixin xxl {
-   @media (min-width: #{$screen-xxl}) {
-       @content;
-   }
-}
-
 // header menus
 header#header {
   .menus {
@@ -48,48 +12,27 @@ header#header {
 
 // Menu open
 #sheet {
-  aside#side-right, aside#side-left {
-    nav.menu {
-      ul.menu {
-        li {
-          &.item, &.menu-item {
-            a {
-              color: var(--white);
-            }
-          }
-        }
-      }
-    }
-    &.inv, &.neg {
-      nav.menu {
-        ul.menu {
-          li {
-            &.item, &.menu-item {
-              a {
-                color: var(--false-black);
-              }
-            }
-          }
-        }
-      }
-    }
+  aside#side-right nav.menu a,
+  aside#side-left nav.menu a {
+    color: var(--white);
+  }
+  aside#side-right.inv nav.menu a, aside#side-right.neg nav.menu a,
+  aside#side-left.inv nav.menu a,  aside#side-left.neg nav.menu a {
+    color: var(--false-black);
   }
 }
 
 // menu
-nav.menu {
+nav {
   display: flex;
   margin: var(--margin) 0;
-  ul.menu {
+  ul, ul.menu {
     list-style-type: none;
     display: flex;
     margin: 0 0 calc( var(--margin) * 1 ) 0;
     padding: 0 var(--padding);
     flex-flow: column nowrap;
     width: 100%;
-    &.column {
-      flex-flow: column nowrap;
-    }
     &.row {
       flex-flow: row wrap;
     }
@@ -101,10 +44,10 @@ nav.menu {
       margin:0;
       background: transparent;
       padding:0;
-      @media only screen and (min-width: 576px) {
+      @include sm {
         font-size: var(--h5);
       }
-      @media only screen and (min-width: 768px) {
+      @include md {
         font-size: var(--p);
         padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
       }
@@ -113,11 +56,11 @@ nav.menu {
         position: relative;
         padding: var(--padding);
         margin: calc(var(--margin) * 0.5 ) 0;
-        @media only screen and (min-width: 576px) {
+        @include sm {
           padding: calc(var(--padding) * 0.75 );
           margin: calc(var(--margin) * 0.75 ) 0;
         }
-        @media only screen and (min-width: 768px) {
+        @include md {
           color: var(--black);
           display: inline-block;
           margin: 0;
@@ -134,7 +77,7 @@ nav.menu {
           left:0;
           transition: background-color 0.25s ease, width 0.25s ease;
           border-radius: 2px;
-          @media only screen and (min-width: 768px) {
+          @include md {
             background: var(--link-link-color);
           }
         }
@@ -142,14 +85,14 @@ nav.menu {
       &.active > a, &.selected > a, &.router-link-active > a, a.active, a.selected, a.router-link-active, &.current-menu-item > a, &.current-page-parent > a {
         background-color: var(--link-hover-color);
         color: var(--white);
-        @media only screen and (min-width: 768px) {
+        @include md {
           color: var(--link-hover-color);
           background-color: transparent;
         }
         &::after {
           width: 0;
           background-color: var(--link-hover-color);
-          @media only screen and (min-width: 768px) {
+          @include md {
             width: 100%;
             background-color: var(--link-hover-color);
           }
@@ -158,14 +101,14 @@ nav.menu {
       &:hover > a {
         background-color: var(--link-color);
         color: var(--white);
-        @media only screen and (min-width: 768px) {
+        @include md {
           color: var(--link-color);
           background-color: transparent;
         }
         &::after {
           width: 0;
           background-color: var(--link-color);
-          @media only screen and (min-width: 768px) {
+          @include md {
             width: 100%;
             background-color: var(--link-color);
           }
@@ -204,7 +147,7 @@ ul {
             a {
               color: var(--black);
               transform: translate(0,0);
-              padding-top: 0 calc( var(--padding) * 0.5 );
+              padding: 0 calc( var(--padding) * 0.5 );
             }
           }
         }
@@ -238,7 +181,7 @@ ul {
 }
 
 // main menu
-ul#main-menu {
+nav#main-menu ul, ul#main-menu {
   padding: var(--padding);
   @include md {
     padding: calc( var(--padding) * 2 ) var(--padding);
@@ -261,7 +204,7 @@ ul#main-menu {
 }
 
 // admin menu
-ul#admin-menu {
+nav#admin-menu ul, ul#admin-menu {
   margin: 0 calc(var(--margin)* 2) calc(var(--margin)* 2) calc(var(--margin)* 2);
   padding: var(--padding);
   background-color: var(--mini-color);

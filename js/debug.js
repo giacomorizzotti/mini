@@ -1,128 +1,146 @@
-// DEBUG
+// Mini Debug — developer overlay
+// Activated by adding ?debug to any URL
+//
+// Displays: device type, viewport size, breakpoint, pixel ratio,
+//           colour scheme, scroll position, device orientation (mobile).
+// Also intercepts console.error / console.warn and surfaces them
+// in the on-page #msg panel (see _debug.scss).
 
-var queryString = window.location.search
-var urlParams = new URLSearchParams(queryString)
-var GETdebug = urlParams.has('debug')
+(() => {
+  'use strict';
 
-if (GETdebug == true)
-    window.addEventListener('load', function() {
-        buildDebugBox()
-        updateDebugBoxData()
-    })
-    window.addEventListener('resize', function() {
-        updateDebugBoxData()
-    })
+  if (!new URLSearchParams(window.location.search).has('debug')) return;
 
-function buildDebugBox() {
-    var debugBox = document.createElement('div')
-    debugBox.id = 'debug-box'
-    document.body.appendChild(debugBox)
-    // debugBox | Title
-    let debugBoxWr = document.createElement("div");
-    debugBoxWr.setAttribute("class", "debug-data");
-    debugBox.appendChild(debugBoxWr);
-    let debugBoxP = document.createElement("p");
-    debugBoxP.setAttribute('class', 'S m-0 wh-text mono');
-    debugBoxP.innerHTML = '<i class="iconoir-jellyfish"></i> <span class="mini-text black">mini</span> debug';
-    debugBoxWr.appendChild(debugBoxP);
-    // debugBox | Device orientation
-    if (window.mobileCheck() == true) {
-        let deviceOrientationWr = document.createElement("div");
-        deviceOrientationWr.setAttribute("id", "device-orientation");
-        deviceOrientationWr.setAttribute("class", "debug-data");
-        debugBox.appendChild(deviceOrientationWr);
-        let deviceOrientationP = document.createElement("p");
-        deviceOrientationP.setAttribute('class', 'S m-0 wh-text mono');
-        deviceOrientationWr.appendChild(deviceOrientationP);
-    }
-    // debugBox | Mobile detection
-    let mobileDetectionWr = document.createElement("div");
-    mobileDetectionWr.setAttribute("id", "mobile-detection");
-    mobileDetectionWr.setAttribute("class", "debug-data");
-    debugBox.appendChild(mobileDetectionWr);
-    let mobileDetectionP = document.createElement("p");
-    mobileDetectionP.setAttribute('class', 'S m-0 wh-text mono');
-    mobileDetectionWr.appendChild(mobileDetectionP);
-    // debugBox | Screen size
-    let screenSizeWr = document.createElement("div");
-    screenSizeWr.setAttribute("id", "screen-size");
-    screenSizeWr.setAttribute("class", "debug-data");;
-    debugBox.appendChild(screenSizeWr);
-    let screenSizeP = document.createElement("p");
-    screenSizeP.setAttribute('class', 'S m-0 wh-text mono');
-    screenSizeWr.appendChild(screenSizeP);
-    // debugBox | Breakpoint indicator
-    let breakpointsWr = document.createElement("div");
-    breakpointsWr.setAttribute("id", "breakpoints");
-    breakpointsWr.setAttribute("class", "debug-data");
-    debugBox.appendChild(breakpointsWr);
-    let breakpointsP = document.createElement("p");
-    breakpointsP.setAttribute('class', 'S m-0 wh-text mono');
-    breakpointsWr.appendChild(breakpointsP);
-    // debugBox | Scroll indicator
-    let scrollWr = document.createElement("div");
-    scrollWr.setAttribute("id", "scroll-indicator");
-    scrollWr.setAttribute("class", "debug-data");
-    debugBox.appendChild(scrollWr);
-    let scrollP = document.createElement("p");
-    scrollP.setAttribute('class', 'S m-0 wh-text mono');
-    scrollWr.appendChild(scrollP);
-}
-function updateDebugBoxData() {
-    // Mobile detection
-    let mobileDetectionCont = document.querySelector('#mobile-detection > p');
-    if (émobileDetectionCont) {
-        if ( window.mobileCheck() == true ) {
-            mobileDetectionCont.innerHTML = '<span class="grey-text">dev</span> mobile';
-        } else {
-            mobileDetectionCont.innerHTML = '<span class="grey-text">dev</span> desktop';
-        }
-    }
-    // Screen size
-    let screenSizeCont = document.querySelector('#screen-size > p');
-    screenSizeCont.innerHTML = '<span class="grey-text">screen</span> '+window.innerWidth + '<span class="grTxt">x</span>' + window.innerHeight + '<span class="grTxt">px</span>';
-    // Breakpoint indicator
-    let breakpoint;
-    if ( window.innerWidth < 576 ) {
-        breakpoint = 'XS';
-    } else if ( window.innerWidth >= 576 && window.innerWidth < 768 ) {
-        breakpoint = 'S';
-    } else if ( window.innerWidth >= 768 && window.innerWidth < 992 ) {
-        breakpoint = 'M';
-    } else if ( window.innerWidth >= 992 && window.innerWidth < 1400 ) {
-        breakpoint = 'L';
-    } else if ( window.innerWidth >= 1400 && window.innerWidth < 1920 ) {
-        breakpoint = 'XL';
-    } else if ( window.innerWidth >= 1920 ) {
-        breakpoint = 'XXL';
-    }
-    let breakpointsCont = document.querySelector('#breakpoints > p');
-    breakpointsCont.innerHTML = '<span class="grey-text">bp</span> '+breakpoint;
-    
-    if (window.DeviceOrientationEvent) {
-        window.addEventListener("deviceorientation", function(event) {
-            // alpha: rotation around z-axis
-            var rotateDegrees = event.alpha;
-            // gamma: left to right
-            var leftToRight = event.gamma;
-            // beta: front back motion
-            var frontToBack = event.beta;
+  // Breakpoints — must match _breakpoints.scss
+  const BREAKPOINTS = [
+    { name: 'xxl', min: 1920 },
+    { name: 'xl',  min: 1200 },
+    { name: 'lg',  min: 992  },
+    { name: 'md',  min: 768  },
+    { name: 'sm',  min: 576  },
+    { name: 'xs',  min: 0    },
+  ];
 
-            if ( document.getElementById('device-orientation') ) {
-                let deviceOrientationCont = document.querySelector('#device-orientation > p');
-                deviceOrientationCont.innerHTML = '<span class="wh-text"><i class="fa fa-refresh" aria-hidden="true"></i> <i>alpha</i>:</span>' + Math.round(rotateDegrees) + ' <span class="wh-text"><i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-arrow-right" aria-hidden="true"></i> <i>gamma</i>:</span>' + Math.round(leftToRight) + ' <span class="wh-text"><i class="fa fa-arrow-up" aria-hidden="true"></i> <i class="fa fa-arrow-down" aria-hidden="true"></i> <i>beta</i>:</span>' + Math.round(frontToBack);
-            }
+  // ── Helpers ──────────────────────────────────────────────────────────────────
 
-        }, true);
-    }
-    
-    let scrollIndicatorCont = document.querySelector('#scroll-indicator > p');
-    scrollIndicatorCont.innerHTML = '<span class="grey-text">scroll</span> '+window.scrollY;
-    window.addEventListener('scroll', function() {
-        if ( document.getElementById('scroll-indicator') ) {
-            scrollIndicatorCont.innerHTML = '<span class="grey-text">scroll</span> '+window.scrollY;
-        }
-    })
-}
+  function getBreakpoint() {
+    return BREAKPOINTS.find(b => window.innerWidth >= b.min)?.name ?? 'xs';
+  }
 
-// END of DEBUG
+  function isMobile() {
+    return typeof window.mobileCheck === 'function'
+      ? window.mobileCheck()
+      : /Mobi|Android/i.test(navigator.userAgent);
+  }
+
+  function getTheme() {
+    return document.documentElement.dataset.theme
+        ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+
+  // ── Build ────────────────────────────────────────────────────────────────────
+
+  function makeRow(id) {
+    const wrap = document.createElement('div');
+    wrap.id = id;
+    wrap.className = 'debug-data';
+    const p = document.createElement('p');
+    p.className = 'S m-0 wh-text mono';
+    wrap.appendChild(p);
+    return wrap;
+  }
+
+  function buildDebugBox() {
+    const box = document.createElement('div');
+    box.id = 'debug-box';
+
+    // Title
+    const title = document.createElement('div');
+    title.className = 'debug-data';
+    title.innerHTML = '<p class="S m-0 wh-text mono">🐛 <span class="mini-text black">mini</span> debug</p>';
+    box.appendChild(title);
+
+    // Data rows
+    ['dbg-device', 'dbg-screen', 'dbg-bp', 'dbg-dpr', 'dbg-theme', 'dbg-scroll'].forEach(id => {
+      box.appendChild(makeRow(id));
+    });
+
+    // Orientation row — mobile only
+    if (isMobile()) box.appendChild(makeRow('dbg-orient'));
+
+    document.body.appendChild(box);
+  }
+
+  function buildMsgPanel() {
+    const panel = document.createElement('div');
+    panel.id = 'msg';
+    panel.innerHTML = `
+      <p class="label S mono grey-text">console</p>
+      <div id="errors"   class="danger-bg minified"><ul></ul></div>
+      <div id="warnings" class="warning-bg minified"><ul></ul></div>
+    `;
+    document.body.appendChild(panel);
+  }
+
+  // ── Update ───────────────────────────────────────────────────────────────────
+
+  function set(id, label, value) {
+    const row = document.getElementById(id);
+    if (!row) return;
+    row.querySelector('p').innerHTML =
+      `<span class="grey-text">${label}</span> ${value}`;
+  }
+
+  function update() {
+    set('dbg-device', 'dev',    isMobile() ? 'mobile' : 'desktop');
+    set('dbg-screen', 'screen', `${window.innerWidth}×${window.innerHeight}px`);
+    set('dbg-bp',     'bp',     getBreakpoint());
+    set('dbg-dpr',    'dpr',    window.devicePixelRatio);
+    set('dbg-theme',  'theme',  getTheme());
+    set('dbg-scroll', 'scroll', `${Math.round(window.scrollY)}px`);
+  }
+
+  // ── Orientation — wired once ─────────────────────────────────────────────────
+
+  function setupOrientation() {
+    if (!window.DeviceOrientationEvent || !document.getElementById('dbg-orient')) return;
+    window.addEventListener('deviceorientation', e => {
+      set('dbg-orient', 'orient',
+        `α${Math.round(e.alpha)} β${Math.round(e.beta)} γ${Math.round(e.gamma)}`);
+    }, { passive: true });
+  }
+
+  // ── Console interceptor ──────────────────────────────────────────────────────
+
+  function addMsg(panelId, text) {
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+    const li = document.createElement('li');
+    li.className = 'S wh-text mono';
+    li.textContent = text;
+    panel.querySelector('ul').appendChild(li);
+    panel.classList.remove('minified');
+  }
+
+  function interceptConsole() {
+    const _error = console.error.bind(console);
+    const _warn  = console.warn.bind(console);
+    console.error = (...args) => { _error(...args); addMsg('errors',   args.join(' ')); };
+    console.warn  = (...args) => { _warn(...args);  addMsg('warnings', args.join(' ')); };
+  }
+
+  // ── Init ─────────────────────────────────────────────────────────────────────
+
+  document.addEventListener('DOMContentLoaded', () => {
+    buildDebugBox();
+    buildMsgPanel();
+    update();
+    setupOrientation();
+    interceptConsole();
+  });
+
+  window.addEventListener('resize', update, { passive: true });
+  window.addEventListener('scroll', update, { passive: true });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', update);
+
+})();
