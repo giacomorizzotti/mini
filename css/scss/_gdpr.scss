@@ -29,7 +29,7 @@ body.consent-pending {
   flex-flow: row wrap;
   align-items: flex-start;
   gap: calc(var(--padding) * 0.5);
-  padding: calc(var(--padding) * 1.5);
+  padding: calc(var(--padding) * 2);
   background: var(--gingerbread);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -51,6 +51,7 @@ body.consent-pending {
 
   &.mini {
     display: flex;
+    gap: 0;
     padding: calc(var(--padding) * 0.5);
     width: auto;
     cursor: pointer;
@@ -63,9 +64,8 @@ body.consent-pending {
     }
 
     p.cookie-icon {
-      font-size: var(--h3);
-      line-height: calc(var(--h3) * 1.5);
       width: auto;
+      padding: calc(var(--padding) * 0.5)
     }
 
     .cookie-banner-content {
