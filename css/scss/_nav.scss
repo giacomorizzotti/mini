@@ -29,7 +29,7 @@ nav {
   ul, ul.menu {
     list-style-type: none;
     display: flex;
-    margin: 0 0 calc( var(--margin) * 1 ) 0;
+    margin: 0;
     padding: 0 var(--padding);
     flex-flow: column nowrap;
     width: 100%;
@@ -183,9 +183,6 @@ ul {
 // main menu
 nav#main-menu ul, ul#main-menu {
   padding: var(--padding);
-  @include md {
-    padding: calc( var(--padding) * 2 ) var(--padding);
-  }
   li.item, li.menu-item {
     font-size: var(--h3);
     a {

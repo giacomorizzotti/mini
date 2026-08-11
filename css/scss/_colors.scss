@@ -111,7 +111,7 @@ $colors: //color name, color code, text color over color
         &.clicked {
           @extend .#{$colorname}-text-box !optional;
           background: $colortext;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
           color: $colorcode;
         }
       }
@@ -119,14 +119,14 @@ $colors: //color name, color code, text color over color
         &.active {
           @extend .#{$colorname}-text-box !optional;
           background: $colortext;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
           color: $colorcode;
         }
       }
       &-invert {
         @extend .#{$colorname}-text-box !optional;
         background: $colortext;
-        border: 1px solid $colortext;
+        border: 1px solid $colorcode;
         color: $colorcode;
       }
     }
@@ -147,7 +147,7 @@ $colors: //color name, color code, text color over color
         &:hover {
           @extend .#{$colorname}-chip !optional;
           background: $colortext;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
           color: $colorcode;
         }
       }
@@ -155,7 +155,7 @@ $colors: //color name, color code, text color over color
         &.clicked {
           @extend .#{$colorname}-chip !optional;
           background: $colortext;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
           color: $colorcode;
         }
       }
@@ -163,7 +163,7 @@ $colors: //color name, color code, text color over color
         &.active {
           @extend .#{$colorname}-chip !optional;
           background: $colortext;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
           color: $colorcode;
         }
       }
@@ -191,7 +191,7 @@ $colors: //color name, color code, text color over color
           @extend .#{$colorname}-flag !optional;
           background: $colortext;
           color: $colorcode;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
         }
       }
       &-clicked {
@@ -199,7 +199,7 @@ $colors: //color name, color code, text color over color
           @extend .#{$colorname}-flag !optional;
           background: $colortext;
           color: $colorcode;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
         }
       }
       &-active {
@@ -207,7 +207,7 @@ $colors: //color name, color code, text color over color
         @extend .#{$colorname}-flag !optional;
           background: $colortext;
           color: $colorcode;
-          border: 1px solid $colortext;
+          border: 1px solid $colorcode;
         }
       }
       &-invert {

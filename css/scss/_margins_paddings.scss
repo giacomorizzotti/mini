@@ -3,7 +3,9 @@
 $marginThickness: (
   '-1':calc(var(--margin) * -1), 
   '0':0, 
+  '025':calc(var(--margin) * 0.25), 
   '05':calc(var(--margin) * 0.5), 
+  '075':calc(var(--margin) * 0.75), 
   '1':calc(var(--margin) * 1), 
   '15':calc(var(--margin) * 1.5), 
   '2':calc(var(--margin) * 2), 
@@ -16,7 +18,9 @@ $marginThickness: (
 
 $paddingThickness: (
   '0':0, 
+  '025':calc(var(--padding) * 0.25), 
   '05':calc(var(--padding) * 0.5), 
+  '075':calc(var(--padding) * 0.75), 
   '1':calc(var(--padding) * 1), 
   '15':calc(var(--padding) * 1.5), 
   '2':calc(var(--padding) * 2), 

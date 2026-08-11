@@ -4,7 +4,7 @@ form {
     margin: 0;
 }
 label {
-    font-size: calc( var(--p) * 1 );
+    font-size: var(--p);
     color: var(--grey);
     line-height: 1.4;
     display: block;
@@ -13,8 +13,6 @@ label {
 input, textarea, select {
     display: block;
     width: 100%;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     padding: calc( var(--padding) * 0.75 ) calc( var(--padding) * 1 );
     font-weight: 700;
@@ -28,7 +26,6 @@ input, textarea, select {
         font-style: italic;
     }
     &[type="submit"] {
-        -webkit-box-shadow: none;
         box-shadow: none;
     }
     &:focus {
@@ -40,9 +37,7 @@ input {
     font-size: var(--p);
 }
 textarea {
-    min-width: 100%;
     width: 100%;
-    max-width: 100%;
     font-size: var(--p);
     line-height: calc( var(--p) * 1.5);
     font-family: var(--font-sans);
@@ -50,93 +45,106 @@ textarea {
 }
 
 // checkboxes
-:not(#iubenda-cs-banner), :not(#iubenda-iframe) {
-    input[type="checkbox"] {
-        width: 24px!important;
-        height: 24px!important;
-        position: relative;
+input[type="checkbox"] {
+    width: 24px !important;
+    height: 24px !important;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    margin: calc(var(--margin)*1) calc(var(--margin) * 1) calc(var(--margin)*1) 0;
+
+    &.neg, &.inv {
+        &::before {
+            background: var(--white);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: var(--white);
+        border-radius: 5px;
+        box-shadow: inset 0 0 2px var(--grey);
+    }
+    &::after {
+        content: "";
+        position: absolute;
         top: 2px;
         left: 2px;
-        margin: calc(var(--margin)*1) calc(var(--margin) * 1) calc(var(--margin)*1) 0;
-
-        &.neg, &.inv {
-            &::before {
-                background: var(--white);
-            }
-        }
-
-        &::before {
-            content:"";
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: calc(var(--margin)*-5);
-            left: calc(var(--margin)*-2);
-            display: block;
-            background: var(--white);
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            border-radius: 5px;
-            -webkit-box-shadow: inset 0 0 2px var(--grey);
-            box-shadow: inset 0 0 2px var(--grey);
-            width: 30px;
-            height: 30px;
-            top:  -3px;
-            left: -3px;
-        }
-        &::after {
-            content:"";
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: calc(var(--margin)* -5 + 5px)!important;
-            left: calc(var(--margin)* -2 + 5px)!important;
-            display: block;
-            background: var(--main-color);
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            top: 2px!important;
-            left: 2px !important;
-        }
-        &:checked {
-            &::after {
-                top: 5px;
-                left: 5px;
-                width: 20px;
-                height: 20px;
-                opacity: 1;
-                visibility: visible;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-            }
-        }
-
-        &.chip {
-            display: none;
-            &+label {
-                transition: background-color 0.25s ease, color 0.25s ease;
-                padding: var(--padding);
-                margin: 0;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-                background-color: var(--false-white);
-            }
-            &:checked+label {
-                background: var(--main-color);
-                color: var(--white);
-            }
-            &::before, &::after {
-                display: none;
-            }
-        }
-
+        display: block;
+        width: 0;
+        height: 0;
+        background: var(--main-color);
+        border-radius: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
     }
+    &:checked {
+        &::after {
+            top: 2px;
+            left: 2px;
+            width: 21px;
+            height: 21px;
+            opacity: 1;
+            visibility: visible;
+            border-radius: 3px;
+        }
+    }
+
+    &.chip {
+        display: none;
+        &+label {
+            --chip-color: var(--link-color);
+            transition: background-color 0.25s ease, color 0.25s ease;
+            padding: var(--padding) calc(var(--padding) * 1.5);
+            margin: 0;
+            border-radius: 999px;
+            background-color: var(--chip-color);
+            color: var(--white);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+        &.S {
+            &+label {
+                padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25);
+                font-size: calc(var(--p) * 0.85)!important;
+                line-height: calc(var(--p) * 1.25);
+            }
+        }
+        &.XS {
+            &+label {
+                padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75);
+                font-size: calc(var(--p) * 0.7)!important;
+                line-height: calc(var(--p) * 1);
+            }
+        }
+        &:checked+label {
+            background: color-mix(in srgb, var(--chip-color) 75%, black);
+        }
+        &::before, &::after {
+            display: none;
+        }
+
+        // color variants — override --chip-color on the label
+        &.chip-main, &.main-chip, &.color-chip              + label { --chip-color: var(--main-color);   }
+        &.chip-second, &.second-chip, &.second-color-chip   + label { --chip-color: var(--second-color); }
+        &.chip-third, &.third-chip, &.third-color-chip      + label { --chip-color: var(--third-color);  }
+        &.chip-fourth, &.fourth-chip, &.fourth-color-chip   + label { --chip-color: var(--fourth-color); }
+        &.chip-success, &.success-chip                      + label { --chip-color: var(--success);      }
+        &.chip-danger, &.danger-chip                        + label { --chip-color: var(--danger);       }
+        &.chip-warning, &.warning-chip                      + label { --chip-color: var(--warning);      }
+        &.chip-grey, &.grey-chip                            + label { --chip-color: var(--grey);         }
+        &.chip-light-grey, &.light-grey-chip                + label { --chip-color: var(--light-grey);   }
+        
+    }
+
 }
 
 
@@ -146,13 +154,11 @@ input[type="radio"] {
     &+label {
         background-color: var(--false-white);
         padding: var(--padding);
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
         border-radius: 5px;
         cursor: pointer;
     }
     &:checked+label {
-        background: var(--main-color)!important;
-        color: var(--white)!important;
+        background: var(--main-color) !important;
+        color: var(--white) !important;
     }
 }

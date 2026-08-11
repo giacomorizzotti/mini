@@ -1,66 +1,34 @@
 // hidden & shown
 
-.hidden {
-    display: block!important;
-    opacity: 0!important;
-    visibility: hidden!important;
-    width: 0!important;
-    height: 0!important;
-    //transition: all 0.15s ease;
-    margin:0!important;
-    padding:0!important;
-    min-width: 0!important;
-    min-height: 0!important;
-    overflow: hidden;
-    border:0!important;
+@mixin hidden-state {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
 }
 
-.shown {
-    opacity: 1!important;
-    visibility: visible!important;
-    //transition: all 0.15s ease;
+@mixin shown-state {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
+
+.hidden { @include hidden-state; }
+.shown  { @include shown-state;  }
 
 body.top {
-    .top-hidden, .scroll-shown {
-        display: block!important;
-        opacity: 0!important;
-        visibility: hidden!important;
-        width: 0!important;
-        height: 0!important;
-        //transition: all 0.15s ease;
-        margin:0!important;
-        padding:0!important;
-        min-width: 0!important;
-        min-height: 0!important;
-        overflow: hidden;
-        border:0!important;
-    }
-    .top-shown, .scroll-hidden {
-        opacity: 1!important;
-        visibility: visible!important;
-        //transition: all 0.15s ease;
-    }
+  .top-hidden, .scroll-shown { @include hidden-state; }
+  .top-shown,  .scroll-hidden { @include shown-state;  }
 }
 
 body.scroll {
-    .top-shown, .scroll-hidden {
-        display: block!important;
-        opacity: 0!important;
-        visibility: hidden!important;
-        width: 0!important;
-        height: 0!important;
-        //transition: all 0.15s ease;
-        margin:0!important;
-        padding:0!important;
-        min-width: 0!important;
-        min-height: 0!important;
-        overflow: hidden;
-        border:0!important;
-    }
-    .top-hidden, .scroll-shown {
-        opacity: 1!important;
-        visibility: visible!important;
-        //transition: all 0.15s ease;
-    }
+  .top-shown,  .scroll-hidden { @include hidden-state; }
+  .top-hidden, .scroll-shown  { @include shown-state;  }
 }

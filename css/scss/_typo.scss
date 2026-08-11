@@ -224,10 +224,10 @@ h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, label {
   &.mono, &.text-mono {
     font-family: var(--font-mono);
   }
-  &.font-two, &.font-titles, &.font-title, &.title, &.text-second-font {
+  &.font-two, &.second-font, &.text-second {
     font-family: var(--font-second);
   }
-  .title {
+  &.title-font {
     font-family: var(--title-font);
   }
 
@@ -239,10 +239,6 @@ h1, h2, h3, h4, h5, h6, p, li, code, span, i, b, u, a, label {
     width: 1px;
     height: 1px;
     overflow: hidden;
-}
-.title {
-  font-family: var(--title-font);
-  font-size: var(--h1);
 }
 .subtitle, .sub-title {
   font-family: var(--title-font);
