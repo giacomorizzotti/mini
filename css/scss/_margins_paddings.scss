@@ -2,6 +2,9 @@
 
 $marginThickness: (
   '-1':calc(var(--margin) * -1), 
+  '-075':calc(var(--margin) * -0.75), 
+  '-05':calc(var(--margin) * -0.5), 
+  '-025':calc(var(--margin) * -0.25), 
   '0':0, 
   '025':calc(var(--margin) * 0.25), 
   '05':calc(var(--margin) * 0.5), 
