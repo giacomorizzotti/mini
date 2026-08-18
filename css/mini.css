@@ -9268,6 +9268,10 @@ body section {
   gap: var(--gap-y) var(--gap-x);
 }
 
+.contain {
+  container-type: inline-size;
+}
+
 .box, .box-100, .box-90, .box-88, .box-80, .box-75, .box-70, .box-66, .box-60, .box-50, .box-40, .box-33, .box-30, .box-25, .box-20, .box-16, .box-15, .box-12, .box-10, .box-8, .box-xxl-100, .box-xxl-90, .box-xxl-88, .box-xxl-80, .box-xxl-75, .box-xxl-70, .box-xxl-66, .box-xxl-60, .box-xxl-50, .box-xxl-40, .box-xxl-33, .box-xxl-30, .box-xxl-25, .box-xxl-20, .box-xxl-16, .box-xxl-15, .box-xxl-12, .box-xxl-10, .box-xxl-8, .box-xl-100, .box-xl-90, .box-xl-88, .box-xl-80, .box-xl-75, .box-xl-70, .box-xl-66, .box-xl-60, .box-xl-50, .box-xl-40, .box-xl-33, .box-xl-30, .box-xl-25, .box-xl-20, .box-xl-16, .box-xl-15, .box-xl-12, .box-xl-10, .box-xl-8, .box-lg-100, .box-lg-90, .box-lg-88, .box-lg-80, .box-lg-75, .box-lg-70, .box-lg-66, .box-lg-60, .box-lg-50, .box-lg-40, .box-lg-33, .box-lg-30, .box-lg-25, .box-lg-20, .box-lg-16, .box-lg-15, .box-lg-12, .box-lg-10, .box-lg-8, .box-md-100, .box-md-90, .box-md-88, .box-md-80, .box-md-75, .box-md-70, .box-md-66, .box-md-60, .box-md-50, .box-md-40, .box-md-33, .box-md-30, .box-md-25, .box-md-20, .box-md-16, .box-md-15, .box-md-12, .box-md-10, .box-md-8, .box-sm-100, .box-sm-90, .box-sm-88, .box-sm-80, .box-sm-75, .box-sm-70, .box-sm-66, .box-sm-60, .box-sm-50, .box-sm-40, .box-sm-33, .box-sm-30, .box-sm-25, .box-sm-20, .box-sm-16, .box-sm-15, .box-sm-12, .box-sm-10, .box-sm-8, .box-zero-100, .box-zero-90, .box-zero-88, .box-zero-80, .box-zero-75, .box-zero-70, .box-zero-66, .box-zero-60, .box-zero-50, .box-zero-40, .box-zero-33, .box-zero-30, .box-zero-25, .box-zero-20, .box-zero-16, .box-zero-15, .box-zero-12, .box-zero-10, .box-zero-8 {
   position: relative;
   margin: 0;
@@ -10529,6 +10533,1260 @@ body section {
     max-width: 100%;
   }
 }
+@container (min-width: 0) {
+  .box-zero-8 {
+    flex-basis: calc(8.333333% - var(--gap-x) * 91.666667 * 0.01);
+    max-width: 8.333333%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-10 {
+    flex-basis: calc(10% - var(--gap-x) * 90 * 0.01);
+    max-width: 10%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-12 {
+    flex-basis: calc(12.5% - var(--gap-x) * 87.5 * 0.01);
+    max-width: 12.5%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-15 {
+    flex-basis: calc(15% - var(--gap-x) * 85 * 0.01);
+    max-width: 15%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-88 {
+    flex-basis: calc(87.5% - var(--gap-x) * 12.5 * 0.01);
+    max-width: 87.5%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-90 {
+    flex-basis: calc(90% - var(--gap-x) * 10 * 0.01);
+    max-width: 90%;
+  }
+}
+@container (min-width: 0) {
+  .box-zero-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-8 {
+    flex-basis: calc(8.333333% - var(--gap-x) * 91.666667 * 0.01);
+    max-width: 8.333333%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-10 {
+    flex-basis: calc(10% - var(--gap-x) * 90 * 0.01);
+    max-width: 10%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-12 {
+    flex-basis: calc(12.5% - var(--gap-x) * 87.5 * 0.01);
+    max-width: 12.5%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-15 {
+    flex-basis: calc(15% - var(--gap-x) * 85 * 0.01);
+    max-width: 15%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-88 {
+    flex-basis: calc(87.5% - var(--gap-x) * 12.5 * 0.01);
+    max-width: 87.5%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-90 {
+    flex-basis: calc(90% - var(--gap-x) * 10 * 0.01);
+    max-width: 90%;
+  }
+}
+@container (min-width: 576px) {
+  .box-sm-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-8 {
+    flex-basis: calc(8.333333% - var(--gap-x) * 91.666667 * 0.01);
+    max-width: 8.333333%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-10 {
+    flex-basis: calc(10% - var(--gap-x) * 90 * 0.01);
+    max-width: 10%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-12 {
+    flex-basis: calc(12.5% - var(--gap-x) * 87.5 * 0.01);
+    max-width: 12.5%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-15 {
+    flex-basis: calc(15% - var(--gap-x) * 85 * 0.01);
+    max-width: 15%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-88 {
+    flex-basis: calc(87.5% - var(--gap-x) * 12.5 * 0.01);
+    max-width: 87.5%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-90 {
+    flex-basis: calc(90% - var(--gap-x) * 10 * 0.01);
+    max-width: 90%;
+  }
+}
+@container (min-width: 768px) {
+  .box-md-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-8 {
+    flex-basis: calc(8.333333% - var(--gap-x) * 91.666667 * 0.01);
+    max-width: 8.333333%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-10 {
+    flex-basis: calc(10% - var(--gap-x) * 90 * 0.01);
+    max-width: 10%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-12 {
+    flex-basis: calc(12.5% - var(--gap-x) * 87.5 * 0.01);
+    max-width: 12.5%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-15 {
+    flex-basis: calc(15% - var(--gap-x) * 85 * 0.01);
+    max-width: 15%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-88 {
+    flex-basis: calc(87.5% - var(--gap-x) * 12.5 * 0.01);
+    max-width: 87.5%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-90 {
+    flex-basis: calc(90% - var(--gap-x) * 10 * 0.01);
+    max-width: 90%;
+  }
+}
+@container (min-width: 992px) {
+  .box-lg-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-8 {
+    flex-basis: calc(8.333333% - var(--gap-x) * 91.666667 * 0.01);
+    max-width: 8.333333%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-10 {
+    flex-basis: calc(10% - var(--gap-x) * 90 * 0.01);
+    max-width: 10%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-12 {
+    flex-basis: calc(12.5% - var(--gap-x) * 87.5 * 0.01);
+    max-width: 12.5%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-15 {
+    flex-basis: calc(15% - var(--gap-x) * 85 * 0.01);
+    max-width: 15%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-88 {
+    flex-basis: calc(87.5% - var(--gap-x) * 12.5 * 0.01);
+    max-width: 87.5%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-90 {
+    flex-basis: calc(90% - var(--gap-x) * 10 * 0.01);
+    max-width: 90%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-xl-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-8 {
+    flex-basis: calc(8.333333% - var(--gap-x) * 91.666667 * 0.01);
+    max-width: 8.333333%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-10 {
+    flex-basis: calc(10% - var(--gap-x) * 90 * 0.01);
+    max-width: 10%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-12 {
+    flex-basis: calc(12.5% - var(--gap-x) * 87.5 * 0.01);
+    max-width: 12.5%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-15 {
+    flex-basis: calc(15% - var(--gap-x) * 85 * 0.01);
+    max-width: 15%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-88 {
+    flex-basis: calc(87.5% - var(--gap-x) * 12.5 * 0.01);
+    max-width: 87.5%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-90 {
+    flex-basis: calc(90% - var(--gap-x) * 10 * 0.01);
+    max-width: 90%;
+  }
+}
+@container (min-width: 1920px) {
+  .box-xxl-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 0) {
+  .box-8 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-8 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-8 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 992px) {
+  .box-8 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-8 {
+    flex-basis: calc(8.333333% - var(--gap-x) * 91.666667 * 0.01);
+    max-width: 8.333333%;
+  }
+}
+@container (min-width: 0) {
+  .box-10 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-10 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-10 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 992px) {
+  .box-10 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-10 {
+    flex-basis: calc(10% - var(--gap-x) * 90 * 0.01);
+    max-width: 10%;
+  }
+}
+@container (min-width: 0) {
+  .box-12 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-12 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-12 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 992px) {
+  .box-12 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-12 {
+    flex-basis: calc(12.5% - var(--gap-x) * 87.5 * 0.01);
+    max-width: 12.5%;
+  }
+}
+@container (min-width: 0) {
+  .box-15 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-15 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-15 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 992px) {
+  .box-15 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-15 {
+    flex-basis: calc(15% - var(--gap-x) * 85 * 0.01);
+    max-width: 15%;
+  }
+}
+@container (min-width: 0) {
+  .box-16 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-16 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-16 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 992px) {
+  .box-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-16 {
+    flex-basis: calc(16.666666% - var(--gap-x) * 83.333334 * 0.01);
+    max-width: 16.666666%;
+  }
+}
+@container (min-width: 0) {
+  .box-20 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-20 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-20 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-20 {
+    flex-basis: calc(20% - var(--gap-x) * 80 * 0.01);
+    max-width: 20%;
+  }
+}
+@container (min-width: 0) {
+  .box-25 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-25 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-25 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-25 {
+    flex-basis: calc(25% - var(--gap-x) * 75 * 0.01);
+    max-width: 25%;
+  }
+}
+@container (min-width: 0) {
+  .box-30 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-30 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-30 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-30 {
+    flex-basis: calc(30% - var(--gap-x) * 70 * 0.01);
+    max-width: 30%;
+  }
+}
+@container (min-width: 0) {
+  .box-33 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-33 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 992px) {
+  .box-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-33 {
+    flex-basis: calc(33.333333% - var(--gap-x) * 66.666667 * 0.01);
+    max-width: 33.333333%;
+  }
+}
+@container (min-width: 0) {
+  .box-40 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-40 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 992px) {
+  .box-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-40 {
+    flex-basis: calc(40% - var(--gap-x) * 60 * 0.01);
+    max-width: 40%;
+  }
+}
+@container (min-width: 0) {
+  .box-50 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-50 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 0) {
+  .box-60 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-60 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 992px) {
+  .box-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-60 {
+    flex-basis: calc(60% - var(--gap-x) * 40 * 0.01);
+    max-width: 60%;
+  }
+}
+@container (min-width: 0) {
+  .box-66 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-66 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 768px) {
+  .box-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 992px) {
+  .box-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-66 {
+    flex-basis: calc(66.666666% - var(--gap-x) * 33.333334 * 0.01);
+    max-width: 66.666666%;
+  }
+}
+@container (min-width: 0) {
+  .box-70 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-70 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 768px) {
+  .box-70 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-70 {
+    flex-basis: calc(70% - var(--gap-x) * 30 * 0.01);
+    max-width: 70%;
+  }
+}
+@container (min-width: 0) {
+  .box-75 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-75 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 768px) {
+  .box-75 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-75 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 0) {
+  .box-80 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-80 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 768px) {
+  .box-80 {
+    flex-basis: calc(50% - var(--gap-x) * 50 * 0.01);
+    max-width: 50%;
+  }
+}
+@container (min-width: 992px) {
+  .box-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-80 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 0) {
+  .box-88 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-88 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 768px) {
+  .box-88 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 992px) {
+  .box-88 {
+    flex-basis: calc(75% - var(--gap-x) * 25 * 0.01);
+    max-width: 75%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-88 {
+    flex-basis: calc(87.5% - var(--gap-x) * 12.5 * 0.01);
+    max-width: 87.5%;
+  }
+}
+@container (min-width: 0) {
+  .box-90 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-90 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 768px) {
+  .box-90 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 992px) {
+  .box-90 {
+    flex-basis: calc(80% - var(--gap-x) * 20 * 0.01);
+    max-width: 80%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-90 {
+    flex-basis: calc(90% - var(--gap-x) * 10 * 0.01);
+    max-width: 90%;
+  }
+}
+@container (min-width: 0) {
+  .box-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 576px) {
+  .box-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 768px) {
+  .box-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 992px) {
+  .box-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
+@container (min-width: 1400px) {
+  .box-100 {
+    flex-basis: calc(100% - var(--gap-x) * 0 * 0.01);
+    max-width: 100%;
+  }
+}
 
 header#header {
   position: absolute;
@@ -11688,7 +12946,7 @@ nav {
 nav ul, nav ul.menu {
   list-style-type: none;
   display: flex;
-  margin: 0 0 calc(var(--margin) * 1) 0;
+  margin: 0;
   padding: 0 var(--padding);
   flex-flow: column nowrap;
   width: 100%;
@@ -11848,11 +13106,6 @@ ul li.drop-down:hover ul.drop-down, ul li.drop-down:hover ul.dropdown, ul li.dro
 
 nav#main-menu ul, ul#main-menu {
   padding: var(--padding);
-}
-@media (min-width: 768px) {
-  nav#main-menu ul, ul#main-menu {
-    padding: calc(var(--padding) * 2) var(--padding);
-  }
 }
 nav#main-menu ul li.item, nav#main-menu ul li.menu-item, ul#main-menu li.item, ul#main-menu li.menu-item {
   font-size: var(--h3);
@@ -12218,7 +13471,7 @@ form {
 }
 
 label {
-  font-size: calc(var(--p) * 1);
+  font-size: var(--p);
   color: var(--grey);
   line-height: 1.4;
   display: block;
@@ -12228,8 +13481,6 @@ label {
 input, textarea, select {
   display: block;
   width: 100%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   padding: calc(var(--padding) * 0.75) calc(var(--padding) * 1);
   font-weight: 700;
@@ -12244,7 +13495,6 @@ input::placeholder, textarea::placeholder, select::placeholder {
   font-style: italic;
 }
 input[type=submit], textarea[type=submit], select[type=submit] {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 input:focus, textarea:focus, select:focus {
@@ -12257,16 +13507,14 @@ input {
 }
 
 textarea {
-  min-width: 100%;
   width: 100%;
-  max-width: 100%;
   font-size: var(--p);
   line-height: calc(var(--p) * 1.5);
   font-family: var(--font-sans);
   font-weight: 400;
 }
 
-:not(#iubenda-cs-banner) input[type=checkbox], :not(#iubenda-iframe) input[type=checkbox] {
+input[type=checkbox] {
   width: 24px !important;
   height: 24px !important;
   position: relative;
@@ -12274,75 +13522,101 @@ textarea {
   left: 2px;
   margin: calc(var(--margin) * 1) calc(var(--margin) * 1) calc(var(--margin) * 1) 0;
 }
-:not(#iubenda-cs-banner) input[type=checkbox].neg::before, :not(#iubenda-cs-banner) input[type=checkbox].inv::before, :not(#iubenda-iframe) input[type=checkbox].neg::before, :not(#iubenda-iframe) input[type=checkbox].inv::before {
+input[type=checkbox].neg::before, input[type=checkbox].inv::before {
   background: var(--white);
 }
-:not(#iubenda-cs-banner) input[type=checkbox]::before, :not(#iubenda-iframe) input[type=checkbox]::before {
+input[type=checkbox]::before {
   content: "";
-  width: 30px;
-  height: 30px;
   position: absolute;
-  top: calc(var(--margin) * -5);
-  left: calc(var(--margin) * -2);
-  display: block;
-  background: var(--white);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 2px var(--grey);
-  box-shadow: inset 0 0 2px var(--grey);
-  width: 30px;
-  height: 30px;
   top: -3px;
   left: -3px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: inset 0 0 2px var(--grey);
 }
-:not(#iubenda-cs-banner) input[type=checkbox]::after, :not(#iubenda-iframe) input[type=checkbox]::after {
+input[type=checkbox]::after {
   content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: block;
   width: 0;
   height: 0;
-  position: absolute;
-  top: calc(var(--margin) * -5 + 5px) !important;
-  left: calc(var(--margin) * -2 + 5px) !important;
-  display: block;
   background: var(--main-color);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  top: 2px !important;
-  left: 2px !important;
 }
-:not(#iubenda-cs-banner) input[type=checkbox]:checked::after, :not(#iubenda-iframe) input[type=checkbox]:checked::after {
-  top: 5px;
-  left: 5px;
-  width: 20px;
-  height: 20px;
+input[type=checkbox]:checked::after {
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
   opacity: 1;
   visibility: visible;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
-:not(#iubenda-cs-banner) input[type=checkbox].chip, :not(#iubenda-iframe) input[type=checkbox].chip {
+input[type=checkbox].chip {
   display: none;
 }
-:not(#iubenda-cs-banner) input[type=checkbox].chip + label, :not(#iubenda-iframe) input[type=checkbox].chip + label {
+input[type=checkbox].chip + label {
+  --chip-color: var(--link-color);
   transition: background-color 0.25s ease, color 0.25s ease;
-  padding: var(--padding);
+  padding: var(--padding) calc(var(--padding) * 1.5);
   margin: 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: var(--false-white);
-}
-:not(#iubenda-cs-banner) input[type=checkbox].chip:checked + label, :not(#iubenda-iframe) input[type=checkbox].chip:checked + label {
-  background: var(--main-color);
+  border-radius: 999px;
+  background-color: var(--chip-color);
   color: var(--white);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }
-:not(#iubenda-cs-banner) input[type=checkbox].chip::before, :not(#iubenda-cs-banner) input[type=checkbox].chip::after, :not(#iubenda-iframe) input[type=checkbox].chip::before, :not(#iubenda-iframe) input[type=checkbox].chip::after {
+input[type=checkbox].chip.S + label {
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25);
+  font-size: calc(var(--p) * 0.85) !important;
+  line-height: calc(var(--p) * 1.25);
+}
+input[type=checkbox].chip.XS + label {
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75);
+  font-size: calc(var(--p) * 0.7) !important;
+  line-height: calc(var(--p) * 1);
+}
+input[type=checkbox].chip:checked + label {
+  background: color-mix(in srgb, var(--chip-color) 75%, black);
+}
+input[type=checkbox].chip::before, input[type=checkbox].chip::after {
   display: none;
+}
+input[type=checkbox].chip.chip-main, input[type=checkbox].chip.main-chip, input[type=checkbox].chip.color-chip + label, input[type=checkbox].chip.color-chip-invert + label, input[type=checkbox].chip.color-chip-active.active + label, input[type=checkbox].chip.color-chip-clicked.clicked + label, input[type=checkbox].chip.color-chip-hover:hover + label {
+  --chip-color: var(--main-color);
+}
+input[type=checkbox].chip.chip-second, input[type=checkbox].chip.second-chip, input[type=checkbox].chip.second-color-chip + label, input[type=checkbox].chip.second-color-chip-invert + label, input[type=checkbox].chip.second-color-chip-active.active + label, input[type=checkbox].chip.second-color-chip-clicked.clicked + label, input[type=checkbox].chip.second-color-chip-hover:hover + label {
+  --chip-color: var(--second-color);
+}
+input[type=checkbox].chip.chip-third, input[type=checkbox].chip.third-chip, input[type=checkbox].chip.third-color-chip + label, input[type=checkbox].chip.third-color-chip-invert + label, input[type=checkbox].chip.third-color-chip-active.active + label, input[type=checkbox].chip.third-color-chip-clicked.clicked + label, input[type=checkbox].chip.third-color-chip-hover:hover + label {
+  --chip-color: var(--third-color);
+}
+input[type=checkbox].chip.chip-fourth, input[type=checkbox].chip.fourth-chip, input[type=checkbox].chip.fourth-color-chip + label, input[type=checkbox].chip.fourth-color-chip-invert + label, input[type=checkbox].chip.fourth-color-chip-active.active + label, input[type=checkbox].chip.fourth-color-chip-clicked.clicked + label, input[type=checkbox].chip.fourth-color-chip-hover:hover + label {
+  --chip-color: var(--fourth-color);
+}
+input[type=checkbox].chip.chip-success, input[type=checkbox].chip.success-chip + label, input[type=checkbox].chip.success-chip-invert + label, input[type=checkbox].chip.success-chip-active.active + label, input[type=checkbox].chip.success-chip-clicked.clicked + label, input[type=checkbox].chip.success-chip-hover:hover + label {
+  --chip-color: var(--success);
+}
+input[type=checkbox].chip.chip-danger, input[type=checkbox].chip.danger-chip + label, input[type=checkbox].chip.danger-chip-invert + label, input[type=checkbox].chip.danger-chip-active.active + label, input[type=checkbox].chip.danger-chip-clicked.clicked + label, input[type=checkbox].chip.danger-chip-hover:hover + label {
+  --chip-color: var(--danger);
+}
+input[type=checkbox].chip.chip-warning, input[type=checkbox].chip.warning-chip + label, input[type=checkbox].chip.warning-chip-invert + label, input[type=checkbox].chip.warning-chip-active.active + label, input[type=checkbox].chip.warning-chip-clicked.clicked + label, input[type=checkbox].chip.warning-chip-hover:hover + label {
+  --chip-color: var(--warning);
+}
+input[type=checkbox].chip.chip-grey, input[type=checkbox].chip.grey-chip + label, input[type=checkbox].chip.grey-chip-invert + label, input[type=checkbox].chip.grey-chip-active.active + label, input[type=checkbox].chip.grey-chip-clicked.clicked + label, input[type=checkbox].chip.grey-chip-hover:hover + label {
+  --chip-color: var(--grey);
+}
+input[type=checkbox].chip.chip-light-grey, input[type=checkbox].chip.light-grey-chip + label, input[type=checkbox].chip.light-grey-chip-invert + label, input[type=checkbox].chip.light-grey-chip-active.active + label, input[type=checkbox].chip.light-grey-chip-clicked.clicked + label, input[type=checkbox].chip.light-grey-chip-hover:hover + label {
+  --chip-color: var(--light-grey);
 }
 
 input[type=radio] {
@@ -12351,8 +13625,6 @@ input[type=radio] {
 input[type=radio] + label {
   background-color: var(--false-white);
   padding: var(--padding);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -13551,12 +14823,25 @@ button-grad, .btn-grad, .button-grad {
   background-size: 200% !important;
   background-position: 1%;
   background-repeat: repeat;
-  background: linear-gradient(125deg, var(--link-color) 0%, var(--second-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background: linear-gradient(125deg, var(--link-color) 0%, var(--link-hover-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 button-grad:hover, .btn-grad:hover, .button-grad:hover {
   border-color: var(--second-color);
   background-position: 99% !important;
-  background: linear-gradient(125deg, var(--link-color) 0%, var(--second-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background: linear-gradient(125deg, var(--link-color) 0%, var(--link-hover-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+button-grad-main, .btn-grad-main, .button-grad-main {
+  border-color: var(--main-color);
+  transition: border-color 0.25s ease-out, background-position 0.25s ease-out, background-color 0.25s ease-out;
+  background-size: 200% !important;
+  background-position: 1%;
+  background-repeat: repeat;
+  background: linear-gradient(125deg, var(--main-color) 0%, var(--second-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+button-grad-main:hover, .btn-grad-main:hover, .button-grad-main:hover {
+  border-color: var(--second-color);
+  background-position: 99% !important;
+  background: linear-gradient(125deg, var(--main-color) 0%, var(--second-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 button-grad-second, .btn-grad-second, .button-grad-second {
   border-color: var(--third-color);
@@ -13713,17 +14998,17 @@ button-grad-second:hover, .btn-grad-second:hover, .button-grad-second:hover {
 }
 .wh-box-clicked.clicked, .wh-text-box-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .wh-box-active.active, .wh-text-box-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .wh-box-invert, .wh-text-box-invert {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .wh-chip, .wh-chip-invert, .wh-chip-active.active, .wh-chip-clicked.clicked, .wh-chip-hover:hover {
@@ -13741,17 +15026,17 @@ button-grad-second:hover, .btn-grad-second:hover, .button-grad-second:hover {
 }
 .wh-chip-hover:hover {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .wh-chip-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .wh-chip-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .wh-chip-invert {
@@ -13773,17 +15058,17 @@ button-grad-second:hover, .btn-grad-second:hover, .button-grad-second:hover {
 .wh-flag-hover:hover {
   background: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
 }
 .wh-flag-clicked.clicked {
   background: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
 }
 .wh-flag-active.active {
   background: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
 }
 .wh-flag-invert {
   background: var(--black);
@@ -14001,17 +15286,17 @@ input[type="radio"]:checked+label.wh {
 }
 .white-box-clicked.clicked, .white-text-box-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .white-box-active.active, .white-text-box-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .white-box-invert, .white-text-box-invert {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .white-chip, .white-chip-invert, .white-chip-active.active, .white-chip-clicked.clicked, .white-chip-hover:hover {
@@ -14029,17 +15314,17 @@ input[type="radio"]:checked+label.wh {
 }
 .white-chip-hover:hover {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .white-chip-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .white-chip-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .white-chip-invert {
@@ -14061,17 +15346,17 @@ input[type="radio"]:checked+label.wh {
 .white-flag-hover:hover {
   background: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
 }
 .white-flag-clicked.clicked {
   background: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
 }
 .white-flag-active.active {
   background: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
 }
 .white-flag-invert {
   background: var(--black);
@@ -14289,17 +15574,17 @@ input[type="radio"]:checked+label.white {
 }
 .fw-box-clicked.clicked, .fw-text-box-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .fw-box-active.active, .fw-text-box-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .fw-box-invert, .fw-text-box-invert {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .fw-chip, .fw-chip-invert, .fw-chip-active.active, .fw-chip-clicked.clicked, .fw-chip-hover:hover {
@@ -14317,17 +15602,17 @@ input[type="radio"]:checked+label.white {
 }
 .fw-chip-hover:hover {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .fw-chip-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .fw-chip-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .fw-chip-invert {
@@ -14349,17 +15634,17 @@ input[type="radio"]:checked+label.white {
 .fw-flag-hover:hover {
   background: var(--black);
   color: var(--false-white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
 }
 .fw-flag-clicked.clicked {
   background: var(--black);
   color: var(--false-white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
 }
 .fw-flag-active.active {
   background: var(--black);
   color: var(--false-white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
 }
 .fw-flag-invert {
   background: var(--black);
@@ -14577,17 +15862,17 @@ input[type="radio"]:checked+label.fw {
 }
 .false-white-box-clicked.clicked, .false-white-text-box-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .false-white-box-active.active, .false-white-text-box-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .false-white-box-invert, .false-white-text-box-invert {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .false-white-chip, .false-white-chip-invert, .false-white-chip-active.active, .false-white-chip-clicked.clicked, .false-white-chip-hover:hover {
@@ -14605,17 +15890,17 @@ input[type="radio"]:checked+label.fw {
 }
 .false-white-chip-hover:hover {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .false-white-chip-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .false-white-chip-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
   color: var(--false-white);
 }
 .false-white-chip-invert {
@@ -14637,17 +15922,17 @@ input[type="radio"]:checked+label.fw {
 .false-white-flag-hover:hover {
   background: var(--black);
   color: var(--false-white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
 }
 .false-white-flag-clicked.clicked {
   background: var(--black);
   color: var(--false-white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
 }
 .false-white-flag-active.active {
   background: var(--black);
   color: var(--false-white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--false-white);
 }
 .false-white-flag-invert {
   background: var(--black);
@@ -14865,17 +16150,17 @@ input[type="radio"]:checked+label.false-white {
 }
 .light-grey-box-clicked.clicked, .light-grey-text-box-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
   color: var(--light-grey);
 }
 .light-grey-box-active.active, .light-grey-text-box-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
   color: var(--light-grey);
 }
 .light-grey-box-invert, .light-grey-text-box-invert {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
   color: var(--light-grey);
 }
 .light-grey-chip, .light-grey-chip-invert, .light-grey-chip-active.active, .light-grey-chip-clicked.clicked, .light-grey-chip-hover:hover {
@@ -14893,17 +16178,17 @@ input[type="radio"]:checked+label.false-white {
 }
 .light-grey-chip-hover:hover {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
   color: var(--light-grey);
 }
 .light-grey-chip-clicked.clicked {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
   color: var(--light-grey);
 }
 .light-grey-chip-active.active {
   background: var(--black);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
   color: var(--light-grey);
 }
 .light-grey-chip-invert {
@@ -14925,17 +16210,17 @@ input[type="radio"]:checked+label.false-white {
 .light-grey-flag-hover:hover {
   background: var(--black);
   color: var(--light-grey);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
 }
 .light-grey-flag-clicked.clicked {
   background: var(--black);
   color: var(--light-grey);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
 }
 .light-grey-flag-active.active {
   background: var(--black);
   color: var(--light-grey);
-  border: 1px solid var(--black);
+  border: 1px solid var(--light-grey);
 }
 .light-grey-flag-invert {
   background: var(--black);
@@ -15153,17 +16438,17 @@ input[type="radio"]:checked+label.light-grey {
 }
 .grey-box-clicked.clicked, .grey-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
   color: var(--grey);
 }
 .grey-box-active.active, .grey-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
   color: var(--grey);
 }
 .grey-box-invert, .grey-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
   color: var(--grey);
 }
 .grey-chip, .grey-chip-invert, .grey-chip-active.active, .grey-chip-clicked.clicked, .grey-chip-hover:hover {
@@ -15181,17 +16466,17 @@ input[type="radio"]:checked+label.light-grey {
 }
 .grey-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
   color: var(--grey);
 }
 .grey-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
   color: var(--grey);
 }
 .grey-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
   color: var(--grey);
 }
 .grey-chip-invert {
@@ -15213,17 +16498,17 @@ input[type="radio"]:checked+label.light-grey {
 .grey-flag-hover:hover {
   background: var(--white);
   color: var(--grey);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
 }
 .grey-flag-clicked.clicked {
   background: var(--white);
   color: var(--grey);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
 }
 .grey-flag-active.active {
   background: var(--white);
   color: var(--grey);
-  border: 1px solid var(--white);
+  border: 1px solid var(--grey);
 }
 .grey-flag-invert {
   background: var(--white);
@@ -15441,17 +16726,17 @@ input[type="radio"]:checked+label.grey {
 }
 .dark-grey-box-clicked.clicked, .dark-grey-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
   color: var(--dark-grey);
 }
 .dark-grey-box-active.active, .dark-grey-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
   color: var(--dark-grey);
 }
 .dark-grey-box-invert, .dark-grey-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
   color: var(--dark-grey);
 }
 .dark-grey-chip, .dark-grey-chip-invert, .dark-grey-chip-active.active, .dark-grey-chip-clicked.clicked, .dark-grey-chip-hover:hover {
@@ -15469,17 +16754,17 @@ input[type="radio"]:checked+label.grey {
 }
 .dark-grey-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
   color: var(--dark-grey);
 }
 .dark-grey-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
   color: var(--dark-grey);
 }
 .dark-grey-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
   color: var(--dark-grey);
 }
 .dark-grey-chip-invert {
@@ -15501,17 +16786,17 @@ input[type="radio"]:checked+label.grey {
 .dark-grey-flag-hover:hover {
   background: var(--white);
   color: var(--dark-grey);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
 }
 .dark-grey-flag-clicked.clicked {
   background: var(--white);
   color: var(--dark-grey);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
 }
 .dark-grey-flag-active.active {
   background: var(--white);
   color: var(--dark-grey);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-grey);
 }
 .dark-grey-flag-invert {
   background: var(--white);
@@ -15729,17 +17014,17 @@ input[type="radio"]:checked+label.dark-grey {
 }
 .fb-box-clicked.clicked, .fb-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .fb-box-active.active, .fb-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .fb-box-invert, .fb-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .fb-chip, .fb-chip-invert, .fb-chip-active.active, .fb-chip-clicked.clicked, .fb-chip-hover:hover {
@@ -15757,17 +17042,17 @@ input[type="radio"]:checked+label.dark-grey {
 }
 .fb-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .fb-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .fb-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .fb-chip-invert {
@@ -15789,17 +17074,17 @@ input[type="radio"]:checked+label.dark-grey {
 .fb-flag-hover:hover {
   background: var(--white);
   color: var(--false-black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
 }
 .fb-flag-clicked.clicked {
   background: var(--white);
   color: var(--false-black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
 }
 .fb-flag-active.active {
   background: var(--white);
   color: var(--false-black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
 }
 .fb-flag-invert {
   background: var(--white);
@@ -16017,17 +17302,17 @@ input[type="radio"]:checked+label.fb {
 }
 .false-black-box-clicked.clicked, .false-black-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .false-black-box-active.active, .false-black-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .false-black-box-invert, .false-black-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .false-black-chip, .false-black-chip-invert, .false-black-chip-active.active, .false-black-chip-clicked.clicked, .false-black-chip-hover:hover {
@@ -16045,17 +17330,17 @@ input[type="radio"]:checked+label.fb {
 }
 .false-black-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .false-black-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .false-black-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
   color: var(--false-black);
 }
 .false-black-chip-invert {
@@ -16077,17 +17362,17 @@ input[type="radio"]:checked+label.fb {
 .false-black-flag-hover:hover {
   background: var(--white);
   color: var(--false-black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
 }
 .false-black-flag-clicked.clicked {
   background: var(--white);
   color: var(--false-black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
 }
 .false-black-flag-active.active {
   background: var(--white);
   color: var(--false-black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--false-black);
 }
 .false-black-flag-invert {
   background: var(--white);
@@ -16305,17 +17590,17 @@ input[type="radio"]:checked+label.false-black {
 }
 .bk-box-clicked.clicked, .bk-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .bk-box-active.active, .bk-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .bk-box-invert, .bk-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .bk-chip, .bk-chip-invert, .bk-chip-active.active, .bk-chip-clicked.clicked, .bk-chip-hover:hover {
@@ -16333,17 +17618,17 @@ input[type="radio"]:checked+label.false-black {
 }
 .bk-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .bk-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .bk-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .bk-chip-invert {
@@ -16365,17 +17650,17 @@ input[type="radio"]:checked+label.false-black {
 .bk-flag-hover:hover {
   background: var(--white);
   color: var(--black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
 }
 .bk-flag-clicked.clicked {
   background: var(--white);
   color: var(--black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
 }
 .bk-flag-active.active {
   background: var(--white);
   color: var(--black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
 }
 .bk-flag-invert {
   background: var(--white);
@@ -16593,17 +17878,17 @@ input[type="radio"]:checked+label.bk {
 }
 .black-box-clicked.clicked, .black-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .black-box-active.active, .black-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .black-box-invert, .black-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .black-chip, .black-chip-invert, .black-chip-active.active, .black-chip-clicked.clicked, .black-chip-hover:hover {
@@ -16621,17 +17906,17 @@ input[type="radio"]:checked+label.bk {
 }
 .black-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .black-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .black-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 .black-chip-invert {
@@ -16653,17 +17938,17 @@ input[type="radio"]:checked+label.bk {
 .black-flag-hover:hover {
   background: var(--white);
   color: var(--black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
 }
 .black-flag-clicked.clicked {
   background: var(--white);
   color: var(--black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
 }
 .black-flag-active.active {
   background: var(--white);
   color: var(--black);
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
 }
 .black-flag-invert {
   background: var(--white);
@@ -16881,17 +18166,17 @@ input[type="radio"]:checked+label.black {
 }
 .col-box-clicked.clicked, .col-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .col-box-active.active, .col-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .col-box-invert, .col-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .col-chip, .col-chip-invert, .col-chip-active.active, .col-chip-clicked.clicked, .col-chip-hover:hover {
@@ -16909,17 +18194,17 @@ input[type="radio"]:checked+label.black {
 }
 .col-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .col-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .col-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .col-chip-invert {
@@ -16941,17 +18226,17 @@ input[type="radio"]:checked+label.black {
 .col-flag-hover:hover {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .col-flag-clicked.clicked {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .col-flag-active.active {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .col-flag-invert {
   background: var(--white);
@@ -17169,17 +18454,17 @@ input[type="radio"]:checked+label.col {
 }
 .color-box-clicked.clicked, .color-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .color-box-active.active, .color-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .color-box-invert, .color-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .color-chip, .color-chip-invert, .color-chip-active.active, .color-chip-clicked.clicked, .color-chip-hover:hover {
@@ -17197,17 +18482,17 @@ input[type="radio"]:checked+label.col {
 }
 .color-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .color-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .color-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .color-chip-invert {
@@ -17229,17 +18514,17 @@ input[type="radio"]:checked+label.col {
 .color-flag-hover:hover {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .color-flag-clicked.clicked {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .color-flag-active.active {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .color-flag-invert {
   background: var(--white);
@@ -17457,17 +18742,17 @@ input[type="radio"]:checked+label.color {
 }
 .main-color-box-clicked.clicked, .main-color-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .main-color-box-active.active, .main-color-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .main-color-box-invert, .main-color-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .main-color-chip, .main-color-chip-invert, .main-color-chip-active.active, .main-color-chip-clicked.clicked, .main-color-chip-hover:hover {
@@ -17485,17 +18770,17 @@ input[type="radio"]:checked+label.color {
 }
 .main-color-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .main-color-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .main-color-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   color: var(--main-color);
 }
 .main-color-chip-invert {
@@ -17517,17 +18802,17 @@ input[type="radio"]:checked+label.color {
 .main-color-flag-hover:hover {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .main-color-flag-clicked.clicked {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .main-color-flag-active.active {
   background: var(--white);
   color: var(--main-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
 }
 .main-color-flag-invert {
   background: var(--white);
@@ -17745,17 +19030,17 @@ input[type="radio"]:checked+label.main-color {
 }
 .color-dark-box-clicked.clicked, .color-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .color-dark-box-active.active, .color-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .color-dark-box-invert, .color-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .color-dark-chip, .color-dark-chip-invert, .color-dark-chip-active.active, .color-dark-chip-clicked.clicked, .color-dark-chip-hover:hover {
@@ -17773,17 +19058,17 @@ input[type="radio"]:checked+label.main-color {
 }
 .color-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .color-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .color-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .color-dark-chip-invert {
@@ -17805,17 +19090,17 @@ input[type="radio"]:checked+label.main-color {
 .color-dark-flag-hover:hover {
   background: var(--white);
   color: var(--main-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
 }
 .color-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--main-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
 }
 .color-dark-flag-active.active {
   background: var(--white);
   color: var(--main-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
 }
 .color-dark-flag-invert {
   background: var(--white);
@@ -18033,17 +19318,17 @@ input[type="radio"]:checked+label.color-dark {
 }
 .main-color-dark-box-clicked.clicked, .main-color-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .main-color-dark-box-active.active, .main-color-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .main-color-dark-box-invert, .main-color-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .main-color-dark-chip, .main-color-dark-chip-invert, .main-color-dark-chip-active.active, .main-color-dark-chip-clicked.clicked, .main-color-dark-chip-hover:hover {
@@ -18061,17 +19346,17 @@ input[type="radio"]:checked+label.color-dark {
 }
 .main-color-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .main-color-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .main-color-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
   color: var(--main-color-dark);
 }
 .main-color-dark-chip-invert {
@@ -18093,17 +19378,17 @@ input[type="radio"]:checked+label.color-dark {
 .main-color-dark-flag-hover:hover {
   background: var(--white);
   color: var(--main-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
 }
 .main-color-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--main-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
 }
 .main-color-dark-flag-active.active {
   background: var(--white);
   color: var(--main-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color-dark);
 }
 .main-color-dark-flag-invert {
   background: var(--white);
@@ -18321,17 +19606,17 @@ input[type="radio"]:checked+label.main-color-dark {
 }
 .second-color-box-clicked.clicked, .second-color-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
   color: var(--second-color);
 }
 .second-color-box-active.active, .second-color-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
   color: var(--second-color);
 }
 .second-color-box-invert, .second-color-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
   color: var(--second-color);
 }
 .second-color-chip, .second-color-chip-invert, .second-color-chip-active.active, .second-color-chip-clicked.clicked, .second-color-chip-hover:hover {
@@ -18349,17 +19634,17 @@ input[type="radio"]:checked+label.main-color-dark {
 }
 .second-color-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
   color: var(--second-color);
 }
 .second-color-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
   color: var(--second-color);
 }
 .second-color-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
   color: var(--second-color);
 }
 .second-color-chip-invert {
@@ -18381,17 +19666,17 @@ input[type="radio"]:checked+label.main-color-dark {
 .second-color-flag-hover:hover {
   background: var(--white);
   color: var(--second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
 }
 .second-color-flag-clicked.clicked {
   background: var(--white);
   color: var(--second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
 }
 .second-color-flag-active.active {
   background: var(--white);
   color: var(--second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color);
 }
 .second-color-flag-invert {
   background: var(--white);
@@ -18609,17 +19894,17 @@ input[type="radio"]:checked+label.second-color {
 }
 .second-color-dark-box-clicked.clicked, .second-color-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
   color: var(--second-color-dark);
 }
 .second-color-dark-box-active.active, .second-color-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
   color: var(--second-color-dark);
 }
 .second-color-dark-box-invert, .second-color-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
   color: var(--second-color-dark);
 }
 .second-color-dark-chip, .second-color-dark-chip-invert, .second-color-dark-chip-active.active, .second-color-dark-chip-clicked.clicked, .second-color-dark-chip-hover:hover {
@@ -18637,17 +19922,17 @@ input[type="radio"]:checked+label.second-color {
 }
 .second-color-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
   color: var(--second-color-dark);
 }
 .second-color-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
   color: var(--second-color-dark);
 }
 .second-color-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
   color: var(--second-color-dark);
 }
 .second-color-dark-chip-invert {
@@ -18669,17 +19954,17 @@ input[type="radio"]:checked+label.second-color {
 .second-color-dark-flag-hover:hover {
   background: var(--white);
   color: var(--second-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
 }
 .second-color-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--second-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
 }
 .second-color-dark-flag-active.active {
   background: var(--white);
   color: var(--second-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--second-color-dark);
 }
 .second-color-dark-flag-invert {
   background: var(--white);
@@ -18897,17 +20182,17 @@ input[type="radio"]:checked+label.second-color-dark {
 }
 .third-color-box-clicked.clicked, .third-color-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
   color: var(--third-color);
 }
 .third-color-box-active.active, .third-color-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
   color: var(--third-color);
 }
 .third-color-box-invert, .third-color-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
   color: var(--third-color);
 }
 .third-color-chip, .third-color-chip-invert, .third-color-chip-active.active, .third-color-chip-clicked.clicked, .third-color-chip-hover:hover {
@@ -18925,17 +20210,17 @@ input[type="radio"]:checked+label.second-color-dark {
 }
 .third-color-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
   color: var(--third-color);
 }
 .third-color-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
   color: var(--third-color);
 }
 .third-color-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
   color: var(--third-color);
 }
 .third-color-chip-invert {
@@ -18957,17 +20242,17 @@ input[type="radio"]:checked+label.second-color-dark {
 .third-color-flag-hover:hover {
   background: var(--white);
   color: var(--third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
 }
 .third-color-flag-clicked.clicked {
   background: var(--white);
   color: var(--third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
 }
 .third-color-flag-active.active {
   background: var(--white);
   color: var(--third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color);
 }
 .third-color-flag-invert {
   background: var(--white);
@@ -19185,17 +20470,17 @@ input[type="radio"]:checked+label.third-color {
 }
 .third-color-dark-box-clicked.clicked, .third-color-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
   color: var(--third-color-dark);
 }
 .third-color-dark-box-active.active, .third-color-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
   color: var(--third-color-dark);
 }
 .third-color-dark-box-invert, .third-color-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
   color: var(--third-color-dark);
 }
 .third-color-dark-chip, .third-color-dark-chip-invert, .third-color-dark-chip-active.active, .third-color-dark-chip-clicked.clicked, .third-color-dark-chip-hover:hover {
@@ -19213,17 +20498,17 @@ input[type="radio"]:checked+label.third-color {
 }
 .third-color-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
   color: var(--third-color-dark);
 }
 .third-color-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
   color: var(--third-color-dark);
 }
 .third-color-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
   color: var(--third-color-dark);
 }
 .third-color-dark-chip-invert {
@@ -19245,17 +20530,17 @@ input[type="radio"]:checked+label.third-color {
 .third-color-dark-flag-hover:hover {
   background: var(--white);
   color: var(--third-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
 }
 .third-color-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--third-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
 }
 .third-color-dark-flag-active.active {
   background: var(--white);
   color: var(--third-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--third-color-dark);
 }
 .third-color-dark-flag-invert {
   background: var(--white);
@@ -19473,17 +20758,17 @@ input[type="radio"]:checked+label.third-color-dark {
 }
 .fourth-color-box-clicked.clicked, .fourth-color-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
   color: var(--fourth-color);
 }
 .fourth-color-box-active.active, .fourth-color-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
   color: var(--fourth-color);
 }
 .fourth-color-box-invert, .fourth-color-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
   color: var(--fourth-color);
 }
 .fourth-color-chip, .fourth-color-chip-invert, .fourth-color-chip-active.active, .fourth-color-chip-clicked.clicked, .fourth-color-chip-hover:hover {
@@ -19501,17 +20786,17 @@ input[type="radio"]:checked+label.third-color-dark {
 }
 .fourth-color-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
   color: var(--fourth-color);
 }
 .fourth-color-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
   color: var(--fourth-color);
 }
 .fourth-color-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
   color: var(--fourth-color);
 }
 .fourth-color-chip-invert {
@@ -19533,17 +20818,17 @@ input[type="radio"]:checked+label.third-color-dark {
 .fourth-color-flag-hover:hover {
   background: var(--white);
   color: var(--fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
 }
 .fourth-color-flag-clicked.clicked {
   background: var(--white);
   color: var(--fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
 }
 .fourth-color-flag-active.active {
   background: var(--white);
   color: var(--fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color);
 }
 .fourth-color-flag-invert {
   background: var(--white);
@@ -19761,17 +21046,17 @@ input[type="radio"]:checked+label.fourth-color {
 }
 .fourth-color-dark-box-clicked.clicked, .fourth-color-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
   color: var(--fourth-color-dark);
 }
 .fourth-color-dark-box-active.active, .fourth-color-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
   color: var(--fourth-color-dark);
 }
 .fourth-color-dark-box-invert, .fourth-color-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
   color: var(--fourth-color-dark);
 }
 .fourth-color-dark-chip, .fourth-color-dark-chip-invert, .fourth-color-dark-chip-active.active, .fourth-color-dark-chip-clicked.clicked, .fourth-color-dark-chip-hover:hover {
@@ -19789,17 +21074,17 @@ input[type="radio"]:checked+label.fourth-color {
 }
 .fourth-color-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
   color: var(--fourth-color-dark);
 }
 .fourth-color-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
   color: var(--fourth-color-dark);
 }
 .fourth-color-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
   color: var(--fourth-color-dark);
 }
 .fourth-color-dark-chip-invert {
@@ -19821,17 +21106,17 @@ input[type="radio"]:checked+label.fourth-color {
 .fourth-color-dark-flag-hover:hover {
   background: var(--white);
   color: var(--fourth-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
 }
 .fourth-color-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--fourth-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
 }
 .fourth-color-dark-flag-active.active {
   background: var(--white);
   color: var(--fourth-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--fourth-color-dark);
 }
 .fourth-color-dark-flag-invert {
   background: var(--white);
@@ -20049,17 +21334,17 @@ input[type="radio"]:checked+label.fourth-color-dark {
 }
 .link-box-clicked.clicked, .link-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
   color: var(--link-color);
 }
 .link-box-active.active, .link-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
   color: var(--link-color);
 }
 .link-box-invert, .link-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
   color: var(--link-color);
 }
 .link-chip, .link-chip-invert, .link-chip-active.active, .link-chip-clicked.clicked, .link-chip-hover:hover {
@@ -20077,17 +21362,17 @@ input[type="radio"]:checked+label.fourth-color-dark {
 }
 .link-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
   color: var(--link-color);
 }
 .link-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
   color: var(--link-color);
 }
 .link-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
   color: var(--link-color);
 }
 .link-chip-invert {
@@ -20109,17 +21394,17 @@ input[type="radio"]:checked+label.fourth-color-dark {
 .link-flag-hover:hover {
   background: var(--white);
   color: var(--link-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
 }
 .link-flag-clicked.clicked {
   background: var(--white);
   color: var(--link-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
 }
 .link-flag-active.active {
   background: var(--white);
   color: var(--link-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-color);
 }
 .link-flag-invert {
   background: var(--white);
@@ -20337,17 +21622,17 @@ input[type="radio"]:checked+label.link {
 }
 .link-hover-box-clicked.clicked, .link-hover-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
   color: var(--link-hover-color);
 }
 .link-hover-box-active.active, .link-hover-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
   color: var(--link-hover-color);
 }
 .link-hover-box-invert, .link-hover-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
   color: var(--link-hover-color);
 }
 .link-hover-chip, .link-hover-chip-invert, .link-hover-chip-active.active, .link-hover-chip-clicked.clicked, .link-hover-chip-hover:hover {
@@ -20365,17 +21650,17 @@ input[type="radio"]:checked+label.link {
 }
 .link-hover-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
   color: var(--link-hover-color);
 }
 .link-hover-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
   color: var(--link-hover-color);
 }
 .link-hover-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
   color: var(--link-hover-color);
 }
 .link-hover-chip-invert {
@@ -20397,17 +21682,17 @@ input[type="radio"]:checked+label.link {
 .link-hover-flag-hover:hover {
   background: var(--white);
   color: var(--link-hover-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
 }
 .link-hover-flag-clicked.clicked {
   background: var(--white);
   color: var(--link-hover-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
 }
 .link-hover-flag-active.active {
   background: var(--white);
   color: var(--link-hover-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--link-hover-color);
 }
 .link-hover-flag-invert {
   background: var(--white);
@@ -20625,17 +21910,17 @@ input[type="radio"]:checked+label.link-hover {
 }
 .info-box-clicked.clicked, .info-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
   color: var(--info);
 }
 .info-box-active.active, .info-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
   color: var(--info);
 }
 .info-box-invert, .info-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
   color: var(--info);
 }
 .info-chip, .info-chip-invert, .info-chip-active.active, .info-chip-clicked.clicked, .info-chip-hover:hover {
@@ -20653,17 +21938,17 @@ input[type="radio"]:checked+label.link-hover {
 }
 .info-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
   color: var(--info);
 }
 .info-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
   color: var(--info);
 }
 .info-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
   color: var(--info);
 }
 .info-chip-invert {
@@ -20685,17 +21970,17 @@ input[type="radio"]:checked+label.link-hover {
 .info-flag-hover:hover {
   background: var(--white);
   color: var(--info);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
 }
 .info-flag-clicked.clicked {
   background: var(--white);
   color: var(--info);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
 }
 .info-flag-active.active {
   background: var(--white);
   color: var(--info);
-  border: 1px solid var(--white);
+  border: 1px solid var(--info);
 }
 .info-flag-invert {
   background: var(--white);
@@ -20913,17 +22198,17 @@ input[type="radio"]:checked+label.info {
 }
 .success-box-clicked.clicked, .success-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
   color: var(--success);
 }
 .success-box-active.active, .success-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
   color: var(--success);
 }
 .success-box-invert, .success-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
   color: var(--success);
 }
 .success-chip, .success-chip-invert, .success-chip-active.active, .success-chip-clicked.clicked, .success-chip-hover:hover {
@@ -20941,17 +22226,17 @@ input[type="radio"]:checked+label.info {
 }
 .success-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
   color: var(--success);
 }
 .success-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
   color: var(--success);
 }
 .success-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
   color: var(--success);
 }
 .success-chip-invert {
@@ -20973,17 +22258,17 @@ input[type="radio"]:checked+label.info {
 .success-flag-hover:hover {
   background: var(--white);
   color: var(--success);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
 }
 .success-flag-clicked.clicked {
   background: var(--white);
   color: var(--success);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
 }
 .success-flag-active.active {
   background: var(--white);
   color: var(--success);
-  border: 1px solid var(--white);
+  border: 1px solid var(--success);
 }
 .success-flag-invert {
   background: var(--white);
@@ -21201,17 +22486,17 @@ input[type="radio"]:checked+label.success {
 }
 .warning-box-clicked.clicked, .warning-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
   color: var(--warning);
 }
 .warning-box-active.active, .warning-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
   color: var(--warning);
 }
 .warning-box-invert, .warning-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
   color: var(--warning);
 }
 .warning-chip, .warning-chip-invert, .warning-chip-active.active, .warning-chip-clicked.clicked, .warning-chip-hover:hover {
@@ -21229,17 +22514,17 @@ input[type="radio"]:checked+label.success {
 }
 .warning-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
   color: var(--warning);
 }
 .warning-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
   color: var(--warning);
 }
 .warning-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
   color: var(--warning);
 }
 .warning-chip-invert {
@@ -21261,17 +22546,17 @@ input[type="radio"]:checked+label.success {
 .warning-flag-hover:hover {
   background: var(--white);
   color: var(--warning);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
 }
 .warning-flag-clicked.clicked {
   background: var(--white);
   color: var(--warning);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
 }
 .warning-flag-active.active {
   background: var(--white);
   color: var(--warning);
-  border: 1px solid var(--white);
+  border: 1px solid var(--warning);
 }
 .warning-flag-invert {
   background: var(--white);
@@ -21489,17 +22774,17 @@ input[type="radio"]:checked+label.warning {
 }
 .danger-box-clicked.clicked, .danger-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
   color: var(--danger);
 }
 .danger-box-active.active, .danger-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
   color: var(--danger);
 }
 .danger-box-invert, .danger-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
   color: var(--danger);
 }
 .danger-chip, .danger-chip-invert, .danger-chip-active.active, .danger-chip-clicked.clicked, .danger-chip-hover:hover {
@@ -21517,17 +22802,17 @@ input[type="radio"]:checked+label.warning {
 }
 .danger-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
   color: var(--danger);
 }
 .danger-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
   color: var(--danger);
 }
 .danger-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
   color: var(--danger);
 }
 .danger-chip-invert {
@@ -21549,17 +22834,17 @@ input[type="radio"]:checked+label.warning {
 .danger-flag-hover:hover {
   background: var(--white);
   color: var(--danger);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
 }
 .danger-flag-clicked.clicked {
   background: var(--white);
   color: var(--danger);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
 }
 .danger-flag-active.active {
   background: var(--white);
   color: var(--danger);
-  border: 1px solid var(--white);
+  border: 1px solid var(--danger);
 }
 .danger-flag-invert {
   background: var(--white);
@@ -21777,17 +23062,17 @@ input[type="radio"]:checked+label.danger {
 }
 .bad-box-clicked.clicked, .bad-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
   color: var(--bad);
 }
 .bad-box-active.active, .bad-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
   color: var(--bad);
 }
 .bad-box-invert, .bad-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
   color: var(--bad);
 }
 .bad-chip, .bad-chip-invert, .bad-chip-active.active, .bad-chip-clicked.clicked, .bad-chip-hover:hover {
@@ -21805,17 +23090,17 @@ input[type="radio"]:checked+label.danger {
 }
 .bad-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
   color: var(--bad);
 }
 .bad-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
   color: var(--bad);
 }
 .bad-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
   color: var(--bad);
 }
 .bad-chip-invert {
@@ -21837,17 +23122,17 @@ input[type="radio"]:checked+label.danger {
 .bad-flag-hover:hover {
   background: var(--white);
   color: var(--bad);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
 }
 .bad-flag-clicked.clicked {
   background: var(--white);
   color: var(--bad);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
 }
 .bad-flag-active.active {
   background: var(--white);
   color: var(--bad);
-  border: 1px solid var(--white);
+  border: 1px solid var(--bad);
 }
 .bad-flag-invert {
   background: var(--white);
@@ -22065,17 +23350,17 @@ input[type="radio"]:checked+label.bad {
 }
 .acid-green-box-clicked.clicked, .acid-green-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
   color: var(--acid-green);
 }
 .acid-green-box-active.active, .acid-green-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
   color: var(--acid-green);
 }
 .acid-green-box-invert, .acid-green-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
   color: var(--acid-green);
 }
 .acid-green-chip, .acid-green-chip-invert, .acid-green-chip-active.active, .acid-green-chip-clicked.clicked, .acid-green-chip-hover:hover {
@@ -22093,17 +23378,17 @@ input[type="radio"]:checked+label.bad {
 }
 .acid-green-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
   color: var(--acid-green);
 }
 .acid-green-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
   color: var(--acid-green);
 }
 .acid-green-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
   color: var(--acid-green);
 }
 .acid-green-chip-invert {
@@ -22125,17 +23410,17 @@ input[type="radio"]:checked+label.bad {
 .acid-green-flag-hover:hover {
   background: var(--white);
   color: var(--acid-green);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
 }
 .acid-green-flag-clicked.clicked {
   background: var(--white);
   color: var(--acid-green);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
 }
 .acid-green-flag-active.active {
   background: var(--white);
   color: var(--acid-green);
-  border: 1px solid var(--white);
+  border: 1px solid var(--acid-green);
 }
 .acid-green-flag-invert {
   background: var(--white);
@@ -22353,17 +23638,17 @@ input[type="radio"]:checked+label.acid-green {
 }
 .gingerbread-box-clicked.clicked, .gingerbread-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
   color: var(--gingerbread);
 }
 .gingerbread-box-active.active, .gingerbread-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
   color: var(--gingerbread);
 }
 .gingerbread-box-invert, .gingerbread-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
   color: var(--gingerbread);
 }
 .gingerbread-chip, .gingerbread-chip-invert, .gingerbread-chip-active.active, .gingerbread-chip-clicked.clicked, .gingerbread-chip-hover:hover {
@@ -22381,17 +23666,17 @@ input[type="radio"]:checked+label.acid-green {
 }
 .gingerbread-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
   color: var(--gingerbread);
 }
 .gingerbread-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
   color: var(--gingerbread);
 }
 .gingerbread-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
   color: var(--gingerbread);
 }
 .gingerbread-chip-invert {
@@ -22413,17 +23698,17 @@ input[type="radio"]:checked+label.acid-green {
 .gingerbread-flag-hover:hover {
   background: var(--white);
   color: var(--gingerbread);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
 }
 .gingerbread-flag-clicked.clicked {
   background: var(--white);
   color: var(--gingerbread);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
 }
 .gingerbread-flag-active.active {
   background: var(--white);
   color: var(--gingerbread);
-  border: 1px solid var(--white);
+  border: 1px solid var(--gingerbread);
 }
 .gingerbread-flag-invert {
   background: var(--white);
@@ -22641,17 +23926,17 @@ input[type="radio"]:checked+label.gingerbread {
 }
 .mini-box-clicked.clicked, .mini-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
   color: var(--mini-color);
 }
 .mini-box-active.active, .mini-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
   color: var(--mini-color);
 }
 .mini-box-invert, .mini-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
   color: var(--mini-color);
 }
 .mini-chip, .mini-chip-invert, .mini-chip-active.active, .mini-chip-clicked.clicked, .mini-chip-hover:hover {
@@ -22669,17 +23954,17 @@ input[type="radio"]:checked+label.gingerbread {
 }
 .mini-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
   color: var(--mini-color);
 }
 .mini-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
   color: var(--mini-color);
 }
 .mini-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
   color: var(--mini-color);
 }
 .mini-chip-invert {
@@ -22701,17 +23986,17 @@ input[type="radio"]:checked+label.gingerbread {
 .mini-flag-hover:hover {
   background: var(--white);
   color: var(--mini-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
 }
 .mini-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
 }
 .mini-flag-active.active {
   background: var(--white);
   color: var(--mini-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color);
 }
 .mini-flag-invert {
   background: var(--white);
@@ -22929,17 +24214,17 @@ input[type="radio"]:checked+label.mini {
 }
 .mini-dark-box-clicked.clicked, .mini-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
   color: var(--mini-color-dark);
 }
 .mini-dark-box-active.active, .mini-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
   color: var(--mini-color-dark);
 }
 .mini-dark-box-invert, .mini-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
   color: var(--mini-color-dark);
 }
 .mini-dark-chip, .mini-dark-chip-invert, .mini-dark-chip-active.active, .mini-dark-chip-clicked.clicked, .mini-dark-chip-hover:hover {
@@ -22957,17 +24242,17 @@ input[type="radio"]:checked+label.mini {
 }
 .mini-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
   color: var(--mini-color-dark);
 }
 .mini-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
   color: var(--mini-color-dark);
 }
 .mini-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
   color: var(--mini-color-dark);
 }
 .mini-dark-chip-invert {
@@ -22989,17 +24274,17 @@ input[type="radio"]:checked+label.mini {
 .mini-dark-flag-hover:hover {
   background: var(--white);
   color: var(--mini-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
 }
 .mini-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
 }
 .mini-dark-flag-active.active {
   background: var(--white);
   color: var(--mini-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-color-dark);
 }
 .mini-dark-flag-invert {
   background: var(--white);
@@ -23217,17 +24502,17 @@ input[type="radio"]:checked+label.mini-dark {
 }
 .mini-second-box-clicked.clicked, .mini-second-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
   color: var(--mini-second-color);
 }
 .mini-second-box-active.active, .mini-second-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
   color: var(--mini-second-color);
 }
 .mini-second-box-invert, .mini-second-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
   color: var(--mini-second-color);
 }
 .mini-second-chip, .mini-second-chip-invert, .mini-second-chip-active.active, .mini-second-chip-clicked.clicked, .mini-second-chip-hover:hover {
@@ -23245,17 +24530,17 @@ input[type="radio"]:checked+label.mini-dark {
 }
 .mini-second-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
   color: var(--mini-second-color);
 }
 .mini-second-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
   color: var(--mini-second-color);
 }
 .mini-second-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
   color: var(--mini-second-color);
 }
 .mini-second-chip-invert {
@@ -23277,17 +24562,17 @@ input[type="radio"]:checked+label.mini-dark {
 .mini-second-flag-hover:hover {
   background: var(--white);
   color: var(--mini-second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
 }
 .mini-second-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
 }
 .mini-second-flag-active.active {
   background: var(--white);
   color: var(--mini-second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color);
 }
 .mini-second-flag-invert {
   background: var(--white);
@@ -23505,17 +24790,17 @@ input[type="radio"]:checked+label.mini-second {
 }
 .mini-second-dark-box-clicked.clicked, .mini-second-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
   color: var(--mini-second-color-dark);
 }
 .mini-second-dark-box-active.active, .mini-second-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
   color: var(--mini-second-color-dark);
 }
 .mini-second-dark-box-invert, .mini-second-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
   color: var(--mini-second-color-dark);
 }
 .mini-second-dark-chip, .mini-second-dark-chip-invert, .mini-second-dark-chip-active.active, .mini-second-dark-chip-clicked.clicked, .mini-second-dark-chip-hover:hover {
@@ -23533,17 +24818,17 @@ input[type="radio"]:checked+label.mini-second {
 }
 .mini-second-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
   color: var(--mini-second-color-dark);
 }
 .mini-second-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
   color: var(--mini-second-color-dark);
 }
 .mini-second-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
   color: var(--mini-second-color-dark);
 }
 .mini-second-dark-chip-invert {
@@ -23565,17 +24850,17 @@ input[type="radio"]:checked+label.mini-second {
 .mini-second-dark-flag-hover:hover {
   background: var(--white);
   color: var(--mini-second-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
 }
 .mini-second-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-second-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
 }
 .mini-second-dark-flag-active.active {
   background: var(--white);
   color: var(--mini-second-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-second-color-dark);
 }
 .mini-second-dark-flag-invert {
   background: var(--white);
@@ -23793,17 +25078,17 @@ input[type="radio"]:checked+label.mini-second-dark {
 }
 .mini-third-box-clicked.clicked, .mini-third-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
   color: var(--mini-third-color);
 }
 .mini-third-box-active.active, .mini-third-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
   color: var(--mini-third-color);
 }
 .mini-third-box-invert, .mini-third-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
   color: var(--mini-third-color);
 }
 .mini-third-chip, .mini-third-chip-invert, .mini-third-chip-active.active, .mini-third-chip-clicked.clicked, .mini-third-chip-hover:hover {
@@ -23821,17 +25106,17 @@ input[type="radio"]:checked+label.mini-second-dark {
 }
 .mini-third-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
   color: var(--mini-third-color);
 }
 .mini-third-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
   color: var(--mini-third-color);
 }
 .mini-third-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
   color: var(--mini-third-color);
 }
 .mini-third-chip-invert {
@@ -23853,17 +25138,17 @@ input[type="radio"]:checked+label.mini-second-dark {
 .mini-third-flag-hover:hover {
   background: var(--white);
   color: var(--mini-third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
 }
 .mini-third-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
 }
 .mini-third-flag-active.active {
   background: var(--white);
   color: var(--mini-third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color);
 }
 .mini-third-flag-invert {
   background: var(--white);
@@ -24081,17 +25366,17 @@ input[type="radio"]:checked+label.mini-third {
 }
 .mini-third-dark-box-clicked.clicked, .mini-third-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
   color: var(--mini-third-color-dark);
 }
 .mini-third-dark-box-active.active, .mini-third-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
   color: var(--mini-third-color-dark);
 }
 .mini-third-dark-box-invert, .mini-third-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
   color: var(--mini-third-color-dark);
 }
 .mini-third-dark-chip, .mini-third-dark-chip-invert, .mini-third-dark-chip-active.active, .mini-third-dark-chip-clicked.clicked, .mini-third-dark-chip-hover:hover {
@@ -24109,17 +25394,17 @@ input[type="radio"]:checked+label.mini-third {
 }
 .mini-third-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
   color: var(--mini-third-color-dark);
 }
 .mini-third-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
   color: var(--mini-third-color-dark);
 }
 .mini-third-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
   color: var(--mini-third-color-dark);
 }
 .mini-third-dark-chip-invert {
@@ -24141,17 +25426,17 @@ input[type="radio"]:checked+label.mini-third {
 .mini-third-dark-flag-hover:hover {
   background: var(--white);
   color: var(--mini-third-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
 }
 .mini-third-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-third-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
 }
 .mini-third-dark-flag-active.active {
   background: var(--white);
   color: var(--mini-third-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-third-color-dark);
 }
 .mini-third-dark-flag-invert {
   background: var(--white);
@@ -24369,17 +25654,17 @@ input[type="radio"]:checked+label.mini-third-dark {
 }
 .mini-fourth-box-clicked.clicked, .mini-fourth-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
   color: var(--mini-fourth-color);
 }
 .mini-fourth-box-active.active, .mini-fourth-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
   color: var(--mini-fourth-color);
 }
 .mini-fourth-box-invert, .mini-fourth-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
   color: var(--mini-fourth-color);
 }
 .mini-fourth-chip, .mini-fourth-chip-invert, .mini-fourth-chip-active.active, .mini-fourth-chip-clicked.clicked, .mini-fourth-chip-hover:hover {
@@ -24397,17 +25682,17 @@ input[type="radio"]:checked+label.mini-third-dark {
 }
 .mini-fourth-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
   color: var(--mini-fourth-color);
 }
 .mini-fourth-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
   color: var(--mini-fourth-color);
 }
 .mini-fourth-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
   color: var(--mini-fourth-color);
 }
 .mini-fourth-chip-invert {
@@ -24429,17 +25714,17 @@ input[type="radio"]:checked+label.mini-third-dark {
 .mini-fourth-flag-hover:hover {
   background: var(--white);
   color: var(--mini-fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
 }
 .mini-fourth-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
 }
 .mini-fourth-flag-active.active {
   background: var(--white);
   color: var(--mini-fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color);
 }
 .mini-fourth-flag-invert {
   background: var(--white);
@@ -24657,17 +25942,17 @@ input[type="radio"]:checked+label.mini-fourth {
 }
 .mini-fourth-dark-box-clicked.clicked, .mini-fourth-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
   color: var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-box-active.active, .mini-fourth-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
   color: var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-box-invert, .mini-fourth-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
   color: var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-chip, .mini-fourth-dark-chip-invert, .mini-fourth-dark-chip-active.active, .mini-fourth-dark-chip-clicked.clicked, .mini-fourth-dark-chip-hover:hover {
@@ -24685,17 +25970,17 @@ input[type="radio"]:checked+label.mini-fourth {
 }
 .mini-fourth-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
   color: var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
   color: var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
   color: var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-chip-invert {
@@ -24717,17 +26002,17 @@ input[type="radio"]:checked+label.mini-fourth {
 .mini-fourth-dark-flag-hover:hover {
   background: var(--white);
   color: var(--mini-fourth-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--mini-fourth-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-flag-active.active {
   background: var(--white);
   color: var(--mini-fourth-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--mini-fourth-color-dark);
 }
 .mini-fourth-dark-flag-invert {
   background: var(--white);
@@ -24945,17 +26230,17 @@ input[type="radio"]:checked+label.mini-fourth-dark {
 }
 .uwa-box-clicked.clicked, .uwa-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
   color: var(--uwa-color);
 }
 .uwa-box-active.active, .uwa-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
   color: var(--uwa-color);
 }
 .uwa-box-invert, .uwa-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
   color: var(--uwa-color);
 }
 .uwa-chip, .uwa-chip-invert, .uwa-chip-active.active, .uwa-chip-clicked.clicked, .uwa-chip-hover:hover {
@@ -24973,17 +26258,17 @@ input[type="radio"]:checked+label.mini-fourth-dark {
 }
 .uwa-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
   color: var(--uwa-color);
 }
 .uwa-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
   color: var(--uwa-color);
 }
 .uwa-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
   color: var(--uwa-color);
 }
 .uwa-chip-invert {
@@ -25005,17 +26290,17 @@ input[type="radio"]:checked+label.mini-fourth-dark {
 .uwa-flag-hover:hover {
   background: var(--white);
   color: var(--uwa-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
 }
 .uwa-flag-clicked.clicked {
   background: var(--white);
   color: var(--uwa-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
 }
 .uwa-flag-active.active {
   background: var(--white);
   color: var(--uwa-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color);
 }
 .uwa-flag-invert {
   background: var(--white);
@@ -25233,17 +26518,17 @@ input[type="radio"]:checked+label.uwa {
 }
 .uwa-dark-box-clicked.clicked, .uwa-dark-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
   color: var(--uwa-color-dark);
 }
 .uwa-dark-box-active.active, .uwa-dark-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
   color: var(--uwa-color-dark);
 }
 .uwa-dark-box-invert, .uwa-dark-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
   color: var(--uwa-color-dark);
 }
 .uwa-dark-chip, .uwa-dark-chip-invert, .uwa-dark-chip-active.active, .uwa-dark-chip-clicked.clicked, .uwa-dark-chip-hover:hover {
@@ -25261,17 +26546,17 @@ input[type="radio"]:checked+label.uwa {
 }
 .uwa-dark-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
   color: var(--uwa-color-dark);
 }
 .uwa-dark-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
   color: var(--uwa-color-dark);
 }
 .uwa-dark-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
   color: var(--uwa-color-dark);
 }
 .uwa-dark-chip-invert {
@@ -25293,17 +26578,17 @@ input[type="radio"]:checked+label.uwa {
 .uwa-dark-flag-hover:hover {
   background: var(--white);
   color: var(--uwa-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
 }
 .uwa-dark-flag-clicked.clicked {
   background: var(--white);
   color: var(--uwa-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
 }
 .uwa-dark-flag-active.active {
   background: var(--white);
   color: var(--uwa-color-dark);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-color-dark);
 }
 .uwa-dark-flag-invert {
   background: var(--white);
@@ -25521,17 +26806,17 @@ input[type="radio"]:checked+label.uwa-dark {
 }
 .uwa-second-box-clicked.clicked, .uwa-second-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
   color: var(--uwa-second-color);
 }
 .uwa-second-box-active.active, .uwa-second-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
   color: var(--uwa-second-color);
 }
 .uwa-second-box-invert, .uwa-second-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
   color: var(--uwa-second-color);
 }
 .uwa-second-chip, .uwa-second-chip-invert, .uwa-second-chip-active.active, .uwa-second-chip-clicked.clicked, .uwa-second-chip-hover:hover {
@@ -25549,17 +26834,17 @@ input[type="radio"]:checked+label.uwa-dark {
 }
 .uwa-second-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
   color: var(--uwa-second-color);
 }
 .uwa-second-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
   color: var(--uwa-second-color);
 }
 .uwa-second-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
   color: var(--uwa-second-color);
 }
 .uwa-second-chip-invert {
@@ -25581,17 +26866,17 @@ input[type="radio"]:checked+label.uwa-dark {
 .uwa-second-flag-hover:hover {
   background: var(--white);
   color: var(--uwa-second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
 }
 .uwa-second-flag-clicked.clicked {
   background: var(--white);
   color: var(--uwa-second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
 }
 .uwa-second-flag-active.active {
   background: var(--white);
   color: var(--uwa-second-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-second-color);
 }
 .uwa-second-flag-invert {
   background: var(--white);
@@ -25809,17 +27094,17 @@ input[type="radio"]:checked+label.uwa-second {
 }
 .uwa-third-box-clicked.clicked, .uwa-third-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
   color: var(--uwa-third-color);
 }
 .uwa-third-box-active.active, .uwa-third-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
   color: var(--uwa-third-color);
 }
 .uwa-third-box-invert, .uwa-third-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
   color: var(--uwa-third-color);
 }
 .uwa-third-chip, .uwa-third-chip-invert, .uwa-third-chip-active.active, .uwa-third-chip-clicked.clicked, .uwa-third-chip-hover:hover {
@@ -25837,17 +27122,17 @@ input[type="radio"]:checked+label.uwa-second {
 }
 .uwa-third-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
   color: var(--uwa-third-color);
 }
 .uwa-third-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
   color: var(--uwa-third-color);
 }
 .uwa-third-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
   color: var(--uwa-third-color);
 }
 .uwa-third-chip-invert {
@@ -25869,17 +27154,17 @@ input[type="radio"]:checked+label.uwa-second {
 .uwa-third-flag-hover:hover {
   background: var(--white);
   color: var(--uwa-third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
 }
 .uwa-third-flag-clicked.clicked {
   background: var(--white);
   color: var(--uwa-third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
 }
 .uwa-third-flag-active.active {
   background: var(--white);
   color: var(--uwa-third-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-third-color);
 }
 .uwa-third-flag-invert {
   background: var(--white);
@@ -26097,17 +27382,17 @@ input[type="radio"]:checked+label.uwa-third {
 }
 .uwa-fourth-box-clicked.clicked, .uwa-fourth-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
   color: var(--uwa-fourth-color);
 }
 .uwa-fourth-box-active.active, .uwa-fourth-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
   color: var(--uwa-fourth-color);
 }
 .uwa-fourth-box-invert, .uwa-fourth-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
   color: var(--uwa-fourth-color);
 }
 .uwa-fourth-chip, .uwa-fourth-chip-invert, .uwa-fourth-chip-active.active, .uwa-fourth-chip-clicked.clicked, .uwa-fourth-chip-hover:hover {
@@ -26125,17 +27410,17 @@ input[type="radio"]:checked+label.uwa-third {
 }
 .uwa-fourth-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
   color: var(--uwa-fourth-color);
 }
 .uwa-fourth-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
   color: var(--uwa-fourth-color);
 }
 .uwa-fourth-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
   color: var(--uwa-fourth-color);
 }
 .uwa-fourth-chip-invert {
@@ -26157,17 +27442,17 @@ input[type="radio"]:checked+label.uwa-third {
 .uwa-fourth-flag-hover:hover {
   background: var(--white);
   color: var(--uwa-fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
 }
 .uwa-fourth-flag-clicked.clicked {
   background: var(--white);
   color: var(--uwa-fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
 }
 .uwa-fourth-flag-active.active {
   background: var(--white);
   color: var(--uwa-fourth-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-fourth-color);
 }
 .uwa-fourth-flag-invert {
   background: var(--white);
@@ -26385,17 +27670,17 @@ input[type="radio"]:checked+label.uwa-fourth {
 }
 .uwa-link-box-clicked.clicked, .uwa-link-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
   color: var(--uwa-link-color);
 }
 .uwa-link-box-active.active, .uwa-link-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
   color: var(--uwa-link-color);
 }
 .uwa-link-box-invert, .uwa-link-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
   color: var(--uwa-link-color);
 }
 .uwa-link-chip, .uwa-link-chip-invert, .uwa-link-chip-active.active, .uwa-link-chip-clicked.clicked, .uwa-link-chip-hover:hover {
@@ -26413,17 +27698,17 @@ input[type="radio"]:checked+label.uwa-fourth {
 }
 .uwa-link-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
   color: var(--uwa-link-color);
 }
 .uwa-link-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
   color: var(--uwa-link-color);
 }
 .uwa-link-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
   color: var(--uwa-link-color);
 }
 .uwa-link-chip-invert {
@@ -26445,17 +27730,17 @@ input[type="radio"]:checked+label.uwa-fourth {
 .uwa-link-flag-hover:hover {
   background: var(--white);
   color: var(--uwa-link-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
 }
 .uwa-link-flag-clicked.clicked {
   background: var(--white);
   color: var(--uwa-link-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
 }
 .uwa-link-flag-active.active {
   background: var(--white);
   color: var(--uwa-link-color);
-  border: 1px solid var(--white);
+  border: 1px solid var(--uwa-link-color);
 }
 .uwa-link-flag-invert {
   background: var(--white);
@@ -26673,17 +27958,17 @@ input[type="radio"]:checked+label.uwa-link {
 }
 .light-blue-box-clicked.clicked, .light-blue-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   color: var(--light-blue);
 }
 .light-blue-box-active.active, .light-blue-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   color: var(--light-blue);
 }
 .light-blue-box-invert, .light-blue-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   color: var(--light-blue);
 }
 .light-blue-chip, .light-blue-chip-invert, .light-blue-chip-active.active, .light-blue-chip-clicked.clicked, .light-blue-chip-hover:hover {
@@ -26701,17 +27986,17 @@ input[type="radio"]:checked+label.uwa-link {
 }
 .light-blue-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   color: var(--light-blue);
 }
 .light-blue-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   color: var(--light-blue);
 }
 .light-blue-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
   color: var(--light-blue);
 }
 .light-blue-chip-invert {
@@ -26733,17 +28018,17 @@ input[type="radio"]:checked+label.uwa-link {
 .light-blue-flag-hover:hover {
   background: var(--white);
   color: var(--light-blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
 }
 .light-blue-flag-clicked.clicked {
   background: var(--white);
   color: var(--light-blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
 }
 .light-blue-flag-active.active {
   background: var(--white);
   color: var(--light-blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--light-blue);
 }
 .light-blue-flag-invert {
   background: var(--white);
@@ -26961,17 +28246,17 @@ input[type="radio"]:checked+label.light-blue {
 }
 .blue-box-clicked.clicked, .blue-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
   color: var(--blue);
 }
 .blue-box-active.active, .blue-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
   color: var(--blue);
 }
 .blue-box-invert, .blue-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
   color: var(--blue);
 }
 .blue-chip, .blue-chip-invert, .blue-chip-active.active, .blue-chip-clicked.clicked, .blue-chip-hover:hover {
@@ -26989,17 +28274,17 @@ input[type="radio"]:checked+label.light-blue {
 }
 .blue-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
   color: var(--blue);
 }
 .blue-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
   color: var(--blue);
 }
 .blue-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
   color: var(--blue);
 }
 .blue-chip-invert {
@@ -27021,17 +28306,17 @@ input[type="radio"]:checked+label.light-blue {
 .blue-flag-hover:hover {
   background: var(--white);
   color: var(--blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
 }
 .blue-flag-clicked.clicked {
   background: var(--white);
   color: var(--blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
 }
 .blue-flag-active.active {
   background: var(--white);
   color: var(--blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--blue);
 }
 .blue-flag-invert {
   background: var(--white);
@@ -27249,17 +28534,17 @@ input[type="radio"]:checked+label.blue {
 }
 .dark-blue-box-clicked.clicked, .dark-blue-text-box-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
 }
 .dark-blue-box-active.active, .dark-blue-text-box-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
 }
 .dark-blue-box-invert, .dark-blue-text-box-invert {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
 }
 .dark-blue-chip, .dark-blue-chip-invert, .dark-blue-chip-active.active, .dark-blue-chip-clicked.clicked, .dark-blue-chip-hover:hover {
@@ -27277,17 +28562,17 @@ input[type="radio"]:checked+label.blue {
 }
 .dark-blue-chip-hover:hover {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
 }
 .dark-blue-chip-clicked.clicked {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
 }
 .dark-blue-chip-active.active {
   background: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
 }
 .dark-blue-chip-invert {
@@ -27309,17 +28594,17 @@ input[type="radio"]:checked+label.blue {
 .dark-blue-flag-hover:hover {
   background: var(--white);
   color: var(--dark-blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
 }
 .dark-blue-flag-clicked.clicked {
   background: var(--white);
   color: var(--dark-blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
 }
 .dark-blue-flag-active.active {
   background: var(--white);
   color: var(--dark-blue);
-  border: 1px solid var(--white);
+  border: 1px solid var(--dark-blue);
 }
 .dark-blue-flag-invert {
   background: var(--white);
@@ -27622,6 +28907,13 @@ input[type="radio"]:checked+label.dark-blue {
   background: -moz-linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
   background: -o-linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
   background: linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
+}
+
+.grad-mini {
+  background: -webkit-linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
+  background: -moz-linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
+  background: -o-linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
+  background: linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
 }
 
 .grad-uwa {
@@ -27953,10 +29245,10 @@ h1.handwriting, h1.text-handwriting, h2.handwriting, h2.text-handwriting, h3.han
 h1.mono, h1.text-mono, h2.mono, h2.text-mono, h3.mono, h3.text-mono, h4.mono, h4.text-mono, h5.mono, h5.text-mono, h6.mono, h6.text-mono, p.mono, p.text-mono, li.mono, li.text-mono, code.mono, code.text-mono, span.mono, span.text-mono, i.mono, i.text-mono, b.mono, b.text-mono, u.mono, u.text-mono, a.mono, a.text-mono, label.mono, label.text-mono {
   font-family: var(--font-mono);
 }
-h1.font-two, h1.font-titles, h1.font-title, h1.title, h1.text-second-font, h2.font-two, h2.font-titles, h2.font-title, h2.title, h2.text-second-font, h3.font-two, h3.font-titles, h3.font-title, h3.title, h3.text-second-font, h4.font-two, h4.font-titles, h4.font-title, h4.title, h4.text-second-font, h5.font-two, h5.font-titles, h5.font-title, h5.title, h5.text-second-font, h6.font-two, h6.font-titles, h6.font-title, h6.title, h6.text-second-font, p.font-two, p.font-titles, p.font-title, p.title, p.text-second-font, li.font-two, li.font-titles, li.font-title, li.title, li.text-second-font, code.font-two, code.font-titles, code.font-title, code.title, code.text-second-font, span.font-two, span.font-titles, span.font-title, span.title, span.text-second-font, i.font-two, i.font-titles, i.font-title, i.title, i.text-second-font, b.font-two, b.font-titles, b.font-title, b.title, b.text-second-font, u.font-two, u.font-titles, u.font-title, u.title, u.text-second-font, a.font-two, a.font-titles, a.font-title, a.title, a.text-second-font, label.font-two, label.font-titles, label.font-title, label.title, label.text-second-font {
+h1.font-two, h1.second-font, h1.text-second, h2.font-two, h2.second-font, h2.text-second, h3.font-two, h3.second-font, h3.text-second, h4.font-two, h4.second-font, h4.text-second, h5.font-two, h5.second-font, h5.text-second, h6.font-two, h6.second-font, h6.text-second, p.font-two, p.second-font, p.text-second, li.font-two, li.second-font, li.text-second, code.font-two, code.second-font, code.text-second, span.font-two, span.second-font, span.text-second, i.font-two, i.second-font, i.text-second, b.font-two, b.second-font, b.text-second, u.font-two, u.second-font, u.text-second, a.font-two, a.second-font, a.text-second, label.font-two, label.second-font, label.text-second {
   font-family: var(--font-second);
 }
-h1 .title, h2 .title, h3 .title, h4 .title, h5 .title, h6 .title, p .title, li .title, code .title, span .title, i .title, b .title, u .title, a .title, label .title {
+h1.title-font, h2.title-font, h3.title-font, h4.title-font, h5.title-font, h6.title-font, p.title-font, li.title-font, code.title-font, span.title-font, i.title-font, b.title-font, u.title-font, a.title-font, label.title-font {
   font-family: var(--title-font);
 }
 
@@ -27967,11 +29259,6 @@ h1 .title, h2 .title, h3 .title, h4 .title, h5 .title, h6 .title, p .title, li .
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-
-.title {
-  font-family: var(--title-font);
-  font-size: var(--h1);
 }
 
 .subtitle, .sub-title {
@@ -27986,23 +29273,23 @@ h1 .title, h2 .title, h3 .title, h4 .title, h5 .title, h6 .title, p .title, li .
 }
 
 .lh-08 {
-  line-height: 0.8;
+  line-height: 0.8 !important;
 }
 
 .lh-1 {
-  line-height: 1;
+  line-height: 1 !important;
 }
 
 .lh-12 {
-  line-height: 1.2;
+  line-height: 1.2 !important;
 }
 
 .lh-15 {
-  line-height: 1.5;
+  line-height: 1.5 !important;
 }
 
 .lh-2 {
-  line-height: 2;
+  line-height: 2 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28265,11 +29552,26 @@ blockquote::after {
 .m--1 {
   margin: calc(var(--margin) * -1) !important;
 }
+.m--075 {
+  margin: calc(var(--margin) * -0.75) !important;
+}
+.m--05 {
+  margin: calc(var(--margin) * -0.5) !important;
+}
+.m--025 {
+  margin: calc(var(--margin) * -0.25) !important;
+}
 .m-0 {
   margin: 0 !important;
 }
+.m-025 {
+  margin: calc(var(--margin) * 0.25) !important;
+}
 .m-05 {
   margin: calc(var(--margin) * 0.5) !important;
+}
+.m-075 {
+  margin: calc(var(--margin) * 0.75) !important;
 }
 .m-1 {
   margin: calc(var(--margin) * 1) !important;
@@ -28298,11 +29600,26 @@ blockquote::after {
 .mt--1 {
   margin-top: calc(var(--margin) * -1) !important;
 }
+.mt--075 {
+  margin-top: calc(var(--margin) * -0.75) !important;
+}
+.mt--05 {
+  margin-top: calc(var(--margin) * -0.5) !important;
+}
+.mt--025 {
+  margin-top: calc(var(--margin) * -0.25) !important;
+}
 .mt-0 {
   margin-top: 0 !important;
 }
+.mt-025 {
+  margin-top: calc(var(--margin) * 0.25) !important;
+}
 .mt-05 {
   margin-top: calc(var(--margin) * 0.5) !important;
+}
+.mt-075 {
+  margin-top: calc(var(--margin) * 0.75) !important;
 }
 .mt-1 {
   margin-top: calc(var(--margin) * 1) !important;
@@ -28331,11 +29648,26 @@ blockquote::after {
 .me--1, .mr--1 {
   margin-right: calc(var(--margin) * -1) !important;
 }
+.me--075, .mr--075 {
+  margin-right: calc(var(--margin) * -0.75) !important;
+}
+.me--05, .mr--05 {
+  margin-right: calc(var(--margin) * -0.5) !important;
+}
+.me--025, .mr--025 {
+  margin-right: calc(var(--margin) * -0.25) !important;
+}
 .me-0, .mr-0 {
   margin-right: 0 !important;
 }
+.me-025, .mr-025 {
+  margin-right: calc(var(--margin) * 0.25) !important;
+}
 .me-05, .mr-05 {
   margin-right: calc(var(--margin) * 0.5) !important;
+}
+.me-075, .mr-075 {
+  margin-right: calc(var(--margin) * 0.75) !important;
 }
 .me-1, .mr-1 {
   margin-right: calc(var(--margin) * 1) !important;
@@ -28364,11 +29696,26 @@ blockquote::after {
 .mb--1 {
   margin-bottom: calc(var(--margin) * -1) !important;
 }
+.mb--075 {
+  margin-bottom: calc(var(--margin) * -0.75) !important;
+}
+.mb--05 {
+  margin-bottom: calc(var(--margin) * -0.5) !important;
+}
+.mb--025 {
+  margin-bottom: calc(var(--margin) * -0.25) !important;
+}
 .mb-0 {
   margin-bottom: 0 !important;
 }
+.mb-025 {
+  margin-bottom: calc(var(--margin) * 0.25) !important;
+}
 .mb-05 {
   margin-bottom: calc(var(--margin) * 0.5) !important;
+}
+.mb-075 {
+  margin-bottom: calc(var(--margin) * 0.75) !important;
 }
 .mb-1 {
   margin-bottom: calc(var(--margin) * 1) !important;
@@ -28397,11 +29744,26 @@ blockquote::after {
 .ms--1, .ml--1 {
   margin-left: calc(var(--margin) * -1) !important;
 }
+.ms--075, .ml--075 {
+  margin-left: calc(var(--margin) * -0.75) !important;
+}
+.ms--05, .ml--05 {
+  margin-left: calc(var(--margin) * -0.5) !important;
+}
+.ms--025, .ml--025 {
+  margin-left: calc(var(--margin) * -0.25) !important;
+}
 .ms-0, .ml-0 {
   margin-left: 0 !important;
 }
+.ms-025, .ml-025 {
+  margin-left: calc(var(--margin) * 0.25) !important;
+}
 .ms-05, .ml-05 {
   margin-left: calc(var(--margin) * 0.5) !important;
+}
+.ms-075, .ml-075 {
+  margin-left: calc(var(--margin) * 0.75) !important;
 }
 .ms-1, .ml-1 {
   margin-left: calc(var(--margin) * 1) !important;
@@ -28431,13 +29793,33 @@ blockquote::after {
   margin-top: calc(var(--margin) * -1) !important;
   margin-bottom: calc(var(--margin) * -1) !important;
 }
+.my--075, .mv--075 {
+  margin-top: calc(var(--margin) * -0.75) !important;
+  margin-bottom: calc(var(--margin) * -0.75) !important;
+}
+.my--05, .mv--05 {
+  margin-top: calc(var(--margin) * -0.5) !important;
+  margin-bottom: calc(var(--margin) * -0.5) !important;
+}
+.my--025, .mv--025 {
+  margin-top: calc(var(--margin) * -0.25) !important;
+  margin-bottom: calc(var(--margin) * -0.25) !important;
+}
 .my-0, .mv-0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+.my-025, .mv-025 {
+  margin-top: calc(var(--margin) * 0.25) !important;
+  margin-bottom: calc(var(--margin) * 0.25) !important;
+}
 .my-05, .mv-05 {
   margin-top: calc(var(--margin) * 0.5) !important;
   margin-bottom: calc(var(--margin) * 0.5) !important;
+}
+.my-075, .mv-075 {
+  margin-top: calc(var(--margin) * 0.75) !important;
+  margin-bottom: calc(var(--margin) * 0.75) !important;
 }
 .my-1, .mv-1 {
   margin-top: calc(var(--margin) * 1) !important;
@@ -28475,13 +29857,33 @@ blockquote::after {
   margin-left: calc(var(--margin) * -1) !important;
   margin-right: calc(var(--margin) * -1) !important;
 }
+.mx--075, .mh--075 {
+  margin-left: calc(var(--margin) * -0.75) !important;
+  margin-right: calc(var(--margin) * -0.75) !important;
+}
+.mx--05, .mh--05 {
+  margin-left: calc(var(--margin) * -0.5) !important;
+  margin-right: calc(var(--margin) * -0.5) !important;
+}
+.mx--025, .mh--025 {
+  margin-left: calc(var(--margin) * -0.25) !important;
+  margin-right: calc(var(--margin) * -0.25) !important;
+}
 .mx-0, .mh-0 {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+.mx-025, .mh-025 {
+  margin-left: calc(var(--margin) * 0.25) !important;
+  margin-right: calc(var(--margin) * 0.25) !important;
+}
 .mx-05, .mh-05 {
   margin-left: calc(var(--margin) * 0.5) !important;
   margin-right: calc(var(--margin) * 0.5) !important;
+}
+.mx-075, .mh-075 {
+  margin-left: calc(var(--margin) * 0.75) !important;
+  margin-right: calc(var(--margin) * 0.75) !important;
 }
 .mx-1, .mh-1 {
   margin-left: calc(var(--margin) * 1) !important;
@@ -28519,8 +29921,14 @@ blockquote::after {
 .p-0 {
   padding: 0 !important;
 }
+.p-025 {
+  padding: calc(var(--padding) * 0.25) !important;
+}
 .p-05 {
   padding: calc(var(--padding) * 0.5) !important;
+}
+.p-075 {
+  padding: calc(var(--padding) * 0.75) !important;
 }
 .p-1 {
   padding: calc(var(--padding) * 1) !important;
@@ -28546,8 +29954,14 @@ blockquote::after {
 .pt-0 {
   padding-top: 0 !important;
 }
+.pt-025 {
+  padding-top: calc(var(--padding) * 0.25) !important;
+}
 .pt-05 {
   padding-top: calc(var(--padding) * 0.5) !important;
+}
+.pt-075 {
+  padding-top: calc(var(--padding) * 0.75) !important;
 }
 .pt-1 {
   padding-top: calc(var(--padding) * 1) !important;
@@ -28573,8 +29987,14 @@ blockquote::after {
 .pe-0, .pr-0 {
   padding-right: 0 !important;
 }
+.pe-025, .pr-025 {
+  padding-right: calc(var(--padding) * 0.25) !important;
+}
 .pe-05, .pr-05 {
   padding-right: calc(var(--padding) * 0.5) !important;
+}
+.pe-075, .pr-075 {
+  padding-right: calc(var(--padding) * 0.75) !important;
 }
 .pe-1, .pr-1 {
   padding-right: calc(var(--padding) * 1) !important;
@@ -28600,8 +30020,14 @@ blockquote::after {
 .pb-0 {
   padding-bottom: 0 !important;
 }
+.pb-025 {
+  padding-bottom: calc(var(--padding) * 0.25) !important;
+}
 .pb-05 {
   padding-bottom: calc(var(--padding) * 0.5) !important;
+}
+.pb-075 {
+  padding-bottom: calc(var(--padding) * 0.75) !important;
 }
 .pb-1 {
   padding-bottom: calc(var(--padding) * 1) !important;
@@ -28627,8 +30053,14 @@ blockquote::after {
 .ps-0, .pl-0 {
   padding-left: 0 !important;
 }
+.ps-025, .pl-025 {
+  padding-left: calc(var(--padding) * 0.25) !important;
+}
 .ps-05, .pl-05 {
   padding-left: calc(var(--padding) * 0.5) !important;
+}
+.ps-075, .pl-075 {
+  padding-left: calc(var(--padding) * 0.75) !important;
 }
 .ps-1, .pl-1 {
   padding-left: calc(var(--padding) * 1) !important;
@@ -28655,9 +30087,17 @@ blockquote::after {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+.py-025, .pv-025 {
+  padding-top: calc(var(--padding) * 0.25) !important;
+  padding-bottom: calc(var(--padding) * 0.25) !important;
+}
 .py-05, .pv-05 {
   padding-top: calc(var(--padding) * 0.5) !important;
   padding-bottom: calc(var(--padding) * 0.5) !important;
+}
+.py-075, .pv-075 {
+  padding-top: calc(var(--padding) * 0.75) !important;
+  padding-bottom: calc(var(--padding) * 0.75) !important;
 }
 .py-1, .pv-1 {
   padding-top: calc(var(--padding) * 1) !important;
@@ -28691,9 +30131,17 @@ blockquote::after {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+.px-025, .ph-025 {
+  padding-left: calc(var(--padding) * 0.25) !important;
+  padding-right: calc(var(--padding) * 0.25) !important;
+}
 .px-05, .ph-05 {
   padding-left: calc(var(--padding) * 0.5) !important;
   padding-right: calc(var(--padding) * 0.5) !important;
+}
+.px-075, .ph-075 {
+  padding-left: calc(var(--padding) * 0.75) !important;
+  padding-right: calc(var(--padding) * 0.75) !important;
 }
 .px-1, .ph-1 {
   padding-left: calc(var(--padding) * 1) !important;
@@ -28725,58 +30173,61 @@ blockquote::after {
 }
 
 .hidden {
-  display: block !important;
   opacity: 0 !important;
   visibility: hidden !important;
+  pointer-events: none !important;
   width: 0 !important;
   height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
   min-width: 0 !important;
   min-height: 0 !important;
-  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
   border: 0 !important;
 }
 
 .shown {
   opacity: 1 !important;
   visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 body.top .top-hidden, body.top .scroll-shown {
-  display: block !important;
   opacity: 0 !important;
   visibility: hidden !important;
+  pointer-events: none !important;
   width: 0 !important;
   height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
   min-width: 0 !important;
   min-height: 0 !important;
-  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
   border: 0 !important;
 }
 body.top .top-shown, body.top .scroll-hidden {
   opacity: 1 !important;
   visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 body.scroll .top-shown, body.scroll .scroll-hidden {
-  display: block !important;
   opacity: 0 !important;
   visibility: hidden !important;
+  pointer-events: none !important;
   width: 0 !important;
   height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
   min-width: 0 !important;
   min-height: 0 !important;
-  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
   border: 0 !important;
 }
 body.scroll .top-hidden, body.scroll .scroll-shown {
   opacity: 1 !important;
   visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .vibing {
@@ -29408,7 +30859,7 @@ body.consent-pending {
   flex-flow: row wrap;
   align-items: flex-start;
   gap: calc(var(--padding) * 0.5);
-  padding: calc(var(--padding) * 1.5);
+  padding: calc(var(--padding) * 2);
   background: var(--gingerbread);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -29430,6 +30881,7 @@ body.consent-pending {
 }
 #consent-banner.mini {
   display: flex;
+  gap: 0;
   padding: calc(var(--padding) * 0.5);
   width: auto;
   cursor: pointer;
@@ -29441,9 +30893,8 @@ body.consent-pending {
   display: none;
 }
 #consent-banner.mini p.cookie-icon {
-  font-size: var(--h3);
-  line-height: calc(var(--h3) * 1.5);
   width: auto;
+  padding: calc(var(--padding) * 0.5);
 }
 #consent-banner.mini .cookie-banner-content {
   width: auto;
