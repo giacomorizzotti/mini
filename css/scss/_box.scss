@@ -41,6 +41,42 @@ $breakpoints: (
   }
 }
 
+// Same shape as respond(), but queries the nearest ancestor with
+// `container-type` set (see .contain below) instead of the viewport.
+// With no such ancestor anywhere on the page, an unmatched @container
+// query is simply inert (not a fallback to anything) -- so every rule
+// generated through this mixin has zero effect unless .contain is
+// actually used, leaving today's viewport-based behavior untouched by
+// default.
+@mixin respond-container($breakpoint) {
+  @if $breakpoint != "" {
+    // Unlike @media, Sass doesn't special-case @container's prelude --
+    // map-get() needs an explicit #{} interpolation here or it's passed
+    // through to the compiled CSS as a literal, unevaluated string.
+    @container (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin box-width($width) {
+  $ratio: math.div($width, 1%);
+  $gapFactor: 100 - $ratio;
+  flex-basis: calc(#{$width} - var(--gap-x) * #{$gapFactor} * 0.01);
+  max-width: #{$width};
+}
+
+// Opt-in containment context. Put this on a .boxes wrapper (or any
+// other ancestor) to make its .box-* descendants size off THAT
+// element's own width instead of the viewport's -- see the
+// container-query rules generated at the bottom of .box below, which
+// only ever activate inside an element carrying this class.
+.contain {
+  container-type: inline-size;
+}
+
 .box {
   position: relative;
   margin: 0;
@@ -59,10 +95,7 @@ $breakpoints: (
       &-#{$breakpoint}-#{$label} {
         @extend .box;
         @include respond($breakpoint) {
-          $ratio: math.div($width, 1%);
-          $gapFactor: 100 - $ratio;
-          flex-basis: calc(#{$width} - var(--gap-x) * #{$gapFactor} * 0.01);
-          max-width: #{$width};
+          @include box-width($width);
         }
       }
     }
@@ -76,10 +109,43 @@ $breakpoints: (
         $breakpoint: nth(map-keys($breakpoints), $i);
         $width: nth($widths, $i);
         @include respond($breakpoint) {
-          $ratio: math.div($width, 1%);
-          $gapFactor: 100 - $ratio;
-          flex-basis: calc(#{$width} - var(--gap-x) * #{$gapFactor} * 0.01);
-          max-width: #{$width};
+          @include box-width($width);
+        }
+      }
+    }
+  }
+
+  // Container-query counterparts of the two loops above -- same class
+  // names, same width tables, but measured against the nearest .contain
+  // ancestor instead of the viewport. Deliberately appended last: with
+  // no .contain ancestor these never match (see respond-container's own
+  // comment above), so every existing consumer is unaffected; where
+  // .contain IS used, being last lets these win the ordinary CSS
+  // cascade tie-break over the @media rules above whenever a breakpoint
+  // happens to be satisfied on both axes at once (e.g. a wide window
+  // with a narrow .contain'd parent still correctly falls back to a
+  // narrower tier, since only the container's own width decides it
+  // here).
+  @each $breakpoint, $minwidth in $breakpoints {
+    $labels: map-keys($box-widths);
+    @each $label in $labels {
+      $widths: map-get($box-widths, $label);
+      $width: nth($widths, 5);
+      &-#{$breakpoint}-#{$label} {
+        @include respond-container($breakpoint) {
+          @include box-width($width);
+        }
+      }
+    }
+  }
+
+  @each $label, $widths in $box-widths {
+    &-#{$label} {
+      @for $i from 1 through 5 {
+        $breakpoint: nth(map-keys($breakpoints), $i);
+        $width: nth($widths, $i);
+        @include respond-container($breakpoint) {
+          @include box-width($width);
         }
       }
     }
