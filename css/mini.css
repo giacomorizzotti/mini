@@ -104,6 +104,7 @@ body section {
   --stars-color: #ffffff80;
   --gingerbread: rgb(85 60 75);
   --pulse-color: var(--link-color);
+  --gold: rgb(255, 201, 0);
   --theme-color: var(--main-color);
   --text-selection-bg: var(--link-color);
   --text-selection-color: var(--white);
@@ -13665,6 +13666,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--light-grey)!important;
   --button-hover-border-color: var(--light-grey)!important;
 }
+.wh-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.wh-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .white-btn {
   --button-text-color: var(--black)!important;
@@ -13697,6 +13709,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--black)!important;
   --button-hover-background-color: var(--light-grey)!important;
   --button-hover-border-color: var(--light-grey)!important;
+}
+.white-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.white-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .false-white-btn {
@@ -13731,6 +13754,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--light-grey)!important;
   --button-hover-border-color: var(--light-grey)!important;
 }
+.false-white-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.false-white-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .light-grey-btn {
   --button-text-color: var(--white)!important;
@@ -13763,6 +13797,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--grey)!important;
   --button-hover-border-color: var(--grey)!important;
+}
+.light-grey-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.light-grey-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .grey-btn {
@@ -13797,6 +13842,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--dark-grey)!important;
   --button-hover-border-color: var(--dark-grey)!important;
 }
+.grey-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.grey-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .dark-grey-btn {
   --button-text-color: var(--white)!important;
@@ -13829,6 +13885,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--white)!important;
   --button-hover-border-color: var(--white)!important;
+}
+.dark-grey-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.dark-grey-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .false-black-btn {
@@ -13863,6 +13930,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--black)!important;
   --button-hover-border-color: var(--black)!important;
 }
+.false-black-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.false-black-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .bk-btn {
   --button-text-color: var(--white)!important;
@@ -13895,6 +13973,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--dark-grey)!important;
   --button-hover-border-color: var(--dark-grey)!important;
+}
+.bk-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.bk-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .black-btn {
@@ -13929,6 +14018,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--dark-grey)!important;
   --button-hover-border-color: var(--dark-grey)!important;
 }
+.black-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.black-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .col-btn {
   --button-text-color: var(--white)!important;
@@ -13961,6 +14061,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--main-color-dark)!important;
   --button-hover-border-color: var(--main-color-dark)!important;
+}
+.col-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.col-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .color-btn {
@@ -13995,6 +14106,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--main-color-dark)!important;
   --button-hover-border-color: var(--main-color-dark)!important;
 }
+.color-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.color-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .main-color-btn {
   --button-text-color: var(--white)!important;
@@ -14027,6 +14149,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--main-color-dark)!important;
   --button-hover-border-color: var(--main-color-dark)!important;
+}
+.main-color-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.main-color-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .second-color-btn {
@@ -14061,6 +14194,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--second-color-dark)!important;
   --button-hover-border-color: var(--second-color-dark)!important;
 }
+.second-color-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.second-color-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .third-color-btn {
   --button-text-color: var(--white)!important;
@@ -14093,6 +14237,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--third-color-dark)!important;
   --button-hover-border-color: var(--third-color-dark)!important;
+}
+.third-color-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.third-color-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .fourth-color-btn {
@@ -14127,6 +14282,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--fourth-color-dark)!important;
   --button-hover-border-color: var(--fourth-color-dark)!important;
 }
+.fourth-color-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.fourth-color-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .info-btn {
   --button-text-color: var(--white)!important;
@@ -14159,6 +14325,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--info)!important;
   --button-hover-border-color: var(--info)!important;
+}
+.info-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.info-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .success-btn {
@@ -14193,6 +14370,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--success)!important;
   --button-hover-border-color: var(--success)!important;
 }
+.success-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.success-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .warning-btn {
   --button-text-color: var(--white)!important;
@@ -14225,6 +14413,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--warning)!important;
   --button-hover-border-color: var(--warning)!important;
+}
+.warning-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.warning-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .danger-btn {
@@ -14259,6 +14458,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--danger)!important;
   --button-hover-border-color: var(--danger)!important;
 }
+.danger-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.danger-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .bad-btn {
   --button-text-color: var(--white)!important;
@@ -14291,6 +14501,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--bad)!important;
   --button-hover-border-color: var(--bad)!important;
+}
+.bad-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.bad-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .acid-green-btn {
@@ -14325,6 +14546,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--acid-green)!important;
   --button-hover-border-color: var(--acid-green)!important;
 }
+.acid-green-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.acid-green-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .gingerbread-btn {
   --button-text-color: var(--white)!important;
@@ -14357,6 +14589,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--gingerbread)!important;
   --button-hover-border-color: var(--gingerbread)!important;
+}
+.gingerbread-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.gingerbread-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .mini-btn {
@@ -14391,6 +14634,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--mini-color-dark)!important;
   --button-hover-border-color: var(--mini-color-dark)!important;
 }
+.mini-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.mini-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .mini-second-btn {
   --button-text-color: var(--white)!important;
@@ -14423,6 +14677,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--mini-second-color)!important;
   --button-hover-border-color: var(--mini-second-color)!important;
+}
+.mini-second-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.mini-second-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .mini-third-btn {
@@ -14457,6 +14722,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--mini-third-color)!important;
   --button-hover-border-color: var(--mini-third-color)!important;
 }
+.mini-third-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.mini-third-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .mini-fourth-btn {
   --button-text-color: var(--white)!important;
@@ -14489,6 +14765,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--mini-fourth-color)!important;
   --button-hover-border-color: var(--mini-fourth-color)!important;
+}
+.mini-fourth-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.mini-fourth-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .uwa-btn {
@@ -14523,6 +14810,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--uwa-color-dark)!important;
   --button-hover-border-color: var(--uwa-color-dark)!important;
 }
+.uwa-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.uwa-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .uwa-second-btn {
   --button-text-color: var(--white)!important;
@@ -14555,6 +14853,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--uwa-second-color)!important;
   --button-hover-border-color: var(--uwa-second-color)!important;
+}
+.uwa-second-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.uwa-second-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .uwa-third-btn {
@@ -14589,6 +14898,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--uwa-third-color)!important;
   --button-hover-border-color: var(--uwa-third-color)!important;
 }
+.uwa-third-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.uwa-third-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .uwa-fourth-btn {
   --button-text-color: var(--white)!important;
@@ -14621,6 +14941,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--uwa-fourth-color)!important;
   --button-hover-border-color: var(--uwa-fourth-color)!important;
+}
+.uwa-fourth-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.uwa-fourth-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .uwa-link-btn {
@@ -14655,6 +14986,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--uwa-link-color)!important;
   --button-hover-border-color: var(--uwa-link-color)!important;
 }
+.uwa-link-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.uwa-link-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .light-blue-btn {
   --button-text-color: var(--white)!important;
@@ -14688,6 +15030,17 @@ input[type=radio]:checked + label {
   --button-hover-background-color: var(--blue)!important;
   --button-hover-border-color: var(--blue)!important;
 }
+.light-blue-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.light-blue-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
+}
 
 .blue-btn {
   --button-text-color: var(--white)!important;
@@ -14720,6 +15073,17 @@ input[type=radio]:checked + label {
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--dark-blue)!important;
   --button-hover-border-color: var(--dark-blue)!important;
+}
+.blue-btn:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+.blue-btn:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 button, .wh-btn, .wh-btn-invert, .wh-btn-inv, .wh-btn-negative, .wh-btn-neg, .wh-btn-clicked, .wh-btn-active, .wh-btn.clicked, .wh-btn.active, .wh-btn-hover, .white-btn, .white-btn-invert, .white-btn-inv, .white-btn-negative, .white-btn-neg, .white-btn-clicked, .white-btn-active, .white-btn.clicked, .white-btn.active, .white-btn-hover, .false-white-btn, .false-white-btn-invert, .false-white-btn-inv, .false-white-btn-negative, .false-white-btn-neg, .false-white-btn-clicked, .false-white-btn-active, .false-white-btn.clicked, .false-white-btn.active, .false-white-btn-hover, .light-grey-btn, .light-grey-btn-invert, .light-grey-btn-inv, .light-grey-btn-negative, .light-grey-btn-neg, .light-grey-btn-clicked, .light-grey-btn-active, .light-grey-btn.clicked, .light-grey-btn.active, .light-grey-btn-hover, .grey-btn, .grey-btn-invert, .grey-btn-inv, .grey-btn-negative, .grey-btn-neg, .grey-btn-clicked, .grey-btn-active, .grey-btn.clicked, .grey-btn.active, .grey-btn-hover, .dark-grey-btn, .dark-grey-btn-invert, .dark-grey-btn-inv, .dark-grey-btn-negative, .dark-grey-btn-neg, .dark-grey-btn-clicked, .dark-grey-btn-active, .dark-grey-btn.clicked, .dark-grey-btn.active, .dark-grey-btn-hover, .false-black-btn, .false-black-btn-invert, .false-black-btn-inv, .false-black-btn-negative, .false-black-btn-neg, .false-black-btn-clicked, .false-black-btn-active, .false-black-btn.clicked, .false-black-btn.active, .false-black-btn-hover, .bk-btn, .bk-btn-invert, .bk-btn-inv, .bk-btn-negative, .bk-btn-neg, .bk-btn-clicked, .bk-btn-active, .bk-btn.clicked, .bk-btn.active, .bk-btn-hover, .black-btn, .black-btn-invert, .black-btn-inv, .black-btn-negative, .black-btn-neg, .black-btn-clicked, .black-btn-active, .black-btn.clicked, .black-btn.active, .black-btn-hover, .col-btn, .col-btn-invert, .col-btn-inv, .col-btn-negative, .col-btn-neg, .col-btn-clicked, .col-btn-active, .col-btn.clicked, .col-btn.active, .col-btn-hover, .color-btn, .color-btn-invert, .color-btn-inv, .color-btn-negative, .color-btn-neg, .color-btn-clicked, .color-btn-active, .color-btn.clicked, .color-btn.active, .color-btn-hover, .main-color-btn, .main-color-btn-invert, .main-color-btn-inv, .main-color-btn-negative, .main-color-btn-neg, .main-color-btn-clicked, .main-color-btn-active, .main-color-btn.clicked, .main-color-btn.active, .main-color-btn-hover, .second-color-btn, .second-color-btn-invert, .second-color-btn-inv, .second-color-btn-negative, .second-color-btn-neg, .second-color-btn-clicked, .second-color-btn-active, .second-color-btn.clicked, .second-color-btn.active, .second-color-btn-hover, .third-color-btn, .third-color-btn-invert, .third-color-btn-inv, .third-color-btn-negative, .third-color-btn-neg, .third-color-btn-clicked, .third-color-btn-active, .third-color-btn.clicked, .third-color-btn.active, .third-color-btn-hover, .fourth-color-btn, .fourth-color-btn-invert, .fourth-color-btn-inv, .fourth-color-btn-negative, .fourth-color-btn-neg, .fourth-color-btn-clicked, .fourth-color-btn-active, .fourth-color-btn.clicked, .fourth-color-btn.active, .fourth-color-btn-hover, .info-btn, .info-btn-invert, .info-btn-inv, .info-btn-negative, .info-btn-neg, .info-btn-clicked, .info-btn-active, .info-btn.clicked, .info-btn.active, .info-btn-hover, .success-btn, .success-btn-invert, .success-btn-inv, .success-btn-negative, .success-btn-neg, .success-btn-clicked, .success-btn-active, .success-btn.clicked, .success-btn.active, .success-btn-hover, .warning-btn, .warning-btn-invert, .warning-btn-inv, .warning-btn-negative, .warning-btn-neg, .warning-btn-clicked, .warning-btn-active, .warning-btn.clicked, .warning-btn.active, .warning-btn-hover, .danger-btn, .danger-btn-invert, .danger-btn-inv, .danger-btn-negative, .danger-btn-neg, .danger-btn-clicked, .danger-btn-active, .danger-btn.clicked, .danger-btn.active, .danger-btn-hover, .bad-btn, .bad-btn-invert, .bad-btn-inv, .bad-btn-negative, .bad-btn-neg, .bad-btn-clicked, .bad-btn-active, .bad-btn.clicked, .bad-btn.active, .bad-btn-hover, .acid-green-btn, .acid-green-btn-invert, .acid-green-btn-inv, .acid-green-btn-negative, .acid-green-btn-neg, .acid-green-btn-clicked, .acid-green-btn-active, .acid-green-btn.clicked, .acid-green-btn.active, .acid-green-btn-hover, .gingerbread-btn, .gingerbread-btn-invert, .gingerbread-btn-inv, .gingerbread-btn-negative, .gingerbread-btn-neg, .gingerbread-btn-clicked, .gingerbread-btn-active, .gingerbread-btn.clicked, .gingerbread-btn.active, .gingerbread-btn-hover, .mini-btn, .mini-btn-invert, .mini-btn-inv, .mini-btn-negative, .mini-btn-neg, .mini-btn-clicked, .mini-btn-active, .mini-btn.clicked, .mini-btn.active, .mini-btn-hover, .mini-second-btn, .mini-second-btn-invert, .mini-second-btn-inv, .mini-second-btn-negative, .mini-second-btn-neg, .mini-second-btn-clicked, .mini-second-btn-active, .mini-second-btn.clicked, .mini-second-btn.active, .mini-second-btn-hover, .mini-third-btn, .mini-third-btn-invert, .mini-third-btn-inv, .mini-third-btn-negative, .mini-third-btn-neg, .mini-third-btn-clicked, .mini-third-btn-active, .mini-third-btn.clicked, .mini-third-btn.active, .mini-third-btn-hover, .mini-fourth-btn, .mini-fourth-btn-invert, .mini-fourth-btn-inv, .mini-fourth-btn-negative, .mini-fourth-btn-neg, .mini-fourth-btn-clicked, .mini-fourth-btn-active, .mini-fourth-btn.clicked, .mini-fourth-btn.active, .mini-fourth-btn-hover, .uwa-btn, .uwa-btn-invert, .uwa-btn-inv, .uwa-btn-negative, .uwa-btn-neg, .uwa-btn-clicked, .uwa-btn-active, .uwa-btn.clicked, .uwa-btn.active, .uwa-btn-hover, .uwa-second-btn, .uwa-second-btn-invert, .uwa-second-btn-inv, .uwa-second-btn-negative, .uwa-second-btn-neg, .uwa-second-btn-clicked, .uwa-second-btn-active, .uwa-second-btn.clicked, .uwa-second-btn.active, .uwa-second-btn-hover, .uwa-third-btn, .uwa-third-btn-invert, .uwa-third-btn-inv, .uwa-third-btn-negative, .uwa-third-btn-neg, .uwa-third-btn-clicked, .uwa-third-btn-active, .uwa-third-btn.clicked, .uwa-third-btn.active, .uwa-third-btn-hover, .uwa-fourth-btn, .uwa-fourth-btn-invert, .uwa-fourth-btn-inv, .uwa-fourth-btn-negative, .uwa-fourth-btn-neg, .uwa-fourth-btn-clicked, .uwa-fourth-btn-active, .uwa-fourth-btn.clicked, .uwa-fourth-btn.active, .uwa-fourth-btn-hover, .uwa-link-btn, .uwa-link-btn-invert, .uwa-link-btn-inv, .uwa-link-btn-negative, .uwa-link-btn-neg, .uwa-link-btn-clicked, .uwa-link-btn-active, .uwa-link-btn.clicked, .uwa-link-btn.active, .uwa-link-btn-hover, .light-blue-btn, .light-blue-btn-invert, .light-blue-btn-inv, .light-blue-btn-negative, .light-blue-btn-neg, .light-blue-btn-clicked, .light-blue-btn-active, .light-blue-btn.clicked, .light-blue-btn.active, .light-blue-btn-hover, .blue-btn, .blue-btn-invert, .blue-btn-inv, .blue-btn-negative, .blue-btn-neg, .blue-btn-clicked, .blue-btn-active, .blue-btn.clicked, .blue-btn.active, .blue-btn-hover, .btn, button-invert, button-inv, button-negative, button-neg, .btn-invert, .btn-inv, .btn-negative, .btn-neg, .button-invert, .button-inv, .button-negative, .button-neg, .wh-btn, .wh-btn-invert, .wh-btn-inv, .wh-btn-negative, .wh-btn-neg, .wh-btn-clicked, .wh-btn-active, .wh-btn.clicked, .wh-btn.active, .wh-btn-hover, .white-btn, .white-btn-invert, .white-btn-inv, .white-btn-negative, .white-btn-neg, .white-btn-clicked, .white-btn-active, .white-btn.clicked, .white-btn.active, .white-btn-hover, .false-white-btn, .false-white-btn-invert, .false-white-btn-inv, .false-white-btn-negative, .false-white-btn-neg, .false-white-btn-clicked, .false-white-btn-active, .false-white-btn.clicked, .false-white-btn.active, .false-white-btn-hover, .light-grey-btn, .light-grey-btn-invert, .light-grey-btn-inv, .light-grey-btn-negative, .light-grey-btn-neg, .light-grey-btn-clicked, .light-grey-btn-active, .light-grey-btn.clicked, .light-grey-btn.active, .light-grey-btn-hover, .grey-btn, .grey-btn-invert, .grey-btn-inv, .grey-btn-negative, .grey-btn-neg, .grey-btn-clicked, .grey-btn-active, .grey-btn.clicked, .grey-btn.active, .grey-btn-hover, .dark-grey-btn, .dark-grey-btn-invert, .dark-grey-btn-inv, .dark-grey-btn-negative, .dark-grey-btn-neg, .dark-grey-btn-clicked, .dark-grey-btn-active, .dark-grey-btn.clicked, .dark-grey-btn.active, .dark-grey-btn-hover, .false-black-btn, .false-black-btn-invert, .false-black-btn-inv, .false-black-btn-negative, .false-black-btn-neg, .false-black-btn-clicked, .false-black-btn-active, .false-black-btn.clicked, .false-black-btn.active, .false-black-btn-hover, .bk-btn, .bk-btn-invert, .bk-btn-inv, .bk-btn-negative, .bk-btn-neg, .bk-btn-clicked, .bk-btn-active, .bk-btn.clicked, .bk-btn.active, .bk-btn-hover, .black-btn, .black-btn-invert, .black-btn-inv, .black-btn-negative, .black-btn-neg, .black-btn-clicked, .black-btn-active, .black-btn.clicked, .black-btn.active, .black-btn-hover, .col-btn, .col-btn-invert, .col-btn-inv, .col-btn-negative, .col-btn-neg, .col-btn-clicked, .col-btn-active, .col-btn.clicked, .col-btn.active, .col-btn-hover, .color-btn, .color-btn-invert, .color-btn-inv, .color-btn-negative, .color-btn-neg, .color-btn-clicked, .color-btn-active, .color-btn.clicked, .color-btn.active, .color-btn-hover, .main-color-btn, .main-color-btn-invert, .main-color-btn-inv, .main-color-btn-negative, .main-color-btn-neg, .main-color-btn-clicked, .main-color-btn-active, .main-color-btn.clicked, .main-color-btn.active, .main-color-btn-hover, .second-color-btn, .second-color-btn-invert, .second-color-btn-inv, .second-color-btn-negative, .second-color-btn-neg, .second-color-btn-clicked, .second-color-btn-active, .second-color-btn.clicked, .second-color-btn.active, .second-color-btn-hover, .third-color-btn, .third-color-btn-invert, .third-color-btn-inv, .third-color-btn-negative, .third-color-btn-neg, .third-color-btn-clicked, .third-color-btn-active, .third-color-btn.clicked, .third-color-btn.active, .third-color-btn-hover, .fourth-color-btn, .fourth-color-btn-invert, .fourth-color-btn-inv, .fourth-color-btn-negative, .fourth-color-btn-neg, .fourth-color-btn-clicked, .fourth-color-btn-active, .fourth-color-btn.clicked, .fourth-color-btn.active, .fourth-color-btn-hover, .info-btn, .info-btn-invert, .info-btn-inv, .info-btn-negative, .info-btn-neg, .info-btn-clicked, .info-btn-active, .info-btn.clicked, .info-btn.active, .info-btn-hover, .success-btn, .success-btn-invert, .success-btn-inv, .success-btn-negative, .success-btn-neg, .success-btn-clicked, .success-btn-active, .success-btn.clicked, .success-btn.active, .success-btn-hover, .warning-btn, .warning-btn-invert, .warning-btn-inv, .warning-btn-negative, .warning-btn-neg, .warning-btn-clicked, .warning-btn-active, .warning-btn.clicked, .warning-btn.active, .warning-btn-hover, .danger-btn, .danger-btn-invert, .danger-btn-inv, .danger-btn-negative, .danger-btn-neg, .danger-btn-clicked, .danger-btn-active, .danger-btn.clicked, .danger-btn.active, .danger-btn-hover, .bad-btn, .bad-btn-invert, .bad-btn-inv, .bad-btn-negative, .bad-btn-neg, .bad-btn-clicked, .bad-btn-active, .bad-btn.clicked, .bad-btn.active, .bad-btn-hover, .acid-green-btn, .acid-green-btn-invert, .acid-green-btn-inv, .acid-green-btn-negative, .acid-green-btn-neg, .acid-green-btn-clicked, .acid-green-btn-active, .acid-green-btn.clicked, .acid-green-btn.active, .acid-green-btn-hover, .gingerbread-btn, .gingerbread-btn-invert, .gingerbread-btn-inv, .gingerbread-btn-negative, .gingerbread-btn-neg, .gingerbread-btn-clicked, .gingerbread-btn-active, .gingerbread-btn.clicked, .gingerbread-btn.active, .gingerbread-btn-hover, .mini-btn, .mini-btn-invert, .mini-btn-inv, .mini-btn-negative, .mini-btn-neg, .mini-btn-clicked, .mini-btn-active, .mini-btn.clicked, .mini-btn.active, .mini-btn-hover, .mini-second-btn, .mini-second-btn-invert, .mini-second-btn-inv, .mini-second-btn-negative, .mini-second-btn-neg, .mini-second-btn-clicked, .mini-second-btn-active, .mini-second-btn.clicked, .mini-second-btn.active, .mini-second-btn-hover, .mini-third-btn, .mini-third-btn-invert, .mini-third-btn-inv, .mini-third-btn-negative, .mini-third-btn-neg, .mini-third-btn-clicked, .mini-third-btn-active, .mini-third-btn.clicked, .mini-third-btn.active, .mini-third-btn-hover, .mini-fourth-btn, .mini-fourth-btn-invert, .mini-fourth-btn-inv, .mini-fourth-btn-negative, .mini-fourth-btn-neg, .mini-fourth-btn-clicked, .mini-fourth-btn-active, .mini-fourth-btn.clicked, .mini-fourth-btn.active, .mini-fourth-btn-hover, .uwa-btn, .uwa-btn-invert, .uwa-btn-inv, .uwa-btn-negative, .uwa-btn-neg, .uwa-btn-clicked, .uwa-btn-active, .uwa-btn.clicked, .uwa-btn.active, .uwa-btn-hover, .uwa-second-btn, .uwa-second-btn-invert, .uwa-second-btn-inv, .uwa-second-btn-negative, .uwa-second-btn-neg, .uwa-second-btn-clicked, .uwa-second-btn-active, .uwa-second-btn.clicked, .uwa-second-btn.active, .uwa-second-btn-hover, .uwa-third-btn, .uwa-third-btn-invert, .uwa-third-btn-inv, .uwa-third-btn-negative, .uwa-third-btn-neg, .uwa-third-btn-clicked, .uwa-third-btn-active, .uwa-third-btn.clicked, .uwa-third-btn.active, .uwa-third-btn-hover, .uwa-fourth-btn, .uwa-fourth-btn-invert, .uwa-fourth-btn-inv, .uwa-fourth-btn-negative, .uwa-fourth-btn-neg, .uwa-fourth-btn-clicked, .uwa-fourth-btn-active, .uwa-fourth-btn.clicked, .uwa-fourth-btn.active, .uwa-fourth-btn-hover, .uwa-link-btn, .uwa-link-btn-invert, .uwa-link-btn-inv, .uwa-link-btn-negative, .uwa-link-btn-neg, .uwa-link-btn-clicked, .uwa-link-btn-active, .uwa-link-btn.clicked, .uwa-link-btn.active, .uwa-link-btn-hover, .light-blue-btn, .light-blue-btn-invert, .light-blue-btn-inv, .light-blue-btn-negative, .light-blue-btn-neg, .light-blue-btn-clicked, .light-blue-btn-active, .light-blue-btn.clicked, .light-blue-btn.active, .light-blue-btn-hover, .blue-btn, .blue-btn-invert, .blue-btn-inv, .blue-btn-negative, .blue-btn-neg, .blue-btn-clicked, .blue-btn-active, .blue-btn.clicked, .blue-btn.active, .blue-btn-hover, .button, .wh-btn, .wh-btn-invert, .wh-btn-inv, .wh-btn-negative, .wh-btn-neg, .wh-btn-clicked, .wh-btn-active, .wh-btn.clicked, .wh-btn.active, .wh-btn-hover, .white-btn, .white-btn-invert, .white-btn-inv, .white-btn-negative, .white-btn-neg, .white-btn-clicked, .white-btn-active, .white-btn.clicked, .white-btn.active, .white-btn-hover, .false-white-btn, .false-white-btn-invert, .false-white-btn-inv, .false-white-btn-negative, .false-white-btn-neg, .false-white-btn-clicked, .false-white-btn-active, .false-white-btn.clicked, .false-white-btn.active, .false-white-btn-hover, .light-grey-btn, .light-grey-btn-invert, .light-grey-btn-inv, .light-grey-btn-negative, .light-grey-btn-neg, .light-grey-btn-clicked, .light-grey-btn-active, .light-grey-btn.clicked, .light-grey-btn.active, .light-grey-btn-hover, .grey-btn, .grey-btn-invert, .grey-btn-inv, .grey-btn-negative, .grey-btn-neg, .grey-btn-clicked, .grey-btn-active, .grey-btn.clicked, .grey-btn.active, .grey-btn-hover, .dark-grey-btn, .dark-grey-btn-invert, .dark-grey-btn-inv, .dark-grey-btn-negative, .dark-grey-btn-neg, .dark-grey-btn-clicked, .dark-grey-btn-active, .dark-grey-btn.clicked, .dark-grey-btn.active, .dark-grey-btn-hover, .false-black-btn, .false-black-btn-invert, .false-black-btn-inv, .false-black-btn-negative, .false-black-btn-neg, .false-black-btn-clicked, .false-black-btn-active, .false-black-btn.clicked, .false-black-btn.active, .false-black-btn-hover, .bk-btn, .bk-btn-invert, .bk-btn-inv, .bk-btn-negative, .bk-btn-neg, .bk-btn-clicked, .bk-btn-active, .bk-btn.clicked, .bk-btn.active, .bk-btn-hover, .black-btn, .black-btn-invert, .black-btn-inv, .black-btn-negative, .black-btn-neg, .black-btn-clicked, .black-btn-active, .black-btn.clicked, .black-btn.active, .black-btn-hover, .col-btn, .col-btn-invert, .col-btn-inv, .col-btn-negative, .col-btn-neg, .col-btn-clicked, .col-btn-active, .col-btn.clicked, .col-btn.active, .col-btn-hover, .color-btn, .color-btn-invert, .color-btn-inv, .color-btn-negative, .color-btn-neg, .color-btn-clicked, .color-btn-active, .color-btn.clicked, .color-btn.active, .color-btn-hover, .main-color-btn, .main-color-btn-invert, .main-color-btn-inv, .main-color-btn-negative, .main-color-btn-neg, .main-color-btn-clicked, .main-color-btn-active, .main-color-btn.clicked, .main-color-btn.active, .main-color-btn-hover, .second-color-btn, .second-color-btn-invert, .second-color-btn-inv, .second-color-btn-negative, .second-color-btn-neg, .second-color-btn-clicked, .second-color-btn-active, .second-color-btn.clicked, .second-color-btn.active, .second-color-btn-hover, .third-color-btn, .third-color-btn-invert, .third-color-btn-inv, .third-color-btn-negative, .third-color-btn-neg, .third-color-btn-clicked, .third-color-btn-active, .third-color-btn.clicked, .third-color-btn.active, .third-color-btn-hover, .fourth-color-btn, .fourth-color-btn-invert, .fourth-color-btn-inv, .fourth-color-btn-negative, .fourth-color-btn-neg, .fourth-color-btn-clicked, .fourth-color-btn-active, .fourth-color-btn.clicked, .fourth-color-btn.active, .fourth-color-btn-hover, .info-btn, .info-btn-invert, .info-btn-inv, .info-btn-negative, .info-btn-neg, .info-btn-clicked, .info-btn-active, .info-btn.clicked, .info-btn.active, .info-btn-hover, .success-btn, .success-btn-invert, .success-btn-inv, .success-btn-negative, .success-btn-neg, .success-btn-clicked, .success-btn-active, .success-btn.clicked, .success-btn.active, .success-btn-hover, .warning-btn, .warning-btn-invert, .warning-btn-inv, .warning-btn-negative, .warning-btn-neg, .warning-btn-clicked, .warning-btn-active, .warning-btn.clicked, .warning-btn.active, .warning-btn-hover, .danger-btn, .danger-btn-invert, .danger-btn-inv, .danger-btn-negative, .danger-btn-neg, .danger-btn-clicked, .danger-btn-active, .danger-btn.clicked, .danger-btn.active, .danger-btn-hover, .bad-btn, .bad-btn-invert, .bad-btn-inv, .bad-btn-negative, .bad-btn-neg, .bad-btn-clicked, .bad-btn-active, .bad-btn.clicked, .bad-btn.active, .bad-btn-hover, .acid-green-btn, .acid-green-btn-invert, .acid-green-btn-inv, .acid-green-btn-negative, .acid-green-btn-neg, .acid-green-btn-clicked, .acid-green-btn-active, .acid-green-btn.clicked, .acid-green-btn.active, .acid-green-btn-hover, .gingerbread-btn, .gingerbread-btn-invert, .gingerbread-btn-inv, .gingerbread-btn-negative, .gingerbread-btn-neg, .gingerbread-btn-clicked, .gingerbread-btn-active, .gingerbread-btn.clicked, .gingerbread-btn.active, .gingerbread-btn-hover, .mini-btn, .mini-btn-invert, .mini-btn-inv, .mini-btn-negative, .mini-btn-neg, .mini-btn-clicked, .mini-btn-active, .mini-btn.clicked, .mini-btn.active, .mini-btn-hover, .mini-second-btn, .mini-second-btn-invert, .mini-second-btn-inv, .mini-second-btn-negative, .mini-second-btn-neg, .mini-second-btn-clicked, .mini-second-btn-active, .mini-second-btn.clicked, .mini-second-btn.active, .mini-second-btn-hover, .mini-third-btn, .mini-third-btn-invert, .mini-third-btn-inv, .mini-third-btn-negative, .mini-third-btn-neg, .mini-third-btn-clicked, .mini-third-btn-active, .mini-third-btn.clicked, .mini-third-btn.active, .mini-third-btn-hover, .mini-fourth-btn, .mini-fourth-btn-invert, .mini-fourth-btn-inv, .mini-fourth-btn-negative, .mini-fourth-btn-neg, .mini-fourth-btn-clicked, .mini-fourth-btn-active, .mini-fourth-btn.clicked, .mini-fourth-btn.active, .mini-fourth-btn-hover, .uwa-btn, .uwa-btn-invert, .uwa-btn-inv, .uwa-btn-negative, .uwa-btn-neg, .uwa-btn-clicked, .uwa-btn-active, .uwa-btn.clicked, .uwa-btn.active, .uwa-btn-hover, .uwa-second-btn, .uwa-second-btn-invert, .uwa-second-btn-inv, .uwa-second-btn-negative, .uwa-second-btn-neg, .uwa-second-btn-clicked, .uwa-second-btn-active, .uwa-second-btn.clicked, .uwa-second-btn.active, .uwa-second-btn-hover, .uwa-third-btn, .uwa-third-btn-invert, .uwa-third-btn-inv, .uwa-third-btn-negative, .uwa-third-btn-neg, .uwa-third-btn-clicked, .uwa-third-btn-active, .uwa-third-btn.clicked, .uwa-third-btn.active, .uwa-third-btn-hover, .uwa-fourth-btn, .uwa-fourth-btn-invert, .uwa-fourth-btn-inv, .uwa-fourth-btn-negative, .uwa-fourth-btn-neg, .uwa-fourth-btn-clicked, .uwa-fourth-btn-active, .uwa-fourth-btn.clicked, .uwa-fourth-btn.active, .uwa-fourth-btn-hover, .uwa-link-btn, .uwa-link-btn-invert, .uwa-link-btn-inv, .uwa-link-btn-negative, .uwa-link-btn-neg, .uwa-link-btn-clicked, .uwa-link-btn-active, .uwa-link-btn.clicked, .uwa-link-btn.active, .uwa-link-btn-hover, .light-blue-btn, .light-blue-btn-invert, .light-blue-btn-inv, .light-blue-btn-negative, .light-blue-btn-neg, .light-blue-btn-clicked, .light-blue-btn-active, .light-blue-btn.clicked, .light-blue-btn.active, .light-blue-btn-hover, .blue-btn, .blue-btn-invert, .blue-btn-inv, .blue-btn-negative, .blue-btn-neg, .blue-btn-clicked, .blue-btn-active, .blue-btn.clicked, .blue-btn.active, .blue-btn-hover {
@@ -14855,6 +15219,17 @@ button-grad-second:hover, .btn-grad-second:hover, .button-grad-second:hover {
   border-color: var(--fourth-color);
   background-position: 99% !important;
   background: linear-gradient(125deg, var(--third-color) 0%, var(--fourth-color) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+button:disabled, .wh-btn:disabled, .wh-btn-invert:disabled, .wh-btn-inv:disabled, .wh-btn-negative:disabled, .wh-btn-neg:disabled, .wh-btn-clicked:disabled, .wh-btn-active:disabled, .wh-btn.clicked:disabled, .wh-btn.active:disabled, .wh-btn-hover:disabled, .white-btn:disabled, .white-btn-invert:disabled, .white-btn-inv:disabled, .white-btn-negative:disabled, .white-btn-neg:disabled, .white-btn-clicked:disabled, .white-btn-active:disabled, .white-btn.clicked:disabled, .white-btn.active:disabled, .white-btn-hover:disabled, .false-white-btn:disabled, .false-white-btn-invert:disabled, .false-white-btn-inv:disabled, .false-white-btn-negative:disabled, .false-white-btn-neg:disabled, .false-white-btn-clicked:disabled, .false-white-btn-active:disabled, .false-white-btn.clicked:disabled, .false-white-btn.active:disabled, .false-white-btn-hover:disabled, .light-grey-btn:disabled, .light-grey-btn-invert:disabled, .light-grey-btn-inv:disabled, .light-grey-btn-negative:disabled, .light-grey-btn-neg:disabled, .light-grey-btn-clicked:disabled, .light-grey-btn-active:disabled, .light-grey-btn.clicked:disabled, .light-grey-btn.active:disabled, .light-grey-btn-hover:disabled, .grey-btn:disabled, .grey-btn-invert:disabled, .grey-btn-inv:disabled, .grey-btn-negative:disabled, .grey-btn-neg:disabled, .grey-btn-clicked:disabled, .grey-btn-active:disabled, .grey-btn.clicked:disabled, .grey-btn.active:disabled, .grey-btn-hover:disabled, .dark-grey-btn:disabled, .dark-grey-btn-invert:disabled, .dark-grey-btn-inv:disabled, .dark-grey-btn-negative:disabled, .dark-grey-btn-neg:disabled, .dark-grey-btn-clicked:disabled, .dark-grey-btn-active:disabled, .dark-grey-btn.clicked:disabled, .dark-grey-btn.active:disabled, .dark-grey-btn-hover:disabled, .false-black-btn:disabled, .false-black-btn-invert:disabled, .false-black-btn-inv:disabled, .false-black-btn-negative:disabled, .false-black-btn-neg:disabled, .false-black-btn-clicked:disabled, .false-black-btn-active:disabled, .false-black-btn.clicked:disabled, .false-black-btn.active:disabled, .false-black-btn-hover:disabled, .bk-btn:disabled, .bk-btn-invert:disabled, .bk-btn-inv:disabled, .bk-btn-negative:disabled, .bk-btn-neg:disabled, .bk-btn-clicked:disabled, .bk-btn-active:disabled, .bk-btn.clicked:disabled, .bk-btn.active:disabled, .bk-btn-hover:disabled, .black-btn:disabled, .black-btn-invert:disabled, .black-btn-inv:disabled, .black-btn-negative:disabled, .black-btn-neg:disabled, .black-btn-clicked:disabled, .black-btn-active:disabled, .black-btn.clicked:disabled, .black-btn.active:disabled, .black-btn-hover:disabled, .col-btn:disabled, .col-btn-invert:disabled, .col-btn-inv:disabled, .col-btn-negative:disabled, .col-btn-neg:disabled, .col-btn-clicked:disabled, .col-btn-active:disabled, .col-btn.clicked:disabled, .col-btn.active:disabled, .col-btn-hover:disabled, .color-btn:disabled, .color-btn-invert:disabled, .color-btn-inv:disabled, .color-btn-negative:disabled, .color-btn-neg:disabled, .color-btn-clicked:disabled, .color-btn-active:disabled, .color-btn.clicked:disabled, .color-btn.active:disabled, .color-btn-hover:disabled, .main-color-btn:disabled, .main-color-btn-invert:disabled, .main-color-btn-inv:disabled, .main-color-btn-negative:disabled, .main-color-btn-neg:disabled, .main-color-btn-clicked:disabled, .main-color-btn-active:disabled, .main-color-btn.clicked:disabled, .main-color-btn.active:disabled, .main-color-btn-hover:disabled, .second-color-btn:disabled, .second-color-btn-invert:disabled, .second-color-btn-inv:disabled, .second-color-btn-negative:disabled, .second-color-btn-neg:disabled, .second-color-btn-clicked:disabled, .second-color-btn-active:disabled, .second-color-btn.clicked:disabled, .second-color-btn.active:disabled, .second-color-btn-hover:disabled, .third-color-btn:disabled, .third-color-btn-invert:disabled, .third-color-btn-inv:disabled, .third-color-btn-negative:disabled, .third-color-btn-neg:disabled, .third-color-btn-clicked:disabled, .third-color-btn-active:disabled, .third-color-btn.clicked:disabled, .third-color-btn.active:disabled, .third-color-btn-hover:disabled, .fourth-color-btn:disabled, .fourth-color-btn-invert:disabled, .fourth-color-btn-inv:disabled, .fourth-color-btn-negative:disabled, .fourth-color-btn-neg:disabled, .fourth-color-btn-clicked:disabled, .fourth-color-btn-active:disabled, .fourth-color-btn.clicked:disabled, .fourth-color-btn.active:disabled, .fourth-color-btn-hover:disabled, .info-btn:disabled, .info-btn-invert:disabled, .info-btn-inv:disabled, .info-btn-negative:disabled, .info-btn-neg:disabled, .info-btn-clicked:disabled, .info-btn-active:disabled, .info-btn.clicked:disabled, .info-btn.active:disabled, .info-btn-hover:disabled, .success-btn:disabled, .success-btn-invert:disabled, .success-btn-inv:disabled, .success-btn-negative:disabled, .success-btn-neg:disabled, .success-btn-clicked:disabled, .success-btn-active:disabled, .success-btn.clicked:disabled, .success-btn.active:disabled, .success-btn-hover:disabled, .warning-btn:disabled, .warning-btn-invert:disabled, .warning-btn-inv:disabled, .warning-btn-negative:disabled, .warning-btn-neg:disabled, .warning-btn-clicked:disabled, .warning-btn-active:disabled, .warning-btn.clicked:disabled, .warning-btn.active:disabled, .warning-btn-hover:disabled, .danger-btn:disabled, .danger-btn-invert:disabled, .danger-btn-inv:disabled, .danger-btn-negative:disabled, .danger-btn-neg:disabled, .danger-btn-clicked:disabled, .danger-btn-active:disabled, .danger-btn.clicked:disabled, .danger-btn.active:disabled, .danger-btn-hover:disabled, .bad-btn:disabled, .bad-btn-invert:disabled, .bad-btn-inv:disabled, .bad-btn-negative:disabled, .bad-btn-neg:disabled, .bad-btn-clicked:disabled, .bad-btn-active:disabled, .bad-btn.clicked:disabled, .bad-btn.active:disabled, .bad-btn-hover:disabled, .acid-green-btn:disabled, .acid-green-btn-invert:disabled, .acid-green-btn-inv:disabled, .acid-green-btn-negative:disabled, .acid-green-btn-neg:disabled, .acid-green-btn-clicked:disabled, .acid-green-btn-active:disabled, .acid-green-btn.clicked:disabled, .acid-green-btn.active:disabled, .acid-green-btn-hover:disabled, .gingerbread-btn:disabled, .gingerbread-btn-invert:disabled, .gingerbread-btn-inv:disabled, .gingerbread-btn-negative:disabled, .gingerbread-btn-neg:disabled, .gingerbread-btn-clicked:disabled, .gingerbread-btn-active:disabled, .gingerbread-btn.clicked:disabled, .gingerbread-btn.active:disabled, .gingerbread-btn-hover:disabled, .mini-btn:disabled, .mini-btn-invert:disabled, .mini-btn-inv:disabled, .mini-btn-negative:disabled, .mini-btn-neg:disabled, .mini-btn-clicked:disabled, .mini-btn-active:disabled, .mini-btn.clicked:disabled, .mini-btn.active:disabled, .mini-btn-hover:disabled, .mini-second-btn:disabled, .mini-second-btn-invert:disabled, .mini-second-btn-inv:disabled, .mini-second-btn-negative:disabled, .mini-second-btn-neg:disabled, .mini-second-btn-clicked:disabled, .mini-second-btn-active:disabled, .mini-second-btn.clicked:disabled, .mini-second-btn.active:disabled, .mini-second-btn-hover:disabled, .mini-third-btn:disabled, .mini-third-btn-invert:disabled, .mini-third-btn-inv:disabled, .mini-third-btn-negative:disabled, .mini-third-btn-neg:disabled, .mini-third-btn-clicked:disabled, .mini-third-btn-active:disabled, .mini-third-btn.clicked:disabled, .mini-third-btn.active:disabled, .mini-third-btn-hover:disabled, .mini-fourth-btn:disabled, .mini-fourth-btn-invert:disabled, .mini-fourth-btn-inv:disabled, .mini-fourth-btn-negative:disabled, .mini-fourth-btn-neg:disabled, .mini-fourth-btn-clicked:disabled, .mini-fourth-btn-active:disabled, .mini-fourth-btn.clicked:disabled, .mini-fourth-btn.active:disabled, .mini-fourth-btn-hover:disabled, .uwa-btn:disabled, .uwa-btn-invert:disabled, .uwa-btn-inv:disabled, .uwa-btn-negative:disabled, .uwa-btn-neg:disabled, .uwa-btn-clicked:disabled, .uwa-btn-active:disabled, .uwa-btn.clicked:disabled, .uwa-btn.active:disabled, .uwa-btn-hover:disabled, .uwa-second-btn:disabled, .uwa-second-btn-invert:disabled, .uwa-second-btn-inv:disabled, .uwa-second-btn-negative:disabled, .uwa-second-btn-neg:disabled, .uwa-second-btn-clicked:disabled, .uwa-second-btn-active:disabled, .uwa-second-btn.clicked:disabled, .uwa-second-btn.active:disabled, .uwa-second-btn-hover:disabled, .uwa-third-btn:disabled, .uwa-third-btn-invert:disabled, .uwa-third-btn-inv:disabled, .uwa-third-btn-negative:disabled, .uwa-third-btn-neg:disabled, .uwa-third-btn-clicked:disabled, .uwa-third-btn-active:disabled, .uwa-third-btn.clicked:disabled, .uwa-third-btn.active:disabled, .uwa-third-btn-hover:disabled, .uwa-fourth-btn:disabled, .uwa-fourth-btn-invert:disabled, .uwa-fourth-btn-inv:disabled, .uwa-fourth-btn-negative:disabled, .uwa-fourth-btn-neg:disabled, .uwa-fourth-btn-clicked:disabled, .uwa-fourth-btn-active:disabled, .uwa-fourth-btn.clicked:disabled, .uwa-fourth-btn.active:disabled, .uwa-fourth-btn-hover:disabled, .uwa-link-btn:disabled, .uwa-link-btn-invert:disabled, .uwa-link-btn-inv:disabled, .uwa-link-btn-negative:disabled, .uwa-link-btn-neg:disabled, .uwa-link-btn-clicked:disabled, .uwa-link-btn-active:disabled, .uwa-link-btn.clicked:disabled, .uwa-link-btn.active:disabled, .uwa-link-btn-hover:disabled, .light-blue-btn:disabled, .light-blue-btn-invert:disabled, .light-blue-btn-inv:disabled, .light-blue-btn-negative:disabled, .light-blue-btn-neg:disabled, .light-blue-btn-clicked:disabled, .light-blue-btn-active:disabled, .light-blue-btn.clicked:disabled, .light-blue-btn.active:disabled, .light-blue-btn-hover:disabled, .blue-btn:disabled, .blue-btn-invert:disabled, .blue-btn-inv:disabled, .blue-btn-negative:disabled, .blue-btn-neg:disabled, .blue-btn-clicked:disabled, .blue-btn-active:disabled, .blue-btn.clicked:disabled, .blue-btn.active:disabled, .blue-btn-hover:disabled, .btn:disabled, .wh-btn:disabled, .wh-btn-invert:disabled, .wh-btn-inv:disabled, .wh-btn-negative:disabled, .wh-btn-neg:disabled, .wh-btn-clicked:disabled, .wh-btn-active:disabled, .wh-btn.clicked:disabled, .wh-btn.active:disabled, .wh-btn-hover:disabled, .white-btn:disabled, .white-btn-invert:disabled, .white-btn-inv:disabled, .white-btn-negative:disabled, .white-btn-neg:disabled, .white-btn-clicked:disabled, .white-btn-active:disabled, .white-btn.clicked:disabled, .white-btn.active:disabled, .white-btn-hover:disabled, .false-white-btn:disabled, .false-white-btn-invert:disabled, .false-white-btn-inv:disabled, .false-white-btn-negative:disabled, .false-white-btn-neg:disabled, .false-white-btn-clicked:disabled, .false-white-btn-active:disabled, .false-white-btn.clicked:disabled, .false-white-btn.active:disabled, .false-white-btn-hover:disabled, .light-grey-btn:disabled, .light-grey-btn-invert:disabled, .light-grey-btn-inv:disabled, .light-grey-btn-negative:disabled, .light-grey-btn-neg:disabled, .light-grey-btn-clicked:disabled, .light-grey-btn-active:disabled, .light-grey-btn.clicked:disabled, .light-grey-btn.active:disabled, .light-grey-btn-hover:disabled, .grey-btn:disabled, .grey-btn-invert:disabled, .grey-btn-inv:disabled, .grey-btn-negative:disabled, .grey-btn-neg:disabled, .grey-btn-clicked:disabled, .grey-btn-active:disabled, .grey-btn.clicked:disabled, .grey-btn.active:disabled, .grey-btn-hover:disabled, .dark-grey-btn:disabled, .dark-grey-btn-invert:disabled, .dark-grey-btn-inv:disabled, .dark-grey-btn-negative:disabled, .dark-grey-btn-neg:disabled, .dark-grey-btn-clicked:disabled, .dark-grey-btn-active:disabled, .dark-grey-btn.clicked:disabled, .dark-grey-btn.active:disabled, .dark-grey-btn-hover:disabled, .false-black-btn:disabled, .false-black-btn-invert:disabled, .false-black-btn-inv:disabled, .false-black-btn-negative:disabled, .false-black-btn-neg:disabled, .false-black-btn-clicked:disabled, .false-black-btn-active:disabled, .false-black-btn.clicked:disabled, .false-black-btn.active:disabled, .false-black-btn-hover:disabled, .bk-btn:disabled, .bk-btn-invert:disabled, .bk-btn-inv:disabled, .bk-btn-negative:disabled, .bk-btn-neg:disabled, .bk-btn-clicked:disabled, .bk-btn-active:disabled, .bk-btn.clicked:disabled, .bk-btn.active:disabled, .bk-btn-hover:disabled, .black-btn:disabled, .black-btn-invert:disabled, .black-btn-inv:disabled, .black-btn-negative:disabled, .black-btn-neg:disabled, .black-btn-clicked:disabled, .black-btn-active:disabled, .black-btn.clicked:disabled, .black-btn.active:disabled, .black-btn-hover:disabled, .col-btn:disabled, .col-btn-invert:disabled, .col-btn-inv:disabled, .col-btn-negative:disabled, .col-btn-neg:disabled, .col-btn-clicked:disabled, .col-btn-active:disabled, .col-btn.clicked:disabled, .col-btn.active:disabled, .col-btn-hover:disabled, .color-btn:disabled, .color-btn-invert:disabled, .color-btn-inv:disabled, .color-btn-negative:disabled, .color-btn-neg:disabled, .color-btn-clicked:disabled, .color-btn-active:disabled, .color-btn.clicked:disabled, .color-btn.active:disabled, .color-btn-hover:disabled, .main-color-btn:disabled, .main-color-btn-invert:disabled, .main-color-btn-inv:disabled, .main-color-btn-negative:disabled, .main-color-btn-neg:disabled, .main-color-btn-clicked:disabled, .main-color-btn-active:disabled, .main-color-btn.clicked:disabled, .main-color-btn.active:disabled, .main-color-btn-hover:disabled, .second-color-btn:disabled, .second-color-btn-invert:disabled, .second-color-btn-inv:disabled, .second-color-btn-negative:disabled, .second-color-btn-neg:disabled, .second-color-btn-clicked:disabled, .second-color-btn-active:disabled, .second-color-btn.clicked:disabled, .second-color-btn.active:disabled, .second-color-btn-hover:disabled, .third-color-btn:disabled, .third-color-btn-invert:disabled, .third-color-btn-inv:disabled, .third-color-btn-negative:disabled, .third-color-btn-neg:disabled, .third-color-btn-clicked:disabled, .third-color-btn-active:disabled, .third-color-btn.clicked:disabled, .third-color-btn.active:disabled, .third-color-btn-hover:disabled, .fourth-color-btn:disabled, .fourth-color-btn-invert:disabled, .fourth-color-btn-inv:disabled, .fourth-color-btn-negative:disabled, .fourth-color-btn-neg:disabled, .fourth-color-btn-clicked:disabled, .fourth-color-btn-active:disabled, .fourth-color-btn.clicked:disabled, .fourth-color-btn.active:disabled, .fourth-color-btn-hover:disabled, .info-btn:disabled, .info-btn-invert:disabled, .info-btn-inv:disabled, .info-btn-negative:disabled, .info-btn-neg:disabled, .info-btn-clicked:disabled, .info-btn-active:disabled, .info-btn.clicked:disabled, .info-btn.active:disabled, .info-btn-hover:disabled, .success-btn:disabled, .success-btn-invert:disabled, .success-btn-inv:disabled, .success-btn-negative:disabled, .success-btn-neg:disabled, .success-btn-clicked:disabled, .success-btn-active:disabled, .success-btn.clicked:disabled, .success-btn.active:disabled, .success-btn-hover:disabled, .warning-btn:disabled, .warning-btn-invert:disabled, .warning-btn-inv:disabled, .warning-btn-negative:disabled, .warning-btn-neg:disabled, .warning-btn-clicked:disabled, .warning-btn-active:disabled, .warning-btn.clicked:disabled, .warning-btn.active:disabled, .warning-btn-hover:disabled, .danger-btn:disabled, .danger-btn-invert:disabled, .danger-btn-inv:disabled, .danger-btn-negative:disabled, .danger-btn-neg:disabled, .danger-btn-clicked:disabled, .danger-btn-active:disabled, .danger-btn.clicked:disabled, .danger-btn.active:disabled, .danger-btn-hover:disabled, .bad-btn:disabled, .bad-btn-invert:disabled, .bad-btn-inv:disabled, .bad-btn-negative:disabled, .bad-btn-neg:disabled, .bad-btn-clicked:disabled, .bad-btn-active:disabled, .bad-btn.clicked:disabled, .bad-btn.active:disabled, .bad-btn-hover:disabled, .acid-green-btn:disabled, .acid-green-btn-invert:disabled, .acid-green-btn-inv:disabled, .acid-green-btn-negative:disabled, .acid-green-btn-neg:disabled, .acid-green-btn-clicked:disabled, .acid-green-btn-active:disabled, .acid-green-btn.clicked:disabled, .acid-green-btn.active:disabled, .acid-green-btn-hover:disabled, .gingerbread-btn:disabled, .gingerbread-btn-invert:disabled, .gingerbread-btn-inv:disabled, .gingerbread-btn-negative:disabled, .gingerbread-btn-neg:disabled, .gingerbread-btn-clicked:disabled, .gingerbread-btn-active:disabled, .gingerbread-btn.clicked:disabled, .gingerbread-btn.active:disabled, .gingerbread-btn-hover:disabled, .mini-btn:disabled, .mini-btn-invert:disabled, .mini-btn-inv:disabled, .mini-btn-negative:disabled, .mini-btn-neg:disabled, .mini-btn-clicked:disabled, .mini-btn-active:disabled, .mini-btn.clicked:disabled, .mini-btn.active:disabled, .mini-btn-hover:disabled, .mini-second-btn:disabled, .mini-second-btn-invert:disabled, .mini-second-btn-inv:disabled, .mini-second-btn-negative:disabled, .mini-second-btn-neg:disabled, .mini-second-btn-clicked:disabled, .mini-second-btn-active:disabled, .mini-second-btn.clicked:disabled, .mini-second-btn.active:disabled, .mini-second-btn-hover:disabled, .mini-third-btn:disabled, .mini-third-btn-invert:disabled, .mini-third-btn-inv:disabled, .mini-third-btn-negative:disabled, .mini-third-btn-neg:disabled, .mini-third-btn-clicked:disabled, .mini-third-btn-active:disabled, .mini-third-btn.clicked:disabled, .mini-third-btn.active:disabled, .mini-third-btn-hover:disabled, .mini-fourth-btn:disabled, .mini-fourth-btn-invert:disabled, .mini-fourth-btn-inv:disabled, .mini-fourth-btn-negative:disabled, .mini-fourth-btn-neg:disabled, .mini-fourth-btn-clicked:disabled, .mini-fourth-btn-active:disabled, .mini-fourth-btn.clicked:disabled, .mini-fourth-btn.active:disabled, .mini-fourth-btn-hover:disabled, .uwa-btn:disabled, .uwa-btn-invert:disabled, .uwa-btn-inv:disabled, .uwa-btn-negative:disabled, .uwa-btn-neg:disabled, .uwa-btn-clicked:disabled, .uwa-btn-active:disabled, .uwa-btn.clicked:disabled, .uwa-btn.active:disabled, .uwa-btn-hover:disabled, .uwa-second-btn:disabled, .uwa-second-btn-invert:disabled, .uwa-second-btn-inv:disabled, .uwa-second-btn-negative:disabled, .uwa-second-btn-neg:disabled, .uwa-second-btn-clicked:disabled, .uwa-second-btn-active:disabled, .uwa-second-btn.clicked:disabled, .uwa-second-btn.active:disabled, .uwa-second-btn-hover:disabled, .uwa-third-btn:disabled, .uwa-third-btn-invert:disabled, .uwa-third-btn-inv:disabled, .uwa-third-btn-negative:disabled, .uwa-third-btn-neg:disabled, .uwa-third-btn-clicked:disabled, .uwa-third-btn-active:disabled, .uwa-third-btn.clicked:disabled, .uwa-third-btn.active:disabled, .uwa-third-btn-hover:disabled, .uwa-fourth-btn:disabled, .uwa-fourth-btn-invert:disabled, .uwa-fourth-btn-inv:disabled, .uwa-fourth-btn-negative:disabled, .uwa-fourth-btn-neg:disabled, .uwa-fourth-btn-clicked:disabled, .uwa-fourth-btn-active:disabled, .uwa-fourth-btn.clicked:disabled, .uwa-fourth-btn.active:disabled, .uwa-fourth-btn-hover:disabled, .uwa-link-btn:disabled, .uwa-link-btn-invert:disabled, .uwa-link-btn-inv:disabled, .uwa-link-btn-negative:disabled, .uwa-link-btn-neg:disabled, .uwa-link-btn-clicked:disabled, .uwa-link-btn-active:disabled, .uwa-link-btn.clicked:disabled, .uwa-link-btn.active:disabled, .uwa-link-btn-hover:disabled, .light-blue-btn:disabled, .light-blue-btn-invert:disabled, .light-blue-btn-inv:disabled, .light-blue-btn-negative:disabled, .light-blue-btn-neg:disabled, .light-blue-btn-clicked:disabled, .light-blue-btn-active:disabled, .light-blue-btn.clicked:disabled, .light-blue-btn.active:disabled, .light-blue-btn-hover:disabled, .blue-btn:disabled, .blue-btn-invert:disabled, .blue-btn-inv:disabled, .blue-btn-negative:disabled, .blue-btn-neg:disabled, .blue-btn-clicked:disabled, .blue-btn-active:disabled, .blue-btn.clicked:disabled, .blue-btn.active:disabled, .blue-btn-hover:disabled, button-invert:disabled, button-inv:disabled, button-negative:disabled, button-neg:disabled, .btn-invert:disabled, .btn-inv:disabled, .btn-negative:disabled, .btn-neg:disabled, .button-invert:disabled, .button-inv:disabled, .button-negative:disabled, .button-neg:disabled, .button:disabled, .wh-btn:disabled, .wh-btn-invert:disabled, .wh-btn-inv:disabled, .wh-btn-negative:disabled, .wh-btn-neg:disabled, .wh-btn-clicked:disabled, .wh-btn-active:disabled, .wh-btn.clicked:disabled, .wh-btn.active:disabled, .wh-btn-hover:disabled, .white-btn:disabled, .white-btn-invert:disabled, .white-btn-inv:disabled, .white-btn-negative:disabled, .white-btn-neg:disabled, .white-btn-clicked:disabled, .white-btn-active:disabled, .white-btn.clicked:disabled, .white-btn.active:disabled, .white-btn-hover:disabled, .false-white-btn:disabled, .false-white-btn-invert:disabled, .false-white-btn-inv:disabled, .false-white-btn-negative:disabled, .false-white-btn-neg:disabled, .false-white-btn-clicked:disabled, .false-white-btn-active:disabled, .false-white-btn.clicked:disabled, .false-white-btn.active:disabled, .false-white-btn-hover:disabled, .light-grey-btn:disabled, .light-grey-btn-invert:disabled, .light-grey-btn-inv:disabled, .light-grey-btn-negative:disabled, .light-grey-btn-neg:disabled, .light-grey-btn-clicked:disabled, .light-grey-btn-active:disabled, .light-grey-btn.clicked:disabled, .light-grey-btn.active:disabled, .light-grey-btn-hover:disabled, .grey-btn:disabled, .grey-btn-invert:disabled, .grey-btn-inv:disabled, .grey-btn-negative:disabled, .grey-btn-neg:disabled, .grey-btn-clicked:disabled, .grey-btn-active:disabled, .grey-btn.clicked:disabled, .grey-btn.active:disabled, .grey-btn-hover:disabled, .dark-grey-btn:disabled, .dark-grey-btn-invert:disabled, .dark-grey-btn-inv:disabled, .dark-grey-btn-negative:disabled, .dark-grey-btn-neg:disabled, .dark-grey-btn-clicked:disabled, .dark-grey-btn-active:disabled, .dark-grey-btn.clicked:disabled, .dark-grey-btn.active:disabled, .dark-grey-btn-hover:disabled, .false-black-btn:disabled, .false-black-btn-invert:disabled, .false-black-btn-inv:disabled, .false-black-btn-negative:disabled, .false-black-btn-neg:disabled, .false-black-btn-clicked:disabled, .false-black-btn-active:disabled, .false-black-btn.clicked:disabled, .false-black-btn.active:disabled, .false-black-btn-hover:disabled, .bk-btn:disabled, .bk-btn-invert:disabled, .bk-btn-inv:disabled, .bk-btn-negative:disabled, .bk-btn-neg:disabled, .bk-btn-clicked:disabled, .bk-btn-active:disabled, .bk-btn.clicked:disabled, .bk-btn.active:disabled, .bk-btn-hover:disabled, .black-btn:disabled, .black-btn-invert:disabled, .black-btn-inv:disabled, .black-btn-negative:disabled, .black-btn-neg:disabled, .black-btn-clicked:disabled, .black-btn-active:disabled, .black-btn.clicked:disabled, .black-btn.active:disabled, .black-btn-hover:disabled, .col-btn:disabled, .col-btn-invert:disabled, .col-btn-inv:disabled, .col-btn-negative:disabled, .col-btn-neg:disabled, .col-btn-clicked:disabled, .col-btn-active:disabled, .col-btn.clicked:disabled, .col-btn.active:disabled, .col-btn-hover:disabled, .color-btn:disabled, .color-btn-invert:disabled, .color-btn-inv:disabled, .color-btn-negative:disabled, .color-btn-neg:disabled, .color-btn-clicked:disabled, .color-btn-active:disabled, .color-btn.clicked:disabled, .color-btn.active:disabled, .color-btn-hover:disabled, .main-color-btn:disabled, .main-color-btn-invert:disabled, .main-color-btn-inv:disabled, .main-color-btn-negative:disabled, .main-color-btn-neg:disabled, .main-color-btn-clicked:disabled, .main-color-btn-active:disabled, .main-color-btn.clicked:disabled, .main-color-btn.active:disabled, .main-color-btn-hover:disabled, .second-color-btn:disabled, .second-color-btn-invert:disabled, .second-color-btn-inv:disabled, .second-color-btn-negative:disabled, .second-color-btn-neg:disabled, .second-color-btn-clicked:disabled, .second-color-btn-active:disabled, .second-color-btn.clicked:disabled, .second-color-btn.active:disabled, .second-color-btn-hover:disabled, .third-color-btn:disabled, .third-color-btn-invert:disabled, .third-color-btn-inv:disabled, .third-color-btn-negative:disabled, .third-color-btn-neg:disabled, .third-color-btn-clicked:disabled, .third-color-btn-active:disabled, .third-color-btn.clicked:disabled, .third-color-btn.active:disabled, .third-color-btn-hover:disabled, .fourth-color-btn:disabled, .fourth-color-btn-invert:disabled, .fourth-color-btn-inv:disabled, .fourth-color-btn-negative:disabled, .fourth-color-btn-neg:disabled, .fourth-color-btn-clicked:disabled, .fourth-color-btn-active:disabled, .fourth-color-btn.clicked:disabled, .fourth-color-btn.active:disabled, .fourth-color-btn-hover:disabled, .info-btn:disabled, .info-btn-invert:disabled, .info-btn-inv:disabled, .info-btn-negative:disabled, .info-btn-neg:disabled, .info-btn-clicked:disabled, .info-btn-active:disabled, .info-btn.clicked:disabled, .info-btn.active:disabled, .info-btn-hover:disabled, .success-btn:disabled, .success-btn-invert:disabled, .success-btn-inv:disabled, .success-btn-negative:disabled, .success-btn-neg:disabled, .success-btn-clicked:disabled, .success-btn-active:disabled, .success-btn.clicked:disabled, .success-btn.active:disabled, .success-btn-hover:disabled, .warning-btn:disabled, .warning-btn-invert:disabled, .warning-btn-inv:disabled, .warning-btn-negative:disabled, .warning-btn-neg:disabled, .warning-btn-clicked:disabled, .warning-btn-active:disabled, .warning-btn.clicked:disabled, .warning-btn.active:disabled, .warning-btn-hover:disabled, .danger-btn:disabled, .danger-btn-invert:disabled, .danger-btn-inv:disabled, .danger-btn-negative:disabled, .danger-btn-neg:disabled, .danger-btn-clicked:disabled, .danger-btn-active:disabled, .danger-btn.clicked:disabled, .danger-btn.active:disabled, .danger-btn-hover:disabled, .bad-btn:disabled, .bad-btn-invert:disabled, .bad-btn-inv:disabled, .bad-btn-negative:disabled, .bad-btn-neg:disabled, .bad-btn-clicked:disabled, .bad-btn-active:disabled, .bad-btn.clicked:disabled, .bad-btn.active:disabled, .bad-btn-hover:disabled, .acid-green-btn:disabled, .acid-green-btn-invert:disabled, .acid-green-btn-inv:disabled, .acid-green-btn-negative:disabled, .acid-green-btn-neg:disabled, .acid-green-btn-clicked:disabled, .acid-green-btn-active:disabled, .acid-green-btn.clicked:disabled, .acid-green-btn.active:disabled, .acid-green-btn-hover:disabled, .gingerbread-btn:disabled, .gingerbread-btn-invert:disabled, .gingerbread-btn-inv:disabled, .gingerbread-btn-negative:disabled, .gingerbread-btn-neg:disabled, .gingerbread-btn-clicked:disabled, .gingerbread-btn-active:disabled, .gingerbread-btn.clicked:disabled, .gingerbread-btn.active:disabled, .gingerbread-btn-hover:disabled, .mini-btn:disabled, .mini-btn-invert:disabled, .mini-btn-inv:disabled, .mini-btn-negative:disabled, .mini-btn-neg:disabled, .mini-btn-clicked:disabled, .mini-btn-active:disabled, .mini-btn.clicked:disabled, .mini-btn.active:disabled, .mini-btn-hover:disabled, .mini-second-btn:disabled, .mini-second-btn-invert:disabled, .mini-second-btn-inv:disabled, .mini-second-btn-negative:disabled, .mini-second-btn-neg:disabled, .mini-second-btn-clicked:disabled, .mini-second-btn-active:disabled, .mini-second-btn.clicked:disabled, .mini-second-btn.active:disabled, .mini-second-btn-hover:disabled, .mini-third-btn:disabled, .mini-third-btn-invert:disabled, .mini-third-btn-inv:disabled, .mini-third-btn-negative:disabled, .mini-third-btn-neg:disabled, .mini-third-btn-clicked:disabled, .mini-third-btn-active:disabled, .mini-third-btn.clicked:disabled, .mini-third-btn.active:disabled, .mini-third-btn-hover:disabled, .mini-fourth-btn:disabled, .mini-fourth-btn-invert:disabled, .mini-fourth-btn-inv:disabled, .mini-fourth-btn-negative:disabled, .mini-fourth-btn-neg:disabled, .mini-fourth-btn-clicked:disabled, .mini-fourth-btn-active:disabled, .mini-fourth-btn.clicked:disabled, .mini-fourth-btn.active:disabled, .mini-fourth-btn-hover:disabled, .uwa-btn:disabled, .uwa-btn-invert:disabled, .uwa-btn-inv:disabled, .uwa-btn-negative:disabled, .uwa-btn-neg:disabled, .uwa-btn-clicked:disabled, .uwa-btn-active:disabled, .uwa-btn.clicked:disabled, .uwa-btn.active:disabled, .uwa-btn-hover:disabled, .uwa-second-btn:disabled, .uwa-second-btn-invert:disabled, .uwa-second-btn-inv:disabled, .uwa-second-btn-negative:disabled, .uwa-second-btn-neg:disabled, .uwa-second-btn-clicked:disabled, .uwa-second-btn-active:disabled, .uwa-second-btn.clicked:disabled, .uwa-second-btn.active:disabled, .uwa-second-btn-hover:disabled, .uwa-third-btn:disabled, .uwa-third-btn-invert:disabled, .uwa-third-btn-inv:disabled, .uwa-third-btn-negative:disabled, .uwa-third-btn-neg:disabled, .uwa-third-btn-clicked:disabled, .uwa-third-btn-active:disabled, .uwa-third-btn.clicked:disabled, .uwa-third-btn.active:disabled, .uwa-third-btn-hover:disabled, .uwa-fourth-btn:disabled, .uwa-fourth-btn-invert:disabled, .uwa-fourth-btn-inv:disabled, .uwa-fourth-btn-negative:disabled, .uwa-fourth-btn-neg:disabled, .uwa-fourth-btn-clicked:disabled, .uwa-fourth-btn-active:disabled, .uwa-fourth-btn.clicked:disabled, .uwa-fourth-btn.active:disabled, .uwa-fourth-btn-hover:disabled, .uwa-link-btn:disabled, .uwa-link-btn-invert:disabled, .uwa-link-btn-inv:disabled, .uwa-link-btn-negative:disabled, .uwa-link-btn-neg:disabled, .uwa-link-btn-clicked:disabled, .uwa-link-btn-active:disabled, .uwa-link-btn.clicked:disabled, .uwa-link-btn.active:disabled, .uwa-link-btn-hover:disabled, .light-blue-btn:disabled, .light-blue-btn-invert:disabled, .light-blue-btn-inv:disabled, .light-blue-btn-negative:disabled, .light-blue-btn-neg:disabled, .light-blue-btn-clicked:disabled, .light-blue-btn-active:disabled, .light-blue-btn.clicked:disabled, .light-blue-btn.active:disabled, .light-blue-btn-hover:disabled, .blue-btn:disabled, .blue-btn-invert:disabled, .blue-btn-inv:disabled, .blue-btn-negative:disabled, .blue-btn-neg:disabled, .blue-btn-clicked:disabled, .blue-btn-active:disabled, .blue-btn.clicked:disabled, .blue-btn.active:disabled, .blue-btn-hover:disabled {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+}
+button:disabled:hover, .wh-btn:disabled:hover, .wh-btn-invert:disabled:hover, .wh-btn-inv:disabled:hover, .wh-btn-negative:disabled:hover, .wh-btn-neg:disabled:hover, .wh-btn-clicked:disabled:hover, .wh-btn-active:disabled:hover, .wh-btn.clicked:disabled:hover, .wh-btn.active:disabled:hover, .wh-btn-hover:disabled:hover, .white-btn:disabled:hover, .white-btn-invert:disabled:hover, .white-btn-inv:disabled:hover, .white-btn-negative:disabled:hover, .white-btn-neg:disabled:hover, .white-btn-clicked:disabled:hover, .white-btn-active:disabled:hover, .white-btn.clicked:disabled:hover, .white-btn.active:disabled:hover, .white-btn-hover:disabled:hover, .false-white-btn:disabled:hover, .false-white-btn-invert:disabled:hover, .false-white-btn-inv:disabled:hover, .false-white-btn-negative:disabled:hover, .false-white-btn-neg:disabled:hover, .false-white-btn-clicked:disabled:hover, .false-white-btn-active:disabled:hover, .false-white-btn.clicked:disabled:hover, .false-white-btn.active:disabled:hover, .false-white-btn-hover:disabled:hover, .light-grey-btn:disabled:hover, .light-grey-btn-invert:disabled:hover, .light-grey-btn-inv:disabled:hover, .light-grey-btn-negative:disabled:hover, .light-grey-btn-neg:disabled:hover, .light-grey-btn-clicked:disabled:hover, .light-grey-btn-active:disabled:hover, .light-grey-btn.clicked:disabled:hover, .light-grey-btn.active:disabled:hover, .light-grey-btn-hover:disabled:hover, .grey-btn:disabled:hover, .grey-btn-invert:disabled:hover, .grey-btn-inv:disabled:hover, .grey-btn-negative:disabled:hover, .grey-btn-neg:disabled:hover, .grey-btn-clicked:disabled:hover, .grey-btn-active:disabled:hover, .grey-btn.clicked:disabled:hover, .grey-btn.active:disabled:hover, .grey-btn-hover:disabled:hover, .dark-grey-btn:disabled:hover, .dark-grey-btn-invert:disabled:hover, .dark-grey-btn-inv:disabled:hover, .dark-grey-btn-negative:disabled:hover, .dark-grey-btn-neg:disabled:hover, .dark-grey-btn-clicked:disabled:hover, .dark-grey-btn-active:disabled:hover, .dark-grey-btn.clicked:disabled:hover, .dark-grey-btn.active:disabled:hover, .dark-grey-btn-hover:disabled:hover, .false-black-btn:disabled:hover, .false-black-btn-invert:disabled:hover, .false-black-btn-inv:disabled:hover, .false-black-btn-negative:disabled:hover, .false-black-btn-neg:disabled:hover, .false-black-btn-clicked:disabled:hover, .false-black-btn-active:disabled:hover, .false-black-btn.clicked:disabled:hover, .false-black-btn.active:disabled:hover, .false-black-btn-hover:disabled:hover, .bk-btn:disabled:hover, .bk-btn-invert:disabled:hover, .bk-btn-inv:disabled:hover, .bk-btn-negative:disabled:hover, .bk-btn-neg:disabled:hover, .bk-btn-clicked:disabled:hover, .bk-btn-active:disabled:hover, .bk-btn.clicked:disabled:hover, .bk-btn.active:disabled:hover, .bk-btn-hover:disabled:hover, .black-btn:disabled:hover, .black-btn-invert:disabled:hover, .black-btn-inv:disabled:hover, .black-btn-negative:disabled:hover, .black-btn-neg:disabled:hover, .black-btn-clicked:disabled:hover, .black-btn-active:disabled:hover, .black-btn.clicked:disabled:hover, .black-btn.active:disabled:hover, .black-btn-hover:disabled:hover, .col-btn:disabled:hover, .col-btn-invert:disabled:hover, .col-btn-inv:disabled:hover, .col-btn-negative:disabled:hover, .col-btn-neg:disabled:hover, .col-btn-clicked:disabled:hover, .col-btn-active:disabled:hover, .col-btn.clicked:disabled:hover, .col-btn.active:disabled:hover, .col-btn-hover:disabled:hover, .color-btn:disabled:hover, .color-btn-invert:disabled:hover, .color-btn-inv:disabled:hover, .color-btn-negative:disabled:hover, .color-btn-neg:disabled:hover, .color-btn-clicked:disabled:hover, .color-btn-active:disabled:hover, .color-btn.clicked:disabled:hover, .color-btn.active:disabled:hover, .color-btn-hover:disabled:hover, .main-color-btn:disabled:hover, .main-color-btn-invert:disabled:hover, .main-color-btn-inv:disabled:hover, .main-color-btn-negative:disabled:hover, .main-color-btn-neg:disabled:hover, .main-color-btn-clicked:disabled:hover, .main-color-btn-active:disabled:hover, .main-color-btn.clicked:disabled:hover, .main-color-btn.active:disabled:hover, .main-color-btn-hover:disabled:hover, .second-color-btn:disabled:hover, .second-color-btn-invert:disabled:hover, .second-color-btn-inv:disabled:hover, .second-color-btn-negative:disabled:hover, .second-color-btn-neg:disabled:hover, .second-color-btn-clicked:disabled:hover, .second-color-btn-active:disabled:hover, .second-color-btn.clicked:disabled:hover, .second-color-btn.active:disabled:hover, .second-color-btn-hover:disabled:hover, .third-color-btn:disabled:hover, .third-color-btn-invert:disabled:hover, .third-color-btn-inv:disabled:hover, .third-color-btn-negative:disabled:hover, .third-color-btn-neg:disabled:hover, .third-color-btn-clicked:disabled:hover, .third-color-btn-active:disabled:hover, .third-color-btn.clicked:disabled:hover, .third-color-btn.active:disabled:hover, .third-color-btn-hover:disabled:hover, .fourth-color-btn:disabled:hover, .fourth-color-btn-invert:disabled:hover, .fourth-color-btn-inv:disabled:hover, .fourth-color-btn-negative:disabled:hover, .fourth-color-btn-neg:disabled:hover, .fourth-color-btn-clicked:disabled:hover, .fourth-color-btn-active:disabled:hover, .fourth-color-btn.clicked:disabled:hover, .fourth-color-btn.active:disabled:hover, .fourth-color-btn-hover:disabled:hover, .info-btn:disabled:hover, .info-btn-invert:disabled:hover, .info-btn-inv:disabled:hover, .info-btn-negative:disabled:hover, .info-btn-neg:disabled:hover, .info-btn-clicked:disabled:hover, .info-btn-active:disabled:hover, .info-btn.clicked:disabled:hover, .info-btn.active:disabled:hover, .info-btn-hover:disabled:hover, .success-btn:disabled:hover, .success-btn-invert:disabled:hover, .success-btn-inv:disabled:hover, .success-btn-negative:disabled:hover, .success-btn-neg:disabled:hover, .success-btn-clicked:disabled:hover, .success-btn-active:disabled:hover, .success-btn.clicked:disabled:hover, .success-btn.active:disabled:hover, .success-btn-hover:disabled:hover, .warning-btn:disabled:hover, .warning-btn-invert:disabled:hover, .warning-btn-inv:disabled:hover, .warning-btn-negative:disabled:hover, .warning-btn-neg:disabled:hover, .warning-btn-clicked:disabled:hover, .warning-btn-active:disabled:hover, .warning-btn.clicked:disabled:hover, .warning-btn.active:disabled:hover, .warning-btn-hover:disabled:hover, .danger-btn:disabled:hover, .danger-btn-invert:disabled:hover, .danger-btn-inv:disabled:hover, .danger-btn-negative:disabled:hover, .danger-btn-neg:disabled:hover, .danger-btn-clicked:disabled:hover, .danger-btn-active:disabled:hover, .danger-btn.clicked:disabled:hover, .danger-btn.active:disabled:hover, .danger-btn-hover:disabled:hover, .bad-btn:disabled:hover, .bad-btn-invert:disabled:hover, .bad-btn-inv:disabled:hover, .bad-btn-negative:disabled:hover, .bad-btn-neg:disabled:hover, .bad-btn-clicked:disabled:hover, .bad-btn-active:disabled:hover, .bad-btn.clicked:disabled:hover, .bad-btn.active:disabled:hover, .bad-btn-hover:disabled:hover, .acid-green-btn:disabled:hover, .acid-green-btn-invert:disabled:hover, .acid-green-btn-inv:disabled:hover, .acid-green-btn-negative:disabled:hover, .acid-green-btn-neg:disabled:hover, .acid-green-btn-clicked:disabled:hover, .acid-green-btn-active:disabled:hover, .acid-green-btn.clicked:disabled:hover, .acid-green-btn.active:disabled:hover, .acid-green-btn-hover:disabled:hover, .gingerbread-btn:disabled:hover, .gingerbread-btn-invert:disabled:hover, .gingerbread-btn-inv:disabled:hover, .gingerbread-btn-negative:disabled:hover, .gingerbread-btn-neg:disabled:hover, .gingerbread-btn-clicked:disabled:hover, .gingerbread-btn-active:disabled:hover, .gingerbread-btn.clicked:disabled:hover, .gingerbread-btn.active:disabled:hover, .gingerbread-btn-hover:disabled:hover, .mini-btn:disabled:hover, .mini-btn-invert:disabled:hover, .mini-btn-inv:disabled:hover, .mini-btn-negative:disabled:hover, .mini-btn-neg:disabled:hover, .mini-btn-clicked:disabled:hover, .mini-btn-active:disabled:hover, .mini-btn.clicked:disabled:hover, .mini-btn.active:disabled:hover, .mini-btn-hover:disabled:hover, .mini-second-btn:disabled:hover, .mini-second-btn-invert:disabled:hover, .mini-second-btn-inv:disabled:hover, .mini-second-btn-negative:disabled:hover, .mini-second-btn-neg:disabled:hover, .mini-second-btn-clicked:disabled:hover, .mini-second-btn-active:disabled:hover, .mini-second-btn.clicked:disabled:hover, .mini-second-btn.active:disabled:hover, .mini-second-btn-hover:disabled:hover, .mini-third-btn:disabled:hover, .mini-third-btn-invert:disabled:hover, .mini-third-btn-inv:disabled:hover, .mini-third-btn-negative:disabled:hover, .mini-third-btn-neg:disabled:hover, .mini-third-btn-clicked:disabled:hover, .mini-third-btn-active:disabled:hover, .mini-third-btn.clicked:disabled:hover, .mini-third-btn.active:disabled:hover, .mini-third-btn-hover:disabled:hover, .mini-fourth-btn:disabled:hover, .mini-fourth-btn-invert:disabled:hover, .mini-fourth-btn-inv:disabled:hover, .mini-fourth-btn-negative:disabled:hover, .mini-fourth-btn-neg:disabled:hover, .mini-fourth-btn-clicked:disabled:hover, .mini-fourth-btn-active:disabled:hover, .mini-fourth-btn.clicked:disabled:hover, .mini-fourth-btn.active:disabled:hover, .mini-fourth-btn-hover:disabled:hover, .uwa-btn:disabled:hover, .uwa-btn-invert:disabled:hover, .uwa-btn-inv:disabled:hover, .uwa-btn-negative:disabled:hover, .uwa-btn-neg:disabled:hover, .uwa-btn-clicked:disabled:hover, .uwa-btn-active:disabled:hover, .uwa-btn.clicked:disabled:hover, .uwa-btn.active:disabled:hover, .uwa-btn-hover:disabled:hover, .uwa-second-btn:disabled:hover, .uwa-second-btn-invert:disabled:hover, .uwa-second-btn-inv:disabled:hover, .uwa-second-btn-negative:disabled:hover, .uwa-second-btn-neg:disabled:hover, .uwa-second-btn-clicked:disabled:hover, .uwa-second-btn-active:disabled:hover, .uwa-second-btn.clicked:disabled:hover, .uwa-second-btn.active:disabled:hover, .uwa-second-btn-hover:disabled:hover, .uwa-third-btn:disabled:hover, .uwa-third-btn-invert:disabled:hover, .uwa-third-btn-inv:disabled:hover, .uwa-third-btn-negative:disabled:hover, .uwa-third-btn-neg:disabled:hover, .uwa-third-btn-clicked:disabled:hover, .uwa-third-btn-active:disabled:hover, .uwa-third-btn.clicked:disabled:hover, .uwa-third-btn.active:disabled:hover, .uwa-third-btn-hover:disabled:hover, .uwa-fourth-btn:disabled:hover, .uwa-fourth-btn-invert:disabled:hover, .uwa-fourth-btn-inv:disabled:hover, .uwa-fourth-btn-negative:disabled:hover, .uwa-fourth-btn-neg:disabled:hover, .uwa-fourth-btn-clicked:disabled:hover, .uwa-fourth-btn-active:disabled:hover, .uwa-fourth-btn.clicked:disabled:hover, .uwa-fourth-btn.active:disabled:hover, .uwa-fourth-btn-hover:disabled:hover, .uwa-link-btn:disabled:hover, .uwa-link-btn-invert:disabled:hover, .uwa-link-btn-inv:disabled:hover, .uwa-link-btn-negative:disabled:hover, .uwa-link-btn-neg:disabled:hover, .uwa-link-btn-clicked:disabled:hover, .uwa-link-btn-active:disabled:hover, .uwa-link-btn.clicked:disabled:hover, .uwa-link-btn.active:disabled:hover, .uwa-link-btn-hover:disabled:hover, .light-blue-btn:disabled:hover, .light-blue-btn-invert:disabled:hover, .light-blue-btn-inv:disabled:hover, .light-blue-btn-negative:disabled:hover, .light-blue-btn-neg:disabled:hover, .light-blue-btn-clicked:disabled:hover, .light-blue-btn-active:disabled:hover, .light-blue-btn.clicked:disabled:hover, .light-blue-btn.active:disabled:hover, .light-blue-btn-hover:disabled:hover, .blue-btn:disabled:hover, .blue-btn-invert:disabled:hover, .blue-btn-inv:disabled:hover, .blue-btn-negative:disabled:hover, .blue-btn-neg:disabled:hover, .blue-btn-clicked:disabled:hover, .blue-btn-active:disabled:hover, .blue-btn.clicked:disabled:hover, .blue-btn.active:disabled:hover, .blue-btn-hover:disabled:hover, .btn:disabled:hover, .wh-btn:disabled:hover, .wh-btn-invert:disabled:hover, .wh-btn-inv:disabled:hover, .wh-btn-negative:disabled:hover, .wh-btn-neg:disabled:hover, .wh-btn-clicked:disabled:hover, .wh-btn-active:disabled:hover, .wh-btn.clicked:disabled:hover, .wh-btn.active:disabled:hover, .wh-btn-hover:disabled:hover, .white-btn:disabled:hover, .white-btn-invert:disabled:hover, .white-btn-inv:disabled:hover, .white-btn-negative:disabled:hover, .white-btn-neg:disabled:hover, .white-btn-clicked:disabled:hover, .white-btn-active:disabled:hover, .white-btn.clicked:disabled:hover, .white-btn.active:disabled:hover, .white-btn-hover:disabled:hover, .false-white-btn:disabled:hover, .false-white-btn-invert:disabled:hover, .false-white-btn-inv:disabled:hover, .false-white-btn-negative:disabled:hover, .false-white-btn-neg:disabled:hover, .false-white-btn-clicked:disabled:hover, .false-white-btn-active:disabled:hover, .false-white-btn.clicked:disabled:hover, .false-white-btn.active:disabled:hover, .false-white-btn-hover:disabled:hover, .light-grey-btn:disabled:hover, .light-grey-btn-invert:disabled:hover, .light-grey-btn-inv:disabled:hover, .light-grey-btn-negative:disabled:hover, .light-grey-btn-neg:disabled:hover, .light-grey-btn-clicked:disabled:hover, .light-grey-btn-active:disabled:hover, .light-grey-btn.clicked:disabled:hover, .light-grey-btn.active:disabled:hover, .light-grey-btn-hover:disabled:hover, .grey-btn:disabled:hover, .grey-btn-invert:disabled:hover, .grey-btn-inv:disabled:hover, .grey-btn-negative:disabled:hover, .grey-btn-neg:disabled:hover, .grey-btn-clicked:disabled:hover, .grey-btn-active:disabled:hover, .grey-btn.clicked:disabled:hover, .grey-btn.active:disabled:hover, .grey-btn-hover:disabled:hover, .dark-grey-btn:disabled:hover, .dark-grey-btn-invert:disabled:hover, .dark-grey-btn-inv:disabled:hover, .dark-grey-btn-negative:disabled:hover, .dark-grey-btn-neg:disabled:hover, .dark-grey-btn-clicked:disabled:hover, .dark-grey-btn-active:disabled:hover, .dark-grey-btn.clicked:disabled:hover, .dark-grey-btn.active:disabled:hover, .dark-grey-btn-hover:disabled:hover, .false-black-btn:disabled:hover, .false-black-btn-invert:disabled:hover, .false-black-btn-inv:disabled:hover, .false-black-btn-negative:disabled:hover, .false-black-btn-neg:disabled:hover, .false-black-btn-clicked:disabled:hover, .false-black-btn-active:disabled:hover, .false-black-btn.clicked:disabled:hover, .false-black-btn.active:disabled:hover, .false-black-btn-hover:disabled:hover, .bk-btn:disabled:hover, .bk-btn-invert:disabled:hover, .bk-btn-inv:disabled:hover, .bk-btn-negative:disabled:hover, .bk-btn-neg:disabled:hover, .bk-btn-clicked:disabled:hover, .bk-btn-active:disabled:hover, .bk-btn.clicked:disabled:hover, .bk-btn.active:disabled:hover, .bk-btn-hover:disabled:hover, .black-btn:disabled:hover, .black-btn-invert:disabled:hover, .black-btn-inv:disabled:hover, .black-btn-negative:disabled:hover, .black-btn-neg:disabled:hover, .black-btn-clicked:disabled:hover, .black-btn-active:disabled:hover, .black-btn.clicked:disabled:hover, .black-btn.active:disabled:hover, .black-btn-hover:disabled:hover, .col-btn:disabled:hover, .col-btn-invert:disabled:hover, .col-btn-inv:disabled:hover, .col-btn-negative:disabled:hover, .col-btn-neg:disabled:hover, .col-btn-clicked:disabled:hover, .col-btn-active:disabled:hover, .col-btn.clicked:disabled:hover, .col-btn.active:disabled:hover, .col-btn-hover:disabled:hover, .color-btn:disabled:hover, .color-btn-invert:disabled:hover, .color-btn-inv:disabled:hover, .color-btn-negative:disabled:hover, .color-btn-neg:disabled:hover, .color-btn-clicked:disabled:hover, .color-btn-active:disabled:hover, .color-btn.clicked:disabled:hover, .color-btn.active:disabled:hover, .color-btn-hover:disabled:hover, .main-color-btn:disabled:hover, .main-color-btn-invert:disabled:hover, .main-color-btn-inv:disabled:hover, .main-color-btn-negative:disabled:hover, .main-color-btn-neg:disabled:hover, .main-color-btn-clicked:disabled:hover, .main-color-btn-active:disabled:hover, .main-color-btn.clicked:disabled:hover, .main-color-btn.active:disabled:hover, .main-color-btn-hover:disabled:hover, .second-color-btn:disabled:hover, .second-color-btn-invert:disabled:hover, .second-color-btn-inv:disabled:hover, .second-color-btn-negative:disabled:hover, .second-color-btn-neg:disabled:hover, .second-color-btn-clicked:disabled:hover, .second-color-btn-active:disabled:hover, .second-color-btn.clicked:disabled:hover, .second-color-btn.active:disabled:hover, .second-color-btn-hover:disabled:hover, .third-color-btn:disabled:hover, .third-color-btn-invert:disabled:hover, .third-color-btn-inv:disabled:hover, .third-color-btn-negative:disabled:hover, .third-color-btn-neg:disabled:hover, .third-color-btn-clicked:disabled:hover, .third-color-btn-active:disabled:hover, .third-color-btn.clicked:disabled:hover, .third-color-btn.active:disabled:hover, .third-color-btn-hover:disabled:hover, .fourth-color-btn:disabled:hover, .fourth-color-btn-invert:disabled:hover, .fourth-color-btn-inv:disabled:hover, .fourth-color-btn-negative:disabled:hover, .fourth-color-btn-neg:disabled:hover, .fourth-color-btn-clicked:disabled:hover, .fourth-color-btn-active:disabled:hover, .fourth-color-btn.clicked:disabled:hover, .fourth-color-btn.active:disabled:hover, .fourth-color-btn-hover:disabled:hover, .info-btn:disabled:hover, .info-btn-invert:disabled:hover, .info-btn-inv:disabled:hover, .info-btn-negative:disabled:hover, .info-btn-neg:disabled:hover, .info-btn-clicked:disabled:hover, .info-btn-active:disabled:hover, .info-btn.clicked:disabled:hover, .info-btn.active:disabled:hover, .info-btn-hover:disabled:hover, .success-btn:disabled:hover, .success-btn-invert:disabled:hover, .success-btn-inv:disabled:hover, .success-btn-negative:disabled:hover, .success-btn-neg:disabled:hover, .success-btn-clicked:disabled:hover, .success-btn-active:disabled:hover, .success-btn.clicked:disabled:hover, .success-btn.active:disabled:hover, .success-btn-hover:disabled:hover, .warning-btn:disabled:hover, .warning-btn-invert:disabled:hover, .warning-btn-inv:disabled:hover, .warning-btn-negative:disabled:hover, .warning-btn-neg:disabled:hover, .warning-btn-clicked:disabled:hover, .warning-btn-active:disabled:hover, .warning-btn.clicked:disabled:hover, .warning-btn.active:disabled:hover, .warning-btn-hover:disabled:hover, .danger-btn:disabled:hover, .danger-btn-invert:disabled:hover, .danger-btn-inv:disabled:hover, .danger-btn-negative:disabled:hover, .danger-btn-neg:disabled:hover, .danger-btn-clicked:disabled:hover, .danger-btn-active:disabled:hover, .danger-btn.clicked:disabled:hover, .danger-btn.active:disabled:hover, .danger-btn-hover:disabled:hover, .bad-btn:disabled:hover, .bad-btn-invert:disabled:hover, .bad-btn-inv:disabled:hover, .bad-btn-negative:disabled:hover, .bad-btn-neg:disabled:hover, .bad-btn-clicked:disabled:hover, .bad-btn-active:disabled:hover, .bad-btn.clicked:disabled:hover, .bad-btn.active:disabled:hover, .bad-btn-hover:disabled:hover, .acid-green-btn:disabled:hover, .acid-green-btn-invert:disabled:hover, .acid-green-btn-inv:disabled:hover, .acid-green-btn-negative:disabled:hover, .acid-green-btn-neg:disabled:hover, .acid-green-btn-clicked:disabled:hover, .acid-green-btn-active:disabled:hover, .acid-green-btn.clicked:disabled:hover, .acid-green-btn.active:disabled:hover, .acid-green-btn-hover:disabled:hover, .gingerbread-btn:disabled:hover, .gingerbread-btn-invert:disabled:hover, .gingerbread-btn-inv:disabled:hover, .gingerbread-btn-negative:disabled:hover, .gingerbread-btn-neg:disabled:hover, .gingerbread-btn-clicked:disabled:hover, .gingerbread-btn-active:disabled:hover, .gingerbread-btn.clicked:disabled:hover, .gingerbread-btn.active:disabled:hover, .gingerbread-btn-hover:disabled:hover, .mini-btn:disabled:hover, .mini-btn-invert:disabled:hover, .mini-btn-inv:disabled:hover, .mini-btn-negative:disabled:hover, .mini-btn-neg:disabled:hover, .mini-btn-clicked:disabled:hover, .mini-btn-active:disabled:hover, .mini-btn.clicked:disabled:hover, .mini-btn.active:disabled:hover, .mini-btn-hover:disabled:hover, .mini-second-btn:disabled:hover, .mini-second-btn-invert:disabled:hover, .mini-second-btn-inv:disabled:hover, .mini-second-btn-negative:disabled:hover, .mini-second-btn-neg:disabled:hover, .mini-second-btn-clicked:disabled:hover, .mini-second-btn-active:disabled:hover, .mini-second-btn.clicked:disabled:hover, .mini-second-btn.active:disabled:hover, .mini-second-btn-hover:disabled:hover, .mini-third-btn:disabled:hover, .mini-third-btn-invert:disabled:hover, .mini-third-btn-inv:disabled:hover, .mini-third-btn-negative:disabled:hover, .mini-third-btn-neg:disabled:hover, .mini-third-btn-clicked:disabled:hover, .mini-third-btn-active:disabled:hover, .mini-third-btn.clicked:disabled:hover, .mini-third-btn.active:disabled:hover, .mini-third-btn-hover:disabled:hover, .mini-fourth-btn:disabled:hover, .mini-fourth-btn-invert:disabled:hover, .mini-fourth-btn-inv:disabled:hover, .mini-fourth-btn-negative:disabled:hover, .mini-fourth-btn-neg:disabled:hover, .mini-fourth-btn-clicked:disabled:hover, .mini-fourth-btn-active:disabled:hover, .mini-fourth-btn.clicked:disabled:hover, .mini-fourth-btn.active:disabled:hover, .mini-fourth-btn-hover:disabled:hover, .uwa-btn:disabled:hover, .uwa-btn-invert:disabled:hover, .uwa-btn-inv:disabled:hover, .uwa-btn-negative:disabled:hover, .uwa-btn-neg:disabled:hover, .uwa-btn-clicked:disabled:hover, .uwa-btn-active:disabled:hover, .uwa-btn.clicked:disabled:hover, .uwa-btn.active:disabled:hover, .uwa-btn-hover:disabled:hover, .uwa-second-btn:disabled:hover, .uwa-second-btn-invert:disabled:hover, .uwa-second-btn-inv:disabled:hover, .uwa-second-btn-negative:disabled:hover, .uwa-second-btn-neg:disabled:hover, .uwa-second-btn-clicked:disabled:hover, .uwa-second-btn-active:disabled:hover, .uwa-second-btn.clicked:disabled:hover, .uwa-second-btn.active:disabled:hover, .uwa-second-btn-hover:disabled:hover, .uwa-third-btn:disabled:hover, .uwa-third-btn-invert:disabled:hover, .uwa-third-btn-inv:disabled:hover, .uwa-third-btn-negative:disabled:hover, .uwa-third-btn-neg:disabled:hover, .uwa-third-btn-clicked:disabled:hover, .uwa-third-btn-active:disabled:hover, .uwa-third-btn.clicked:disabled:hover, .uwa-third-btn.active:disabled:hover, .uwa-third-btn-hover:disabled:hover, .uwa-fourth-btn:disabled:hover, .uwa-fourth-btn-invert:disabled:hover, .uwa-fourth-btn-inv:disabled:hover, .uwa-fourth-btn-negative:disabled:hover, .uwa-fourth-btn-neg:disabled:hover, .uwa-fourth-btn-clicked:disabled:hover, .uwa-fourth-btn-active:disabled:hover, .uwa-fourth-btn.clicked:disabled:hover, .uwa-fourth-btn.active:disabled:hover, .uwa-fourth-btn-hover:disabled:hover, .uwa-link-btn:disabled:hover, .uwa-link-btn-invert:disabled:hover, .uwa-link-btn-inv:disabled:hover, .uwa-link-btn-negative:disabled:hover, .uwa-link-btn-neg:disabled:hover, .uwa-link-btn-clicked:disabled:hover, .uwa-link-btn-active:disabled:hover, .uwa-link-btn.clicked:disabled:hover, .uwa-link-btn.active:disabled:hover, .uwa-link-btn-hover:disabled:hover, .light-blue-btn:disabled:hover, .light-blue-btn-invert:disabled:hover, .light-blue-btn-inv:disabled:hover, .light-blue-btn-negative:disabled:hover, .light-blue-btn-neg:disabled:hover, .light-blue-btn-clicked:disabled:hover, .light-blue-btn-active:disabled:hover, .light-blue-btn.clicked:disabled:hover, .light-blue-btn.active:disabled:hover, .light-blue-btn-hover:disabled:hover, .blue-btn:disabled:hover, .blue-btn-invert:disabled:hover, .blue-btn-inv:disabled:hover, .blue-btn-negative:disabled:hover, .blue-btn-neg:disabled:hover, .blue-btn-clicked:disabled:hover, .blue-btn-active:disabled:hover, .blue-btn.clicked:disabled:hover, .blue-btn.active:disabled:hover, .blue-btn-hover:disabled:hover, button-invert:disabled:hover, button-inv:disabled:hover, button-negative:disabled:hover, button-neg:disabled:hover, .btn-invert:disabled:hover, .btn-inv:disabled:hover, .btn-negative:disabled:hover, .btn-neg:disabled:hover, .button-invert:disabled:hover, .button-inv:disabled:hover, .button-negative:disabled:hover, .button-neg:disabled:hover, .button:disabled:hover, .wh-btn:disabled:hover, .wh-btn-invert:disabled:hover, .wh-btn-inv:disabled:hover, .wh-btn-negative:disabled:hover, .wh-btn-neg:disabled:hover, .wh-btn-clicked:disabled:hover, .wh-btn-active:disabled:hover, .wh-btn.clicked:disabled:hover, .wh-btn.active:disabled:hover, .wh-btn-hover:disabled:hover, .white-btn:disabled:hover, .white-btn-invert:disabled:hover, .white-btn-inv:disabled:hover, .white-btn-negative:disabled:hover, .white-btn-neg:disabled:hover, .white-btn-clicked:disabled:hover, .white-btn-active:disabled:hover, .white-btn.clicked:disabled:hover, .white-btn.active:disabled:hover, .white-btn-hover:disabled:hover, .false-white-btn:disabled:hover, .false-white-btn-invert:disabled:hover, .false-white-btn-inv:disabled:hover, .false-white-btn-negative:disabled:hover, .false-white-btn-neg:disabled:hover, .false-white-btn-clicked:disabled:hover, .false-white-btn-active:disabled:hover, .false-white-btn.clicked:disabled:hover, .false-white-btn.active:disabled:hover, .false-white-btn-hover:disabled:hover, .light-grey-btn:disabled:hover, .light-grey-btn-invert:disabled:hover, .light-grey-btn-inv:disabled:hover, .light-grey-btn-negative:disabled:hover, .light-grey-btn-neg:disabled:hover, .light-grey-btn-clicked:disabled:hover, .light-grey-btn-active:disabled:hover, .light-grey-btn.clicked:disabled:hover, .light-grey-btn.active:disabled:hover, .light-grey-btn-hover:disabled:hover, .grey-btn:disabled:hover, .grey-btn-invert:disabled:hover, .grey-btn-inv:disabled:hover, .grey-btn-negative:disabled:hover, .grey-btn-neg:disabled:hover, .grey-btn-clicked:disabled:hover, .grey-btn-active:disabled:hover, .grey-btn.clicked:disabled:hover, .grey-btn.active:disabled:hover, .grey-btn-hover:disabled:hover, .dark-grey-btn:disabled:hover, .dark-grey-btn-invert:disabled:hover, .dark-grey-btn-inv:disabled:hover, .dark-grey-btn-negative:disabled:hover, .dark-grey-btn-neg:disabled:hover, .dark-grey-btn-clicked:disabled:hover, .dark-grey-btn-active:disabled:hover, .dark-grey-btn.clicked:disabled:hover, .dark-grey-btn.active:disabled:hover, .dark-grey-btn-hover:disabled:hover, .false-black-btn:disabled:hover, .false-black-btn-invert:disabled:hover, .false-black-btn-inv:disabled:hover, .false-black-btn-negative:disabled:hover, .false-black-btn-neg:disabled:hover, .false-black-btn-clicked:disabled:hover, .false-black-btn-active:disabled:hover, .false-black-btn.clicked:disabled:hover, .false-black-btn.active:disabled:hover, .false-black-btn-hover:disabled:hover, .bk-btn:disabled:hover, .bk-btn-invert:disabled:hover, .bk-btn-inv:disabled:hover, .bk-btn-negative:disabled:hover, .bk-btn-neg:disabled:hover, .bk-btn-clicked:disabled:hover, .bk-btn-active:disabled:hover, .bk-btn.clicked:disabled:hover, .bk-btn.active:disabled:hover, .bk-btn-hover:disabled:hover, .black-btn:disabled:hover, .black-btn-invert:disabled:hover, .black-btn-inv:disabled:hover, .black-btn-negative:disabled:hover, .black-btn-neg:disabled:hover, .black-btn-clicked:disabled:hover, .black-btn-active:disabled:hover, .black-btn.clicked:disabled:hover, .black-btn.active:disabled:hover, .black-btn-hover:disabled:hover, .col-btn:disabled:hover, .col-btn-invert:disabled:hover, .col-btn-inv:disabled:hover, .col-btn-negative:disabled:hover, .col-btn-neg:disabled:hover, .col-btn-clicked:disabled:hover, .col-btn-active:disabled:hover, .col-btn.clicked:disabled:hover, .col-btn.active:disabled:hover, .col-btn-hover:disabled:hover, .color-btn:disabled:hover, .color-btn-invert:disabled:hover, .color-btn-inv:disabled:hover, .color-btn-negative:disabled:hover, .color-btn-neg:disabled:hover, .color-btn-clicked:disabled:hover, .color-btn-active:disabled:hover, .color-btn.clicked:disabled:hover, .color-btn.active:disabled:hover, .color-btn-hover:disabled:hover, .main-color-btn:disabled:hover, .main-color-btn-invert:disabled:hover, .main-color-btn-inv:disabled:hover, .main-color-btn-negative:disabled:hover, .main-color-btn-neg:disabled:hover, .main-color-btn-clicked:disabled:hover, .main-color-btn-active:disabled:hover, .main-color-btn.clicked:disabled:hover, .main-color-btn.active:disabled:hover, .main-color-btn-hover:disabled:hover, .second-color-btn:disabled:hover, .second-color-btn-invert:disabled:hover, .second-color-btn-inv:disabled:hover, .second-color-btn-negative:disabled:hover, .second-color-btn-neg:disabled:hover, .second-color-btn-clicked:disabled:hover, .second-color-btn-active:disabled:hover, .second-color-btn.clicked:disabled:hover, .second-color-btn.active:disabled:hover, .second-color-btn-hover:disabled:hover, .third-color-btn:disabled:hover, .third-color-btn-invert:disabled:hover, .third-color-btn-inv:disabled:hover, .third-color-btn-negative:disabled:hover, .third-color-btn-neg:disabled:hover, .third-color-btn-clicked:disabled:hover, .third-color-btn-active:disabled:hover, .third-color-btn.clicked:disabled:hover, .third-color-btn.active:disabled:hover, .third-color-btn-hover:disabled:hover, .fourth-color-btn:disabled:hover, .fourth-color-btn-invert:disabled:hover, .fourth-color-btn-inv:disabled:hover, .fourth-color-btn-negative:disabled:hover, .fourth-color-btn-neg:disabled:hover, .fourth-color-btn-clicked:disabled:hover, .fourth-color-btn-active:disabled:hover, .fourth-color-btn.clicked:disabled:hover, .fourth-color-btn.active:disabled:hover, .fourth-color-btn-hover:disabled:hover, .info-btn:disabled:hover, .info-btn-invert:disabled:hover, .info-btn-inv:disabled:hover, .info-btn-negative:disabled:hover, .info-btn-neg:disabled:hover, .info-btn-clicked:disabled:hover, .info-btn-active:disabled:hover, .info-btn.clicked:disabled:hover, .info-btn.active:disabled:hover, .info-btn-hover:disabled:hover, .success-btn:disabled:hover, .success-btn-invert:disabled:hover, .success-btn-inv:disabled:hover, .success-btn-negative:disabled:hover, .success-btn-neg:disabled:hover, .success-btn-clicked:disabled:hover, .success-btn-active:disabled:hover, .success-btn.clicked:disabled:hover, .success-btn.active:disabled:hover, .success-btn-hover:disabled:hover, .warning-btn:disabled:hover, .warning-btn-invert:disabled:hover, .warning-btn-inv:disabled:hover, .warning-btn-negative:disabled:hover, .warning-btn-neg:disabled:hover, .warning-btn-clicked:disabled:hover, .warning-btn-active:disabled:hover, .warning-btn.clicked:disabled:hover, .warning-btn.active:disabled:hover, .warning-btn-hover:disabled:hover, .danger-btn:disabled:hover, .danger-btn-invert:disabled:hover, .danger-btn-inv:disabled:hover, .danger-btn-negative:disabled:hover, .danger-btn-neg:disabled:hover, .danger-btn-clicked:disabled:hover, .danger-btn-active:disabled:hover, .danger-btn.clicked:disabled:hover, .danger-btn.active:disabled:hover, .danger-btn-hover:disabled:hover, .bad-btn:disabled:hover, .bad-btn-invert:disabled:hover, .bad-btn-inv:disabled:hover, .bad-btn-negative:disabled:hover, .bad-btn-neg:disabled:hover, .bad-btn-clicked:disabled:hover, .bad-btn-active:disabled:hover, .bad-btn.clicked:disabled:hover, .bad-btn.active:disabled:hover, .bad-btn-hover:disabled:hover, .acid-green-btn:disabled:hover, .acid-green-btn-invert:disabled:hover, .acid-green-btn-inv:disabled:hover, .acid-green-btn-negative:disabled:hover, .acid-green-btn-neg:disabled:hover, .acid-green-btn-clicked:disabled:hover, .acid-green-btn-active:disabled:hover, .acid-green-btn.clicked:disabled:hover, .acid-green-btn.active:disabled:hover, .acid-green-btn-hover:disabled:hover, .gingerbread-btn:disabled:hover, .gingerbread-btn-invert:disabled:hover, .gingerbread-btn-inv:disabled:hover, .gingerbread-btn-negative:disabled:hover, .gingerbread-btn-neg:disabled:hover, .gingerbread-btn-clicked:disabled:hover, .gingerbread-btn-active:disabled:hover, .gingerbread-btn.clicked:disabled:hover, .gingerbread-btn.active:disabled:hover, .gingerbread-btn-hover:disabled:hover, .mini-btn:disabled:hover, .mini-btn-invert:disabled:hover, .mini-btn-inv:disabled:hover, .mini-btn-negative:disabled:hover, .mini-btn-neg:disabled:hover, .mini-btn-clicked:disabled:hover, .mini-btn-active:disabled:hover, .mini-btn.clicked:disabled:hover, .mini-btn.active:disabled:hover, .mini-btn-hover:disabled:hover, .mini-second-btn:disabled:hover, .mini-second-btn-invert:disabled:hover, .mini-second-btn-inv:disabled:hover, .mini-second-btn-negative:disabled:hover, .mini-second-btn-neg:disabled:hover, .mini-second-btn-clicked:disabled:hover, .mini-second-btn-active:disabled:hover, .mini-second-btn.clicked:disabled:hover, .mini-second-btn.active:disabled:hover, .mini-second-btn-hover:disabled:hover, .mini-third-btn:disabled:hover, .mini-third-btn-invert:disabled:hover, .mini-third-btn-inv:disabled:hover, .mini-third-btn-negative:disabled:hover, .mini-third-btn-neg:disabled:hover, .mini-third-btn-clicked:disabled:hover, .mini-third-btn-active:disabled:hover, .mini-third-btn.clicked:disabled:hover, .mini-third-btn.active:disabled:hover, .mini-third-btn-hover:disabled:hover, .mini-fourth-btn:disabled:hover, .mini-fourth-btn-invert:disabled:hover, .mini-fourth-btn-inv:disabled:hover, .mini-fourth-btn-negative:disabled:hover, .mini-fourth-btn-neg:disabled:hover, .mini-fourth-btn-clicked:disabled:hover, .mini-fourth-btn-active:disabled:hover, .mini-fourth-btn.clicked:disabled:hover, .mini-fourth-btn.active:disabled:hover, .mini-fourth-btn-hover:disabled:hover, .uwa-btn:disabled:hover, .uwa-btn-invert:disabled:hover, .uwa-btn-inv:disabled:hover, .uwa-btn-negative:disabled:hover, .uwa-btn-neg:disabled:hover, .uwa-btn-clicked:disabled:hover, .uwa-btn-active:disabled:hover, .uwa-btn.clicked:disabled:hover, .uwa-btn.active:disabled:hover, .uwa-btn-hover:disabled:hover, .uwa-second-btn:disabled:hover, .uwa-second-btn-invert:disabled:hover, .uwa-second-btn-inv:disabled:hover, .uwa-second-btn-negative:disabled:hover, .uwa-second-btn-neg:disabled:hover, .uwa-second-btn-clicked:disabled:hover, .uwa-second-btn-active:disabled:hover, .uwa-second-btn.clicked:disabled:hover, .uwa-second-btn.active:disabled:hover, .uwa-second-btn-hover:disabled:hover, .uwa-third-btn:disabled:hover, .uwa-third-btn-invert:disabled:hover, .uwa-third-btn-inv:disabled:hover, .uwa-third-btn-negative:disabled:hover, .uwa-third-btn-neg:disabled:hover, .uwa-third-btn-clicked:disabled:hover, .uwa-third-btn-active:disabled:hover, .uwa-third-btn.clicked:disabled:hover, .uwa-third-btn.active:disabled:hover, .uwa-third-btn-hover:disabled:hover, .uwa-fourth-btn:disabled:hover, .uwa-fourth-btn-invert:disabled:hover, .uwa-fourth-btn-inv:disabled:hover, .uwa-fourth-btn-negative:disabled:hover, .uwa-fourth-btn-neg:disabled:hover, .uwa-fourth-btn-clicked:disabled:hover, .uwa-fourth-btn-active:disabled:hover, .uwa-fourth-btn.clicked:disabled:hover, .uwa-fourth-btn.active:disabled:hover, .uwa-fourth-btn-hover:disabled:hover, .uwa-link-btn:disabled:hover, .uwa-link-btn-invert:disabled:hover, .uwa-link-btn-inv:disabled:hover, .uwa-link-btn-negative:disabled:hover, .uwa-link-btn-neg:disabled:hover, .uwa-link-btn-clicked:disabled:hover, .uwa-link-btn-active:disabled:hover, .uwa-link-btn.clicked:disabled:hover, .uwa-link-btn.active:disabled:hover, .uwa-link-btn-hover:disabled:hover, .light-blue-btn:disabled:hover, .light-blue-btn-invert:disabled:hover, .light-blue-btn-inv:disabled:hover, .light-blue-btn-negative:disabled:hover, .light-blue-btn-neg:disabled:hover, .light-blue-btn-clicked:disabled:hover, .light-blue-btn-active:disabled:hover, .light-blue-btn.clicked:disabled:hover, .light-blue-btn.active:disabled:hover, .light-blue-btn-hover:disabled:hover, .blue-btn:disabled:hover, .blue-btn-invert:disabled:hover, .blue-btn-inv:disabled:hover, .blue-btn-negative:disabled:hover, .blue-btn-neg:disabled:hover, .blue-btn-clicked:disabled:hover, .blue-btn-active:disabled:hover, .blue-btn.clicked:disabled:hover, .blue-btn.active:disabled:hover, .blue-btn-hover:disabled:hover {
+  background: var(--light-grey);
+  border-color: var(--grey);
+  color: var(--grey);
+  box-shadow: none;
 }
 
 .pointer, .clickable, .cursor-pointer {
