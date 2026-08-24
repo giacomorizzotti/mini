@@ -1,0 +1,81 @@
+// Rendered Markdown (mini_vue's MarkdownText.vue/MarkdownEditor.vue "Preview"
+// tab -- see mini_vue's useMarkdown.js). Everything here is scoped under
+// .markdown-text rather than touching the bare element selectors _typo.scss
+// already defines (h1-h6, ul/ol, pre/code, blockquote, a) -- those already
+// give sensible defaults for free since this renders into a plain
+// `v-html`-bound element, but two gaps need filling: headings capped to a
+// smaller top size (a full-page --h1 looks oversized inside a compact
+// task/project/pin description card, unlike its usual page-title context),
+// and tables/task-list checkboxes, neither of which _typo.scss/_forms.scss
+// style at all (or, for checkboxes, styles for a *real* large interactive
+// form control -- wrong for a tiny disabled inline marker).
+
+// MarkdownEditor.vue's "Preview" tab -- a plain <div>, so it needs its own
+// copy of the border/padding/background _forms.scss already gives every
+// <textarea> for free, so Write and Preview frame identically instead of
+// the preview looking like a different kind of control.
+.markdown-editor-preview {
+  border-radius: 5px;
+  padding: calc(var(--padding) * 0.75) var(--padding);
+  background-color: var(--white);
+  border: 1px solid var(--light-grey);
+  overflow-y: auto;
+}
+
+.markdown-text {
+  // Every heading level renders at the same, moderate size here -- the
+  // author's intent (a heading vs. a sub-heading) is still visible from
+  // the weight/spacing _typo.scss already gives each level, without a `#`
+  // in a short description dwarfing the card it's inside.
+  h1, h2, h3, h4, h5, h6 {
+    font-size: var(--h5);
+    line-height: calc(var(--h5) * 1.5);
+    margin-bottom: calc(var(--baseline) * 0.75);
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--margin) 0;
+    font-size: var(--p);
+  }
+  th, td {
+    text-align: left;
+    padding: calc(var(--padding) * 0.5) var(--padding);
+    border: 1px solid var(--light-grey);
+  }
+  th {
+    background: var(--false-white);
+    font-weight: 700;
+  }
+
+  // Task-list items (`- [ ]`/`- [x]`) render as a real, disabled
+  // <input type=checkbox> as the <li>'s first child, with no class of its
+  // own from marked to target -- :has() picks out just those items so the
+  // checkbox replaces the bullet marker (GitHub's own task-list look)
+  // without touching an ordinary list item's marker.
+  li:has(> input[type="checkbox"]) {
+    list-style: none;
+    margin-left: calc(var(--margin) * -1.5);
+  }
+  input[type="checkbox"] {
+    all: revert;
+    width: auto !important;
+    height: auto !important;
+    position: static;
+    top: auto;
+    left: auto;
+    margin: 0 calc(var(--margin) * 0.5) 0 0;
+    vertical-align: middle;
+    &::before, &::after {
+      content: none;
+    }
+  }
+}
