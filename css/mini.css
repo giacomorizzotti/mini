@@ -29924,6 +29924,58 @@ blockquote::after {
   vertical-align: middle;
 }
 
+.markdown-editor-preview {
+  border-radius: 5px;
+  padding: calc(var(--padding) * 0.75) var(--padding);
+  background-color: var(--white);
+  border: 1px solid var(--light-grey);
+  overflow-y: auto;
+}
+
+.markdown-text h1, .markdown-text h2, .markdown-text h3, .markdown-text h4, .markdown-text h5, .markdown-text h6 {
+  font-size: var(--h5);
+  line-height: calc(var(--h5) * 1.5);
+  margin-bottom: calc(var(--baseline) * 0.75);
+}
+.markdown-text > *:first-child {
+  margin-top: 0;
+}
+.markdown-text > *:last-child {
+  margin-bottom: 0;
+}
+.markdown-text table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--margin) 0;
+  font-size: var(--p);
+}
+.markdown-text th, .markdown-text td {
+  text-align: left;
+  padding: calc(var(--padding) * 0.5) var(--padding);
+  border: 1px solid var(--light-grey);
+}
+.markdown-text th {
+  background: var(--false-white);
+  font-weight: 700;
+}
+.markdown-text li:has(> input[type=checkbox]) {
+  list-style: none;
+  margin-left: calc(var(--margin) * -1.5);
+}
+.markdown-text input[type=checkbox] {
+  all: revert;
+  width: auto !important;
+  height: auto !important;
+  position: static;
+  top: auto;
+  left: auto;
+  margin: 0 calc(var(--margin) * 0.5) 0 0;
+  vertical-align: middle;
+}
+.markdown-text input[type=checkbox]::before, .markdown-text input[type=checkbox]::after {
+  content: none;
+}
+
 .m--1 {
   margin: calc(var(--margin) * -1) !important;
 }
