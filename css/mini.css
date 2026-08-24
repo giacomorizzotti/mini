@@ -29933,9 +29933,20 @@ blockquote::after {
 }
 
 .markdown-text h1, .markdown-text h2, .markdown-text h3, .markdown-text h4, .markdown-text h5, .markdown-text h6 {
-  font-size: var(--h5);
-  line-height: calc(var(--h5) * 1.5);
   margin-bottom: calc(var(--baseline) * 0.75);
+  line-height: 1.2;
+}
+.markdown-text h1 {
+  font-size: var(--h3);
+}
+.markdown-text h2 {
+  font-size: var(--h4);
+}
+.markdown-text h3 {
+  font-size: var(--h5);
+}
+.markdown-text h4, .markdown-text h5, .markdown-text h6 {
+  font-size: var(--h6);
 }
 .markdown-text > *:first-child {
   margin-top: 0;
