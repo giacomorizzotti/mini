@@ -23,14 +23,28 @@
 }
 
 .markdown-text {
-  // Every heading level renders at the same, moderate size here -- the
-  // author's intent (a heading vs. a sub-heading) is still visible from
-  // the weight/spacing _typo.scss already gives each level, without a `#`
-  // in a short description dwarfing the card it's inside.
+  // A real, ordered 4-step scale (h1 biggest, down to h4) compressed into
+  // --h3..--h6's range rather than the page-title-sized --h1..--h4 _typo.scss
+  // normally uses -- big enough to tell levels apart, small enough that a
+  // `#` in a short description doesn't dwarf the compact card it's inside.
+  // h5/h6 bottom out at h4's size rather than getting their own even-smaller
+  // step -- past 4 levels there's little practical reason to keep shrinking
+  // inside a short description/pin field.
   h1, h2, h3, h4, h5, h6 {
-    font-size: var(--h5);
-    line-height: calc(var(--h5) * 1.5);
     margin-bottom: calc(var(--baseline) * 0.75);
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: var(--h3);
+  }
+  h2 {
+    font-size: var(--h4);
+  }
+  h3 {
+    font-size: var(--h5);
+  }
+  h4, h5, h6 {
+    font-size: var(--h6);
   }
 
   > *:first-child {
