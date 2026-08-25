@@ -191,3 +191,107 @@ $screen-xxl: 1920px;
     display: none!important;
   }
 }
+
+// Same shape as respond()'s min/max-width media queries above, but
+// queries the nearest ancestor with `container-type` set (mini's own
+// .contain class, see _box.scss) instead of the viewport -- the same
+// trick that solved the Box grid's "narrow panel on a wide window"
+// problem, applied to these visibility classes too.
+@mixin respondContainerMax($width) {
+  @container (max-width: #{$width}) {
+    @content;
+  }
+}
+@mixin respondContainerMin($width) {
+  @container (min-width: #{$width}) {
+    @content;
+  }
+}
+@mixin respondContainerOnly($minwidth, $maxwidth) {
+  @container (min-width: #{$minwidth}) and (max-width: #{$maxwidth}) {
+    @content;
+  }
+}
+
+// Container-query counterparts of every visibility class above -- same
+// class names, same width thresholds, measured against the nearest
+// .contain ancestor instead of the viewport. With no .contain ancestor
+// anywhere on the page, an unmatched @container query is simply inert
+// (not a fallback to anything), so these have zero effect unless a
+// consumer actually opts an ancestor into .contain -- today's
+// viewport-based behavior above stays the default. Deliberately
+// appended last: where .contain IS used, being last lets these win the
+// ordinary CSS cascade tie-break over the @media rules above (same
+// reasoning _box.scss's own respond-container counterpart rules give).
+@include respondContainerMax($screen-sm) {
+  .sm-up, .sm {
+    display: none!important;
+  }
+}
+@include respondContainerMax($screen-md) {
+  .md-up, .md {
+    display: none!important;
+  }
+}
+@include respondContainerMax($screen-lg) {
+  .lg-up, .lg {
+    display: none!important;
+  }
+}
+@include respondContainerMax($screen-xl) {
+  .xl-up, .xl {
+    display: none!important;
+  }
+}
+@include respondContainerMax($screen-xxl) {
+  .xxl-up, .xxl {
+    display: none!important;
+  }
+}
+
+@include respondContainerMax($screen-sm) {
+  .no-sm {
+    display: none!important;
+  }
+}
+@include respondContainerOnly($screen-sm, $screen-md) {
+  .no-md {
+    display: none!important;
+  }
+}
+@include respondContainerOnly($screen-lg, $screen-xl) {
+  .no-xl {
+    display: none!important;
+  }
+}
+@include respondContainerOnly($screen-xl, $screen-xxl) {
+  .no-xxl {
+    display: none!important;
+  }
+}
+
+@include respondContainerMin($screen-sm) {
+  .sm-down {
+    display: none!important;
+  }
+}
+@include respondContainerMin($screen-md) {
+  .md-down {
+    display: none!important;
+  }
+}
+@include respondContainerMin($screen-lg) {
+  .lg-down {
+    display: none!important;
+  }
+}
+@include respondContainerMin($screen-xl) {
+  .xl-down {
+    display: none!important;
+  }
+}
+@include respondContainerMin($screen-xxl) {
+  .xxl-down {
+    display: none!important;
+  }
+}
