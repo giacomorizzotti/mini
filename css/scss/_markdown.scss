@@ -32,19 +32,22 @@
   // inside a short description/pin field.
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: calc(var(--baseline) * 0.75);
-    line-height: 1.2;
   }
   h1 {
-    font-size: var(--h3);
+    font-size: calc( var(--h1) * 0.75 );
+    line-height: calc( var(--h1) * 0.75 * 1.2);
   }
   h2 {
-    font-size: var(--h4);
+    font-size: calc( var(--h2) * 0.75 );
+    line-height: calc( var(--h2) * 0.75 * 1.2);
   }
   h3 {
-    font-size: var(--h5);
+    font-size: calc( var(--h3) * 0.75 );
+    line-height: calc( var(--h3) * 0.75 * 1.2);
   }
   h4, h5, h6 {
-    font-size: var(--h6);
+    font-size: calc( var(--h4) * 0.75 );
+    line-height: calc( var(--h4) * 0.75 * 1.2);
   }
 
   > *:first-child {
