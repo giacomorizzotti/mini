@@ -144,7 +144,7 @@ button, .btn, .button {
     -moz-border-radius: 3px;
     border-radius: 3px;
   }
-  &.round {
+  &.round, &.rounded {
     -webkit-border-radius: 250px;
     -moz-border-radius: 250px;
     border-radius: 250px;
