@@ -16,6 +16,7 @@ input, textarea, select {
     border-radius: 5px;
     padding: calc( var(--padding) * 0.75 ) calc( var(--padding) * 1 );
     font-weight: 700;
+    color: var(--black);
     background-color: var(--white);
     border: 1px solid var(--light-grey);
     box-shadow: 0 0 15px -5px var(--light-grey);
@@ -32,9 +33,44 @@ input, textarea, select {
         border: 1px solid var(--main-color);
         box-shadow: 0 0 15px -5px var(--main-color);
     }
+    &.XS, &.xs {
+        font-size: calc(var(--p) * 0.7)!important;
+        line-height: calc(var(--p) * 1);
+    }
+    &.S, &.s {
+        font-size: calc(var(--p) * 0.85)!important;
+        line-height: calc(var(--p) * 1.25);
+    }
+    &.L, &.l {
+        font-size: calc(var(--p) * 1.25)!important;
+        line-height: calc(var(--p) * 1.5);
+    }
+    &.XL, &.xl {
+        font-size: calc(var(--p) * 1.5)!important;
+        line-height: calc(var(--p) * 1.5);
+    }
+    &.XXL, &.xxl {
+        font-size: calc(var(--p) * 2)!important;
+        line-height: calc(var(--p) * 1.75);
+    }
 }
 input {
     font-size: var(--p);
+    &.XS, &.xs {
+        padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.75);
+    }
+    &.S, &.s {
+        padding: calc(var(--padding)*.25) calc(var(--padding)*1);
+    }
+    &.L, &.l {
+        padding: calc(var(--padding)*0.625) calc(var(--padding)*1.875);
+    }
+    &.XL, &.xl {
+        padding: calc(var(--padding)*0.85) calc(var(--padding)*2.55);
+    }
+    &.XXL, &.xxl {
+        padding: calc(var(--padding)*1.25) calc(var(--padding)*3.75);
+    }
 }
 textarea {
     width: 100%;
@@ -42,6 +78,14 @@ textarea {
     line-height: calc( var(--p) * 1.5);
     font-family: var(--font-sans);
     font-weight: 400;
+}
+
+// label wrapping a control — stack text above the input with a small gap
+// exclude .chip labels: they embed an input but render as a pill, not a field
+label:has(> input, > textarea, > select):not(.chip) {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--margin) * 0.4);
 }
 
 // checkboxes
@@ -97,54 +141,6 @@ input[type="checkbox"] {
         }
     }
 
-    &.chip {
-        display: none;
-        &+label {
-            --chip-color: var(--link-color);
-            transition: background-color 0.25s ease, color 0.25s ease;
-            padding: var(--padding) calc(var(--padding) * 1.5);
-            margin: 0;
-            border-radius: 999px;
-            background-color: var(--chip-color);
-            color: var(--white);
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-        }
-        &.S {
-            &+label {
-                padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25);
-                font-size: calc(var(--p) * 0.85)!important;
-                line-height: calc(var(--p) * 1.25);
-            }
-        }
-        &.XS {
-            &+label {
-                padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75);
-                font-size: calc(var(--p) * 0.7)!important;
-                line-height: calc(var(--p) * 1);
-            }
-        }
-        &:checked+label {
-            background: color-mix(in srgb, var(--chip-color) 75%, black);
-        }
-        &::before, &::after {
-            display: none;
-        }
-
-        // color variants — override --chip-color on the label
-        &.chip-main, &.main-chip, &.color-chip              + label { --chip-color: var(--main-color);   }
-        &.chip-second, &.second-chip, &.second-color-chip   + label { --chip-color: var(--second-color); }
-        &.chip-third, &.third-chip, &.third-color-chip      + label { --chip-color: var(--third-color);  }
-        &.chip-fourth, &.fourth-chip, &.fourth-color-chip   + label { --chip-color: var(--fourth-color); }
-        &.chip-success, &.success-chip                      + label { --chip-color: var(--success);      }
-        &.chip-danger, &.danger-chip                        + label { --chip-color: var(--danger);       }
-        &.chip-warning, &.warning-chip                      + label { --chip-color: var(--warning);      }
-        &.chip-grey, &.grey-chip                            + label { --chip-color: var(--grey);         }
-        &.chip-light-grey, &.light-grey-chip                + label { --chip-color: var(--light-grey);   }
-        
-    }
-
 }
 
 
@@ -161,4 +157,103 @@ input[type="radio"] {
         background: var(--main-color) !important;
         color: var(--white) !important;
     }
+}
+
+input[type="checkbox"], input[type="radio"] {
+    &.chip {
+        display: none;
+        &+label {
+            --chip-color: var(--link-color);
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+            padding: var(--padding) calc(var(--padding) * 1.5);
+            margin: 0;
+            border-radius: 999px;
+            background-color: var(--chip-color);
+            border: 1px solid var(--chip-color);
+            color: var(--white);
+            line-height: 1;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+        }
+        &.S {
+            &+label {
+                padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25);
+                font-size: calc(var(--p) * 0.85)!important;
+                line-height: calc(var(--p) * 1.25);
+            }
+        }
+        &.XS {
+            &+label {
+                padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75);
+                font-size: calc(var(--p) * 0.7)!important;
+                line-height: calc(var(--p) * 1);
+            }
+        }
+        &:checked+label {
+            background-color: color-mix(in srgb, var(--chip-color) 75%, black) !important;
+            border-color: color-mix(in srgb, var(--chip-color) 75%, black) !important;
+        }
+        &::before, &::after {
+            display: none;
+        }
+
+        // color variants — override --chip-color on the label
+        &.chip-main, &.main-chip, &.color-chip              + label { --chip-color: var(--main-color);   }
+        &.chip-second, &.second-chip, &.second-color-chip   + label { --chip-color: var(--second-color); }
+        &.chip-third, &.third-chip, &.third-color-chip      + label { --chip-color: var(--third-color);  }
+        &.chip-fourth, &.fourth-chip, &.fourth-color-chip   + label { --chip-color: var(--fourth-color); }
+        &.chip-success, &.success-chip                      + label { --chip-color: var(--success);      }
+        &.chip-danger, &.danger-chip                        + label { --chip-color: var(--danger);       }
+        &.chip-warning, &.warning-chip                      + label { --chip-color: var(--warning);      }
+        &.chip-grey, &.grey-chip                            + label { --chip-color: var(--grey);         }
+        &.chip-light-grey, &.light-grey-chip                + label { --chip-color: var(--light-grey);   }
+
+    }
+}
+
+// label.chip — label IS the chip (input nested inside)
+// mirrors input.chip+label but works with <label class="chip"><input/> text</label>
+label.chip {
+    --chip-color: var(--link-color);
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 999px;
+    background-color: var(--chip-color);
+    border: 1px solid var(--chip-color);
+    color: var(--white);
+    line-height: 1;
+    padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+    margin: 0;
+    font-size: var(--p);
+    font-weight: 400;
+
+    // hide the actual input — the label handles all interaction
+    > input[type="checkbox"],
+    > input[type="radio"] {
+        display: none !important;
+    }
+
+    // checked state via :has()
+    &:has(> :checked) {
+        background-color: color-mix(in srgb, var(--chip-color) 75%, black);
+        border-color: color-mix(in srgb, var(--chip-color) 75%, black);
+    }
+
+    // size variants
+    &.S { padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25); font-size: calc(var(--p) * 0.85); }
+    &.XS { padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75); font-size: calc(var(--p) * 0.7); }
+
+    // color variants
+    &.chip-main    { --chip-color: var(--main-color);   }
+    &.chip-second  { --chip-color: var(--second-color); }
+    &.chip-third   { --chip-color: var(--third-color);  }
+    &.chip-fourth  { --chip-color: var(--fourth-color); }
+    &.chip-success { --chip-color: var(--success);      }
+    &.chip-danger  { --chip-color: var(--danger);       }
+    &.chip-warning { --chip-color: var(--warning);      }
+    &.chip-grey    { --chip-color: var(--grey);         }
 }

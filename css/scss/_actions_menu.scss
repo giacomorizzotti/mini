@@ -30,8 +30,6 @@
         margin: 0;
         padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 );
         font-size: calc( var(--p) * 1.25 );
-        -webkit-border-radius: 3rem;
-        -moz-border-radius: 3rem;
         border-radius: 3rem;
         color: var(--white);
         background: var(--link-color);
@@ -63,8 +61,6 @@
           max-width: 52px;
           padding: 0;
           margin: 0;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
           border-radius: 50%;
           @include sm {
             padding: calc( var(--padding) * 1 );
@@ -83,10 +79,6 @@
           margin: 0;
           background-color: var(--white);
           padding: calc(var(--padding)* 0.5) calc(var(--padding)* 1);
-          -webkit-border-radius: 10px;
-          -webkit-border-bottom-left-radius: 0;
-          -moz-border-radius: 10px;
-          -moz-border-radius-bottomleft: 0;
           border-radius: 10px;
           border-bottom-left-radius: 0;
           border: 2px solid;
@@ -120,8 +112,6 @@
             color: var(--black);
             margin: 0;
             padding: calc( var(--padding) * 0.5 ) calc( var(--padding) * 1.5 ) calc( var(--padding) * 0.5 ) calc( var(--padding) * 0.5 );
-            -webkit-border-radius: calc( 40px + var(--padding) * 0.5 );
-            -moz-border-radius: calc( 40px + var(--padding) * 0.5 );
             border-radius: calc( 40px + var(--padding) * 0.5 );              
             -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 15%);
             -moz-box-shadow: 0 0 10px rgb(0 0 0 / 15%);
@@ -147,8 +137,6 @@
               max-width: 48px;
               padding: calc( var(--padding) * 0 );
               margin: 0 var(--margin) 0 0;
-              -webkit-border-radius: 50%;
-              -moz-border-radius: 50%;
               border-radius: 50%;
               @include sm {
                 font-size: calc( var(--p) * 1.5 );

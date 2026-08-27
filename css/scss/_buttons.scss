@@ -131,22 +131,14 @@ button, .btn, .button {
   transition: color ease-out 0.15s, background-color ease-out 0.15s, border-color ease-out 0.15s, box-shadow ease-out 0.15s;
   cursor: pointer;
   vertical-align: middle;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   &.hard {
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
     border-radius: 0px;
   }
   &.smooth {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
   }
   &.round, &.rounded {
-    -webkit-border-radius: 250px;
-    -moz-border-radius: 250px;
     border-radius: 250px;
   }
   &:last-child {

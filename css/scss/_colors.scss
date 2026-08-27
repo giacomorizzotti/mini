@@ -91,14 +91,10 @@ $colors: //color name, color code, text color over color
     }
     // text box
     &-box, &-text-box {
-      display: inline-block;
+      @extend .text-box !optional;
       background: $colorcode;
       color: $colortext;
-      padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.25);
-      display: inline-block;
-      vertical-align: text-bottom;
-      line-height: 0.8!important;
-      border: 1px solid $colorcode;
+      border-color: $colorcode;
       &-hover {
         &:hover {
           @extend .#{$colorname}-text-box !optional;
@@ -132,17 +128,10 @@ $colors: //color name, color code, text color over color
     }
     // chips
     &-chip {
-      display: inline-block;
-      font-size: calc(var(--p) * 0.85);
-      -webkit-border-radius: 999px;
-      -moz-border-radius: 999px;
-      border-radius: 999px;
-      line-height: 0.8!important;
-      vertical-align: text-bottom;
+      @extend .chip !optional;
       background: $colorcode;
       color: $colortext;
-      padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.5);
-      border: 1px solid $colorcode;
+      border-color: $colorcode;
       &-hover {
         &:hover {
           @extend .#{$colorname}-chip !optional;
@@ -176,16 +165,10 @@ $colors: //color name, color code, text color over color
     }
     // flags
     &-flag {
-      display: inline-block;
-      font-size: calc(var(--p) * 0.65);
-      line-height: 0.8!important;
-      padding: calc(var(--padding) * 0.25);
-      vertical-align: top;
+      @extend .flag !optional;
       background: $colorcode;
       color: $colortext;
-      //transform: translate(0, calc(var(--baseline) * -0.25));
-      border: 1px solid var(--main-color);
-      border: 1px solid $colorcode;
+      border-color: $colorcode;
       &-hover {
         &:hover {
           @extend .#{$colorname}-flag !optional;

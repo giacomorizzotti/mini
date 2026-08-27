@@ -33,8 +33,6 @@ $ten: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
   bottom: var(--padding);
   right: var(--padding);
   transition: all 0.3s ease;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   z-index: 100;
   border: 2px solid var(--white);
@@ -42,8 +40,6 @@ $ten: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
   align-items: center;
   align-content: center;  
   &:hover {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
   }
   p {
@@ -81,8 +77,6 @@ body.scroll .top-link {
   background: var(--white);
   z-index: 109;
   opacity: 1;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   scale: 1;
   transition: transform 0.15s ease-in, opacity 0.15s ease-in, filter 0.15s ease-in;
