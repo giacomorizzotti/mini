@@ -91,7 +91,7 @@ $colors: //color name, color code, text color over color
     }
     // text box
     &-box, &-text-box {
-      @extend .text-box !optional;
+      @include text-box-base;
       background: $colorcode;
       color: $colortext;
       border-color: $colorcode;
@@ -128,7 +128,7 @@ $colors: //color name, color code, text color over color
     }
     // chips
     &-chip {
-      @extend .chip !optional;
+      @include chip-base;
       background: $colorcode;
       color: $colortext;
       border-color: $colorcode;
@@ -165,7 +165,7 @@ $colors: //color name, color code, text color over color
     }
     // flags
     &-flag {
-      @extend .flag !optional;
+      @include flag-base;
       background: $colorcode;
       color: $colortext;
       border-color: $colorcode;

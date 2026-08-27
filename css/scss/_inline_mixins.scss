@@ -1,0 +1,35 @@
+// INLINE MIXINS
+// Structural mixins for inline decorators (text-box, flag, chip).
+// Used by both the base classes in _typo.scss and the color-variant loop in
+// _colors.scss.  Defined here (imported before _colors) so the loop can
+// @include them without relying on _typo.scss's import order.
+// Using @mixin rather than @extend avoids the selector-list explosion that
+// @extend causes inside @each loops with many iterations.
+
+@mixin text-box-base {
+  display: inline-block;
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
+  line-height: 1;
+  vertical-align: text-bottom;
+  border: 1px solid;
+}
+
+@mixin flag-base {
+  display: inline-block;
+  font-size: calc(var(--p) * 0.65);
+  line-height: 0.8!important;
+  padding: calc(var(--padding) * 0.25);
+  vertical-align: top;
+  border: 1px solid;
+}
+
+@mixin chip-base {
+  display: inline-block;
+  font-size: var(--p);
+  border-radius: 999px;
+  line-height: 1;
+  margin: 0;
+  vertical-align: text-bottom;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  border: 1px solid;
+}
