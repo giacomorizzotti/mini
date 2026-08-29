@@ -74,6 +74,11 @@ html {
   line-height: calc(var(--h6) * 1.5);
 }
 // super small text
+.XXS, .xxs {
+  font-size: calc(var(--p) * 0.5)!important;
+  line-height: calc(var(--p) * 0.75);
+}
+// super small text
 .XS, .xs {
   font-size: calc(var(--p) * 0.7)!important;
   line-height: calc(var(--p) * 1);

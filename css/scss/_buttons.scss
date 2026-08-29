@@ -164,7 +164,7 @@ button, .btn, .button {
     background-color: transparent;
     border-color: var(--button-border-color);
   }
-  &.xs, &.XS {
+  &.xs, &.XS, &.xxs, &.XXS {
     padding: calc(var(--padding)*.125) calc(var(--padding)*.75);
     margin: calc(var(--margin) * .25) 0;
     margin: calc(var(--margin) * .25) calc(var(--margin) * 0.25) calc(var(--margin) * .25) 0;
