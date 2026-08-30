@@ -76,32 +76,32 @@ html {
 // super small text
 .XXS, .xxs {
   font-size: calc(var(--p) * 0.5)!important;
-  line-height: calc(var(--p) * 0.75);
+  line-height: calc(var(--p) * 0.75)!important;
 }
 // super small text
 .XS, .xs {
   font-size: calc(var(--p) * 0.7)!important;
-  line-height: calc(var(--p) * 1);
+  line-height: calc(var(--p) * 1)!important;
 }
 // small text
 .S, .s {
   font-size: calc(var(--p) * 0.85)!important;
-  line-height: calc(var(--p) * 1.25);
+  line-height: calc(var(--p) * 1.25)!important;
 }
 // large text
 .L, .l {
   font-size: calc(var(--p) * 1.25)!important;
-  line-height: calc(var(--p) * 2);
+  line-height: calc(var(--p) * 2)!important;
 }
 // extra large text
 .XL, .xl {
   font-size: calc(var(--p) * 1.5)!important;
-  line-height: calc(var(--p) * 2.5);
+  line-height: calc(var(--p) * 2.5)!important;
 }
 // extra extra large text
 .XXL, .xxl {
   font-size: calc(var(--p) * 2)!important;
-  line-height: calc(var(--p) * 2.75);
+  line-height: calc(var(--p) * 2.75)!important;
 }
 // big text
 .big {
