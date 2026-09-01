@@ -53,7 +53,12 @@ $colors: //color name, color code, text color over color
 
   "light-blue" var(--light-blue) var(--white),
   "blue" var(--blue) var(--white),
-  "dark-blue" var(--dark-blue) var(--white);
+  "dark-blue" var(--dark-blue) var(--white),
+
+  "jpm" var(--jpm-color) var(--white),
+  "jpm-dark" var(--jpm-color-dark) var(--white),
+  "jpm-second" var(--jpm-second-color) var(--white),
+  "jpm-second-dark" var(--jpm-second-color-dark) var(--white);
 
   //"aroma" var(--aroma-color) var(--white),
   //"aroma-dark" var(--aroma-color-dark) var(--white),
@@ -345,7 +350,8 @@ $gradients:
   "fw-down-w" (var(--white) 0%, var(--false-white) 100%),
   "fw-up-w" (var(--false-white) 0%, var(--white) 100%),
   "mini" (var(--mini-color) 0%, var(--mini-second-color) 100%),
-  "uwa" (var(--uwa-color) 0%, var(--uwa-second-color) 100%);
+  "uwa" (var(--uwa-color) 0%, var(--uwa-second-color) 100%),
+  "jpm" (var(--jpm-second-color) 0%, var(--jpm-color) 100%);
 
 $grainy-gradients:
   "1-to-2" (color-mix(in srgb, var(--main-color) 85%, transparent) 0%, color-mix(in srgb, var(--second-color) 85%, transparent) 100%),
@@ -367,13 +373,33 @@ $grainy-gradients:
 
 
 @each $gradname, $gradstops in $gradients {
-  .grad-#{$gradname} {
-    @if $gradname == "fw-down-w" {
-      @include gradient(0deg, $gradstops);
-    } @else if $gradname == "fw-up-w" {
-      @include gradient(180deg, $gradstops);
-    } @else {
-      @include gradient(135deg, $gradstops);
+  // CSS class names cannot start with a digit — only emit the .grad-X alias
+  // for names that start with a digit; both aliases work for all others.
+  $first-char: str-slice($gradname, 1, 1);
+  $digit-start: $first-char == "0" or $first-char == "1" or $first-char == "2"
+             or $first-char == "3" or $first-char == "4" or $first-char == "5"
+             or $first-char == "6" or $first-char == "7" or $first-char == "8"
+             or $first-char == "9";
+
+  @if $digit-start {
+    .grad-#{$gradname} {
+      @if $gradname == "fw-down-w" {
+        @include gradient(0deg, $gradstops);
+      } @else if $gradname == "fw-up-w" {
+        @include gradient(180deg, $gradstops);
+      } @else {
+        @include gradient(135deg, $gradstops);
+      }
+    }
+  } @else {
+    .grad-#{$gradname}, .#{$gradname}-grad {
+      @if $gradname == "fw-down-w" {
+        @include gradient(0deg, $gradstops);
+      } @else if $gradname == "fw-up-w" {
+        @include gradient(180deg, $gradstops);
+      } @else {
+        @include gradient(135deg, $gradstops);
+      }
     }
   }
 }
@@ -443,4 +469,11 @@ $grainy-gradients:
 
 .invert, .inv, .neg, .negative {
   filter: brightness(0) invert(1)!important;
+}
+
+.jpm-text {
+    background: linear-gradient(170deg,var(--second-color), var(--main-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -148,6 +148,12 @@ body section {
   --light-blue: #21A2D7;
   --blue: #0A5B9B;
   --dark-blue: #072A46;
+  --jpm-color-light: #8f64d4;
+  --jpm-color: #7245BB;
+  --jpm-color-dark: #452d6b;
+  --jpm-color-transp: rgba(114, 69, 187, 0.2);
+  --jpmsecond-color: #3D79CC;
+  --jpmsecond-color-dark: #2c538b;
   --font-sans: "Barlow", sans-serif;
   --font-second: "Oswald", sans-serif;
   --font-serif: "Playfair Display", serif;
@@ -29319,6 +29325,1158 @@ input[type="radio"]:checked+label.dark-blue {
   }
 }
 */
+.jpm-text {
+  color: var(--jpm-color) !important;
+}
+.jpm-text-hover:hover {
+  color: var(--jpm-color) !important;
+}
+.jpm-text-clicked.clicked {
+  color: var(--jpm-color) !important;
+}
+.jpm-text-active.active {
+  color: var(--jpm-color) !important;
+}
+.jpm-box, .jpm-text-box, .jpm-box-invert, .jpm-text-box-invert, .jpm-box-active.active, .jpm-text-box-active.active, .jpm-box-clicked.clicked, .jpm-text-box-clicked.clicked, .jpm-box-hover:hover, .jpm-text-box-hover:hover {
+  display: inline-block;
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
+  line-height: 1;
+  vertical-align: text-bottom;
+  border: 1px solid;
+  background: var(--jpm-color);
+  color: var(--white);
+  border-color: var(--jpm-color);
+}
+.jpm-box-hover:hover, .jpm-text-box-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-color);
+}
+.jpm-box-clicked.clicked, .jpm-text-box-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-color);
+  color: var(--jpm-color);
+}
+.jpm-box-active.active, .jpm-text-box-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-color);
+  color: var(--jpm-color);
+}
+.jpm-box-invert, .jpm-text-box-invert {
+  background: var(--white);
+  border: 1px solid var(--jpm-color);
+  color: var(--jpm-color);
+}
+.jpm-chip, .jpm-chip-invert, .jpm-chip-active.active, .jpm-chip-clicked.clicked, .jpm-chip-hover:hover {
+  display: inline-block;
+  font-size: var(--p);
+  border-radius: 999px;
+  line-height: 1;
+  margin: 0;
+  vertical-align: text-bottom;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  border: 1px solid;
+  background: var(--jpm-color);
+  color: var(--white);
+  border-color: var(--jpm-color);
+}
+.jpm-chip-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--jpm-color);
+  color: var(--jpm-color);
+}
+.jpm-chip-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-color);
+  color: var(--jpm-color);
+}
+.jpm-chip-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-color);
+  color: var(--jpm-color);
+}
+.jpm-chip-invert {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-color);
+}
+.jpm-flag, .jpm-flag-invert, .jpm-flag-active.active, .jpm-flag-clicked.clicked, .jpm-flag-hover:hover {
+  display: inline-block;
+  font-size: calc(var(--p) * 0.65);
+  line-height: 0.8 !important;
+  padding: calc(var(--padding) * 0.25);
+  vertical-align: top;
+  border: 1px solid;
+  background: var(--jpm-color);
+  color: var(--white);
+  border-color: var(--jpm-color);
+}
+.jpm-flag-hover:hover {
+  background: var(--white);
+  color: var(--jpm-color);
+  border: 1px solid var(--jpm-color);
+}
+.jpm-flag-clicked.clicked {
+  background: var(--white);
+  color: var(--jpm-color);
+  border: 1px solid var(--jpm-color);
+}
+.jpm-flag-active.active {
+  background: var(--white);
+  color: var(--jpm-color);
+  border: 1px solid var(--jpm-color);
+}
+.jpm-flag-invert {
+  background: var(--white);
+  color: var(--jpm-color);
+  border: 1px solid var(--white);
+}
+.jpm-bg {
+  background-color: var(--jpm-color) !important;
+}
+.jpm-bg-hover:hover, .jpm-bg-hover.clicked, .jpm-bg-hover.active, .jpm-bg-clicked:hover, .jpm-bg-clicked.clicked, .jpm-bg-clicked.active, .jpm-bg-active:hover, .jpm-bg-active.clicked, .jpm-bg-active.active {
+  background-color: var(--jpm-color) !important;
+}
+.jpm-border {
+  border-color: var(--jpm-color) !important;
+}
+.jpm-border-hover:hover {
+  border-color: var(--jpm-color) !important;
+}
+.jpm-border-clicked.clicked {
+  border-color: var(--jpm-color) !important;
+}
+.jpm-border-active.active {
+  border-color: var(--jpm-color) !important;
+}
+.jpm-bubble::after, .jpm-bubble-right::after, .jpm-bubble-right-bottom::after, .jpm-bubble-right-top::after, .jpm-bubble-left::after, .jpm-bubble-left-bottom::after, .jpm-bubble-left-top::after, .jpm-bubble-bottom::after, .jpm-bubble-bottom-right::after, .jpm-bubble-bottom-left::after, .jpm-bubble-top::after, .jpm-bubble-top-right::after, .jpm-bubble-top-left::after, .jpm-bubble-s::after, .jpm-bubble-s-right::after, .jpm-bubble-s-right-bottom::after, .jpm-bubble-s-right-top::after, .jpm-bubble-s-left::after, .jpm-bubble-s-left-bottom::after, .jpm-bubble-s-left-top::after, .jpm-bubble-s-bottom::after, .jpm-bubble-s-bottom-right::after, .jpm-bubble-s-bottom-left::after, .jpm-bubble-s-top::after, .jpm-bubble-s-top-right::after, .jpm-bubble-s-top-left::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--jpm-color);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-bubble-s::after, .jpm-bubble-s-right::after, .jpm-bubble-s-right-bottom::after, .jpm-bubble-s-right-top::after, .jpm-bubble-s-left::after, .jpm-bubble-s-left-bottom::after, .jpm-bubble-s-left-top::after, .jpm-bubble-s-bottom::after, .jpm-bubble-s-bottom-right::after, .jpm-bubble-s-bottom-left::after, .jpm-bubble-s-top::after, .jpm-bubble-s-top-right::after, .jpm-bubble-s-top-left::after {
+  content: "";
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--jpm-color);
+}
+.jpm-bubble-top::after, .jpm-bubble-top-right::after, .jpm-bubble-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+}
+.jpm-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+}
+.jpm-bubble-bottom::after, .jpm-bubble-bottom-right::after, .jpm-bubble-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-bubble-left::after, .jpm-bubble-left-bottom::after, .jpm-bubble-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-bubble-left-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-bubble-left-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-bubble-right::after, .jpm-bubble-right-bottom::after, .jpm-bubble-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-bubble-right-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-bubble-right-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-bubble-s-top::after, .jpm-bubble-s-top-right::after, .jpm-bubble-s-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-bubble-s-top-left::after {
+  left: var(--margin);
+  right: auto;
+}
+.jpm-bubble-s-top-right::after {
+  right: var(--margin);
+  left: auto;
+}
+.jpm-bubble-s-bottom::after, .jpm-bubble-s-bottom-right::after, .jpm-bubble-s-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-bubble-s-bottom-left::after {
+  left: var(--margin);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-bubble-s-bottom-right::after {
+  right: var(--margin);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-bubble-s-left::after, .jpm-bubble-s-left-bottom::after, .jpm-bubble-s-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-bubble-s-left-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-bubble-s-left-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+.jpm-bubble-s-right::after, .jpm-bubble-s-right-bottom::after, .jpm-bubble-s-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-bubble-s-right-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-bubble-s-right-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+
+/*
+input[type="radio"]+label.jpm {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.jpm {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.jpm-dark-text {
+  color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-text-hover:hover {
+  color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-text-clicked.clicked {
+  color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-text-active.active {
+  color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-box, .jpm-dark-text-box, .jpm-dark-box-invert, .jpm-dark-text-box-invert, .jpm-dark-box-active.active, .jpm-dark-text-box-active.active, .jpm-dark-box-clicked.clicked, .jpm-dark-text-box-clicked.clicked, .jpm-dark-box-hover:hover, .jpm-dark-text-box-hover:hover {
+  display: inline-block;
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
+  line-height: 1;
+  vertical-align: text-bottom;
+  border: 1px solid;
+  background: var(--jpm-color-dark);
+  color: var(--white);
+  border-color: var(--jpm-color-dark);
+}
+.jpm-dark-box-hover:hover, .jpm-dark-text-box-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-box-clicked.clicked, .jpm-dark-text-box-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-color-dark);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-box-active.active, .jpm-dark-text-box-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-color-dark);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-box-invert, .jpm-dark-text-box-invert {
+  background: var(--white);
+  border: 1px solid var(--jpm-color-dark);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-chip, .jpm-dark-chip-invert, .jpm-dark-chip-active.active, .jpm-dark-chip-clicked.clicked, .jpm-dark-chip-hover:hover {
+  display: inline-block;
+  font-size: var(--p);
+  border-radius: 999px;
+  line-height: 1;
+  margin: 0;
+  vertical-align: text-bottom;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  border: 1px solid;
+  background: var(--jpm-color-dark);
+  color: var(--white);
+  border-color: var(--jpm-color-dark);
+}
+.jpm-dark-chip-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--jpm-color-dark);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-chip-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-color-dark);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-chip-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-color-dark);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-chip-invert {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-color-dark);
+}
+.jpm-dark-flag, .jpm-dark-flag-invert, .jpm-dark-flag-active.active, .jpm-dark-flag-clicked.clicked, .jpm-dark-flag-hover:hover {
+  display: inline-block;
+  font-size: calc(var(--p) * 0.65);
+  line-height: 0.8 !important;
+  padding: calc(var(--padding) * 0.25);
+  vertical-align: top;
+  border: 1px solid;
+  background: var(--jpm-color-dark);
+  color: var(--white);
+  border-color: var(--jpm-color-dark);
+}
+.jpm-dark-flag-hover:hover {
+  background: var(--white);
+  color: var(--jpm-color-dark);
+  border: 1px solid var(--jpm-color-dark);
+}
+.jpm-dark-flag-clicked.clicked {
+  background: var(--white);
+  color: var(--jpm-color-dark);
+  border: 1px solid var(--jpm-color-dark);
+}
+.jpm-dark-flag-active.active {
+  background: var(--white);
+  color: var(--jpm-color-dark);
+  border: 1px solid var(--jpm-color-dark);
+}
+.jpm-dark-flag-invert {
+  background: var(--white);
+  color: var(--jpm-color-dark);
+  border: 1px solid var(--white);
+}
+.jpm-dark-bg {
+  background-color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-bg-hover:hover, .jpm-dark-bg-hover.clicked, .jpm-dark-bg-hover.active, .jpm-dark-bg-clicked:hover, .jpm-dark-bg-clicked.clicked, .jpm-dark-bg-clicked.active, .jpm-dark-bg-active:hover, .jpm-dark-bg-active.clicked, .jpm-dark-bg-active.active {
+  background-color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-border {
+  border-color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-border-hover:hover {
+  border-color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-border-clicked.clicked {
+  border-color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-border-active.active {
+  border-color: var(--jpm-color-dark) !important;
+}
+.jpm-dark-bubble::after, .jpm-dark-bubble-right::after, .jpm-dark-bubble-right-bottom::after, .jpm-dark-bubble-right-top::after, .jpm-dark-bubble-left::after, .jpm-dark-bubble-left-bottom::after, .jpm-dark-bubble-left-top::after, .jpm-dark-bubble-bottom::after, .jpm-dark-bubble-bottom-right::after, .jpm-dark-bubble-bottom-left::after, .jpm-dark-bubble-top::after, .jpm-dark-bubble-top-right::after, .jpm-dark-bubble-top-left::after, .jpm-dark-bubble-s::after, .jpm-dark-bubble-s-right::after, .jpm-dark-bubble-s-right-bottom::after, .jpm-dark-bubble-s-right-top::after, .jpm-dark-bubble-s-left::after, .jpm-dark-bubble-s-left-bottom::after, .jpm-dark-bubble-s-left-top::after, .jpm-dark-bubble-s-bottom::after, .jpm-dark-bubble-s-bottom-right::after, .jpm-dark-bubble-s-bottom-left::after, .jpm-dark-bubble-s-top::after, .jpm-dark-bubble-s-top-right::after, .jpm-dark-bubble-s-top-left::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--jpm-color-dark);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-dark-bubble-s::after, .jpm-dark-bubble-s-right::after, .jpm-dark-bubble-s-right-bottom::after, .jpm-dark-bubble-s-right-top::after, .jpm-dark-bubble-s-left::after, .jpm-dark-bubble-s-left-bottom::after, .jpm-dark-bubble-s-left-top::after, .jpm-dark-bubble-s-bottom::after, .jpm-dark-bubble-s-bottom-right::after, .jpm-dark-bubble-s-bottom-left::after, .jpm-dark-bubble-s-top::after, .jpm-dark-bubble-s-top-right::after, .jpm-dark-bubble-s-top-left::after {
+  content: "";
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--jpm-color-dark);
+}
+.jpm-dark-bubble-top::after, .jpm-dark-bubble-top-right::after, .jpm-dark-bubble-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-dark-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+}
+.jpm-dark-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+}
+.jpm-dark-bubble-bottom::after, .jpm-dark-bubble-bottom-right::after, .jpm-dark-bubble-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-dark-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-dark-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-dark-bubble-left::after, .jpm-dark-bubble-left-bottom::after, .jpm-dark-bubble-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-dark-bubble-left-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-dark-bubble-left-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-dark-bubble-right::after, .jpm-dark-bubble-right-bottom::after, .jpm-dark-bubble-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-dark-bubble-right-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-dark-bubble-right-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-dark-bubble-s-top::after, .jpm-dark-bubble-s-top-right::after, .jpm-dark-bubble-s-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-dark-bubble-s-top-left::after {
+  left: var(--margin);
+  right: auto;
+}
+.jpm-dark-bubble-s-top-right::after {
+  right: var(--margin);
+  left: auto;
+}
+.jpm-dark-bubble-s-bottom::after, .jpm-dark-bubble-s-bottom-right::after, .jpm-dark-bubble-s-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-dark-bubble-s-bottom-left::after {
+  left: var(--margin);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-dark-bubble-s-bottom-right::after {
+  right: var(--margin);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-dark-bubble-s-left::after, .jpm-dark-bubble-s-left-bottom::after, .jpm-dark-bubble-s-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-dark-bubble-s-left-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-dark-bubble-s-left-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+.jpm-dark-bubble-s-right::after, .jpm-dark-bubble-s-right-bottom::after, .jpm-dark-bubble-s-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-dark-bubble-s-right-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-dark-bubble-s-right-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+
+/*
+input[type="radio"]+label.jpm-dark {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.jpm-dark {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.jpm-second-text {
+  color: var(--jpm-second-color) !important;
+}
+.jpm-second-text-hover:hover {
+  color: var(--jpm-second-color) !important;
+}
+.jpm-second-text-clicked.clicked {
+  color: var(--jpm-second-color) !important;
+}
+.jpm-second-text-active.active {
+  color: var(--jpm-second-color) !important;
+}
+.jpm-second-box, .jpm-second-text-box, .jpm-second-box-invert, .jpm-second-text-box-invert, .jpm-second-box-active.active, .jpm-second-text-box-active.active, .jpm-second-box-clicked.clicked, .jpm-second-text-box-clicked.clicked, .jpm-second-box-hover:hover, .jpm-second-text-box-hover:hover {
+  display: inline-block;
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
+  line-height: 1;
+  vertical-align: text-bottom;
+  border: 1px solid;
+  background: var(--jpm-second-color);
+  color: var(--white);
+  border-color: var(--jpm-second-color);
+}
+.jpm-second-box-hover:hover, .jpm-second-text-box-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-second-color);
+}
+.jpm-second-box-clicked.clicked, .jpm-second-text-box-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color);
+  color: var(--jpm-second-color);
+}
+.jpm-second-box-active.active, .jpm-second-text-box-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color);
+  color: var(--jpm-second-color);
+}
+.jpm-second-box-invert, .jpm-second-text-box-invert {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color);
+  color: var(--jpm-second-color);
+}
+.jpm-second-chip, .jpm-second-chip-invert, .jpm-second-chip-active.active, .jpm-second-chip-clicked.clicked, .jpm-second-chip-hover:hover {
+  display: inline-block;
+  font-size: var(--p);
+  border-radius: 999px;
+  line-height: 1;
+  margin: 0;
+  vertical-align: text-bottom;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  border: 1px solid;
+  background: var(--jpm-second-color);
+  color: var(--white);
+  border-color: var(--jpm-second-color);
+}
+.jpm-second-chip-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color);
+  color: var(--jpm-second-color);
+}
+.jpm-second-chip-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color);
+  color: var(--jpm-second-color);
+}
+.jpm-second-chip-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color);
+  color: var(--jpm-second-color);
+}
+.jpm-second-chip-invert {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-second-color);
+}
+.jpm-second-flag, .jpm-second-flag-invert, .jpm-second-flag-active.active, .jpm-second-flag-clicked.clicked, .jpm-second-flag-hover:hover {
+  display: inline-block;
+  font-size: calc(var(--p) * 0.65);
+  line-height: 0.8 !important;
+  padding: calc(var(--padding) * 0.25);
+  vertical-align: top;
+  border: 1px solid;
+  background: var(--jpm-second-color);
+  color: var(--white);
+  border-color: var(--jpm-second-color);
+}
+.jpm-second-flag-hover:hover {
+  background: var(--white);
+  color: var(--jpm-second-color);
+  border: 1px solid var(--jpm-second-color);
+}
+.jpm-second-flag-clicked.clicked {
+  background: var(--white);
+  color: var(--jpm-second-color);
+  border: 1px solid var(--jpm-second-color);
+}
+.jpm-second-flag-active.active {
+  background: var(--white);
+  color: var(--jpm-second-color);
+  border: 1px solid var(--jpm-second-color);
+}
+.jpm-second-flag-invert {
+  background: var(--white);
+  color: var(--jpm-second-color);
+  border: 1px solid var(--white);
+}
+.jpm-second-bg {
+  background-color: var(--jpm-second-color) !important;
+}
+.jpm-second-bg-hover:hover, .jpm-second-bg-hover.clicked, .jpm-second-bg-hover.active, .jpm-second-bg-clicked:hover, .jpm-second-bg-clicked.clicked, .jpm-second-bg-clicked.active, .jpm-second-bg-active:hover, .jpm-second-bg-active.clicked, .jpm-second-bg-active.active {
+  background-color: var(--jpm-second-color) !important;
+}
+.jpm-second-border {
+  border-color: var(--jpm-second-color) !important;
+}
+.jpm-second-border-hover:hover {
+  border-color: var(--jpm-second-color) !important;
+}
+.jpm-second-border-clicked.clicked {
+  border-color: var(--jpm-second-color) !important;
+}
+.jpm-second-border-active.active {
+  border-color: var(--jpm-second-color) !important;
+}
+.jpm-second-bubble::after, .jpm-second-bubble-right::after, .jpm-second-bubble-right-bottom::after, .jpm-second-bubble-right-top::after, .jpm-second-bubble-left::after, .jpm-second-bubble-left-bottom::after, .jpm-second-bubble-left-top::after, .jpm-second-bubble-bottom::after, .jpm-second-bubble-bottom-right::after, .jpm-second-bubble-bottom-left::after, .jpm-second-bubble-top::after, .jpm-second-bubble-top-right::after, .jpm-second-bubble-top-left::after, .jpm-second-bubble-s::after, .jpm-second-bubble-s-right::after, .jpm-second-bubble-s-right-bottom::after, .jpm-second-bubble-s-right-top::after, .jpm-second-bubble-s-left::after, .jpm-second-bubble-s-left-bottom::after, .jpm-second-bubble-s-left-top::after, .jpm-second-bubble-s-bottom::after, .jpm-second-bubble-s-bottom-right::after, .jpm-second-bubble-s-bottom-left::after, .jpm-second-bubble-s-top::after, .jpm-second-bubble-s-top-right::after, .jpm-second-bubble-s-top-left::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--jpm-second-color);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-second-bubble-s::after, .jpm-second-bubble-s-right::after, .jpm-second-bubble-s-right-bottom::after, .jpm-second-bubble-s-right-top::after, .jpm-second-bubble-s-left::after, .jpm-second-bubble-s-left-bottom::after, .jpm-second-bubble-s-left-top::after, .jpm-second-bubble-s-bottom::after, .jpm-second-bubble-s-bottom-right::after, .jpm-second-bubble-s-bottom-left::after, .jpm-second-bubble-s-top::after, .jpm-second-bubble-s-top-right::after, .jpm-second-bubble-s-top-left::after {
+  content: "";
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--jpm-second-color);
+}
+.jpm-second-bubble-top::after, .jpm-second-bubble-top-right::after, .jpm-second-bubble-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-second-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+}
+.jpm-second-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+}
+.jpm-second-bubble-bottom::after, .jpm-second-bubble-bottom-right::after, .jpm-second-bubble-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-second-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-bubble-left::after, .jpm-second-bubble-left-bottom::after, .jpm-second-bubble-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-second-bubble-left-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-second-bubble-left-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-second-bubble-right::after, .jpm-second-bubble-right-bottom::after, .jpm-second-bubble-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-second-bubble-right-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-second-bubble-right-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-second-bubble-s-top::after, .jpm-second-bubble-s-top-right::after, .jpm-second-bubble-s-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-second-bubble-s-top-left::after {
+  left: var(--margin);
+  right: auto;
+}
+.jpm-second-bubble-s-top-right::after {
+  right: var(--margin);
+  left: auto;
+}
+.jpm-second-bubble-s-bottom::after, .jpm-second-bubble-s-bottom-right::after, .jpm-second-bubble-s-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-second-bubble-s-bottom-left::after {
+  left: var(--margin);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-bubble-s-bottom-right::after {
+  right: var(--margin);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-bubble-s-left::after, .jpm-second-bubble-s-left-bottom::after, .jpm-second-bubble-s-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-second-bubble-s-left-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-second-bubble-s-left-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+.jpm-second-bubble-s-right::after, .jpm-second-bubble-s-right-bottom::after, .jpm-second-bubble-s-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-second-bubble-s-right-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-second-bubble-s-right-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+
+/*
+input[type="radio"]+label.jpm-second {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.jpm-second {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
+.jpm-second-dark-text {
+  color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-text-hover:hover {
+  color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-text-clicked.clicked {
+  color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-text-active.active {
+  color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-box, .jpm-second-dark-text-box, .jpm-second-dark-box-invert, .jpm-second-dark-text-box-invert, .jpm-second-dark-box-active.active, .jpm-second-dark-text-box-active.active, .jpm-second-dark-box-clicked.clicked, .jpm-second-dark-text-box-clicked.clicked, .jpm-second-dark-box-hover:hover, .jpm-second-dark-text-box-hover:hover {
+  display: inline-block;
+  padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.5);
+  line-height: 1;
+  vertical-align: text-bottom;
+  border: 1px solid;
+  background: var(--jpm-second-color-dark);
+  color: var(--white);
+  border-color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-box-hover:hover, .jpm-second-dark-text-box-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-box-clicked.clicked, .jpm-second-dark-text-box-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color-dark);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-box-active.active, .jpm-second-dark-text-box-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color-dark);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-box-invert, .jpm-second-dark-text-box-invert {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color-dark);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-chip, .jpm-second-dark-chip-invert, .jpm-second-dark-chip-active.active, .jpm-second-dark-chip-clicked.clicked, .jpm-second-dark-chip-hover:hover {
+  display: inline-block;
+  font-size: var(--p);
+  border-radius: 999px;
+  line-height: 1;
+  margin: 0;
+  vertical-align: text-bottom;
+  padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
+  border: 1px solid;
+  background: var(--jpm-second-color-dark);
+  color: var(--white);
+  border-color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-chip-hover:hover {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color-dark);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-chip-clicked.clicked {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color-dark);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-chip-active.active {
+  background: var(--white);
+  border: 1px solid var(--jpm-second-color-dark);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-chip-invert {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-flag, .jpm-second-dark-flag-invert, .jpm-second-dark-flag-active.active, .jpm-second-dark-flag-clicked.clicked, .jpm-second-dark-flag-hover:hover {
+  display: inline-block;
+  font-size: calc(var(--p) * 0.65);
+  line-height: 0.8 !important;
+  padding: calc(var(--padding) * 0.25);
+  vertical-align: top;
+  border: 1px solid;
+  background: var(--jpm-second-color-dark);
+  color: var(--white);
+  border-color: var(--jpm-second-color-dark);
+}
+.jpm-second-dark-flag-hover:hover {
+  background: var(--white);
+  color: var(--jpm-second-color-dark);
+  border: 1px solid var(--jpm-second-color-dark);
+}
+.jpm-second-dark-flag-clicked.clicked {
+  background: var(--white);
+  color: var(--jpm-second-color-dark);
+  border: 1px solid var(--jpm-second-color-dark);
+}
+.jpm-second-dark-flag-active.active {
+  background: var(--white);
+  color: var(--jpm-second-color-dark);
+  border: 1px solid var(--jpm-second-color-dark);
+}
+.jpm-second-dark-flag-invert {
+  background: var(--white);
+  color: var(--jpm-second-color-dark);
+  border: 1px solid var(--white);
+}
+.jpm-second-dark-bg {
+  background-color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-bg-hover:hover, .jpm-second-dark-bg-hover.clicked, .jpm-second-dark-bg-hover.active, .jpm-second-dark-bg-clicked:hover, .jpm-second-dark-bg-clicked.clicked, .jpm-second-dark-bg-clicked.active, .jpm-second-dark-bg-active:hover, .jpm-second-dark-bg-active.clicked, .jpm-second-dark-bg-active.active {
+  background-color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-border {
+  border-color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-border-hover:hover {
+  border-color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-border-clicked.clicked {
+  border-color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-border-active.active {
+  border-color: var(--jpm-second-color-dark) !important;
+}
+.jpm-second-dark-bubble::after, .jpm-second-dark-bubble-right::after, .jpm-second-dark-bubble-right-bottom::after, .jpm-second-dark-bubble-right-top::after, .jpm-second-dark-bubble-left::after, .jpm-second-dark-bubble-left-bottom::after, .jpm-second-dark-bubble-left-top::after, .jpm-second-dark-bubble-bottom::after, .jpm-second-dark-bubble-bottom-right::after, .jpm-second-dark-bubble-bottom-left::after, .jpm-second-dark-bubble-top::after, .jpm-second-dark-bubble-top-right::after, .jpm-second-dark-bubble-top-left::after, .jpm-second-dark-bubble-s::after, .jpm-second-dark-bubble-s-right::after, .jpm-second-dark-bubble-s-right-bottom::after, .jpm-second-dark-bubble-s-right-top::after, .jpm-second-dark-bubble-s-left::after, .jpm-second-dark-bubble-s-left-bottom::after, .jpm-second-dark-bubble-s-left-top::after, .jpm-second-dark-bubble-s-bottom::after, .jpm-second-dark-bubble-s-bottom-right::after, .jpm-second-dark-bubble-s-bottom-left::after, .jpm-second-dark-bubble-s-top::after, .jpm-second-dark-bubble-s-top-right::after, .jpm-second-dark-bubble-s-top-left::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: var(--baseline) solid transparent;
+  border-right: var(--baseline) solid transparent;
+  border-bottom: calc(var(--baseline) * 1.25) solid var(--jpm-second-color-dark);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-second-dark-bubble-s::after, .jpm-second-dark-bubble-s-right::after, .jpm-second-dark-bubble-s-right-bottom::after, .jpm-second-dark-bubble-s-right-top::after, .jpm-second-dark-bubble-s-left::after, .jpm-second-dark-bubble-s-left-bottom::after, .jpm-second-dark-bubble-s-left-top::after, .jpm-second-dark-bubble-s-bottom::after, .jpm-second-dark-bubble-s-bottom-right::after, .jpm-second-dark-bubble-s-bottom-left::after, .jpm-second-dark-bubble-s-top::after, .jpm-second-dark-bubble-s-top-right::after, .jpm-second-dark-bubble-s-top-left::after {
+  content: "";
+  border-left: calc(var(--baseline) * 0.5) solid transparent;
+  border-right: calc(var(--baseline) * 0.5) solid transparent;
+  border-bottom: calc(var(--baseline) * 0.5 * 1.25) solid var(--jpm-second-color-dark);
+}
+.jpm-second-dark-bubble-top::after, .jpm-second-dark-bubble-top-right::after, .jpm-second-dark-bubble-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-second-dark-bubble-top-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+}
+.jpm-second-dark-bubble-top-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+}
+.jpm-second-dark-bubble-bottom::after, .jpm-second-dark-bubble-bottom-right::after, .jpm-second-dark-bubble-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-second-dark-bubble-bottom-left::after {
+  left: calc(var(--margin) * 2);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-dark-bubble-bottom-right::after {
+  right: calc(var(--margin) * 2);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-dark-bubble-left::after, .jpm-second-dark-bubble-left-bottom::after, .jpm-second-dark-bubble-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-second-dark-bubble-left-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-second-dark-bubble-left-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-second-dark-bubble-right::after, .jpm-second-dark-bubble-right-bottom::after, .jpm-second-dark-bubble-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-second-dark-bubble-right-top::after {
+  top: calc(var(--margin) * 2);
+  bottom: auto;
+}
+.jpm-second-dark-bubble-right-bottom::after {
+  top: auto;
+  bottom: calc(var(--margin) * 2);
+}
+.jpm-second-dark-bubble-s-top::after, .jpm-second-dark-bubble-s-top-right::after, .jpm-second-dark-bubble-s-top-left::after {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.jpm-second-dark-bubble-s-top-left::after {
+  left: var(--margin);
+  right: auto;
+}
+.jpm-second-dark-bubble-s-top-right::after {
+  right: var(--margin);
+  left: auto;
+}
+.jpm-second-dark-bubble-s-bottom::after, .jpm-second-dark-bubble-s-bottom-right::after, .jpm-second-dark-bubble-s-bottom-left::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.jpm-second-dark-bubble-s-bottom-left::after {
+  left: var(--margin);
+  right: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-dark-bubble-s-bottom-right::after {
+  right: var(--margin);
+  left: auto;
+  transform: rotate(180deg);
+}
+.jpm-second-dark-bubble-s-left::after, .jpm-second-dark-bubble-s-left-bottom::after, .jpm-second-dark-bubble-s-left-top::after {
+  top: 50%;
+  left: 0%;
+  transform: translate(-80%, 0) rotate(270deg);
+}
+.jpm-second-dark-bubble-s-left-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-second-dark-bubble-s-left-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+.jpm-second-dark-bubble-s-right::after, .jpm-second-dark-bubble-s-right-bottom::after, .jpm-second-dark-bubble-s-right-top::after {
+  top: 50%;
+  right: 0%;
+  left: auto;
+  transform: translate(80%, 0) rotate(90deg);
+}
+.jpm-second-dark-bubble-s-right-top::after {
+  top: var(--margin);
+  bottom: auto;
+}
+.jpm-second-dark-bubble-s-right-bottom::after {
+  top: auto;
+  bottom: var(--margin);
+}
+
+/*
+input[type="radio"]+label.jpm-second-dark {
+  &-btn {
+    color: $colorcode!important;
+    border-color: $colorcode!important;
+    &:hover {
+      color: $colortext!important;
+      background: $colorcode!important;
+      border-color: $colorcode!important;
+    }
+    &-bg {
+      color: $colortext!important;
+      border-color: $colorcode!important;
+      background: $colorcode!important;
+      &:hover {
+        color: $colorcode!important;
+        border-color: $colorcode!important;
+        background: transparent!important;
+      }
+    }
+  }
+}
+input[type="radio"]:checked+label.jpm-second-dark {
+  &-btn {
+    color: $colortext!important;
+    background: $colorcode!important;
+    border-color: $colorcode!important;
+    &-bg {
+      color: $colorcode!important;
+      border-color: $colorcode!important;
+      background: transparent!important;
+    }
+  }
+}
+*/
 .transp-bg, .transparent-bg {
   background-color: transparent !important;
 }
@@ -29330,7 +30488,7 @@ input[type="radio"]:checked+label.dark-blue {
   background: linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
 }
 
-.grad-f2s {
+.grad-f2s, .f2s-grad {
   background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
   background: -o-linear-gradient(135deg, var(--main-color) 0%, var(--second-color) 100%) !important;
@@ -29344,7 +30502,7 @@ input[type="radio"]:checked+label.dark-blue {
   background: linear-gradient(135deg, var(--main-color) 0%, var(--third-color) 100%) !important;
 }
 
-.grad-f2t {
+.grad-f2t, .f2t-grad {
   background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--third-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--main-color) 0%, var(--third-color) 100%) !important;
   background: -o-linear-gradient(135deg, var(--main-color) 0%, var(--third-color) 100%) !important;
@@ -29365,7 +30523,7 @@ input[type="radio"]:checked+label.dark-blue {
   background: linear-gradient(135deg, var(--second-color) 0%, var(--third-color) 100%) !important;
 }
 
-.grad-s2t {
+.grad-s2t, .s2t-grad {
   background: -webkit-linear-gradient(135deg, var(--second-color) 0%, var(--third-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--second-color) 0%, var(--third-color) 100%) !important;
   background: -o-linear-gradient(135deg, var(--second-color) 0%, var(--third-color) 100%) !important;
@@ -29379,74 +30537,81 @@ input[type="radio"]:checked+label.dark-blue {
   background: linear-gradient(135deg, var(--third-color) 0%, var(--fourth-color) 100%) !important;
 }
 
-.grad-t2f {
+.grad-t2f, .t2f-grad {
   background: -webkit-linear-gradient(135deg, var(--third-color) 0%, var(--fourth-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--third-color) 0%, var(--fourth-color) 100%) !important;
   background: -o-linear-gradient(135deg, var(--third-color) 0%, var(--fourth-color) 100%) !important;
   background: linear-gradient(135deg, var(--third-color) 0%, var(--fourth-color) 100%) !important;
 }
 
-.grad-main {
+.grad-main, .main-grad {
   background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
   background: -o-linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
   background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
 }
 
-.grad-first {
+.grad-first, .first-grad {
   background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
   background: -o-linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
   background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color-dark) 100%) !important;
 }
 
-.grad-second {
+.grad-second, .second-grad {
   background: -webkit-linear-gradient(135deg, var(--second-color) 0%, var(--second-color-dark) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--second-color) 0%, var(--second-color-dark) 100%) !important;
   background: -o-linear-gradient(135deg, var(--second-color) 0%, var(--second-color-dark) 100%) !important;
   background: linear-gradient(135deg, var(--second-color) 0%, var(--second-color-dark) 100%) !important;
 }
 
-.grad-third {
+.grad-third, .third-grad {
   background: -webkit-linear-gradient(135deg, var(--third-color) 0%, var(--third-color-dark) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--third-color) 0%, var(--third-color-dark) 100%) !important;
   background: -o-linear-gradient(135deg, var(--third-color) 0%, var(--third-color-dark) 100%) !important;
   background: linear-gradient(135deg, var(--third-color) 0%, var(--third-color-dark) 100%) !important;
 }
 
-.grad-fourth {
+.grad-fourth, .fourth-grad {
   background: -webkit-linear-gradient(135deg, var(--fourth-color) 0%, var(--fourth-color-dark) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--fourth-color) 0%, var(--fourth-color-dark) 100%) !important;
   background: -o-linear-gradient(135deg, var(--fourth-color) 0%, var(--fourth-color-dark) 100%) !important;
   background: linear-gradient(135deg, var(--fourth-color) 0%, var(--fourth-color-dark) 100%) !important;
 }
 
-.grad-fw-down-w {
+.grad-fw-down-w, .fw-down-w-grad {
   background: -webkit-linear-gradient(0deg, var(--white) 0%, var(--false-white) 100%) !important;
   background: -moz-linear-gradient(0deg, var(--white) 0%, var(--false-white) 100%) !important;
   background: -o-linear-gradient(0deg, var(--white) 0%, var(--false-white) 100%) !important;
   background: linear-gradient(0deg, var(--white) 0%, var(--false-white) 100%) !important;
 }
 
-.grad-fw-up-w {
+.grad-fw-up-w, .fw-up-w-grad {
   background: -webkit-linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
   background: -moz-linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
   background: -o-linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
   background: linear-gradient(180deg, var(--false-white) 0%, var(--white) 100%) !important;
 }
 
-.grad-mini {
+.grad-mini, .mini-grad {
   background: -webkit-linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
   background: -o-linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
   background: linear-gradient(135deg, var(--mini-color) 0%, var(--mini-second-color) 100%) !important;
 }
 
-.grad-uwa {
+.grad-uwa, .uwa-grad {
   background: -webkit-linear-gradient(135deg, var(--uwa-color) 0%, var(--uwa-second-color) 100%) !important;
   background: -moz-linear-gradient(135deg, var(--uwa-color) 0%, var(--uwa-second-color) 100%) !important;
   background: -o-linear-gradient(135deg, var(--uwa-color) 0%, var(--uwa-second-color) 100%) !important;
   background: linear-gradient(135deg, var(--uwa-color) 0%, var(--uwa-second-color) 100%) !important;
+}
+
+.grad-jpm, .jpm-grad {
+  background: -webkit-linear-gradient(135deg, var(--jpm-second-color) 0%, var(--jpm-color) 100%) !important;
+  background: -moz-linear-gradient(135deg, var(--jpm-second-color) 0%, var(--jpm-color) 100%) !important;
+  background: -o-linear-gradient(135deg, var(--jpm-second-color) 0%, var(--jpm-color) 100%) !important;
+  background: linear-gradient(135deg, var(--jpm-second-color) 0%, var(--jpm-color) 100%) !important;
 }
 
 .grainy-grad, .grad-grainy {
@@ -29571,6 +30736,13 @@ input[type="radio"]:checked+label.dark-blue {
 
 .invert, .inv, .neg, .negative {
   filter: brightness(0) invert(1) !important;
+}
+
+.jpm-text {
+  background: linear-gradient(170deg, var(--second-color), var(--main-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 :root {
