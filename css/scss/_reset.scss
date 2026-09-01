@@ -17,14 +17,12 @@ html {
   overflow-x: clip;
 }
 
-// Custom thin scrollbar — Firefox
-* { scrollbar-width: thin; scrollbar-color: var(--light-grey) transparent; }
+* { scrollbar-width: thin; scrollbar-color: var(--main-color) transparent; }
 
-// Custom thin scrollbar — Chrome/Safari/Edge
 ::-webkit-scrollbar              { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track        { background: transparent; }
-::-webkit-scrollbar-thumb        { background: var(--light-grey); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover  { background: var(--grey); }
+::-webkit-scrollbar-thumb        { background: var(--main-color); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover  { background: var(--main-color-dark); }
 
 // text selection
 ::-moz-selection { background: var(--text-selection-bg); color: var(--text-selection-color); }
