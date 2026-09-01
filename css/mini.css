@@ -19,7 +19,7 @@ html {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--light-grey) transparent;
+  scrollbar-color: var(--main-color) transparent;
 }
 
 ::-webkit-scrollbar {
@@ -32,12 +32,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--light-grey);
+  background: var(--main-color);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--grey);
+  background: var(--main-color-dark);
 }
 
 ::-moz-selection {
