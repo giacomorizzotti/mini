@@ -61,17 +61,6 @@
     <?php ### AOS ### ?>
     <?php /* <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> */ ?>
 
-    <?php ### Google tag (gtag.js) ### ?>
-    <?php /* 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=###ANALYTICS_CODE###"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag("js", new Date());
-        gtag("config", "###ANALYTICS_CODE###");
-    </script>
-    */ ?>
-
 </head>
 
 <body class="mini">

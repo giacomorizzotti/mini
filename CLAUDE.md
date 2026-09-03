@@ -11,11 +11,11 @@ This is one of **four separate git repositories** that all live under this `mini
 | Path | Repo | Stack |
 |---|---|---|
 | `/home/projects/mini` (here) | this repo | vanilla CSS/JS + Vite demo app |
-| `/home/projects/mini/vue/src/mini` | `mini_vue` (own GitHub remote) | Vue 3 components/composables |
+| `/home/projects/mini/website/src/mini` | `mini_vue` (own GitHub remote) | Vue 3 components/composables |
 | `/home/projects/mini/wp/mini-theme` | mini-theme | WordPress PHP theme |
 | `/home/projects/mini/wp/mini-plugin` | mini-plugin | WordPress PHP plugin |
 
-Each of the latter three has its own `CLAUDE.md` — read that one instead of this one if you're working inside it. `mini/vue` itself (the directory one level up from `mini/vue/src/mini`) is **not** its own repo — it's the Vite demo app, part of *this* repo, and just happens to symlink the separate `mini_vue` repo into its `src/mini`.
+Each of the latter three has its own `CLAUDE.md` — read that one instead of this one if you're working inside it. `mini/website` itself (the directory one level up from `mini/website/src/mini`) is **not** its own repo — it's the Vite demo app, part of *this* repo, and just happens to symlink the separate `mini_vue` repo into its `src/mini`. (Renamed from `mini/vue` — its build output now goes to `mini/website/dist/`, not the separate `public/` repo; see that repo's own status before assuming it's still what's deployed.)
 
 ## Critical: other consumers may be invisible to you
 
