@@ -256,11 +256,11 @@ button, .btn, .button {
   }
   &:disabled {
     background: var(--light-grey);
-    border-color: var(--grey);
+    border-color: var(--light-grey);
     color: var(--grey);
     &:hover {
       background: var(--light-grey);
-      border-color: var(--grey);
+      border-color: var(--light-grey);
       color: var(--grey);
       box-shadow: none;
     }
