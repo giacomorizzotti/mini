@@ -207,6 +207,7 @@ input[type="checkbox"], input[type="radio"] {
         }
         &:checked+label {
             background-color: color-mix(in srgb, var(--chip-color) 50%, black) !important;
+            border-color: color-mix(in srgb, var(--chip-color) 50%, black) !important;
         }
         &::before, &::after {
             display: none;
@@ -253,6 +254,7 @@ label.chip {
     // checked state via :has()
     &:has(> :checked) {
         background-color: color-mix(in srgb, var(--chip-color) 50%, black);
+        border-color: color-mix(in srgb, var(--chip-color) 50%, black);
     }
 
     // size variants
