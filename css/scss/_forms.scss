@@ -176,7 +176,7 @@ input[type="checkbox"], input[type="radio"] {
             margin: 0;
             border-radius: 999px;
             background-color: var(--chip-color);
-            border: 1px solid var(--chip-color);
+            border: 2px solid var(--chip-color);
             color: var(--white);
             line-height: 1;
             cursor: pointer;
@@ -206,8 +206,7 @@ input[type="checkbox"], input[type="radio"] {
             }
         }
         &:checked+label {
-            background-color: color-mix(in srgb, var(--chip-color) 75%, black) !important;
-            border-color: color-mix(in srgb, var(--chip-color) 75%, black) !important;
+            background-color: color-mix(in srgb, var(--chip-color) 50%, black) !important;
         }
         &::before, &::after {
             display: none;
@@ -237,7 +236,7 @@ label.chip {
     cursor: pointer;
     border-radius: 999px;
     background-color: var(--chip-color);
-    border: 1px solid var(--chip-color);
+    border: 2px solid var(--chip-color);
     color: var(--white);
     line-height: 1;
     padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
@@ -253,8 +252,7 @@ label.chip {
 
     // checked state via :has()
     &:has(> :checked) {
-        background-color: color-mix(in srgb, var(--chip-color) 75%, black);
-        border-color: color-mix(in srgb, var(--chip-color) 75%, black);
+        background-color: color-mix(in srgb, var(--chip-color) 50%, black);
     }
 
     // size variants
