@@ -261,12 +261,12 @@ label.chip {
     &.XXS, &.xxs { padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.5); font-size: calc(var(--p) * 0.5); }
 
     // color variants
-    &.chip-main    { --chip-color: var(--main-color);   }
-    &.chip-second  { --chip-color: var(--second-color); }
-    &.chip-third   { --chip-color: var(--third-color);  }
-    &.chip-fourth  { --chip-color: var(--fourth-color); }
-    &.chip-success { --chip-color: var(--success);      }
-    &.chip-danger  { --chip-color: var(--danger);       }
-    &.chip-warning { --chip-color: var(--warning);      }
-    &.chip-grey    { --chip-color: var(--grey);         }
+    &.chip-main, &.main-chip        { --chip-color: var(--main-color);   }
+    &.chip-second, &.second-chip    { --chip-color: var(--second-color); }
+    &.chip-third, &.third-chip      { --chip-color: var(--third-color);  }
+    &.chip-fourth, &.fourth-chip    { --chip-color: var(--fourth-color); }
+    &.chip-success, &.success-chip  { --chip-color: var(--success);      }
+    &.chip-danger, &.danger-chip    { --chip-color: var(--danger);       }
+    &.chip-warning, &.warning-chip  { --chip-color: var(--warning);      }
+    &.chip-grey, &.grey-chip        { --chip-color: var(--grey);         }
 }
