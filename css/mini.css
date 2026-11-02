@@ -379,9 +379,17 @@ body section {
   --gap-x: calc( var(--basic-gap) * 0 ) !important;
   --gap-y: calc( var(--basic-gap) * 0 ) !important;
 }
+.gap-025, .g-025 {
+  --gap-x: calc( var(--basic-gap) * 0.25 ) !important;
+  --gap-y: calc( var(--basic-gap) * 0.25 ) !important;
+}
 .gap-05, .g-05 {
   --gap-x: calc( var(--basic-gap) * 0.5 ) !important;
   --gap-y: calc( var(--basic-gap) * 0.5 ) !important;
+}
+.gap-075, .g-075 {
+  --gap-x: calc( var(--basic-gap) * 0.75 ) !important;
+  --gap-y: calc( var(--basic-gap) * 0.75 ) !important;
 }
 .gap-1, .g-1 {
   --gap-x: calc( var(--basic-gap) * 1 ) !important;
@@ -418,8 +426,14 @@ body section {
 .gapy-0, .gap-y-0, .gy-0, .g-y-0 {
   --gap-y: calc( var(--basic-gap) * 0 ) !important;
 }
+.gapy-025, .gap-y-025, .gy-025, .g-y-025 {
+  --gap-y: calc( var(--basic-gap) * 0.25 ) !important;
+}
 .gapy-05, .gap-y-05, .gy-05, .g-y-05 {
   --gap-y: calc( var(--basic-gap) * 0.5 ) !important;
+}
+.gapy-075, .gap-y-075, .gy-075, .g-y-075 {
+  --gap-y: calc( var(--basic-gap) * 0.75 ) !important;
 }
 .gapy-1, .gap-y-1, .gy-1, .g-y-1 {
   --gap-y: calc( var(--basic-gap) * 1 ) !important;
@@ -448,8 +462,14 @@ body section {
 .gapx-0, .gap-x-0, .gx-0, .g-x-0 {
   --gap-x: calc( var(--basic-gap) * 0 ) !important;
 }
+.gapx-025, .gap-x-025, .gx-025, .g-x-025 {
+  --gap-x: calc( var(--basic-gap) * 0.25 ) !important;
+}
 .gapx-05, .gap-x-05, .gx-05, .g-x-05 {
   --gap-x: calc( var(--basic-gap) * 0.5 ) !important;
+}
+.gapx-075, .gap-x-075, .gx-075, .g-x-075 {
+  --gap-x: calc( var(--basic-gap) * 0.75 ) !important;
 }
 .gapx-1, .gap-x-1, .gx-1, .g-x-1 {
   --gap-x: calc( var(--basic-gap) * 1 ) !important;
@@ -7777,6 +7797,19 @@ body section {
   .zero-gap-x-0 {
     --gap-x: calc( var(--basic-gap) * 0 )!important;
   }
+  .zero-gap-025,
+  .zero-g-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .zero-gapy-025,
+  .zero-gap-y-025 {
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .zero-gapx-025,
+  .zero-gap-x-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+  }
   .zero-gap-05,
   .zero-g-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
@@ -7789,6 +7822,19 @@ body section {
   .zero-gapx-05,
   .zero-gap-x-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+  }
+  .zero-gap-075,
+  .zero-g-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .zero-gapy-075,
+  .zero-gap-y-075 {
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .zero-gapx-075,
+  .zero-gap-x-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
   }
   .zero-gap-1,
   .zero-g-1 {
@@ -8044,6 +8090,19 @@ body section {
   .sm-gap-x-0 {
     --gap-x: calc( var(--basic-gap) * 0 )!important;
   }
+  .sm-gap-025,
+  .sm-g-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .sm-gapy-025,
+  .sm-gap-y-025 {
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .sm-gapx-025,
+  .sm-gap-x-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+  }
   .sm-gap-05,
   .sm-g-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
@@ -8056,6 +8115,19 @@ body section {
   .sm-gapx-05,
   .sm-gap-x-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+  }
+  .sm-gap-075,
+  .sm-g-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .sm-gapy-075,
+  .sm-gap-y-075 {
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .sm-gapx-075,
+  .sm-gap-x-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
   }
   .sm-gap-1,
   .sm-g-1 {
@@ -8311,6 +8383,19 @@ body section {
   .md-gap-x-0 {
     --gap-x: calc( var(--basic-gap) * 0 )!important;
   }
+  .md-gap-025,
+  .md-g-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .md-gapy-025,
+  .md-gap-y-025 {
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .md-gapx-025,
+  .md-gap-x-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+  }
   .md-gap-05,
   .md-g-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
@@ -8323,6 +8408,19 @@ body section {
   .md-gapx-05,
   .md-gap-x-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+  }
+  .md-gap-075,
+  .md-g-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .md-gapy-075,
+  .md-gap-y-075 {
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .md-gapx-075,
+  .md-gap-x-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
   }
   .md-gap-1,
   .md-g-1 {
@@ -8578,6 +8676,19 @@ body section {
   .lg-gap-x-0 {
     --gap-x: calc( var(--basic-gap) * 0 )!important;
   }
+  .lg-gap-025,
+  .lg-g-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .lg-gapy-025,
+  .lg-gap-y-025 {
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .lg-gapx-025,
+  .lg-gap-x-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+  }
   .lg-gap-05,
   .lg-g-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
@@ -8590,6 +8701,19 @@ body section {
   .lg-gapx-05,
   .lg-gap-x-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+  }
+  .lg-gap-075,
+  .lg-g-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .lg-gapy-075,
+  .lg-gap-y-075 {
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .lg-gapx-075,
+  .lg-gap-x-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
   }
   .lg-gap-1,
   .lg-g-1 {
@@ -8845,6 +8969,19 @@ body section {
   .xl-gap-x-0 {
     --gap-x: calc( var(--basic-gap) * 0 )!important;
   }
+  .xl-gap-025,
+  .xl-g-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .xl-gapy-025,
+  .xl-gap-y-025 {
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .xl-gapx-025,
+  .xl-gap-x-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+  }
   .xl-gap-05,
   .xl-g-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
@@ -8857,6 +8994,19 @@ body section {
   .xl-gapx-05,
   .xl-gap-x-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+  }
+  .xl-gap-075,
+  .xl-g-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .xl-gapy-075,
+  .xl-gap-y-075 {
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .xl-gapx-075,
+  .xl-gap-x-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
   }
   .xl-gap-1,
   .xl-g-1 {
@@ -9112,6 +9262,19 @@ body section {
   .xxl-gap-x-0 {
     --gap-x: calc( var(--basic-gap) * 0 )!important;
   }
+  .xxl-gap-025,
+  .xxl-g-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .xxl-gapy-025,
+  .xxl-gap-y-025 {
+    --gap-y: calc( var(--basic-gap) * 0.25 )!important;
+  }
+  .xxl-gapx-025,
+  .xxl-gap-x-025 {
+    --gap-x: calc( var(--basic-gap) * 0.25 )!important;
+  }
   .xxl-gap-05,
   .xxl-g-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
@@ -9124,6 +9287,19 @@ body section {
   .xxl-gapx-05,
   .xxl-gap-x-05 {
     --gap-x: calc( var(--basic-gap) * 0.5 )!important;
+  }
+  .xxl-gap-075,
+  .xxl-g-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .xxl-gapy-075,
+  .xxl-gap-y-075 {
+    --gap-y: calc( var(--basic-gap) * 0.75 )!important;
+  }
+  .xxl-gapx-075,
+  .xxl-gap-x-075 {
+    --gap-x: calc( var(--basic-gap) * 0.75 )!important;
   }
   .xxl-gap-1,
   .xxl-g-1 {
@@ -13231,6 +13407,7 @@ nav#lang-menu ul.menu li.item, nav#lang-menu ul.menu li.menu-item {
   margin: 0 calc(var(--margin) * 0.5);
   display: inline-block;
   background: var(--white);
+  border-radius: 5px;
 }
 nav#lang-menu ul.menu li.item.active, nav#lang-menu ul.menu li.menu-item.active {
   background: var(--black);
@@ -13244,6 +13421,10 @@ nav#lang-menu ul.menu li.item.active a:after, nav#lang-menu ul.menu li.menu-item
 }
 nav#lang-menu ul.menu li.item a, nav#lang-menu ul.menu li.menu-item a {
   line-height: 1.2;
+}
+
+#lang-menu .lang-option:not(.active) {
+  color: var(--grey);
 }
 
 header#header #menu-toggle {
@@ -13344,8 +13525,12 @@ body.scroll.closed-menu header#header.scroll-neg #menu-toggle .line, body.scroll
   height: auto;
   padding-right: calc((var(--menu-toggle-height)) + var(--padding) * 2 + var(--padding) * 1);
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #page-menu ul {
+    background-color: rgba(250, 250, 250, 0.85);
+    border: 1px solid var(--false-white);
+    border-radius: 10px;
+    overflow: hidden;
     position: relative;
     transform: none;
     display: flex;
@@ -13358,6 +13543,21 @@ body.scroll.closed-menu header#header.scroll-neg #menu-toggle .line, body.scroll
     padding-right: var(--padding);
   }
 }
+#page-menu ul li.icon {
+  justify-content: center;
+  padding: 0 var(--padding) calc(var(--padding) * 0.5);
+  margin: 0 0 0 var(--margin);
+  color: var(--light-grey);
+}
+@media screen and (min-width: 768px) {
+  #page-menu ul li.icon {
+    padding: calc(var(--padding) * 0.5) var(--padding);
+    margin: 0;
+  }
+}
+#page-menu ul li.icon .icon-label {
+  color: var(--main-color);
+}
 #page-menu ul li.item, #page-menu ul li.menu-item {
   font-weight: 300;
   margin-right: calc(var(--margin) * 0.5);
@@ -13365,17 +13565,22 @@ body.scroll.closed-menu header#header.scroll-neg #menu-toggle .line, body.scroll
 #page-menu ul li.item a, #page-menu ul li.menu-item a {
   padding: calc(var(--padding) * 0.5) var(--padding);
 }
-#page-menu ul li.menu-icon {
-  color: var(--main-color-dark);
-  padding: var(--padding);
-  border: 5px solid var(--main-color-dark);
+@media screen and (max-width: 767px) {
+  #page-menu ul li.item a, #page-menu ul li.menu-item a {
+    background-color: var(--white);
+  }
 }
-@media only screen and (min-width: 768px) {
-  #page-menu ul li.menu-icon {
-    background-color: transparent;
-    color: var(--grey);
-    padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
-    border: 0;
+#page-menu ul li.item a::after, #page-menu ul li.menu-item a::after {
+  bottom: 2px;
+}
+@media screen and (max-width: 767px) {
+  #page-menu ul li.item a, #page-menu ul li.menu-item a {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #page-menu ul li.item.active a, #page-menu ul li.item:hover a, #page-menu ul li.menu-item.active a, #page-menu ul li.menu-item:hover a {
+    background-color: var(--link-hover-color);
   }
 }
 
@@ -13385,6 +13590,25 @@ body.top header#header.open-menu #page-menu ul li.item a, body.top header#header
 
 body.scroll header#header.scroll-neg #page-menu ul li.item a, body.scroll header#header.scroll-neg #page-menu ul li.menu-item a, body.scroll header#header.scroll-inv #page-menu ul li.item a, body.scroll header#header.scroll-inv #page-menu ul li.menu-item a, body.scroll header#header.scroll-bk #page-menu ul li.item a, body.scroll header#header.scroll-bk #page-menu ul li.menu-item a, body.scroll header#header.scroll-col #page-menu ul li.item a, body.scroll header#header.scroll-col #page-menu ul li.menu-item a, body.scrolled header#header.scroll-neg #page-menu ul li.item a, body.scrolled header#header.scroll-neg #page-menu ul li.menu-item a, body.scrolled header#header.scroll-inv #page-menu ul li.item a, body.scrolled header#header.scroll-inv #page-menu ul li.menu-item a, body.scrolled header#header.scroll-bk #page-menu ul li.item a, body.scrolled header#header.scroll-bk #page-menu ul li.menu-item a, body.scrolled header#header.scroll-col #page-menu ul li.item a, body.scrolled header#header.scroll-col #page-menu ul li.menu-item a {
   color: var(--white);
+}
+
+body.open-menu #page-menu ul.page-menu {
+  background: #141428;
+  background: linear-gradient(180deg, rgba(20, 20, 40, 0) 0%, rgba(20, 20, 40, 0.45) 100%);
+}
+@media screen and (min-width: 768px) {
+  body.open-menu #page-menu ul.page-menu {
+    background: rgba(20, 20, 40, 0.15);
+  }
+}
+body.open-menu #page-menu ul.page-menu li.icon {
+  color: var(--white);
+}
+body.open-menu #page-menu ul.page-menu li.icon .icon-label {
+  color: var(--white);
+}
+body.open-menu #page-menu ul.page-menu li a {
+  background: transparent;
 }
 
 #actions {
@@ -13705,7 +13929,7 @@ input[type=checkbox].chip + label, input[type=radio].chip + label {
   margin: 0;
   border-radius: 999px;
   background-color: var(--chip-color);
-  border: 1px solid var(--chip-color);
+  border: 2px solid var(--chip-color);
   color: var(--white);
   line-height: 1;
   cursor: pointer;
@@ -13729,8 +13953,7 @@ input[type=checkbox].chip.XXS + label, input[type=checkbox].chip.xxs + label, in
   line-height: calc(var(--p) * 0.75);
 }
 input[type=checkbox].chip:checked + label, input[type=radio].chip:checked + label {
-  background-color: color-mix(in srgb, var(--chip-color) 75%, black) !important;
-  border-color: color-mix(in srgb, var(--chip-color) 75%, black) !important;
+  background-color: color-mix(in srgb, var(--chip-color) 50%, black) !important;
 }
 input[type=checkbox].chip::before, input[type=checkbox].chip::after, input[type=radio].chip::before, input[type=radio].chip::after {
   display: none;
@@ -13771,7 +13994,7 @@ label.chip {
   cursor: pointer;
   border-radius: 999px;
   background-color: var(--chip-color);
-  border: 1px solid var(--chip-color);
+  border: 2px solid var(--chip-color);
   color: var(--white);
   line-height: 1;
   padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
@@ -13784,8 +14007,7 @@ label.chip > input[type=radio] {
   display: none !important;
 }
 label.chip:has(> :checked) {
-  background-color: color-mix(in srgb, var(--chip-color) 75%, black);
-  border-color: color-mix(in srgb, var(--chip-color) 75%, black);
+  background-color: color-mix(in srgb, var(--chip-color) 50%, black);
 }
 label.chip.S, label.chip.s {
   padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25);
@@ -13799,28 +14021,28 @@ label.chip.XXS, label.chip.xxs {
   padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.5);
   font-size: calc(var(--p) * 0.5);
 }
-label.chip.chip-main {
+label.chip.chip-main, label.chip.main-chip {
   --chip-color: var(--main-color);
 }
-label.chip.chip-second {
+label.chip.chip-second, label.chip.second-chip {
   --chip-color: var(--second-color);
 }
-label.chip.chip-third {
+label.chip.chip-third, label.chip.third-chip {
   --chip-color: var(--third-color);
 }
-label.chip.chip-fourth {
+label.chip.chip-fourth, label.chip.fourth-chip {
   --chip-color: var(--fourth-color);
 }
-label.chip.chip-success {
+label.chip.chip-success, label.chip.success-chip, label.chip.success-chip-invert, label.chip.success-chip-active.active, label.chip.success-chip-clicked.clicked, label.chip.success-chip-hover:hover {
   --chip-color: var(--success);
 }
-label.chip.chip-danger {
+label.chip.chip-danger, label.chip.danger-chip, label.chip.danger-chip-invert, label.chip.danger-chip-active.active, label.chip.danger-chip-clicked.clicked, label.chip.danger-chip-hover:hover {
   --chip-color: var(--danger);
 }
-label.chip.chip-warning {
+label.chip.chip-warning, label.chip.warning-chip, label.chip.warning-chip-invert, label.chip.warning-chip-active.active, label.chip.warning-chip-clicked.clicked, label.chip.warning-chip-hover:hover {
   --chip-color: var(--warning);
 }
-label.chip.chip-grey {
+label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-invert, label.chip.grey-chip-active.active, label.chip.grey-chip-clicked.clicked, label.chip.grey-chip-hover:hover {
   --chip-color: var(--grey);
 }
 

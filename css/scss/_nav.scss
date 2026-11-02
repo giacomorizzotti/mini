@@ -247,3 +247,8 @@ nav#lang-menu {
     }
   }
 }
+
+// LanguageSwitcher.vue's other languages (only its links have .lang-option)
+#lang-menu .lang-option:not(.active) {
+  color: var(--grey);
+}
