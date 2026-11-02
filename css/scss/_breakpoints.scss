@@ -150,6 +150,11 @@ $screen-xxl: 1920px;
     display: none!important;
   }
 }
+@include lgOnly {
+  .no-lg {
+    display: none!important;
+  }
+}
 @include xlOnly {
   .no-xl {
     display: none!important;
@@ -157,6 +162,11 @@ $screen-xxl: 1920px;
 }
 @include xxlOnly {
   .no-xxl {
+    display: none!important;
+  }
+}
+@include xxl {
+  .no-xxxl {
     display: none!important;
   }
 }
@@ -259,6 +269,11 @@ $screen-xxl: 1920px;
     display: none!important;
   }
 }
+@include respondContainerOnly($screen-md, $screen-lg) {
+  .no-lg {
+    display: none!important;
+  }
+}
 @include respondContainerOnly($screen-lg, $screen-xl) {
   .no-xl {
     display: none!important;
@@ -266,6 +281,11 @@ $screen-xxl: 1920px;
 }
 @include respondContainerOnly($screen-xl, $screen-xxl) {
   .no-xxl {
+    display: none!important;
+  }
+}
+@include respondContainerMin($screen-xxl) {
+  .no-xxxl {
     display: none!important;
   }
 }

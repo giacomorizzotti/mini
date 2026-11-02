@@ -4,18 +4,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-"mini" — a minimal frontend framework (vanilla CSS + JS) plus a Vite demo/showcase app for its Vue port. Distributed by filesystem symlink to consuming projects, not as a published package: `css/` is consumed via Sass `loadPaths` (each project's own `vite.config.js` points at `/home/projects/mini/css/`), and the Vue component/composable library is consumed via a symlinked directory (see below). License/docs site: [mini.uwa.agency](https://mini.uwa.agency).
+"mini" — a minimal frontend framework: SCSS, compiled CSS, vanilla JS and shared images. It's distributed by filesystem symlink and CDN, not as a published package: Vue projects consume `css/` through Sass `loadPaths` (each project's own `vite.config.js` points at `/home/projects/mini/css/`), and WordPress sites load the compiled `mini.min.css`. License/docs site: [mini.uwa.agency](https://mini.uwa.agency). Open work is listed in [PLAN.md](PLAN.md).
 
-This is one of **four separate git repositories** that all live under this `mini/` path on disk — know which one you're actually in before editing:
+Six git repositories and one unversioned folder live under this `mini/` path on disk — know which one you're actually in before editing:
 
-| Path | Repo | Stack |
-|---|---|---|
-| `/home/projects/mini` (here) | this repo | vanilla CSS/JS + Vite demo app |
-| `/home/projects/mini/website/src/mini` | `mini_vue` (own GitHub remote) | Vue 3 components/composables |
-| `/home/projects/mini/wp/mini-theme` | mini-theme | WordPress PHP theme |
-| `/home/projects/mini/wp/mini-plugin` | mini-plugin | WordPress PHP plugin |
+| Path | Repo | What it is | How a change goes live |
+|---|---|---|---|
+| `/home/projects/mini` (here) | `mini` (public on GitHub) | SCSS, compiled CSS, vanilla JS, images | Pushing `main` for sites on jsDelivr `@main`; saving a file for sites on the dev CDN, which serves this folder from disk; the next build for Vue projects |
+| `website/src/mini` | `mini_vue` (GitHub) | Vue 3 components and composables | Each project's next build, through its symlink |
+| `wp/mini-theme` | `mini-wp-theme` (GitHub) | WordPress parent theme | Saving a file, through symlinks in the WordPress installs |
+| `wp/mini-plugin` | `mini-wp-plugin` (GitHub) | WordPress plugin | Saving a file, through symlinks in the WordPress installs |
+| `api` | Deploy repo, its remote is the live server | Legal text and credits badge, in PHP | `mini_api_deploy` pushes, and the push is the deploy |
+| `website/dist` | Deploy repo, its remote is the live server | The built mini.uwa.agency | `mini_website_deploy` builds, commits and pushes |
+| `website` | None, deliberately | Vite app | Builds into `website/dist` |
 
-Each of the latter three has its own `CLAUDE.md` — read that one instead of this one if you're working inside it. `mini/website` itself (the directory one level up from `mini/website/src/mini`) is **not** its own repo — it's the Vite demo app, part of *this* repo, and just happens to symlink the separate `mini_vue` repo into its `src/mini`. (Renamed from `mini/vue` — its build output now goes to `mini/website/dist/`, not the separate `public/` repo; see that repo's own status before assuming it's still what's deployed.)
+`mini_vue`, the theme, the plugin and `api` each have their own `CLAUDE.md` — read that one instead of this one if you're working inside it. `mini_website_deploy` and `mini_api_deploy` are functions in `~/.bash_aliases`.
+
+`website/` isn't versioned on purpose: it's a container for developing `mini_vue` and building mini's website, and `dist/` is the part that matters. `website/src/mini` is a real clone of `mini_vue`, and other projects symlink to it. The pages in `website/src/pages` are the public docs for the CSS classes, so update them when classes change.
+
+The root `.gitignore` excludes `api/`, `website/` and `wp/`, so a search tool that honours `.gitignore` silently skips them when run from here. Search from inside the folder you care about, or turn ignore files off.
 
 ## Critical: other consumers may be invisible to you
 
@@ -26,33 +33,62 @@ Also watch for **over-fitting to one consumer's domain model** — something can
 ## Structure (this repo)
 
 ```
-css/scss/      ~30 partials (_vars, _buttons, _colors, _typo, _forms, ...), entry point css/mini.scss
-css/           compiled mini.css/.min.css + source maps (checked in)
+css/scss/      33 partials (_vars, _buttons, _colors, _typo, _forms, ...), entry point css/mini.scss
+css/           compiled mini.css/.min.css + source maps (checked in, see "Compiling the CSS")
 js/            vanilla JS: mini.js (main utility lib), gdpr.js, slider.js, debug.js
 img/           shared brand/icon assets, reused across consuming sites
-vue/           Vite app — demo/showcase pages (Palette, Typography, Structure, Utilities, Login,
-               UserProfile) for the mini_vue library symlinked in at vue/src/mini
-wp/            parent directory for the two separate WP repos (mini-theme, mini-plugin) — see their own CLAUDE.md
-one-page/      a single PHP page (index.php)
+one-page/      a single PHP page template (index.php)
 ```
 
-`api/` and `public/` also exist under this path but are themselves separate, unrelated git repos — not part of this one, not covered here.
+The `img/<client>/` folders listed in `.gitignore` exist only on disk, but they still reach mini.uwa.agency through the `website/public/img` symlink. The API's credits badge loads `img/uwa/brand/uwa_logo.svg` from there.
 
 ## Two parallel implementations, one visual language
 
-The vanilla `css/`+`js/mini.js` and the Vue component library (`vue/src/mini`) are **separate implementations of the same design system**, not one wrapping the other — `vue/src/mini`'s own README describes itself as "converted from the original mini.js utility library." Both consume the *same* `css/` (Sass `loadPaths`, or the compiled `mini.css` enqueued directly in WordPress). The split exists because the consumers need different paradigms:
+The vanilla `css/`+`js/mini.js` and the Vue component library (`website/src/mini`) are **separate implementations of the same design system**, not one wrapping the other. Both consume the *same* `css/` (Sass `loadPaths`, or the compiled `mini.css` enqueued directly in WordPress). The split exists because the consumers need different paradigms:
 
 - WordPress (`wp/mini-theme`, `wp/mini-plugin`) → vanilla `css/`/`js/mini.js`, server-rendered PHP.
-- Vue SPAs (jpm, brff, the `vue/` demo app itself) → the `mini_vue` component/composable library.
+- Vue SPAs (jpm, brff, the `website/` demo app itself) → the `mini_vue` component/composable library.
 
 Don't assume a fix in one automatically applies to the other — check whether the equivalent behavior needs porting to both.
 
-## Commands (this repo, the `vue/` demo app)
+## CSS class conventions
+
+**Size classes are uppercase only:** `XXS`, `XS`, `S`, `L`, `XL`, `XXL`, on text, form fields, chips and buttons. Don't add lowercase aliases: lowercase `xl` and `xxl` are visibility classes, so an alias would hide the element it's meant to resize.
+
+**Visibility classes**, all using `display: none !important`:
+
+| Class | Hidden |
+|---|---|
+| `no-sm` | up to 576px |
+| `no-md` | 576px to 768px |
+| `no-lg` | 768px to 992px |
+| `no-xl` | 992px to 1200px |
+| `no-xxl` | 1200px to 1920px |
+| `no-xxxl` | from 1920px |
+| `sm-up` / `sm`, `md-up` / `md`, `lg-up` / `lg`, `xl-up` / `xl`, `xxl-up` / `xxl` | below that breakpoint |
+| `sm-down`, `md-down`, `lg-down`, `xl-down`, `xxl-down` | from that breakpoint up |
+
+Breakpoints are 576, 768, 992, 1200 and 1920px. Each class also has a container-query version that measures the nearest `.contain` ancestor instead of the screen. Box widths (`box-*`, `_box.scss`) are the exception: their `xl` tier starts at 1400px.
+
+## Compiling the CSS
+
+The compiled files must be regenerated and committed with any SCSS change, because WordPress sites load them rather than the SCSS. There's no npm script for this; run from `css/`:
 
 ```bash
-cd vue && npm run dev      # demo/showcase app, also where mini_vue gets developed/previewed live
-cd vue && npm run build
-cd vue && npm run preview
+npx -y sass@1.91.0 --quiet-deps mini.scss mini.css
+npx -y -p clean-css-cli@5.6.3 cleancss -o mini.min.css mini.css
 ```
 
-There's no build step for `css/`/`js/` themselves beyond whatever Sass compilation the *consuming* project runs — this repo doesn't compile its own CSS via npm scripts (unlike `wp/mini-theme`, which does — see that repo's `CLAUDE.md`).
+These versions reproduce the checked-in files byte for byte. Don't use a newer Sass without checking the output: commit `4ebb13a` records that Sass 1.92+ reorders nested rules. `mini.min.css.map` is stale and nothing references it.
+
+Vue projects don't use these files. They compile `mini.scss` themselves with their own Sass version.
+
+## Commands (the `website/` app)
+
+```bash
+cd website && npm run dev      # demo/showcase app, also where mini_vue gets developed/previewed live
+cd website && npm run build    # writes into dist/, which mini_website_deploy then commits and pushes
+cd website && npm run preview
+```
+
+There are no automated tests in any of these repos.

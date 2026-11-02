@@ -33,49 +33,49 @@ input, textarea, select {
         border: 1px solid var(--main-color);
         box-shadow: 0 0 15px -5px var(--main-color);
     }
-    &.XXS, &.xxs {
+    &.XXS {
         font-size: calc(var(--p) * 0.5)!important;
         line-height: calc(var(--p) * 75);
     }
-    &.XS, &.xs {
+    &.XS {
         font-size: calc(var(--p) * 0.7)!important;
         line-height: calc(var(--p) * 1);
     }
-    &.S, &.s {
+    &.S {
         font-size: calc(var(--p) * 0.85)!important;
         line-height: calc(var(--p) * 1.25);
     }
-    &.L, &.l {
+    &.L {
         font-size: calc(var(--p) * 1.25)!important;
         line-height: calc(var(--p) * 1.5);
     }
-    &.XL, &.xl {
+    &.XL {
         font-size: calc(var(--p) * 1.5)!important;
         line-height: calc(var(--p) * 1.5);
     }
-    &.XXL, &.xxl {
+    &.XXL {
         font-size: calc(var(--p) * 2)!important;
         line-height: calc(var(--p) * 1.75);
     }
 }
 input {
     font-size: var(--p);
-    &.XXS, &.xxs {
+    &.XXS {
         padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.75);
     }
-    &.XS, &.xs {
+    &.XS {
         padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.75);
     }
-    &.S, &.s {
+    &.S {
         padding: calc(var(--padding)*.25) calc(var(--padding)*1);
     }
-    &.L, &.l {
+    &.L {
         padding: calc(var(--padding)*0.625) calc(var(--padding)*1.875);
     }
-    &.XL, &.xl {
+    &.XL {
         padding: calc(var(--padding)*0.85) calc(var(--padding)*2.55);
     }
-    &.XXL, &.xxl {
+    &.XXL {
         padding: calc(var(--padding)*1.25) calc(var(--padding)*3.75);
     }
 }
@@ -184,21 +184,21 @@ input[type="checkbox"], input[type="radio"] {
             align-items: center;
             padding: calc(var(--padding) * 0.5) calc(var(--padding) * 0.75);
         }
-        &.S, &.s {
+        &.S {
             &+label {
                 padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25);
                 font-size: calc(var(--p) * 0.85)!important;
                 line-height: calc(var(--p) * 1.25);
             }
         }
-        &.XS, &.xs {
+        &.XS {
             &+label {
                 padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75);
                 font-size: calc(var(--p) * 0.7)!important;
                 line-height: calc(var(--p) * 1);
             }
         }
-        &.XXS, &.xxs {
+        &.XXS {
             &+label {
                 padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.5);
                 font-size: calc(var(--p) * 0.5)!important;
@@ -256,9 +256,9 @@ label.chip {
     }
 
     // size variants
-    &.S, &.s { padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25); font-size: calc(var(--p) * 0.85); }
-    &.XS, &.xs { padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75); font-size: calc(var(--p) * 0.7); }
-    &.XXS, &.xxs { padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.5); font-size: calc(var(--p) * 0.5); }
+    &.S { padding: calc(var(--padding) * 0.5) calc(var(--padding) * 1.25); font-size: calc(var(--p) * 0.85); }
+    &.XS { padding: calc(var(--padding) * 0.25) calc(var(--padding) * 0.75); font-size: calc(var(--p) * 0.7); }
+    &.XXS { padding: calc(var(--padding) * 0.125) calc(var(--padding) * 0.5); font-size: calc(var(--p) * 0.5); }
 
     // color variants
     &.chip-main, &.main-chip        { --chip-color: var(--main-color);   }
