@@ -173,52 +173,52 @@ body section {
   --p: 1rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
   .sm-up, .sm {
     display: none !important;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .md-up, .md {
     display: none !important;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .lg-up, .lg {
     display: none !important;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .xl-up, .xl {
     display: none !important;
   }
 }
-@media (max-width: 1920px) {
+@media (max-width: 1919.98px) {
   .xxl-up, .xxl {
     display: none !important;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
   .no-sm {
     display: none !important;
   }
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
   .no-md {
     display: none !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .no-lg {
     display: none !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .no-xl {
     display: none !important;
   }
 }
-@media (min-width: 1200px) and (max-width: 1920px) {
+@media (min-width: 1200px) and (max-width: 1919.98px) {
   .no-xxl {
     display: none !important;
   }
@@ -253,52 +253,52 @@ body section {
     display: none !important;
   }
 }
-@container (max-width: 576px) {
+@container (max-width: 575.98px) {
   .sm-up, .sm {
     display: none !important;
   }
 }
-@container (max-width: 768px) {
+@container (max-width: 767.98px) {
   .md-up, .md {
     display: none !important;
   }
 }
-@container (max-width: 992px) {
+@container (max-width: 991.98px) {
   .lg-up, .lg {
     display: none !important;
   }
 }
-@container (max-width: 1200px) {
+@container (max-width: 1199.98px) {
   .xl-up, .xl {
     display: none !important;
   }
 }
-@container (max-width: 1920px) {
+@container (max-width: 1919.98px) {
   .xxl-up, .xxl {
     display: none !important;
   }
 }
-@container (max-width: 576px) {
+@container (max-width: 575.98px) {
   .no-sm {
     display: none !important;
   }
 }
-@container (min-width: 576px) and (max-width: 768px) {
+@container (min-width: 576px) and (max-width: 767.98px) {
   .no-md {
     display: none !important;
   }
 }
-@container (min-width: 768px) and (max-width: 992px) {
+@container (min-width: 768px) and (max-width: 991.98px) {
   .no-lg {
     display: none !important;
   }
 }
-@container (min-width: 992px) and (max-width: 1200px) {
+@container (min-width: 992px) and (max-width: 1199.98px) {
   .no-xl {
     display: none !important;
   }
 }
-@container (min-width: 1200px) and (max-width: 1920px) {
+@container (min-width: 1200px) and (max-width: 1919.98px) {
   .no-xxl {
     display: none !important;
   }
@@ -12406,7 +12406,7 @@ body.top .top-link {
   visibility: hidden;
 }
 
-body.scroll .top-link {
+body.scroll .top-link, body.scrolled .top-link {
   opacity: 1;
   visibility: visible;
 }
@@ -31452,7 +31452,7 @@ code, .code {
 }
 
 blockquote {
-  padding: calc(var(--padding) * 4) calc(var(--padding) * 6);
+  padding: calc(var(--padding) * 4) calc(var(--padding) * 4);
   margin: calc(var(--margin) * 1.5) calc(var(--margin) * 1.5) calc(var(--margin) * 2) calc(var(--margin) * 1.5);
   position: relative;
 }
@@ -32307,7 +32307,7 @@ body.top .top-shown, body.top .scroll-hidden {
   pointer-events: auto !important;
 }
 
-body.scroll .top-shown, body.scroll .scroll-hidden {
+body.scroll .top-shown, body.scroll .scroll-hidden, body.scrolled .top-shown, body.scrolled .scroll-hidden {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
@@ -32320,7 +32320,7 @@ body.scroll .top-shown, body.scroll .scroll-hidden {
   overflow: hidden !important;
   border: 0 !important;
 }
-body.scroll .top-hidden, body.scroll .scroll-shown {
+body.scroll .top-hidden, body.scroll .scroll-shown, body.scrolled .top-hidden, body.scrolled .scroll-shown {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;

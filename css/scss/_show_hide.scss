@@ -28,7 +28,7 @@ body.top {
   .top-shown,  .scroll-hidden { @include shown-state;  }
 }
 
-body.scroll {
+body.scroll, body.scrolled {
   .top-shown,  .scroll-hidden { @include hidden-state; }
   .top-hidden, .scroll-shown  { @include shown-state;  }
 }

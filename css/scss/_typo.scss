@@ -394,7 +394,7 @@ code, .code {
 }
 
 blockquote {
-  padding: calc(var(--padding) * 4) calc(var(--padding) * 6);
+  padding: calc(var(--padding) * 4) calc(var(--padding) * 4);
   margin: calc(var(--margin) * 1.5) calc(var(--margin) * 1.5) calc(var(--margin) * 2) calc(var(--margin) * 1.5);
   position: relative;
   &::before {

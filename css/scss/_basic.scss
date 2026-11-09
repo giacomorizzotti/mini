@@ -59,7 +59,7 @@ body.top .top-link {
   visibility: hidden;
 }
 
-body.scroll .top-link {
+body.scroll .top-link, body.scrolled .top-link {
   opacity: 1;
   visibility: visible;
 }

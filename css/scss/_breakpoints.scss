@@ -1,5 +1,8 @@
 // BREAKPOINTS
 
+// Every max-width query stops 0.02px below its breakpoint, so a "down"
+// range and the "up" range starting at the same breakpoint never both
+// match: at exactly 768px only md (min-width: 768px) applies.
 // Small tablets and large smartphones (landscape view)
 $screen-sm: 576px;
 // Small tablets (portrait view)
@@ -13,12 +16,12 @@ $screen-xxl: 1920px;
 
 // Small devices ONLY/DOWN // 576px down
 @mixin smOnly {
-   @media (max-width: #{$screen-sm}) {
+   @media (max-width: #{$screen-sm - 0.02px}) {
        @content;
    }
 }
 @mixin smDown {
-  @media (max-width: #{$screen-sm}) {
+  @media (max-width: #{$screen-sm - 0.02px}) {
     @content;
   }
 }
@@ -32,7 +35,7 @@ $screen-xxl: 1920px;
 
 // Medium devices ONLY // 576px to 768px
 @mixin mdOnly {
-   @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md}) {
+   @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md - 0.02px}) {
        @content;
    }
 }
@@ -46,14 +49,14 @@ $screen-xxl: 1920px;
 
 // Medium devices DOWN // 768px down
 @mixin mdDown {
-   @media (max-width: #{$screen-md}) {
+   @media (max-width: #{$screen-md - 0.02px}) {
        @content;
    }
 }
 
 // Large devices ONLY // 768px to 992px
 @mixin lgOnly {
-   @media (min-width: #{$screen-md}) and (max-width: #{$screen-lg}) {
+   @media (min-width: #{$screen-md}) and (max-width: #{$screen-lg - 0.02px}) {
        @content;
    }
 }
@@ -67,14 +70,14 @@ $screen-xxl: 1920px;
 
 // Large devices DOWN // 992px down
 @mixin lgDown {
-   @media (max-width: #{$screen-lg}) {
+   @media (max-width: #{$screen-lg - 0.02px}) {
        @content;
    }
 }
 
 // Extra large devices ONLY // 992px to 1200px
 @mixin xlOnly {
-   @media (min-width: #{$screen-lg}) and (max-width: #{$screen-xl}) {
+   @media (min-width: #{$screen-lg}) and (max-width: #{$screen-xl - 0.02px}) {
        @content;
    }
 }
@@ -88,14 +91,14 @@ $screen-xxl: 1920px;
 
 // Extra large devices DOWN // 1200px down
 @mixin xlDown {
-   @media (max-width: #{$screen-xl}) {
+   @media (max-width: #{$screen-xl - 0.02px}) {
        @content;
    }
 }
 
 // Extra extra large ONLY // 1200px to 1920px
 @mixin xxlOnly {
-   @media (min-width: #{$screen-xl}) and (max-width: #{$screen-xxl}) {
+   @media (min-width: #{$screen-xl}) and (max-width: #{$screen-xxl - 0.02px}) {
        @content;
    }
 }
@@ -109,7 +112,7 @@ $screen-xxl: 1920px;
 
 // Extra extra extra large devices DOWN // 1920px down
 @mixin xxlDown {
-   @media (max-width: #{$screen-xxl}) {
+   @media (max-width: #{$screen-xxl - 0.02px}) {
        @content;
    }
 }
@@ -208,7 +211,7 @@ $screen-xxl: 1920px;
 // trick that solved the Box grid's "narrow panel on a wide window"
 // problem, applied to these visibility classes too.
 @mixin respondContainerMax($width) {
-  @container (max-width: #{$width}) {
+  @container (max-width: #{$width - 0.02px}) {
     @content;
   }
 }
@@ -218,7 +221,7 @@ $screen-xxl: 1920px;
   }
 }
 @mixin respondContainerOnly($minwidth, $maxwidth) {
-  @container (min-width: #{$minwidth}) and (max-width: #{$maxwidth}) {
+  @container (min-width: #{$minwidth}) and (max-width: #{$maxwidth - 0.02px}) {
     @content;
   }
 }

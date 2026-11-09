@@ -68,7 +68,7 @@ Don't assume a fix in one automatically applies to the other — check whether t
 | `sm-up` / `sm`, `md-up` / `md`, `lg-up` / `lg`, `xl-up` / `xl`, `xxl-up` / `xxl` | below that breakpoint |
 | `sm-down`, `md-down`, `lg-down`, `xl-down`, `xxl-down` | from that breakpoint up |
 
-Breakpoints are 576, 768, 992, 1200 and 1920px. Each class also has a container-query version that measures the nearest `.contain` ancestor instead of the screen. Box widths (`box-*`, `_box.scss`) are the exception: their `xl` tier starts at 1400px.
+Breakpoints are 576, 768, 992, 1200 and 1920px. A range includes its lower breakpoint and stops just below the upper one (max-width queries use 767.98px and so on), so at exactly 768px only the classes from 768px up apply. Each class also has a container-query version that measures the nearest `.contain` ancestor instead of the screen. Box widths (`box-*`, `_box.scss`) are the exception: their `xl` tier starts at 1400px.
 
 ## Compiling the CSS
 
