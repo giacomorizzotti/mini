@@ -13,12 +13,7 @@ The lowercase size classes have been gone from `main` since 2026-11-09, and the 
   /usr/bin/grep -rnE "class=[\"']([^\"']* )?(xxs|xs|s|l|xl|xxl)[\"' ]" src/
   ```
 
-## 2. Smaller fixes
-
-- **`xl` means two things.** Box widths use 1400px (`_box.scss`, `boxWidth.js`) and everything else uses 1200px. Either make them match or record why they differ. Changing it moves layouts on every site between 1200px and 1400px.
-- **Umami wording.** The privacy text and the consent banner (`GDPR.vue`, all four languages since 2026-11-11) call Umami "self-hosted". Review that wording for any site whose data controller isn't the one running analytics.uwa.agency.
-
-## 3. Build and tooling
+## 2. Build and tooling
 
 - **Sass versions.** Each Vue project compiles `mini.scss` with its own Sass, so a project on Sass 1.92+ may get a different rule order. Either pin it in those projects or remove the order dependence.
 - **`@import`.** `mini.scss` uses `@import`, which Dart Sass has deprecated, and the build also warns about `mixed-decls`. Migrate to `@use` before Sass removes it.
