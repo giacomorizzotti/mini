@@ -90,7 +90,8 @@ a color:
   `_buttons.scss` (the invert variant's text, and the text over the
   hover/active color). Entries without them behave as before.
 - Check any change by computing each generated pair's contrast ratio, not by
-  eye: a color can look fine and sit at 2:1.
+  eye: a color can look fine and sit at 2:1. `css/build.sh` does it after
+  every compile (`css/check-contrast.js`).
 - An opt-in dark mode is designed, decisions included, in
   [plans/DARK_MODE.md](plans/DARK_MODE.md); it's not built yet.
 
@@ -100,14 +101,13 @@ as text may silently convert the whole file to LF.
 
 ## Compiling the CSS
 
-The compiled files must be regenerated and committed with any SCSS change, because WordPress sites load them rather than the SCSS. There's no npm script for this; run from `css/`:
+The compiled files must be regenerated and committed with any SCSS change, because WordPress sites load them rather than the SCSS. One command does it, from anywhere:
 
 ```bash
-npx -y sass@1.91.0 --quiet-deps mini.scss mini.css
-npx -y -p clean-css-cli@5.6.3 cleancss -o mini.min.css mini.css
+css/build.sh
 ```
 
-These versions reproduce the checked-in files byte for byte. Don't use a newer Sass without checking the output: commit `4ebb13a` records that Sass 1.92+ reorders nested rules. `mini.min.css.map` is stale and nothing references it.
+It compiles `mini.css` (Sass 1.91.0) and `mini.min.css` (clean-css 5.6.3) with their source maps, then runs `css/check-contrast.js`, which exits with an error when any generated color pair misses WCAG AA. The pinned versions reproduce the checked-in files byte for byte. Don't use a newer Sass without checking the output: commit `4ebb13a` records that Sass 1.92+ reorders nested rules. The Sass deprecation warnings it prints are the `@import` migration in [PLAN.md](PLAN.md).
 
 Vue projects don't use these files. They compile `mini.scss` themselves with their own Sass version.
 
