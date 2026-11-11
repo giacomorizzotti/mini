@@ -4,16 +4,7 @@ Open work across the mini repos, most important first, from a review of all of t
 
 Before changing anything that already exists, read "other consumers may be invisible" in [CLAUDE.md](CLAUDE.md): a change here can reach projects that can't be searched from this machine.
 
-## 1. Left over from the 2026-11-02 changes
-
-The lowercase size classes have been gone from `main` since 2026-11-09, and the projects on this machine were switched to uppercase that day. Left:
-
-- **WordPress post content** wasn't checked. To search a project:
-  ```sh
-  /usr/bin/grep -rnE "class=[\"']([^\"']* )?(xxs|xs|s|l|xl|xxl)[\"' ]" src/
-  ```
-
-## 2. Build and tooling
+## Build and tooling
 
 - **Sass versions.** Each Vue project compiles `mini.scss` with its own Sass, so a project on Sass 1.92+ may get a different rule order. Either pin it in those projects or remove the order dependence.
 - **`@import`.** `mini.scss` uses `@import`, which Dart Sass has deprecated, and the build also warns about `mixed-decls`. Migrate to `@use` before Sass removes it.
