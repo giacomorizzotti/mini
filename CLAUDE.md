@@ -70,6 +70,32 @@ Don't assume a fix in one automatically applies to the other — check whether t
 
 Breakpoints are 576, 768, 992, 1200 and 1920px. A range includes its lower breakpoint and stops just below the upper one (max-width queries use 767.98px and so on), so at exactly 768px only the classes from 768px up apply. Each class also has a container-query version that measures the nearest `.contain` ancestor instead of the screen. Box widths (`box-*`, `_box.scss`) are the exception: their `xl` tier starts at 1400px.
 
+## Colors and contrast (WCAG AA)
+
+Since 2026-11-11 every pair the color maps generate reaches 4.5:1 for text,
+and 3:1 for form field outlines. Keep it that way when adding or changing
+a color:
+
+- **Greys:** `--muted` (and anything darker) is for text. `--light-grey` is
+  for lines, borders and surfaces only; `.light-grey-text` exists for dark
+  backgrounds. Form fields use `--field-border-color`.
+- **Light colors** (the status colors, `third-color`, `light-blue`,
+  `acid-green`, `mini-third`, `uwa-third`) keep their pastel fill with dark
+  text on it. Each names a darker shade (`--success-dark`,
+  `--uwa-third-color-text`, ...), used for its `-text` classes, its inverted
+  boxes, chips and flags, and its invert buttons.
+- That's done through optional trailing values in the maps: a 4th value in
+  `_colors.scss` (the readable shade; its swapped variants then stay white
+  instead of swapping to the text color) and a 5th and 6th in
+  `_buttons.scss` (the invert variant's text, and the text over the
+  hover/active color). Entries without them behave as before.
+- Check any change by computing each generated pair's contrast ratio, not by
+  eye: a color can look fine and sit at 2:1.
+
+Some partials (`_vars`, `_colors`, `_typo`, `_accessibility`) use CRLF line
+endings. An editor keeps them, but a script that reads and rewrites a file
+as text may silently convert the whole file to LF.
+
 ## Compiling the CSS
 
 The compiled files must be regenerated and committed with any SCSS change, because WordPress sites load them rather than the SCSS. There's no npm script for this; run from `css/`:

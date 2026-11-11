@@ -37,8 +37,15 @@
   --black: rgb( 10 10 20 / 100% );
   --false-black: rgb( 20 10 40 / 100% );
   --dark-grey:  rgb( 55 55 80 / 100% );
-  --grey: rgb( 120 120 150 / 100% );
-  --light-grey:  rgb( 215 210 230 / 100% );
+  --grey: #70708b;
+  // Faint but readable text: the lightest grey that still reaches 4.5:1
+  // (WCAG AA) on white, --false-white and light tinted boxes. Lighter greys,
+  // like --light-grey, are for borders, lines and surfaces, not text.
+  --muted: #6d6d89;
+  --light-grey: #bbbbc9;
+  // Form field outlines: the lightest grey with 3:1 against white (WCAG
+  // 1.4.11), the minimum for a field's boundary to count as visible.
+  --field-border-color: #8e8ea6;
   --false-white: rgb( 250 248 255 / 100% );
   --false-white-transp: rgb( 0 0 0 / 3% );
   --white: rgb( 255 255 255 / 100% );
@@ -48,25 +55,35 @@
   --main-color-dark: #08363d;
   --main-color-transp: #08363d25;
 
-  --second-color: rgb(15 90 135);
+  --second-color: rgb(24, 104, 153);
   --second-color-dark: rgb(10 45 70);
 
-  --third-color: rgb(254, 98, 98);
+  --third-color: rgb(245, 103, 103);
   --third-color-dark: rgb(151, 28, 28);
 
   --fourth-color: rgb(80 80 180);
   --fourth-color-dark: rgb(40 40 100);
 
-  --link-color: rgb(25 170 188);
+  // 4.5:1 on white and --false-white, as link text needs.
+  --link-color: #127e8b;
   --link-hover-color: rgb(15 105 115);
 
-  --info: rgb(105 140 190);
-  --success: rgb(120 170 150);
-  --warning: rgb(230 160 100);
-  --danger: rgb(235 105 115);
-  --bad: rgb(175 75 100); 
+  // Pastel fills: dark text goes on them. The -dark shades are what to use
+  // for these colors as text on light backgrounds (4.5:1), and white text
+  // reads on them too.
+  --info: #95bad8;
+  --info-dark: #486691;
+  --success: #93c5b1;
+  --success-dark: #497061;
+  --warning: #eeb889;
+  --warning-dark: #996232;
+  --danger: #e9939a;
+  --danger-dark: #ad444d;
+  --bad: #d65f7d; 
+  --bad-dark: #5a1627; 
 
   --acid-green: rgb(205 225 90);
+  --acid-green-dark: #6e7830;
   --stars-color: #ffffff80;
   --gingerbread: rgb(85 60 75);
   --pulse-color: var(--link-color);
@@ -95,6 +112,9 @@
   --uwa-second-color-dark: #2d145a;
   --uwa-third-color: #00dcff;
   --uwa-third-color-dark: #00a0b4;
+  // --uwa-third-color-dark is still too light for text (3:1); this is the
+  // shade for uwa-third as text on light backgrounds.
+  --uwa-third-color-text: #007e93;
   --uwa-fourth-color: #dc0046;
   --uwa-fourth-color-dark: #8c005a;
   --uwa-black: #100018;
@@ -111,7 +131,7 @@
   --jpm-color: #7245BB;
   --jpm-color-dark: #452d6b;
   --jpm-color-transp: rgba(114, 69, 187, 0.2);
-  --jpm-second-color: #3D79CC;
+  --jpm-second-color: #3A73C2;
   --jpm-second-color-dark: #2c538b;
 
   // AROMA

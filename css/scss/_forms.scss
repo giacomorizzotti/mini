@@ -18,7 +18,7 @@ input, textarea, select {
     font-weight: 700;
     color: var(--black);
     background-color: var(--white);
-    border: 1px solid var(--light-grey);
+    border: 1px solid var(--field-border-color);
     box-shadow: 0 0 15px -5px var(--light-grey);
     transition: box-shadow 0.25s ease;
     &::placeholder {

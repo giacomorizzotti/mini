@@ -1,12 +1,16 @@
 // BUTTONS
 
-$colors: //color name, color code, text color over color
+// color name, color code, hover/active color, text color over color, then
+// two optional overrides for colors too light for white text or for text on
+// white: the -invert variant's text color (default: the color code) and the
+// text color over the hover/active color (default: the text color).
+$colors:
   "wh" var(--white) var(--light-grey) var(--black),
   "white" var(--white) var(--light-grey) var(--black),
   "false-white" var(--false-white) var(--light-grey) var(--black),
-  "light-grey" var(--light-grey) var(--grey) var(--white),
+  "light-grey" var(--light-grey) var(--grey) var(--black) var(--muted) var(--white),
   "grey" var(--grey) var(--dark-grey) var(--white),
-  "dark-grey" var(--dark-grey) var(--white) var(--white),
+  "dark-grey" var(--dark-grey) var(--black) var(--white),
   "false-black" var(--false-black) var(--black) var(--white),
   "bk" var(--black) var(--dark-grey) var(--white),
   "black" var(--black) var(--dark-grey) var(--white),
@@ -17,32 +21,32 @@ $colors: //color name, color code, text color over color
   //"main-color-dark" var(--main-color-dark) var(--white),
   "second-color" var(--second-color) var(--second-color-dark) var(--white),
   //"second-color-dark" var(--second-color-dark) var(--white),
-  "third-color" var(--third-color) var(--third-color-dark) var(--white),
+  "third-color" var(--third-color) var(--third-color-dark) var(--black) var(--third-color-dark) var(--white),
   //"third-color-dark" var(--third-color-dark) var(--white),
   "fourth-color" var(--fourth-color) var(--fourth-color-dark) var(--white),
   //"fourth-color-dark" var(--fourth-color-dark) var(--white),
-  "info" var(--info) var(--info) var(--white),
-  "success" var(--success) var(--success) var(--white),
-  "warning" var(--warning) var(--warning) var(--white),
-  "danger" var(--danger) var(--danger) var(--white),
-  "bad" var(--bad) var(--bad) var(--white),
-  "acid-green" var(--acid-green) var(--acid-green) var(--white),
+  "info" var(--info) var(--info-dark) var(--black) var(--info-dark) var(--white),
+  "success" var(--success) var(--success-dark) var(--black) var(--success-dark) var(--white),
+  "warning" var(--warning) var(--warning-dark) var(--black) var(--warning-dark) var(--white),
+  "danger" var(--danger) var(--danger-dark) var(--black) var(--danger-dark) var(--white),
+  "bad" var(--bad) var(--bad-dark) var(--black) var(--bad-dark) var(--white),
+  "acid-green" var(--acid-green) var(--acid-green-dark) var(--black) var(--acid-green-dark) var(--white),
   "gingerbread" var(--gingerbread) var(--gingerbread) var(--white),
 
   "mini" var(--mini-color) var(--mini-color-dark) var(--white),
   //"mini-dark" var(--mini-color-dark) var(--white),
   "mini-second" var(--mini-second-color) var(--mini-second-color) var(--white),
-  "mini-third" var(--mini-third-color) var(--mini-third-color) var(--white),
+  "mini-third" var(--mini-third-color) var(--mini-third-color-dark) var(--black) var(--mini-third-color-dark) var(--white),
   "mini-fourth" var(--mini-fourth-color) var(--mini-fourth-color) var(--white),
 
   "uwa" var(--uwa-color) var(--uwa-color-dark) var(--white),
   //"uwa-dark" var(--uwa-color-dark) var(--uwa-color-dark) var(--white),
   "uwa-second" var(--uwa-second-color) var(--uwa-second-color) var(--white),
-  "uwa-third" var(--uwa-third-color) var(--uwa-third-color) var(--white),
+  "uwa-third" var(--uwa-third-color) var(--uwa-third-color-text) var(--black) var(--uwa-third-color-text) var(--white),
   "uwa-fourth" var(--uwa-fourth-color) var(--uwa-fourth-color) var(--white),
   "uwa-link" var(--uwa-link-color) var(--uwa-link-color) var(--white),
 
-  "light-blue" var(--light-blue) var(--blue) var(--white),
+  "light-blue" var(--light-blue) var(--blue) var(--black) var(--blue) var(--white),
   "blue" var(--blue) var(--dark-blue) var(--white),
   //"dark-blue" var(--dark-blue) var(--dark-blue) var(--white);
   
@@ -62,32 +66,40 @@ $colors: //color name, color code, text color over color
 
   //"dt" var(--doingthings-color) var(--black);
 
-@each $colorname, $colorcode, $activecolorcode, $colortext in $colors {
+@each $colorname, $colorcode, $activecolorcode, $colortext, $inverttext, $hovertext in $colors {
+  $invertcolor: $colorcode;
+  @if $inverttext {
+    $invertcolor: $inverttext;
+  }
+  $activetext: $colortext;
+  @if $hovertext {
+    $activetext: $hovertext;
+  }
   .#{$colorname} {
     &-btn {
       @extend button, .btn, .button !optional;
       --button-text-color: #{$colortext}!important;
       --button-background-color: #{$colorcode}!important;
       --button-border-color: #{$colorcode}!important;
-      --button-hover-text-color: #{$colortext}!important;
+      --button-hover-text-color: #{$activetext}!important;
       --button-hover-background-color: #{$activecolorcode}!important;
       --button-hover-border-color: #{$activecolorcode}!important;
       &-invert, &-inv, &-negative, &-neg {
         @extend button, .btn, .button !optional;
-        --button-text-color: #{$colorcode}!important;
+        --button-text-color: #{$invertcolor}!important;
         //--button-background-color: #{$colortext}!important;
         --button-background-color: transparent!important;
         --button-border-color: #{$colorcode}!important;
-        --button-hover-text-color: #{$colortext}!important;
+        --button-hover-text-color: #{$activetext}!important;
         --button-hover-background-color: #{$activecolorcode}!important;
         --button-hover-border-color: #{$colorcode}!important;
       }
       &-clicked, &-active, &.clicked, &.active {
         @extend button, .btn, .button !optional;
-        --button-text-color: #{$colortext}!important;
+        --button-text-color: #{$activetext}!important;
         --button-background-color: #{$activecolorcode}!important;
         --button-border-color: #{$activecolorcode}!important;
-        --button-hover-text-color: #{$colortext}!important;
+        --button-hover-text-color: #{$activetext}!important;
         --button-hover-background-color: #{$activecolorcode}!important;
         --button-hover-border-color: #{$activecolorcode}!important;
       }
@@ -97,7 +109,7 @@ $colors: //color name, color code, text color over color
           --button-text-color: #{$colortext}!important;
           --button-background-color: #{$colorcode}!important;
           --button-border-color: #{$colorcode}!important;
-          --button-hover-text-color: #{$colortext}!important;
+          --button-hover-text-color: #{$activetext}!important;
           --button-hover-background-color: #{$activecolorcode}!important;
           --button-hover-border-color: #{$activecolorcode}!important;
         }
