@@ -91,6 +91,8 @@ a color:
   hover/active color). Entries without them behave as before.
 - Check any change by computing each generated pair's contrast ratio, not by
   eye: a color can look fine and sit at 2:1.
+- An opt-in dark mode is designed, decisions included, in
+  [plans/DARK_MODE.md](plans/DARK_MODE.md); it's not built yet.
 
 Some partials (`_vars`, `_colors`, `_typo`, `_accessibility`) use CRLF line
 endings. An editor keeps them, but a script that reads and rewrites a file
