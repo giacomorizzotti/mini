@@ -1,0 +1,22 @@
+name: CSS
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Compiled CSS matches the SCSS and passes the contrast check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Compiles with the pinned Sass and clean-css, then fails when a color
+      # pair misses WCAG AA (css/check-contrast.js).
+      - run: css/build.sh
+      # WordPress sites load the compiled files, so they must be committed
+      # with every SCSS change.
+      - name: The committed compiled files are up to date
+        run: git diff --exit-code -- css/

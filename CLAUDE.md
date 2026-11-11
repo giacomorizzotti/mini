@@ -135,4 +135,4 @@ cd website && npm run build    # writes into dist/, which mini_website_deploy th
 cd website && npm run preview
 ```
 
-There are no automated tests in any of these repos.
+There are no unit tests. Two GitHub workflows run on every push since 2026-11-11: this repo's `.github/workflows/css.yml` runs `css/build.sh` and fails when the committed compiled files differ from what the SCSS gives or a color pair misses WCAG AA, and `mini_vue`'s builds both barrels without `vue-i18n` (see its `ci/`).
