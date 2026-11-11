@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:map";
+
 // box
 @use "sass:math";
 
@@ -33,7 +36,7 @@ $breakpoints: (
 
 @mixin respond($breakpoint) {
   @if $breakpoint != "" {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
@@ -53,7 +56,7 @@ $breakpoints: (
     // Unlike @media, Sass doesn't special-case @container's prelude --
     // map-get() needs an explicit #{} interpolation here or it's passed
     // through to the compiled CSS as a literal, unevaluated string.
-    @container (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @container (min-width: #{map.get($breakpoints, $breakpoint)}) {
       @content;
     }
   } @else {
@@ -87,11 +90,11 @@ $breakpoints: (
 
   // Generate .box-{{breakpoint}}-{{label}} classes in breakpoint order
   @each $breakpoint, $minwidth in $breakpoints {
-    $labels: map-keys($box-widths);
+    $labels: map.keys($box-widths);
     @each $label in $labels {
-      $widths: map-get($box-widths, $label);
-      $index: index(map-keys($breakpoints), $breakpoint);
-      $width: nth($widths, 5);
+      $widths: map.get($box-widths, $label);
+      $index: list.index(map.keys($breakpoints), $breakpoint);
+      $width: list.nth($widths, 5);
       &-#{$breakpoint}-#{$label} {
         @extend .box;
         @include respond($breakpoint) {
@@ -106,8 +109,8 @@ $breakpoints: (
     &-#{$label} {
       @extend .box;
       @for $i from 1 through 5 {
-        $breakpoint: nth(map-keys($breakpoints), $i);
-        $width: nth($widths, $i);
+        $breakpoint: list.nth(map.keys($breakpoints), $i);
+        $width: list.nth($widths, $i);
         @include respond($breakpoint) {
           @include box-width($width);
         }
@@ -127,10 +130,10 @@ $breakpoints: (
   // narrower tier, since only the container's own width decides it
   // here).
   @each $breakpoint, $minwidth in $breakpoints {
-    $labels: map-keys($box-widths);
+    $labels: map.keys($box-widths);
     @each $label in $labels {
-      $widths: map-get($box-widths, $label);
-      $width: nth($widths, 5);
+      $widths: map.get($box-widths, $label);
+      $width: list.nth($widths, 5);
       &-#{$breakpoint}-#{$label} {
         @include respond-container($breakpoint) {
           @include box-width($width);
@@ -142,8 +145,8 @@ $breakpoints: (
   @each $label, $widths in $box-widths {
     &-#{$label} {
       @for $i from 1 through 5 {
-        $breakpoint: nth(map-keys($breakpoints), $i);
-        $width: nth($widths, $i);
+        $breakpoint: list.nth(map.keys($breakpoints), $i);
+        $width: list.nth($widths, $i);
         @include respond-container($breakpoint) {
           @include box-width($width);
         }

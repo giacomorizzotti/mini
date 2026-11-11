@@ -1,3 +1,5 @@
+@use "breakpoints";
+
 // MENUs STYLING
 
 // header menus
@@ -44,10 +46,10 @@ nav {
       margin:0;
       background: transparent;
       padding:0;
-      @include sm {
+      @include breakpoints.sm {
         font-size: var(--h5);
       }
-      @include md {
+      @include breakpoints.md {
         font-size: var(--p);
         padding: calc(var(--padding)*.5) calc(var(--padding)*.75);
       }
@@ -56,11 +58,11 @@ nav {
         position: relative;
         padding: var(--padding);
         margin: calc(var(--margin) * 0.5 ) 0;
-        @include sm {
+        @include breakpoints.sm {
           padding: calc(var(--padding) * 0.75 );
           margin: calc(var(--margin) * 0.75 ) 0;
         }
-        @include md {
+        @include breakpoints.md {
           color: var(--black);
           display: inline-block;
           margin: 0;
@@ -77,7 +79,7 @@ nav {
           left:0;
           transition: background-color 0.25s ease, width 0.25s ease;
           border-radius: 2px;
-          @include md {
+          @include breakpoints.md {
             background: var(--link-link-color);
           }
         }
@@ -85,14 +87,14 @@ nav {
       &.active > a, &.selected > a, &.router-link-active > a, a.active, a.selected, a.router-link-active, &.current-menu-item > a, &.current-page-parent > a {
         background-color: var(--link-hover-color);
         color: var(--white);
-        @include md {
+        @include breakpoints.md {
           color: var(--link-hover-color);
           background-color: transparent;
         }
         &::after {
           width: 0;
           background-color: var(--link-hover-color);
-          @include md {
+          @include breakpoints.md {
             width: 100%;
             background-color: var(--link-hover-color);
           }
@@ -101,14 +103,14 @@ nav {
       &:hover > a {
         background-color: var(--link-color);
         color: var(--white);
-        @include md {
+        @include breakpoints.md {
           color: var(--link-color);
           background-color: transparent;
         }
         &::after {
           width: 0;
           background-color: var(--link-color);
-          @include md {
+          @include breakpoints.md {
             width: 100%;
             background-color: var(--link-color);
           }
@@ -134,14 +136,14 @@ ul {
           align-items: flex-start;
           flex-flow: row;
           padding-left: calc( var(--padding) * 0.5 );
-          @include md {
+          @include breakpoints.md {
             flex-flow: column;
           }
           li, li.item, li.menu-item, li.menu-sub-item, li.sub-menu-item {
             font-size: var(--p);
             line-height: 1.5;
             margin: 0 var(--margin) var(--margin) 0;
-            @include md {
+            @include breakpoints.md {
               margin: 0;
             }
             a {

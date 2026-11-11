@@ -1,3 +1,5 @@
+@use "breakpoints";
+
 // GDPR — Cookie Consent Banner
 
 // Scroll lock while consent is pending
@@ -36,7 +38,7 @@ body.consent-pending {
   box-shadow: 0 0 0 3px rgb(0 0 0 / 25%);
   transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
   transform: translate(0, calc(var(--padding) * 0.25));
-  @include md { width: 50%; }
+  @include breakpoints.md { width: 50%; }
 
   &:hover {
     transform: translate(0, 0);
@@ -100,14 +102,14 @@ body.consent-pending {
     margin: 0;
     font-size: var(--h1);
     line-height: calc(var(--h1) * 1.25);
-    @include md { width: 60px; }
-    @include lg { width: 80px; }
+    @include breakpoints.md { width: 60px; }
+    @include breakpoints.lg { width: 80px; }
   }
 
   .cookie-banner-content {
     width: calc(100% - 50px);
-    @include md { width: calc(100% - 60px); }
-    @include lg { width: calc(100% - 80px); }
+    @include breakpoints.md { width: calc(100% - 60px); }
+    @include breakpoints.lg { width: calc(100% - 80px); }
 
     .consent-label {
       margin-bottom: var(--margin);

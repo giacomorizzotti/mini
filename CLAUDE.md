@@ -95,9 +95,12 @@ a color:
 - An opt-in dark mode is designed, decisions included, in
   [plans/DARK_MODE.md](plans/DARK_MODE.md); it's not built yet.
 
-Some partials (`_vars`, `_colors`, `_typo`, `_accessibility`) use CRLF line
-endings. An editor keeps them, but a script that reads and rewrites a file
-as text may silently convert the whole file to LF.
+`mini.scss` and some partials (`_accessibility`, `_animations`, `_basic`,
+`_breakpoints`, `_colors`, `_debug`, `_flexboxes`, `_reset`, `_slides`,
+`_typo`, `_vars`) use CRLF line endings; the others use LF. An editor keeps
+them, but a script that reads and rewrites a file as text may silently
+convert the whole file, and tools such as `sass-migrator` write their new
+lines as LF.
 
 ## Compiling the CSS
 
@@ -107,9 +110,22 @@ The compiled files must be regenerated and committed with any SCSS change, becau
 css/build.sh
 ```
 
-It compiles `mini.css` (Sass 1.91.0) and `mini.min.css` (clean-css 5.6.3) with their source maps, then runs `css/check-contrast.js`, which exits with an error when any generated color pair misses WCAG AA. The pinned versions reproduce the checked-in files byte for byte. Don't use a newer Sass without checking the output: commit `4ebb13a` records that Sass 1.92+ reorders nested rules. The Sass deprecation warnings it prints are the `@import` migration in [PLAN.md](PLAN.md).
+It compiles `mini.css` (Sass 1.91.0) and `mini.min.css` (clean-css 5.6.3) with their source maps, then runs `css/check-contrast.js`, which exits with an error when any generated color pair misses WCAG AA. The pinned versions reproduce the checked-in files byte for byte, and the build prints no warnings; keep it that way.
 
-Vue projects don't use these files. They compile `mini.scss` themselves with their own Sass version.
+Vue projects don't use these files. They compile `mini.scss` themselves with their own Sass version (1.89 to 1.104 on this machine), so the SCSS must give the same CSS on every version: since 2026-11-11, 1.89.0, 1.91.0, 1.101.0 and 1.108.2 all produce identical output. Until then, 1.92+ placed a declaration written after a nested rule after that rule instead of before it (commit `4ebb13a`), which changed the button cascade in jpm and brff.
+
+## SCSS modules
+
+The SCSS uses the module system (`@use`/`@forward`, no `@import`) since 2026-11-11. When editing it:
+
+- **`mini.scss` forwards every partial**, in the order its CSS must appear. That also passes their mixins, functions and variables on to projects that load mini with `@import 'mini'` or `@use 'mini'` (jpm's stylesheet uses `text-box-base`). Two names exist twice, so `mini.scss` hides the earlier one: `$breakpoints` from `_flexboxes` (`_box`'s wins) and `$colors` from `_buttons` (`_colors`' wins), which is what `@import` used to give.
+- **A partial `@use`s what it uses**: `breakpoints` for its `sm`/`md`/... mixins, `inline_mixins` for `chip-base` and the like, `sass:map`/`sass:list`/`sass:string`/`sass:math` for built-in functions, which no longer exist as globals (`map.get`, not `map-get`).
+- **`@extend` only reaches modules the extending partial loads**, unlike `@import`, where it reached the whole stylesheet. `_buttons` `@use`s `reset` so its buttons extend `_reset`'s `.btn::selection`, and `_colors` `@use`s `forms` for the chip inputs. Only `@use` a partial that `mini.scss` loads earlier, or its CSS moves. After adding an `@extend` of a selector in another partial, compare the compiled CSS: a missed one doesn't error, it just drops the selectors.
+- **Declarations go before nested rules** in a block, or Sass 1.92+ outputs them in a different order (`mixed-decls`).
+- **`@if` instead of the `if()` function**, which Sass 1.95+ deprecates and whose replacement older versions can't parse.
+- **The header comment** sits at the top of `_reset.scss`: a loud comment above the first `@forward` in `mini.scss` would be repeated wherever another partial loads `_reset`.
+
+To check a change, compile before and after and compare the output; `@extend` changes may only reorder selectors inside a list, which doesn't matter.
 
 ## Commands (the `website/` app)
 

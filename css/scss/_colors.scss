@@ -1,3 +1,8 @@
+@use "sass:string";
+@use "inline_mixins";
+// @extend only reaches modules this one loads: _forms' chip inputs
+@use "forms";
+
 // COLORS
 
 // color name, color code, text color over color, and an optional darker
@@ -110,7 +115,7 @@ $colors:
     }
     // text box
     &-box, &-text-box {
-      @include text-box-base;
+      @include inline_mixins.text-box-base;
       background: $colorcode;
       color: $colortext;
       border-color: $colorcode;
@@ -147,7 +152,7 @@ $colors:
     }
     // chips
     &-chip {
-      @include chip-base;
+      @include inline_mixins.chip-base;
       background: $colorcode;
       color: $colortext;
       border-color: $colorcode;
@@ -184,7 +189,7 @@ $colors:
     }
     // flags
     &-flag {
-      @include flag-base;
+      @include inline_mixins.flag-base;
       background: $colorcode;
       color: $colortext;
       border-color: $colorcode;
@@ -389,7 +394,7 @@ $grainy-gradients:
 @each $gradname, $gradstops in $gradients {
   // CSS class names cannot start with a digit — only emit the .grad-X alias
   // for names that start with a digit; both aliases work for all others.
-  $first-char: str-slice($gradname, 1, 1);
+  $first-char: string.slice($gradname, 1, 1);
   $digit-start: $first-char == "0" or $first-char == "1" or $first-char == "2"
              or $first-char == "3" or $first-char == "4" or $first-char == "5"
              or $first-char == "6" or $first-char == "7" or $first-char == "8"

@@ -1,3 +1,5 @@
+@use "breakpoints";
+
 // DEBUG TOOLS STYLING
 
 //DEBUG
@@ -16,7 +18,7 @@
   padding: 0;
   max-width: 50%;
 
-  @include md {
+  @include breakpoints.md {
     bottom: 0;
     border-bottom: 2px solid var(--black);
     border-left: none;
@@ -29,7 +31,7 @@
 
     margin-bottom: calc( var(--margin) * 0.25 );
     margin-right: 0;
-    @include md {
+    @include breakpoints.md {
       margin-bottom: 0;
       margin-right: calc( var(--margin) * 0.5 );
     }
@@ -41,7 +43,7 @@
       text-align: center;
       width: auto;
       line-height: 1;
-      @include md {
+      @include breakpoints.md {
         margin: calc( var(--margin) * 0.25 ) calc( var(--margin) * 0.25 ) 0 calc( var(--margin) * 0.25 );
       }
     }
@@ -68,7 +70,7 @@
     font-size: calc( var(--p) * 0.75 );
     line-height: 1;
     font-weight: 700;
-    @include md {
+    @include breakpoints.md {
       padding: calc( var(--margin) * 0.75 );
     }
   }

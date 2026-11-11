@@ -268,7 +268,11 @@ $multiplier: "0" 0, "025" 0.25, "05" 0.5, "075" 0.75, "1" 1, "15" 1.5, "2" 2, "3
           }
         }
         @each $wrap in $flex-wraps {
-          &-wrap#{if($wrap == nowrap, '', '-' + $wrap)} {
+          // @if rather than if(): Sass 1.95+ deprecates if(), and its new
+          // syntax doesn't exist in older Sass versions.
+          $wrap-suffix: '';
+          @if $wrap != nowrap { $wrap-suffix: '-' + $wrap; }
+          &-wrap#{$wrap-suffix} {
             flex-wrap: #{$wrap}!important;
           }
         }

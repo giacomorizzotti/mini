@@ -1,3 +1,6 @@
+// @extend only reaches modules this one loads: _reset's .btn::selection
+@use "reset";
+
 // BUTTONS
 
 // color name, color code, hover/active color, text color over color, then
@@ -147,6 +150,9 @@ button, .btn, .button {
   cursor: pointer;
   vertical-align: middle;
   border-radius: 3px;
+  color: var(--button-text-color);
+  background: var(--button-background-color);
+  border-color: var(--button-border-color);
   &.hard {
     border-radius: 0px;
   }
@@ -159,9 +165,6 @@ button, .btn, .button {
   &:last-child {
     margin-right: 0;
   }
-  color: var(--button-text-color);
-  background: var(--button-background-color);
-  border-color: var(--button-border-color);
   &:hover {
     color: var(--button-hover-text-color);
     background: var(--button-hover-background-color);

@@ -1,39 +1,46 @@
-/* mini */
-/* A simple CSS framework to build wonderful websites in... minutes! */
+// @forward, not @use: it loads each partial (and its CSS) in this order, and
+// also passes on their mixins, functions and variables, so a project that
+// loads mini with @import 'mini' or @use 'mini' can still use them (jpm uses
+// text-box-base). Where two partials define the same name, the one a
+// project used to see under @import (the later file) is passed on.
+//
+// The header comment lives at the top of scss/_reset.scss, the first module
+// loaded: a loud comment above the first @forward or @use is emitted again
+// by any partial that loads _reset itself.
 
-@import "scss/reset";
-@import "scss/vars";
-@import "scss/breakpoints";
-@import "scss/flexboxes";
-@import "scss/container";
-@import "scss/boxes";
-@import "scss/box";
-@import "scss/header";
-@import "scss/sheet";
-@import "scss/aside";
-@import "scss/main";
-@import "scss/footer";
-@import "scss/brand";
-@import "scss/basic";
-@import "scss/img";
-@import "scss/nav";
-@import "scss/menu_toggle";
-@import "scss/page_menu";
-@import "scss/actions_menu";
-@import "scss/forms";
-@import "scss/buttons";
-@import "scss/borders";
-@import "scss/inline_mixins";
-@import "scss/colors";
-@import "scss/typo";
-@import "scss/markdown";
-@import "scss/margins_paddings";
-@import "scss/show_hide";
-@import "scss/animations";
-@import "scss/slides";
-@import "scss/gdpr";
-@import "scss/debug";
-@import "scss/accessibility";
+@forward "scss/reset";
+@forward "scss/vars";
+@forward "scss/breakpoints";
+@forward "scss/flexboxes" hide $breakpoints;
+@forward "scss/container";
+@forward "scss/boxes";
+@forward "scss/box";
+@forward "scss/header";
+@forward "scss/sheet";
+@forward "scss/aside";
+@forward "scss/main";
+@forward "scss/footer";
+@forward "scss/brand";
+@forward "scss/basic";
+@forward "scss/img";
+@forward "scss/nav";
+@forward "scss/menu_toggle";
+@forward "scss/page_menu";
+@forward "scss/actions_menu";
+@forward "scss/forms";
+@forward "scss/buttons" hide $colors;
+@forward "scss/borders";
+@forward "scss/inline_mixins";
+@forward "scss/colors";
+@forward "scss/typo";
+@forward "scss/markdown";
+@forward "scss/margins_paddings";
+@forward "scss/show_hide";
+@forward "scss/animations";
+@forward "scss/slides";
+@forward "scss/gdpr";
+@forward "scss/debug";
+@forward "scss/accessibility";
 
 /* 
 * the end.

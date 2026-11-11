@@ -1,3 +1,5 @@
+@use "inline_mixins";
+
 // TYPOS
 
 // fluid typography
@@ -439,7 +441,7 @@ blockquote {
 
 // textbox
 .text-box {
-  @include text-box-base;
+  @include inline_mixins.text-box-base;
   background: var(--main-color);
   color: var(--white);
   border-color: var(--main-color);
@@ -447,14 +449,14 @@ blockquote {
 
 // flags
 .flag {
-  @include flag-base;
+  @include inline_mixins.flag-base;
   //transform: translate(0, calc(var(--baseline) * -0.25));
   border-color: var(--main-color);
 }
 
 // chips
 .chip {
-  @include chip-base;
+  @include inline_mixins.chip-base;
   background: var(--main-color);
   color: var(--white);
   border-color: var(--main-color);
