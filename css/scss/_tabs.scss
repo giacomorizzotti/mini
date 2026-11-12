@@ -1,0 +1,68 @@
+// TABS
+//
+// A row of tabs over the content they switch, the chosen one underlined:
+//
+//   <div class="tab-bar" role="tablist" aria-label="View">
+//     <button role="tab" aria-selected="true">Cards</button>
+//     <button role="tab" aria-selected="false">Tree</button>
+//   </div>
+//
+// The chosen tab is the one with aria-selected="true", aria-current="page" (tabs that are
+// links to separate pages) or .active. Size the whole row with XS…XL on .tab-bar. A row
+// too long for the screen scrolls sideways rather than wrapping.
+// mini_vue's Tabs component writes this markup and handles the keyboard.
+//
+// Not ".tabs": WooCommerce and Foundation already style that name, and sites that load
+// mini.css use them.
+//
+// Loaded after _buttons, so these rules win over mini's own `button` ones.
+
+.tab-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  margin: 0 0 var(--margin);
+  padding: 0;
+  // The row's line, drawn inside it: a border would sit outside the scrolling box,
+  // which would clip the chosen tab's underline where it overlaps the line.
+  box-shadow: inset 0 -1px 0 var(--light-grey);
+  > button, > a {
+    flex: none;
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: calc(var(--padding) * .5) var(--padding);
+    border: 0;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--muted);
+    font-size: inherit;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color ease-out .15s, border-color ease-out .15s;
+    &:hover {
+      color: var(--black);
+      background: transparent;
+      border-color: transparent;
+      border-bottom-color: var(--light-grey);
+      box-shadow: none;
+    }
+    &[aria-selected="true"], &[aria-current="page"], &.active {
+      color: var(--main-color);
+      background: transparent;
+      border-color: transparent;
+      border-bottom-color: var(--main-color);
+    }
+    // Inside the tab: the scrolling row would clip a ring drawn outside it.
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: -2px;
+    }
+  }
+}

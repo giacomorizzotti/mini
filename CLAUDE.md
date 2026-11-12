@@ -33,7 +33,7 @@ Also watch for **over-fitting to one consumer's domain model** — something can
 ## Structure (this repo)
 
 ```
-css/scss/      33 partials (_vars, _buttons, _colors, _typo, _forms, ...), entry point css/mini.scss
+css/scss/      35 partials (_vars, _buttons, _colors, _typo, _forms, ...), entry point css/mini.scss
 css/           compiled mini.css/.min.css + source maps (checked in, see "Compiling the CSS")
 js/            vanilla JS: mini.js (main utility lib), gdpr.js, slider.js, debug.js
 img/           shared brand/icon assets, reused across consuming sites
@@ -54,6 +54,8 @@ Don't assume a fix in one automatically applies to the other — check whether t
 ## CSS class conventions
 
 **Size classes are uppercase only:** `XXS`, `XS`, `S`, `L`, `XL`, `XXL`, on text, form fields, chips and buttons. Don't add lowercase aliases: lowercase `xl` and `xxl` are visibility classes, so an alias would hide the element it's meant to resize.
+
+**New class names reach live sites with their own plugins and themes** (WordPress sites load `mini.css`, some straight from the dev CDN), so check a new name isn't one they already style. Tabs are `.tab-bar` (`_tabs.scss`), not `.tabs`, which WooCommerce and Foundation use.
 
 **Visibility classes**, all using `display: none !important`:
 
