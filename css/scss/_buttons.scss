@@ -1,5 +1,6 @@
 // @extend only reaches modules this one loads: _reset's .btn::selection
 @use "reset";
+@use "settings";
 
 // BUTTONS
 
@@ -69,7 +70,10 @@ $colors:
 
   //"dt" var(--doingthings-color) var(--black);
 
-@each $colorname, $colorcode, $activecolorcode, $colortext, $inverttext, $hovertext in $colors {
+// With settings.$standalone-color-buttons false, the color classes below don't
+// @extend the button rules: they only set the --button-* colors that those
+// rules read.
+@each $colorname, $colorcode, $activecolorcode, $colortext, $inverttext, $hovertext in settings.selected-colors($colors) {
   $invertcolor: $colorcode;
   @if $inverttext {
     $invertcolor: $inverttext;
@@ -80,7 +84,7 @@ $colors:
   }
   .#{$colorname} {
     &-btn {
-      @extend button, .btn, .button !optional;
+      @if settings.$standalone-color-buttons { @extend button, .btn, .button !optional; }
       --button-text-color: #{$colortext}!important;
       --button-background-color: #{$colorcode}!important;
       --button-border-color: #{$colorcode}!important;
@@ -88,7 +92,7 @@ $colors:
       --button-hover-background-color: #{$activecolorcode}!important;
       --button-hover-border-color: #{$activecolorcode}!important;
       &-invert, &-inv, &-negative, &-neg {
-        @extend button, .btn, .button !optional;
+        @if settings.$standalone-color-buttons { @extend button, .btn, .button !optional; }
         --button-text-color: #{$invertcolor}!important;
         //--button-background-color: #{$colortext}!important;
         --button-background-color: transparent!important;
@@ -98,7 +102,7 @@ $colors:
         --button-hover-border-color: #{$colorcode}!important;
       }
       &-clicked, &-active, &.clicked, &.active {
-        @extend button, .btn, .button !optional;
+        @if settings.$standalone-color-buttons { @extend button, .btn, .button !optional; }
         --button-text-color: #{$activetext}!important;
         --button-background-color: #{$activecolorcode}!important;
         --button-border-color: #{$activecolorcode}!important;
@@ -107,7 +111,7 @@ $colors:
         --button-hover-border-color: #{$activecolorcode}!important;
       }
       &-hover {
-        @extend button, .btn, .button !optional;
+        @if settings.$standalone-color-buttons { @extend button, .btn, .button !optional; }
         &:hover {
           --button-text-color: #{$colortext}!important;
           --button-background-color: #{$colorcode}!important;

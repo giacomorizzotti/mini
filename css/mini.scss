@@ -7,7 +7,11 @@
 // The header comment lives at the top of scss/_reset.scss, the first module
 // loaded: a loud comment above the first @forward or @use is emitted again
 // by any partial that loads _reset itself.
+//
+// _settings comes first, so a project's settings for it (see the file)
+// reach it before any partial loads it. It outputs no CSS.
 
+@forward "scss/settings" hide selected-colors;
 @forward "scss/reset";
 @forward "scss/vars";
 @forward "scss/breakpoints";

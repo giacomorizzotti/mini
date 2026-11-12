@@ -124,6 +124,8 @@ The SCSS uses the module system (`@use`/`@forward`, no `@import`) since 2026-11-
 - **Declarations go before nested rules** in a block, or Sass 1.92+ outputs them in a different order (`mixed-decls`).
 - **`@if` instead of the `if()` function**, which Sass 1.95+ deprecates and whose replacement older versions can't parse.
 - **The header comment** sits at the top of `_reset.scss`: a loud comment above the first `@forward` in `mini.scss` would be repeated wherever another partial loads `_reset`.
+- **Project settings** are the `!default` variables in `_settings.scss`, which `mini.scss` forwards first: `$color-names` (generate only these colors' classes) and `$standalone-color-buttons` (false: color button classes only set colors, so they need `btn` or a `<button>`). A project sets them with `@use "mini" with (...)`, or as variables before `@import "mini"`; the file shows both. Their defaults generate everything, so `mini.css` and `mini.min.css` don't depend on them; a new setting must default to the current output too.
+- **Write color-independent rules once**: in a per-color loop, declarations that don't use the color go in a private placeholder (`%-name`, written after the loop) that each color `@extend`s, as the bubble positions do, instead of being repeated for all 53 colors. Names with a leading `-` are private, so projects that load mini don't see them (jpm's stylesheet has its own `$bubble-sizes`).
 
 To check a change, compile before and after and compare the output; `@extend` changes may only reorder selectors inside a list, which doesn't matter.
 

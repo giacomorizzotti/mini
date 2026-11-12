@@ -1,0 +1,46 @@
+@use "sass:list";
+
+// SETTINGS
+// Options a project can set where it loads mini's SCSS. The defaults
+// generate everything, which is what mini.css and mini.min.css contain:
+//
+//   @use "mini" with ($color-names: ("white", "black", "info"), $standalone-color-buttons: false);
+//
+// or, in a project that loads mini with @import, before that line:
+//
+//   $color-names: ("white", "black", "info");
+//   $standalone-color-buttons: false;
+//   @import "mini";
+
+// Which colors get classes (-text, -box, -chip, -flag, -bg, -border, -bubble
+// and -btn). null: every color. A list of names: only those. A name that only
+// one of the two maps has (the -dark shades, muted and link are only in
+// _colors.scss) only gets that map's classes.
+$color-names: null !default;
+
+// true: a color button class is a whole button on its own (class="blue-btn"),
+// because it @extends every button rule; that is most of _buttons' weight.
+// false: it only sets the button's colors, so the element needs the btn class
+// or must be a <button> (mini_vue's Button always adds btn).
+$standalone-color-buttons: true !default;
+
+// $colors without the entries $color-names leaves out, for the loops in
+// _colors.scss and _buttons.scss.
+@function selected-colors($colors) {
+  @if $color-names == null {
+    @return $colors;
+  }
+  $names: ();
+  // As strings, so names that are also CSS colors (white, black, grey, blue)
+  // match when written without quotes.
+  @each $name in $color-names {
+    $names: list.append($names, "#{$name}");
+  }
+  $selected: ();
+  @each $entry in $colors {
+    @if list.index($names, "#{list.nth($entry, 1)}") {
+      $selected: list.append($selected, $entry, comma);
+    }
+  }
+  @return $selected;
+}
