@@ -110,6 +110,16 @@ $colors:
         --button-hover-background-color: #{$activecolorcode}!important;
         --button-hover-border-color: #{$activecolorcode}!important;
       }
+      // The generic .btn-active and .btn-clicked (mini_vue's Button adds
+      // btn-active for its `active` prop when the color comes as a class)
+      // put --button-text-color on the hover/active color, so a color with
+      // its own text over that color sets it here. A separate rule, without
+      // the @extend above, which would copy it into every button rule.
+      @if $hovertext {
+        &.btn-active, &.btn-clicked {
+          --button-text-color: #{$activetext}!important;
+        }
+      }
       &-hover {
         @if settings.$standalone-color-buttons { @extend button, .btn, .button !optional; }
         &:hover {

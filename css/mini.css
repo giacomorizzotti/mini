@@ -14231,6 +14231,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-background-color: var(--grey)!important;
   --button-hover-border-color: var(--grey)!important;
 }
+.light-grey-btn.btn-active, .light-grey-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
+}
 .light-grey-btn-hover:hover {
   --button-text-color: var(--black)!important;
   --button-background-color: var(--light-grey)!important;
@@ -14671,6 +14674,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-background-color: var(--third-color-dark)!important;
   --button-hover-border-color: var(--third-color-dark)!important;
 }
+.third-color-btn.btn-active, .third-color-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
+}
 .third-color-btn-hover:hover {
   --button-text-color: var(--black)!important;
   --button-background-color: var(--third-color)!important;
@@ -14759,6 +14765,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-background-color: var(--info-dark)!important;
   --button-hover-border-color: var(--info-dark)!important;
 }
+.info-btn.btn-active, .info-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
+}
 .info-btn-hover:hover {
   --button-text-color: var(--black)!important;
   --button-background-color: var(--info)!important;
@@ -14802,6 +14811,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--success-dark)!important;
   --button-hover-border-color: var(--success-dark)!important;
+}
+.success-btn.btn-active, .success-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
 }
 .success-btn-hover:hover {
   --button-text-color: var(--black)!important;
@@ -14847,6 +14859,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-background-color: var(--warning-dark)!important;
   --button-hover-border-color: var(--warning-dark)!important;
 }
+.warning-btn.btn-active, .warning-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
+}
 .warning-btn-hover:hover {
   --button-text-color: var(--black)!important;
   --button-background-color: var(--warning)!important;
@@ -14890,6 +14905,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--danger-dark)!important;
   --button-hover-border-color: var(--danger-dark)!important;
+}
+.danger-btn.btn-active, .danger-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
 }
 .danger-btn-hover:hover {
   --button-text-color: var(--black)!important;
@@ -14935,6 +14953,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-background-color: var(--bad-dark)!important;
   --button-hover-border-color: var(--bad-dark)!important;
 }
+.bad-btn.btn-active, .bad-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
+}
 .bad-btn-hover:hover {
   --button-text-color: var(--black)!important;
   --button-background-color: var(--bad)!important;
@@ -14978,6 +14999,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--acid-green-dark)!important;
   --button-hover-border-color: var(--acid-green-dark)!important;
+}
+.acid-green-btn.btn-active, .acid-green-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
 }
 .acid-green-btn-hover:hover {
   --button-text-color: var(--black)!important;
@@ -15155,6 +15179,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-background-color: var(--mini-third-color-dark)!important;
   --button-hover-border-color: var(--mini-third-color-dark)!important;
 }
+.mini-third-btn.btn-active, .mini-third-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
+}
 .mini-third-btn-hover:hover {
   --button-text-color: var(--black)!important;
   --button-background-color: var(--mini-third-color)!important;
@@ -15331,6 +15358,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-background-color: var(--uwa-third-color-text)!important;
   --button-hover-border-color: var(--uwa-third-color-text)!important;
 }
+.uwa-third-btn.btn-active, .uwa-third-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
+}
 .uwa-third-btn-hover:hover {
   --button-text-color: var(--black)!important;
   --button-background-color: var(--uwa-third-color)!important;
@@ -15462,6 +15492,9 @@ label.chip.chip-grey, label.chip.grey-chip, label.chip.grey-chip-hover:hover, la
   --button-hover-text-color: var(--white)!important;
   --button-hover-background-color: var(--blue)!important;
   --button-hover-border-color: var(--blue)!important;
+}
+.light-blue-btn.btn-active, .light-blue-btn.btn-clicked {
+  --button-text-color: var(--white)!important;
 }
 .light-blue-btn-hover:hover {
   --button-text-color: var(--black)!important;
