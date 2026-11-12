@@ -1,8 +1,9 @@
 # Dark mode for mini (and jpm)
 
-Status: **phases 1 and 2 built** on 2026-11-12 (`css/scss/_dark_mode.scss`,
-mini_vue's `useTheme` and `ThemeSwitch`, a demo on mini.uwa.agency). jpm
-(phase 3) is next. Built differently from the text below:
+Status: **phases 1, 2 and 3 built** on 2026-11-12 (`css/scss/_dark_mode.scss`,
+mini_vue's `useTheme` and `ThemeSwitch`, a demo on mini.uwa.agency, and
+jpm, where the axe scan finds no contrast failures in dark mode). Built
+differently from the text below:
 
 - **Activation** is `body:where(.mini, #mini)`, since the Vue projects mark
   the body with `id="mini"`, not the class. `:where()` adds no specificity,
@@ -17,6 +18,17 @@ mini_vue's `useTheme` and `ThemeSwitch`, a demo on mini.uwa.agency). jpm
   of swapping to light.
 - **The cookie banner** keeps the light theme inside it (white text and
   buttons on gingerbread).
+- **`.on-color-text` and `.on-light-color-text`**: text on a fill that's
+  the same in both themes, such as a color a user picked. `.black-text`
+  turns light in dark mode, so it's wrong there; jpm passes these two to
+  mini_vue's `getContrastClass` for its org-chosen status colors.
+- **Links in running text are underlined in dark mode** (`p a`, not
+  buttons): the link tints sit under 3:1 from the light body text, too
+  close for color alone to mark a link (WCAG 1.4.1).
+- **jpm**: the theme choice is in Settings, next to Language, not in
+  Profile. jpm's own light colors (`tag`, `user-second`, `info-layer`, the
+  greys) keep their fills with dark text instead of taking deep fills:
+  they're mid-tone accents on chips and buttons, not large pastel areas.
 
 ## Goal
 

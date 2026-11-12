@@ -107,12 +107,31 @@
   --code-color: #ecebf5;
 }
 
+// Text on a colored fill that's the same in both themes, such as a color a
+// user picked: white or dark in light and dark mode alike. .white-text stays
+// white too, but .black-text turns light in dark mode (it's text on the
+// page). mini_vue's getContrastClass can return these.
+.on-color-text { color: var(--on-color) !important; }
+.on-light-color-text { color: var(--on-light-color) !important; }
+
 :root:has(body:where(.mini, #mini).dark-mode) {
   @include -dark-tokens;
 }
 @media (prefers-color-scheme: dark) {
   :root:has(body:where(.mini, #mini).auto-dark-mode) {
     @include -dark-tokens;
+  }
+}
+
+// On a dark page a link's tint sits closer to the light body text than in
+// light mode, under the 3:1 that lets color alone mark a link (WCAG 1.4.1),
+// so links in running text are underlined.
+body:where(.mini, #mini).dark-mode p a:not(.btn, [class*="-btn"]) {
+  text-decoration: underline;
+}
+@media (prefers-color-scheme: dark) {
+  body:where(.mini, #mini).auto-dark-mode p a:not(.btn, [class*="-btn"]) {
+    text-decoration: underline;
   }
 }
 

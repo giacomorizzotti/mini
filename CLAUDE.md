@@ -108,7 +108,11 @@ and its decisions are in [plans/DARK_MODE.md](plans/DARK_MODE.md).
   follows by itself.
 - **Text on a colored fill** uses `--on-color` (white) or `--on-light-color`
   (dark), which don't swap. White text on a brand color or a colored bar is
-  `var(--on-color)`, not `var(--white)`.
+  `var(--on-color)`, not `var(--white)`. As classes: `.on-color-text` and
+  `.on-light-color-text`; `.black-text` is text on the page and turns light
+  in dark mode.
+- **Links in running text** (`p a`) are underlined in dark mode, where the
+  link tints are too close to the body text for color alone (WCAG 1.4.1).
 - **A color as text** reads `var(--<token>-on-dark, <its light value>)`:
   `color: var(--main-color-on-dark, var(--main-color))`. Only dark mode
   defines the `-on-dark` tokens. The color loops add the hook themselves.
