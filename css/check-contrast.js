@@ -1,5 +1,7 @@
 // WCAG AA contrast check of every color pair mini's color and button maps
-// generate: text 4.5:1, form field outlines 3:1 (WCAG 1.4.11).
+// generate: text 4.5:1, form field outlines 3:1 (WCAG 1.4.11). It runs twice:
+// light mode, and dark mode (the :root:has(body.mini.dark-mode) values on
+// top of the light ones, see scss/_dark_mode.scss).
 //
 //   node css/check-contrast.js [compiled.css] [scss dir]
 //
@@ -13,16 +15,21 @@ const css = process.argv[2] ?? path.join(__dirname, 'mini.css');
 const scssDir = process.argv[3] ?? path.join(__dirname, 'scss');
 const src = fs.readFileSync(css, 'utf8');
 
-// :root custom properties (plain :root blocks only, not the high-contrast one).
-const vars = {};
-for (const block of src.matchAll(/(^|\n):root\s*\{([^}]*)\}/g))
-  for (const m of block[2].matchAll(/--([\w-]+)\s*:\s*([^;]+);/g)) vars[m[1]] = m[2].trim();
+function readBlock(selectorRe) {
+  const vars = {};
+  for (const block of src.matchAll(selectorRe))
+    for (const m of block[1].matchAll(/--([\w-]+)\s*:\s*([^;]+);/g)) vars[m[1]] = m[2].trim();
+  return vars;
+}
+// Plain :root blocks only (not high contrast's or dark mode's).
+const light = readBlock(/(?:^|\n):root\s*\{([^}]*)\}/g);
+const dark = { ...light, ...readBlock(/(?:^|\n):root:has\(body[^{]*?\.dark-mode\)\s*\{([^}]*)\}/g) };
 
-function parse(value, depth = 0) {
+function parse(vars, value, depth = 0) {
   if (depth > 10 || value == null) return null;
   value = value.trim();
   const v = /^var\(--([\w-]+)\)$/.exec(value);
-  if (v) return parse(vars[v[1]], depth + 1);
+  if (v) return parse(vars, vars[v[1]], depth + 1);
   let m = /^#([0-9a-f]{3,8})$/i.exec(value);
   if (m) {
     let h = m[1];
@@ -53,42 +60,59 @@ function readMap(file) {
   return [...text.slice(start, end).matchAll(/^\s*"([\w-]+)"((?:\s+var\(--[\w-]+\))+)/gm)]
     .map(m => ({ name: m[1], vals: [...m[2].matchAll(/var\(--([\w-]+)\)/g)].map(x => x[1]) }));
 }
+const colorsMap = readMap('_colors.scss');
+const buttonsMap = readMap('_buttons.scss');
 
-const rows = [];
-function check(kind, name, fgVar, bgVar, min) {
-  const fg = parse(`var(--${fgVar})`), bg = parse(`var(--${bgVar})`);
-  if (!fg || !bg) { rows.push({ kind, name, pair: `--${fgVar} on --${bgVar}`, r: null, min, note: 'undefined token' }); return; }
-  if (fg.a < 1 || bg.a < 1) return;
-  rows.push({ kind, name, pair: `${fgVar} ${hex(fg)} on ${bgVar} ${hex(bg)}`, r: ratio(fg, bg), min });
-}
+// Mirrors _dark_mode.scss: the neutral scale swaps by itself; every other
+// color reads --<token>-on-dark as text when the mode defines it.
+const NEUTRALS = ['white', 'false-white', 'light-grey', 'muted', 'grey', 'dark-grey', 'false-black', 'black'];
 
-// _colors.scss: "-text" (its readable shade, if any) on the light page
-// backgrounds, "-box"/"-bg" pairs, and the swapped variants.
-for (const { name, vals: [color, text, shade] } of readMap('_colors.scss')) {
-  if (!['white', 'false-white', 'light-grey'].includes(color)) {
-    check('text on page', name, shade || color, 'white', 4.5);
-    check('text on page', name, shade || color, 'false-white', 4.5);
+function run(mode, vars) {
+  const rows = [];
+  const check = (kind, name, fgVar, bgVar, min) => {
+    const fg = parse(vars, `var(--${fgVar})`), bg = parse(vars, `var(--${bgVar})`);
+    if (!fg || !bg) { rows.push({ kind, name, pair: `--${fgVar} on --${bgVar}`, r: null, min, note: 'undefined token' }); return; }
+    if (fg.a < 1 || bg.a < 1) return;
+    rows.push({ kind, name, pair: `${fgVar} ${hex(fg)} on ${bgVar} ${hex(bg)}`, r: ratio(fg, bg), min });
+  };
+  const onDark = (color, fallback) => (!NEUTRALS.includes(color) && vars[`${color}-on-dark`] ? `${color}-on-dark` : fallback);
+
+  // _colors.scss: "-text" (its readable shade, if any) on the page
+  // backgrounds, "-box"/"-bg" pairs, and the swapped variants.
+  for (const { name, vals: [color, text, shade] } of colorsMap) {
+    const neutral = NEUTRALS.includes(color);
+    const readable = onDark(color, shade || color);
+    if (!['white', 'false-white', 'light-grey'].includes(color)) {
+      check('text on page', name, readable, 'white', 4.5);
+      check('text on page', name, readable, 'false-white', 4.5);
+    }
+    check('box/bg', name, shade && !neutral ? onDark(color, text) : text, color, 4.5);
+    check('swapped variant', name, readable, shade || !neutral ? 'white' : text, 4.5);
   }
-  check('box/bg', name, text, color, 4.5);
-  check('swapped variant', name, shade || color, shade ? 'white' : text, 4.5);
-}
-// _buttons.scss: normal, hover/active, invert (on a white page), invert hover.
-for (const { name, vals: [color, active, text, invertText, hoverText] } of readMap('_buttons.scss')) {
-  check('button', name, text, color, 4.5);
-  check('button hover/active', name, hoverText || text, active, 4.5);
-  if (!['white', 'false-white', 'wh'].includes(color)) check('button invert', name, invertText || color, 'white', 4.5);
-}
-// Non-text (WCAG 1.4.11, 3:1): form field outline and its focus state.
-check('form field border', 'input', 'field-border-color', 'white', 3);
-check('form field border', 'input', 'field-border-color', 'false-white', 3);
-check('focus border', 'input:focus', 'main-color', 'white', 3);
+  // _buttons.scss: normal, hover/active, invert (on the page).
+  for (const { name, vals: [color, active, text, invertText, hoverText] } of buttonsMap) {
+    const neutral = NEUTRALS.includes(color);
+    check('button', name, invertText && !neutral ? onDark(color, text) : text, color, 4.5);
+    check('button hover/active', name, hoverText || text, active, 4.5);
+    if (!['white', 'false-white', 'wh'].includes(color)) check('button invert', name, onDark(color, invertText || color), 'white', 4.5);
+  }
+  // Links and a plain .btn-invert: the link color as text on the page.
+  for (const bg of ['white', 'false-white']) check('link', 'a', onDark('link-color', 'link-color'), bg, 4.5);
+  // Non-text (WCAG 1.4.11, 3:1): form field outline and its focus state.
+  check('form field border', 'input', 'field-border-color', 'white', 3);
+  check('form field border', 'input', 'field-border-color', 'false-white', 3);
+  check('focus border', 'input:focus', onDark('main-color', 'main-color'), 'white', 3);
 
-const seen = new Set();
-const fails = rows.filter(r => r.r === null || r.r < r.min).filter(r => { const k = r.kind + r.pair; if (seen.has(k)) return false; seen.add(k); return true; });
-const byKind = {};
-for (const r of rows) { byKind[r.kind] ??= [0, 0]; byKind[r.kind][0]++; if (r.r !== null && r.r >= r.min) byKind[r.kind][1]++; }
-console.log('pairs checked by kind (passing/total):', Object.entries(byKind).map(([k, [t, p]]) => `${k} ${p}/${t}`).join(' | '));
-console.log(`\nFAILING (${fails.length} unique):`);
-for (const r of fails.sort((a, b) => (a.r ?? 0) - (b.r ?? 0)))
-  console.log(`${(r.r === null ? '  n/a' : r.r.toFixed(2).padStart(5))}  (needs ${r.min})  ${r.kind.padEnd(20)} ${r.name.padEnd(18)} ${r.pair}${r.note ? '  ' + r.note : ''}`);
-process.exitCode = fails.length ? 1 : 0;
+  const seen = new Set();
+  const fails = rows.filter(r => r.r === null || r.r < r.min).filter(r => { const k = r.kind + r.pair; if (seen.has(k)) return false; seen.add(k); return true; });
+  const byKind = {};
+  for (const r of rows) { byKind[r.kind] ??= [0, 0]; byKind[r.kind][0]++; if (r.r !== null && r.r >= r.min) byKind[r.kind][1]++; }
+  console.log(`${mode}: pairs checked by kind (passing/total):`, Object.entries(byKind).map(([k, [t, p]]) => `${k} ${p}/${t}`).join(' | '));
+  console.log(`${mode} FAILING (${fails.length} unique):`);
+  for (const r of fails.sort((a, b) => (a.r ?? 0) - (b.r ?? 0)))
+    console.log(`${(r.r === null ? '  n/a' : r.r.toFixed(2).padStart(5))}  (needs ${r.min})  ${r.kind.padEnd(20)} ${r.name.padEnd(18)} ${r.pair}${r.note ? '  ' + r.note : ''}`);
+  return fails.length;
+}
+
+const failed = run('LIGHT', light) + (Object.keys(dark).length > Object.keys(light).length ? (console.log(), run('DARK', dark)) : 0);
+process.exitCode = failed ? 1 : 0;

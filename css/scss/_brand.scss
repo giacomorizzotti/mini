@@ -33,33 +33,33 @@ body.top {
   header#header {
     &.neg, &.inv, &.invert, &.top-neg, &.top-inv, &.top-bk, &.top-col {
       #brand, .brand {
-        color: var(--white);
+        color: var(--on-color);
         a {
           .logo, .header-logo {
             filter: brightness(0) invert(1);
           }
           .site-title {
-            color: var(--white);
+            color: var(--on-color);
           }
         }
         .site-description {
-          color: var(--white);
+          color: var(--on-color);
         }
       }
     }
     #brand, .brand {
       &.neg, &.inv, &.invert, &.top-neg, &.top-inv, &.top-bk, &.top-col {
-        color: var(--white);
+        color: var(--on-color);
         a {
           .logo, .header-logo {
             filter: brightness(0) invert(1);
           }
           .site-title {
-            color: var(--white);
+            color: var(--on-color);
           }
         }
         .site-description {
-          color: var(--white);
+          color: var(--on-color);
         }
       }
     }
@@ -76,12 +76,12 @@ body.top {
         filter: brightness(0) invert(1);
       }
       .site-title, .header-logo {
-        color:var(--white);
+        color: var(--on-color);
           min-height: var(--scroll-logo-height);
           height: var(--scroll-logo-height);
       }
       .site-description {
-        color: var(--white);
+        color: var(--on-color);
       }
     }
   }
@@ -99,33 +99,33 @@ body.scroll, body.scrolled {
     }
     &.neg, &.inv, &.invert, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
       #brand, .brand {
-        color: var(--white);
+        color: var(--on-color);
         a {
           .logo, .header-logo {
             filter: brightness(0) invert(1);
           }
           .site-title {
-            color: var(--white);
+            color: var(--on-color);
           }
         }
         .site-description {
-          color: var(--white);
+          color: var(--on-color);
         }
       }
     }
     #brand, .brand {
       &.neg, &.inv, &.invert, &.scroll-neg, &.scroll-inv, &.scroll-bk, &.scroll-col {
-        color: var(--white);
+        color: var(--on-color);
         a {
           .logo, .header-logo {
             filter: brightness(0) invert(1);
           }
           .site-title {
-            color: var(--white);
+            color: var(--on-color);
           }
         }
         .site-description {
-          color: var(--white);
+          color: var(--on-color);
         }
       }
     }

@@ -15,7 +15,7 @@
     height: auto;
     padding-right: calc((var(--menu-toggle-height)) + (var(--padding) * 2) + (var(--padding) * 1));
     @media screen and (min-width: 768px) {
-      background-color: rgba(250, 250, 250, 0.85);
+      background-color: var(--page-menu-background, rgba(250, 250, 250, 0.85));
       border: 1px solid var(--false-white);
       border-radius: 10px;
       overflow: hidden;
@@ -41,7 +41,7 @@
           margin: 0;
         }
         .icon-label {
-          color: var(--main-color);
+          color: var(--main-color-on-dark, var(--main-color));
         }
       }
       &.item, &.menu-item {
@@ -76,7 +76,7 @@ body.top {
             #page-menu ul li {
                 &.item, &.menu-item {
                     a {
-                        color: var(--white);
+                        color: var(--on-color);
                     }
                 }
             }
@@ -89,7 +89,7 @@ body.scroll, body.scrolled {
             #page-menu ul li {
                 &.item, &.menu-item {
                     a {
-                    color: var(--white);
+                    color: var(--on-color);
                     }
                 }
             }
@@ -105,9 +105,9 @@ body.open-menu {
     }
     li{
       &.icon {
-        color: var(--white);
+        color: var(--on-color);
         .icon-label {
-          color: var(--white);
+          color: var(--on-color);
         }
       }
       a {

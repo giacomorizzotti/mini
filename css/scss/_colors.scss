@@ -2,6 +2,7 @@
 @use "sass:string";
 @use "inline_mixins";
 @use "settings";
+@use "dark_mode";
 // @extend only reaches modules this one loads: _forms' chip inputs
 @use "forms";
 
@@ -22,53 +23,53 @@ $colors:
   "false-black" var(--false-black) var(--white),
   "bk" var(--black) var(--white),
   "black" var(--black) var(--white),
-  "col" var(--main-color) var(--white),
-  "color" var(--main-color) var(--white),
-  "main-color" var(--main-color) var(--white),
-  "color-dark" var(--main-color-dark) var(--white),
-  "main-color-dark" var(--main-color-dark) var(--white),
-  "second-color" var(--second-color) var(--white),
-  "second-color-dark" var(--second-color-dark) var(--white),
-  "third-color" var(--third-color) var(--black) var(--third-color-dark),
-  "third-color-dark" var(--third-color-dark) var(--white),
-  "fourth-color" var(--fourth-color) var(--white),
-  "fourth-color-dark" var(--fourth-color-dark) var(--white),
-  "link" var(--link-color) var(--white),
-  "link-hover" var(--link-hover-color) var(--white),
-  //"link-color" var(--link-color) var(--white),
-  //"link-hover-color" var(--link-hover-color) var(--white),
-  "info" var(--info) var(--black) var(--info-dark),
-  "success" var(--success) var(--black) var(--success-dark),
-  "warning" var(--warning) var(--black) var(--warning-dark),
-  "danger" var(--danger) var(--black) var(--danger-dark),
-  "bad" var(--bad) var(--black) var(--bad-dark),
-  "acid-green" var(--acid-green) var(--black) var(--acid-green-dark),
-  "gingerbread" var(--gingerbread) var(--white),
+  "col" var(--main-color) var(--on-color),
+  "color" var(--main-color) var(--on-color),
+  "main-color" var(--main-color) var(--on-color),
+  "color-dark" var(--main-color-dark) var(--on-color),
+  "main-color-dark" var(--main-color-dark) var(--on-color),
+  "second-color" var(--second-color) var(--on-color),
+  "second-color-dark" var(--second-color-dark) var(--on-color),
+  "third-color" var(--third-color) var(--on-light-color) var(--third-color-dark),
+  "third-color-dark" var(--third-color-dark) var(--on-color),
+  "fourth-color" var(--fourth-color) var(--on-color),
+  "fourth-color-dark" var(--fourth-color-dark) var(--on-color),
+  "link" var(--link-color) var(--on-color),
+  "link-hover" var(--link-hover-color) var(--on-color),
+  //"link-color" var(--link-color) var(--on-color),
+  //"link-hover-color" var(--link-hover-color) var(--on-color),
+  "info" var(--info) var(--on-light-color) var(--info-dark),
+  "success" var(--success) var(--on-light-color) var(--success-dark),
+  "warning" var(--warning) var(--on-light-color) var(--warning-dark),
+  "danger" var(--danger) var(--on-light-color) var(--danger-dark),
+  "bad" var(--bad) var(--on-light-color) var(--bad-dark),
+  "acid-green" var(--acid-green) var(--on-light-color) var(--acid-green-dark),
+  "gingerbread" var(--gingerbread) var(--on-color),
 
-  "mini" var(--mini-color) var(--white),
-  "mini-dark" var(--mini-color-dark) var(--white),
-  "mini-second" var(--mini-second-color) var(--white),
-  "mini-second-dark" var(--mini-second-color-dark) var(--white),
-  "mini-third" var(--mini-third-color) var(--black) var(--mini-third-color-dark),
-  "mini-third-dark" var(--mini-third-color-dark) var(--white),
-  "mini-fourth" var(--mini-fourth-color) var(--white),
-  "mini-fourth-dark" var(--mini-fourth-color-dark) var(--white),
+  "mini" var(--mini-color) var(--on-color),
+  "mini-dark" var(--mini-color-dark) var(--on-color),
+  "mini-second" var(--mini-second-color) var(--on-color),
+  "mini-second-dark" var(--mini-second-color-dark) var(--on-color),
+  "mini-third" var(--mini-third-color) var(--on-light-color) var(--mini-third-color-dark),
+  "mini-third-dark" var(--mini-third-color-dark) var(--on-color),
+  "mini-fourth" var(--mini-fourth-color) var(--on-color),
+  "mini-fourth-dark" var(--mini-fourth-color-dark) var(--on-color),
 
-  "uwa" var(--uwa-color) var(--white),
-  "uwa-dark" var(--uwa-color-dark) var(--white),
-  "uwa-second" var(--uwa-second-color) var(--white),
-  "uwa-third" var(--uwa-third-color) var(--black) var(--uwa-third-color-text),
-  "uwa-fourth" var(--uwa-fourth-color) var(--white),
-  "uwa-link" var(--uwa-link-color) var(--white),
+  "uwa" var(--uwa-color) var(--on-color),
+  "uwa-dark" var(--uwa-color-dark) var(--on-color),
+  "uwa-second" var(--uwa-second-color) var(--on-color),
+  "uwa-third" var(--uwa-third-color) var(--on-light-color) var(--uwa-third-color-text),
+  "uwa-fourth" var(--uwa-fourth-color) var(--on-color),
+  "uwa-link" var(--uwa-link-color) var(--on-color),
 
-  "light-blue" var(--light-blue) var(--black) var(--blue),
-  "blue" var(--blue) var(--white),
-  "dark-blue" var(--dark-blue) var(--white),
+  "light-blue" var(--light-blue) var(--on-light-color) var(--blue),
+  "blue" var(--blue) var(--on-color),
+  "dark-blue" var(--dark-blue) var(--on-color),
 
-  "jpm" var(--jpm-color) var(--white),
-  "jpm-dark" var(--jpm-color-dark) var(--white),
-  "jpm-second" var(--jpm-second-color) var(--white),
-  "jpm-second-dark" var(--jpm-second-color-dark) var(--white);
+  "jpm" var(--jpm-color) var(--on-color),
+  "jpm-dark" var(--jpm-color-dark) var(--on-color),
+  "jpm-second" var(--jpm-second-color) var(--on-color),
+  "jpm-second-dark" var(--jpm-second-color-dark) var(--on-color);
 
   //"aroma" var(--aroma-color) var(--white),
   //"aroma-dark" var(--aroma-color-dark) var(--white),
@@ -95,27 +96,45 @@ $-bubble-sizes: ('': calc(var(--margin) * 2), '-s': var(--margin));
   // other color swaps fill and text exactly as before.
   $readable: $colorcode;
   $invertbg: $colortext;
+  $filltext: $colortext;
   @if $textshade {
     $readable: $textshade;
     $invertbg: var(--white);
   }
+  // Dark mode (_dark_mode.scss): a color, unlike the neutral scale, reads
+  // its --<token>-on-dark shade as text, and its swapped variants sit on
+  // the page color (--white, the same white as before in light mode). A
+  // light color's deep dark fill takes that shade as its text too.
+  @if not dark_mode.is-neutral($colorcode) {
+    $readable: dark_mode.on-dark($colorcode, $readable);
+    $invertbg: var(--white);
+    @if $textshade {
+      $filltext: dark_mode.on-dark($colorcode, $colortext);
+    }
+  }
+  // .white-text stays white in dark mode: it's used on colored bars and
+  // photos. Its swapped variants still follow the page.
+  $textclass: $readable;
+  @if dark_mode.token($colorcode) == "white" {
+    $textclass: var(--on-color);
+  }
   .#{$colorname} {
     // texts
     &-text {
-      color: $readable!important;
+      color: $textclass!important;
       &-hover {
         &:hover {
-          color: $readable!important;
+          color: $textclass!important;
         }
       }
       &-clicked {
         &.clicked {
-          color: $readable!important;
+          color: $textclass!important;
         }
       }
       &-active {
         &.active {
-          color: $readable!important;
+          color: $textclass!important;
         }
       }
     }
@@ -123,7 +142,7 @@ $-bubble-sizes: ('': calc(var(--margin) * 2), '-s': var(--margin));
     &-box, &-text-box {
       @include inline_mixins.text-box-base;
       background: $colorcode;
-      color: $colortext;
+      color: $filltext;
       border-color: $colorcode;
       &-hover {
         &:hover {
@@ -160,7 +179,7 @@ $-bubble-sizes: ('': calc(var(--margin) * 2), '-s': var(--margin));
     &-chip {
       @include inline_mixins.chip-base;
       background: $colorcode;
-      color: $colortext;
+      color: $filltext;
       border-color: $colorcode;
       &-hover {
         &:hover {
@@ -197,7 +216,7 @@ $-bubble-sizes: ('': calc(var(--margin) * 2), '-s': var(--margin));
     &-flag {
       @include inline_mixins.flag-base;
       background: $colorcode;
-      color: $colortext;
+      color: $filltext;
       border-color: $colorcode;
       &-hover {
         &:hover {

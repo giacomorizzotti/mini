@@ -16,7 +16,7 @@ header#header {
 #sheet {
   aside#side-right nav.menu a,
   aside#side-left nav.menu a {
-    color: var(--white);
+    color: var(--on-color);
   }
   aside#side-right.inv nav.menu a, aside#side-right.neg nav.menu a,
   aside#side-left.inv nav.menu a,  aside#side-left.neg nav.menu a {
@@ -86,9 +86,9 @@ nav {
       }
       &.active > a, &.selected > a, &.router-link-active > a, a.active, a.selected, a.router-link-active, &.current-menu-item > a, &.current-page-parent > a {
         background-color: var(--link-hover-color);
-        color: var(--white);
+        color: var(--on-color);
         @include breakpoints.md {
-          color: var(--link-hover-color);
+          color: var(--link-hover-color-on-dark, var(--link-hover-color));
           background-color: transparent;
         }
         &::after {
@@ -102,9 +102,9 @@ nav {
       }
       &:hover > a {
         background-color: var(--link-color);
-        color: var(--white);
+        color: var(--on-color);
         @include breakpoints.md {
-          color: var(--link-color);
+          color: var(--link-color-on-dark, var(--link-color));
           background-color: transparent;
         }
         &::after {
@@ -188,7 +188,7 @@ nav#main-menu ul, ul#main-menu {
   li.item, li.menu-item {
     font-size: var(--h3);
     a {
-      color: var(--white);
+      color: var(--on-color);
       &::after {
         height: 4px;
         bottom: -4px;

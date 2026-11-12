@@ -33,7 +33,7 @@ Also watch for **over-fitting to one consumer's domain model** — something can
 ## Structure (this repo)
 
 ```
-css/scss/      35 partials (_vars, _buttons, _colors, _typo, _forms, ...), entry point css/mini.scss
+css/scss/      36 partials (_vars, _buttons, _colors, _typo, _forms, _dark_mode, ...), entry point css/mini.scss
 css/           compiled mini.css/.min.css + source maps (checked in, see "Compiling the CSS")
 js/            vanilla JS: mini.js (main utility lib), gdpr.js, slider.js, debug.js
 img/           shared brand/icon assets, reused across consuming sites
@@ -93,9 +93,31 @@ a color:
   hover/active color). Entries without them behave as before.
 - Check any change by computing each generated pair's contrast ratio, not by
   eye: a color can look fine and sit at 2:1. `css/build.sh` does it after
-  every compile (`css/check-contrast.js`).
-- An opt-in dark mode is designed, decisions included, in
-  [plans/DARK_MODE.md](plans/DARK_MODE.md); it's not built yet.
+  every compile (`css/check-contrast.js`), in light and in dark mode.
+
+### Dark mode (since 2026-11-12)
+
+Opt-in: `.dark-mode` (always) or `.auto-dark-mode` (follows the system) on
+mini's body, `body.mini` in WordPress or `body#mini` in the Vue projects
+(mini_vue's `useTheme` and `ThemeSwitch` set it). Without either class a site
+renders exactly as before. Everything is in `_dark_mode.scss`; the design
+and its decisions are in [plans/DARK_MODE.md](plans/DARK_MODE.md).
+
+- **The neutral scale swaps** (`--white` becomes the dark page, `--black`
+  the light text, the greys in between), so whatever uses those tokens
+  follows by itself.
+- **Text on a colored fill** uses `--on-color` (white) or `--on-light-color`
+  (dark), which don't swap. White text on a brand color or a colored bar is
+  `var(--on-color)`, not `var(--white)`.
+- **A color as text** reads `var(--<token>-on-dark, <its light value>)`:
+  `color: var(--main-color-on-dark, var(--main-color))`. Only dark mode
+  defines the `-on-dark` tokens. The color loops add the hook themselves.
+- **Adding a color** to the maps means adding its `--<token>-on-dark` to
+  `_dark_mode.scss` (and, for a light color, a deep fill): the checker's dark
+  pass fails without it.
+- **Light mode must not change**: every dark-mode hook falls back to today's
+  value. Check by compiling before and after, resolving each `var()` to its
+  light value, and comparing rule by rule.
 
 `mini.scss` and some partials (`_accessibility`, `_animations`, `_basic`,
 `_breakpoints`, `_colors`, `_debug`, `_flexboxes`, `_reset`, `_slides`,

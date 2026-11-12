@@ -1,6 +1,22 @@
 # Dark mode for mini (and jpm)
 
-Status: design, with its decisions made; nothing built yet (2026-11-11).
+Status: **phases 1 and 2 built** on 2026-11-12 (`css/scss/_dark_mode.scss`,
+mini_vue's `useTheme` and `ThemeSwitch`, a demo on mini.uwa.agency). jpm
+(phase 3) is next. Built differently from the text below:
+
+- **Activation** is `body:where(.mini, #mini)`, since the Vue projects mark
+  the body with `id="mini"`, not the class. `:where()` adds no specificity,
+  so high contrast still wins.
+- **One hook family**, `--<token>-on-dark` (`--main-color-on-dark`,
+  `--success-on-dark`), instead of `--<name>-text` and `--<name>-on`: the
+  same shade serves as text on the page, in the swapped variants and invert
+  buttons, and as the text on a light color's deep fill. Named after the
+  color token, so aliases (`col`, `color`, `main-color`) share one.
+  `--uwa-third-color-text` therefore keeps its name.
+- **Code blocks** (`pre`, `code`) stay dark, a raised dark surface, instead
+  of swapping to light.
+- **The cookie banner** keeps the light theme inside it (white text and
+  buttons on gingerbread).
 
 ## Goal
 

@@ -54,10 +54,10 @@
       box-shadow: none;
     }
     &[aria-selected="true"], &[aria-current="page"], &.active {
-      color: var(--main-color);
+      color: var(--main-color-on-dark, var(--main-color));
       background: transparent;
       border-color: transparent;
-      border-bottom-color: var(--main-color);
+      border-bottom-color: var(--main-color-on-dark, var(--main-color));
     }
     // Inside the tab: the scrolling row would clip a ring drawn outside it.
     &:focus-visible {

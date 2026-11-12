@@ -50,6 +50,11 @@
   --false-white-transp: rgb( 0 0 0 / 3% );
   --white: rgb( 255 255 255 / 100% );
   --transp: rgb( 0 0 0 / 0% );
+  // Text on a colored fill. --white and --black swap in dark mode
+  // (_dark_mode.scss); these two don't, so white text on a brand color and
+  // dark text on a pastel stay as they are.
+  --on-color: rgb( 255 255 255 / 100% );
+  --on-light-color: rgb( 10 10 20 / 100% );
 
   --main-color: #12616D;
   --main-color-dark: #08363d;
@@ -91,7 +96,7 @@
 
   --theme-color: var(--main-color);
   --text-selection-bg: var(--link-color);
-  --text-selection-color: var(--white);
+  --text-selection-color: var(--on-color);
 
   // mini
   --mini-color: #12616D;

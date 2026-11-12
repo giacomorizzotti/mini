@@ -1,0 +1,134 @@
+@use "sass:list";
+@use "sass:string";
+
+// DARK MODE: opt-in, light mode is unchanged. Design and decisions:
+// plans/DARK_MODE.md.
+//
+//   .dark-mode        always dark
+//   .auto-dark-mode   dark when the operating system prefers it
+//   neither           the light theme, as before
+//
+// on mini's body: body.mini (WordPress) or body#mini (the Vue projects).
+// mini_vue's useTheme sets them.
+//
+// The tokens are set on :root (through :has), like high contrast in
+// _accessibility.scss, so tokens that _vars defines from other tokens
+// (--menu-toggle-line-color: var(--black), ...) follow too. :where() adds
+// no specificity, so high contrast, which comes later, wins when both are
+// on.
+//
+// - The neutral scale swaps: the page, .white-box, borders, body text,
+//   .grey-text and form fields follow with no markup change.
+// - --on-color and --on-light-color (text on colored fills) don't change.
+// - The light colors (status colors, third-color, ...) get a deep fill of
+//   their own hue, with their pastel as the text on it.
+// - --<token>-on-dark is a color as text on a dark surface. The -text
+//   classes, swapped boxes/chips/flags, invert buttons and links read it,
+//   falling back to the light value: light mode never defines it.
+//
+// Every pair is checked by css/check-contrast.js, in light and dark.
+
+@mixin -dark-tokens {
+  color-scheme: dark;
+  background-color: var(--white);
+
+  // Neutral scale, violet-tinted like the light greys.
+  --white: #16161f;
+  --false-white: #1e1e2b;
+  --false-white-transp: rgb( 255 255 255 / 4% );
+  --light-grey: #3d3d52;
+  --field-border-color: #6b6b85;
+  --grey: #9494ad;
+  --muted: #a3a3ba;
+  --dark-grey: #d0d0dc;
+  --false-black: #e4e3ee;
+  --black: #ecebf5;
+
+  // Light colors: a deep fill, with the pastel (lightened where it needed
+  // to be) as the text on it and as text on the page.
+  --third-color: #5f2424;
+  --third-color-on-dark: #f78484;
+  --info: #1e394f;
+  --info-on-dark: #95bad8;
+  --success: #203c31;
+  --success-on-dark: #93c5b1;
+  --warning: #4b321c;
+  --warning-on-dark: #eeb889;
+  --danger: #5e2428;
+  --danger-on-dark: #e9939a;
+  --bad: #5e2432;
+  --bad-on-dark: #e28ca2;
+  --acid-green: #353a16;
+  --acid-green-on-dark: #cde15a;
+  --mini-third-color: #572a21;
+  --mini-third-color-on-dark: #fe8064;
+  --uwa-third-color: #193c42;
+  --uwa-third-color-on-dark: #00dcff;
+  --light-blue: #1b3b48;
+  --light-blue-on-dark: #3ab0e1;
+
+  // Strong colors keep their fill and white text; as text they take a
+  // lighter tint of their hue (5.2:1 on --false-white).
+  --main-color-on-dark: #1e9fb3;
+  --main-color-dark-on-dark: #189fb4;
+  --second-color-on-dark: #2798dd;
+  --second-color-dark-on-dark: #3098e1;
+  --third-color-dark-on-dark: #e46c6c;
+  --fourth-color-on-dark: #8b8bcd;
+  --fourth-color-dark-on-dark: #8b8bd1;
+  --link-color-on-dark: #17a0b1;
+  --link-hover-color-on-dark: #179faf;
+  --gingerbread-on-dark: #ab889d;
+  --mini-color-on-dark: #1e9fb3;
+  --mini-color-dark-on-dark: #189fb4;
+  --mini-second-color-on-dark: #3d98d8;
+  --mini-second-color-dark-on-dark: #4c98cc;
+  --mini-third-color-dark-on-dark: #f56240;
+  --mini-fourth-color-on-dark: #a084d3;
+  --mini-fourth-color-dark-on-dark: #a27fe0;
+  --uwa-color-on-dark: #7389ff;
+  --uwa-color-dark-on-dark: #788ddd;
+  --uwa-second-color-on-dark: #9c82e4;
+  --uwa-fourth-color-on-dark: #ff4d86;
+  --uwa-link-color-on-dark: #9c82e4;
+  --blue-on-dark: #2296f1;
+  --dark-blue-on-dark: #2d96ea;
+  --jpm-color-on-dark: #a082d1;
+  --jpm-color-dark-on-dark: #a084cb;
+  --jpm-second-color-on-dark: #6693d1;
+  --jpm-second-color-dark-on-dark: #6893cf;
+
+  // A plain .btn-invert (no color class) has the link color as its text.
+  --button-invert-text-color: var(--link-color-on-dark);
+  // The page menu's translucent bar (_page_menu.scss).
+  --page-menu-background: rgb( 30 30 43 / 85% );
+  // Code blocks stay dark: a raised dark surface instead of swapping to light.
+  --code-background: #1e1e2b;
+  --code-color: #ecebf5;
+}
+
+:root:has(body:where(.mini, #mini).dark-mode) {
+  @include -dark-tokens;
+}
+@media (prefers-color-scheme: dark) {
+  :root:has(body:where(.mini, #mini).auto-dark-mode) {
+    @include -dark-tokens;
+  }
+}
+
+// For _colors and _buttons (mini.scss hides these from projects).
+// The neutral scale swaps by itself, so its colors need no hook.
+$-neutrals: "white", "false-white", "light-grey", "muted", "grey", "dark-grey", "false-black", "black";
+
+// var(--main-color) -> "main-color"
+@function token($colorcode) {
+  @return string.slice("#{$colorcode}", 7, -2);
+}
+@function is-neutral($colorcode) {
+  @return list.index($-neutrals, token($colorcode)) != null;
+}
+// The color as text: its dark-mode shade when dark mode defines one,
+// otherwise $fallback (always, in light mode).
+@function on-dark($colorcode, $fallback) {
+  @return var(--#{token($colorcode)}-on-dark, #{$fallback});
+}

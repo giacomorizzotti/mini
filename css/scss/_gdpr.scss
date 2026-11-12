@@ -22,6 +22,11 @@ body.consent-pending {
 
 // Banner
 #consent-banner {
+  // The light theme inside the banner, in dark mode too: white text, and
+  // white (wh-btn) buttons with light-grey hover, on gingerbread.
+  --white: var(--on-color);
+  --black: var(--on-light-color);
+  --light-grey: #bbbbc9;
   position: fixed;
   z-index: 901;
   bottom: 0;
@@ -76,7 +81,7 @@ body.consent-pending {
 
     p.consent-status {
       display: inline-block;
-      color: var(--white);
+      color: var(--on-color);
       font-weight: 700;
       font-style: italic;
     }
@@ -91,10 +96,10 @@ body.consent-pending {
     display: inline-block;
     line-height: 1;
     font-size: var(--h4);
-    color: var(--white) !important;
+    color: var(--on-color) !important;
     padding: 0;
     cursor: pointer;
-    &:hover { color: var(--black) !important; }
+    &:hover { color: var(--on-light-color) !important; }
   }
 
   p.cookie-icon {
@@ -118,9 +123,9 @@ body.consent-pending {
         margin-top: 0;
         padding-right: 40px;
         a {
-          color: var(--white) !important;
+          color: var(--on-color) !important;
           text-decoration: underline;
-          &:hover { color: var(--black) !important; }
+          &:hover { color: var(--on-light-color) !important; }
         }
       }
     }
