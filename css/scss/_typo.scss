@@ -330,6 +330,10 @@ a, .link {
 // on the page surfaces (white, false-white), and on a fill the underline is
 // what tells a link apart (WCAG 1.4.1). :where() keeps the specificity of a
 // plain link, so buttons, chips and a site's own link rules still win.
+// [class~="btn"] rather than .btn: a stylesheet that @imports mini and
+// then @extends .btn (jpm's entity-button-utilities) reaches this rule,
+// and Sass (1.91 to 1.101 at least) crashes extending .btn inside a
+// :not() nested in :where(), "components may not be empty" (2026-11-13).
 $-page-surfaces: "white", "false-white";
 $-filled-boxes: ();
 @each $colorname, $colorcode in settings.selected-colors(colors.$colors) {
@@ -339,7 +343,7 @@ $-filled-boxes: ();
   }
 }
 @if list.length($-filled-boxes) > 0 {
-  :where(#{$-filled-boxes}) a:where(:not(.btn, [class*="-btn"])) {
+  :where(#{$-filled-boxes}) a:where(:not([class~="btn"], [class*="-btn"])) {
     color: inherit;
     text-decoration: underline;
     &:hover {
