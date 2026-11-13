@@ -1,4 +1,8 @@
+@use "sass:list";
 @use "inline_mixins";
+@use "settings";
+@use "colors";
+@use "dark_mode";
 
 // TYPOS
 
@@ -319,6 +323,28 @@ a, .link {
   cursor: pointer;
   &:hover {
     color: var(--link-hover-color-on-dark, var(--link-hover-color));
+  }
+}
+// A link on a filled box (.danger-box, .main-color-box, .grey-box, ...)
+// takes the box's text color, underlined: the link color reaches 4.5:1 only
+// on the page surfaces (white, false-white), and on a fill the underline is
+// what tells a link apart (WCAG 1.4.1). :where() keeps the specificity of a
+// plain link, so buttons, chips and a site's own link rules still win.
+$-page-surfaces: "white", "false-white";
+$-filled-boxes: ();
+@each $colorname, $colorcode in settings.selected-colors(colors.$colors) {
+  @if not list.index($-page-surfaces, dark_mode.token($colorcode)) {
+    $-filled-boxes: list.append($-filled-boxes, ".#{$colorname}-box", comma);
+    $-filled-boxes: list.append($-filled-boxes, ".#{$colorname}-text-box", comma);
+  }
+}
+@if list.length($-filled-boxes) > 0 {
+  :where(#{$-filled-boxes}) a:where(:not(.btn, [class*="-btn"])) {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      color: inherit;
+    }
   }
 }
 article {

@@ -91,6 +91,11 @@ a color:
   instead of swapping to the text color) and a 5th and 6th in
   `_buttons.scss` (the invert variant's text, and the text over the
   hover/active color). Entries without them behave as before.
+- **Links on a filled box** (every `-box` and `-text-box` except `white`
+  and `false-white`) take the box's text color, underlined (`_typo.scss`):
+  the link color reaches 4.5:1 only on the page surfaces. The rule has a
+  plain link's specificity, so buttons, chips, `-text` classes and a site's
+  own link rules still win.
 - Check any change by computing each generated pair's contrast ratio, not by
   eye: a color can look fine and sit at 2:1. `css/build.sh` does it after
   every compile (`css/check-contrast.js`), in light and in dark mode.
