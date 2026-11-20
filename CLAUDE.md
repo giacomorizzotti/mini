@@ -15,7 +15,7 @@ Six git repositories and one unversioned folder live under this `mini/` path on 
 | `wp/mini-theme` | `mini-wp-theme` (GitHub) | WordPress parent theme | Saving a file, through symlinks in the WordPress installs |
 | `wp/mini-plugin` | `mini-wp-plugin` (GitHub) | WordPress plugin | Saving a file, through symlinks in the WordPress installs |
 | `api` | Deploy repo, its remote is the live server | Legal text and credits badge, in PHP | `mini_api_deploy` pushes, and the push is the deploy |
-| `website/dist` | Deploy repo, its remote is the live server | The built mini.uwa.agency | `mini_website_deploy` builds, commits and pushes |
+| `website/dist` | None: build output | The built mini.uwa.agency | `website/deploy.sh` builds it and rsyncs it to the server |
 | `website` | None, deliberately | Vite app | Builds into `website/dist` |
 
 `mini_vue`, the theme, the plugin and `api` each have their own `CLAUDE.md` — read that one instead of this one if you're working inside it. `mini_website_deploy` and `mini_api_deploy` are functions in `~/.bash_aliases`.
@@ -166,7 +166,7 @@ To check a change, compile before and after and compare the output; `@extend` ch
 
 ```bash
 cd website && npm run dev      # demo/showcase app, also where mini_vue gets developed/previewed live
-cd website && npm run build    # writes into dist/, which mini_website_deploy then commits and pushes
+cd website && npm run build    # writes into dist/; website/deploy.sh builds and rsyncs it to mini.uwa.agency
 cd website && npm run preview
 ```
 
