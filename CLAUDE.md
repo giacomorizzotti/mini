@@ -14,7 +14,7 @@ Six git repositories and one unversioned folder live under this `mini/` path on 
 | `website/src/mini` | `mini_vue` (GitHub) | Vue 3 components and composables | Each project's next build, through its symlink |
 | `wp/mini-theme` | `mini-wp-theme` (GitHub) | WordPress parent theme | Saving a file, through symlinks in the WordPress installs |
 | `wp/mini-plugin` | `mini-wp-plugin` (GitHub) | WordPress plugin | Saving a file, through symlinks in the WordPress installs |
-| `api` | Its own repo (not on GitHub yet) | Legal text and credits badge, in PHP | `api/deploy.sh` rsyncs its committed files to the server |
+| `api` | `mini-api` (private on GitHub) | Legal text and credits badge, in PHP | `api/deploy.sh` rsyncs its committed files to the server |
 | `website/dist` | None: build output | The built mini.uwa.agency | `website/deploy.sh` builds it and rsyncs it to the server |
 | `website` | None, deliberately | Vite app | Builds into `website/dist` |
 
