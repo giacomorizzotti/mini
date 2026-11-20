@@ -14,11 +14,11 @@ Six git repositories and one unversioned folder live under this `mini/` path on 
 | `website/src/mini` | `mini_vue` (GitHub) | Vue 3 components and composables | Each project's next build, through its symlink |
 | `wp/mini-theme` | `mini-wp-theme` (GitHub) | WordPress parent theme | Saving a file, through symlinks in the WordPress installs |
 | `wp/mini-plugin` | `mini-wp-plugin` (GitHub) | WordPress plugin | Saving a file, through symlinks in the WordPress installs |
-| `api` | Deploy repo, its remote is the live server | Legal text and credits badge, in PHP | `mini_api_deploy` pushes, and the push is the deploy |
+| `api` | Its own repo (not on GitHub yet) | Legal text and credits badge, in PHP | `api/deploy.sh` rsyncs its committed files to the server |
 | `website/dist` | None: build output | The built mini.uwa.agency | `website/deploy.sh` builds it and rsyncs it to the server |
 | `website` | None, deliberately | Vite app | Builds into `website/dist` |
 
-`mini_vue`, the theme, the plugin and `api` each have their own `CLAUDE.md` — read that one instead of this one if you're working inside it. `mini_website_deploy` and `mini_api_deploy` are functions in `~/.bash_aliases`.
+`mini_vue`, the theme, the plugin and `api` each have their own `CLAUDE.md` — read that one instead of this one if you're working inside it. `website/deploy.sh` and `api/deploy.sh` do the deploys (`mini_website_deploy` and `mini_api_deploy` in `~/.bash_aliases` call them).
 
 `website/` isn't versioned on purpose: it's a container for developing `mini_vue` and building mini's website, and `dist/` is the part that matters. `website/src/mini` is a real clone of `mini_vue`, and other projects symlink to it. The pages in `website/src/pages` are the public docs for the CSS classes, so update them when classes change.
 
