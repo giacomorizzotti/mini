@@ -35,7 +35,7 @@
 
   // colors
   --black: rgb( 10 10 20 / 100% );
-  --false-black: rgb( 20 10 40 / 100% );
+  --false-black: rgb( 20 20 40 / 100% );
   --dark-grey:  rgb( 55 55 80 / 100% );
   --grey: #70708b;
   // Faint but readable text: the lightest grey that still reaches 4.5:1
@@ -86,6 +86,10 @@
   --danger-dark: #ad444d;
   --bad: #d65f7d; 
   --bad-dark: #5a1627; 
+
+  // The page sheet's background (_sheet.scss): the fourth color's dark shade unless a project
+  // sets its own, so projects that recolor --fourth-color-dark, and high contrast, still do.
+  --sheet: var(--fourth-color-dark);
 
   --acid-green: rgb(205 225 90);
   --acid-green-dark: #6e7830;
